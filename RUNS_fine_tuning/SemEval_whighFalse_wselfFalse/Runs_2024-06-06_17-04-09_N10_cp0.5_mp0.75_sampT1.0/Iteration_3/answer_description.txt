@@ -1,0 +1,20 @@
+0->
+
+Determine a "YES" or "NO" verdict on the feasibility of validating the statement's accuracy using the clinical trial report descriptions. This requires a thorough understanding and interpretation of the medical jargon and contextual information within both the reports and the statement, while meticulously resolving any ambiguities or informational deficiencies.
+----------
+1->
+
+Formulate a "YES" or "NO" decision regarding the possibility of confirming the statement's correctness by analyzing the clinical trial report descriptions. This task necessitates an in-depth comprehension and contextual interpretation of medical terminology and information in both the reports and the statement, with careful attention to resolve any ambiguities or information gaps.
+----------
+2->
+
+Evaluate the statement's consistency with Clinical Trial Report (CTR) descriptions to ascertain its validity, responding with "CONSISTENT" for agreement and "INCONSISTENT" for discrepancy. This task requires an in-depth understanding of medical jargon, contextual subtleties in both CTRs and the statement, as well as precise identification and clarification of ambiguities and information voids.
+----------
+3->
+
+Evaluate the alignment of a statement with the Clinical Trial Report (CTR) descriptions to ascertain its validity. Provide a YES if the statement is consistent with the CTR descriptions and NO if there is a discrepancy.
+----------
+4->
+
+Formulate a "YES" or "NO" decision regarding the possibility of confirming the statement's correctness based on the clinical trial report descriptions. This necessitates an in-depth comprehension and contextual interpretation of the medical terminology and details in both the reports and the statement, while carefully addressing any ambiguities or gaps in information.
+----------

@@ -1,0 +1,20 @@
+0->
+
+Determine a "YES" or "NO" verdict on the feasibility of validating the statement's accuracy using the clinical trial report descriptions. This requires a thorough understanding and interpretation of the medical jargon and contextual information within both the reports and the statement, while meticulously resolving any ambiguities or informational deficiencies.
+----------
+1->
+
+Evaluate the congruence of the given statement with established Clinical Trial Report (CTR) terminology and context. Classify it as "CONSISTENT" if it aligns accurately or "DISCREPANT" if there are inconsistencies. This task requires an in-depth understanding of medical jargon, contextual subtleties within CTRs, and the statement itself. Additionally, meticulously identify and clarify ambiguities and informational gaps.
+----------
+2->
+
+Assess the provided statement's alignment with the Clinical Trial Report (CTR) descriptions, marking it as "CONGRUENT" for accurate correspondence or "INCONGRUENT" for discrepancies. This task necessitates a comprehensive grasp of medical terminology, contextual nuances in CTRs, and the statement itself, alongside precise identification and elucidation of ambiguities and informational deficiencies.
+----------
+3->
+
+Formulate a "YES" or "NO" decision regarding the possibility of confirming the statement's correctness based on the clinical trial report descriptions. This necessitates an in-depth comprehension and contextual interpretation of the medical terminology and details in both the reports and the statement, while carefully addressing any ambiguities or gaps in information.
+----------
+4->
+
+Evaluate the statement's consistency with the Clinical Trial Report (CTR) descriptions. Classify it as "CONGRUENT" if it matches accurately or "INCONGRUENT" if there are inconsistencies. This requires an in-depth understanding of medical jargon, contextual subtleties within CTRs, and both the statement and CTR descriptions. Additionally, identify and clarify any ambiguities and informational gaps.
+----------

@@ -1,0 +1,18 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->
+
+Conduct an expert-level evaluation of the Clinical Trial Report's (CTR) validity, utilizing specialized domain knowledge.
+----------
+2->
+
+Determine, with a definitive YES or NO answer, the feasibility of validating the statement using data extracted from the clinical trial report.
+----------
+3->
+
+Conduct a meticulous, expert-level assessment of the Clinical Trial Report (CTR) to confirm its factual correctness, requiring in-depth knowledge in the clinical trial domain.
+----------
+4->
+
+Conduct an expert-level evaluation to ascertain the accuracy of the Clinical Trial Report (CTR), necessitating profound expertise in the clinical trial domain.
+----------

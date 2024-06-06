@@ -1,0 +1,14 @@
+0->Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR), ensuring the statement aligns with the CTR data and does not conflict with the provided descriptions.
+----------
+1->
+
+Perform an in-depth evaluation of the statement's consistency with the Clinical Trial Report (CTR) data, ensuring accurate understanding of medical terminology and context. Integrate your findings into the CTR narrative by resolving uncertainties and addressing gaps in information. Deliver a conclusive determination of 'CONSISTENT' or 'INCONSISTENT', verifying the statement's alignment with the CTR and confirming the absence of discrepancies.
+----------
+2->Conduct a thorough analysis of the statement's alignment with the Clinical Trial Report (CTR) data, ensuring comprehensive grasp of medical jargon and context. Synthesize your insights into the CTR narrative, elucidating ambiguities and filling informational voids. Render a definitive verdict of 'CONSISTENT' or 'INCONSISTENT', ascertaining the statement's congruence with the CTR, and ensuring no contradictions are present, all crafted for a specialist readership.
+----------
+3->Execute a comprehensive assessment of the statement's congruence with the Clinical Trial Report (CTR) data, ensuring meticulous comprehension of medical terminology and context. Integrate your analysis into the CTR narrative by elucidating ambiguities and supplementing information deficits. Render a definitive determination of 'CONSISTENT' or 'INCONSISTENT', confirming the statement's alignment with the CTR and verifying the absence of contradictions, with an emphasis on precision and clarity for an expert audience.
+----------
+4->"
+
+Conduct an in-depth analysis of the statement's alignment with the Clinical Trial Report (CTR) data, showcasing expertise in medical terminology and context. Integrate your findings into the CTR narrative by elucidating ambiguities and filling information voids. Provide a conclusive verdict of 'CONSISTENT' or 'INCONSISTENT', justifying the statement's congruence with the CTR and confirming the absence of contradictions, prioritizing precision and clarity tailored for an expert readership.
+----------

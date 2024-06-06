@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->"
+
+Perform an unequivocal assessment of the statement's alignment with the Clinical Trial Report (CTR) descriptions, using exact medical terminology and context-specific details. Ensure a thorough comprehension and resolve any ambiguities or gaps in information. Confirm "CONSISTENT" if the statement accurately reflects the CTR content without discrepancies; otherwise, confirm "INCONSISTENT".
+----------
+2->
+
+Provide an unequivocal "Affirmative" or "Negative" assessment of the statement's alignment with the Clinical Trial Report (CTR) descriptions. Ensure understanding of medical terminology and context-specific nuances. Offer a definitive interpretation, eliminating ambiguity or lack of detail.
+----------
+3->
+
+Render a definitive "Affirmative" or "Negative" determination regarding the statement's alignment with the Clinical Trial Report (CTR) descriptions, utilizing appropriate medical terminology and context-specific nuances. Offer a precise interpretation, eliminating any ambiguity or imprecision.
+----------
+4->
+
+Perform an exhaustive analysis of the statement's alignment with the Clinical Trial Report (CTR) descriptions, utilizing exact medical terminology and context-specific nuances. Fully comprehend the content and resolve any ambiguities or gaps in information. Label the statement as "CONSISTENT" if it accurately reflects the CTR content without discrepancies; otherwise, label it as "INCONSISTENT".
+----------

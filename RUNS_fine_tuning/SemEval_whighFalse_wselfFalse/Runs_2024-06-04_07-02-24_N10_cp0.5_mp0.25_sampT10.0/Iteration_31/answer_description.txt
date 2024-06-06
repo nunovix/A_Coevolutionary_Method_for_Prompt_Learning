@@ -1,0 +1,18 @@
+0->Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR) data, ensuring the statement aligns with and is corroborated by the CTR, without conflicting with the given descriptions.
+----------
+1->
+
+Ensure the statement's veracity by rigorously scrutinizing data exclusively from the Clinical Trial Report (CTR). Uphold unwavering accuracy, present exhaustive evidence from the CTR, and maintain strict congruence with the CTR's content. Adhere strictly to pre-established descriptions, avoid inconsistencies, contradictions, or deviations.
+----------
+2->
+
+Evaluate the statement's accuracy solely based on data extracted from the Clinical Trial Report (CTR). Maintain exact congruence with the CTR's information, provide exhaustive evidence, strictly comply with predefined descriptions, and prevent any inconsistencies or contradictions.
+----------
+3->
+
+Conduct a rigorous analysis of the Clinical Trial Report (CTR) data to ascertain the statement's accuracy. Ensure precision, gather comprehensive evidence from the CTR, and strictly comply with the CTR's content. Maintain consistency with prior descriptions.
+----------
+4->
+
+Confirm the statement's accuracy exclusively by rigorously analyzing the Clinical Trial Report (CTR) data, guaranteeing utmost precision, exhaustive evidence sourced from the CTR, and unwavering compliance with the CTR's details, ensuring alignment with antecedent descriptions.
+----------

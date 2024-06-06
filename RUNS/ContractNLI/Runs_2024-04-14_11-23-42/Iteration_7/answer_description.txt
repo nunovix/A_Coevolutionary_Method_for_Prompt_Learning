@@ -1,0 +1,69 @@
+0->Answer with YES or NO to the question of whether one can conclude the validity of the statement with basis on the Non-Disclosure Agreement (NDA) information.
+----------
+1->
+Analyze the given question and determine if the NDA information can be used to verify the statement's validity. 
+Return with a binary response (YES or NO).
+----------
+2->
+Indicate with YES or NO if the statement aligns with the NDA information and doesn't contradict the given descriptions.
+----------
+3->
+You are required to answer with a definitive YES or NO, signifying whether the NDA data can confirm or deny the accuracy of the given statement, ensuring that the assertion aligns with the NDA details and does not conflict with the specified descriptions.
+----------
+4->
+
+Determine if the statement is permissible according to the Non-Disclosure Agreement (NDA) terms.
+----------
+5->
+
+Assess the compatibility of the statement with the terms of the Non-Disclosure Agreement (NDA), interpreting the legal terminology and meaning in both documents. Provide a clear YES or NO response, indicating compliance with the NDA and absence of contradiction, while also clarifying any uncertainties or missing data within the documents.
+----------
+6->
+Evaluate the NDA data to determine its applicability in confirming the given statement. Provide a binary response (YES or NO).
+----------
+7->
+
+Determine if the statement adheres to the Non-Disclosure Agreement (NDA) by interpreting the applicable legal terminology and assessing compatibility. Reply with "YES" for conformity with NDA terms, or "NO" for contradiction. Perform an accurate evaluation based on NDA provisions.
+----------
+8->
+Determine if the given statement conforms to the provisions in the Non-Disclosure Agreement (NDA). Clarify any uncertainties or lacking details in both the statement and the NDA to maintain conformity. Provide a definitive YES or NO response.
+----------
+9->
+Evaluate the statement's compatibility with the NDA's legal language and definitions. Respond with a clear YES if it conforms and doesn't contradict the NDA. In case of ambiguity or insufficient data, clarify any doubts to ensure a valid judgement.
+----------
+10->
+
+Evaluate the given statement's conformity with the NDA's legal language and definitions. Clarify any ambiguities or insufficient details in both the statement and the NDA to ensure a valid judgement. Provide a definitive YES or NO response indicating the statement's compliance with the NDA.
+----------
+11->
+
+Assess the compliance of the statement with the language of each NDA in the given documents. Resolve any ambiguities or inadequacies, resulting in a definitive YES or NO answer regarding adherence.
+----------
+12->
+Evaluate the given statement for consistency with the terms and conditions outlined in the Non-Disclosure Agreement (NDA). Deliver a definitive YES or NO determination, ensuring alignment with the NDA details and absence of conflicting descriptions.
+----------
+13->
+
+Evaluate the consistency of the statement with the provisions of a Non-Disclosure Agreement (NDA). If compliant, respond with "YES." If not, respond with "NO." Thoroughly examine the statement's authenticity in the context of the NDA.
+----------
+14->
+Evaluate both the statement and the relevant NDA terms to ensure consistency and applicability in determining the statement's authenticity. Deliver a binary response (YES or NO). If there is uncertainty or insufficient information, seek clarification to render a valid decision based on the NDA's conditions.
+----------
+15->
+
+Evaluate the statement's adherence to the NDA's stipulations. If consistent, label as "Comply." If not, denote as "Violate." Perform an exhaustive examination of the statement's harmony with the NDA provisions.
+----------
+16->
+
+Evaluate the given statement's consistency with the provisions in the Non-Disclosure Agreement (NDA). Determine if it aligns (YES) or contradicts (NO) the agreement's terms.
+----------
+17->
+Assess the compatibility of the statement with the Non-Disclosure Agreement (NDA) by examining the two documents in detail. Deliver a definitive and unequivocal YES or NO answer, while ensuring that all relevant information is taken into consideration and that both documents conform to the stipulations of the NDA.
+----------
+18->
+
+Determine if a statement conforms to the Non-Disclosure Agreement (NDA) conditions by interpreting its correlation with the NDA's specific legal terms. Reply with "Compliant" if consistent, or "Incompatible" if in contradiction.
+----------
+19->
+Determine if the statement adheres to the provisions stated in the Non-Disclosure Agreement (NDA). Provide a clear and unequivocal answer in the form of a binary response: YES if in compliance, NO if not.
+----------

@@ -1,0 +1,20 @@
+0->
+
+Perform a semantic entailment analysis between distinct segments of Clinical Trial Reports (CTRs) and assertions made by clinical specialists. CTRs detail the procedures and results of clinical trials, assessing the effectiveness and safety of novel therapeutic interventions. The assertions, conversely, make specific claims regarding information contained within one or more sections of CTRs, either for a single report or for a comparative evaluation of multiple reports. To validate entailment, ensure that the claim is consistent with the clinical trial data, is substantiated by the CTR, and does not conflict with the provided descriptions.
+----------
+1->
+
+Conduct a semantic entailment analysis to correlate segments from Clinical Trial Reports (CTRs) with expert claims on the effectiveness and safety of new medical treatments. Verify that these claims are empirically substantiated by data from CTRs, comply with trial protocols, and precisely reflect the trial's account.
+----------
+2->
+
+Perform a semantic entailment analysis to correlate expert claims on the effectiveness and safety of new medical treatments with segments from Clinical Trial Reports (CTRs). Ensure that these claims are empirically substantiated by CTR data, adhere to trial protocols, and accurately represent the trial's findings.
+----------
+3->
+
+Perform a semantic entailment analysis to establish a relationship between segments from Clinical Trial Reports (CTRs) and expert assertions regarding the efficacy and safety profiles of novel therapeutic interventions. Confirm that these assertions are empirically backed by data extracted from CTRs, adhere strictly to the stipulated trial guidelines, and accurately encapsulate the trial's findings.
+----------
+4->
+
+Perform a semantic entailment analysis to establish correlations between segments from Clinical Trial Reports (CTRs) and expert assertions regarding the efficacy and safety profiles of novel therapeutic interventions. Confirm that these expert assertions are empirically supported by data extracted from CTRs, adhere strictly to the stipulated trial protocols, and accurately encapsulate the trial's findings.
+----------

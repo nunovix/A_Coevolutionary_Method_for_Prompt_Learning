@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform a thorough verification of the claim's accuracy by systematically comparing descriptions from clinical trial documentation. Emphasize the use of medical jargon and contextual relevance. Remove any vagueness and supplement information gaps with exactitude. Ensure unwavering compliance with the original claim's purpose, improving clarity for specialists in the field.
+----------
+2->
+
+Conduct a rigorous assessment of the statement's validity by meticulously contrasting descriptions from clinical trial reports, with a keen focus on medical terminology and contextual significance. Address ambiguities and informational voids with precision, ensuring unwavering adherence to the original statement's intent and augmenting clarity for field experts.
+----------
+3->
+
+Conduct a rigorous assessment of the statement's accuracy by meticulously contrasting descriptions from clinical trial reports, with a particular emphasis on medical terminology and contextual significance. Address ambiguities and information voids with precision, ensuring unwavering fidelity to the original statement's intent, which is tailored for an expert audience.
+----------
+4->
+
+Assess the validity of a clinical trial statement by meticulously analyzing medical terminology and context, ensuring alignment with the original statement's intent, and addressing ambiguities and information gaps for an expert audience.
+----------

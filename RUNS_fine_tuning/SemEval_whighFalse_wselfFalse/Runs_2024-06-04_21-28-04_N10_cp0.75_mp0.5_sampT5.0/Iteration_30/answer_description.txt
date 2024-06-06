@@ -1,0 +1,18 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->
+
+Perform an exhaustive examination of the Clinical Trial Report (CTR) to evaluate the veracity of the claim, applying your specialized knowledge to decipher the data. Render a judgment of 'Confirmed' if the CTR incontrovertibly substantiates the claim, or 'Refuted' if it does not. Ignore all discrepancies or inconsistencies, concentrating exclusively on the evidence presented in the CTR to determine the claim's credibility.
+----------
+2->
+
+Conduct a rigorous analysis of the Clinical Trial Report (CTR) to ascertain the claim's veracity. Render a 'Confirmed' verdict if the CTR definitively corroborates the claim, or 'Refuted' if it fails to do so. Your judgment must hinge exclusively on the evidence within the CTR, disregarding any discrepancies or incongruities. Employ your expertise to evaluate the impact of the CTR's findings on the claim's credibility.
+----------
+3->
+
+Perform an expert analysis of the Clinical Trial Report (CTR) to ascertain the claim's veracity, utilizing your domain expertise. Issue a conclusive 'Confirmed' if the CTR unequivocally corroborates the claim, or 'Refuted' if it fails to do so. Base your determination exclusively on the CTR's data, setting aside any inconsistencies or contradictions. Employ your specialized knowledge to evaluate the impact of the CTR's evidence on the claim's credibility.
+----------
+4->
+
+Carefully analyze the Clinical Trial Report (CTR) to ascertain the veracity of the claim, focusing solely on the data presented within the CTR. Disregard any inconsistencies or contradictions. Determine if the CTR 'Confirms' the claim or 'Refutes' it based solely on the CTR's content. Apply your domain-specific expertise to assess how the CTR's findings influence the claim's credibility.
+----------

@@ -1,0 +1,25 @@
+0->
+
+Evaluate semantic entailment between statements issued by clinical domain experts and individual sections of Clinical Trial Reports (CTRs). CTRs detail the methodology and outcomes of clinical trials, assessing the efficacy and safety of new treatments. Each trial consists of distinct cohorts or arms with varying treatment types, dosages, frequencies, durations, and patient baseline characteristics. Comprehensive CTRs contain four sections: (1) ELIGIBILITY CRITERIA outlining patient inclusion conditions, (2) INTERVENTION specifying treatment details, (3) RESULTS summarizing participant statistics, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS documenting observed signs and symptoms. Statements make claims regarding the information within these CTR sections, either for a single report or in comparative analysis of two. For entailment validation, the statement's claim should align with
+----------
+1->
+
+Assess semantic congruence between clinical experts' statements and specific sections of Clinical Trial Reports (CTRs). CTRs provide details on clinical trials' methodologies and results, measuring the effectiveness and safety of novel treatments. Each trial comprises unique cohorts or arms with different treatment modalities, dosages, frequencies, durations, and patient profiles. Extensive CTRs encompass four main sections: (1) ELIGIBILITY CRITERIA defining patient qualifications, (2) INTERVENTIONS detailing treatment particulars, (3) OUTCOMES summarizing participant data, statistics, measures, and findings, and (4) ADVERSE EFFECTS recording observed symptoms and events. Statements express claims related to the data in these CTR sections, pertaining to a single report or in comparative assessments of two. For verification, the statement's claim must correspond to the contained information
+----------
+2->
+
+Assess the congruence of clinical experts' declarations with the Eligibility Criteria, Intervention, Outcomes, and Adverse Effects sections of Clinical Trial Reports (CTRs). Verify that the experts' statements are in line with the information presented in these sections, which outline the clinical trial design and findings for specific cohorts or study groups. The sections consist of: (1) Eligibility Criteria that specify patient selection standards, (2) Intervention that details treatment modalities, dosages, frequencies, durations, and patient characteristics, (3) Outcomes that encompass participant data, outcome indicators, units, and conclusions, and (4) Adverse Effects that document observed symptoms and signs. To ensure accurate comparisons and entailment verification, the experts' statements must correspond with the information in these CTR sections.
+----------
+3->
+
+Evaluate semantic entailment between statements issued by clinical domain experts and individual sections of Clinical Trial Reports (CTRs). CTRs detail the methodology and outcomes of clinical trials, assessing the efficacy and safety of new treatments. Each trial consists of distinct cohorts or arms with varying treatment types, dosages, frequencies, durations, and patient baseline characteristics. Comprehensive CTRs contain four sections: (1) ELIGIBILITY CRITERIA outlining patient inclusion conditions, (2) INTERVENTION specifying treatment details, (3) RESULTS summarizing participant statistics, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS documenting observed signs and symptoms. Statements make claims regarding the information within these CTR sections, either for a single report or in comparative analysis of two. For entailment validation, the statement's claim should align with
+----------
+4->
+
+Assess the alignment between clinical experts' statements and the following CTR sections: Eligibility Criteria, Intervention, Outcomes, and Adverse Effects. Ensure consistency between the experts' assertions and the information in these sections, which detail the clinical trial design and results, and involve different cohorts or study groups with varying treatment modalities, dosages, frequencies, durations, and patient demographics. The sections encompass:
+
+1. Eligibility Criteria: Patient selection criteria
+2. Intervention: Treatment details
+3. Outcomes: Participant statistics, efficacy measures, and conclusions
+4. Adverse Effects: Observed side effects.
+----------

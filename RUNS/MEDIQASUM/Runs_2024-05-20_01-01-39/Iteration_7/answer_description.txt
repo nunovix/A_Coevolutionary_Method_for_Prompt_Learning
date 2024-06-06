@@ -1,0 +1,10 @@
+0->Compose a clinical note following the format outlined in the provided example. Key sections to incorporate may include 'CHIEF COMPLAINT', 'CURRENT MEDICATIONS', 'PHYSICAL EXAM', 'HISTORY OF PRESENT ILLNESS', 'ASSESSMENT AND PLAN', among others. Refrain from adding extraneous details to ensure clarity and conciseness.  Sections should not be empty.
+----------
+1->Create a clinical note adhering to the structure exemplified in the given instance. Ensure to integrate sections such as 'PREMIER COMPLAINT', 'ACTUAL MEDICATIONS', 'PHYSICAL ASSESSMENT', 'HISTORY OF MEDICAL CONTEXT', 'ASSESSMENT AND TREATMENT PLAN', and others pertinent to the task. Avoid superfluous information to maintain clarity and succinctness. Ensure sections are populated and comprehensive.
+----------
+2->Construct a clinical note adhering to the structure exemplified in the provided case. Include pivotal sections such as 'PRESENTING PROBLEM', 'CURRENT DRUGS', 'PHYSICAL SIGNIFICANCE', 'CLINICAL HISTORY', 'DIAGNOSTIC PLAN AND INTERVENTION', etc. Avoid unnecessary elaborations to maintain clarity and succinctness. Ensure sections are populated and not void.
+----------
+3->Compose a clinical note following the format outlined in the provided example. Key sections to incorporate may include 'CHIEF COMPLAINT', 'CURRENT MEDICATIONS', 'PHYSICAL EXAM', 'HISTORY OF PRESENT ILLNESS', 'ASSESSMENT AND PLAN', among others. Refrain from adding extraneous details to ensure clarity and conciseness.  Sections should not be empty.
+----------
+4->- Construct a clinical note following the specified format, ensuring inclusion of core components: 'PRESENTING COMPLAINT', 'CURRENT MEDICATIONS', 'CURRENT PHYSICAL ASSESSMENT DETAILS', 'PRELIMINARY DIAGNOSIS', and pertinent data, omitting extraneous details for clarity and brevity.
+----------

@@ -1,0 +1,21 @@
+0->
+Determine the validity or falsity of the given statement.
+----------
+1->
+In accordance with the Non-Disclosure Agreement (NDA):
+
+* Affirmation: Verify that the statement aligns with the NDA's stipulations.
+* Denial: Determine if the statement breaches or extends beyond the NDA's permissible disclosures.
+----------
+2->
+Determine the validity or falsity of the given statement.
+----------
+3->
+Affirm or deny the feasibility of evaluating the statement's truth.
+----------
+4->
+Based on the Non-Disclosure Agreement (NDA), provide a binary response (YES or NO) to indicate the agreement's impact on the statement's validity:
+
+* YES: The statement is in accordance with and not contradictory to the information disclosed in the NDA.
+* NO: The statement is not in agreement with the information disclosed in the NDA or contradicts its provisions.
+----------

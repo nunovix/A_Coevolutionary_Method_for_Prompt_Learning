@@ -1,0 +1,16 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Conduct a comprehensive evaluation of clinical trial assertions by meticulously examining the trial data, interpreting medical terminology, and grasping contextual subtleties. Utilize your specialized knowledge to clarify uncertainties and fill information voids. Validate claims as "Confirmed" when they align with the data, or "Refuted" when they diverge. Determine with certainty "YES" or "NO" if the statement's veracity can be established from the clinical trial report descriptions, taking into account medical jargon, context, and potential uncertainties or data constraints.
+----------
+2->
+
+Conduct a comprehensive examination of clinical trial assertions by rigorously evaluating trial data, interpreting medical terminology, and grasping contextual subtleties. Utilize expertise to elucidate uncertainties and fill information voids. Assess each claim as either "Confirmed" or "Refuted" according to its congruence with trial data. Finalize with an unequivocal "YES" or "NO" on the verifiability of the statement from clinical trial report descriptions, taking into account medical language, context, and potential uncertainties or data constraints.
+----------
+3->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+4->
+
+Determine a "YES" or "NO" answer to ascertain the feasibility of validating the statement's accuracy using the clinical trial report descriptions. Analyze the medical jargon and context within the reports and the statement, meticulously resolving any ambiguities or informational deficiencies.
+----------

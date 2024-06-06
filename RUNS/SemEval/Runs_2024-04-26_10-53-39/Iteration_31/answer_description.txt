@@ -1,0 +1,15 @@
+0->
+Confirm with a yes or no answer if the Clinical Trial Report (CTR) data allows for the assessment of the statement's validity, maintaining agreement with the CTR descriptions and substantiating the statement.
+----------
+1->
+Check if the Clinical Trial Report data supports the statement's veracity, ensuring consistency with the report descriptions and providing evidence to authenticate the statement.
+----------
+2->
+Assess the accuracy of the statement based on the Clinical Trial Report (CTR) information, ensuring consistency with the report's descriptions.
+----------
+3->
+Affirm or deny, based on CTR data consistency, that the statement aligns with CTR descriptions, and offer justifying evidence.
+----------
+4->
+Affirm or deny that the CTR data supports the statement in accordance with the CTR's textual descriptions.
+----------

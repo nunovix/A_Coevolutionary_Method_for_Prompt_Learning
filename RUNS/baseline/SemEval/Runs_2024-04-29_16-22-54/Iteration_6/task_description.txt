@@ -1,0 +1,28 @@
+0->
+1. Compare clinical trial experts' declarations with the corresponding sections in Clinical Trial Reports (CTRs) for consistency.
+2. Review CTRs for the documentation of clinical trial methods, results, and evaluations of new treatment efficacy and safety.
+3. Statements from clinical domain experts may assert specific content within a single report or compare two reports.
+4. Confirm alignment by ensuring the statement's claim aligns with the content of the CTR, is substantiated by the report, and doesn't contradict the given descriptions.
+----------
+1->
+
+Evaluate the alignment of statements made by clinical domain experts with corresponding sections in Clinical Trial Reports (CTRs). The expert's assertion must be substantiated by the CTR's content and not conflict with it. CTRs serve as comprehensive records of clinical trials, detailing trial procedures, findings, and the efficacy and safety of novel treatments. Consisting of four key parts, a fully-formed CTR encompasses: (1) ELIGIBILITY CRITERIA defining patient qualification standards, (2) INTERVENTION specifying treatment modality, dosage, frequency, and duration, (3) RESULTS encapsulating participant demographics, outcome assessments, measurement tools, and conclusions, and (4) ADVERSE EVENTS recording observed side effects and symptoms. Statements may refer to individual CTRs or compare multiple reports.
+----------
+2->
+1. Confirm consistency between clinical trial experts' statements and corresponding sections in Clinical Trial Reports (CTRs).
+2. Assess CTRs for thorough documentation of clinical trial methods and results on the efficacy and safety of potential treatments.
+3. Clinical experts may comment on specific CTR sections or compare reports.
+4. Authenticate these comments by verifying their consistency with CTR content, substantiating claims with data within the reports, and identifying absence of contradictory information.
+----------
+3->
+1. Verify consistency between clinical trial expert statements and corresponding sections in Clinical Trial Reports (CTRs).
+2. CTRs detail clinical trial methods, results, and assessments of novel treatment efficacy and safety.
+3. Clinical experts make assertions about specific CTR sections, pertaining to one report or a comparison of two.
+4. Ensure alignment by confirming the statement's claim aligns with the CTR content, is supported by the report, and does not contradict given descriptions.
+----------
+4->
+1. Verify clinical experts' statements against corresponding sections in Clinical Trial Reports (CTRs) for accuracy.
+2. Examine CTRs for details on trial methodologies and outcomes, evaluating treatment efficacy and safety.
+3. Assess statements' legitimacy by checking alignment with CTR content, supporting evidence from the report, and absence of conflicting data.
+4. Confirm statements' applicability to one or multiple reports and/or their comparative assertions.
+----------

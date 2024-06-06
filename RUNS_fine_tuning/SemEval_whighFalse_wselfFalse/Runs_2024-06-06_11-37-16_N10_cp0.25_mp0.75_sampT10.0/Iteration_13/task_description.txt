@@ -1,0 +1,18 @@
+0->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs expound on the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or comparative analysis of two. For entailment validation, the statement's claim should align with clinical trial information, find support in the CTR, and refrain from contradicting provided descriptions.
+----------
+1->
+
+Perform a semantic entailment analysis linking excerpts from Clinical Trial Reports (CTRs) with expert assessments on the effectiveness and safety of novel medical treatments. Confirm entailment by verifying that expert claims are backed by evidence from CTRs, align with the given descriptions, and pertain to individual or comparative evaluations of CTRs.
+----------
+2->
+
+Perform a semantic entailment analysis linking excerpts from Clinical Trial Reports (CTRs) with expert assessments on the effectiveness and safety of novel medical treatments. Confirm entailment by verifying that expert claims are backed by evidence from CTRs, align with the given descriptions, and pertain to individual or comparative evaluations of CTRs.
+----------
+3->
+
+Conduct a semantic entailment analysis correlating segments from Clinical Trial Reports (CTRs) with expert evaluations regarding the efficacy and safety profiles of innovative therapeutic interventions. Validate entailment by ensuring expert assertions are substantiated by CTR evidence, consistent with provided descriptions, and relevant to singular or comparative assessments of CTRs.
+----------
+4->
+
+Perform a semantic entailment analysis linking segments from Clinical Trial Reports (CTRs) with expert assessments on the effectiveness and safety of novel medical treatments. Confirm entailment by verifying that expert claims are backed by evidence from CTRs, align with the given descriptions, and pertain to individual or comparative evaluations of CTRs.
+----------

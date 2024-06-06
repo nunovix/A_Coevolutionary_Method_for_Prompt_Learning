@@ -1,0 +1,46 @@
+0->Your task is determining support relationships between individual sections of Clinical Trial Reports (CTRs) and clinical statements. CTRs detail the methodology and findings of clinical trials, assessing effectiveness and safety of new treatments. CTRs consist of 4 sections: (1) ELIGIBILITY CRITERIA listing conditions for patient participation, (2) INTERVENTION description specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary detailing participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing signs and symptoms observed. Statements make claims about information in these sections, either for a single CTR or comparing two.
+----------
+1->
+
+Perform a semantic entailment analysis between Clinical Trial Reports (CTRs) and authoritative clinical assertions, concentrating on evaluating the efficacy and safety of novel medical treatments. Analyze structured CTRs segmented into four principal components:
+
+1. Participant Selection Criteria: Determine the inclusion criteria for trial participants.
+
+2. Treatment Specifications: Outline the treatment specifics, including type, dosage, frequency of administration, and duration of the trial.
+
+3. Outcome Measures Summary: Summarize the number of participants, outcome metrics, units of measurement, and trial conclusions.
+
+4. Adverse Event Documentation: Record any symptoms reported by patients throughout the trial.
+
+Ensure that authoritative clinical statements align with CTR data, are corroborated by the reports, and match the provided descriptions. Rigorously assess each section of the CTR for precise entailment confirmation.
+----------
+2->"
+
+Conduct a semantic entailment analysis between Clinical Trial Reports (CTRs) and expert clinical statements, evaluating the effectiveness and safety of new therapeutic interventions. Examine structured CTRs divided into four core sections:
+
+1. Participant Selection Criteria: Determine the inclusion parameters for patient eligibility.
+
+2. Treatment Specifications: Outline the treatment specifics, including type, dosage, administration frequency, and trial duration.
+
+3. Outcome Synthesis: Summarize the trial's participant count, outcome measures, units of measurement, and conclusions.
+
+4. Adverse Reaction Documentation: Record patient-reported symptoms throughout the trial.
+
+Ensure expert statements are consistent with CTR data, substantiated by the reports, and match the provided descriptions. Pay close attention to the details within each CTR section for precise entailment verification.
+----------
+3->Conduct a semantic entailment analysis between Clinical Trial Reports (CTRs) and expert clinical statements, focusing on treatment efficacy and safety. Examine CTRs divided into four key sections: Eligibility Criteria, Intervention, Results, and Adverse Events. Verify that expert claims are consistent with CTR details, substantiated by the reports, and correspond to the provided descriptions. Pay close attention to the nuances within each section of the CTR when assessing entailment.
+----------
+4->
+
+Perform a semantic entailment analysis between Clinical Trial Reports (CTRs) and statements from clinical specialists, assessing the efficacy and safety profiles of novel medical treatments. Analyze structured CTRs segmented into four key sections:
+
+1. Eligibility Criteria: Identify the inclusion parameters for patient selection.
+
+2. Intervention Details: Describe the specifics of the treatment, including type, dosage, frequency of administration, and the length of the trial.
+
+3. Results Summary: Provide a concise overview of the number of participants, outcome metrics, units of measurement, and derived conclusions.
+
+4. Adverse Events Logging: Document any symptoms reported by patients throughout the trial.
+
+Ensure that the specialists' statements are in agreement with the CTR data, substantiated by the reports, and correspond with the provided descriptions. Pay meticulous attention to the details within each section of the CTR for accurate entailment verification.
+----------

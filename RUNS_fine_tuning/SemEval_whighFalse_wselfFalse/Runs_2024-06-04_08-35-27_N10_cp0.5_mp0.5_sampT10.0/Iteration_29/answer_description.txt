@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform a thorough validation of the statement by meticulously cross-referencing it with data from clinical trial report descriptions. Conduct an exhaustive analysis of medical terminology and contextual subtleties. Clarify ambiguities and rectify information gaps, ensuring the response is tailored for expert medical professionals.
+----------
+2->
+
+Validate the statement's accuracy by thoroughly comparing it with data from clinical trial report descriptions, paying close attention to medical terminology and context. Address ambiguities and information gaps meticulously, ensuring clarity and precision suitable for medical experts.
+----------
+3->
+
+Execute a comprehensive validation of the assertion by rigorously cross-examining it against voluminous data extracted from clinical trial report descriptions. Undertake an in-depth examination of medical jargon and contextual nuances. Elucidate uncertainties, meticulously address information voids, and enhance the statement for clarity, informativeness, and expert-level precision.
+----------
+4->
+
+Execute an expert-level validation of the assertion by meticulously cross-examining it with data from clinical trial report descriptions. Conduct a thorough analysis of medical terminology and contextual subtleties in both the assertion and the reports. Clarify ambiguities, address information voids, and refine the directive to be explicit, informative, and tailored for professional expertise.
+----------

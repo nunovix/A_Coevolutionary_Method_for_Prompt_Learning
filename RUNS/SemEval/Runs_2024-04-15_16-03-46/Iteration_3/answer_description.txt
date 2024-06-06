@@ -1,0 +1,76 @@
+0->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Clinical Trial Report (CTR) information, with the statement being supported by the CTR data and not contradicting the provided descriptions.
+----------
+1->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+2->
+Evaluate the accuracy of statements using clinical trial report data (YES/NO).
+----------
+3->
+Assess the validity of statements using clinical trial report information (YES/NO).
+----------
+4->
+Using the medical terminology in the clinical trial reports and considering the context of the statement and reports, determine the statement's accuracy (YES or NO). Address any unclear or missing information.
+----------
+5->
+
+Evaluate the compatibility of the statement with the Clinical Trial Report (CTR) results. Classify it as "CONSISTENT" for matching outcomes, or "INCONSISTENT" for conflicting findings.
+----------
+6->
+
+Evaluate the consistency between statements and Clinical Trial Report data.
+Affirmation: The statement aligns with the details in the CTRs.
+Discrepancy: The statement conflicts or fails to correspond with the CTR information.
+----------
+7->
+
+1. Examine the medical terminology and context in both the statement and clinical trial report for precision.
+2. Clarify any uncertainties or information voids detected in either the statement or report.
+----------
+8->
+Analyze the clinical trial reports, applying relevant medical terminology, to assess the truthfulness of the statement. Clarify ambiguous or absent information to ensure alignment with report data.
+----------
+9->
+Check the Clinical Trial Reports (CTRs) to ensure consistency between the statement and the data presented. A match signifies validity and guidance for task execution.
+----------
+10->
+Check the compatibility of the statement with the details in the Clinical Trial Reports (CTRs).
+Affirmation: The statement aligns with the CTR descriptions.
+Denial: The statement contradicts or fails to match the CTR information.
+----------
+11->
+
+Determine the conformity of the statement with the Clinical Trial Report (CTR) data. Classify the result as "ALIGNS" for consistency or "CONTRADICTS" for misalignment or contradiction.
+----------
+12->
+Using the medical terminology in the clinical trial reports and considering the context of both the statement and reports, confirm the statement's accuracy (YES or NO). Address any unclear or missing information.
+----------
+13->
+
+Check the medical terminology and context in the statement and Clinical Trial Report (CTR) for accuracy and consistency. Clarify any ambiguities, uncertainties, or data inconsistencies. Compare the statement and CTR information and label the result as "Consistent" for agreement and "Inconsistent" for contradiction or misalignment.
+----------
+14->
+Check the Clinical Trial Reports (CTRs) for verification of statement's alignment with data. Continue task execution upon confirmation.
+----------
+15->
+
+1. Examine and decipher the medical terminology and context in both the statement and Clinical Trial Report (CTR).
+2. Clarify any ambiguities, missing information, or inconsistencies between the two sources.
+3. Provide conclusive YES or NO responses based on your findings.
+----------
+16->
+Using Clinical Trial Reports (CTRs) and their related data, assess the compatibility of the statement with the CTR information. If the statement conforms, mark it as "YES." If the statement contradicts or fails to align with the CTR descriptions, indicate it as "NO."
+----------
+17->
+Assess the validity of statements in relation to Clinical Trial Report (CTR) information. Interpret medical jargon and determine context from both the statement and report. Resolve any uncertainties or data discrepancies to ensure consistency. Offer definitive YES or NO answers based on your investigation.
+----------
+18->
+Evaluate the validity of clinical trial report statements using appropriate medical terminology and considering the context. Clarify ambiguous or absent information.
+----------
+19->
+Confirm or disconfirm the consistency of the statement with the Clinical Trial Reports (CTRs) descriptions:
+
+* Confirm: The statement aligns and is consistent with the CTR information.
+* Disconfirm: The statement conflicts or does not correspond with the CTR descriptions. 
+
+(Note: The use of "aligns and is consistent" and "agrees with" have the same meaning in this context.)
+----------

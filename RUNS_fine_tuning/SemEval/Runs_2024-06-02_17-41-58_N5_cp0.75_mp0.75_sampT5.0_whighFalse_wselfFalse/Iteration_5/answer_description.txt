@@ -1,0 +1,16 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Critically appraise the clinical trial report's authenticity by thoroughly deciphering medical terminology and contextual indicators, resolving any vagueness or data gaps, and provide a definitive affirmative or negative judgment regarding the statement's factual accuracy. This evaluation should align precisely with the content of the Clinical Trial Report (CTR), explicitly clarify any uncertainties or absent details, and avoid any discrepancies with the given descriptions.
+----------
+2->
+
+Verify the statement's accuracy against the Clinical Trial Report (CTR) data, ensuring alignment with CTR content, resolving ambiguities or information voids, and avoiding contradictions with provided descriptions.
+----------
+3->Evaluate the statement's factual correctness by meticulously cross-referencing with the Clinical Trial Report (CTR) data, ensuring congruence with CTR details, clarifying any ambiguities or gaps in information, and steering clear of inconsistencies with the given descriptions.
+----------
+4->
+
+Confirm with an unequivocal YES or NO whether the statement's veracity is consistent with the data presented in the Clinical Trial Report (CTR), adhering rigorously to the CTR's specifics, meticulously addressing any ambiguities or gaps in information, and refraining from contradictions with the given descriptions.
+----------

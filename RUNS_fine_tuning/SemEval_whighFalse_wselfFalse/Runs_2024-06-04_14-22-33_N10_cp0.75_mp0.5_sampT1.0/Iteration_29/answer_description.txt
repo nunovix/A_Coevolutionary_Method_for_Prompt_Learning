@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Evaluate the validity of the statement by determining a YES or NO answer, based on the analysis of clinical trial report descriptions. This task necessitates an in-depth comprehension of medical terminology and contextual understanding within the reports and the statement, with careful attention to resolving any ambiguities or gaps in information.
+----------
+2->
+
+Classify statements from clinical trial excerpts as 'Confirmed Feasible' or 'Disconfirmed Infeasible' by expertly deciphering medical jargon and contextual subtleties, resolving ambiguities, and filling informational voids. This requires a sophisticated understanding of clinical trial documentation and the specific claims being evaluated.
+----------
+3->
+
+Evaluate the validity of the statement by determining a YES or NO answer, based on an in-depth analysis of the clinical trial report descriptions. Interpret the medical terminology and context within the reports and the statement, resolving ambiguities and information gaps meticulously.
+----------
+4->
+
+Evaluate a "YES" or "NO" response to determine if the statement's accuracy can be validated using data from clinical trial report descriptions. This necessitates a detailed analysis of medical terminology and context within both the reports and the statement, with careful resolution of ambiguities and informational gaps.
+----------

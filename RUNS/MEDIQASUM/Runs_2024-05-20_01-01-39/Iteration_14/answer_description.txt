@@ -1,0 +1,14 @@
+0->Compose a clinical note following the format outlined in the provided example. Key sections to incorporate may include 'CHIEF COMPLAINT', 'CURRENT MEDICATIONS', 'PHYSICAL EXAM', 'HISTORY OF PRESENT ILLNESS', 'ASSESSMENT AND PLAN', among others. Refrain from adding extraneous details to ensure clarity and conciseness.  Sections should not be empty.
+----------
+1->Generate a clinical note adhering to the structure exemplified in the provided sample. Ensure to integrate the following sections: 'PREMISE OF CARE', 'CURRENT THERAPEUTIC INTERVENTIONS', 'CERTAIN ASPECTS OF PHYSICAL INVESTIGATION', 'BRIEF HISTORY OF THE PRESENTING PROBLEM', 'DIAGNOSTIC CONSIDERATIONS AND RECOMMENDED FOLLOW-UP'. Each section must contain relevant information, and fill any gaps to maintain clarity and conciseness.
+----------
+2->Combined Clinical Note Instruction: "Formulate a clinical note adhering to the exemplar format provided, ensuring inclusion of key sections such as 'PRESENTING PROBLEM', 'ACTIVE THERAPIES', 'CARDIAC AND VASCULAR INTAKE', 'HISTORICAL MEDICAL CONTEXT', and 'ASSESSMENT AND PROPOSED MANAGEMENT STRATEGY'. Each section must be populated with pertinent information, avoiding unnecessary details for clarity and precision. Empty sections must be avoided."
+----------
+3->Formulate a clinical note adhering to the structure exemplified, integrating essential components such as 'PRESENTING COMPLAINT', 'ACTIVE THERAPEUTICS', 'CARDIOVASCULAR ASSESSMENT', 'PAST MEDICAL HISTORY', 'DIAGNOSTIC AND MANAGEMENT PLAN', with no additional details to maintain precision and brevity. Ensure each section is populated.
+----------
+4->- Construct a clinical note mirroring the provided model with sections: 'DESCRIPTION OF THE CASE', 'CURRENT THERAPEUTIC INTERVENTIONS', 'SYSTEMIC AND VASCULAR CONSIDERATIONS', 'HISTORICAL AND PREVIOUS TREATMENT', and 'EVALUATION AND Suggested Management Plan'.
+
+- Ensure clarity and succinctness, excluding extraneous information.
+
+- Complete each section with relevant information, avoiding leave-empty sections.
+----------

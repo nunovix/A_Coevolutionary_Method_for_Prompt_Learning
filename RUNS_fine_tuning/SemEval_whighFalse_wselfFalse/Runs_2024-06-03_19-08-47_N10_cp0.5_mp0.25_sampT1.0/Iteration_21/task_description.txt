@@ -1,0 +1,39 @@
+0->The objective is to examine semantic entailment relationships between individual sections of Clinical Trial Reports (CTRs) and statements articulated by clinical domain experts. CTRs elaborate on the procedures and findings of clinical trials, scrutinizing the effectiveness and safety of novel treatments. Each trial involves cohorts or arms exposed to distinct treatments or exhibiting diverse baseline characteristics. Comprehensive CTRs comprise four sections: (1) ELIGIBILITY CRITERIA delineating conditions for patient inclusion, (2) INTERVENTION particulars specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary encompassing participant statistics, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS cataloging signs and symptoms observed. Statements posit claims regarding the information within these sections, either for a single CTR or in comparative analysis of two. To establish entailment, the statement's assertion should harmonize with clinical trial data, find substantiation in the CTR, and avoid contradiction with the provided descriptions.
+----------
+1->
+
+Conduct a semantic entailment analysis between Clinical Trial Reports (CTRs) and expert assertions, emphasizing therapeutic efficacy and patient safety within clinical trials. The analysis should encompass:
+
+1. Eligibility Criteria: Detail inclusion and exclusion conditions.
+2. Treatment Details: Specify intervention type, dosage, frequency, and treatment duration.
+3. Outcomes Summary: Summarize participant demographics, evaluation metrics, units of measurement, and results.
+4. Adverse Events: Catalogue observed symptoms and side effects.
+
+Cross-reference expert claims with clinical trial data, CTR specifics, and ensure each section's description is consistent and non-contradictory.
+----------
+2->
+
+Conduct a semantic entailment analysis between Clinical Trial Reports (CTRs) and domain experts' statements, emphasizing therapeutic efficacy and patient safety aspects in clinical trials. This analysis should encompass:
+
+1. Eligibility Criteria: Detail inclusion and exclusion criteria.
+2. Treatment Details: Specify intervention type, dosage, administration frequency, and treatment duration.
+3. Outcomes Summary: Summarize participant demographics, evaluation metrics, units of measurement, and results.
+4. Adverse Events: Document observed symptoms and side effects.
+
+Validate expert claims by cross-referencing clinical trial data, CTR specifics, and ensuring internal consistency and absence of contradictions within each section's description.
+----------
+3->
+
+Perform a semantic entailment analysis between Clinical Trial Reports (CTRs) and statements from domain experts, focusing on therapeutic efficacy and patient safety within clinical trials. This analysis should cover:
+
+1. Eligibility Criteria: Clearly outline inclusion and exclusion criteria.
+2. Treatment Details: Define intervention type, dosage, administration frequency, and treatment duration.
+3. Outcomes Summary: Provide a concise summary of participant demographics, evaluation metrics, units of measurement, and results.
+4. Adverse Events: Record any observed symptoms and side effects.
+
+Cross-reference expert claims with clinical trial data, CTR specifics, and verify internal consistency and non-contradiction within each section's description.
+----------
+4->
+
+Evaluate the semantic relationship between Clinical Trial Reports (CTRs) and domain experts' statements, emphasizing therapeutic effectiveness and patient safety in clinical trials. Investigate patient groups subjected to different therapeutic regimens or with varying baseline characteristics. CTRs are divided into four key sections: (1) INCLUSION CRITERIA, outlining patient eligibility, (2) INTERVENTION DETAILS, detailing treatment type, dosage, frequency, and duration, (3) RESULTS SUMMARY, summarizing participant data, metrics, units, and findings, and (4) ADVERSE EVENTS, documenting observed symptoms and side effects. Confirm expert assertions by cross-verifying clinical trial data, CTR content, and ensuring no discrepancies or contradictions in the descriptions of each section.
+----------

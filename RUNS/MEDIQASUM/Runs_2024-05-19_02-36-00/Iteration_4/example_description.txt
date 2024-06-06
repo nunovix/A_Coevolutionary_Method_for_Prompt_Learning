@@ -1,0 +1,13 @@
+0->You will be given a sample clinical note as a reference. Your task is to create a new clinical note that mirrors the format of the example. Feel free to use similar section headings as those in the sample, though it's not mandatory.
+----------
+1->"Construct a professional clinical note, mirroring the exemplar's structure with section headings, tailored to expert-level interpretation and documentation."
+----------
+2->Generate a clinical note imitating the structure of the provided sample, integrating key elements from two different instructional scenarios. Ensure the final instruction serves as a comprehensive guide for experts in clinical documentation, capturing the essence of both original instructions and maintaining precision in medical terminology.
+
+
+Resulting Combined Instruction: "Develop a clinical note replicating the sample's layout, incorporating elements from the initial instructions. Use similar section headings if possible, but prioritize a clear and accurate representation of the task. This instruction should serve as an expert-level guideline for clinical note creation, synthesizing the core directives from both original instructions."
+----------
+3->Craft a clinical note mimicking the sample's structure, incorporating similar section headings when suitable.
+----------
+4->Generate a clinical note that replicates the exemplar's structure, incorporating similar section headings as optional.
+----------

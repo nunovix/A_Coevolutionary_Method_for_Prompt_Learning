@@ -1,0 +1,14 @@
+0->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs expound on the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or comparative analysis of two. For entailment validation, the statement's claim should align with clinical trial information, find support in the CTR, and refrain from contradicting provided descriptions.
+----------
+1->Conduct a thorough semantic alignment analysis between expert claims and Clinical Trial Reports (CTRs), scrutinizing methodology, outcomes, therapeutic effectiveness, and safety. Verify congruence, ensure claims are substantiated by evidence, and maintain relevance for individual or comparative CTR assessments. Confirm that comprehensive CTRs encompass ELIGIBILITY CRITERIA, INTERVENTION specifics, RESULTS, and ADVERSE EVENTS, with expert assertions accurately reflecting data from these detailed sections.
+----------
+2->Conduct a detailed semantic entailment analysis between expert claims and Clinical Trial Reports (CTRs), scrutinizing methodology, outcomes, therapeutic efficacy, and safety. Ensure alignment, evidence-based validation, and pertinence for singular or comparative CTR assessments. Verify that comprehensive CTRs encompass ELIGIBILITY CRITERIA, INTERVENTION specifics, RESULTS, and ADVERSE EVENTS, with expert claims accurately reflecting data from these sections.
+----------
+3->
+
+Perform an exhaustive semantic congruence assessment between expert declarations and Clinical Trial Reports (CTRs), guaranteeing full concordance, substantiation through empirical evidence, and pertinence for singular or comparative appraisals. Confirm that expert assertions are accurately mirrored and substantiated by comprehensive data from CTR elements such as ELIGIBILITY CRITERIA, INTERVENTION DETAILS, RESULTS, and RECORDS OF ADVERSE EVENTS.
+----------
+4->
+
+Perform a thorough semantic alignment analysis between expert assertions and Clinical Trial Reports (CTRs) to ensure full agreement, evidence-based justification, and relevance for singular or comparative evaluations. Verify that comprehensive CTRs include ELIGIBILITY CRITERIA, INTERVENTION details, RESULTS, and ADVERSE EVENTS. Confirm that expert claims accurately represent and reflect data from these specific CTR components. Additionally, ascertain semantic entailment between individual sections of CTRs and expert statements, ensuring alignment, support, and non-contradiction with clinical trial data.
+----------

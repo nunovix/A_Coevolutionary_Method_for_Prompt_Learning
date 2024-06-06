@@ -1,0 +1,18 @@
+0->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs expound on the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or comparative analysis of two. For entailment validation, the statement's claim should align with clinical trial information, find support in the CTR, and refrain from contradicting provided descriptions.
+----------
+1->
+
+Perform an exhaustive semantic entailment analysis between Clinical Trial Reports (CTRs) and authoritative clinical claims, evaluating trial methodologies, results, therapeutic efficacy, and patient safety. Scrutinize Patient Selection Criteria, detailing Treatment specifics including modality, dosage, frequency, and duration. Analyze Participant Demographics, Outcome Measures, Units of Measurement, Conclusions, and meticulously document all Clinical Adverse Events. Cross-verify expert claims with CTR data to confirm alignment with trial results and adherence to clinical guidelines.
+----------
+2->
+
+Perform an in-depth semantic entailment analysis between Clinical Trial Reports (CTRs) and authoritative clinical statements, concentrating on methodologies, results, therapeutic efficacy, and patient safety. Carefully examine the Patient Selection Criteria, Treatment Details (including modality, dosage, frequency, and duration), Participant Demographics, Outcome Measures, Units of Measurement, Conclusions, and meticulously record all Clinical Adverse Events. Cross-examine specialists' assertions with CTR data to verify alignment with trial results, compliance with clinical guidelines, and absence of contradictions in descriptions.
+----------
+3->
+
+Conduct an exhaustive semantic entailment analysis between Clinical Trial Reports (CTRs) and authoritative clinical statements, focusing on methodologies, results, therapeutic effectiveness, and patient safety. Delve into Patient Selection Criteria, Treatment Details (including modality, dosage, frequency, and duration), Participant Demographics, Outcome Measures, Units of Measurement, Conclusions, and meticulously document all Clinical Adverse Events. Cross-verify specialists' assertions with CTR data to confirm alignment with trial results and adherence to clinical guidelines.
+----------
+4->
+
+Perform an in-depth semantic entailment analysis between Clinical Trial Reports (CTRs) and authoritative clinical guidelines, paying particular attention to trial methodologies, results, therapeutic efficacy, and patient safety. Examine the Patient Selection Criteria thoroughly, including Treatment specifics such as modality, dosage, frequency, and duration. Analyze Participant Demographics, Outcome Measures, Units of Measurement, Conclusions, and meticulously record all Clinical Adverse Events. Validate specialists' claims against CTR data to confirm alignment with trial results and adherence to clinical standards.
+----------

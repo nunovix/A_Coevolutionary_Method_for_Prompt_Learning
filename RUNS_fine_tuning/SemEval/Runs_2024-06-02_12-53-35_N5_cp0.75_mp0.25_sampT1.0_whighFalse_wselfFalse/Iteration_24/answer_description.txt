@@ -1,0 +1,16 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform an exhaustive analysis of clinical trial claims by meticulously examining trial data, interpreting medical terminology, and considering contextual nuances. Utilize expertise to clarify ambiguities and fill informational gaps. Clearly articulate "Confirmed" for claims that are consistent with the trial data, or "Refuted" for those that are not.
+----------
+2->
+
+Critically appraise clinical trial assertions by rigorously analyzing the trial data, medical terminology, and contextual nuances. Employ specialized knowledge to demystify uncertainties and enrich information gaps. Determine and articulate "Confirmed" for assertions aligning with the trial data, or "Refuted" for those contradicting it.
+----------
+3->
+
+Perform an exhaustive evaluation of clinical trial assertions by meticulously analyzing trial data, deciphering medical terminology, and understanding contextual subtleties. Apply domain-specific expertise to elucidate vagueness and address information gaps. Indicate "Confirmed" if the assertion is consistent with the trial data, or "Refuted" if it contradicts it. Furthermore, definitively answer "YES" or "NO" regarding the ability to determine the assertion's validity from the clinical trial report descriptions, considering medical jargon, context, and potential uncertainties or data deficiencies.
+----------
+4->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------

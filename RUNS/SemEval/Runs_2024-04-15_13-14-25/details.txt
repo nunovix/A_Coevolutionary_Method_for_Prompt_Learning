@@ -1,0 +1,21 @@
+Task: SemEval
+Start time: 2024-04-15 13:14:25.097856
+End time: 2024-04-15 18:23:57.857531
+Total elapsed time: 5:09:32.759675
+No. of iterations: 20
+Average time per iteration: 0:15:28.637984
+
+Initial population size (size of suprompts pop): 5
+How many of the top performers are being kept(elite): 1
+Max no. of iterations allowed: 200
+Patience: 20
+Decoder temperature in mutation and combiantions: 1.0
+Top-p in sampling for mutation and combiantions: 0.8
+
+Evaluation done on: dev set
+With 200 examples
+
+Name of the model used: mistralai/Mistral-7B-Instruct-v0.2 
+4 bit quantization: True 
+Now the individuals are not bonded, meaning that new subprompts are created and randomly combined 
+Alg 2 - Random sample 2 individuals weighted on scores, apply crossover and mutation to the offspring, top 1 performers are always kept as elite population

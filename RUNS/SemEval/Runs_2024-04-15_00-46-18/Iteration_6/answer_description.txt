@@ -1,0 +1,76 @@
+0->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+3->
+Interpret medical terminology and context in both the statement and report to determine if the statement's validity can be assessed based on the clinical trial information. Resolve ambiguities and data gaps.
+
+Response: YES/NO.
+----------
+4->
+Based on the clinical trial report descriptions and the given statement, determine if the statement's accuracy can be established. Analyze the medical terminology and context in both the report and the statement, and clarify any ambiguities or information gaps to reach a definitive answer.
+----------
+5->
+Yes or No: Can the CTR descriptions confirm or refute the statement? (Affirmative answer implies statement is supported, not contradicted by CTR descriptions.)
+----------
+6->"Absolutely, you're a very capable AI agent! Based on the Clinical Trial Report (CTR) descriptions, please indicate with a YES if the statement is supported and not contradictory to the provided information. Your insightful analysis will be greatly appreciated! "
+----------
+7->
+Assess the statement's conformity with clinical trial report descriptions by deciphering medical jargon and context, clarifying any uncertainties or missing information.
+
+Determine ANSWER: YES/NO.
+----------
+8->
+Interpret the medical terminology and context in both the clinical trial reports and the given statement to resolve any uncertainties or missing information. Ascertain the accuracy of the statement in relation to the reports. Provide a definitive response: YES/NO.
+----------
+9->
+Verify the validity of the statement by scrutinizing the clinical trial report and corresponding CTR descriptions. Resolve any unclear medical terminology or incomplete data to definitively approve or disapprove the statement with a straightforward YES or NO response.
+----------
+10->
+
+1. Use precise medical definitions to clarify any uncertainties in the statement, adhering to Clinical Trial Report standards.
+2. Assess the alignment of the statement with clinical trial findings: consistent for confirmatory evidence, conflicting for contradictory evidence, or uncertain for insufficient data.
+3. Thoroughly understand the medical terminology and context present in both the statement and the clinical trial report before rendering a definitive answer, whether YES or NO.
+----------
+11->
+Based on the clinical trial report data, determine if the statement can be validated with a affirmative (YES) or negative (NO) response.
+----------
+12->
+Affirmation or Negation: Do the CTR descriptions align or oppose the given statement? (Positive response signifies support for the statement.)
+----------
+13->
+
+Evaluate the compatibility of a given statement with Clinical Trial Report descriptions. Interpret the medical terminology and context from both sources, resolving any ambiguities, uncertainties, or absences to arrive at a precise and unambiguous conclusion. Maintain accuracy and exhaustiveness throughout the examination.
+----------
+14->
+
+1. Clarify ambiguities in the statement using precise medical definitions, adhering to Clinical Trial Report standards.
+2. Evaluate the agreement between the statement and clinical trial findings: congruent for corroborative evidence, discordant for contradictory evidence, or equivocal for insufficient data.
+3. Comprehensively grasp the medical terminology and context found in both the statement and the clinical trial report prior to rendering a definitive response (YES or NO).
+----------
+15->
+
+Evaluate the statement's validity using the clinical trial report and corresponding CTR details. Provide a clear-cut YES or NO answer after clarifying any ambiguities regarding medical jargon or incomplete data.
+----------
+16->
+
+1. Check the clinical trial report and its corresponding CTR descriptions for the accuracy of the statement.
+2. Comprehensively grasp the medical terminology and context in both the statement and the clinical trial report.
+3. Evaluate the congruence of the statement with the clinical trial findings: matching for confirmatory evidence, contrasting for contradictory evidence, or indeterminate for insufficient data.
+4. Use authoritative medical definitions to clarify any ambiguities in the statement, following Clinical Trial Report guidelines.
+----------
+17->
+
+Determine the accuracy of the statement based on the clinical trial report findings. Translate any medical terminology, contextualize the statement and report, and resolve ambiguities or omissions to reach a definitive conclusion. Reply with "Yes" if the statement matches the clinical trial data, and "No" otherwise.
+----------
+18->
+Based on the Clinical Trial Report descriptions, identify statements that are both supported and not contradictory. Affirm with a "YES" for such instances. Your insightful analysis is essential for this task.
+----------
+19->
+
+1. Clarify any ambiguities in the statement using authoritative medical definitions, adhering to Clinical Trial Report standards.
+2. Evaluate the correspondence between the statement and clinical trial results: congruent for confirmatory findings, discordant for contradictory evidence, or indeterminate for insufficient data.
+3. Fully grasp the medical terminology and context in both the statement and clinical trial report before rendering a definitive answer.
+----------

@@ -1,0 +1,20 @@
+0->
+
+Determine a "YES" or "NO" answer to ascertain if the validity of the statements within clinical trial report descriptions can be evaluated based on the provided information. Analyze the medical jargon and context in both the reports and statements, meticulously resolving any ambiguities or informational deficiencies.
+----------
+1->
+
+Undertake a comprehensive review of clinical trial documentation, scrutinizing medical terminology and contextual cues to clarify ambiguities and fill information gaps. Assess each statement's factual accuracy, categorizing it as 'VALID' or 'INVALID', according to its truthfulness. Additionally, analyze clinical trial accounts, focusing on medical language and context, to demystify uncertainties and rectify informational deficiencies.
+----------
+2->
+
+Perform an exhaustive examination of clinical trial records, scrutinizing medical jargon and contextual indicators to resolve ambiguities and address informational voids. Evaluate the veracity of each assertion, labeling it as 'VALID' for accurate assertions or 'INVALID' for inaccuracies. Furthermore, dissect clinical trial narratives, concentrating on medical terminology and context, to clarify uncertainties and correct informational deficiencies.
+----------
+3->
+
+Conduct a comprehensive review of clinical trial documentation, scrutinizing medical terminology and contextual cues to clarify ambiguities and fill information gaps. Assess the factual accuracy of each claim, categorizing it as 'VALID' or 'INVALID', based on its truthfulness. Additionally, dissect clinical trial narratives, focusing on medical language and context, to demystify uncertainties and rectify informational deficiencies.
+----------
+4->
+
+Conduct a comprehensive evaluation of clinical trial documentation, rigorously analyzing medical terminology and contextual cues to clarify ambiguities and fill information gaps. Assess the factual accuracy of each claim, categorizing it as 'Correct' or 'Incorrect', based on its truthfulness. Additionally, delve into clinical trial narratives, focusing on medical language and context, to clarify uncertainties and rectify informational deficiencies.
+----------

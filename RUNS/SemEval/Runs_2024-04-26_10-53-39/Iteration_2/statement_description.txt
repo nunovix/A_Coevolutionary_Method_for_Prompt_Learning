@@ -1,0 +1,24 @@
+0->
+Thoroughly review and understand the expert's clinical trials statement, resolving any uncertainties and deciphering any technical medical language.
+----------
+1->
+Understand and clarify any ambiguities in an expert's statement about clinical trials, interpreting specialized medical terminology as needed.
+----------
+2->"Consider the statement made by an expert in clinical trials or healthcare practitioner, clinical trials coordinator, or medical researcher that follows." 
+
+By combining the two instructions, the resulting instruction retains the main information and intent of the original instructions while being more concise and clear. The instruction specifies that the expert in question is from clinical trials or healthcare, and that they have made a statement, providing a clearer direction for the audience to focus on the important information.
+----------
+3->
+Thoroughly review and understand the expert's clinical trials statement, resolving any uncertainties and deciphering any technical medical language.
+----------
+4->
+A healthcare practitioner, clinical trials coordinator, or medical researcher might make the following statement:
+
+OR
+
+Statement from a healthcare practitioner, clinical trials coordinator, or medical researcher:
+
+OR
+
+Healthcare practitioners, clinical trials coordinators, and medical researchers may utter the following:
+----------

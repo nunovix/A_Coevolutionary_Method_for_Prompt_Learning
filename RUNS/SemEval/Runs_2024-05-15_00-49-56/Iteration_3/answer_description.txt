@@ -1,0 +1,12 @@
+0->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+1->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Examine the clinical trial report's statement rigorously, scrutinizing medical jargon and context for ambiguities or omissions. Determine its validity with a definitive YES or NO.
+----------
+3->Assess the statement's validity based on Clinical Trial Report (CTR) descriptions, and respond with YES if supported, NO if contradictory.
+----------
+4->Validate the statement's accuracy within the clinical trial report, utilizing precise medical terminology and context, to ensure expert-level understanding.
+
+Determine, YES or NO, if the clinical trial report's content allows validation of the statement's accuracy, where a 'YES' signifies alignment with the report without contradicting the details.
+----------

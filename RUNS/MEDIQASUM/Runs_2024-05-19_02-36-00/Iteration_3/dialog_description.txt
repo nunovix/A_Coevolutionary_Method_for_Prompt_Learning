@@ -1,0 +1,10 @@
+0->Construct a clinical note using the provided dialogue between a healthcare provider and a patient.
+----------
+1->Compile a clinical record from the provided healthcare provider-patient conversation. Ensure the documentation precisely captures the dialogue's content, adhering strictly to clinical standards and terminology expected by specialists.
+----------
+2->"Synthesize a clinical note from the healthcare provider-patient dialogue, ensuring the note encompasses all crucial details. The note must reflect the conversation's content with exactitude and precision. Strive for succinctness and clarity, targeting an expert-level comprehension. Include necessary technical terminology and elaborate on key points as required for expert interpretation."
+----------
+3->"Generate a professional clinical note by synthesizing a medical consultation transcript and associated patient dialogue. The note should encapsulate crucial clinical details and communication with concise expert-level clarity, reflecting the exact content of the conversation."
+----------
+4->Create a clinical note from the provided healthcare provider-patient dialogue, ensuring the note is precise, succinct, and captures all relevant details for expert analysis.
+----------

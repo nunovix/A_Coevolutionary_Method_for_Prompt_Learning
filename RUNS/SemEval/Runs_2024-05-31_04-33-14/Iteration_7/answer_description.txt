@@ -1,0 +1,16 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->
+
+Critically assess the clinical trial report data to conclusively validate or refute the veracity of the statement in question.
+----------
+2->Assess the statement's validity affirmatively or negatively by meticulously analyzing data extracted from the clinical trial report, ensuring accuracy in determining its truthfulness.
+----------
+3->
+
+Critically assess the veracity of the statement by meticulously examining data extracted from the clinical trial report.
+----------
+4->
+
+Evaluate the veracity of the provided statement by analyzing data extracted from the clinical trial report.
+----------

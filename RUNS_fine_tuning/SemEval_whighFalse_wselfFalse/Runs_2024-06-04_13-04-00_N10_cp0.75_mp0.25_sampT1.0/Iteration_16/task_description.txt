@@ -1,0 +1,18 @@
+0->Your task is determining support relationships between individual sections of Clinical Trial Reports (CTRs) and clinical statements. CTRs detail the methodology and findings of clinical trials, assessing effectiveness and safety of new treatments. CTRs consist of 4 sections: (1) ELIGIBILITY CRITERIA listing conditions for patient participation, (2) INTERVENTION description specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary detailing participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing signs and symptoms observed. Statements make claims about information in these sections, either for a single CTR or comparing two.
+----------
+1->
+
+Perform an exhaustive semantic analysis of Clinical Trial Reports (CTRs), aligning therapeutic efficacy, safety criteria, participant demographics, and intervention particulars with recognized clinical knowledge. Critically evaluate inclusion criteria, elaborating on treatment specifics such as modality, dosage, administration frequency, and treatment duration. Compile trial results, encompassing participant numbers, outcome measures, units of measurement, and deduced implications. Record adverse events with explicit clinical presentations, corroborated by data from CTRs, ensuring the original content's integrity is maintained.
+----------
+2->
+
+Perform an exhaustive semantic dissection of Clinical Trial Reports (CTRs), integrating therapeutic effectiveness, safety parameters, patient demographics, and intervention particulars with existing clinical expertise. Thoroughly scrutinize eligibility prerequisites, encompassing treatment specifics such as modality, dosage, administration frequency, and treatment span. Accurately encapsulate trial findings, enumerating participant counts, outcome metrics, units of measurement, and deduced clinical relevance. Precise documentation of adverse events is required, aligning observed symptoms with data extracted from CTRs, while maintaining source veracity.
+----------
+3->
+
+Execute a thorough semantic analysis of Clinical Trial Reports (CTRs), integrating therapeutic efficacy, safety profiles, patient demographics, and intervention specifics with established clinical expertise. Rigorously assess eligibility criteria, encompassing treatment modalities, dosages, administration schedules, and treatment durations. Provide a detailed summary of trial results, including participant counts, outcome metrics, measurement units, and clinical implications. Accurately document adverse events, correlating observed symptoms with CTR data to maintain source veracity.
+----------
+4->
+
+Conduct a comprehensive semantic analysis of Clinical Trial Reports (CTRs), synthesizing therapeutic efficacy, safety profiles, patient demographics, and intervention specifics with established clinical knowledge. Rigorously evaluate eligibility criteria, including treatment details such as modality, dosage, administration frequency, and treatment duration. Summarize trial results meticulously, detailing participant numbers, outcome measures, units of measurement, and inferred clinical significance. Document adverse events precisely, correlating observed symptoms with data from CTRs, ensuring source integrity.
+----------

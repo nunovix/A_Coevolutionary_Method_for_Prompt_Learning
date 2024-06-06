@@ -1,0 +1,20 @@
+0->
+
+Evaluate semantic entailment relationships between distinct sections of Clinical Trial Reports (CTRs) and expert clinical statements. To confirm entailment, ensure the statement's claim is substantiated by the CTR and does not contradict the expert's assertions. Briefly, CTRs detail clinical trials' methodologies and results, assessing new treatments' effectiveness and safety. Comprehensive CTRs include four sections: (1) ELIGIBILITY CRITERIA, outlining patient inclusion conditions, (2) INTERVENTION, detailing treatment type, dosage, frequency, and duration, (3) RESULTS, summarizing participant statistics, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS, listing observed signs and symptoms. Analyze expert statements regarding information within these sections for a single CTR or comparative analysis of two CTRs.
+----------
+1->
+
+Examine the semantic entailment relationships between Clinical Trial Reports (CTRs) and authoritative clinical assertions, focusing on methodology, results, eligibility criteria, interventions, and adverse events. Dissect each CTR into four segments: (1) ELIGIBILITY CRITERIA, detailing patient inclusion conditions, (2) INTERVENTION, specifying treatment particulars such as type, dosage, frequency, and duration, (3) RESULTS, summarizing participant statistics, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS, documenting observed signs and symptoms. Ensure expert assertions are supported by, related to, and do not contradict these CTR sections. To establish entailment, assertions must reference clinical trial data, be substantiated by the CTRs, and align with the provided descriptions.
+----------
+2->
+
+Conduct a detailed analysis of semantic entailment between Clinical Trial Reports (CTRs) and authoritative clinical statements, focusing on methodology, results, inclusion/exclusion criteria, interventions, and adverse effects. Segment each CTR into four parts: (1) Inclusion/Exclusion Criteria, detailing patient conditions, (2) Interventions, describing treatment specifics including type, dosage, frequency, and duration, (3) Results, summarizing participant count, outcome measures, units, and conclusions, and (4) Adverse Effects, listing observed signs and symptoms. Confirm entailment by ensuring statements reference clinical trial data, are supported by the CTRs, and align with expert descriptions.
+----------
+3->
+
+Perform an in-depth examination of semantic entailment between Clinical Trial Reports (CTRs) and authoritative clinical declarations, concentrating on methodology, results, inclusion/exclusion criteria, interventions, and adverse effects. Break down each CTR into four distinct sections: (1) ELIGIBILITY CRITERIA, outlining patient inclusion conditions, (2) INTERVENTION, detailing treatment specifics such as type, dosage, frequency, and duration, (3) RESULTS, summarizing the number of participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS, documenting any observed signs and symptoms. Verify that expert declarations are consistent with, related to, and do not conflict with these CTR sections. Validate entailment by confirming that assertions are based on clinical trial data, substantiated by the CTRs, and congruent with the provided descriptions.
+----------
+4->
+
+Evaluate semantic entailment relationships between distinct sections of Clinical Trial Reports (CTRs) and expert clinical statements. To confirm entailment, ensure the statement's claim is substantiated by the CTR and does not contradict the expert's assertions. Briefly, CTRs detail clinical trials' methodologies and results, assessing new treatments' effectiveness and safety. Comprehensive CTRs include four sections: (1) ELIGIBILITY CRITERIA, outlining patient inclusion conditions, (2) INTERVENTION, detailing treatment type, dosage, frequency, and duration, (3) RESULTS, summarizing participant statistics, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS, listing observed signs and symptoms. Analyze expert statements regarding information within these sections for a single CTR or comparative analysis of two CTRs.
+----------

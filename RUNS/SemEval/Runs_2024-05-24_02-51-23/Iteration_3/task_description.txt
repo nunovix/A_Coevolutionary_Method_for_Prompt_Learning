@@ -1,0 +1,54 @@
+0->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs expound on the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or comparative analysis of two. For entailment validation, the statement's claim should align with clinical trial information, find support in the CTR, and refrain from contradicting provided descriptions.
+----------
+1->Critically evaluate semantic relationships between segments in Clinical Trial Reports (CTRs) and expert statements, with a focus on:
+
+
+1. Identifying essential elements within CTRs: Eligibility Criteria, Intervention Details, Outcomes, and Adverse Reactions.
+
+2. Scrutinizing expert commentary on these elements to:
+
+   - Determine if statements align and are substantiated by CTR data.
+
+   - Confirm statements do not contradict CTR descriptions.
+
+
+Applicable for individual CTR analysis or for comparative analysis across multiple CTRs.
+----------
+2->Evaluate the semantic relationships among segments in Clinical Trial Reports (CTRs) and expert commentary with focus on:
+
+
+1. Identifying key elements within CTRs: Eligibility Criteria, Intervention Details, Outcomes, and Adverse Reactions.
+
+2. Scrutinizing expert insights related to these elements to determine:
+
+   - Assertions that are in agreement and evidence-backed from CTRs.
+
+   - Statements that align with and do not contradict the information within CTRs.
+
+
+Applicable for in-depth examination of individual CTRs or comparative analysis across several CTRs.
+----------
+3->Evaluate the semantic relationships between segments of Clinical Trial Reports (CTRs) and expert declarations, focusing on:
+
+
+1. Identifying crucial elements in CTRs, including Eligibility Criteria, Intervention Details, Outcomes, and Adverse Reactions.
+
+2. Examining expert discourse regarding these CTR elements to determine assertions that:
+
+   - Are consistent with data from CTRs and can be substantiated.
+
+   - Are in harmony with the descriptions in CTRs and avoid contradictions.
+
+
+This approach facilitates detailed scrutiny of single CTRs or enables comparative analysis across multiple CTRs.
+----------
+4->"Assess semantic linkages between segments of Clinical Trial Reports (CTRs) and expert analysis, concentrating on:
+
+
+1. Extracting core components from CTRs, including but not limited to: Eligibility Criteria, Intervention Specifications, Outcome Data, and Documented Adverse Effects.
+
+2. Verifying expert interpretations of these CTR components for consistency and corroboration with the CTR information, ensuring no discordance with CTR narratives.
+
+
+Employ this methodology for comprehensive analysis of singular CTRs or comparative analysis involving a collection of CTRs."
+----------

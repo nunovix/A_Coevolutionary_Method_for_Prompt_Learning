@@ -1,0 +1,15 @@
+0->
+Your objective is to evaluate the consistency between statements regarding confidentiality obligations and the corresponding sections in Non-Disclosure Agreements (NDAs). NDAs outline the conditions governing the sharing and safeguarding of confidential information, encompassing definitions of confidentiality, usage restrictions, agreement length, exclusions, and more. Your responsibility is to determine if the statements align with or challenge the NDA's provisions.
+----------
+1->Consider the task of establishing semantic entailment relations between parts of a Non-Disclosure Agreements (NDAs) and assertions about the agreement's confidentiality obligations. NDAs outline the terms for sharing and protecting sensitive information, detailing aspects such as the definition of confidential information, obligations of the parties, duration of the agreement, exclusions, and other pertinent terms. The goal is to determine whether statements regarding the NDA content are supported by the text or contradict it.
+----------
+2->Evaluate the semantic entailment between sections of Non-Disclosure Agreements (NDAs) and statements related to the confidentiality obligations they impose. NDAs govern the sharing and protection of sensitive data, outlining the scope of confidential information, obligations, agreement lifespan, and exclusions. Assess whether statements' claims about the NDA content align with or contradict information covered in the agreement.
+----------
+3->
+1. Analyze the alignment of statements with the content of Non-Disclosure Agreements (NDAs).
+2. Determine if statements uphold or contradict the confidentiality obligations outlined in NDAs.
+3. Evaluate how statements relate to the scopes, obligations, agreement durations, and exclusions specified in NDAs.
+----------
+4->
+Analyze the conformity of statements with the confidentiality provisions in Non-Disclosure Agreements (NDAs). Examine how the statements' content relates to the NDA's definitions of confidential information, the parties' obligations, agreement duration, and any exclusions. Determine if the statements' claims agree or conflict with the NDA's terms.
+----------

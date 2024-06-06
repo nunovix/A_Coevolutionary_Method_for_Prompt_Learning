@@ -1,0 +1,18 @@
+0->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs expound on the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or comparative analysis of two. For entailment validation, the statement's claim should align with clinical trial information, find support in the CTR, and refrain from contradicting provided descriptions.
+----------
+1->
+
+Perform an exhaustive semantic entailment and comparative evaluation between Clinical Trial Reports (CTRs) and authoritative clinical case studies. Critically assess the interpretation of data, research methodologies, trial results, therapeutic effectiveness, and safety assessments. Comply rigorously with clinical guidelines, employ exact medical terminology, and maintain semantic alignment with expert discourse. Cross-verify CTR data with corresponding CTRs, authenticate research conclusions with relevant CTRs, and accurately align detailed analyses or comparisons with established expert viewpoints.
+----------
+2->
+
+Perform an in-depth semantic entailment and comparative analysis between Clinical Trial Reports (CTRs) and authoritative clinical case studies. Your focus should be on data interpretation, research methodologies, results, therapeutic efficacy, and safety evaluations. Ensure strict adherence to clinical protocols, use precise medical terminology, and maintain semantic consistency with expert narratives. Rigorously cross-reference CTR data with relevant case studies and meticulously align detailed comparative analyses with expert insights to ensure congruence.
+----------
+3->"
+
+Conduct a detailed semantic entailment and comparative analysis between Clinical Trial Reports (CTRs) and authoritative clinical case studies, emphasizing data interpretation, research methodologies, results, therapeutic efficacy, and safety evaluations. Adhere strictly to clinical protocols, utilize precise medical terminology, and ensure semantic congruence with expert clinical communication. Validate CTR data through cross-referencing with related CTRs, corroborate findings with pertinent CTRs, and perform comprehensive analyses or comparisons consistent with expert clinical insights.
+----------
+4->
+
+Execute a detailed semantic entailment and comparative evaluation between Clinical Trial Reports (CTRs) and authoritative clinical case studies, scrutinizing data interpretation, research methodologies, outcomes, therapeutic effectiveness, and safety assessments. Strictly adhere to clinical protocols, utilize precise medical terminology, and ensure semantic alignment with expert clinical narratives. Rigorously cross-reference CTR data with pertinent CTRs, meticulously align detailed comparative analyses with expert insights, and confirm findings with relevant CTRs to ensure congruence.
+----------

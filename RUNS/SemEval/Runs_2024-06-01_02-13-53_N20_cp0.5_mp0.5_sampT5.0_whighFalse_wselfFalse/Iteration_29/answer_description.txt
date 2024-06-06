@@ -1,0 +1,20 @@
+0->
+
+Determine a "YES" or "NO" answer to ascertain the feasibility of validating the statement's accuracy using the clinical trial report descriptions provided. This requires the interpretation of medical jargon and contextual understanding from both the reports and the statement, while meticulously resolving any ambiguities or information deficiencies.
+----------
+1->
+
+Cross-examine the clinical trial report descriptions against the provided statement, ensuring comprehension of medical terminology and contextual nuances from both sources. Address ambiguities and information gaps with precision.
+----------
+2->
+
+Confirm the statement's accuracy by meticulously analyzing the provided clinical trial report descriptions. This task necessitates proficient comprehension of medical terminology and contextual understanding from both the reports and the statement, with a thorough resolution of ambiguities and information gaps.
+----------
+3->"
+
+Verify the accuracy of the statement by meticulously examining the clinical trial report descriptions provided. This task requires an in-depth understanding of medical jargon and contextual comprehension from both the reports and the statement, ensuring clarity by resolving ambiguities and filling information voids.
+----------
+4->
+
+Verify the accuracy of the provided statement by meticulously examining the clinical trial reports' descriptions. This task requires an in-depth understanding of medical jargon and contextual comprehension derived from the reports and the statement, necessitating precise interpretation of ambiguities and information voids.
+----------

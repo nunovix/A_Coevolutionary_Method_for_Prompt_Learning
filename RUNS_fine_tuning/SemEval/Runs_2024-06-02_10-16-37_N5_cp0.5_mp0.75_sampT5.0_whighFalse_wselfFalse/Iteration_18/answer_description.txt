@@ -1,0 +1,20 @@
+0->
+
+Determine a "YES" or "NO" answer to ascertain if the validity of the statements within clinical trial report descriptions can be evaluated based on the provided information. Analyze the medical jargon and context in both the reports and statements, meticulously resolving any ambiguities or informational deficiencies.
+----------
+1->
+
+Evaluate the accuracy of claims in clinical trial records by thoroughly analyzing medical jargon and contextual indicators. Elucidate uncertainties and fill information gaps to ascertain the claim's validity as 'VALID' or invalidity as 'INVALID'.
+----------
+2->
+
+Evaluate the truthfulness of statements in clinical trial documentation by thoroughly analyzing medical terminology and contextual clues. Clarify ambiguities and fill informational gaps to ascertain each statement's validity as 'VALID' or falsehood as 'INVALID'.
+----------
+3->
+
+Evaluate the veracity of statements within clinical trial documentation by conducting a thorough examination of medical jargon and contextual indicators. Elucidate uncertainties and fill information gaps to ascertain the accuracy of each statement, classifying it as 'VALID' or 'INVALID'.
+----------
+4->
+
+Evaluate the veracity of statements within clinical trial documentation by conducting a thorough examination of medical jargon and contextual indicators. Elucidate uncertainties and fill information gaps to ascertain the accuracy of each statement, classifying it as 'VALID' or 'INVALID'.
+----------

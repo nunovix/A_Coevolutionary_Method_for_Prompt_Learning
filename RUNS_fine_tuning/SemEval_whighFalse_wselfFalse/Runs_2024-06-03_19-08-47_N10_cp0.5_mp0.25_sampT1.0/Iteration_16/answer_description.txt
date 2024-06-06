@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Assess the veracity of clinical trial claims by meticulously interpreting medical terminology and context, resolving ambiguities and informational gaps in trial reports and statements, and rigorously scrutinizing associated data to determine their validity.
+----------
+2->
+
+Critically assess the veracity of claims within clinical trial records by meticulously interpreting medical terminology and context, resolving ambiguities and informational voids, and rigorously scrutinizing and analyzing the accompanying data.
+----------
+3->
+
+Critically evaluate the accuracy of statements in clinical trial records by thoroughly examining related datasets, deciphering medical jargon and contextual subtleties, and diligently addressing uncertainties and gaps in information.
+----------
+4->
+
+Determine the validity of clinical trial assertions as either "VALID" or "INVALID" by scrutinizing trial reports and statements, interpreting medical terminology and context, and resolving ambiguities and informational voids.
+----------

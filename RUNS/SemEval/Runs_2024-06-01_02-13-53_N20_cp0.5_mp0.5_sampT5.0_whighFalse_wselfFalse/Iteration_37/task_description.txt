@@ -1,0 +1,20 @@
+0->
+
+Examine the semantic entailment relationships between segments of Clinical Trial Reports (CTRs) and authoritative clinical assertions. CTRs document clinical trials, evaluating the effectiveness and safety of novel therapeutic interventions. Trials involve cohorts undergoing distinct treatments or possessing diverse baseline characteristics. CTRs are divided into four comprehensive sections: (1) INCLUSION CRITERIA, detailing patient eligibility conditions, (2) TREATMENT DETAILS, describing the intervention type, dosage, administration frequency, and treatment length, (3) RESULTS SUMMARY, summarizing participant demographics, outcome metrics, units of measurement, and findings, and (4) OBSERVED ADVERSE EVENTS, cataloging reported signs and symptoms. Expert assertions pertain to specific CTRs or juxtapose two. Validate entailment by ensuring the assertion is consistent with clinical trial data, corroborated by the CTR, and does not conflict with the provided descriptions.
+----------
+1->
+
+Conduct a thorough semantic analysis of Clinical Trial Reports (CTRs), ensuring compliance with predefined clinical guidelines. Evaluate the effectiveness and safety aspects of the interventions based on trial data. Examine the methodologies of research, criteria for participant selection and exclusion, intervention specifics, trial outcome summaries, and records of adverse reactions. Confirm expert claims about individual or multiple CTRs by cross-referencing data. Check for consistency across reports and provide detailed descriptions for each section: Inclusion Criteria, Treatment Details, Results Summary, and Documented Adverse Events.
+----------
+2->
+
+Perform an exhaustive semantic dissection of Clinical Trial Reports (CTRs), verifying adherence to prescribed clinical guidelines. Assess the efficacy and safety of interventions based on trial data. Scrutinize research methodologies, criteria for participant inclusion/exclusion, specifics of the interventions, summaries of results, and logs of adverse events. Authenticate the validity of experts' assertions regarding individual or multiple CTRs by cross-referencing data. Maintain uniformity across reports and furnish comprehensive explanations for each segment: INCLUSION CRITERIA, TREATMENT DETAILS, RESULTS SUMMARY, and OBSERVED ADVERSE EVENTS.
+----------
+3->
+
+Perform a comprehensive semantic evaluation of Clinical Trial Reports (CTRs), meticulously following clinical guidelines. Evaluate the effectiveness and safety of treatments using trial data. Scrutinize research methods, participant selection/exclusion criteria, specifics of interventions, summaries of outcomes, and logs of adverse events. Validate expert assertions on individual or multiple CTRs with empirical evidence. Maintain uniformity across reports and offer in-depth descriptions for each segment: INCLUSION CRITERIA, TREATMENT DETAILS, RESULTS SUMMARY, and OBSERVED ADVERSE EVENTS.
+----------
+4->
+
+Conduct a thorough semantic analysis of Clinical Trial Reports (CTRs), ensuring compliance with clinical protocols. Evaluate the effectiveness and safety of interventions based on trial data. Examine research methods, participant selection criteria, intervention specifics, trial outcome summaries, and adverse reaction logs. Confirm expert claims on individual or multiple CTRs via data verification. Ensure consistency across reports and provide detailed descriptions for each section: INCLUSION CRITERIA, TREATMENT DETAILS, RESULTS SUMMARY, and OBSERVED ADVERSE EVENTS.
+----------

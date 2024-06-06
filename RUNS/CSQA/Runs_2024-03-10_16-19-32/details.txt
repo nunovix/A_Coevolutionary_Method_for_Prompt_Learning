@@ -1,0 +1,18 @@
+Task: CSQA
+Start time: 2024-03-10 16:19:32.547892
+End time: 2024-03-13 08:36:07.547535
+Total elapsed time: 2 days, 16:16:34.999643
+No. of iterations: 36
+Average time per iteration: 1:47:07.638879
+
+Initial population size: 5
+Population size that's kept for next iteration: 5
+No. of mutations generated per iteration: 5
+No. of combinations generated per iteration: 15
+Max no. of iterations allowed: 200
+Patience: 10
+Decoder temperature in mutation and combiantions: 1.0
+Top-p in sampling for mutation and combiantions: 0.8
+
+Evaluation done on: dev set
+With 1221 examples

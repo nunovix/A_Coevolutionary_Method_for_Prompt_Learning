@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Conduct an unequivocal assessment of the statement's validity by meticulously comparing it with the Clinical Trial Report (CTR), ensuring strict adherence to the CTR's medical terminology and formatting guidelines. Leverage your expertise to elucidate medical jargon, interpret nuanced contexts within the CTR and statement, resolve ambiguities, and diligently investigate and correct any inconsistencies in the information presented.
+----------
+2->
+
+Execute a precise YES or NO verification of the statement's accuracy by rigorously cross-examining it with data from the Clinical Trial Report (CTR), strictly adhering to the CTR's medical terminology and formatting guidelines. Leverage your expertise to elucidate medical terms, interpret nuanced contexts within the CTR and statement, clarify ambiguities, and meticulously inspect and correct any discrepancies in the information presented.
+----------
+3->
+
+Provide an unequivocal YES or NO verdict on the statement's accuracy by rigorously comparing it with data from the Clinical Trial Report (CTR), ensuring strict compliance with the CTR's medical lexicon and formatting protocols. Employ your specialized knowledge to demystify medical terminology, decipher subtle contexts in the CTR and statement, address ambiguities, and meticulously inspect and correct any discrepancies in the information presented.
+----------
+4->
+
+Perform an unequivocal YES or NO assessment of the statement's validity by rigorously comparing it with data from the Clinical Trial Report (CTR). Comply strictly with the CTR's medical lexicon and formatting conventions. Utilize your specialized knowledge to clarify medical terminology, interpret subtle contexts in the CTR and statement, resolve ambiguities, and meticulously inspect and correct any discrepancies in the information presented.
+----------

@@ -1,0 +1,48 @@
+0->The following descriptions correspond to the information in the Clinical Trial Report (CTR) sections.
+----------
+1->The provided descriptions coincide with the content in a specific section of Clinical Trial Reports (CTRs), detailing relevant information to the trial.
+----------
+2->The provided descriptions correspond to the content found in one of the four standard clinical trial report sections.
+----------
+3->The provided descriptions pertain to the contents found within one of the sections of Clinical Trial Reports (CTRs).
+----------
+4->The descriptions that follow correspond to the information contained in one of the standard sections of the clinical trial reports.
+----------
+5->
+Analyze the given Clinical Trial Reports (CTRs) for the relevant section descriptions.
+----------
+6->
+The following descriptions relate to the material presented in a particular segment of Clinical Trial Reports (CTRs).
+----------
+7->
+The following descriptions relate to the material presented in a specific section of Clinical Trial Reports.
+----------
+8->Identify the section of the clinical trial report based on the provided descriptions.
+
+This instruction is more specific and actionable, guiding the AI system to locate the section of the clinical trial report based on the given descriptions, rather than just identifying the content within one of the sections.
+----------
+9->"Describes contents of a CTR section."
+----------
+10->
+If descriptions match CTR content in a particular section, label as relevant.
+----------
+11->"Describes contents of a section in Clinical Trial Reports (CTRs)."
+----------
+12->Examine the descriptions associated with a section in Clinical Trial Reports (CTRs).
+----------
+13->
+The descriptions that follow derive from the Clinical Trial Report (CTR) sections.
+----------
+14->Extract information from Clinical Trial Reports (CTRs) that matches given descriptions.
+----------
+15->"Great job, you've identified a description that matches one of the four standard sections in a clinical trial report! Keep up the excellent work."
+----------
+16->
+The descriptions that follow derive from the Clinical Trial Report (CTR) sections.
+----------
+17->"Great job, you're accessing crucial information from clinical trial reports! The descriptions that follow correspond to the data in one of the standard sections."
+----------
+18->The following text relates to the material presented in a particular segment of Clinical Trial Reports (CTRs).
+----------
+19->Extract information from standard sections of clinical trial reports.
+----------

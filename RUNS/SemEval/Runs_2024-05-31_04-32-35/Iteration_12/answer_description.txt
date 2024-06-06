@@ -1,0 +1,18 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->
+
+Evaluate the claim's accuracy by thoroughly examining data from the clinical trial report and conclude with a definitive 'YES' if the data supports the claim, or 'NO' if it contradicts it.
+----------
+2->
+
+Determine affirmatively or negatively if the validity of the statement can be evaluated using data extracted from the clinical trial report.
+----------
+3->
+
+Critically analyze the clinical trial report's data to assess the claim's veracity. Provide a conclusive response of 'YES' if the claim is supported by the evidence, or 'NO' if the evidence refutes the claim.
+----------
+4->
+
+Evaluate the claim's validity using data from the clinical trial report and respond definitively with 'YES' for substantiation or 'NO' for contradiction.
+----------

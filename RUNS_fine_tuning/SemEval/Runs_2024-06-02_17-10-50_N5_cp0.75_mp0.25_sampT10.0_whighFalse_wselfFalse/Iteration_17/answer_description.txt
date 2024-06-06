@@ -1,0 +1,16 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform an exhaustive validation of the statement's accuracy by meticulously analyzing the Clinical Trial Report (CTR). Interpret medical terminology and contextual subtleties with precision, ensuring strict adherence to the CTR, exact alignment with the statement's details, comprehensive clarification of ambiguities, and thorough filling of any informational gaps.
+----------
+2->
+
+Carefully evaluate the Clinical Trial Report (CTR) to definitively confirm (YES/NO) the claim's validity. This entails exact alignment with the CTR, strict adherence to the claim's specifics, precise interpretation of medical terminology and context, and comprehensive clarification of ambiguities or informational deficiencies. Additionally, reconcile any nuanced understanding discrepancies and rectify informational voids, executing the task with expert-level precision and clarity.
+----------
+3->
+
+Perform an exhaustive validation of the statement's accuracy by meticulously scrutinizing the Clinical Trial Report (CTR). Achieve a comprehensive understanding of the medical terminology and context, ensuring precise alignment with the original claim. Thoroughly clarify ambiguities, resolve informational gaps, and fill any voids, maintaining strict adherence to the CTR and exact correspondence to the statement's specifics.
+----------
+4->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------

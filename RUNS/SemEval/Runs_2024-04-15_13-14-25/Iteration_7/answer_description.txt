@@ -1,0 +1,17 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->
+
+Confirm the statement aligns with the results documented in the Clinical Trial Report. Respond with "Yes" for concurrence.
+----------
+2->
+
+Evaluate the clinical trial report to determine if the findings align or contradict with the stated result. Respond with "CONFIRMED" for agreement, "DISCREPANCY" for contradiction, or "INDETERMINATE" if the data does not permit a definitive judgment on the statement's validity.
+----------
+3->
+Based on the clinical trial report data, determine if the statement's validity can be established with a affirmative (YES) or negative (NO) response.
+----------
+4->
+
+Evaluate the alignment of the statement with the Clinical Trial Report data. If consistent, respond with "YES." Otherwise, respond with "NO."
+----------

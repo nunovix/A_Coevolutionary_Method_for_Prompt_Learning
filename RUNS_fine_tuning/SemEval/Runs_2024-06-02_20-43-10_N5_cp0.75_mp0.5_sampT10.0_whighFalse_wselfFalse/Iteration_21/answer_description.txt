@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Evaluate and categorize each segment of clinical trial documentation and a provided claim as either "Valid" or "Invalid" based on their congruence. This requires an in-depth understanding of medical jargon and contextual nuances in both the documentation and the claim. Employ your clinical trial knowledge to clarify ambiguities and enhance understanding of any uncertainties. Analyze the language and context critically to ascertain the veracity of each claim.
+----------
+2->
+
+Conduct an in-depth analysis of clinical trial excerpts, focusing on medical terminology and contextual nuances. Address ambiguities and gaps in data through the application of clinical trial expertise to clarify and resolve uncertainties. Evaluate both linguistic and contextual aspects to determine the accuracy of each statement, classifying them as "Accurate" or "Inaccurate."
+----------
+3->
+
+Perform a comprehensive examination of clinical trial records, scrutinizing the veracity of statements, with a focus on medical terminology and context-specific nuances. Clarify ambiguities, complete any omissions, and align your assessment with the specifics of the trial for clinical professionals. Interpret medical language and context accurately, resolve ambiguities and information voids, and deliver a definitive judgment of "Accurate" or "Inaccurate" for each statement's correctness.
+----------
+4->
+
+Conduct a thorough analysis of clinical trial statements, focusing on medical jargon and contextual nuances. Elucidate ambiguities and address information gaps by leveraging clinical trial knowledge to clarify uncertainties. Critically evaluate language and context to determine the truthfulness of statements, classifying them as "Accurate" or "Inaccurate." Ensure these evaluations are consistent with the specifics of the clinical trial for the benefit of expert comprehension.
+----------

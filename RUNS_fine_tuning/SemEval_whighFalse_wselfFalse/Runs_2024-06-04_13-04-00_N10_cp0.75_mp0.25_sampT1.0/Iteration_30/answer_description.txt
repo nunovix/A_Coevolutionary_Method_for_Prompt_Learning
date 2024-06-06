@@ -1,0 +1,18 @@
+0->Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR), ensuring the statement aligns with the CTR data and does not conflict with the provided descriptions.
+----------
+1->
+
+Verify the statement's accuracy in relation to the Clinical Trial Report (CTR) data with a clear affirmative YES or negative NO. Ensure there are no discrepancies between the statement and the details provided in the CTR.
+----------
+2->
+
+Deliver a definitive YES or NO determination on the statement's factual accuracy by meticulously contrasting it with the Clinical Trial Report (CTR) data. Confirm the statement's alignment with the CTR details, ensuring absolute consistency and absence of variances between the statement and the report's particulars.
+----------
+3->
+
+Confirm with a definitive YES or NO whether the statement's accuracy can be inferred from the Clinical Trial Report (CTR), verifying that the statement is consistent with the CTR data and refrains from contradicting the given descriptions.
+----------
+4->
+
+Deliver an unambiguous YES or NO determination regarding the statement's factual accuracy by meticulously cross-examining it with the Clinical Trial Report (CTR) data. Ensure the statement aligns precisely with the CTR findings, leaving no room for inconsistencies between the statement and the report's particulars.
+----------

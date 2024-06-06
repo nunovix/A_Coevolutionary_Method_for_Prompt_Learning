@@ -1,0 +1,14 @@
+0->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs expound on the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or comparative analysis of two. For entailment validation, the statement's claim should align with clinical trial information, find support in the CTR, and refrain from contradicting provided descriptions.
+----------
+1->Execute a detailed semantic entailment analysis between expert claims and Clinical Trial Reports (CTRs), focusing on methodologies, outcomes, therapeutic efficacy, and safety profiles. Ensure expert assertions are evidence-based and consistent with data from CTRs for both individual and comparative analyses. Confirm that comprehensive CTRs encompass ELIGIBILITY CRITERIA, INTERVENTION specifics, RESULTS, and ADVERSE EVENTS, with expert claims accurately reflecting the detailed content from these sections.
+----------
+2->
+
+Perform an exhaustive semantic entailment analysis between expert claims and Clinical Trial Reports (CTRs), scrutinizing methodologies, outcomes, therapeutic efficacy, and safety profiles. Verify that expert assertions are substantiated by evidence, aligning with data from CTRs for both singular and comparative evaluations. Validate that comprehensive CTRs detail ELIGIBILITY CRITERIA, INTERVENTION specifics, RESULTS, and ADVERSE EVENTS, ensuring expert claims accurately mirror the intricate content from these components.
+----------
+3->Execute a detailed semantic entailment analysis between expert claims and Clinical Trial Reports (CTRs), examining methodologies, outcomes, therapeutic efficacy, and safety profiles. Ensure expert assertions are evidence-based and consistent with data from CTRs for both individual and comparative assessments. Confirm that comprehensive CTRs encompass ELIGIBILITY CRITERIA, INTERVENTION specifics, RESULTS, and ADVERSE EVENTS, with expert claims accurately reflecting the detailed content from these sections.
+----------
+4->
+
+Perform an exhaustive semantic entailment analysis between expert claims and Clinical Trial Reports (CTRs), scrutinizing methodologies, outcomes, therapeutic efficacy, and safety profiles. Verify that expert assertions are substantiated by evidence, aligning with data from CTRs for both singular and comparative evaluations. Validate that comprehensive CTRs detail ELIGIBILITY CRITERIA, INTERVENTION specifics, RESULTS, and ADVERSE EVENTS, ensuring expert claims accurately mirror the intricate content from these components.
+----------

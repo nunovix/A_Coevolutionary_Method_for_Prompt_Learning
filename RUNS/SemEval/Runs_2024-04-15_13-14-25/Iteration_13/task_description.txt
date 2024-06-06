@@ -1,0 +1,42 @@
+0->Consider the problem of assessing semantic entailment connections between distinct sections of Clinical Trial Reports (CTRs) and statements put forth by clinical domain experts. To establish entailment, the statement's assertion should be supported from the CTR, not contradicting the provided descriptions. In brief, CTRs elucidate the procedures and findings of clinical trials, evaluating the efficacy and safety of emerging treatments. Complete CTRs encompass four sections: (1) ELIGIBILITY CRITERIA specifying conditions for patient inclusion, (2) INTERVENTION details on the type, dosage, frequency, and duration of treatments, (3) RESULTS summarizing the participant statistics, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing observed signs and symptoms. Statements advance claims about the information within these sections, either for a single CTR or in a comparative analysis of two CTRs.
+----------
+1->
+
+To preserve semantic parity between Clinical Expert Statements (CES) and Clinical Trial Reports (CTRs), conduct the following verifications:
+
+1. Match patient eligibility criteria in CES with those in CTRs.
+2. Compare treatment modalities, dosages, schedules, durations, and administration methods in CES to CTRs' intervention details.
+3. Ensure outcome measurements, units, and conclusions align in CES and CTRs' results sections.
+4. Identify and correlate symptoms and signs reported in CES with those documented in CTRs' adverse events sections.
+
+Both CTRs and CES serve crucial roles in corroborating and upholding the reliability of clinical trial findings. CTRs encompass comprehensive information on clinical trial design, implementation, and outcomes.
+----------
+2->
+
+1. Evaluate patient eligibility: Compare clinical expert statements with CTRs' Eligibility Criteria.
+2. Assess treatment details: Verify clinical expert statements with CTRs' Intervention sections (type, dosage, frequency, duration).
+3. Verify outcome measures: Ensure consistency between clinical expert statements and CTRs' Results sections (units, measures, conclusions).
+4. Cross-reference adverse events: Identify and compare reported events in clinical expert statements with CTRs' Adverse Events sections.
+
+By comparing clinical expert statements to CTRs' corresponding sections, ensure consistency in patient eligibility, treatment details, outcome measures, and adverse events.
+----------
+3->
+
+1. Compare patient eligibility in clinical expert statements with CTRs.
+2. Verify treatment details in clinical expert statements match CTRs.
+3. Ensure agreement between outcome measures and conclusions in clinical expert statements and CTRs.
+4. Identify and cross-reference any adverse events or observed signs and symptoms in clinical expert statements with CTRs.
+
+CTRs are comprehensive reports of clinical trials, including Eligibility Criteria, Intervention details, Results, and Adverse Events sections. Clinical expert statements may encompass patient eligibility, treatment methods, and trial outcomes.
+----------
+4->
+
+To ensure semantic equivalence between clinical expert statements and Clinical Trial Reports (CTRs), compare and confirm the following:
+
+1. Patient eligibility conditions: Verify alignment between clinical expert statements and CTRs' Eligibility Criteria.
+2. Treatment details: Confirm treatment types, dosages, frequencies, and durations in clinical expert statements correspond to CTRs' Intervention details.
+3. Outcome measures: Ensure outcome measures, units, and conclusions in clinical expert statements concur with those in CTRs' Results sections.
+4. Adverse events: Identify any reported adverse events or observed signs and symptoms in clinical expert statements and cross-reference with CTRs' Adverse Events sections.
+
+CTRs and clinical expert statements serve as critical records in clinical research. CTRs encompass Eligibility Criteria, Intervention details, Results, and Adverse Events sections, while clinical
+----------

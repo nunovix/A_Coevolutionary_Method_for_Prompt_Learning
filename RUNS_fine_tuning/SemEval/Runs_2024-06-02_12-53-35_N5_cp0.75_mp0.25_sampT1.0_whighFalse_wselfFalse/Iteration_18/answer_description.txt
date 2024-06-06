@@ -1,0 +1,16 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Evaluate clinical trial documentation by scrutinizing medical jargon and contextual indicators, clarifying ambiguities, and filling information voids to deliver a conclusive "Affirmative" or "Negative" judgment on the assertions' validity.
+----------
+2->Assess the validity of assertions in clinical trial documentation by analyzing medical terminology and contextual cues, resolving ambiguities, and addressing information gaps to provide a definitive "Affirmative" or "Negative" determination.
+----------
+3->
+
+Conduct a thorough analysis of clinical trial assertions by meticulously examining trial data, medical terminology, and contextual nuances. Leverage expertise to elucidate uncertainties and fill informational voids. Render a verdict as "Confirmed" if the assertion aligns with the trial data, or "Refuted" if it stands in opposition to it.
+----------
+4->
+
+Evaluate the validity of claims within clinical trial documentation by scrutinizing medical jargon and contextual details, resolving ambiguities, and filling information voids to deliver an unequivocal "Affirmative" or "Negative" verdict.
+----------

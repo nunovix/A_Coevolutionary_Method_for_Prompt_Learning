@@ -1,0 +1,10 @@
+0->copy of [4]  from iteration 0
+----------
+1->copy of [2]  from iteration 22
+----------
+2->copy of [1] followed by mutation from iteration 22
+----------
+3->copy of [1]  from iteration 22
+----------
+4->crossover between [4] and [2] followed by mutation from iteration 22
+----------

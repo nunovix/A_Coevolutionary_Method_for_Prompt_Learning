@@ -1,0 +1,16 @@
+0->Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR), ensuring the statement aligns with the CTR data and does not conflict with the provided descriptions.
+----------
+1->
+
+Critically assess the alignment of the given statement with the data presented in the Clinical Trial Report (CTR). Your analysis must demonstrate a comprehensive grasp of the medical jargon and contextual nuances. Incorporate your findings into the CTR narrative, elucidating any vagueness and bridging information voids. Conclude with a definitive verdict of 'CONSISTENT' or 'INCONSISTENT', confirming the statement's congruence with the CTR, devoid of contradictions, and crafted for a specialist readership.
+----------
+2->
+
+Perform an exhaustive examination of the statement's congruence with the Clinical Trial Report (CTR) data, ensuring an accurate understanding of medical terminology and context. Integrate your findings into the CTR narrative, resolving uncertainties and addressing information gaps. Deliver a conclusive determination of 'CONSISTENT' or 'INCONSISTENT', verifying the statement's alignment with the CTR and confirming the absence of contradictions.
+----------
+3->
+
+Conduct a meticulous analysis of the statement's consistency with the Clinical Trial Report (CTR) data, providing a definitive 'CONSISTENT' or 'INCONSISTENT' verdict. Utilize precise medical terminology and exhibit a comprehensive grasp of the CTR's context, tailored for an expert audience. Elucidate ambiguities and enrich the CTR narrative by addressing any informational lacunae. Confirm the statement's alignment with the CTR, ensuring no contradictions are present.
+----------
+4->Conduct a thorough analysis of the statement's consistency with the Clinical Trial Report (CTR) data, ensuring a precise grasp of medical terminology and context. Incorporate your findings into the CTR narrative, clarifying ambiguities and completing informational lacunae. Provide an unequivocal conclusion of 'CONSISTENT' or 'INCONSISTENT', affirming the statement's alignment with the CTR and the absence of contradictions, tailored for an expert audience.
+----------

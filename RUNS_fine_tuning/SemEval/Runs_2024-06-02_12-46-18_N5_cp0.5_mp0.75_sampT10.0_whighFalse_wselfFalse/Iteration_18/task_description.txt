@@ -1,0 +1,38 @@
+0->Analyze the semantic entailment relations between individual sections of Clinical Trial Reports (CTRs) and expert statements, focusing on methodology, findings, eligibility criteria, interventions, results, and adverse events. Each CTR, involving 1-2 patient cohorts, assesses new treatments' effectiveness and safety. The CTRs are divided into four sections: eligibility criteria for patient inclusion, detailed intervention descriptions including type, dosage, frequency, and duration, results summarizing participant numbers, outcome measures, units, and conclusions, and a list of observed adverse events. Expert statements should make claims related to these sections, supported by the CTRs without contradicting the descriptions. Establish entailment by ensuring the statement's assertion is backed by the CTR content.
+----------
+1->
+
+Conduct a detailed semantic analysis of professional claims regarding methodology, results, participant criteria, and intervention specifics (including intervention type, dosage, administration frequency, and treatment duration) as outlined in Clinical Trial Reports (CTRs). Each CTR, usually containing one to two patient groups, must be meticulously scrutinized to assess treatment efficacy and safety. Decompose each CTR into:
+
+1. Enrollment criteria for participants
+
+2. Intervention specifics (type, dosage, administration frequency, and treatment duration)
+
+3. Outcomes (participant count, outcome measures, units of measurement, and conclusions)
+
+4. Comprehensive enumeration of adverse events
+
+Ensure precise correspondence between professional assertions and CTR details, rectifying inconsistencies exclusively based on CTR information. Verify that all professional claims are unequivocally substantiated by the CTR data.
+----------
+2->
+
+Perform an in-depth semantic evaluation of statements related to methodology, findings, participant criteria, and intervention particulars (including intervention type, dosage, frequency of administration, and treatment length) as detailed in Clinical Trial Reports (CTRs). Each CTR, typically encompassing one to two patient groups, should be meticulously scrutinized to determine the efficacy and safety of treatments. Break down each CTR into:
+
+1. Criteria for participant inclusion
+
+2. Details of the intervention (type, dosage, frequency of administration, and treatment duration)
+
+3. Outcomes (number of participants, outcome measures, units of measurement, and conclusions)
+
+4. Detailed enumeration of adverse events
+
+Ensure exact correspondence between professional statements and CTR details, correcting discrepancies solely based on CTR data. Confirm that every professional claim is definitively corroborated by information from the CTRs.
+----------
+3->
+
+Examine the semantic entailment relationships between segments of Clinical Trial Reports (CTRs) and authoritative declarations, concentrating on methodology, findings, inclusion criteria, interventions, results, and side effects. Each CTR, comprising 1-2 patient groups, evaluates the efficacy and safety of novel therapies. The CTRs are segmented into four parts: inclusion criteria for patient selection, comprehensive intervention details including type, dosage, frequency, and duration, results summarizing participant counts, outcome measures, units, and conclusions, and a catalog of observed adverse events. Authoritative declarations should make assertions pertinent to these segments, substantiated by the CTRs without conflicting with the descriptions. Confirm entailment by verifying that the declaration's claim is supported by the CTR content.
+----------
+4->
+
+Analyze the semantic correspondence between Clinical Trial Reports (CTRs) and professional claims, concentrating on methodology, results, participant selection criteria, interventions, outcomes, and adverse reactions. Each CTR, typically comprising one to two study groups, investigates the effectiveness and safety of novel medical therapies. The structure of CTRs is divided into four key components: eligibility criteria for participant enrollment, detailed intervention information (including type, dosage, administration frequency, and treatment length), results (number of participants, outcome metrics, units, and findings), and recorded adverse effects. Professional claims must be consistent with these components and substantiated by the CTRs, ensuring alignment with the precise descriptions provided. Validate the entailment by confirming that the professional claim is supported by the CTR content.
+----------

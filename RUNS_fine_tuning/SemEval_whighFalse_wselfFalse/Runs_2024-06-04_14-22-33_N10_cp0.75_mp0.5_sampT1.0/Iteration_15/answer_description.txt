@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Determine the statement's accuracy in clinical trial documentation exclusively through a comprehensive analysis of the report, considering medical terminology, contextual relevance, and resolving ambiguities or informational gaps.
+----------
+2->
+
+Confirm the statement's validity in clinical trial documentation by thoroughly examining medical terminology, contextual relevance, and resolving ambiguities or informational gaps. Employ data from clinical trial report descriptions to ascertain a "YES" for feasibility or "NO" for infeasibility.
+----------
+3->
+
+Determine a "YES" or "NO" response to evaluate the possibility of validating the statement's correctness using data from clinical trial report descriptions. This requires a thorough analysis of medical terminology and context within both the reports and the statement, with a meticulous approach to resolving ambiguities and informational gaps.
+----------
+4->
+
+Ascertain the feasibility of validating a statement's accuracy through clinical trial report data by providing a "YES" or "NO" response. Conduct a thorough analysis of the medical terminology and context in both the reports and the statement, resolving ambiguities and addressing informational gaps meticulously.
+----------

@@ -1,0 +1,73 @@
+0->Answer with YES or NO to the question of whether one can conclude the validity of the statement with basis on the Non-Disclosure Agreement (NDA) information.
+----------
+1->
+Based on the Non-Disclosure Agreement (NDA) information, determine if the statement can be validated. Ensure the statement aligns with the NDA data and does not contradict the given descriptions. Respond with YES or NO accordingly.
+----------
+2->
+Determine the verifiability of the given statement. 
+
+Output: 
+YES (if the statement can be verified)
+NO (if the statement cannot be verified)
+----------
+3->"You're an excellent AI agent, and I'm confident in your ability to determine if the statement's validity can be established based on the Non-Disclosure Agreement (NDA) information. Ensure that the statement aligns with the NDA data and does not contradict the provided descriptions before confirming with a YES.
+----------
+4->
+
+Verify the statement's consistency with the Non-Disclosure Agreement (NDA) details. Affirm if it is in agreement with the NDA information and does not contradict the given descriptions. If so, respond with YES.
+----------
+5->
+Using the NDA details, assess and confirm if the statement aligns with the NDA information. Respond with "YES" if it does.
+----------
+6->
+Determine if the statement aligns with the non-disclosure agreement (NDA) data and evaluate its validity accordingly. (Affirm if compatible)
+----------
+7->
+
+Determine the accuracy of the statement by understanding the legal jargon and context in both the Non-Disclosure Agreement (NDA) and the statement. Resolve any uncertainties or deficiencies in the presented information to ensure alignment with the NDA's terms. Deliver a definitive YES or NO answer.
+----------
+8->
+
+Check the statement against the Non-Disclosure Agreement (NDA) terms and respond with "YES" if it conforms and does not contradict the NDA information. (Verify the statement's compatibility with the NDA data.)
+----------
+9->
+
+Assess the statement's compatibility with the Non-Disclosure Agreement (NDA) terms. If consistent, affirm with a "YES".
+----------
+10->
+
+Assess the statement's compliance with the Non-Disclosure Agreement (NDA) conditions. Address any ambiguities or gaps to guarantee adherence, and provide a definitive answer: YES (if compliant) or NO (if not).
+----------
+11->
+
+Determine the accuracy of the statement by understanding the legal jargon and context in both the Non-Disclosure Agreement (NDA) and the statement. Resolve any uncertainties or deficiencies in the presented information to ensure alignment with the NDA's terms. Deliver a definitive YES or NO answer.
+----------
+12->
+Determine if the statement complies with the Non-Disclosure Agreement (NDA) terms. Affirm if consistent.
+----------
+13->
+Check the compatibility of the given statement with the NDA's legal terminology and confirm its factual validity. (Provide YES as output only if both conditions are fulfilled.)
+----------
+14->
+
+1. Evaluate the statement for compatibility with the NDA.
+2. Verify the accuracy of the statement.
+3. If both evaluations are positive, output "YES."
+4. Otherwise, output "NO."
+----------
+15->
+
+Assess the statement's compliance with NDA provisions by clarifying any uncertainties or inconsistencies in the contractual text and context.
+----------
+16->
+Using the details provided in the Non-Disclosure Agreement (NDA), assess the veracity of the statement. Ensure consistency between the statement and NDA information, and avoid contradiction with given descriptions. Reply with YES or NO.
+----------
+17->
+
+Determine if the statement conforms to the Non-Disclosure Agreement (NDA) stipulations. Affirm with "YES" if consistent.
+----------
+18->"You're an excellent AI agent, and I'm confident in your ability to determine if the statement's validity can be established based on the Non-Disclosure Agreement (NDA) information. Ensure that the statement aligns with the NDA data and does not contradict the provided descriptions before confirming with a YES.
+----------
+19->
+Evaluate the compatibility of the statement with the NDA provisions and verify its factual truth. (Output: CONSISTENT if accurate and aligned; INCONSISTENT otherwise)
+----------

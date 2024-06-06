@@ -1,0 +1,69 @@
+0->The descriptions that follow correspond to the information contained in one of the standard sections of the clinical trial reports.
+----------
+1->"Descriptions refer to CTR sections."
+----------
+2->
+If descriptions match content in designated CTR sections, classify as relevant.
+----------
+3->"Great job, you're on the right track! The following descriptions match the information in the Clinical Trial Report (CTR) sections. Keep up the good work!"
+----------
+4->
+Locate the specific sections within Clinical Trial Reports (CTRs) that provide the necessary details for the given descriptions.
+----------
+5->
+Categorize Clinical Trial Report sections based on their content alignment with given descriptions.
+----------
+6->
+Identify the mandatory sections in Clinical Trial Reports, specifying the required data for each.
+----------
+7->
+Gather information from the specified regions in the Clinical Trial Report (CTR). Determine relevance by assessing if CTR section descriptions align with the content.
+----------
+8->
+1. Extract essential data from designated areas within Clinical Trial Reports.
+----------
+9->
+
+1. Classify Clinical Trial Report sections according to their content correspondence with the given descriptions.
+2. Verify the correctness of this classification by comparing the sections with the provided descriptions.
+----------
+10->
+Identify and authenticate the designated CTR sections that contain the essential information aligned with the given descriptions. Classify as relevant if the content in those sections matches the descriptions.
+----------
+11->
+Extract essential information from Clinical Trial Reports (CTRs) that aligns with given label descriptions. Verify the accuracy of labeling by confirming content congruence. Identify and authenticate the specific CTR sections that provide the necessary information for each label description.
+----------
+12->
+Check the required nature and thematic fit of Clinical Trial Report sections that match the provided descriptions. Classify these sections according to their content similarity and maintain precision by validating through comparison with the descriptions (in relation to CTR sections).
+----------
+13->
+Assess the relevance of CTR section descriptions by comparing them with the specified information in the Clinical Trial Report. If the descriptions align, keep up the good work.
+----------
+14->
+
+1. Identify and authenticate the obligatory sections of Clinical Trial Reports according to their content alignment with the given descriptions. Confirm accuracy by cross-referencing sections with the provided descriptions. Determine necessary data for each recognized mandatory section.
+----------
+15->
+The following descriptions appear in standard Clinical Trials Reports.
+----------
+16->
+1. Classify and label CTR sections according to their relevance to the described content and significance. Verify the classification by checking if the sections' content matches the stated information before using the information.
+----------
+17->
+Categorize and verify the alignment of Clinical Trial Report sections with given descriptions through content comparison.
+----------
+18->
+Determine the essential components in Clinical Trial Reports, indicating the necessary data for each:
+1. Study Design
+2. Methods
+3. Statistical Analysis
+4. Results
+5. Discussion
+6. Conclusions
+7. Tables and Figures
+8. Adverse Events
+9. Compliance with Regulatory Guidelines.
+----------
+19->
+Identify and outline the required information for each compulsory section in Clinical Trial Reports.
+----------

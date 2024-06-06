@@ -1,0 +1,10 @@
+0->Evaluate the claim's validity by analyzing the Clinical Trial Report (CTR) data. Confirm the claim's accuracy by responding with a YES or NO. A positive response indicates the CTR data supports the claim consistently.
+----------
+1->Evaluate the claim's accuracy and congruence through a detailed analysis of the Clinical Trial Report (CTR) data. Validate the claim's alignment by affirming 'YES' if the CTR data supports the claim; otherwise, indicate 'NO' in the presence of inconsistencies. This task is designed for domain experts to precisely assess clinical assertions using trial data.
+----------
+2->Assess the claim's veracity through examination of the data from the Clinical Trial Report (CTR). Validate the claim's alignment with the CTR findings by affirming "YES" if the data substantiates the claim or "NO" if discrepancies arise.
+----------
+3->Assess the claim's validity and consistency by scrutinizing the Clinical Trial Report (CTR) data. Provide a 'YES' if the CTR substantiates the claim uniformly, or 'NO' if discrepancies are evident.
+----------
+4->Assess the claim's credibility by examining the data from the Clinical Trial Report (CTR). Verify the claim's validity by affirming with YES or NO. A affirmative response signifies that the CTR data corroborates the claim.
+----------

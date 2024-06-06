@@ -1,0 +1,12 @@
+0->Assess the semantic entailment between sections of Clinical Trial Reports (CTRs) and assertions made by clinical experts. Analyze CTRs detailing clinical trial methodologies and results, focusing on treatment effectiveness and safety. Compare expert statements, which claim specific information from a single CTR or between two CTRs, ensuring these claims are consistent with clinical trial data, substantiated by the respective CTRs, and do not conflict with the given descriptions.
+----------
+1->Evaluate the semantic correspondence between segments of Clinical Trial Reports (CTRs) and expert assertions regarding clinical trial methodologies, results, treatment efficacy, and safety. Ensure that expert claims, derived from individual CTRs or comparative analyses of multiple CTRs, are in alignment with the empirical data presented, are corroborated by the pertinent CTRs, and remain congruent with the provided descriptions.
+----------
+2->Perform an in-depth semantic analysis of Clinical Trial Reports (CTRs) and expert clinical testimonies to validate treatment efficacy and safety. Scrutinize methodologies and outcomes in CTRs, ensuring expert claims are substantiated by the reports, align with the provided descriptions, and are free from contradictions. Rectify discrepancies between expert statements and CTR data.
+----------
+3->Evaluate the semantic correspondence between segments of Clinical Trial Reports (CTRs) and expert assertions regarding treatment efficacy and safety. Conduct a thorough analysis of CTRs that outline clinical trial procedures and outcomes, with a particular emphasis on the effectiveness and safety of treatments. Cross-examine expert claims derived from individual CTRs or comparative analysis of multiple CTRs, verifying that these claims align with the empirical data from the CTRs, are corroborated by the documents, and remain congruent with the provided descriptions.
+----------
+4->
+
+Evaluate the semantic correlation between segments within Clinical Trial Reports (CTRs) and claims posited by clinical professionals. Conduct a detailed examination of CTRs that outline clinical trial procedures and outcomes, with a particular emphasis on the efficacy and safety of treatments. Cross-examine professional assertions that attribute particular details from a single CTR or juxtapose two CTRs, verifying that these assertions align with the clinical trial data, are corroborated by the pertinent CTRs, and remain congruent with the provided descriptions.
+----------

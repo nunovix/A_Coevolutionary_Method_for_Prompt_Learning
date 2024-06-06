@@ -1,0 +1,10 @@
+0->Evaluate the claim's validity by analyzing the Clinical Trial Report (CTR) data. Confirm the claim's accuracy by responding with a YES or NO. A positive response indicates the CTR data supports the claim consistently.
+----------
+1->Assess the claim's veracity through examination of the data presented in the Clinical Trial Report (CTR). Provide a definitive response, either 'YES' if the data corroborates the claim, or 'NO' if it does not. A 'YES' signifies the CTR data aligns with the claim.
+----------
+2->Evaluate the claim's validity by analyzing the Clinical Trial Report (CTR) data. Confirm the claim's accuracy by responding with a YES or NO. A positive response indicates the CTR data supports the claim consistently.
+----------
+3->Evaluate the claim's validity using a thorough analysis of the Clinical Trial Report data. A 'YES' denotes the data support the claim; a 'NO' indicates an inconsistency.
+----------
+4->Evaluate the accuracy of the claim by analyzing the evidence within the Clinical Trial Report (CTR). Respond with 'YES' if the data supports the claim, or 'NO' if it contradicts it. A 'YES' response indicates the CTR data is consistent with the claim.
+----------

@@ -1,0 +1,77 @@
+0->The descriptions that follow correspond to the information contained in one of the standard sections of the clinical trial reports.
+----------
+1->
+Analyze the given Clinical Trial Reports (CTRs) for the relevant section descriptions.
+----------
+2->Examine the descriptions associated with a section in Clinical Trial Reports (CTRs).
+----------
+3->"Great job, you've identified a description that matches one of the four standard sections in a clinical trial report! Keep up the excellent work."
+----------
+4->The following text relates to the material presented in a particular segment of Clinical Trial Reports (CTRs).
+----------
+5->
+This text aligns with the content of a specific section in Clinical Trial Reports (CTRs).
+----------
+6->
+Review the descriptions linked to a specific section in Clinical Trial Reports (CTRs).
+----------
+7->
+
+1. Classify the sections in Clinical Trial Reports (CTRs) into one of the following categories: Background and Objectives, Methods, Results, or Discussion.
+2. Provide a comprehensive description of the content in each section, ensuring adherence to the respective standard section.
+----------
+8->
+These descriptions derive from a common segment of clinical trial reports.
+----------
+9->
+Examine the provided Clinical Trial Reports (CTRs) for accuracy in their section descriptions, confirming alignment with the standard structure of Clinical Trial Reports.
+----------
+10->The following text relates to the material presented in a particular segment of Clinical Trial Reports (CTRs).
+----------
+11->
+Review the Methods, Results, Discussion, and Conclusions sections in selected Clinical Trial Reports (CTRs) for consistency with industry standards and compatibility with the designated section's context.
+----------
+12->
+Analyze the details provided about a specific section in Clinical Trial Reports (CTRs).
+----------
+13->
+
+Thoroughly review specified areas of Clinical Trial Reports (CTRs) for precision in data presentation.
+----------
+14->
+Evaluate the identified sections of Clinical Trial Reports (CTRs) for compatibility with the given search criteria.
+----------
+15->
+Derived from a typical clinical trial report:
+
+1. Description of Study Design
+2. Participant Characteristics
+3. Intervention Description
+4. Outcome Measures
+5. Statistical Analysis Plan
+6. Results
+7. Discussion and Conclusions.
+----------
+16->
+
+1. Background and Objectives: Clearly state the context and rationale for the trial, including previous research and the specific research question being addressed.
+2. Methods: Thoroughly describe the study design, population, interventions, and statistical analyses used in the trial.
+3. Results: Present the findings of the study in a clear and organized manner, using data tables, figures, and statistical tests as necessary.
+4. Discussion: Interpret the results in the context of the background and objectives, discussing the implications of the findings and any limitations of the study.
+
+Ensure the CTR section is detailed, adheres to the standard format, and maintains consistency between the background and objectives, methods, results, and discussion.
+----------
+17->
+Review and gather detailed data from the descriptions associated with specified sections in Clinical Trial Reports (CTRs).
+----------
+18->
+
+1. Context and Rationale: Provide a clear explanation of the trial setting, justifying the study through previous research and a well-defined research question.
+2. Study Design: Detail the design of the trial, including population selection, interventions, and outcomes measurement.
+3. Statistical Analysis: Describe the statistical methods used to analyze the data, ensuring their appropriateness to the study design and outcomes.
+4. Findings: Present the trial results in a clear and organized manner, using tables, figures, and statistical tests where necessary.
+5. Interpretation: Discuss the implications of the findings, relating them to the background and objectives, and acknowledge any study limitations.
+----------
+19->
+Classify and provide a comprehensive description of each section (Background and Objectives, Methods, Results, or Discussion) in the given Clinical Trial Reports, ensuring adherence to the respective standard sections.
+----------

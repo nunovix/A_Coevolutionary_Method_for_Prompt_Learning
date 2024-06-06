@@ -1,0 +1,37 @@
+0->The objective is to examine semantic entailment relationships between individual sections of Clinical Trial Reports (CTRs) and statements articulated by clinical domain experts. CTRs elaborate on the procedures and findings of clinical trials, scrutinizing the effectiveness and safety of novel treatments. Each trial involves cohorts or arms exposed to distinct treatments or exhibiting diverse baseline characteristics. Comprehensive CTRs comprise four sections: (1) ELIGIBILITY CRITERIA delineating conditions for patient inclusion, (2) INTERVENTION particulars specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary encompassing participant statistics, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS cataloging signs and symptoms observed. Statements posit claims regarding the information within these sections, either for a single CTR or in comparative analysis of two. To establish entailment, the statement's assertion should harmonize with clinical trial data, find substantiation in the CTR, and avoid contradiction with the provided descriptions.
+----------
+1->The objective is to examine semantic entailment relationships between individual sections of Clinical Trial Reports (CTRs) and statements articulated by clinical domain experts. CTRs elaborate on the procedures and findings of clinical trials, scrutinizing the effectiveness and safety of novel treatments. Each trial involves cohorts or arms exposed to distinct treatments or exhibiting diverse baseline characteristics. Comprehensive CTRs comprise four sections: (1) ELIGIBILITY CRITERIA delineating conditions for patient inclusion, (2) INTERVENTION particulars specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary encompassing participant statistics, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS cataloging signs and symptoms observed. Statements posit claims regarding the information within these sections, either for a single CTR or in comparative analysis of two. To establish entailment, the statement's assertion should harmonize with clinical trial data, find substantiation in the CTR, and avoid contradiction with the provided descriptions.
+----------
+2->
+
+Conduct a semantic entailment analysis between Clinical Trial Reports (CTRs) and domain experts' assertions, emphasizing therapeutic efficacy and patient safety within clinical trials. The analysis should encompass:
+
+1. Eligibility Criteria: Specify inclusion and exclusion criteria with precision.
+2. Treatment Details: Detail intervention type, dosage, administration frequency, and treatment duration.
+3. Outcomes Summary: Summarize participant demographics, evaluation metrics, units of measurement, and results concisely.
+4. Adverse Events: Document all observed symptoms and side effects meticulously.
+
+Cross-reference expert claims, CTR details, and clinical trial specifics, ensuring consistency and non-contradiction across all sections.
+----------
+3->
+
+Conduct a semantic entailment analysis between Clinical Trial Reports (CTRs) and expert claims, emphasizing the assessment of therapeutic efficacy and participant safety within clinical trials. This analysis should encompass:
+
+1. Eligibility Criteria: Outline the inclusion and exclusion criteria for participant selection.
+2. Intervention Details: Specify the intervention type, dosage, administration frequency, and treatment duration.
+3. Results Summary: Summarize participant demographics, evaluation metrics, units of measurement, and trial outcomes.
+4. Adverse Effects Record: Document any observed symptoms and side effects.
+
+Cross-reference expert claims with CTR details to ensure consistency and non-contradiction across all sections.
+----------
+4->
+
+Perform a semantic entailment analysis between Clinical Trial Reports (CTRs) and professional claims, focusing on therapeutic effectiveness and participant safety in clinical trials. This analysis should cover:
+
+1. Participant Selection Criteria: Detail the inclusion and exclusion criteria.
+2. Treatment Specifications: Describe the type of intervention, dosage, administration frequency, and treatment duration.
+3. Outcome Summary: Provide a summary of participant demographics, evaluation metrics, units of measurement, and results.
+4. Adverse Effects Documentation: Document any observed symptoms and side effects.
+
+Ensure to cross-reference professional claims with CTR details, maintaining consistency and non-contradiction across all sections.
+----------

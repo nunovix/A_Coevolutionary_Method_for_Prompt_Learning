@@ -1,0 +1,16 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform an exhaustive evaluation to ascertain the statement's fidelity to Clinical Trial Report (CTR) terminology, demanding precise medical expertise and context-sensitive comprehension. Clarify ambiguities and meticulously fill any informational voids. Classify the statement as "Accurate" if it accurately represents the CTR content; otherwise, label it as "Inaccurate". Provide a definitive "Accurate" or "Inaccurate" verdict on the statement's congruence with CTR descriptions, ensuring correct interpretation of medical jargon and context-specific subtleties.
+----------
+2->
+
+Determine the congruence of a statement with Clinical Trial Report (CTR) terminology and context by conducting an expert-level analysis. Address any ambiguities and fill informational gaps with precision. Assess the statement as "Congruent" if it accurately mirrors the CTR content, or "Non-Congruent" if it diverges. Provide a clear verdict on the statement's consistency with CTR descriptions, focusing on exact medical terminology and context-specific nuances.
+----------
+3->
+
+Evaluate the validity of the statement by providing a YES or NO answer, based on the analysis of clinical trial report descriptions. This task necessitates an in-depth comprehension of medical terminology and contextual understanding within the reports and the statement, with careful attention to resolving any ambiguities or gaps in information.
+----------
+4->Determine a YES or NO answer to ascertain if the statement's validity can be evaluated using the data from the clinical trial report descriptions. This requires a thorough interpretation of the medical jargon and context within both the reports and the statement, meticulously resolving any ambiguities or informational deficiencies.
+----------

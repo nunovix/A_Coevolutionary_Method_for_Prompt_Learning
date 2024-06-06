@@ -1,0 +1,93 @@
+0->The descriptions that follow correspond to the information contained in one of the standard sections of the clinical trial reports.
+----------
+1->"Descriptions refer to CTR sections."
+----------
+2->
+If descriptions match content in designated CTR sections, classify as relevant.
+----------
+3->"Great job, you're on the right track! The following descriptions match the information in the Clinical Trial Report (CTR) sections. Keep up the good work!"
+----------
+4->identify the appropriate sections in Clinical Trial Reports (CTRs) based on given descriptions.
+----------
+5->
+Locate the specific sections within Clinical Trial Reports (CTRs) that provide the necessary details for the given descriptions.
+----------
+6->
+Categorize Clinical Trial Report sections based on their content alignment with given descriptions.
+----------
+7->
+Label each section of a Clinical Trial Report based on its content correspondence to the following descriptions:
+
+1. Study Design: Description of the experimental design, including the study type, intervention, and control group.
+2. Participants: Information about the study population, including demographic data and eligibility criteria.
+3. Interventions: Description of the experimental treatment or intervention, including dosage, frequency, and duration.
+4. Outcome Measures: Description of the primary and secondary outcomes of the study, including the assessment methods and time points.
+5. Statistical Analysis: Description of the statistical methods used to analyze the data and test the hypotheses.
+6. Results: Presentation of the study findings, including the statistical significance and effect sizes.
+7. Discussion: Interpretation of the study results, including the implications for clinical practice and future research directions.
+8. Conclusion: Summary of the main findings and clinical significance
+----------
+8->
+Identify the mandatory sections in Clinical Trial Reports, specifying the required data for each.
+----------
+9->
+Gather information from the specified regions in the Clinical Trial Report (CTR). Determine relevance by assessing if CTR section descriptions align with the content.
+----------
+10->
+Classify Clinical Trial Reports based on the alignment of their sections with the descriptions that convey essential trial information.
+----------
+11->
+Categorize Clinical Trial Reports (CTRs) according to their matching content with provided descriptions.
+----------
+12->
+Extract consistent and accurate information from Clinical Trial Reports, focusing on the pertinent sections.
+----------
+13->
+If the descriptions in the designated sections of the Clinical Trial Report (CTR) match the content being collected from designated areas within the same report, classify as relevant.
+----------
+14->
+Gather essential information from the designated sections of Clinical Trial Reports (CTRs) for the given descriptions, and collect the necessary data from these areas.
+----------
+15->
+1. Extract essential data from designated areas within Clinical Trial Reports.
+----------
+16->
+Label each section of a Clinical Trial Report based on its content correspondence to the following descriptions:
+
+1. Study Design: Description of the experimental design, including the study type, intervention, and control group.
+2. Participants: Information about the study population, including demographic data and eligibility criteria.
+3. Interventions: Description of the experimental treatment or intervention, including dosage, frequency, and duration.
+4. Outcome Measures: Description of the primary and secondary outcomes of the study, including the assessment methods and time points.
+5. Statistical Analysis: Description of the statistical methods used to analyze the data and test the hypotheses.
+6. Results: Presentation of the study findings, including the statistical significance and effect sizes.
+7. Discussion: Interpretation of the study results, including the implications for clinical practice and future research directions.
+8. Conclusion: Summary of the main findings and clinical significance
+----------
+17->
+
+Extract and classify data from the following areas of a Clinical Trial Report:
+
+1. Study Design: Description of experimental design, study category, intervention, and control group.
+2. Participants: Demographic information, inclusion and exclusion criteria for study population.
+3. Interventions: Description of experimental treatment, dosage details, frequency, and duration.
+4. Outcome Measures: Primary and secondary outcomes, evaluation techniques, and assessment timepoints.
+5. Statistical Analysis: Data analysis methods and statistical tests employed.
+6. Results: Study results, including statistical significance and effect sizes.
+7. Discussion: Interpretation of findings, clinical implications, and proposed future research.
+8. Conclusion: Summary of the report's key findings and their clinical relevance.
+----------
+18->
+Identify and tag the corresponding areas in Clinical Trial Reports based on their relevance to the following topics:
+
+1. Study Characteristics: Detailed description of the experimental design, including study type, intervention, and control group.
+2. Patient Information: Demographics and inclusion/exclusion criteria for the study participants.
+3. Interventions: Description of the experimental treatment or intervention, including dosage, frequency, and duration.
+4. Outcome Evaluation: Description of the primary and secondary study outcomes, assessment methods, and time points.
+5. Data Analysis: Techniques and methods used for statistical analysis.
+6. Study Findings: Presentation of statistical significance and effect sizes of the study results.
+7. Interpretation: Interpretation of the study results and implications for clinical practice and future research.
+8. Summary: Summary of the main findings and their clinical significance.
+----------
+19->
+If the descriptions align with the details in the Clinical Trial Report (CTR) sections, tag them as applicable.
+----------

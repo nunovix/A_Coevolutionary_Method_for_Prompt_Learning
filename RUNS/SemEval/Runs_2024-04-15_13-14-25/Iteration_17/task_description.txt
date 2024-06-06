@@ -1,0 +1,34 @@
+0->Consider the problem of assessing semantic entailment connections between distinct sections of Clinical Trial Reports (CTRs) and statements put forth by clinical domain experts. To establish entailment, the statement's assertion should be supported from the CTR, not contradicting the provided descriptions. In brief, CTRs elucidate the procedures and findings of clinical trials, evaluating the efficacy and safety of emerging treatments. Complete CTRs encompass four sections: (1) ELIGIBILITY CRITERIA specifying conditions for patient inclusion, (2) INTERVENTION details on the type, dosage, frequency, and duration of treatments, (3) RESULTS summarizing the participant statistics, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing observed signs and symptoms. Statements advance claims about the information within these sections, either for a single CTR or in a comparative analysis of two CTRs.
+----------
+1->
+
+To evaluate semantic entailment relationships between Clinical Trial Reports (CTRs) and clinical expert statements, adhere to the following criteria:
+
+1. Equivalent patient populations: Ensure congruence in patient inclusion and exclusion criteria between CTRs and clinical expert statements.
+2. Identical treatment interventions: Verify consistent treatment types, doses, schedules, and durations in both CTRs and clinical expert statements.
+3. Standardized assessment methods: Agree on uniform outcome measurement scales, units, and interpretations in both CTRs and clinical expert statements.
+4. Comparable adverse events reporting: Evaluate correspondences between adverse events reported in clinical expert statements and those documented in CTRs.
+
+Achieving alignment in patient demographics, interventions, assessments, and safety aspects enables an accurate and comprehensive comparison between clinical expert statements and CTRs.
+----------
+2->
+
+To ensure semantic consistency between clinical expert statements and Clinical Trial Reports (CTRs), focus on the following areas of correspondence:
+
+1. Patient Selection: Match patient inclusion and exclusion criteria in clinical expert statements with those in the Eligibility Criteria sections of CTRs.
+2. Treatment: Confirm consistency between clinical expert statements' prescribed interventions, including type, dosage, frequency, and duration, with those in the Intervention sections of CTRs.
+3. Outcome Evaluation: Verify agreement between the evaluation methods, units, and conclusions of clinical expert statements and the Results sections of CTRs.
+4. Adverse Reactions: Compare reported adverse events or observed signs and symptoms in clinical expert statements with those in the Adverse Events sections of CTRs.
+
+By closely examining these correspondences, clinical expert statements' assertions can be substantiated from CTRs, and
+----------
+3->
+
+1. Ensure uniformity in patient selection criteria, treatment modalities, and study endpoints between clinical expert opinions and Clinical Trial Reports (CTRs).
+2. Preserve identical meaning by aligning eligibility standards, treatment protocols, dosages, administration schedules, durations, and study outcomes.
+3. Correspond adverse events or observed symptoms mentioned in clinical expert documents with those reported in CTRs.
+----------
+4->
+
+Assess entailment connections between clinical domain expert statements and sections of Clinical Trial Reports (CTRs). Ensure the statements are backed by the CTR and don't contradict the provided descriptions. CTRs outline the methodologies and outcomes of clinical trials, assessing the effectiveness and safety of new treatments. A comprehensive CTR includes four parts: (1) ELIGIBILITY CRITERIA outlining patient selection criteria, (2) INTERVENTION describing treatment type, dosage, frequency, and duration, (3) RESULTS detailing participant statistics, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS recording observed signs and symptoms. Statements propose claims concerning the information within these CTR sections, either for a solitary CTR or in comparative analyses of two CTRs.
+----------

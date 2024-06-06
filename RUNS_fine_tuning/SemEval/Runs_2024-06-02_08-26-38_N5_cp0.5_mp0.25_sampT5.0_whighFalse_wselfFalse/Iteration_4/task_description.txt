@@ -1,0 +1,16 @@
+0->Analyze semantic entailment relationships between sections of Clinical Trial Reports (CTRs) and expert statements, focusing on methodology, findings, eligibility criteria, interventions, results, and adverse events. Each CTR, involving 1-2 patient cohorts, assesses new treatments' effectiveness and safety. Statements, made by clinical experts, must align with CTR information, be substantiated by the reports, and remain consistent with provided descriptions to establish entailment.
+----------
+1->"
+
+Examine semantic entailment between Clinical Trial Reports (CTRs) and clinical expert statements, concentrating on methodology, findings, eligibility criteria, interventions, results, and adverse events. Each CTR, typically involving one to two patient cohorts, evaluates the efficacy and safety of novel treatments. Clinical expert statements must align with, be substantiated by, and remain consistent with CTR information to confirm entailment.
+----------
+2->
+
+Analyze Clinical Trial Reports (CTRs) to discern semantic entailment connections between their elements and expert clinical claims. Evaluate the effectiveness and safety of new treatments by reviewing CTRs, which include: (1) ELIGIBILITY CRITERIA, outlining patient inclusion conditions, (2) INTERVENTION, describing treatment specifics such as type, dosage, administration frequency, and treatment duration, (3) RESULTS, summarizing participant data, outcome measures, units of measurement, and conclusions, and (4) ADVERSE EVENTS, documenting observed signs and symptoms. Ensure that expert assertions are consistent with, rather than contradictory to, data from these sections for individual or comparative analyses across CTRs.
+----------
+3->Analyze semantic entailment relationships between sections of Clinical Trial Reports (CTRs) and expert statements, focusing on methodology, findings, eligibility criteria, interventions, results, and adverse events. Each CTR, involving 1-2 patient cohorts, assesses new treatments' effectiveness and safety. Statements, made by clinical experts, must align with CTR information, be substantiated by the reports, and remain consistent with provided descriptions to establish entailment.
+----------
+4->
+
+Examine the semantic entailment between Clinical Trial Reports (CTRs) and expert clinical statements, concentrating on methodology, findings, eligibility criteria, interventions, results, and adverse events. Each CTR, typically involving 1-2 patient cohorts, evaluates the effectiveness and safety of new treatments. Ensure expert statements are corroborated by CTRs, consistent with, and non-contradictory to, the CTR descriptions to confirm entailment.
+----------

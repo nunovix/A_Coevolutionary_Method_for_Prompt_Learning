@@ -1,0 +1,39 @@
+0->Consider the problem of assessing semantic entailment connections between distinct sections of Clinical Trial Reports (CTRs) and statements put forth by clinical domain experts. To establish entailment, the statement's assertion should be supported from the CTR, not contradicting the provided descriptions. In brief, CTRs elucidate the procedures and findings of clinical trials, evaluating the efficacy and safety of emerging treatments. Complete CTRs encompass four sections: (1) ELIGIBILITY CRITERIA specifying conditions for patient inclusion, (2) INTERVENTION details on the type, dosage, frequency, and duration of treatments, (3) RESULTS summarizing the participant statistics, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing observed signs and symptoms. Statements advance claims about the information within these sections, either for a single CTR or in a comparative analysis of two CTRs.
+----------
+1->
+
+Consider the problem of assessing semantic entailment connections between statements put forth by clinical domain experts and the corresponding sections of Clinical Trial Reports (CTRs). To establish entailment, the statement's assertion must be supported from the CTR and should not contradict the provided descriptions. CTRs serve to elucidate the procedures and findings of clinical trials, evaluating the efficacy and safety of emerging treatments. Complete CTRs consist of four sections: (1) ELIGIBILITY CRITERIA outlining conditions for patient inclusion, (2) INTERVENTION detailing the type, dosage, frequency, and duration of treatments, (3) RESULTS summarizing participant statistics, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing observed signs and symptoms. Statements advance claims about the information contained within these sections, applicable to individual CTRs or in
+----------
+2->
+
+Assess the alignment of clinical expert opinions with the Eligibility Criteria, Intervention, Results, and Adverse Events sections of Clinical Trial Reports (CTRs). Ensure expert statements match the descriptions in each CTR section:
+
+1. Eligibility Criteria: Confirm expert statements align with the patient eligibility conditions outlined in CTRs.
+2. Intervention: Verify expert statements correspond to the treatment type, dosage, frequency, and duration mentioned in CTRs.
+3. Results: Ensure expert statements concur with the participant statistics, outcome measures, units, and conclusions presented in CTRs.
+4. Adverse Events: Validate that clinical expert descriptions of observed signs and symptoms match those reported in CTRs.
+
+Maintain consistency between expert statements and CTR content throughout the evaluation process.
+----------
+3->
+
+1. Eligibility Criteria: Check statements for consistency with the specified patient criteria in Clinical Trial Reports (CTRs).
+2. Intervention: Confirm that statements accord with the outlined treatment details, including type, dosage, frequency, and duration, in CTRs.
+3. Results: Ensure statements align with the reported participant statistics, outcome measures, units, and conclusions in CTRs.
+4. Adverse Events: Verify that statements correspond with the documented signs and symptoms of adverse events in CTRs.
+
+Evaluate the congruence of clinical expert statements with the respective sections in CTRs, ensuring agreement and absence of conflict. This evaluation applies to individual CTRs or comparative analyses.
+----------
+4->
+
+Evaluate the conformity of clinical experts' declarations with the specified sections of Clinical Trial Reports (CTRs). Statements must align with CTR content, pertain to the designated CTR section, and not contradict the mentioned descriptions. 
+
+To conduct this assessment:
+
+1. Eligibility Criteria: Confirm that statements align with the patient criteria outlined in CTRs.
+2. Intervention: Ensure statements are consistent with treatment particulars, such as type, dosage, frequency, and duration, as stated in CTRs.
+3. Results: Verify that statements correspond with participant statistics, outcome measures, units, and conclusions indicated in CTRs.
+4. Adverse Events: Match statements with recorded signs and symptoms of adverse events reported in CTRs.
+
+Perform this assessment for individual CTRs or in comparative studies.
+----------

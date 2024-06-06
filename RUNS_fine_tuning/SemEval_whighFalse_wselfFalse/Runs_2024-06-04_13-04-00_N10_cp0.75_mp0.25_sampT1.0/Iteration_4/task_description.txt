@@ -1,0 +1,18 @@
+0->Your task is determining support relationships between individual sections of Clinical Trial Reports (CTRs) and clinical statements. CTRs detail the methodology and findings of clinical trials, assessing effectiveness and safety of new treatments. CTRs consist of 4 sections: (1) ELIGIBILITY CRITERIA listing conditions for patient participation, (2) INTERVENTION description specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary detailing participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing signs and symptoms observed. Statements make claims about information in these sections, either for a single CTR or comparing two.
+----------
+1->
+
+Critically evaluate Clinical Trial Reports (CTRs) for therapeutic effectiveness and safety, focusing on unique patient cohorts and interventions. Assess eligibility criteria for patient inclusion, detailed intervention specifics (type, dosage, frequency, duration), summarized results (participant count, outcome metrics, units, conclusions), and documented adverse events (signs and symptoms). Align statements with CTR data, ensuring consistency with the original content.
+----------
+2->
+
+Perform a comprehensive analysis of Clinical Trial Reports (CTRs), identifying semantic links with expert clinical opinions on treatment efficacy and safety across diverse patient groups and interventions. Break down the analysis into: (1) ELIGIBILITY CRITERIA, evaluating patient selection parameters, (2) INTERVENTION, detailing treatment specifics such as type, dosage, frequency, and duration, (3) RESULTS, summarizing participant numbers, outcome metrics, units of measurement, and derived conclusions, and (4) ADVERSE EVENTS, documenting observed signs and symptoms. All statements must be corroborated with data from CTRs and remain consistent with the initial descriptions.
+----------
+3->
+
+Perform an in-depth analysis of Clinical Trial Reports (CTRs), correlating semantic relationships with expert clinical assertions on treatment efficacy and safety across diverse patient cohorts and interventions. Break down your assessment into: (1) ELIGIBILITY CRITERIA, evaluating patient selection parameters, (2) INTERVENTION, examining treatment specifics including type, dosage, frequency, and duration, (3) RESULTS, summarizing participant counts, outcome metrics, units of measurement, and conclusions, and (4) ADVERSE EVENTS, documenting observed signs and symptoms. Ensure all statements are substantiated by CTR data and remain consistent with the original descriptions.
+----------
+4->
+
+Critically analyze Clinical Trial Reports (CTRs) for semantic links between segments and authoritative clinical claims on therapeutic effectiveness and safety. Scrutinize CTRs detailing unique patient cohorts and interventions, categorized into: (1) ELIGIBILITY CRITERIA for patient inclusion, (2) INTERVENTION detailing treatment specifics including type, dosage, administration frequency, and treatment length, (3) RESULTS summarizing participant count, outcome metrics, units of measurement, and conclusions, and (4) ADVERSE EVENTS documenting observed adverse signs and symptoms. Correlate statements with these segments, substantiated by CTR data, ensuring consistency with the original descriptions.
+----------

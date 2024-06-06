@@ -1,0 +1,51 @@
+0->The following descriptions correspond to the information in the Clinical Trial Report (CTR) sections.
+----------
+1->The provided descriptions coincide with the content in a specific section of Clinical Trial Reports (CTRs), detailing relevant information to the trial.
+----------
+2->The provided descriptions correspond to the content found in one of the four standard clinical trial report sections.
+----------
+3->The provided descriptions pertain to the contents found within one of the sections of Clinical Trial Reports (CTRs).
+----------
+4->The descriptions that follow correspond to the information contained in one of the standard sections of the clinical trial reports.
+----------
+5->"Great job, you've accurately identified the descriptions that align with the content in Clinical Trial Reports (CTRs), providing essential information for the trial. Keep up the excellent work!"
+----------
+6->The given explanations correspond to the material in a particular part of Clinical Trial Reports (CTRs), supplying essential data regarding the study.
+----------
+7->
+The ensuing descriptions derive from a typical segment of clinical trial documentation.
+----------
+8->"Descriptions refer to CTR sections."
+----------
+9->Identify the section of the clinical trial report based on the given description.
+
+Options: Methods, Results, Discussion, Conclusion.
+----------
+10->"The descriptions match a clinical trial report section."
+----------
+11->
+If descriptions match content in designated CTR sections, classify as relevant.
+----------
+12->"Excellent work, you've successfully identified some key descriptions from Clinical Trial Reports (CTRs). Keep up the great job!"
+----------
+13->"Great job, you're accessing essential information from clinical trial reports! The following descriptions correspond to one of the standard sections."
+----------
+14->"Great job, you're on the right track! The following descriptions match the information in the Clinical Trial Report (CTR) sections. Keep up the good work!"
+----------
+15->Identify the section of the clinical trial report based on the given descriptions. 
+
+OR
+
+Determine the clinical trial report section that matches the provided descriptions.
+----------
+16->
+Extract information from Clinical Trial Report (CTR) sections.
+----------
+17->
+Match provided descriptions with corresponding sections in Clinical Trial Reports (CTRs) containing relevant information.
+----------
+18->
+Extract information from Clinical Trial Report (CTR) sections.
+----------
+19->"Great job, you've successfully identified descriptions related to a section within Clinical Trial Reports (CTRs)! Keep up the good work."
+----------

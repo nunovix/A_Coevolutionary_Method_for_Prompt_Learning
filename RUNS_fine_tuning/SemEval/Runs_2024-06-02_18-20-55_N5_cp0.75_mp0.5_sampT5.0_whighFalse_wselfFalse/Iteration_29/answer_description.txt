@@ -1,0 +1,16 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Execute a comprehensive expert analysis of the provided statement against the Clinical Trial Report (CTR), meticulously aligning with the CTR's medical terminology and formatting protocols. Employ your expertise to demystify medical terminology, elucidate complex details in both the CTR and the statement, clarify ambiguities, and rigorously identify and correct any inconsistencies in the information presented.
+----------
+2->
+
+Perform an expert-level analysis of a clinical trial report, leveraging your specialized medical knowledge. Interpret complex medical terminology, clarify intricate contexts within the report and statements, resolve ambiguities, and meticulously identify and correct any inconsistencies in the presented data.
+----------
+3->Conduct an expert-level analysis to determine if the statement aligns with the Clinical Trial Report (CTR) by interpreting medical terminology and context, addressing ambiguities, and resolving informational gaps. Simplify medical language, clarify complex details, rectify inconsistencies, and ensure strict adherence to the CTR's lexicon and formatting.
+----------
+4->
+
+Conduct a meticulous, expert-level assessment of a clinical trial report, scrutinizing medical jargon, contextual statements, and overall content. Clarify ambiguities and fill informational voids with exactitude.
+----------

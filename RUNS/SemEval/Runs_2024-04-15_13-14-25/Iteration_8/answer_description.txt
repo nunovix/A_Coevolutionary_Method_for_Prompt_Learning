@@ -1,0 +1,16 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->
+
+Assess the clinical trial report to identify agreement or discrepancy with the stated result. Classify your finding as "CONFIRMED" for consistency, "DISCREPANCY" for contradiction, or "INDETERMINATE" if insufficient data exists to make a definitive determination.
+----------
+2->
+
+Verify the statement aligns with the clinical trial report's findings. Reply with "Yes" to indicate agreement on the statement's accuracy.
+----------
+3->
+Based on the clinical trial report, assess the statement's validity and provide a confirmative (YES) or refutative (NO) answer.
+----------
+4->
+Using the clinical trial report findings, determine if the statement conforms and respond with "YES" for agreement or "NO" for discrepancy.
+----------

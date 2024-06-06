@@ -1,0 +1,179 @@
+
+
+Your objective is to assess the semantic relationships between clinical statements and the ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS sections of Clinical Trial Reports (CTRs). Ensure the statements' assertions are consistent with the CTR information and do not contradict provided descriptions.
+
+CTRs consist of four parts:
+
+1. ELIGIBILITY CRITERIA: Defines patient participation conditions.
+2. INTERVENTION: Details treatment type, dosage, frequency, and duration.
+3. RESULTS: Provides participant data, outcome measures, units, and conclusions.
+4. ADVERSE EVENTS: Reports observed signs and symptoms.
+
+Clinical statements propose claims about the data within these CTR sections, either for an individual report or in comparative analyses. The claims must be supported by the CTR information and not contradict the provided descriptions.
+----------
+
+
+Your objective is to confirm the semantic compatibility of clinical domain expert statements with the ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS sections of Clinical Trial Reports (CTRs). Ensure statements are validated by CTR data without contradiction. The statements propose claims regarding the CTR information, applicable to both individual reports and comparative analyses. CTRs serve to document the methodology and findings of clinical trials, evaluating treatment efficacy and safety. The ELIGIBILITY CRITERIA section outlines patient eligibility conditions, the INTERVENTION section delineates treatment specifics, the RESULTS section encapsulates participant data, outcome measures, units, and conclusions, and the ADVERSE EVENTS section documents observed signs and symptoms. To ensure semantic alignment, statements must correspond with CTR data, be substantiated within the report, and avoid contradicting reported descriptions.
+----------
+
+
+Determine semantic entailment and support relationships between clinical statements and the ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS sections of Clinical Trial Reports (CTRs). Ensure statements' assertions are consistent with the CTR information and do not contradict provided descriptions. CTRs include four sections:
+
+1. ELIGIBILITY CRITERIA: Defines trial participant conditions.
+2. INTERVENTION: Details treatment type, dosage, frequency, and duration.
+3. RESULTS: Provides participant numbers, outcome measures, units, and conclusions.
+4. ADVERSE EVENTS: Records observed patient signs and symptoms.
+
+Statements propose claims about the data within these CTR sections, either for a single report or in comparative analyses. For entailment, claims must relate to the CTR data, be supported, and not contradict provided descriptions.
+----------
+
+
+Clinical domain experts should evaluate the semantic entailment between their statements and specific sections of Clinical Trial Reports (CTRs). To ensure consistency, statements must be supported by the CTR content without contradicting provided descriptions. CTRs consist of four sections detailing various aspects of clinical trials:
+
+1. ELIGIBILITY CRITERIA: Patient inclusion conditions
+2. INTERVENTION: Treatment type, dosage, frequency, and duration
+3. RESULTS: Participant statistics, outcome measures, units, and conclusions
+4. ADVERSE EVENTS: Observed signs and symptoms
+
+Experts' statements must agree with the trial information, be substantiated by the CTR, and avoid contradicting given descriptions within each section. The statement's claim pertains to a single CTR or comparative analysis of two CTRs.
+----------
+
+Your objective is to identify connections between specific sections of Clinical Trial Reports (CTRs) and corresponding clinical statements. Clinical Trial Reports outline the experimental design and results of clinical trials, focusing on the efficacy and safety of novel treatments. CTRs comprise four segments: (1) ELIGIBILITY CRITERIA delineating entry requirements for patient participation, (2) INTERVENTION DESCRIPTION characterizing treatment type, dosage, frequency, and duration, (3) OUTCOME RESULTS detailing participant demographics, outcome measures, units, and conclusions, and (4) ADE EVENTS reporting observed signs and symptoms. Clinical statements make assertions regarding information within these CTR sections, either concerning a single trial or comparatively.
+----------
+
+
+The objective is to determine semantic entailment between clinical domain experts' statements and specific sections of Clinical Trial Reports (CTRs). CTRs provide details on clinical trials' experimental designs and outcomes, evaluating the efficacy and safety of new treatments. A CTR encompasses four parts: (1) ELIGIBILITY CRITERIA outlining patient selection conditions, (2) INTERVENTION DESCRIPTION characterizing treatment details, (3) OUTCOME RESULTS summarizing participant data and conclusions, and (4) ADE EVENTS reporting observed signs and symptoms. Statements put forth claims about CTR information, pertaining to a single report or comparatively analyzing two. For entailment, the statement must conform to clinical trial data, be substantiated by the CTR, and avoid contradiction with the provided descriptions.
+----------
+
+
+To ensure semantic alignment, experts' declarations concerning Clinical Trial Reports (CTRs) must agree with the trial information detailed in the reports. Experts should refer to specific CTR sections in their assertions, applicable to single reports or comparative analyses. The entailment of experts' claims requires substantiation by the CTR and avoidance of contradictory statements.
+----------
+
+
+Evaluate semantic entailment between expert statements and the ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS sections of Clinical Trial Reports (CTRs). Ensure statements' assertions are consistent with CTR data and do not contradict provided descriptions. CTRs consist of four sections:
+
+1. ELIGIBILITY CRITERIA: Defines conditions for trial participant selection.
+2. INTERVENTION: Provides details on treatment type, dosage, frequency, and duration.
+3. RESULTS: Summarizes participant data, outcome measures, units, and conclusions.
+4. ADVERSE EVENTS: Records observed patient signs and symptoms.
+
+Expert statements make declarations about the data within these CTR sections, either for a single report or in comparative analyses. Entailment is established when the statement's assertion aligns with the CTR data, is supported by the report, and remains consistent with given descriptions.
+----------
+
+
+For clinical domain experts, assess semantic entailment between statements and the following sections of Clinical Trial Reports (CTRs): ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS. Statements must align with CTR information without contradiction, substantiated by the respective CTR sections. CTRs outline clinical trials' procedures, findings, efficacy, and safety evaluations of emerging treatments, consisting of:
+
+1. ELIGIBILITY CRITERIA: Patient selection conditions
+2. INTERVENTION: Treatment specifics (type, dosage, frequency, duration)
+3. RESULTS: Participant data (statistics, outcome measures, units), conclusions
+4. ADVERSE EVENTS: Observed signs and symptoms
+
+Statements make claims about CTR information, either concerning a single report or comparatively analyzing two.
+----------
+
+
+For clinical domain experts, evaluate semantic entailment connections between their statements and the following sections of Clinical Trial Reports (CTRs): Eligibility Criteria, Intervention, Results, and Adverse Events. Statements must be substantiated by CTR content without contradicting provided descriptions. CTRs detail the procedures, findings, efficacy, and safety evaluations of emerging treatments. These reports consist of four sections:
+
+1. ELIGIBILITY CRITERIA: Patient inclusion conditions
+2. INTERVENTION: Treatment type, dosage, frequency, and duration
+3. RESULTS: Participant statistics, outcome measures, units, and conclusions
+4. ADVERSE EVENTS: Observed signs and symptoms
+
+Statements should align with CTR information, referring to a single report or comparatively analyzing two reports.
+----------
+
+
+For clinical domain experts, assess semantic entailment between statements and the following sections of Clinical Trial Reports (CTRs): ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS. Statements must align with CTR data, be supported by the report, and not contradict provided descriptions. CTRs outline clinical trials' procedures, findings, efficacy, and safety evaluations of new treatments, consisting of:
+
+1. ELIGIBILITY CRITERIA: Patient selection conditions
+2. INTERVENTION: Treatment type, dosage, frequency, and duration
+3. RESULTS: Participant data, outcome measures, units, and conclusions
+4. ADVERSE EVENTS: Observed signs and symptoms
+
+Statements make claims about CTR information, either concerning a single report or comparatively analyzing two.
+----------
+
+
+Verify semantic alignment between clinical domain expert statements and the corresponding sections of Clinical Trial Reports (CTRs): ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS. Ensure statements are supported by CTR data without contradiction. Statements propose claims about CTR information, applying to individual CTRs or comparative analyses. The CTRs detail the methodology and results of clinical trials, assessing treatment efficacy and safety. The ELIGIBILITY CRITERIA section specifies patient inclusion conditions, the INTERVENTION section details treatment type, dosage, frequency, and duration, the RESULTS section summarizes participant statistics, outcome measures, units, and conclusions, and the ADVERSE EVENTS section lists observed signs and symptoms. Entailment verification requires the statement's claim to correspond with CTR data, be substantiated within the report, and avoid contradicting reported descriptions.
+----------
+
+
+Assess semantic entailment between clinical domain expert statements and the ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS sections of Clinical Trial Reports (CTRs). Ensure statements align with CTR data without contradiction. CTRs provide details on clinical trials, focusing on treatment efficacy, safety, and patient selection. Each trial consists of distinct treatment groups or cohorts with varying baseline characteristics. A comprehensive CTR encompasses four parts:
+
+1. ELIGIBILITY CRITERIA: Detailing patient selection criteria.
+2. INTERVENTION: Describing treatment type, dosage, frequency, and duration.
+3. RESULTS: Summarizing participant data, outcome measures, units, and conclusions.
+4. ADVERSE EVENTS: Recording observed signs and symptoms.
+
+Statements propose claims about CTR information, applicable to individual CTRs or comparative analyses. Entailment is established when statement content aligns with clinical trial data, is supported by the CTR, and does not contradict provided descriptions.
+----------
+
+
+Confirm the semantic alignment between clinical experts' declarations and the specified sections of Clinical Trial Reports (CTRs): ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS. Experts' statements must agree with trial information, be substantiated by the CTR data, and not contradict reported descriptions in these sections. The CTRs provide methodology and findings details, evaluating treatment efficacy and safety. The ELIGIBILITY CRITERIA section outlines patient inclusion conditions, the INTERVENTION section details treatment information, the RESULTS section summarizes participant statistics and outcomes, and the ADVERSE EVENTS section lists observed signs and symptoms.
+----------
+
+
+Assess semantic entailment between clinical domain expert statements and the ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS sections of Clinical Trial Reports (CTRs). Ensure statements align with CTR data without contradiction. CTRs provide detailed information on clinical trials, focusing on treatment efficacy, safety, and patient selection. Each trial includes distinct treatment groups or cohorts with varying baseline characteristics. A comprehensive CTR consists of four parts:
+
+1. ELIGIBILITY CRITERIA: Detailing patient selection criteria.
+2. INTERVENTION: Describing the treatment type, dosage, frequency, and duration.
+3. RESULTS: Summarizing participant data, outcome measures, units, and conclusions.
+4. ADVERSE EVENTS: Recording observed signs and symptoms.
+
+Expert statements propose claims about CTR information, applicable to individual trials or comparative analyses. Entailment is established when statement content aligns with clinical trial data, is supported by the CTR, and does not contradict provided descriptions.
+----------
+
+Your objective is to establish correlations between the distinct sections of Clinical Trial Reports (CTRs) and corresponding clinical statements. Clinical Trial Reports serve to document the experimental design and findings of clinical trials, emphasizing the efficacy and safety of new therapies. CTRs consist of four sectors: (1) ELIGIBILITY CRITERIA defining the prerequisites for patient enrollment, (2) INTERVENTION DESCRIPTION detailing the treatment characteristics, such as type, dosage, frequency, and duration, (3) OUTCOME RESULTS presenting participant data, outcome metrics, units, and conclusions, and (4) ADE EVENTS recording observed signs and symptoms. Clinical statements validate or challenge information within these CTR sectors, pertaining to individual trials or comparative analyses.
+----------
+
+
+Confirm semantic entailment between clinical experts' statements and corresponding sections of Clinical Trial Reports (CTRs). For this, assess the agreement between expert claims and trial information in four main CTR parts: (1) ELIGIBILITY CRITERIA defining patient selection, (2) INTERVENTIONS detailing treatment particulars, (3) RESULTS summarizing participant data and conclusions, and (4) ADVERSE EVENTS recording observed signs and symptoms. Expert statements must align with CTR data, be substantiated by the CTR, and avoid contradicting given descriptions to establish entailment.
+----------
+
+
+Verify the semantic alignment between clinical experts' declarations and corresponding sections of Clinical Trial Reports (CTRs). CTRs detail the methodology and findings of clinical trials, assessing the efficacy and safety of novel treatments. Experts' statements make assertions about specific CTR sections, applying to a single report or comparative analysis. To confirm entailment, the statement's claim must agree with trial information, be substantiated by the CTR, and avoid contradicting given descriptions.
+----------
+
+
+The goal is to evaluate semantic entailment between expert statements and Clinical Trial Report (CTR) sections. CTRs detail procedures, findings, and safety data for novel treatments, each trial having unique treatment groups or varying baseline characteristics. A thorough CTR encompasses four parts: (1) ELIGIBILITY CRITERIA defining patient inclusion conditions, (2) INTERVENTIONS outlining treatment particulars, (3) RESULTS summarizing participant data and conclusions, and (4) ADVERSE EVENTS recording observed signs and symptoms. Expert statements make declarations about CTR information, relevant to a single report or comparing two. Entailment is established when the statement's assertion harmonizes with trial data, is corroborated by the CTR, and does not conflict with given descriptions.
+----------
+
+
+Assess semantic entailment between clinical domain expert statements and the ELIGIBILITY CRITERIA, INTERVENTIONS, RESULTS, and ADVERSE EVENTS sections of Clinical Trial Reports (CTRs). Ensure statements align with CTR data without contradiction.
+
+CTRs detail clinical trials, encompassing treatment efficacy, safety, and patient selection. Each trial includes distinct treatment groups or cohorts, with unique eligibility criteria and varying baseline characteristics. A thorough CTR consists of four parts:
+
+1. ELIGIBILITY CRITERIA: Defining patient inclusion conditions.
+2. INTERVENTIONS: Outlining treatment details, including type, dosage, frequency, and duration.
+3. RESULTS: Summarizing participant data, outcomes, and conclusions.
+4. ADVERSE EVENTS: Recording observed signs and symptoms.
+
+Expert statements propose claims about CTR information, applicable to individual CTRs or comparative analyses. Entailment is established when the statement's assertion harmonizes with trial data, is corroborated by the CTR, and does not conflict with given descriptions.
+----------
+
+
+For clinical domain experts, evaluate semantic entailment connections between their statements and sections of Clinical Trial Reports (CTRs). Statements must be substantiated by CTR content without contradicting provided descriptions. CTRs outline clinical trials' procedures, findings, efficacy, and safety evaluations of emerging treatments. Consisting of four sections, CTRs include:
+
+1. ELIGIBILITY CRITERIA: Patient inclusion conditions
+2. INTERVENTION: Treatment type, dosage, frequency, and duration
+3. RESULTS: Participant statistics, outcome measures, units, and conclusions
+4. ADVERSE EVENTS: Observed signs and symptoms
+
+Statements make claims about CTR information, pertaining to a single report or comparatively analyzing two reports.
+----------
+
+
+The goal is to assess semantic entailment between clinical domain experts' statements and individual sections of Clinical Trial Reports (CTRs). CTRs detail the methods and outcomes of clinical trials, evaluating the efficacy and safety of new treatments. Each trial includes distinct cohorts or arms with varying treatment types, dosages, frequencies, durations, and baseline characteristics. Comprised of four sections, a CTR consists of: (1) ELIGIBILITY CRITERIA outlining patient selection conditions, (2) INTERVENTION describing treatment specifics, (3) RESULTS summarizing participant data and conclusions, and (4) ADVERSE EVENTS documenting observed signs and symptoms. Statements make claims about CTR information, either concerning a single report or comparatively analyzing two. For entailment, the statement must align with clinical trial data, be supported by the CTR, and not contradict the given descriptions.
+----------
+
+
+Determine semantic entailment between clinical experts' statements and specific sections of Clinical Trial Reports (CTRs). CTRs encompass four parts: (1) Eligibility Criteria detailing patient selection conditions, (2) Intervention outlining treatment details, (3) Results summarizing participant data and conclusions, and (4) Adverse Events recording observed signs and symptoms. Statements represent claims about CTR information, either regarding a single report or comparing two. To establish entailment, the statement must be consistent with clinical trial data, supported by the CTR, and free from contradiction with the given descriptions.
+----------
+
+
+Identify semantic entailment relations between clinical trial report (CTR) sections and expert statements. CTRs consist of four sections: (1) Eligibility Criteria outlining patient inclusion conditions, (2) Intervention specifying treatment type, dosage, frequency, and duration, (3) Results detailing participant numbers, outcome measures, units, and conclusions, and (4) Adverse Events listing observed signs and symptoms. Expert statements are claims regarding CTR information, applicable to a single CTR or comparisons between two. For entailment, the claim must be related to CTR content, substantiated by the CTR, and non-contradictory to the provided descriptions.
+----------
+
+
+Determine semantic entailment between expert statements and corresponding sections of Clinical Trial Reports (CTRs). CTRs encompass Eligibility Criteria, Intervention details, Results, and Adverse Events. Expert claims, pertaining to a single CTR or comparative analysis, must align with CTR content, be substantiated by the CTR, and avoid contradicting given descriptions.
+----------

@@ -1,0 +1,18 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->
+
+Assess the claim's validity within a Clinical Trial Report (CTR) by examining the data. Provide a definitive 'YES' if the CTR data conclusively supports the claim, or 'NO' if the data fails to substantiate the claim's accuracy. Base your judgment solely on the CTR data, ignoring any inconsistencies or contradictions. Employ your expertise to evaluate the impact of the CTR data on the claim's credibility.
+----------
+2->
+
+Carefully scrutinize the Clinical Trial Report (CTR) to assess the claim's validity. Affirm 'YES' exclusively if the CTR data unequivocally substantiates the claim. In cases where the CTR data does not conclusively validate the claim's accuracy, indicate 'NO'. Rely solely on the CTR data for your evaluation, disregarding any discrepancies or contradictions. Utilize your specialized knowledge to determine the influence of the CTR data on the claim's trustworthiness.
+----------
+3->
+
+Assess the Clinical Trial Report (CTR) rigorously to verify the claim's accuracy. Provide a definitive 'YES' if the CTR data unequivocally supports the claim. Alternatively, respond with 'NO' if the CTR data does not decisively validate the claim's correctness. Base your judgment solely on the CTR data, disregarding any discrepancies or contradictions. Apply your expertise to discern the data's influence on the claim's truthfulness.
+----------
+4->
+
+Carefully scrutinize the Clinical Trial Report (CTR) to assess the claim's validity. Affirm 'YES' solely if the CTR incontrovertibly substantiates the claim. Should the CTR data not definitively validate the claim's accuracy, respond with 'NO'. Base your determination exclusively on the CTR data, disregarding any discrepancies or contradictions. Utilize your expertise to determine the influence of the CTR data on the claim's reliability.
+----------

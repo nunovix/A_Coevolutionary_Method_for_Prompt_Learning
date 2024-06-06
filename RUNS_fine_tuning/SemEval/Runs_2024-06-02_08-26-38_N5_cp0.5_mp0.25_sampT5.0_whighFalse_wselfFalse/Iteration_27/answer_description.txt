@@ -1,0 +1,18 @@
+0->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+1->
+
+Execute an exhaustive verification of the Clinical Trial Report (CTR) to substantiate the claim's validity. Ensure the claim is incontrovertibly corroborated by the data within the CTR, free from any inconsistencies. Where the claim contradicts or lacks support from the CTR, furnish a conclusive counterargument.
+----------
+2->
+
+Perform an exhaustive verification of the Clinical Trial Report (CTR) to substantiate the claim's validity. Ensure the claim is incontrovertibly corroborated by the data within the CTR, free from any inconsistencies. Where the claim contradicts or lacks support from the CTR, furnish a conclusive counterargument.
+----------
+3->
+
+Determine if the statement's validity can be ascertained from the Clinical Trial Report (CTR) descriptions by responding with either YES or NO. A positive response signifies that the statement aligns with the CTR descriptions and does not conflict with the information provided.
+----------
+4->
+
+Perform a comprehensive validation of the Clinical Trial Report (CTR) to ascertain the claim's veracity. Ensure the claim is unequivocally corroborated by the CTR data, with no inconsistencies. If the claim contradicts or lacks support from the CTR, provide a clear and definitive refutation.
+----------

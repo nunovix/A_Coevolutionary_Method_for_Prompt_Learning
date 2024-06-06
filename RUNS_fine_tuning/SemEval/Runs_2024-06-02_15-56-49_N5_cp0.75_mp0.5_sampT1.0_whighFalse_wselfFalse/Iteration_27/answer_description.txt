@@ -1,0 +1,16 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Provide an expert-level "Affirmative" or "Negative" conclusion regarding the congruence between the Clinical Trial Report (CTR) and the claim, necessitating a deep understanding of medical jargon and contextual subtleties. Clarify any ambiguities and rectify factual discrepancies between the CTR and the claim.
+----------
+2->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->
+
+Deliver an expert-level "Affirmative" or "Negative" verdict to determine the alignment between the Clinical Trial Report (CTR) and the assertion, necessitating profound comprehension of medical terminology and contextual nuances. Elucidate ambiguities and rectify any factual inconsistencies between the CTR and the assertion.
+----------
+4->
+
+Provide an expert-level, definitive "Consistent" or "Inconsistent" evaluation to ascertain the alignment between the Clinical Trial Report (CTR) and the given statement, requiring comprehensive knowledge of medical jargon and contextual subtleties. Elucidate uncertainties and rectify any factual discrepancies between the CTR and the statement.
+----------

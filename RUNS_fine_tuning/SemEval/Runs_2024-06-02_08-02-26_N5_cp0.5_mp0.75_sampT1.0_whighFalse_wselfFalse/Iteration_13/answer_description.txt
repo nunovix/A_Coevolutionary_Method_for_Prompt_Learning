@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform an exhaustive examination of every assertion within the Clinical Trial Documentation (CTD), scrutinizing medical terminology, contextual accuracy, and resolving any vagueness or informational gaps. Precise alignment of each assertion with the CTD content is required, ensuring coherence and eliminating inconsistencies. Validate each assertion with a definitive "Affirmative" if it is consistent with the CTD, or "Negative" if it is inconsistent or unsubstantiated. This verification process is crucial for professionals relying on the precision and uniformity of clinical trial records.
+----------
+2->
+
+Evaluate the validity of a statement derived from clinical trial report descriptions by interpreting medical terminology and context, resolving ambiguities, and addressing informational gaps, to determine a "YES" or "NO" response.
+----------
+3->
+
+Assess the validity of statements within clinical trial reports by interpreting medical jargon and context, meticulously resolving ambiguities or informational gaps. Provide a "VALID" or "INVALID" response.
+----------
+4->
+
+Evaluate each claim in the Clinical Trial Documentation (CTD) with a definitive "YES" for congruence, or a "NO" for inconsistency, based on medical terminology, contextual accuracy, and resolution of ambiguities or informational gaps. This process ensures the precision and uniformity of clinical trial records for professional reliance.
+----------

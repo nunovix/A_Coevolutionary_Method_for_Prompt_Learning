@@ -1,0 +1,16 @@
+0->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Clinical Trial Report (CTR) information, with the statement being supported by the CTR data and not contradicting the provided descriptions.
+----------
+1->
+Determine if the statement conforms to and is supported by the data in the Clinical Trial Reports. Affirm with YES if the statement is legitimate according to the CTR evidence. Reject the statement if it disagrees or is omitted from the reports.
+----------
+2->
+Evaluate the consistency of the statement with the findings in the Clinical Trial Reports. If the statement aligns with the reported data, label it as "Legitimate" (YES). Otherwise, if the statement contradicts or is absent from the reports, designate it as "Invalid" (NO).
+----------
+3->
+
+Assess the compatibility of Clinical Trial Report findings with the statement's veracity.
+----------
+4->
+
+Determine if the Clinical Trial Report data supports (YES) or contradicts (NO) the statement's validity.
+----------

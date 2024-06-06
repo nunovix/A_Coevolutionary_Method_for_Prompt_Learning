@@ -1,0 +1,22 @@
+Task: SemEval
+Start time: 2024-03-18 13:43:40.346117
+End time: 2024-03-18 17:56:56.896811
+Total elapsed time: 4:13:16.550694
+No. of iterations: 10
+Average time per iteration: 0:25:19.655069
+
+Initial population size: 5
+Population size that's kept for next iteration: 5
+How many of the top performers are being kept (the rest are randomized): 2
+No. of mutations generated per iteration: 5
+No. of combinations generated per iteration: 15
+Max no. of iterations allowed: 200
+Patience: 10
+Decoder temperature in mutation and combiantions: 1.0
+Top-p in sampling for mutation and combiantions: 0.8
+
+Evaluation done on: dev set
+With 200 examples
+
+Name of the model used: mistralai/Mistral-7B-Instruct-v0.2 
+4 bit quantization: True 

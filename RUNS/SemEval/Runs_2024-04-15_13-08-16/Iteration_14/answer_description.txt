@@ -1,0 +1,83 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->
+Analyze the statement and clinical trial report descriptions for consistency in medical terminology and context. Determine if the statement can be validated using the information provided, addressing any ambiguities or gaps.
+
+Reply with YES if valid, or NO if not.
+----------
+2->"Great job, you're making good progress! Based on the clinical trial report information, can you confirm if the statement is valid or not? Your insights are valuable in helping us reach accurate conclusions.
+----------
+3->
+Determine if the statement's validity can be assessed based on the clinical trial report descriptions. Interpret medical terminology and context, resolve ambiguities, and identify any gaps in the provided information.
+
+YES/NO.
+----------
+4->
+Assess the clinical trial evidence and provide a YES or NO response based on its compatibility with the given statement.
+----------
+5->
+Determine if the clinical trial data supports the statement's validity by responding with a YES or NO.
+----------
+6->
+Assess the medical terminology and context in the clinical trial report data for accuracy and completeness. Identify any ambiguities or missing information, and clarify to preserve data integrity and ensure reliable conclusions during analysis. Confirm alignment of given statement with findings post-evaluation: YES.
+----------
+7->
+Verify the accuracy of the statement against the details in the Clinical Trial Reports.
+----------
+8->
+Assess the clinical trial reports to validate the statement's accuracy. Interpret medical jargon and context, clarify ambiguities, and identify any missing information. Answer with YES if the reports provide sufficient evidence, otherwise answer with NO.
+----------
+9->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+10->
+
+1. Verify the accuracy of clinical trial results and summaries.
+2. Understand and explain specialized terminology in the context of the analysis.
+3. Clarify ambiguities and provide missing information for a clear conclusion.
+4. Make a definitive judgment: Affirmative (yes) or Negative (no).
+----------
+11->
+Assess the clinical trial reports to validate the statement's accuracy and determine if they provide sufficient evidence to support the statement. Interpret any medical jargon and clarify ambiguities, identifying any missing information that may impact the assessment. Answer with YES if the reports provide clear and convincing evidence, otherwise answer with NO.
+----------
+12->
+
+Assess the accuracy of clinical trial statements by comparing the data presented with corresponding information in Clinical Trial Reports. Analyze the medical terminology and context to resolve ambiguities and maintain accuracy. For every statement, decide if it aligns with the clinical trial report data, and respond with YES if true or NO if false.
+----------
+13->
+
+1. Verify the accuracy of statements in clinical trial reports by assessing their meaning, understanding specialized terminology, deciphering contextual meanings, clarifying ambiguous statements, filling in missing information, and drawing affirmative or negative conclusions based on the evaluation.
+----------
+14->
+
+1. Interpret the meaning of a clinical trial statement.
+2. Clarify any ambiguities within the statement.
+3. Analyze medical terminology and context for accuracy.
+4. Validate the presented data.
+----------
+15->
+Determine if the clinical trial report data allows for the evaluation of the statement's truthfulness.
+----------
+16->
+
+1. Confirm the validity of clinical trial report summaries by checking against the corresponding report details.
+2. Interpret and define specialized terminology in context for thorough understanding.
+3. Resolve ambiguous statements and complete missing information for comprehensive evaluation.
+4. Render conclusions: Affirmative/Negative.
+----------
+17->
+
+1. Verify the truthfulness of declarations in clinical trial summary documents.
+2. Interpret jargon and unravel the intended meanings within the given context.
+3. Resolve ambiguities and supply absent data for thorough assessment.
+4. Ascertain: Affirmative/Negative (reach definitive conclusions based on evaluation)
+----------
+18->
+
+Evaluate the medical terminology and context within clinical trial report data for precision and comprehensiveness. Clarify any ambiguities or discrepancies, ensuring consistency with trial results. Guarantee data accuracy by identifying and defining any absent information.
+----------
+19->
+1. Evaluate the validity of statements in clinical trial report abstracts.
+2. Interpret complex terminology and discern contextual implications.
+3. Resolve ambiguities and supply missing details for thorough assessment.
+4. Provide conclusions: Affirmative/Negative (based on evaluation analysis)
+----------

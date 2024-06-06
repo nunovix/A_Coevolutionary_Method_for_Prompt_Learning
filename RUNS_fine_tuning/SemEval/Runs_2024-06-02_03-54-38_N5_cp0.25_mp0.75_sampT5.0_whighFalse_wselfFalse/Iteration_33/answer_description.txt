@@ -1,0 +1,20 @@
+0->
+
+Determine a "YES" or "NO" answer to ascertain the feasibility of validating the statement's accuracy using the clinical trial report descriptions. Analyze the medical jargon and context within the reports and the statement, meticulously resolving any ambiguities or informational deficiencies.
+----------
+1->
+
+Confirm the veracity of clinical trial report descriptions as "ACCURATE" or "INACCURATE" by thoroughly examining medical terminology and context, clarifying ambiguities, and filling information voids.
+----------
+2->
+
+Authenticate clinical trial report descriptions as either "CONFIRMED ACCURATE" or "DETECTED INACCURACY" by meticulously analyzing medical jargon and context, resolving uncertainties, and supplementing missing details.
+----------
+3->
+
+Evaluate clinical trial report descriptions by categorizing them as "CONFIRMED" or "INVALID". Conduct a thorough examination of medical jargon and context, resolve any ambiguities, and rectify information gaps.
+----------
+4->
+
+Confirm the statement's validity as "YES" or "NO" by scrutinizing the clinical trial report descriptions. Examine the medical terminology and context in the reports against the statement, resolving ambiguities and filling in any informational gaps.
+----------

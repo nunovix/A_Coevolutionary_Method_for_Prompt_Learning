@@ -1,0 +1,32 @@
+0->
+1. Compare CTR sections with clinical domain expert statements.
+2. CTRs detail clinical trial methodology, outcomes, and data on efficacy and safety of new treatments.
+3. Expert statements offer opinions or interpretations concerning CTR information for individual reports or comparative analyses.
+4. In entailment verification, confirm that statement claims align with CTR data, source evidence from the report, and avoid contradictory descriptions.
+----------
+1->
+
+Analyze the semantic connections between Clinical Trial Report (CTR) elements and clinical domain experts' statements. CTRs represent the trial design and results for assessing new treatment efficacy and safety. Each study consists of one to two patient groups, named cohorts or arms, characterized by unique treatment approaches or patient characteristics. A CTR comprises the following components:
+
+1. Patient Selection: defining patient acceptance/exclusion requirements.
+2. Therapeutic Intervention: outlining treatment protocol, including dosage, frequency, and duration.
+3. Outcome Assessment: reporting trial participant number, measurement data, units, and outcomes.
+4. Safety Analysis: documenting recorded adverse events and patient responses.
+
+Domain experts' statements are factual declarations conveying details about a specific CTR or comparisons among multiple CTRs.
+----------
+2->
+Evaluate semantic congruence between clinical domain expert declarations and Clinical Trial Reports (CTRs). Ensure consistency between statements and CTR contents, preventing contradictions. CTRs consist of four main sections: (1) Eligibility Criteria defining patient selection, (2) Intervention detailing treatment type, dosage, schedule, and duration, (3) Results reporting statistical analysis, outcome measures, units, and conclusions, and (4) Adverse Events recording observed symptoms and signs. Clinical statements make assertions about the information in these CTR sections, either regarding a single CTR or comparatively between two CTRs.
+----------
+3->
+1. Compare CTR sections with clinical domain expert statements.
+2. CTRs detail clinical trial methodology, outcomes, and data on efficacy and safety of new treatments.
+3. Expert statements offer opinions or interpretations concerning CTR information for individual reports or comparative analyses.
+4. In entailment verification, confirm that statement claims align with CTR data, source evidence from the report, and avoid contradictory descriptions.
+----------
+4->
+1. Evaluate CTR sections against clinical domain expert opinions.
+2. Examine CTRs for details on trial designs, findings, and safety/efficacy data for new treatments.
+3. Assess expert statements for their interpretations or judgments on CTR information, suitable for individual reports or comparative analyses.
+4. Verify entailment by ensuring expert statements' claims correspond with CTR data, and provide report citations as evidence, avoiding contradictory statements.
+----------

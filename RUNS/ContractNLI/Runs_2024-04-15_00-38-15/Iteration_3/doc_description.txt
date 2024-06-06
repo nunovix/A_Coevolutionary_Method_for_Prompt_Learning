@@ -1,0 +1,109 @@
+0->The following corresponds to parts of the Non-Disclosure Agreement (NDA).
+----------
+1->"Descriptions match NDA content."
+----------
+2->
+"Please find the sections of the Non-Disclosure Agreement (NDA) below."
+----------
+3->"This pertains to elements of the Non-Disclosure Agreement (NDA)."
+----------
+4->
+
+Only authorized individuals, bound by a valid Non-Disclosure Agreement (NDA), are permitted to access the following sections: [list sections here].
+----------
+5->
+
+This instruction applies to the confidentiality sections of the Non-Disclosure Agreement (NDA).
+----------
+6->
+The information that follows is contained in the Non-Disclosure Agreement (NDA) sections of the agreement.
+----------
+7->
+
+1. Nondisclosure Agreement (NDA) Provisions:
+
+a. Parties agree to keep confidential all shared information under the NDA.
+b. Confidential Information includes any data not previously known, not marked confidential, or reasonably inferable as confidential.
+c. Exceptions: Disclosure is allowed with consent or as required by law.
+d. Confidentiality obligations last for a specified timeframe or until the agreement's termination.
+e. Violations may result in legal action.
+f. Upon request or agreement termination, parties must return or destroy all Confidential Information.
+g. The NDA is governed by the specified law and jurisdiction.
+----------
+8->The following corresponds to parts of the Non-Disclosure Agreement (NDA).
+----------
+9->
+
+Locate and oversee the pertinent clauses in the Non-Disclosure Agreement (NDA) corresponding to the provided descriptions.
+----------
+10->
+
+Components of a Non-Disclosure Agreement (NDA): 
+1. Confidentiality Obligations: Parties agree to maintain the confidentiality of any shared information.
+2. Scope of Confidential Information: Defines the boundaries of protected information.
+3. Exclusions: Lists exceptions to the confidentiality obligations.
+4. Duration: Specifies the length of the NDA's protection.
+5. Remedies for Breach: Outlines consequences for disclosing confidential information.
+6. Dispute Resolution: Describes methods for resolving disagreements.
+7. Governing Law: Identifies the jurisdiction and applicable law.
+----------
+11->
+Locate and isolate the sections of the text that adhere to the Non-Disclosure Agreement (NDA).
+----------
+12->
+
+A Non-Disclosure Agreement (NDA) consists of: 
+1. Confidentiality Commitment: Parties pledge to keep disclosed information secret.
+2. Defined Confidential Material: Outlines the scope and limitations of protected data.
+3. Exemptions: Lists exceptions to confidentiality obligations.
+4. Duration Specification: States the NDA's duration and termination.
+5. Breach Consequences: Describes penalties for disclosing confidential information.
+6. Dispute Settlement: Proposes methods for resolving disputes.
+7. Jurisdictional Guidelines: Identifies governing law and applicable courts.
+----------
+13->
+
+Under an NDA, parties are bound to maintain the secrecy of data that is new, not marked confidential, or suggesting confidentiality. Exemptions to this confidentiality duty include disclosures granted consent or mandated by law. Confidentiality clauses remain effective for a set duration or until the agreement's conclusion. Breaches could lead to litigation, and upon request or termination, parties must eliminate all Confidential Information. The NDA is ruled by the stated law and jurisdiction.
+----------
+14->
+
+Extract the following components from a Non-Disclosure Agreement (NDA):
+
+* Confidentiality clause: Parties pledge to maintain the confidentiality of shared information.
+* Scope of confidentiality: Defines the limits of protected information.
+* Exclusions: Lists exceptions to confidentiality obligations.
+* Duration: Specifies the length of the NDA's protection.
+* Consequences for breach: Outlines penalties for disclosing confidential information.
+* Dispute resolution: Describes methods for resolving disagreements.
+* Governing law: Identifies the applicable jurisdiction and law.
+----------
+15->
+
+1. Classify and protect confidential data in adherence to NDA clauses.
+2. AI system is capable of securing confidential data in accordance with NDA terms.
+----------
+16->"Find the following sections in the Non-Disclosure Agreement (NDA): [list of sections pertaining to the NDA]"
+
+Explanation: By combining the two instructions, we have kept the main information consistent while summarizing the instructions. The resulting instruction is clearer and more direct, informing the audience of the specific sections to find in the NDA.
+----------
+17->
+This instruction pertains to components of the Non-Disclosure Agreement (NDA).
+----------
+18->
+
+Determine the confidentiality provisions, covered information, exclusions, timeframes, breach consequences, dispute settlement mechanisms, and applicable laws in the Non-Disclosure Agreement (NDA) relevant to the given descriptions.
+----------
+19->
+
+Access to the listed sections is restricted to individuals bound by a valid Non-Disclosure Agreement (NDA). The NDA encompasses the following elements:
+
+1. Confidentiality: Parties pledge to maintain secrecy over shared information.
+2. Scope: Defines the extent of protected information.
+3. Exceptions: Outlines excluded information from confidentiality obligations.
+4. Duration: Specifies the term of NDA confidentiality.
+5. Consequences: Lists remedies for breaching confidentiality.
+6. Disputes: Describes resolution methods for disagreements.
+7. Jurisdiction: Identifies applicable law and governing jurisdiction.
+
+Authorization for access is granted solely to individuals who have accepted the terms and conditions of a valid NDA.
+----------

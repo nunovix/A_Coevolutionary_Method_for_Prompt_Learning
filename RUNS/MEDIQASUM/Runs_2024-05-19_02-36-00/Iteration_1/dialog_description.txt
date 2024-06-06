@@ -1,0 +1,10 @@
+0->Construct a clinical note using the provided dialogue between a healthcare provider and a patient.
+----------
+1->Create a clinical abstract from the recorded medical consultation transcript, tailored for expert analysis. Ensure that the abstract encapsulates key medical discussions and patient information while retaining the original context and implications.
+----------
+2->Construct a clinical note using the provided dialogue between a healthcare provider and a patient.
+----------
+3->"Generate professional-level clinical documentation from the transcript of a medical consultation, accurately and succinctly capturing all pertinent details for expert review."
+----------
+4->Generate a comprehensive clinical note summarizing the key medical discourse between a physician and a patient, ensuring to retain technical accuracy for a specialist audience. The note should distill the essential clinical information from the conversation, maintaining clarity and precision in its documentation.
+----------

@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform a thorough verification to determine (YES/NO) if the statement's accuracy is confirmed by the data in the Clinical Trial Report (CTR), ensuring precise congruence with the CTR's details. This task necessitates an in-depth comprehension of medical terminology and context, resolving ambiguities, and rectifying any informational inconsistencies between the CTR and the statement.
+----------
+2->
+
+Conduct a meticulous YES or NO assessment to ascertain the statement's veracity in relation to the data presented in the Clinical Trial Report (CTR), guaranteeing exact alignment with the CTR's content. This requires an in-depth understanding of medical jargon and context, clarifying any vagueness, and correcting discrepancies between the CTR and the statement.
+----------
+3->
+
+Conduct a meticulous YES or NO assessment to ascertain whether the statement's veracity is corroborated by the data within the Clinical Trial Report (CTR), guaranteeing strict alignment with the CTR's content. This requires an in-depth understanding of medical jargon and context, clarifying ambiguities, and correcting any informational discrepancies between the CTR and the statement.
+----------
+4->
+
+Perform a precise YES or NO evaluation to determine if the statement's accuracy is substantiated by the data in the Clinical Trial Report (CTR), ensuring complete congruence with the CTR's information. This necessitates a thorough comprehension of medical terminology and context, resolving ambiguities, and rectifying any informational inconsistencies between the CTR and the statement.
+----------

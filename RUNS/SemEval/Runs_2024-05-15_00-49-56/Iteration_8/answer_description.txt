@@ -1,0 +1,10 @@
+0->Evaluate the possibility of verifying the statement's truthfulness from the Clinical Trial Report (CTR) details, providing a YES or NO answer. If YES, it indicates that the CTR descriptions support the statement and do not conflict with the provided data.
+----------
+1->Can the validity of a statement be ascertained from Clinical Trial Report (CTR) descriptions without contradiction? (YES/NO)
+----------
+2->Assess the veracity of the claim based on the Clinical Trial Report (CTR) contents, responding with a YES or NO, indicating affirmation if the CTR supports the statement and aligns with the data.
+----------
+3->Assess the statement's veracity based on the Clinical Trial Report (CTR) data, confirming with a YES or NO. If affirmative, it implies the CTR supports the statement and is consistent with the data.
+----------
+4->Evaluate the possibility of verifying the statement's truthfulness from the Clinical Trial Report (CTR) details, providing a YES or NO answer. If YES, it indicates that the CTR descriptions support the statement and do not conflict with the provided data.
+----------

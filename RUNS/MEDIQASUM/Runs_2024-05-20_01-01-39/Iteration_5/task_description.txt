@@ -1,0 +1,33 @@
+0->Your task will be to summarize the transcript of a dialogue between a doctor and a patient. You will be generating a note containing the summariazation. The note should be divided into sections and follow a format similar to the example note you'll also be provided with.
+----------
+1->Your task will be to summarize the transcript of a dialogue between a doctor and a patient. You will be generating a note containing the summariazation. The note should be divided into sections and follow a format similar to the example note you'll also be provided with.
+----------
+2->Expert-Level Doctor-Patient Dialogue Analysis
+
+- Patient Presentation:
+  - Symptoms described: [List specific symptoms from the dialogue]
+  - Duration of symptoms: [Specify time frame]
+
+- Medical History Review:
+  - Chronic conditions: [List any relevant chronic diseases]
+  - Medication use: [Detail current medications]
+
+- Diagnostic Considerations:
+  - Probable diagnoses: [Summarize potential diagnoses discussed]
+  - Required tests/examinations: [Note any specific tests mentioned]
+
+- Management Plan:
+  - Immediate treatment actions: [Detail any immediate interventions]
+  - Long-term management strategies: [Outline suggested long-term care approaches]
+
+- Follow-up and Referral:
+  - Scheduled re-evaluation: [Set date and nature of
+----------
+3->Rewritten Instruction:
+
+Create an expert-level, sectioned summary of the doctor-patient dialogue transcript. The summary must be comprehensive and precise, with each section clearly delineating the crucial information in line with the structural format provided. The final output should accurately reflect the original purpose and meaning of the dialogue.
+----------
+4->Combined Instruction:
+
+Condense and refine the transcript of a doctor-patient interaction into a comprehensive, expert-level sectioned note. Each segment must distill the crucial elements with precision and clarity, mirroring the original intent. Ensure the note aligns with an advanced structural format and is tailored for a specialist audience.
+----------

@@ -1,0 +1,38 @@
+0->Compose a clinical note following the format outlined in the provided example. Key sections to incorporate may include 'CHIEF COMPLAINT', 'CURRENT MEDICATIONS', 'PHYSICAL EXAM', 'HISTORY OF PRESENT ILLNESS', 'ASSESSMENT AND PLAN', among others. Refrain from adding extraneous details to ensure clarity and conciseness.  Sections should not be empty.
+----------
+1->REVISION OF CLINICAL NOTE FOR EXPERT AUDIENCE:
+
+EVALUATION:
+
+DETAILED ASSESSMENT WITH EVIDENTIARY PLAN:
+
+OBSERVED BIRTH HISTORY:
+
+PREMIUM COMPLAINT:
+
+PRESUMED INTAKE:
+
+CURRENT TREATMENT:
+
+COMPLEX EXAMINATION REPORT:
+
+GENETIC PRESUMPTIONS:
+
+EXPOSITION OF THE PRESENTING EPISODE:
+
+DIAGNOSTIC INTERPRETATION:
+
+EXECUTION DIRECTIVES:
+
+COMPREHENSIVE MEDICAL BACKGROUND:
+
+CURRENT MEDICATIONS WITHIN THIS PERIOD:
+
+HISTORICAL MEDICAL INFORM
+----------
+2->Generate a clinical note adhering to the structure exemplified, integrating necessary components such as 'PREMISES', 'CURRENT THERAPEUTICS', 'EXAMINATION RESULTS', 'HISTORICAL MEDICAL ABSTRACT', and 'PROPOSED DIAGNOSIS AND TREATMENT PLANS'. Ensure the absence of superfluous information for clarity and brevity, while guaranteeing each section is populated.
+----------
+3->Construct a medical report mirroring the provided template, omitting extraneous commentary. Incorporate key sections: 'CHIEF COMPLAINT', 'HISTORY OF PRESENT ILLNESS', 'MEDICAL HISTORY', 'PHYSICAL EXAM', 'ASSESSMENT', 'PLAN'. Include relevant sections like 'FAMILY HISTORY', 'CURRENT MEDICATIONS', and 'BIRTH HISTORY' as deemed pertinent.
+----------
+4->Generate a comprehensive medical note structured as follows: 'CHIEF COMPLAINT', 'CURRENT ISSUE', 'HISTORY OF THE PRESENT ILLNESS', 'BRIEF DESCRIPTION OF CURRENT CONDITION', 'MEDICAL HISTORY', 'PAST HEALTH-RELATED DETAILS', 'PHYSICAL ASSESSMENT', 'CARDIOVASCULAR AND SURGICAL EXAMINATION', 'ASSESSMENT', 'DECISION ON TREATMENT', 'TREATMENT PLAN', 'ADDITIONAL SYSTEM CHECKS', 'SOCIAL AND FAMILY HEALTH INFORMATION', 'CURRENT DRUG ALLOWANCES', 'RECENT OR PAST SURGICAL ACTIONS'. Avoid extraneous information.
+----------

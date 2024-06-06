@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform an in-depth analysis of clinical trial documentation, focusing on the veracity of statements, with particular attention to medical terminology and context-specific nuances. Clarify ambiguities, address any omissions, and tailor your evaluation to the specifics of the trial for a medical expert audience. Interpret medical language and context with precision, remove ambiguities and informational gaps, and provide a definitive "Accurate" or "Inaccurate" judgment on the truthfulness of each statement and claim.
+----------
+2->
+
+Conduct a meticulous examination of clinical trial documentation and associated claims, scrutinizing the exactitude of medical terminology and context-specific subtleties. Elucidate any vagueness, fill information lacunae, and customize your evaluation to the trial's particulars for a specialist clinical audience. Interpret medical language and context with precision, resolve ambiguities and information deficits, and definitively classify each statement and claim as either "Accurate" or "Inaccurate."
+----------
+3->
+
+Assess the accuracy of statements in clinical trial reports by interpreting medical jargon and contextual information, resolving ambiguities and filling information voids, to provide a definitive "Affirmative" or "Negative" verdict.
+----------
+4->
+
+Assess the veracity of assertions in clinical trial documentation by deciphering medical jargon and contextual cues, resolving ambiguities, and filling informational voids. Render a conclusive judgment of "Accurate" or "Inaccurate" for each statement's factual correctness, specifically designed for a medical professional audience.
+----------

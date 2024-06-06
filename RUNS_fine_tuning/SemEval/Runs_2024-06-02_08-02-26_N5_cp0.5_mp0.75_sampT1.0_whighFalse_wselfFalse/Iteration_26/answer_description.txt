@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform a comprehensive verification of the statement's validity by thoroughly examining all available clinical trial records. Interpret intricate medical jargon and contextual subtleties, clarify ambiguities, and complete any informational voids to determine the veracity of the statement.
+----------
+2->
+
+Perform an exhaustive examination of clinical trial records to authenticate the veracity of a given assertion. This task necessitates the interpretation of intricate medical jargon, grasping subtle contextual intricacies, resolving vagueness, and identifying any missing data. Render an unequivocal "VALID" or "INVALID" judgment on the claim's truthfulness, based exclusively on the analyzed content. Furthermore, evaluate the possibility of affirming the claim's legitimacy solely through the language and context presented in the clinical trial documentation.
+----------
+3->
+
+Perform a comprehensive verification of the statement's validity by thoroughly examining the clinical trial records. Interpret intricate medical jargon and contextual subtleties, clarify ambiguities, and complete any informational voids to determine the veracity of the statement.
+----------
+4->
+
+Assess the veracity of assertions within clinical trial documentation by deciphering medical jargon and contextual indicators, clarifying uncertainties, and filling gaps with pertinent data.
+----------

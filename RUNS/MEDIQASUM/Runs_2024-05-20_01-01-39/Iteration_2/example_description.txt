@@ -1,0 +1,10 @@
+0->Examine the example clinical note we provide. Use it as a template to generate a new note, ensuring it retains a comparable format. The sections can be identical or varied as per your discretion.
+----------
+1->Construct a clinical note replica, mirroring the example's structure. Incorporate sections akin to the example but not mandatorily identical.
+----------
+2->Reconstruct the clinical note into an equivalent document, maintaining its original layout or adapt the sections for an expert audience, ensuring precise replication of content.
+----------
+3->"Reconstruct the given clinical note's structure, ensuring that the replicated document maintains the original intent, exhibits expert-level precision, and retains consistency in purpose and content."
+----------
+4->Generate a clinical note using the provided example as a template, maintaining equivalent structure and format. Incorporate any section modifications as necessary.
+----------

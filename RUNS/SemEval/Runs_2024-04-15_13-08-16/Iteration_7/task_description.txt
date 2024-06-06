@@ -1,0 +1,132 @@
+0->Consider the problem of assessing semantic entailment connections between distinct sections of Clinical Trial Reports (CTRs) and statements put forth by clinical domain experts. To establish entailment, the statement's assertion should be supported from the CTR, not contradicting the provided descriptions. In brief, CTRs elucidate the procedures and findings of clinical trials, evaluating the efficacy and safety of emerging treatments. Complete CTRs encompass four sections: (1) ELIGIBILITY CRITERIA specifying conditions for patient inclusion, (2) INTERVENTION details on the type, dosage, frequency, and duration of treatments, (3) RESULTS summarizing the participant statistics, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing observed signs and symptoms. Statements advance claims about the information within these sections, either for a single CTR or in a comparative analysis of two CTRs.
+----------
+1->
+Examine semantic entailment relationships between statements and sections of Clinical Trial Reports (CTRs): ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS. 
+
+1. ELIGIBILITY CRITERIA: Examine conditions for patient inclusion.
+2. INTERVENTION: Analyze treatment type, dosage, frequency, and duration.
+3. RESULTS: Assess participant statistics, outcome measures, units, and conclusions.
+4. ADVERSE EVENTS: Catalog observed signs and symptoms.
+
+Establish entailment by ensuring statements harmonize with clinical trial data, find substantiation in CTRs, and avoid contradiction with provided descriptions.
+----------
+2->"Your impressive ability as an AI agent shines in this task, where you'll identify support relationships between sections of Clinical Trial Reports (CTRs) and clinical statements. CTRs, essential documents detailing the methodology and findings of clinical trials, assess the effectiveness and safety of new treatments. They consist of four sections: (1) ELIGIBILITY CRITERIA outlining conditions for patient participation, (2) INTERVENTION description detailing treatment type, dosage, frequency, and duration, (3) RESULTS summary reporting participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing observed signs and symptoms. Your task is to validate the connections between statements that reference information in these sections, either for a single CTR or comparing two. Keep up the great work!"
+----------
+3->"You're a very capable AI agent, and I believe in your ability to identify support relationships between individual sections of Clinical Trial Reports (CTRs) and clinical statements. CTRs are essential documents, as they detail the methodology and findings of clinical trials that assess the effectiveness and safety of new treatments. CTRs consist of four sections: (1) ELIGIBILITY CRITERIA, which lists the conditions for patient participation, (2) INTERVENTION, describing the type, dosage, frequency, and duration of treatments, (3) RESULTS, detailing the participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS, listing signs and symptoms observed. Statements make claims about information in these sections, either for a single CTR or comparing two. By identifying these relationships, you'll be contributing significantly to the analysis and understanding of clinical trial data."
+----------
+4->"Your task is an exciting opportunity to explore support relationships between individual sections of Clinical Trial Reports (CTRs) and clinical statements. CTRs, as very capable AI agent, you understand, play a vital role in detailing the methodology and groundbreaking findings of clinical trials. They assess the effectiveness and safety of new treatments, and you're a key player in this process. CTRs are divided into four essential sections: (1) ELIGIBILITY CRITERIA, where you'll find the conditions for patient participation, (2) INTERVENTION, specifying the type, dosage, frequency, and duration of treatments, (3) RESULTS, a summary of participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS, listing signs and symptoms observed. Statements, dear AI, make important claims about the information in these sections, either for a single CTR or thoughtfully comparing
+----------
+5->
+Your objective is to analyze the connections between various sections of Clinical Trial Reports (CTRs) and corresponding clinical statements. CTRs are documents outlining the techniques and outcomes of clinical trials, evaluating the efficacy and safety of novel treatments. A standard CTR comprises four parts: (1) ELIGIBILITY CRITERIA outlining inclusion and exclusion conditions for patient selection, (2) INTERVENTION description providing details about treatment type, dosage, frequency, and duration, (3) RESULTS section presenting information on participant demographics, outcome measures, units, and findings, and (4) ADVERSE EVENTS section listing reported signs and symptoms. Clinical statements make assertions about the information contained within these CTR sections, either concerning a solitary report or comparing two.
+----------
+6->
+Assess semantic entailment between statements and data in Clinical Trial Reports (CTRs). CTRs provide critical information on clinical trials, detailing procedures, findings, and the safety/effectiveness of novel treatments. Each trial features unique cohorts or arms, with varying treatment modalities or baseline characteristics. A CTR consists of four major sections:
+
+1. Eligibility: Outlines patient selection criteria.
+2. Intervention: Describes treatment type, dosage, frequency, and duration.
+3. Outcomes: Reports participant numbers, measurement scales, and conclusions.
+4. Adverse Events: Lists symptoms and reactions to adverse events.
+
+Statements impart claims regarding CTR data, applicable to a single report or comparatively. Entailment exists when the statement's meaning harmonizes with the trial data, is substantiated by the CTR, and remains consistent with the provided information.
+----------
+7->
+
+Form semantic entailment links between clinical statements and the following CTR components: ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS. Locate statements that align with the patient qualification conditions, treatment parameters, outcome evaluations, and measurement scales in the CTRs. This process strengthens the understanding and interpretation of clinical trial outcomes.
+
+CTRs contain details on:
+- Patient qualification standards
+- Intervention particulars (type, dose, frequency, duration)
+- Participant data, outcome assessments, and units
+- Observed symptoms and findings
+
+Statements may convey individual facts extracted from a CTR or comparisons between two CTRs, given that the information remains congruent with the provided descriptions.
+----------
+8->
+Your goal is to analyze the connections between distinct sections of Clinical Trial Reports (CTRs) and relevant clinical statements. CTRs serve to record the experimental design and results of clinical trials, evaluating the efficacy and safety of novel treatments. Comprised of four parts, a CTR includes: (1) ELIGIBILITY CRITERIA outlining patient selection conditions, (2) INTERVENTION characterization detailing treatment type, dosage, frequency, and duration, (3) RESULTS section reporting on participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS segment detailing observed signs and symptoms. Statements may assert claims regarding these CTR sections, pertaining to an individual report or a comparison of two.
+----------
+9->
+1. Evaluate semantic relationships between statements and sections of Clinical Trial Reports (CTRs): Eligibility Criteria, Intervention, Results, and Adverse Events.
+2. Eligibility Criteria: Determine conditions for patient enrollment in the trial.
+3. Intervention: Assess treatment modalities, dosage regimens, administration frequencies, and durations.
+4. Results: Examine participant demographics, outcome variables, measurement units, and conclusions drawn from the data.
+5. Adverse Events: Document observed signs, symptoms, and their potential relationship to the intervention.
+
+Maintain entailment by aligning statements with the clinical trial data, substantiating them within CTRs, and ensuring consistency with the provided descriptions.
+----------
+10->
+
+Your objective is to establish semantic entailment relationships between clinical statements and sections of Clinical Trial Reports (CTRs): ELIGIBILITY, INTERVENTION, OUTCOMES, and AEs (Adverse Events).
+
+1. ELIGIBILITY: Examine conditions for patient inclusion in CTRs.
+2. INTERVENTION: Analyze treatment type, dosage, frequency, and duration specified in CTRs.
+3. OUTCOMES: Assess participant statistics, outcome measures, units, and conclusions reported in CTRs.
+4. AEs: Catalog observed signs and symptoms documented in CTRs.
+
+Ensure statements harmonize with clinical trial data, find substantiation in CTRs, and avoid contradiction with provided descriptions.
+----------
+11->
+
+Your goal is to identify entailment relationships between clinical claims and specific parts of Clinical Trial Reports (CTRs). CTRs are essential documents, providing information on the methodology, findings, and efficacy and safety assessments of emerging treatments. Consisting of four sections, they encompass: (1) ELIGIBILITY, outlining patient inclusion criteria; (2) INTERVENTION, detailing treatment modality, dosage, frequency, and duration; (3) OUTCOMES, reporting participant demographics, outcome variables, measurement scales, and conclusions; and (4) AE's, documenting observed adverse event symptoms and signs. Clinical statements must validate their assertions by deriving from the corresponding CTR sections and avoid contradicting the given descriptions.
+----------
+12->
+
+Evaluate the alignment of clinical statements with the ELIGIBILITY CRITERIA, INTERVENSION, OUTCOMES, and ADVERSE EVENTS sections in Clinical Trial Reports (CTRs). Ensure consistency in patient selection, treatment protocols, dosages, regimens, and statistical methods between clinical statements and CTR data. Identify and link corresponding symptoms, signs, and reactions reported in clinical statements to those mentioned in CTRs for each related CTR section. Demonstrate the logical relationship by confirming that the assertions in clinical statements are substantiated by the CTR and are non-contradictory to the CTR descriptions.
+----------
+13->
+
+Analyze the semantic relationships between statements and sections of Clinical Trial Reports (CTRs): Eligibility Criteria, Intervention, Results, and Adverse Events. 
+
+Evaluate patient selection conditions in Eligibility Criteria sections. 
+Assess treatment type, dosage, frequency, and duration in Intervention sections. 
+Examine participant demographics, outcome variables, measurement units, and conclusions drawn from the data in Results sections. 
+Document observed signs, symptoms, and their potential relationship to the intervention in Adverse Events sections. 
+
+Ensure statements are consistent with the information in CTRs and maintain entailment by substantiating them within the respective sections.
+----------
+14->
+Identify and validate support relationships between statements referencing sections in Clinical Trial Reports (CTRs) and clinical statements. CTRs are vital documents that detail the methodology and outcomes of clinical trials, assessing the efficacy and safety of new treatments. Comprised of four sections, they include: (1) ELIGIBILITY CRITERIA specifying patient participation conditions, (2) INTERVENTION detailing treatment type, dosage, frequency, and duration, (3) RESULTS summarizing participant data, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing observed signs and symptoms. Validate connections for a single CTR or compare two.
+----------
+15->
+
+Your goal is to establish correlations between specific sections of Clinical Trial Reports (CTRs) and pertinent clinical statements. CTRs are indispensable documents that offer insights into the methodology, groundbreaking findings, and assessments of new therapies' efficacy and safety. Comprised of four parts: (1) ELIGIBILITY CRITERIA/PARTICIPATION PREREQUISITES, which outline patient selection conditions, (2) INTERVENTION, detailing treatment modality, dosage, frequency, and duration, (3) RESULTS, presenting participant data, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS/AEs, documenting observed signs and symptoms. Clinical statements substantiate claims concerning the data within these sections, either focusing on an individual CTR or in comparative contexts. By unearthing these connections, you will make
+----------
+16->
+
+Evaluate the semantic congruence of clinical statements with the eligibility, intervention, results, and adverse events sections in Clinical Trial Reports (CTRs). Ensure that patient selection criteria, treatment specifics (type, dosage, frequency, and duration), participant data, outcome assessments, and units, trial conclusions, observed symptoms, and reactions maintain consistent meaning. This assessment ensures trial accuracy and integrity by preserving the intended correlations between statements and corresponding CTR sections:
+
+1. Eligibility: Ensure patient inclusion and exclusion criteria are congruent.
+2. Intervention: Verify therapeutic approach descriptions, dosages, schedules, and techniques align.
+3. Results: Check trial outcome presentations, statistical analyses, participant data, outcome measures, and units for consistency.
+4. Adverse events: Confirm observed symptoms and corresponding measurements align in meaning.
+----------
+17->
+Examine the interconnections among sections in Clinical Trial Reports (CTRs), specifically focusing on Eligibility Criteria, Intervention, Results, and Adverse Events.
+
+Authenticate the relationships for an individual CTR or compare two. CTRs play a pivotal role in clinical research, outlining trial methodology and outcomes for evaluating new treatments' efficacy and safety.
+
+Eligibility Criteria determine patient selection criteria.
+Intervention specifies treatment characteristics, including type, dosage, frequency, and duration.
+Results provide an overview of participants, outcome measures, units, and conclusions.
+Adverse Events document observed signs and symptoms.
+----------
+18->
+
+Your goal is to assess the conformity of Clinical Trial Report (CTR) segments with related clinical declarations. The principal components of a CTR comprise: (1) Eligibility Criteria, outlining patient selection standards, (2) Intervention, delineating treatment specifics, (3) Results, encompassing participant demographics, outcome measures, and findings, and (4) Adverse Events, recording observed signs and symptoms.
+
+Maintain equivalence in meaning and forge connections by:
+
+1. Eligibility Criteria: Verify that patient selection criteria in the CTR correspond with those in the clinical declaration.
+2. Intervention: Affirm consistency in treatment type, dosage, frequency, and duration between the CTR and clinical context.
+3. Results: Ensure consistency in participant demographics, outcome measures, results, and conclusions across the CTR and clinical statement.
+4. Adverse
+----------
+19->
+Analyze and interpret the relationships between Clinical Trial Reports (CTRs) and corresponding clinical statements, focusing on the following CTR sections:
+
+1. ELIGIBILITY CRITERIA: Patient inclusion and exclusion conditions
+2. INTERVENTION: Treatment type, dosage, frequency, and duration
+3. RESULTS: Participant data, outcome measures, units, and conclusions
+4. ADVERSE EVENTS: Signs, symptoms, and observations of adverse effects
+
+Clinical statements substantiate claims about the data within these CTR sections.
+----------

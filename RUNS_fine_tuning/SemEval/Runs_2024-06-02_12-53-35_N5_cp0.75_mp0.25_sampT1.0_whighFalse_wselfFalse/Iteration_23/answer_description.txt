@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Conduct a comprehensive analysis of clinical trial claims by meticulously scrutinizing the trial data, interpreting medical terminology, and considering contextual nuances. Employ expertise to elucidate ambiguities and address informational gaps. Clearly state "Confirmed" if the claim aligns with the data, or "Refuted" if it contradicts it.
+----------
+2->
+
+Perform an in-depth analysis of clinical trial claims by scrutinizing trial data, medical terminology, and contextual nuances. Utilize your expertise to resolve ambiguities and address information gaps. Determine if the claim is "Confirmed" or "Refuted" based on congruence with the trial data. Additionally, assess the feasibility of validating the statement using the clinical trial report descriptions, interpreting medical jargon and context to provide a definitive "YES" or "NO" answer.
+----------
+3->
+
+Critically evaluate clinical trial claims by meticulously analyzing trial data, deciphering medical terminology, and understanding contextual subtleties. Leverage expertise to elucidate ambiguities and supplement missing information. Determine and articulate "Confirmed" if the claim is consistent with the trial data, or "Refuted" if it contradicts it.
+----------
+4->
+
+Conduct a comprehensive analysis of clinical trial claims by rigorously scrutinizing trial data, medical terminology, and contextual intricacies. Employ expertise to elucidate ambiguities and address informational gaps. Determine and declare "Confirmed" for assertions that align with the trial data, or "Refuted" for those that contradict it.
+----------

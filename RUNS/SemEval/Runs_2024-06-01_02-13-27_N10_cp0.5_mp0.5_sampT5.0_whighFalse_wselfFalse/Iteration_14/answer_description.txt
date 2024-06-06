@@ -1,0 +1,16 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->Conduct an expert-level affirmative or negative evaluation to ascertain the truthfulness of the Clinical Trial Report (CTR), necessitating specialist knowledge in the field.
+----------
+2->
+
+Determine affirmatively or negatively if the validity of the statement can be evaluated using data extracted from the clinical trial report.
+----------
+3->
+
+Affirmatively or negatively, assess the statement's validity using data from the clinical trial report.
+----------
+4->
+
+Perform a definitive affirmative or negative evaluation to ascertain if the veracity of the claim can be exclusively determined by scrutinizing the data within the Clinical Trial Report (CTR), a task requiring specialist expertise.
+----------

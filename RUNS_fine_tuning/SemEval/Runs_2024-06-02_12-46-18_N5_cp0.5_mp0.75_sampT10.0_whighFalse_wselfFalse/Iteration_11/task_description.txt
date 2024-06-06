@@ -1,0 +1,26 @@
+0->Analyze the semantic entailment relations between individual sections of Clinical Trial Reports (CTRs) and expert statements, focusing on methodology, findings, eligibility criteria, interventions, results, and adverse events. Each CTR, involving 1-2 patient cohorts, assesses new treatments' effectiveness and safety. The CTRs are divided into four sections: eligibility criteria for patient inclusion, detailed intervention descriptions including type, dosage, frequency, and duration, results summarizing participant numbers, outcome measures, units, and conclusions, and a list of observed adverse events. Expert statements should make claims related to these sections, supported by the CTRs without contradicting the descriptions. Establish entailment by ensuring the statement's assertion is backed by the CTR content.
+----------
+1->
+
+Perform an exhaustive semantic dissection of professional assertions related to methodology, findings, participant inclusion, and intervention particulars (including type, dosage, administration frequency, and treatment length) as outlined in Clinical Trial Reports (CTRs). Each CTR, typically comprising one to two patient groups, should be thoroughly scrutinized to assess treatment effectiveness and safety. Break down each CTR into:
+
+1. Patient enrollment eligibility criteria
+
+2. Intervention specifics (type, dosage, frequency, and duration)
+
+3. Outcomes (number of participants, outcome metrics, units of measurement, and conclusions)
+
+4. Comprehensive list of adverse events
+
+Ensure precise alignment of professional claims with these CTR components, relying exclusively on CTR data to correct any inconsistencies. Confirm that all professional claims are distinctly and unequivocally supported by the CTR content.
+----------
+2->Analyze the semantic entailment relations between individual sections of Clinical Trial Reports (CTRs) and expert statements, focusing on methodology, findings, eligibility criteria, interventions, results, and adverse events. Each CTR, involving 1-2 patient cohorts, assesses new treatments' effectiveness and safety. The CTRs are divided into four sections: eligibility criteria for patient inclusion, detailed intervention descriptions including type, dosage, frequency, and duration, results summarizing participant numbers, outcome measures, units, and conclusions, and a list of observed adverse events. Expert statements should make claims related to these sections, supported by the CTRs without contradicting the descriptions. Establish entailment by ensuring the statement's assertion is backed by the CTR content.
+----------
+3->
+
+Evaluate the semantic entailment relationships between segments of Clinical Trial Reports (CTRs) and authoritative declarations, concentrating on methodology, findings, inclusion criteria, interventions, results, and adverse effects. Each CTR, comprising 1-2 patient groups, investigates the efficacy and safety of novel therapies. The CTRs are segmented into four parts: inclusion criteria for patient selection, comprehensive intervention details including type, dosage, frequency, and duration, results summarizing participant counts, outcome measures, units, and conclusions, and a catalog of observed adverse effects. Authoritative declarations should assert claims pertinent to these segments, corroborated by the CTRs without conflicting with the descriptions. Confirm entailment by verifying that the declaration's assertion is substantiated by the CTR content.
+----------
+4->
+
+Examine the semantic entailment relationships between segments of Clinical Trial Reports (CTRs) and professional assertions, concentrating on methodology, results, eligibility criteria, interventions, findings, and adverse events. Each CTR, comprising 1-2 patient groups, evaluates the efficacy and safety of novel treatments. The CTRs are segmented into four parts: inclusion criteria for patient selection, comprehensive intervention details including type, dosage, frequency, and duration, results summarizing participant counts, outcome measures, units, and conclusions, and a catalog of observed adverse events. Professional assertions must align with these sections, substantiated by the CTRs without conflicting with the descriptions. Confirm entailment by verifying that the assertion is supported by the CTR content.
+----------

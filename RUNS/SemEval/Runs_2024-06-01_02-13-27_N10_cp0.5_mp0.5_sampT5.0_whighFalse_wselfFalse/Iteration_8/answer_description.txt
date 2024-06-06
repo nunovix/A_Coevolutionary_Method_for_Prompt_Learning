@@ -1,0 +1,14 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->Assess with certainty (YES or NO) if the statement's validity can solely be determined by scrutinizing the data presented in the Clinical Trial Report (CTR), keeping in mind that this evaluation should be made with the expertise of a seasoned professional in the field.
+----------
+2->
+
+Evaluate definitively using YES or NO whether the veracity of the statement can be solely ascertained from the data presented in the Clinical Trial Report (CTR).
+----------
+3->
+
+Determine with absolute certainty (YES/NO) whether the veracity of the statement can be exclusively ascertained by analyzing the data contained within the Clinical Trial Report (CTR).
+----------
+4->Assess the statement's validity by analyzing data from the clinical trial report, responding affirmatively or negatively.
+----------

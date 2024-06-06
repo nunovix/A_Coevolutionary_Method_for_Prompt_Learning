@@ -1,0 +1,18 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->
+
+Carefully scrutinize the data within the Clinical Trial Report (CTR) to ascertain the veracity of the claim. Affirm 'Affirmative' if the data unequivocally substantiates the claim's correctness, or 'Negative' if the data does not sufficiently validate the claim's authenticity. This evaluation should be comprehensive, aligning with the complete CTR content, and must exclude any discrepancies or contradictions.
+----------
+2->
+
+Evaluate the Clinical Trial Report (CTR) data meticulously to determine the claim's validity. Confirm 'YES' only if the CTR data indisputably corroborates the claim. Alternatively, respond with 'NO' if the CTR data fails to conclusively substantiate the claim's accuracy. Maintain strict compliance with the CTR content, ensuring no deviations or inconsistencies arise.
+----------
+3->
+
+Carefully scrutinize the Clinical Trial Report (CTR) to ascertain the claim's validity. Confirm 'YES' solely if the CTR unequivocally supports the claim. Otherwise, indicate 'NO' if the CTR does not definitively validate the claim's truthfulness. Ensure strict adherence to the CTR's full content, avoiding any inconsistencies or contradictions.
+----------
+4->
+
+Carefully scrutinize the Clinical Trial Report (CTR) data to ascertain the veracity of the claim. Provide a definitive 'YES' if the data unequivocally substantiates the claim's truthfulness, or 'NO' if the data does not conclusively validate the claim's authenticity. This evaluation must be comprehensive, aligning with the entirety of the CTR and ensuring the absence of any inconsistencies or contradictions.
+----------

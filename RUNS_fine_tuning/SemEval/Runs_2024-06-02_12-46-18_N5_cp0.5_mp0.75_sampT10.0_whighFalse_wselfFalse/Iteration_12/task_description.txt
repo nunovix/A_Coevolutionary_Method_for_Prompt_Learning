@@ -1,0 +1,28 @@
+0->Analyze the semantic entailment relations between individual sections of Clinical Trial Reports (CTRs) and expert statements, focusing on methodology, findings, eligibility criteria, interventions, results, and adverse events. Each CTR, involving 1-2 patient cohorts, assesses new treatments' effectiveness and safety. The CTRs are divided into four sections: eligibility criteria for patient inclusion, detailed intervention descriptions including type, dosage, frequency, and duration, results summarizing participant numbers, outcome measures, units, and conclusions, and a list of observed adverse events. Expert statements should make claims related to these sections, supported by the CTRs without contradicting the descriptions. Establish entailment by ensuring the statement's assertion is backed by the CTR content.
+----------
+1->
+
+Conduct a detailed semantic analysis of professional statements concerning methodology, findings, participant criteria, and intervention specifics (including type, dosage, frequency, and duration) as detailed in Clinical Trial Reports (CTRs). Each CTR, generally involving one to two patient cohorts, should be meticulously examined to evaluate treatment efficacy and safety. Dissect each CTR into:
+
+1. Eligibility criteria for patient enrollment
+
+2. Intervention details (type, dosage, frequency, and duration)
+
+3. Results (participant numbers, outcome metrics, units of measurement, and conclusions)
+
+4. Comprehensive adverse events list
+
+Ensure strict correspondence between professional claims and these CTR elements, using only CTR data to rectify any discrepancies. Verify that all professional claims are distinctly and unambiguously supported by the CTR content.
+----------
+2->
+
+Examine the semantic entailment relationships between segments of Clinical Trial Reports (CTRs) and professional assertions, focusing on methodology, results, eligibility criteria, interventions, findings, and adverse events. Each CTR, with 1-2 patient groups, evaluates the efficacy and safety of new treatments. The CTRs are divided into four sections: patient selection criteria, intervention specifics including type, dosage, frequency, and duration, results summarizing participant numbers, outcome measures, units, and conclusions, and a list of observed adverse events. Professional assertions should align with these sections, substantiated by the CTRs without conflicting with the descriptions. Confirm entailment by verifying that the assertion is supported by the CTR content.
+----------
+3->
+
+Evaluate the semantic entailment relationships between segments of Clinical Trial Reports (CTRs) and authoritative declarations, concentrating on methodology, results, inclusion criteria, interventions, outcomes, and adverse effects. Each CTR, comprising 1-2 patient groups, investigates the efficacy and safety of novel therapies. The CTRs are segmented into four parts: inclusion criteria for patient selection, comprehensive intervention details encompassing type, dosage, frequency, and duration, results summarizing participant counts, outcome metrics, units, and conclusions, and a catalog of observed adverse effects. Authoritative declarations should assert claims pertinent to these segments, substantiated by the CTRs without conflicting with the descriptions. Confirm entailment by verifying that the declaration's assertion is supported by the CTR content.
+----------
+4->
+
+Examine the semantic entailment connections between segments of Clinical Trial Reports (CTRs) and authoritative assertions pertaining to methodology, results, inclusion/exclusion criteria, interventions, findings, and adverse reactions. Each CTR, encompassing 1-2 patient groups, evaluates the efficacy and safety of novel therapeutic approaches. The CTRs are segmented into four distinct parts: criteria for patient selection, comprehensive intervention details (including type, dosage, frequency, and duration), results (including participant numbers, outcome metrics, units, and conclusions), and documented adverse effects. Authoritative statements should assert claims pertinent to these segments, substantiated by the CTRs without conflicting with the descriptions. Confirm entailment by verifying that the statement's claim is substantiated by the content within the CTRs.
+----------

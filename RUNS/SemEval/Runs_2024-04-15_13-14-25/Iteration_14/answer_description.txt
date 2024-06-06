@@ -1,0 +1,42 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->
+
+Evaluate the relationship between the statement and clinical trial report conclusions:
+
+A. Agreement: The statement conforms to the trial outcomes.
+B. Disagreement: The statement opposes the trial results.
+C. Ambiguity: The trial data lacks sufficient clarity to establish a clear agreement or disagreement with the statement. 
+
+By combining the two instructions, we have achieved a more concise and direct instruction, as the main points have been summarized while keeping consistency with the original intent. The new instruction informs the assessment of the statement's relationship with clinical trial data in a clearer way than the original instructions.
+----------
+2->
+
+Assess the consistency of the statement with clinical trial results and conclusions:
+
+A. Consistent: The statement agrees with the trial findings and outcomes.
+B. Inconsistent: The statement contradicts either the trial results or conclusions.
+C. Unclear: The trial evidence is not definitive in supporting or refuting the statement.
+----------
+3->
+
+Determine the relationship between the statement and clinical trial findings:
+
+A. Compatible: The statement agrees with the trial results.
+B. Incompatible: The statement contradicts the trial findings.
+C. Indeterminate: The trial evidence is insufficient to verify the statement's accuracy.
+
+Your assessment: [Based on the combined instructions]
+A. Compatible or incompatible.
+B. Indeterminate.
+----------
+4->
+
+Determine the relationship between the statement and clinical trial data:
+
+A. Conformity: The statement aligns with the trial's results.
+B. Discrepancy: The statement contradicts the trial findings.
+C. Ambiguity: The trial report fails to definitively support or refute the statement.
+
+Provide a YES or NO answer indicating whether the relationship assessment can be established using the given clinical trial data.
+----------

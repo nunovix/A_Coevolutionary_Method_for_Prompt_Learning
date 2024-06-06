@@ -1,0 +1,72 @@
+0->
+Determine the validity of given statements based on Clinical Trial Report (CTR) information (YES/NO). Maintain alignment with the description provided.
+----------
+1->
+Assess the accuracy of statements using clinical trial report information and ensure consistency with the given description (YES/NO).
+----------
+2->
+Assess the validity of statements in clinical trial reports by examining their context and deciphering relevant medical terminology. Deliver a definitive YES or NO response and clarify any vague or missing data.
+----------
+3->
+Determine the validity of declarations based on clinical trial findings (YES/NO).
+----------
+4->
+
+Evaluate the validity of Clinical Trial Report statements by ensuring alignment with the provided description and interpreting relevant medical terminology. Provide clear and unambiguous YES or NO responses.
+----------
+5->
+
+Assess the validity and uniformity of statements in Clinical Trial Reports. This requires deciphering relevant medical terminology and comprehending their context. Render definitive YES or NO judgments, and elucidate any uncertain or missing data, adhering to the specified descriptions.
+----------
+6->
+
+Assess the accuracy, uniformity, and authenticity of declarations in Clinical Trial Reports. Interpret medical terminology appropriately and consider the context. Render definitive YES or NO judgments, and clarify ambiguous or missing details to maintain harmony with intended meanings and report specifics.
+----------
+7->
+Determine the validity of statements based on clinical trial report data and maintain alignment with the provided description (YES/NO).
+----------
+8->
+
+Assess the accuracy of Clinical Trial Report declarations against the given description and decipher any pertinent medical jargon. Deliver unequivocal approvals or rejections based on this examination. Ensure consistency in report descriptions throughout the evaluation process.
+----------
+9->
+
+Assess the accuracy and validity of Clinical Trial Report statements by confirming their alignment with prescribed descriptions, interpreting relevant medical terminology, and ensuring factual veracity. Make clear-cut judgments on ambiguous statements, clarify unclear claims, and provide definitive YES or NO responses. Elucidate any vague or absent information to ensure consistency between the report and the broader context.
+----------
+10->
+
+Verify the validity of declared findings in Clinical Trial Reports by aligning them with the provided medical terminology description. Offer clear-cut YES or NO answers to ensure definitive conclusions.
+----------
+11->
+Evaluate the conformity of statements with Clinical Trial Report findings. Maintain uniformity in description. (Affirm/Deny)
+----------
+12->
+
+Assess the accuracy and validity of clinical trial report declarations. Ensure consistency with given description by examining backgrounds, deciphering medical terminology, and providing clear and unequivocal YES or NO responses. Clarify any vague or missing information to render unambiguous judgments and ensure precision when interpreting key medical terminology.
+----------
+13->
+
+Determine the validity of clinical trial report declarations by examining their backgrounds and interpreting key medical terminology with precision. Provide unequivocal YES or NO responses, preserving the intended import of the statements, and clarify any vague or missing information.
+----------
+14->
+
+Evaluate the credibility and truthfulness of statements in clinical trial findings by scrutinizing their background data, understanding the medical terminology involved, and deciphering the meaning of medical jargon within their context. Offer unequivocal YES or NO judgments on statement validity and accuracy, and provide elucidations for unclear or missing information.
+----------
+15->
+
+Evaluate the validity of clinical trial report statements by deciphering their medical jargon and taking the context into account. Deliver unequivocal YES or NO judgments, consistent with the statements' intended significances. Clarify any ambiguous or absent details. (Determining validity specifically refers to the findings of the clinical trials)
+----------
+16->
+Determine if statements align with clinical trial report details (YES/NO).
+----------
+17->
+
+Assess the conformity and precision of declarations in Clinical Trial Reports. Interpret and contextualize pertinent medical terminology. Deliver unequivocal YES or NO responses, and clarify any unclear or missing data within the report particulars. Guarantee correspondence with prescribed explanations.
+----------
+18->
+
+Evaluate the precision and coherence of medical language in clinical trial reports. Make decisive determinations (Affirm for true and verifiable, Deny for erroneous or misleading) regarding ambiguous or unclear statements. Maintain consistency between the report and the larger context. Supply missing information and check facts for accuracy. Interpret innovative or uncertain medical terminology. Assess the validity of conclusions by examining report content. Resolve ambiguities and render definitive judgments based on clinical trial results. Comprehend the context of relevant medical terminology to ensure alignment with provided descriptions.
+----------
+19->
+Evaluate the validity of statements derived from Clinical Trial Reports, ensuring uniformity in descriptions throughout the assessment.
+----------

@@ -1,0 +1,72 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->
+Analyze the clinical trial report descriptions and the statement, determining if the statement's validity can be assessed based on the provided information. Interpret medical terminology and context, resolve ambiguities, and identify any gaps.
+
+Response: YES/NO.
+----------
+2->
+Determine the feasibility of evaluating a statement's veracity using the clinical trial report data by returning a binary response: YES or NO.
+----------
+3->
+Analyze the statement and clinical trial report descriptions for consistency in medical terminology and context. Determine if the statement can be validated using the information provided, addressing any ambiguities or gaps.
+
+Reply with YES if valid, or NO if not.
+----------
+4->"Great job, you're making good progress! Based on the clinical trial report information, can you confirm if the statement is valid or not? Your insights are valuable in helping us reach accurate conclusions.
+----------
+5->
+Determine if the clinical trial data supports the statement's validity by responding with a YES or NO.
+----------
+6->
+Determine if the statement's validity can be assessed based on the clinical trial report descriptions. Interpret medical terminology and context, resolve ambiguities, and identify any gaps in the provided information.
+
+YES/NO.
+----------
+7->
+Assess the clinical trial evidence and provide a YES or NO response based on its compatibility with the given statement.
+----------
+8->
+Determine if the clinical trial data supports the statement's validity by responding with a YES or NO.
+----------
+9->
+Assess the medical terminology and context in the clinical trial report data for accuracy and completeness. Identify any ambiguities or missing information, and clarify to preserve data integrity and ensure reliable conclusions during analysis. Confirm alignment of given statement with findings post-evaluation: YES.
+----------
+10->
+
+Evaluate the statement and clinical trial report for alignment in medical terminology and context. Resolve any ambiguities or data discrepancies. Determine the statement's validity using the clinical trial information. Deliver a YES or NO conclusion.
+----------
+11->
+
+Evaluate the clinical trial report for accuracy, comprehensiveness, and validity in supporting a statement's veracity. Clarify any uncertainties or omissions to ensure data reliability.
+----------
+12->
+Analyze and clarify medical terminology, resolve ambiguities, and detect data inconsistencies within the clinical trial report to maintain the accuracy and validity of the statement in relation to findings.
+----------
+13->
+Evaluate the truthfulness of clinical trial report statements by interpreting medical terminology, understanding context, resolving ambiguities and uncertainties, identifying any missing information or gaps, and responding with YES for confirmation or NO for denial.
+----------
+14->
+Evaluate the alignment of a statement with Clinical Trial Report (CTR) descriptions. Interpret any medical jargon, consider the context, and resolve ambiguities. Utilize clinical trial report data to determine the statement's accuracy and its contribution to the CTR consistency assessment. Output: YES (consistent) or NO (discrepant).
+----------
+15->
+Determine the validity of a clinical trial report statement and respond with "True" for accurate statements or "False" for incorrect ones.
+----------
+16->
+
+Evaluate the medical terminology and context in clinical trial reports for precision and completeness. Resolve any ambiguities or gaps to ensure data trustworthiness, enabling dependable assessments of the study's authenticity and credibility. 
+
+Determine if the clinical trial results corroborate the statement's factual accuracy.
+----------
+17->
+Verify the accuracy of the statement against the details in the Clinical Trial Reports.
+----------
+18->
+
+Examine the congruence of medical terminology and context between the statement and clinical trial report. Resolve any ambiguities or data deficits to ascertain the statement's validity based on the provided information.
+
+Reply with YES for validation, or NO for non-validation.
+----------
+19->
+Determine the validity of a clinical trial report statement and respond with "True" for accurate statements or "False" for inaccurate ones.
+----------

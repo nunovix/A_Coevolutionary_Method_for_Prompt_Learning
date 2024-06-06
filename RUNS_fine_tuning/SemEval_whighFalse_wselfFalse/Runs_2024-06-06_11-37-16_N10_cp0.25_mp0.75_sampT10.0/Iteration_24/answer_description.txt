@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Assess the veracity of statements within clinical trial documentation, classifying each statement as "TRUTHFUL" or "FALSE." This task demands a thorough understanding of medical jargon, contextual interpretation within the documents, and related assertions. Systematically resolve ambiguities and meticulously address information gaps.
+----------
+2->
+
+Critically assess the veracity of statements within clinical trial documentation, categorizing each statement as either "VALID" or "INVALID." This task demands a thorough understanding of medical terminology, the context of the documents, and associated assertions. Systematically clarify ambiguities and meticulously fill any gaps in information.
+----------
+3->
+
+Methodically scrutinize and classify statements within clinical trial records as either "VALID" or "INVALID." This necessitates an in-depth comprehension of medical jargon, contextual subtleties inherent in the documents, and related assertions. Elucidate ambiguities and meticulously address any informational voids with exactitude.
+----------
+4->
+
+Systematically scrutinize and classify statements within clinical trial records as either "VALID" or "INVALID." This task necessitates an in-depth comprehension of medical jargon and the contextual backdrop of the documentation alongside the assertions. Address ambiguities meticulously and ensure no informational voids remain unfilled.
+----------

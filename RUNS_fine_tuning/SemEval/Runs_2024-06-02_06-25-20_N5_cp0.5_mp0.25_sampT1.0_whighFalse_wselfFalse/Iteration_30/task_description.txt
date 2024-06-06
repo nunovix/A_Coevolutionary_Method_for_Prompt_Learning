@@ -1,0 +1,20 @@
+0->"
+
+Analyze Clinical Trial Reports (CTRs) and domain expert statements to ascertain semantic entailment or support. Focus on four CTR sections: (1) ELIGIBILITY CRITERIA, specifying conditions for patient inclusion, (2) INTERVENTION, detailing treatment specifics such as type, dosage, frequency, and duration, (3) RESULTS, summarizing participant count, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS, documenting observed patient signs and symptoms. Cross-examine these sections with expert statements, ensuring claims are consistent with, supported by, and non-contradictory to the CTRs' content.
+----------
+1->
+
+Analyze Clinical Trial Reports (CTRs) alongside expert analyses to ascertain semantic congruence or confirmation. Focus on four pivotal elements of CTRs: (1) ELIGIBILITY CRITERIA, specifying patient inclusion parameters, (2) INTERVENTION, detailing treatment particulars such as type, dosage, administration frequency, and treatment length, (3) RESULTS, summarizing participant numbers, outcome metrics, units of measurement, and findings, and (4) ADVERSE EVENTS, documenting any observed patient symptoms. Cross-reference these aspects with expert commentary to ensure that assertions align with, are supported by, and do not contradict the data presented in the CTRs.
+----------
+2->
+
+Examine Clinical Trial Reports (CTRs) and statements from domain specialists to determine if there is semantic support or entailment. Pay particular attention to the following four CTR components: (1) ELIGIBILITY CRITERIA, which outlines the inclusion conditions for patients, (2) INTERVENTION, describing the specifics of the treatment including type, dosage, frequency, and treatment length, (3) RESULTS, which encapsulates the number of participants, outcome metrics, units of measurement, and conclusions drawn, and (4) ADVERSE EVENTS, which records any signs and symptoms observed in patients. Verify that these components are semantically consistent with, corroborated by, and do not contradict expert statements.
+----------
+3->
+
+Examine Clinical Trial Reports (CTRs) and statements from domain experts to determine if there is semantic support or entailment. Specifically, scrutinize the following CTR sections: (1) ELIGIBILITY CRITERIA, which outlines the inclusion conditions for patients, (2) INTERVENTION, detailing the treatment specifics including type, dosage, frequency, and treatment duration, (3) RESULTS, summarizing the number of participants, outcome measures, units of measurement, and conclusions, and (4) ADVERSE EVENTS, noting any observed patient signs and symptoms. Verify that these sections align with, corroborate, and do not contradict expert statements.
+----------
+4->
+
+Examine Clinical Trial Reports (CTRs) and statements from domain specialists to determine if there is semantic support or entailment. Pay particular attention to the following four CTR sections: (1) ELIGIBILITY CRITERIA, which outlines the inclusion conditions for patients, (2) INTERVENTION, detailing the specifics of the treatment including type, dosage, frequency, and treatment length, (3) RESULTS, summarizing the number of participants, outcome measures, units of measurement, and conclusions drawn, and (4) ADVERSE EVENTS, noting any observed signs and symptoms in patients. Verify that these sections align with, corroborate, and do not contradict expert statements.
+----------

@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform a thorough analysis of the clinical trial data within the provided report to conclusively corroborate or dispute the claim in question. Undertake a comprehensive review of the medical terminology and contextual indicators found in both the report and the claim, methodically elucidating ambiguities and filling any gaps in the information with precision. This task requires an expert-level understanding of the subject matter to ensure the integrity and accuracy of the analysis.
+----------
+2->
+
+Conduct a meticulous assessment of the clinical trial data presented in the report to definitively ascertain the accuracy of the claim under scrutiny. Engage in an exhaustive examination of the medical lexicon and contextual cues within the report and the claim, systematically addressing uncertainties and supplementing any gaps in information.
+----------
+3->
+
+Carry out a thorough evaluation of the clinical trial data in the report to conclusively verify or invalidate the claim in question. This involves a detailed analysis of medical terminology and contextual indicators from both the report and the claim, methodically addressing ambiguities and filling any informational gaps.
+----------
+4->
+
+Determine a "Affirmative" or "Negative" response to assess the statement's accuracy in light of the clinical trial report descriptions. This involves interpreting medical jargon and understanding the context from both the reports and the statement, with an emphasis on resolving ambiguities and addressing information gaps.
+----------

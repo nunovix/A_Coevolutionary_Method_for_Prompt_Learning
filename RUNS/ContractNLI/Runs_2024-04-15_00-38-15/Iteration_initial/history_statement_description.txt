@@ -1,0 +1,40 @@
+0->initial
+----------
+1->initial
+----------
+2->initial
+----------
+3->initial
+----------
+4->initial
+----------
+5->mutated from 4, using mutation prompt 2
+----------
+6->mutated from 1, using mutation prompt 3
+----------
+7->mutated from 4, using mutation prompt 3
+----------
+8->mutated from 1, using mutation prompt 2
+----------
+9->mutated from 2, using mutation prompt 4
+----------
+10->mutated from 0, using mutation prompt 4
+----------
+11->mutated from 1, using mutation prompt 3
+----------
+12->mutated from 2, using mutation prompt 3
+----------
+13->mutated from 0, using mutation prompt 0
+----------
+14->mutated from 4, using mutation prompt 3
+----------
+15->mutated from 0, using mutation prompt 4
+----------
+16->mutated from 2, using mutation prompt 4
+----------
+17->mutated from 0, using mutation prompt 3
+----------
+18->mutated from 1, using mutation prompt 2
+----------
+19->mutated from 0, using mutation prompt 2
+----------

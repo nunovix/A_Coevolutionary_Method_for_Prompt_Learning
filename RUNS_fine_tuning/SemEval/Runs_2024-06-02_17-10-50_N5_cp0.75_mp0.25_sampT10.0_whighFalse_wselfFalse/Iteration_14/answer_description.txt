@@ -1,0 +1,16 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Conduct an exhaustive validation of a statement's correctness by scrupulously examining the Clinical Trial Report (CTR) details, guaranteeing precise comprehension of medical jargon and context, exact correspondence with the initial assertion, and comprehensive elucidation and rectification of vagueness and informational voids.
+----------
+2->
+
+Execute a thorough validation of the statement's correctness by undertaking a detailed examination of the Clinical Trial Report (CTR). Interpret the medical jargon and context with precision, ensuring strict conformity to the CTR, exact correspondence to the statement's specifics, and exhaustive clarification of any vagueness, while diligently filling any informational voids.
+----------
+3->Determine with absolute certainty (YES/NO) whether the Clinical Trial Report (CTR) confirms the statement's accuracy, ensuring rigorous congruence with the CTR, exact correspondence to the statement's specifics, precise medical terminology and contextual understanding, and thorough clarification of all ambiguities, while expertly filling any informational gaps.
+----------
+4->
+
+Evaluate with absolute certainty (YES/NO) whether the Clinical Trial Report (CTR) definitively substantiates the statement's accuracy, ensuring rigorous alignment with the CTR, exact conformity to the original statement's specifics, precise comprehension of medical jargon and context, and exhaustive clarification of any ambiguities or knowledge deficits, while adeptly bridging gaps in expert-level understanding.
+----------

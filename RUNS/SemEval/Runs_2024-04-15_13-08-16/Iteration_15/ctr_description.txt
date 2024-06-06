@@ -1,0 +1,76 @@
+0->The descriptions that follow correspond to the information contained in one of the standard sections of the clinical trial reports.
+----------
+1->"Great job, you've identified a description that matches one of the four standard sections in a clinical trial report! Keep up the excellent work."
+----------
+2->The following text relates to the material presented in a particular segment of Clinical Trial Reports (CTRs).
+----------
+3->
+This text aligns with the content of a specific section in Clinical Trial Reports (CTRs).
+----------
+4->
+Review the descriptions linked to a specific section in Clinical Trial Reports (CTRs).
+----------
+5->
+
+1. Classify the sections in Clinical Trial Reports (CTRs) into one of the following categories: Background and Objectives, Methods, Results, or Discussion.
+2. Provide a comprehensive description of the content in each section, ensuring adherence to the respective standard section.
+----------
+6->
+These descriptions derive from a common segment of clinical trial reports.
+----------
+7->
+Examine the provided Clinical Trial Reports (CTRs) for accuracy in their section descriptions, confirming alignment with the standard structure of Clinical Trial Reports.
+----------
+8->
+Evaluate the identified sections of Clinical Trial Reports (CTRs) for compatibility with the given search criteria.
+----------
+9->
+Assess the relevance of designated sections in Clinical Trial Reports, adhering to the provided search criteria. These sections encompass crucial information as detailed in the report.
+----------
+10->
+Evaluate the suitability of selected sections in Clinical Trial Reports based on search criteria alignment.
+----------
+11->
+Assess the alignment of Clinical Trial Report sections with given search criteria.
+----------
+12->
+
+Extract essential information from the Background, Methods, Results, and Discussion sections in Clinical Trial Reports. Evaluate relevance and consistency with search criteria and ensure adherence to standard format. Perform further analysis as required. Draw necessary data from the standard section in CTRs to inform this assessment.
+----------
+13->
+
+1. Classify the sections in Clinical Trial Reports (CTRs) as: Background and Objectives, Methods, Results, or Discussion.
+2. Provide a detailed description of the content in each section, ensuring compliance with the standard format.
+3. Identify the specific section in the Clinical Trial Report to which this text applies.
+----------
+14->"Identified a description matching a standard section in clinical trial reports. These sections are common to all reports. "
+----------
+15->
+Determine descriptions aligning with one of the four regular sections in clinical trial reports. These descriptions stem from a consistent segment in such reports.
+----------
+16->
+
+Evaluate Clinical Trial Reports based on search criteria, focusing on the following sections: Background, Methods, Results, and Discussion. Verify the relevance and compatibility of each section with the search criteria.
+
+Assess the Background section for content validity and the reliability of research cited.
+
+Examine the Methods section for an appropriate study design, participant selection, and data collection techniques.
+
+Assess the Results section for statistical significance, accurate statistical analysis, and clear data presentation.
+
+Evaluate the Discussion section for proper interpretation of results and implications for future research.
+
+Ensure accuracy and consistency of all sections against the specified search parameters.
+----------
+17->
+This text aligns with a specific section of Clinical Trial Reports (CTRs).
+----------
+18->
+Review and evaluate the specified sections of Clinical Trial Reports (CTRs) for compatibility with the given search criteria. 
+
+(Note: This combined instruction retains the original intent of both instructions and provides a clearer execution path by combining the steps into one.)
+----------
+19->
+
+Assess the suitability of Clinical Trial Reports based on their Background, Methods, Results, and Discussion sections in relation to given search criteria. meticulously examine the Background section for relevance and verify the validity and dependability of the methods described, as well as the precision of the reported outcomes in the Methods and Results sections. Supplementary analysis is to be carried out if necessary.
+----------

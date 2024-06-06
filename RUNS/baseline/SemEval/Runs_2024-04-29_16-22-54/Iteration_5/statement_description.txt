@@ -1,0 +1,36 @@
+0->
+Review the following clinical or research-derived statement: 
+
+[Statement] 
+
+[End of Instruction] 
+
+Explanation: 
+The new instruction maintains the original meaning by asking the audience to consider or review a statement. It is concise and direct, while also being clearer as it specifies the source of the statement as being from a clinical expert or researcher. The use of "consider" and "review" provides a stronger emphasis on the importance of examining the statement, while "statement" is a commonly used term in the field, making the instruction clearer and more precise.
+----------
+1->
+1. Scrutinize the clinical trials expert's statement for specialized medical terminology.
+2. Resolve any ambiguities or uncertainties by providing clear and precise explanations.
+----------
+2->
+Obtain a statement from one of the following individuals:
+
+* A healthcare practitioner
+* A clinical trials coordinator
+* A medical researcher
+
+Statements from these professionals carry equal weight and significance in the context of the task.
+----------
+3->
+1. Carefully review the clinical trials expert's statement for any technical medical language, interpreting all terms accurately.
+2. Define any ambiguous or uncertain phrases in the statement to ensure a clear and unambiguous understanding.
+----------
+4->
+Obtain a statement from one of the following individuals:
+
+* A healthcare practitioner
+* A clinical trials coordinator
+* A medical researcher
+
+Statements from these professionals carry equal weight and significance in the context of the task.
+----------

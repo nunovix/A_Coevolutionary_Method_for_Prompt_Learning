@@ -1,0 +1,18 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->
+
+Derive an expert-level YES or NO verdict on the statement's validity, exclusively based on the clinical trial report's data. The decision should accurately represent the trial's outcomes.
+----------
+2->
+
+Derive a conclusive YES or NO verdict on the statement's validity, exclusively based on information extracted from the clinical trial report.
+----------
+3->
+
+Formulate a definitive YES or NO determination regarding the statement's accuracy, solely based on the data extracted from the clinical trial report.
+----------
+4->
+
+Analyze the clinical trial report to provide an unequivocal YES or NO verdict on the statement's validity, using only the information contained within the report.
+----------

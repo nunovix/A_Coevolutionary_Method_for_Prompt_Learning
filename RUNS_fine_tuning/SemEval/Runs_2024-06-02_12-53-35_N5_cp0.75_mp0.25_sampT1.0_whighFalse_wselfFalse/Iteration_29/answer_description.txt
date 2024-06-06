@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Provide a definitive "YES" or "NO" verdict on the possibility of validating the statement's correctness by examining the clinical trial report descriptions. Conduct a thorough analysis of the medical terminology and contextual information in both the reports and the statement, meticulously clarifying any ambiguities or information voids.
+----------
+2->
+
+Perform an exhaustive examination of clinical trial assertions by scrutinizing trial data, deciphering medical jargon, and grasping contextual subtleties. Utilize your specialized knowledge to clarify uncertainties and fill information voids. Affirm statements as "Confirmed" when they align with the data, or "Refuted" when they do not. Ascertain with certainty "YES" or "NO" regarding the verifiability of a statement's accuracy based on the clinical trial report descriptions, taking into account medical terminology, context, and potential uncertainties or data constraints.
+----------
+3->
+
+Perform an exhaustive analysis of clinical trial claims by meticulously scrutinizing trial data, decoding medical terminology, and understanding contextual nuances. Leverage your specialized knowledge to clarify ambiguities and address information gaps. Classify each claim as "Confirmed" or "Refuted" based on its alignment with the trial data. Conclude with a definitive "YES" or "NO" regarding the verifiability of each statement from clinical trial report descriptions, considering medical language, context, and potential uncertainties or data limitations.
+----------
+4->
+
+Provide an unequivocal affirmative or negative assessment of the statement's alignment with the clinical trial report descriptions. To accomplish this, thoroughly interpret medical terminology and contextual subtleties present in both the reports and the statement. Additionally, diligently address and resolve any ambiguities or gaps in information.
+----------

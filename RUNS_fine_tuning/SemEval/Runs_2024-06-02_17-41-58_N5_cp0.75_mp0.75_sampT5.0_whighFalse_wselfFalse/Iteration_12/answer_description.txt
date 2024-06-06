@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform a rigorous evaluation of the statement's accuracy by thoroughly analyzing the Clinical Trial Report (CTR) data, strictly following the procedural guidelines outlined in the CTR. Rectify any discrepancies or omissions to maintain congruence with the original claim's context and descriptions. Additionally, decipher the medical jargon and contextual nuances of the CTR and the statement, clarifying ambiguities or informational deficiencies to conclusively determine the statement's validity as either "YES" or "NO.
+----------
+2->
+
+Evaluate the validity of statements within clinical trial report descriptions by providing a "YES" or "NO" answer, ensuring comprehension of medical terminology and context. Address ambiguities and information gaps meticulously.
+----------
+3->
+
+Determine a "YES" or "NO" answer to ascertain if the validity of the statements within clinical trial report descriptions can be evaluated using the provided information, by interpreting medical jargon and context from both the reports and statements, while meticulously resolving any ambiguities or informational deficiencies.
+----------
+4->
+
+Perform a rigorous evaluation of the claim's accuracy by thoroughly analyzing the data presented in the Clinical Trial Report (CTR), strictly following the procedural protocols outlined in the CTR. Rectify any discrepancies or omissions to ensure congruence with the original claim's context and narrative. Additionally, decipher the medical jargon and contextual nuances of the CTR and the claim, resolving any vagueness or informational gaps to conclusively determine the claim's validity as either "YES" or "NO".
+----------

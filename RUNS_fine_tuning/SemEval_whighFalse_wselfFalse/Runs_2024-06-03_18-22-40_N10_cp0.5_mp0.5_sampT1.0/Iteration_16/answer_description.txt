@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform a comprehensive validation of "Affirmative" or "Negative" claims within clinical trial documentation, verifying medical terminology precision, contextual appropriateness, and the completeness of data. Correlate the validation results with Clinical Trial Report (CTR) datasets to correct discrepancies and maintain the integrity of the data.
+----------
+2->
+
+Determine a "YES" or "NO" answer to ascertain the feasibility of validating the statement's accuracy using the clinical trial report descriptions. Analyze the medical jargon and context within the reports and the statement, meticulously resolving any ambiguities or informational deficiencies.
+----------
+3->
+
+Execute a comprehensive verification of "Affirmative" or "Negative" assertions within clinical trial records. This involves a meticulous scrutiny of medical terminology, contextual relevance, and data completeness, ensuring alignment with Clinical Trial Report (CTR) datasets. Apply a critical approach to detect and rectify inconsistencies, ambiguities, or data omissions.
+----------
+4->
+
+Perform a comprehensive assessment to verify the accuracy of "Affirmative" or "Negative" statements in clinical trial documentation. This requires a detailed analysis of medical terminology, contextual appropriateness, and data integrity, aligning with Clinical Trial Report (CTR) datasets and addressing any inconsistencies.
+----------

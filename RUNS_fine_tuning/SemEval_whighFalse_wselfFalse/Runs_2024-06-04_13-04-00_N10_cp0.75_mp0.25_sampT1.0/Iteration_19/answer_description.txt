@@ -1,0 +1,12 @@
+0->Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR), ensuring the statement aligns with the CTR data and does not conflict with the provided descriptions.
+----------
+1->Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR), ensuring the statement aligns with the CTR data and does not conflict with the provided descriptions.
+----------
+2->Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR), ensuring the statement aligns with the CTR data and does not conflict with the provided descriptions.
+----------
+3->Assess the statement's alignment with the Clinical Trial Report (CTR) data, focusing on medical terminology and contextual understanding. Integrate your analysis into the CTR narrative to resolve ambiguities and address informational voids. Deliver a conclusive judgment of 'CONSISTENT' or 'INCONSISTENT', confirming the statement's concordance with the CTR and its non-existence of contradictions, intended for an expert readership.
+----------
+4->
+
+Formulate a conclusive YES or NO assessment to ascertain whether the statement's truthfulness can be deduced from the Clinical Trial Report (CTR), ensuring that the statement aligns with the CTR data and does not contradict any information within the report.
+----------

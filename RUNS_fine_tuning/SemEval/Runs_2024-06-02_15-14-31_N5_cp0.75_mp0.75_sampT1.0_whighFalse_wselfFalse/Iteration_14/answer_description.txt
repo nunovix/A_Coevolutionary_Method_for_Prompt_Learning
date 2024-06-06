@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Conduct a thorough examination of Clinical Trial Reports (CTRs) to ascertain the veracity of each claim by precisely interpreting medical jargon, ensuring contextual congruence, and resolving ambiguities or informational deficiencies. Systematically evaluate and categorize claims as 'Valid' or 'Invalid' based on an exhaustive analysis.
+----------
+2->
+
+Carefully scrutinize Clinical Trial Reports (CTRs) by deciphering medical jargon and contextual clues, resolving ambiguities, and filling information voids. Assess each claim's truthfulness within the CTRs and categorize it as 'Valid' or 'Invalid', offering a conclusive judgment.
+----------
+3->
+
+Perform a meticulous analysis of Clinical Trial Reports (CTRs), with a focus on accurately deciphering medical terminology, verifying the contextual relevance, and pinpointing and elucidating any vagueness or lack of information pertinent to the claims within the documents. Systematically evaluate and classify each claim as 'Valid' or 'Invalid' following a comprehensive review.
+----------
+4->
+
+Perform a comprehensive assessment of Clinical Trial Reports (CTRs), verifying the accuracy of each statement by meticulously deciphering medical terminology, confirming contextual alignment, and clarifying any vagueness or lack of information. Classify each statement as either 'Valid' or 'Invalid' following a detailed examination.
+----------

@@ -1,0 +1,14 @@
+0->Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR), ensuring the statement aligns with the CTR data and does not conflict with the provided descriptions.
+----------
+1->Evaluate the statement's consistency with the Clinical Trial Report (CTR) data, ensuring accurate understanding of medical terminology and context. Integrate your analysis into the CTR narrative, resolving ambiguities and addressing information gaps. Deliver a conclusive assessment of 'CONSISTENT' or 'INCONSISTENT', verifying the statement's alignment with the CTR and confirming the absence of contradictions.
+----------
+2->
+
+Perform an in-depth analysis of the statement's consistency with the Clinical Trial Report (CTR) data, ensuring accurate understanding of medical terminology and context. Integrate your findings into the CTR narrative, resolving ambiguities and addressing information gaps. Deliver a definitive assessment of 'CONSISTENT' or 'INCONSISTENT', verifying the statement's alignment with the CTR and asserting the absence of contradictions. This instruction is tailored for experts in the field and aims to enhance clarity and precision in the execution of the task.
+----------
+3->Perform an in-depth analysis of the statement's congruence with the Clinical Trial Report (CTR) data, ensuring accurate interpretation of medical terminology and context. Incorporate your findings into the CTR narrative, resolving ambiguities and addressing information gaps. Deliver a definitive 'CONSISTENT' or 'INCONSISTENT' verdict, confirming the statement's alignment with the CTR and asserting the absence of contradictions.
+----------
+4->
+
+Perform a meticulous assessment of the statement's consistency with the Clinical Trial Report (CTR) data, interpreting medical terminology and context accurately. Integrate your analysis into the CTR narrative, elucidating ambiguities and addressing information voids. Provide a definitive verdict of 'CONSISTENT' or 'INCONSISTENT', confirming the statement's alignment with the CTR and its absence of contradictions, tailored for an expert audience.
+----------

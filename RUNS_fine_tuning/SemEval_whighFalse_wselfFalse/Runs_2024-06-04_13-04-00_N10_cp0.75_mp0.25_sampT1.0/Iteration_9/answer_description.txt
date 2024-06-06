@@ -1,0 +1,14 @@
+0->Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR), ensuring the statement aligns with the CTR data and does not conflict with the provided descriptions.
+----------
+1->
+
+Perform an in-depth analysis of the statement's consistency with the Clinical Trial Report (CTR) data, ensuring accurate understanding of medical terminology and context. Integrate your findings into the CTR narrative, resolving ambiguities and addressing information gaps. Deliver a definitive assessment of 'CONSISTENT' or 'INCONSISTENT', verifying the statement's alignment with the CTR and asserting the absence of contradictions. This instruction is tailored for experts in the field and aims to enhance clarity and precision in the execution of the task.
+----------
+2->Conduct a thorough evaluation of the statement's alignment with the Clinical Trial Report (CTR) data, ensuring precise comprehension of medical jargon and context. Incorporate your analysis into the CTR narrative, clarifying uncertainties and filling information lacunae. Provide an unequivocal determination of 'CONSISTENT' or 'INCONSISTENT', affirming the statement's congruence with the CTR and its non-presence of contradictions, intended for an expert readership.
+----------
+3->
+
+Perform an in-depth analysis of the statement's consistency with the Clinical Trial Report (CTR) data, ensuring accurate understanding of medical terminology and context. Integrate your findings into the CTR narrative, resolving ambiguities and addressing information gaps. Deliver a definitive assessment of 'CONSISTENT' or 'INCONSISTENT', verifying the statement's alignment with the CTR and asserting the absence of contradictions. This instruction is tailored for experts in the field and aims to enhance clarity and precision in the execution of the task.
+----------
+4->Conduct a thorough analysis of the statement's alignment with the Clinical Trial Report (CTR) data, ensuring precise comprehension of medical jargon and context. Integrate your analysis into the CTR narrative, clarifying ambiguities and filling information voids. Provide a definitive verdict of 'CONSISTENT' or 'INCONSISTENT', confirming the statement's congruence with the CTR and ensuring no contradictions are present.
+----------

@@ -1,0 +1,14 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->"
+
+Determine with absolute certainty (YES/NO) whether the Clinical Trial Report (CTR) unequivocally corroborates the statement's accuracy, ensuring strict adherence to the CTR's content and unaltered fidelity to the initial descriptions. This assessment requires precise interpretation of medical terminology and context, rigorously eliminating ambiguities, and expertly bridging any informational voids.
+----------
+2->Determine with certainty (YES/NO) whether the Clinical Trial Report (CTR) definitively corroborates the statement's validity, ensuring strict adherence to the CTR and complete alignment with the original descriptions. This requires precise interpretation of medical jargon and context, resolving all ambiguities, and expertly managing any informational deficiencies.
+----------
+3->Assess with absolute certainty (YES/NO) whether the Clinical Trial Report (CTR) fully corroborates the statement's validity, ensuring rigorous congruence, comprehensive validation with the CTR, strict adherence to the initial descriptions, and precise interpretation of medical terminology and context, while meticulously resolving ambiguities and expertly addressing informational gaps.
+----------
+4->
+
+Determine with absolute certainty (YES/NO) whether the Clinical Trial Report (CTR) fully corroborates the claim's validity, ensuring strict compliance with the CTR, precise alignment with the initial descriptions, and meticulous understanding of medical terminology and context. Eliminate ambiguities and adeptly address any informational deficiencies.
+----------

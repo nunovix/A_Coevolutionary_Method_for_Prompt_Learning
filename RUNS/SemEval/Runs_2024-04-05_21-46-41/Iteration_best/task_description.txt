@@ -1,0 +1,4 @@
+
+
+Determine if statements made by clinical experts logically align with specific sections of Clinical Trial Reports (CTRs). Ensure that the expert statements' implications are contained within the designated CTR sections without contradiction. CTRs consist of four main parts: (1) Eligibility Criteria with patient selection factors, (2) Intervention Description detailing treatment aspects, (3) Outcome Measures and Results presenting trial data, and (4) Adverse Events documenting observed symptoms. The statement's claim should directly relate to the clinical trial information within these CTR components. The expert statements may focus on a single report or comparative analysis, and each trial encompasses one or two patient groups, referred to as cohorts or arms, which may receive varying treatments or possess distinct baseline characteristics.
+----------

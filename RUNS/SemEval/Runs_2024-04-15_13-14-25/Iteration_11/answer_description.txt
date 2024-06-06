@@ -1,0 +1,40 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->
+
+Classify the compatibility of the statement with the clinical trial results as follows:
+
+A. Concordant: The statement aligns with the reported findings.
+B. Discordant: The statement contradicts the findings.
+C. Indeterminate: The clinical trial data is insufficient to establish the statement's accuracy.
+----------
+2->
+
+Determine the level of agreement between the statement and clinical trial findings:
+
+A. Concordant: Harmonious and consistent results.
+B. Discordant: Conflicting results.
+C. Indeterminate: Insufficient evidence for a clear conclusion.
+----------
+3->
+
+Categorize the compatibility of the statement with clinical trial outcomes:
+
+A. Concordant: The statement aligns with the trial results.
+B. Discordant: The statement opposes the trial data.
+C. Indeterminate: The trial findings are insufficient to validate or dispute the statement.
+----------
+4->
+
+Determine the agreement between the statement and clinical trial report data:
+
+A. Agreement: The statement aligns with the trial results.
+B. Disagreement: The statement contradicts the trial findings.
+C. Uncertainty: The trial report does not provide sufficient evidence to establish the statement's validity.
+
+Your assessment:
+A. Agreement or disagreement
+B. Uncertainty
+
+Confidence: 100%
+----------

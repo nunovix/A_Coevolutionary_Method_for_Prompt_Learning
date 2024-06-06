@@ -1,0 +1,140 @@
+0->Consider the task of establishing semantic entailment relations between parts of a Non-Disclosure Agreements (NDAs) and assertions about the agreement's confidentiality obligations. NDAs outline the terms for sharing and protecting sensitive information, detailing aspects such as the definition of confidential information, obligations of the parties, duration of the agreement, exclusions, and other pertinent terms. The goal is to determine whether statements regarding the NDA content are supported by the text or contradict it.
+----------
+1->
+Establish semantic entailment relationships between NDA text and confidentiality obligation statements. Analyze NDAs for components such as confidential information definition, parties' obligations, agreement duration, exclusions, and other crucial terms. Determine if given statements align with or contradict the NDA text.
+----------
+2->
+
+Assess the consistency of confidentiality statements with the Non-Disclosure Agreement (NDA) regarding protected information:
+
+1. Confirm that the definitions of confidential information in the statements align with the NDA.
+2. Compare the obligations of confidentiality for all parties in both the NDA and the statements.
+3. Ensure agreement durations in the confidentiality statements match the NDA term length.
+4. Determine if any confidentiality exclusions in the statements align with those in the NDA.
+----------
+3->
+
+Your task is to evaluate the consistency of statements with the confidentiality obligations outlined in Non-Disclosure Agreements (NDAs). NDAs define the parameters for sharing and protecting sensitive information, including the definition of confidential material, obligations of the parties, agreement duration, and exclusions. Your goal is to determine whether each statement aligns or contradicts the NDA terms.
+----------
+4->
+
+Assess statements for compatibility with key elements in given Non-Disclosure Agreements (NDAs). Examine NDA definitions of confidential materials, obligations, agreement durations, exclusions, and other significant terms. Compare each statement to ensure consistency or identify potential contradictions with these NDA components.
+----------
+5->
+
+Assess the alignment of statements and NDAs on confidential information:
+
+1. Ensure uniform definitions of confidential materials in both documents.
+2. Equate confidentiality obligations among all parties involved.
+3. Harmonize agreement periods and durations between statements and NDAs.
+4. Manage exceptions to confidentiality provisions in a coordinated manner.
+5. Adhere strictly to NDA terms, including definitions, duties, limitations, and related provisions.
+6. Evaluate if statements conform to or conflict with NDA provisions on confidential information, usage, and exclusions.
+----------
+6->
+
+Your objective is to assess the alignment and potential conflicts of statements with the Confidential Information provisions in Non-Disclosure Agreements (NDAs). This evaluation involves the following steps:
+
+1. Determine the meaning and consistency of Confidential Information as per NDA definitions.
+2. Identify the entities and their obligations regarding the protection of Confidential Information, as outlined in the NDA.
+3. Evaluate each party's duties regarding the handling, sharing, and protection of Confidential Information.
+4. Verify that statements conform to the agreed durations specified in the NDA.
+5. Determine if statements are excluded from NDA confidentiality obligations.
+6. Evaluate any potential contradictions or inconsistencies between statements and NDA terms.
+----------
+7->
+
+1. Evaluate statements for conformity with NDA confidentiality provisions.
+2. Analyze definitions of confidential information in statements and NDAs.
+3. Examine parties' obligations in both documents.
+4. Determine agreement durations and compare them.
+5. Identify exclusions and assess their applicability.
+6. Address any inconsistencies or discrepancies to align statements with NDA terms.
+----------
+8->
+
+Evaluate the alignment of Non-Disclosure Agreements (NDAs) with the confidentiality provisions of the primary agreement. Verify consistency in the definitions of confidential information, parties' obligations, agreement durations, and exclusions. Resolve any discrepancies or contradictions to accurately represent the NDA's confidentiality terms. Define key NDA concepts as necessary.
+----------
+9->
+
+Evaluate the conformity of Non-Disclosure Agreements (NDAs) with the confidentiality clauses of the primary agreement. Thoroughly review the definitions of confidential information, parties' obligations, agreement duration, exclusions, and other vital terms in both the NDAs and the main agreement for consistency and precision. Address any inconsistencies or discrepancies to accurately align the confidentiality provisions in both agreements.
+----------
+10->
+
+Verify and maintain consistency among the definitions and applications of Confidential Information in the provided Non-Disclosure Agreements (NDAs):
+
+1. Define the meaning of Confidential Information across all NDAs.
+2. Identify the parties involved and their respective obligations under each NDA.
+3. Assess each party's confidentiality duties as outlined in the NDAs.
+4. Confirm that agreement durations align with NDA statements.
+5. Determine whether statements fall under NDA exclusions.
+6. Evaluate potential discrepancies or inconsistencies between NDA terms and statements.
+----------
+11->
+
+Assess the alignment of confidentiality statement provisions with the respective sections of the Non-Disclosure Agreements (NDAs). Identify and resolve any inconsistencies or discrepancies in the definition, application, timeframes, exemptions, and parties' obligations concerning confidential information, ensuring harmony between the statements and the NDA. Reconcile any inconsistencies to maintain the accuracy of confidentiality provisions. Examine the statements about NDA content for consistency with the text and correct any contradictions.
+----------
+12->
+1. Evaluate the alignment of confidentiality statements with their associated NDA sections. Identify any discrepancies or possible violations concerning confidential data handling, usage, timeframes, and exemptions. Verify the consistency between the promised confidentiality in the statements and the NDA requirements for data management, dissemination, and safeguarding. Collect NDA details, including confidential data descriptions, parties' obligations, agreement duration, exclusions, and key terms, for review.
+----------
+13->
+Determine the compatibility of statements about confidentiality obligations with the corresponding NDA sections. Assess consistency or contradiction in relation to confidential information, permissible usage, specified duration, and exclusions mentioned in the NDAs.
+----------
+14->
+1. Assess the conformity of NDA confidentiality clauses with the main agreement's confidentiality provisions.
+2. Confirm that NDA definitions of confidential information, obligations, duration, exclusions, and other key terms align with those in the primary agreement.
+3. Clarify ambiguous NDA terms and ensure a harmonious interpretation between the NDA and the main agreement.
+4. Resolve any inconsistencies or discrepancies to accurately reflect the confidentiality provisions in both agreements.
+----------
+15->
+
+Evaluate the alignment of confidentiality declarations in Non-Disclosure Agreements (NDAs) with the NDA's text. This evaluation includes:
+
+1. Confirming identical definitions of confidential materials in the declarations and NDA.
+2. Comparing equivalent obligations of confidentiality for all parties between the declarations and NDA.
+3. Verifying consistent agreement durations.
+4. Examining identical confidentiality exclusions.
+5. Ensuring each declaration adheres to the NDA's definitions, obligations, duration, exclusions, and related provisions.
+6. Documenting any inconsistencies or potential breaches concerning confidential data, usage, timeframes, and exemptions.
+7. Assessing the conformity between the confidentiality promises in the declarations and the NDA's data handling, dissemination, and protection requirements.
+8. Reviewing and analyzing any additional attached
+----------
+16->
+
+Assess the alignment of statements and Non-Disclosure Agreements (NDAs) concerning confidentiality:
+
+1. Ensure consistent definitions for confidential information.
+2. Verify identical confidentiality obligations for all parties.
+3. Check compatibility of confidentiality agreement durations.
+4. Evaluate congruence of confidentiality exceptions.
+5. Address and reconcile any discrepancies or inconsistencies in the handling of confidential data, permissible uses, durations, and exclusions.
+----------
+17->
+
+Assess the alignment of confidentiality provisions between the Non-Disclosure Agreement (NDA) and the underlying agreement. Compare the definitions of confidential information, parties' obligations, agreement duration, exclusions, and other key terms to ensure consistency or identify contradictions. Address any discrepancies to accurately reflect the confidentiality provisions in both agreements.
+
+Non-Disclosure Agreements (NDAs) define confidential material as information shared under the agreement and protected from disclosure. Parties must maintain confidentiality, and the agreement sets a duration for these obligations. Exclusions outline specific information not considered confidential.
+
+In the underlying agreement, similar confidentiality provisions may be present. Evaluate the definitions, obligations, duration, and exclusions to ensure alignment with the NDA.
+----------
+18->
+Analyze semantic entailment between NDA statements and confidentiality obligations. Identify the following NDA components: definition of confidential information, parties' obligations, agreement duration, exclusions, and other key terms. Determine if given statements align or contradict these NDA elements.
+----------
+19->
+
+Assess statements for conformity with NDA provisions:
+
+1. Verify consistent definitions of confidential information between statements and NDAs.
+2. Ensure equal confidentiality obligations for all parties in statements and NDAs.
+3. Confirm agreement periods in statements match NDA timeframes.
+4. Coordinate confidentiality exceptions in statements with those in NDAs.
+5. Adhere to NDA definitions, duties, durations, limitations, and related clauses in statements.
+
+Understand the meanings of NDA elements:
+
+- Confidential information: (Definition)
+- Parties: (Definition)
+- Obligations: (Definition)
+- Durations: (Definition)
+- Exclusions: (Definition)
+----------

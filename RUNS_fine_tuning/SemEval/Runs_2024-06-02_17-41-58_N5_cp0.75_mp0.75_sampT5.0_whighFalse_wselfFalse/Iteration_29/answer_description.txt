@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform an expert-level assessment of the statement's accuracy by thoroughly examining all relevant clinical trial records, deciphering intricate medical jargon and contextual nuances, and clarifying any uncertainties or lack of information to guarantee exceptional clarity and exactitude.
+----------
+2->
+
+Perform an exhaustive verification of the statement's correctness by rigorously scrutinizing all pertinent clinical trial records, deciphering intricate medical terminology and contextual subtleties, and clarifying any vagueness or inadequacy to guarantee exactness and lucidity for expert scrutiny.
+----------
+3->
+
+Perform an exhaustive and comprehensive validation of the statement's veracity by rigorously examining all relevant clinical trial documentation. Decode complex medical jargon and contextual subtleties with exactitude. Elucidate any vagueness or missing data to guarantee unparalleled clarity and precision for expert analysis.
+----------
+4->
+
+Perform a comprehensive and detailed validation of the statement's accuracy by thoroughly examining all relevant clinical trial records, deciphering intricate medical jargon and contextual nuances, and clarifying any vagueness or lack of information to guarantee exceptional clarity and precision for expert assessment.
+----------

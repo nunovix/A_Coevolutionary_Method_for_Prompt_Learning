@@ -1,0 +1,14 @@
+0->Consider the challenge of assessing semantic entailment connections between distinct sections of Non-Disclosure Agreements (NDAs) and related statements. NDAs outline procedures and obligations for protecting confidential information, including its scope, usage obligations, duration of protection, and exclusions. Your task is to evaluate whether statements' assertions about the NDA content are supported by the agreement or contradict it.
+----------
+1->
+
+Perform a semantic analysis of the Non-Disclosure Agreement (NDA), focusing on the entailment relationships between its confidentiality clauses and external assertions. Evaluate the parameters defining confidential information, including usage obligations, protection duration, and exclusions, as specified in the NDA. Assess the degree of alignment or contradiction between external statements and the NDA's provisions.
+----------
+2->
+
+Critically analyze the Non-Disclosure Agreement (NDA) to identify the specific supportive relationships between the sections outlining confidentiality duties and the content within individual statements. Investigate the NDA to delineate the parameters defining confidential information, obligations concerning its utilization, the agreement's temporal scope, and any particular exclusions. Assess whether the statements under scrutiny are substantiated or contradicted by the NDA's provisions.
+----------
+3->Consider the challenge of assessing semantic entailment connections between distinct sections of Non-Disclosure Agreements (NDAs) and related statements. NDAs outline procedures and obligations for protecting confidential information, including its scope, usage obligations, duration of protection, and exclusions. Your task is to evaluate whether statements' assertions about the NDA content are supported by the agreement or contradict it.
+----------
+4->"Analyze Non-Disclosure Agreements (NDAs) to discern semantic entailment connections between their various sections and related statements on confidentiality. Focus on identifying the scope, usage obligations, protection duration, and exclusions within the NDAs. Assess whether statements affirming or contradicting the NDA content are corroborated by the agreement's text."
+----------

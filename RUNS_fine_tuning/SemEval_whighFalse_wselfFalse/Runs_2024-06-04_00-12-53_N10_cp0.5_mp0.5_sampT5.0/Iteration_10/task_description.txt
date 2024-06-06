@@ -1,0 +1,18 @@
+0->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs expound on the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or comparative analysis of two. For entailment validation, the statement's claim should align with clinical trial information, find support in the CTR, and refrain from contradicting provided descriptions.
+----------
+1->
+
+Perform a comprehensive semantic entailment analysis between authoritative clinical assertions and Clinical Trial Reports (CTRs). Confirm that these expert statements are both supported and non-contradictory to the information presented in CTRs. Align these statements with the respective CTRs' Eligibility Criteria, Interventions, Results, and Adverse Events sections. Maintain consistency in individual and comparative analyses across a variety of CTRs.
+----------
+2->
+
+Perform a comprehensive semantic entailment analysis between expert clinical statements and Clinical Trial Reports (CTRs), verifying that these statements are congruent and non-contradictory with respect to the CTRs' Eligibility Criteria, Interventions, Results, and Adverse Events sections. Confirm the consistency of expert statements across multiple CTRs to facilitate both individual and comparative analyses.
+----------
+3->
+
+Conduct an exhaustive semantic entailment analysis between authoritative clinical claims and Clinical Trial Reports (CTRs). Verify that these expert claims are both corroborated and non-conflicting with the data in CTRs. Ensure alignment of these claims with the CTRs' Eligibility Criteria, Interventions, Results, and Adverse Events sections. Uphold consistency in individual and comparative analights across diverse CTRs.
+----------
+4->
+
+Conduct an exhaustive semantic entailment analysis between authoritative clinical statements and Clinical Trial Reports (CTRs), focusing on Eligibility Criteria, Interventions, Outcomes, and Adverse Reactions. Ensure expert assertions are congruent and non-contradictory to CTR details. Harmonize these assertions with corresponding sections in various CTRs, preserving consistency in both individual and comparative analyses.
+----------

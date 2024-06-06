@@ -1,0 +1,16 @@
+0->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs expound on the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or comparative analysis of two. For entailment validation, the statement's claim should align with clinical trial information, find support in the CTR, and refrain from contradicting provided descriptions.
+----------
+1->Assess semantic congruence and alignment between expert clinical domain statements, Clinical Trial Reports, and Documents, ensuring these sources concur, justify alignment, and are consistent, without contradiction, for both singular and comparative analyses, in relation to clinical trial protocols, outcomes, side effects, and methodologies.
+----------
+2->Assess the semantic entailment between segments of Clinical Trial Reports (CTRs) and authoritative statements from clinical experts. Verify that there is congruence, corroboration, and absence of contradiction in relation to clinical trial data, procedures, results, and descriptions.
+----------
+3->Assess the semantic implication among distinctive segments of Clinical Trial Reports (CTRs) and assertions from domain specialists. Dissect the contents of CTRs, which detail the procedures and results of clinical trials to gauge the effectiveness and safety of novel therapies. In parallel, examine the specialists' declarations, which make assertions regarding data within particular CTR segments, either pertaining to a singular CTR or when comparing two. Ensure the verification of entailment wherein the specialists' assertions correspond with clinical trial data, receive backing from the respective CTR, and avoid contradicting the supplied narratives.
+----------
+4->Evaluate the semantic correlation between segments of Clinical Trial Reports (CTRs) and expert clinical assertions by ensuring:
+
+- Expert statements are an exact reflection of specified content within CTR segments.
+
+- Each statement is backed by evidence found within the CTRs, confirming their accuracy.
+
+- Maintain logical consistency and avoid contradictions with CTR content.
+----------

@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform an exhaustive verification of the statement's factual correctness by meticulously cross-examining it with data extracted from clinical trial reports (CTRs). This necessitates a profound comprehension of medical jargon and contextual subtleties inherent in both the CTRs and the statement. Eliminate ambiguities, supplement any gaps in information, and articulate any vagueness to enable a detailed, expert-level evaluation.
+----------
+2->
+
+Perform a thorough validation of the statement's accuracy by meticulously cross-referencing it with data from clinical trial reports (CTRs), demanding an in-depth understanding of medical terminology and contextual subtleties in both the CTRs and the statement. Address ambiguities, supplement missing details, and clarify any vagueness to facilitate a comprehensive, expert-level analysis.
+----------
+3->
+
+Critically assess the statement's veracity by thoroughly examining clinical trial reports (CTRs), necessitating a profound grasp of medical jargon and contextual nuances within both the CTRs and the statement. Eliminate ambiguities and complete any informational deficiencies for an exhaustive evaluation.
+----------
+4->
+
+Assess the accuracy of statements in clinical trial reports by interpreting medical jargon and contextual information, resolving ambiguities and information voids, to deliver a definitive "Affirmative" or "Negative" response.
+----------

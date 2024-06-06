@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Evaluate the validity of statements within clinical trial report descriptions by interpreting medical terminology and context, addressing ambiguities and information gaps, to determine a "YES" or "NO" response.
+----------
+2->
+
+Perform a comprehensive evaluation of the claim's accuracy by rigorously analyzing the data in the Clinical Trial Report (CTR), strictly following the procedural protocols outlined in the CTR. Correct any discrepancies or omissions to ensure congruence with the original claim's context and narrative. Interpret and elucidate medical jargon and contextual nuances from both the CTR and the claim, resolving ambiguities or information gaps to conclusively determine the claim's validity as affirmative ("YES") or negative ("NO").
+----------
+3->
+
+Determine a "YES" or "NO" answer to ascertain the feasibility of validating the statement's accuracy using the data from clinical trial report descriptions. Analyze the medical jargon and context within both the reports and the statement, meticulously resolving any ambiguities or informational deficiencies.
+----------
+4->
+
+Determine a "YES" or "NO" answer to ascertain if the validity of the statement can be evaluated from the clinical trial report descriptions, by interpreting the medical jargon and context within the reports and the statement, while meticulously resolving any ambiguities or informational deficiencies.
+----------

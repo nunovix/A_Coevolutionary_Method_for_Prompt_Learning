@@ -1,0 +1,40 @@
+0->initial
+----------
+1->mutated from 2, using mutation prompt 1
+----------
+2->mutated from 2, using mutation prompt 2
+----------
+3->mutated from 1, using mutation prompt 1
+----------
+4->crossover between [7] and [18] followed by mutation from iteration 3
+----------
+5->crossover between [12] and [6]  from iteration 6
+----------
+6->crossover between [2] and [15] followed by mutation from iteration 7
+----------
+7->crossover between [3] and [0] followed by mutation from iteration 7
+----------
+8->crossover between [2] and [11] followed by mutation from iteration 8
+----------
+9->crossover between [8] and [13] followed by mutation from iteration 9
+----------
+10->crossover between [0] and [10] followed by mutation from iteration 16
+----------
+11->crossover between [14] and [13] followed by mutation from iteration 16
+----------
+12->crossover between [1] and [12]  from iteration 16
+----------
+13->copy of [2] followed by mutation from iteration 16
+----------
+14->copy of [7] followed by mutation from iteration 16
+----------
+15->crossover between [16] and [0] followed by mutation from iteration 16
+----------
+16->crossover between [11] and [3] followed by mutation from iteration 16
+----------
+17->copy of [4]  from iteration 16
+----------
+18->crossover between [15] and [12]  from iteration 16
+----------
+19->copy of [19] followed by mutation from iteration 16
+----------

@@ -1,0 +1,20 @@
+0->
+
+Perform a semantic entailment analysis between clinical trial reports (CTRs) and assertions made by clinical experts, concentrating on clinical trial methodologies and outcomes to assess the efficacy and safety of novel therapeutic interventions, as outlined in CTRs. Additionally, critically evaluate experts' statements concerning particular CTR sections, either for single reports or in comparative evaluations. Confirm entailment by verifying that claims are data-supported, evidence-based from CTRs, and non-contradictory to the given descriptions.
+----------
+1->
+
+Conduct a semantic entailment analysis between Clinical Trial Documents (CTDs) and Clinical Expert Testimonies, focusing on methodologies and outcomes to evaluate the effectiveness and safety of new treatments, as detailed in CTDs. Analyze experts' comments on specific parts of CTDs for individual studies or comparative analyses. Validate entailment by ensuring that claims are backed by data, rooted in evidence, and consistent with the initial descriptions.
+----------
+2->
+
+Perform a semantic entailment analysis contrasting clinical trial documentation (CTDs) with clinical expert narratives, focusing on clinical trial protocols and outcomes to assess the efficacy and safety of novel medical interventions, as outlined in the CTDs. Further, scrutinize expert insights on particular segments of CTDs, whether they pertain to single studies or comparative evaluations. Ascertain entailment by verifying that assertions are substantiated by data, grounded in evidence from the CTDs, and align with the given descriptions.
+----------
+3->
+
+Conduct a semantic entailment analysis between clinical trial reports (CTRs) and clinical expert assertions, focusing on clinical trial methodologies and results to evaluate the effectiveness and safety of new treatments, as detailed in CTRs. Additionally, scrutinize experts' comments on specific sections of CTRs, either for individual trials or in comparative analyses. Validate entailment by ensuring claims are substantiated by data from CTRs, evidence-based, and consistent with the provided descriptions.
+----------
+4->
+
+Conduct a semantic entailment analysis between Clinical Trial Documents (CTDs) and Clinical Expert Opinions, focusing on methodologies and outcomes to evaluate the effectiveness and safety of new treatments, as detailed in CTDs. Analyze expert commentary on specific CTD sections for individual studies or comparative analyses. Validate entailment by ensuring assertions are data-backed, evidence-based, and consistent with the original descriptions.
+----------

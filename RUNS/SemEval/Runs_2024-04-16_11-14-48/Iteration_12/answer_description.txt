@@ -1,0 +1,71 @@
+0->
+Based on the clinical trial report data, determine if the statement's validity can be established with a YES or NO answer.
+----------
+1->
+Based on the clinical trial report information, determine if the statement's validity can be established. Answer with a YES or NO.
+----------
+2->
+Analyze the statement and clinical trial report descriptions by interpreting medical terminology and context. Determine if the statement's validity can be assessed based on the information provided. Handle any ambiguities or gaps using context from both the statement and report. Return YES if validity can be assessed, NO otherwise.
+----------
+3->
+Evaluate the congruence between the clinical trial report descriptions and the provided statement (YES or NO).
+----------
+4->
+Determine the accuracy and agreement of the statement with the clinical trial report data (YES or NO).
+----------
+5->
+Analyze the Clinical Trial Report data to verify the precision and uniformity of the stated medical information. Return with a conclusive YES or NO.
+----------
+6->
+Determine the congruence between the given statement and the data in Clinical Trial Reports. (Answer with "Yes" if they align.)
+----------
+7->
+Determine the accuracy and validate the statement based on the clinical trial report data. Answer with YES if correct, NO if not.
+----------
+8->
+Determine if statements align with Clinical Trial Report findings. Respond with YES for confirmation.
+----------
+9->
+Determine if the clinical trial report descriptions align with the given statement (YES or NO).
+----------
+10->
+Assess clinical trial reports for the veracity and precision in representation of medical information. Determine if the data aligns with the statement and respond with "Yes" if it does, or "No" if there are discrepancies or inaccuracies.
+----------
+11->
+
+Assess the accuracy of the statement by deciphering its medical jargon and context, and comparing it to the clinical trial report findings. Resolve any uncertainties or discrepancies using information from both the statement and report. If consistent, answer YES, otherwise, answer NO.
+----------
+12->
+Check the medical data in the Clinical Trial Report against the report descriptions for consistency. Clarify any ambiguities or discrepancies to ensure alignment. Reply with "Yes" if consistent.
+----------
+13->
+Determine the alignment and consistency of the given statement with clinical trial reports in terms of medical data presentation. Reply with "Yes" if they support each other and are uniform and accurate.
+----------
+14->
+
+1. Review the medical statement and Clinical Trial Report for accuracy, consistency, and authenticity of their content.
+2. Clarify any ambiguities or discrepancies by cross-referencing the statement and report.
+3. Evaluate the agreement of medical information between the statement and report.
+4. Determine if the information is verifiable and assessable, and respond with a definitive YES if it is, or a NO otherwise.
+----------
+15->
+
+1. Review the medical statement and clinical trial report for accuracy, consistency, and authenticity.
+2. Understand the medical terminology and context from both sources to clarify any uncertainties or inconsistencies.
+3. Assess if the medical statement's results correspond to those documented in the clinical trial report.
+4. Verify and validate the information obtained from both sources.
+5. If the findings are consistent and verifiable, return YES. Otherwise, return NO.
+----------
+16->
+Determine the congruence between the given statement and the data in Clinical Trial Reports. (Answer with "Yes" if they align.)
+----------
+17->
+Confirm that trial outcomes correspond with stated results in Clinical Studies. Respond with "YES" upon agreement.
+----------
+18->
+
+Confirm the compatibility of the statements with the data presented in Clinical Trial Reports. Reply with "Yes" once congruence is established.
+----------
+19->
+Using the clinical trial report data, decipher the medical jargon and context to evaluate the accuracy of the statement. Resolve any uncertainties or inconsistencies by referring to the context within both the statement and report. Provide a YES if the statement's validity is established, otherwise return NO.
+----------

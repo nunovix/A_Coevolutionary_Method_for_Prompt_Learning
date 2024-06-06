@@ -1,0 +1,28 @@
+0->Analyze semantic entailment relations between sections of Clinical Trial Reports (CTRs) and expert statements, focusing on methodology, findings, eligibility criteria, interventions, results, and adverse events. Each CTR, involving 1-2 patient cohorts, assesses new treatments' effectiveness and safety, detailing distinct treatments or baseline characteristics. CTRs consist of four key sections: eligibility criteria for patient inclusion, intervention specifics including treatment type, dosage, frequency, and duration, results summarizing participant numbers, outcome measures, units, and conclusions, and adverse events documenting observed signs and symptoms. Expert statements should align with CTR information, be supported by the reports, and remain consistent with provided descriptions to establish entailment.
+----------
+1->
+
+Identify and elucidate the supportive connections between distinct segments of Clinical Trial Reports (CTRs) and clinical assertions. Analyze CTRs to evaluate the efficacy and safety of novel therapeutic interventions. Break down CTRs into four key components: (1) ELIGIBILITY CRITERIA, outlining patient inclusion conditions, (2) INTERVENTION, detailing treatment type, dosage, frequency, and duration, (3) RESULTS, summarizing participant data, outcome measures, units, and findings, and (4) ADVERSE EVENTS, documenting observed signs and symptoms. Clinical assertions should correlate with these segments, either referencing a single CTR or contrasting between two.
+----------
+2->
+
+Examine the entailment relationships between segments of Clinical Trial Reports (CTRs) and authoritative expert declarations, concentrating on methodology, results, inclusion/exclusion criteria, interventions, outcomes, and adverse reactions. Each CTR, encompassing 1-2 patient groups, evaluates the efficacy and safety of novel therapies, outlining unique treatments or participant attributes. CTRs comprise four principal divisions: inclusion/exclusion criteria for patient selection, intervention specifics detailing treatment type, dosage, administration frequency, and treatment length. Results section encapsulates participant counts, outcome metrics, units of measurement, and conclusions. Adverse events section records observed signs and symptoms. Ensure expert statements correspond with CTR details, are corroborated by the reports, and maintain consistency with given descriptions to confirm entailment.
+----------
+3->
+
+Analyze Clinical Trial Reports (CTRs) to assess the effectiveness and safety of new medical treatments. Dissect each CTR into four essential elements: (1) ELIGIBILITY CRITERIA, specifying patient inclusion conditions, (2) INTERVENTION, detailing the treatment type, dosage, frequency, and treatment duration, (3) RESULTS, summarizing participant information, outcome measures, units of measurement, and conclusions, and (4) ADVERSE EVENTS, documenting any observed signs and symptoms. Ensure that statements validate or contrast data from individual CTRs or between two CTRs.
+----------
+4->
+
+Evaluate Clinical Trial Reports (CTRs) to determine the efficacy and safety profiles of novel therapeutic interventions. Break down each CTR into four critical components: 
+
+1. Eligibility Criteria: Define patient inclusion conditions.
+
+2. Intervention: Describe the treatment type, dosage, administration frequency, and treatment duration.
+
+3. Results: Provide a summary of participant demographics, outcome metrics, units of measurement, and conclusions.
+
+4. Adverse Events: Record any observed signs and symptoms.
+
+Confirm clinical assertions for individual CTRs or conduct comparative analyses between them.
+----------

@@ -1,0 +1,22 @@
+Task: MEDIQASUM
+Start time: 2024-05-20 01:01:39.903380
+End time: 2024-05-20 15:11:10.141688
+Total elapsed time: 14:09:30.238308
+No. of iterations: 15
+Average time per iteration: 0:56:38.015887
+
+Initial population size (size of suprompts pop): 5
+How many of the top performers are being kept(elite): 1
+Max no. of iterations allowed: 200
+Patience: 15
+Decoder temperature in mutation and combiantions: 1.0
+Top-p in sampling for mutation and combiantions: 0.8
+
+Evaluation done on: dev set
+With 20 examples
+
+Name of the model used: microsoft/Phi-3-mini-128k-instruct 
+4 bit quantization: True 
+Now the individuals are not bonded, meaning that new subprompts are created and randomly combined 
+Alg 2 - Random sample 2 individuals weighted on scores, apply crossover and mutation to the offspring, top 1 performers are always kept as elite population
+With crossover probability 0.5 and mutation probability 0.5

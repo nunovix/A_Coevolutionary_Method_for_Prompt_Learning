@@ -1,0 +1,62 @@
+0->
+Based on the clinical trial report data, determine if the statement's validity can be established with a YES or NO answer.
+----------
+1->
+Based on the clinical trial report information, determine if the statement's validity can be established. Answer with a YES or NO.
+----------
+2->
+Analyze the statement and clinical trial report descriptions by interpreting medical terminology and context. Determine if the statement's validity can be assessed based on the information provided. Handle any ambiguities or gaps using context from both the statement and report. Return YES if validity can be assessed, NO otherwise.
+----------
+3->
+Evaluate the congruence between the clinical trial report descriptions and the provided statement (YES or NO).
+----------
+4->
+Determine the accuracy and agreement of the statement with the clinical trial report data (YES or NO).
+----------
+5->
+Analyze the Clinical Trial Report data to verify the precision and uniformity of the stated medical information. Return with a conclusive YES or NO.
+----------
+6->
+Determine the congruence between the given statement and the data in Clinical Trial Reports. (Answer with "Yes" if they align.)
+----------
+7->
+Determine the accuracy and validate the statement based on the clinical trial report data. Answer with YES if correct, NO if not.
+----------
+8->
+Determine if statements align with Clinical Trial Report findings. Respond with YES for confirmation.
+----------
+9->
+Determine if the clinical trial report descriptions align with the given statement (YES or NO).
+----------
+10->
+
+Assess the compatibility of the statement with the medical findings in the Clinical Trial Report. Resolve any uncertainties or inconsistencies to maintain precision. Respond with "Yes" if congruent and valid.
+----------
+11->
+Examine the medical statement and Clinical Trial Report for congruence. Ensure accuracy, consistency, and authenticity of their content. Resolve any ambiguities or discrepancies through cross-referencing. Verify and assess the medical information agreement between the two. Confirm verifiability before rendering a conclusive "Yes" or "No".
+----------
+12->
+
+Verify the alignment of trial report descriptions with the provided statements. Respond with "Yes" upon confirmation of compatibility.
+----------
+13->
+Determine if the clinical trial report descriptions align with the stated condition (YES or NO).
+----------
+14->
+Using the clinical trial report data, determine if the descriptions match the provided statement (YES or NO).
+----------
+15->
+Examine the given medical statement and its corresponding clinical trial reports for accuracy, agreement, and validity. Interpret any ambiguous medical terminology or context from both sources to resolve any discrepancies or inconsistencies. Determine if the reported findings in the medical statement match those recorded in the clinical trial reports. If the results are concurrent, verifiable, and consistent, conclude that the statement and clinical trial reports are in agreement, and respond with "Yes." Otherwise, respond with "No."
+----------
+16->
+Evaluate the congruence and precision of the provided statement with clinical trial data presentations. Respond with "Yes" if they are harmonious and exhibit uniformity and accuracy.
+----------
+17->
+Check if the given statement matches the descriptions in the Clinical Trial Reports. (Answer with "Yes" if consistent.)
+----------
+18->
+Examine clinical trial reports and associated medical statements for veracity, congruence, and authenticity. Elucidate uncertainties or inconsistencies through cross-checking. Determine if medical data in the statement corresponds to that in the report and is verifiable and evaluable. Return "Yes" if consistent, "No" otherwise.
+----------
+19->
+Assess clinical trial reports for the veracity and precision in representation of medical information. Determine if the data aligns with the statement and respond with "Yes" if it does, or "No" if there are discrepancies or inaccuracies.
+----------

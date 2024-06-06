@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Determine definitively 'YES' or 'NO' if the veracity of a statement within a clinical trial report can be exclusively ascertained by scrutinizing the report's content, considering medical jargon, context, and clarifying ambiguities or information voids.
+----------
+2->
+
+Determine with absolute certainty whether the truthfulness of a statement within clinical trial documentation can be exclusively ascertained through textual analysis, considering medical jargon, contextual comprehension, and the resolution of ambiguities or informational voids.
+----------
+3->
+
+Confirm with a "YES" or "NO" as to whether the truthfulness of a statement within a clinical trial documentation can be exclusively determined by scrutinizing the document's content, considering medical jargon, context, and the clarification of ambiguities or information gaps.
+----------
+4->
+
+Determine with a definitive YES or NO if the truthfulness of a statement within a clinical trial report can be solely ascertained by examining the report's content, considering medical jargon, contextual relevance, and resolving ambiguities or missing data.
+----------

@@ -1,0 +1,16 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->
+
+Conduct an unequivocal affirmative or negative assessment of the statement's validity strictly from clinical trial report data. Interpret and elucidate medical terminology and contextual nuances, addressing any ambiguities or data deficiencies.
+----------
+2->
+
+Execute a definitive YES or NO assessment of the statement's accuracy, solely based on clinical trial documentation. Interpret medical jargon and contextual subtleties, clarify ambiguities, and fill in any informational voids.
+----------
+3->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+4->
+
+Perform an unequivocal affirmative or negative evaluation of the statement's accuracy, solely based on information extracted from clinical trial records. Interpret medical jargon and contextual subtleties, and address any ambiguities or missing data.
+----------

@@ -1,0 +1,10 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Determine with a YES or NO if the statement's validity can be ascertained from the Clinical Trial Report (CTR) descriptions by analyzing medical terminology and context, addressing ambiguities or information gaps.
+----------
+2->Determine a definitive YES or NO response regarding the conclusion of a statement's validity, grounded solely on the comprehensive data presented within a clinical trial report.
+----------
+3->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+4->Determine a definitive YES or NO verdict on the statement's validity, grounded solely on the data extracted from the clinical trial report.
+----------

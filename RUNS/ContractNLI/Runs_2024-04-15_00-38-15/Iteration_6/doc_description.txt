@@ -1,0 +1,140 @@
+0->"Descriptions match NDA content."
+----------
+1->"This pertains to elements of the Non-Disclosure Agreement (NDA)."
+----------
+2->
+
+This instruction applies to the confidentiality sections of the Non-Disclosure Agreement (NDA).
+----------
+3->
+The information that follows is contained in the Non-Disclosure Agreement (NDA) sections of the agreement.
+----------
+4->The following corresponds to parts of the Non-Disclosure Agreement (NDA).
+----------
+5->
+
+Determine the confidentiality provisions, covered information, exclusions, timeframes, breach consequences, dispute settlement mechanisms, and applicable laws in the Non-Disclosure Agreement (NDA) relevant to the given descriptions.
+----------
+6->
+
+Access to the listed sections is restricted to individuals bound by a valid Non-Disclosure Agreement (NDA). The NDA encompasses the following elements:
+
+1. Confidentiality: Parties pledge to maintain secrecy over shared information.
+2. Scope: Defines the extent of protected information.
+3. Exceptions: Outlines excluded information from confidentiality obligations.
+4. Duration: Specifies the term of NDA confidentiality.
+5. Consequences: Lists remedies for breaching confidentiality.
+6. Disputes: Describes resolution methods for disagreements.
+7. Jurisdiction: Identifies applicable law and governing jurisdiction.
+
+Authorization for access is granted solely to individuals who have accepted the terms and conditions of a valid NDA.
+----------
+7->
+
+Only individuals with a valid Non-Disclosure Agreement (NDA) are permitted access to the following sections: [list sections here].
+----------
+8->
+
+Applies to confidentiality clauses in the following Non-Disclosure Agreement (NDA):
+----------
+9->
+
+An NDA includes the following sections:
+
+1. Confidentiality obligations for both parties.
+2. Definition of confidential material scope.
+3. Exemptions from confidentiality duties, if any.
+4. Specification of NDA duration.
+5. Penalties for breaching confidentiality.
+6. Dispute resolution provisions.
+7. Identification of governing jurisdiction and applicable law.
+----------
+10->
+
+Identify and manage the following commitments in the specified Non-Disclosure Agreement (NDA):
+
+1. Confidentiality: Maintain secrecy regarding disclosed, non-public information. Exclusions: Granted consents and legal necessities. Duration: Defined timeframe or agreement termination. Penalties: Breaches may trigger legal proceedings. Return/Destruction: Relinquish or obliterate all Confidential Information upon request or agreement end. Jurisdiction: Adheres to stated law and jurisdiction.
+----------
+11->
+
+Under an NDA's provisions:
+
+1. Parties pledge to safeguard disclosed data, including inferred information.
+2. Permitted disclosures include those authorized or compelled by law.
+3. Confidentiality terms may be time-bound or perpetual.
+4. Breaches may lead to fines, legal action, and return/destruction of Confidential Information upon request or agreement termination.
+5. The NDA falls under the specified jurisdiction and governing law.
+
+Scope: Confidentiality Obligations, Confidential Information, Exclusions, Duration, Remedies, Dispute Resolution, Governing Law.
+----------
+12->
+
+Manage the confidentiality aspects of a valid Non-Disclosure Agreement (NDA), which involve:
+
+1. Parties agreeing to maintain secrecy over shared information (Confidentiality).
+2. Defining the bounds of protected information (Scope).
+3. Excluding specific information from confidentiality obligations (Exceptions).
+4. Specifying the duration of NDA confidentiality (Duration).
+5. Outlining the consequences of breaching confidentiality (Consequences).
+6. Describing methods for resolving disputes (Disputes).
+7. Identifying the applicable law and governing jurisdiction (Jurisdiction).
+
+Access and modifications to these confidentiality provisions are permitted only for those who have acknowledged and adhered to the conditions of a valid NDA.
+----------
+13->
+
+This instruction is based on the NDA sections and their corresponding provisions in the agreement.
+----------
+14->
+
+An NDA (Non-Disclosure Agreement) requires parties to:
+
+1. Maintain confidentiality of disclosed, non-public information.
+2. Seek consent or adhere to legal obligations for disclosures.
+3. Abide by confidentiality restrictions for a specified duration or until agreement termination.
+4. Face potential penalties for breaches.
+5. Comply with requests to return or destroy Confidential Information at agreement end.
+6. Submit to the stated law and jurisdiction.
+----------
+15->
+
+Access to the following sections is restricted to individuals bound by a valid Non-Disclosure Agreement (NDA). An NDA is a contract that governs the sharing of confidential information between parties, consisting of:
+
+1. Confidentiality Obligations: Commitment to keep shared information confidential.
+2. Scope of Confidential Information: Definition of protected data boundaries.
+3. Exclusions: Listed exceptions to confidentiality obligations.
+4. Duration: Length of NDA protection.
+5. Remedies for Breach: Consequences for disclosing confidential information.
+6. Dispute Resolution: Methods for resolving disagreements.
+7. Governing Law: Jurisdiction and applicable law.
+
+The Disclosing Party is one of the parties involved in the NDA.
+----------
+16->
+
+Determine the confidentiality provisions, covered information, and applicable timeframes in the Non-Disclosure Agreement (NDA), ensuring consistency with the NDA's provisions in the given descriptions.
+----------
+17->
+
+Under the provisions of a Non-Disclosure Agreement (NDA):
+
+A. Parties pledge to maintain secrecy and protect disclosed information, comprising both identified confidential data and information that is not marked confidential but could be reasonably inferred as such.
+B. Exceptions to confidentiality obligations include disclosures granted with consent or mandated by law.
+C. The term of the NDA is either defined or persists until its termination.
+D. Violations of confidentiality may trigger penalties and potential legal consequences.
+E. Upon request or upon agreement termination, parties are responsible for returning or destroying all Confidential Information.
+F. The NDA is subject to the jurisdiction and applicable law indicated in the agreement.
+----------
+18->
+
+Identify the confidentiality terms, protected information, exceptions, duration, breach penalties, dispute resolution methods, and governing laws within the Non-Disclosure Agreement (NDA).
+----------
+19->
+Reference the Non-Disclosure Agreement (NDA) sections pertaining to:
+
+1. Confidentiality obligations
+2. Permitted disclosures
+3. Exclusions from confidential information
+4. Remedies for breach
+5. Duration and termination.
+----------

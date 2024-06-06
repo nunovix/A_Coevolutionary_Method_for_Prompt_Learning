@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Evaluate the statement's veracity by cross-referencing it with data extracted from clinical trial report descriptions. Conduct a thorough analysis of the medical terminology and context present in both the statement and the reports. Resolve any ambiguities or information gaps meticulously.
+----------
+2->
+
+Critically assess the statement's accuracy by meticulously cross-referencing it with data from clinical trial report descriptions. Conduct an in-depth analysis of the medical terminology and context within both the statement and the reports, ensuring clarity and resolving any ambiguities or information deficiencies with precision.
+----------
+3->
+
+Conduct an exhaustive examination and authentication of clinical trial documentation, meticulously deciphering medical terminology and contextual indicators to resolve ambiguities and supplement missing information with relevant data. Scrutinize the specialized medical language and contextual cues in clinical trial narratives and the statement in question, prioritizing exactitude and veracity in the validation process.
+----------
+4->
+
+Conduct a meticulous validation of clinical trial documentation by cross-referencing statements with data from trial reports. Analyze medical terminology and contextual cues, clarify ambiguities, and fill information voids with relevant details. Ensure a detailed examination of complex medical vocabulary and contextual indicators within the documents and statements to guarantee precision and accuracy in the validation process.
+----------

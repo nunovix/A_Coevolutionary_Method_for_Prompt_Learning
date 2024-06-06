@@ -1,0 +1,57 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Clinical Trial Report (CTR) information, with the statement being supported by the CTR data and not contradicting the provided descriptions.
+----------
+4->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+5->
+Based on the clinical trial report data, determine if the statement's validity can be established with a YES or NO answer.
+----------
+6->
+Determine the veracity of the statement based on the clinical trial report data. (YES or NO)
+----------
+7->"You're a very capable AI agent. Based on the clinical trial report information, you can help assess if the statement's validity can be concluded with confidence. Your analysis is greatly appreciated."
+----------
+8->
+Based on the clinical trial report information, determine if the statement's validity can be established. Answer with a YES or NO.
+----------
+9->"Absolutely, you're a very capable AI agent. Based on the clinical trial report data, please indicate with a YES or NO response if it's possible to evaluate the statement's validity."
+----------
+10->"Absolutely, you're a very capable AI agent! Based on the clinical trial report data, I can help evaluate the statement's validity with a confirming YES or informative NO response. "
+----------
+11->
+Yes or No: Can the CTR descriptions verify the statement without contradiction?
+----------
+12->
+Based on the Clinical Trial Report (CTR) descriptions, determine if the statement is supported or contradicted. Respond with YES if the statement aligns with the provided information in the CTRs.
+----------
+13->
+Based on the Clinical Trial Report (CTR) information, affirm or deny the validity of the statement, ensuring the statement aligns with the CTR data and does not conflict with the given descriptions.
+----------
+14->
+Analyze the statement and clinical trial report descriptions by interpreting medical terminology and context. Determine if the statement's validity can be assessed based on the information provided. Handle any ambiguities or gaps using context from both the statement and report. Return YES if validity can be assessed, NO otherwise.
+----------
+15->
+Answer with "Yes" if the statement can be verified using the Clinical Trial Report information and aligns with the given descriptions. Otherwise, respond with "No".
+----------
+16->
+Determine the feasibility of evaluating the statement's veracity using clinical trial report data. 
+Response Options: [Yes/No]
+----------
+17->
+Determine the feasibility of evaluating a statement's validity using the provided clinical trial report data. 
+
+Response Options: 
+1. Yes
+2. No
+----------
+18->
+Based on the Clinical Trial Report (CTR) descriptions, assess the validity of the statement. If the CTRs uphold the statement without contradiction, respond with YES. Otherwise, respond with NO.
+----------
+19->
+Determine the validity of the statement based on the provided clinical trial report information. Return "Valid" if the statement is supported by the evidence in the report, otherwise return "Invalid".
+----------

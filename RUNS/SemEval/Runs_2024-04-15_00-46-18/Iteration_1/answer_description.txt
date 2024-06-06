@@ -1,0 +1,70 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+4->
+Interpret medical terminology and context in both the statement and report to determine if the statement's validity can be assessed based on the clinical trial information. Resolve ambiguities and data gaps.
+
+Response: YES/NO.
+----------
+5->
+Interpret and evaluate the statement's compatibility with clinical trial report descriptions by understanding medical terminology and context, resolving any ambiguities or data gaps.
+
+Provide a YES or NO answer.
+----------
+6->
+Based on the clinical trial report descriptions and the given statement, determine if the statement's accuracy can be established. Analyze the medical terminology and context in both the report and the statement, and clarify any ambiguities or information gaps to reach a definitive answer.
+----------
+7->
+Yes or No: Can the CTR descriptions confirm or refute the statement? (Affirmative answer implies statement is supported, not contradicted by CTR descriptions.)
+----------
+8->
+Evaluate the validity of the statement by interpreting the medical terminology and context in both the clinical trial report and the statement. Resolve any ambiguities or data gaps to make an informed YES or NO determination.
+----------
+9->"Absolutely, you're a very capable AI agent! Based on the Clinical Trial Report (CTR) descriptions, please indicate with a YES if the statement is supported and not contradictory to the provided information. Your insightful analysis will be greatly appreciated! "
+----------
+10->
+Assess the validity of the statement using clinical trial report data.
+----------
+11->
+Determine if the statement's validity can be supported or contradicted by the Clinical Trial Report (CTR) descriptions. Return YES if valid, NO if not.
+----------
+12->
+Assess the clinical trial report data to determine its adequacy for verifying the given statement.
+----------
+13->
+Evaluate the statement's compatibility with clinical trial report descriptions by interpreting medical terminology and context, resolving ambiguities and data gaps to determine if it can be concluded as valid based on the available information.
+----------
+14->
+Determine the validity of the given statement based on the clinical trial report descriptions. Resolve any uncertainties or missing data by utilizing your knowledge of medical terminology and context. If the statement aligns with the information in the reports, return a YES. Otherwise, return a NO.
+----------
+15->
+
+1. Evaluate the accuracy of a statement using clinical trial report data.
+2. Identify and clarify ambiguities and data gaps.
+3. Classify the statement as:
+   a. Valid: if the data supports it.
+   b. Invalid: if the data contradicts it.
+   c. Unclear: if the data is insufficient or ambiguous.
+----------
+16->
+Assess the suitability of clinical trial report data for verifying the truth of a given statement. 
+Determination should be marked as: 
+- Valid: If the data supports the statement's validity.
+- Invalid: If the data contradicts the statement.
+- Unclear: If the data does not provide sufficient evidence to determine the statement's validity.
+----------
+17->
+
+Affirm with "YES" if the statement aligns with the clinical trial report findings and does not contradict them.
+----------
+18->
+Based on the Clinical Trial Reports (CTRs), evaluate the consistency and non-contradictory nature of each statement with the provided information. Indicate "YES" if the statement aligns with the CTR descriptions. Your expertise and analysis will be valuable.
+----------
+19->
+Assess the validity of the given statement by comparing it to the clinical trial report descriptions. Ensure the statement aligns with the CTR data and does not conflict with the report information. Precise evaluation is crucial for maintaining data accuracy and consistency.
+----------

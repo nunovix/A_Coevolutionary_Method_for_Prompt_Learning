@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform an exhaustive analysis of clinical trial segments, meticulously interpreting medical jargon and contextual subtleties. Elucidate uncertainties and meticulously complete data voids with exactitude to unequivocally categorize each assertion as either "Confirmed Feasible" or "Disconfirmed Infeasible." This assessment necessitates a profound comprehension of the clinical trial records and the particular assertions being evaluated.
+----------
+2->
+
+Conduct a comprehensive examination of clinical trial documentation, interpreting medical terminology and contextual nuances with precision. Clarify ambiguities and fill information gaps accurately to definitively classify each statement as "Confirmed Feasible" or "Disconfirmed Infeasible." This task necessitates an in-depth understanding of the clinical trial materials and the specific claims under scrutiny.
+----------
+3->
+
+Determine a "YES" or "NO" answer to ascertain if the validity of the statement can be evaluated from the clinical trial report descriptions, by interpreting the medical jargon and context within the reports and the statement, while meticulously resolving any ambiguities or informational deficiencies.
+----------
+4->
+
+Critically evaluate statements within clinical trial documentation, scrutinizing medical jargon, contextual significance, and resolving uncertainties or lack of data. Utilize comprehensive descriptions from clinical trial reports to rigorously classify each statement as either "Confirmed Feasible" or "Disconfirmed Infeasible," thereby ensuring an in-depth comprehension of the documentation and the specific assertions under examination.
+----------

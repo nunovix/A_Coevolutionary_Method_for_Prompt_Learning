@@ -1,0 +1,18 @@
+0->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs expound on the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or comparative analysis of two. For entailment validation, the statement's claim should align with clinical trial information, find support in the CTR, and refrain from contradicting provided descriptions.
+----------
+1->
+
+Execute a semantic entailment analysis linking segments from Clinical Trial Reports (CTRs) with expert assessments on the effectiveness and safety of cutting-edge medical treatments. Confirm entailment by verifying that expert claims are backed by CTR data, are consistent with given descriptions, and address both individual and comparative evaluations of the CTRs.
+----------
+2->
+
+Perform a semantic entailment analysis correlating segments from Clinical Trial Reports (CTRs) with expert evaluations regarding the efficacy and safety of novel medical interventions. Validate entailment by ensuring that expert assertions are substantiated by data from CTRs, align with the given descriptions, and encompass both singular and comparative assessments of CTRs.
+----------
+3->
+
+Conduct a semantic entailment analysis linking segments from Clinical Trial Reports (CTRs) with expert assessments regarding the effectiveness and safety profiles of new medical treatments. Confirm entailment by cross-referencing expert assertions with CTR data, ensuring congruence with given descriptions, and focusing on individual or comparative evaluations of CTRs.
+----------
+4->
+
+Conduct a semantic entailment analysis to correlate segments from Clinical Trial Reports (CTRs) with expert assessments regarding the efficacy and safety of novel medical treatments. Confirm entailment by verifying that expert claims are supported by evidence from CTRs, align with the given descriptions, and accurately depict individual or comparative evaluations of CTRs.
+----------

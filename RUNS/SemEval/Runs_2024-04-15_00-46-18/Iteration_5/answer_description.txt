@@ -1,0 +1,80 @@
+0->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+3->
+Interpret medical terminology and context in both the statement and report to determine if the statement's validity can be assessed based on the clinical trial information. Resolve ambiguities and data gaps.
+
+Response: YES/NO.
+----------
+4->
+Based on the clinical trial report descriptions and the given statement, determine if the statement's accuracy can be established. Analyze the medical terminology and context in both the report and the statement, and clarify any ambiguities or information gaps to reach a definitive answer.
+----------
+5->
+Yes or No: Can the CTR descriptions confirm or refute the statement? (Affirmative answer implies statement is supported, not contradicted by CTR descriptions.)
+----------
+6->"Absolutely, you're a very capable AI agent! Based on the Clinical Trial Report (CTR) descriptions, please indicate with a YES if the statement is supported and not contradictory to the provided information. Your insightful analysis will be greatly appreciated! "
+----------
+7->
+Assess the statement's conformity with clinical trial report descriptions by deciphering medical jargon and context, clarifying any uncertainties or missing information.
+
+Determine ANSWER: YES/NO.
+----------
+8->
+Interpret the medical terminology and context in both the clinical trial reports and the given statement to resolve any uncertainties or missing information. Ascertain the accuracy of the statement in relation to the reports. Provide a definitive response: YES/NO.
+----------
+9->
+Verify the validity of the statement by scrutinizing the clinical trial report and corresponding CTR descriptions. Resolve any unclear medical terminology or incomplete data to definitively approve or disapprove the statement with a straightforward YES or NO response.
+----------
+10->
+
+1. Use precise medical definitions to clarify any uncertainties in the statement according to Clinical Trial Report standards.
+2. Determine the alignment of the statement with clinical trial findings: consistent for supporting evidence, conflicting for opposing evidence, or uncertain for insufficient data.
+3. Thoroughly understand the medical terminology and context present in both the statement and the clinical trial report before providing a definitive answer (YES or NO).
+----------
+11->
+Evaluate the consistency of a statement with the Clinical Trial Report (CTR) descriptions by interpreting medical terminology and understanding the context. Resolve ambiguities and inconsistencies to affirm [for corroboration] or deny [for contradiction] the alignment of the statement with the CTR information.
+----------
+12->
+
+Assess the statement's validity using Clinical Trial Report (CTR) data:
+- Valid: When the data unambiguously upholds the statement.
+- Invalid: When the data contradicts the statement.
+- Unclear: When the data does not definitively prove or disprove the statement.
+
+Determine CTR data's eligibility for validity assessment:
+- Eligible: The data is obtainable and comprehensive for a validity judgment.
+- Ineligible: The data is absent or insufficient for a validity assessment.
+----------
+13->
+
+1. Use precise medical definitions to clarify any uncertainties in the statement, adhering to Clinical Trial Report standards.
+2. Assess the alignment of the statement with clinical trial findings: consistent for confirmatory evidence, conflicting for contradictory evidence, or uncertain for insufficient data.
+3. Thoroughly understand the medical terminology and context present in both the statement and the clinical trial report before rendering a definitive answer, whether YES or NO.
+----------
+14->
+
+1. Interpret the medical terminology and context in both the statement and the clinical trial reports to ensure accuracy and resolve any uncertainties or missing information.
+2. Employ pertinent medical definitions in accordance with Clinical Trial Report language to eliminate ambiguities in the statement.
+3. Evaluate the statement's compatibility with clinical trial data: confirmatory for agreeing evidence, contradictory for opposing evidence, or unclear for insufficient data.
+4. Verify a comprehensive grasp of the medical terminology and context in both the statement and the clinical trial reports before providing a definitive YES or NO response.
+----------
+15->
+
+Determine if a given statement aligns with Clinical Trial Report (CTR) descriptions. Interpret medical terminology and context from both sources, clarifying ambiguities, uncertainties, or omissions to deliver a clear Yes or No answer. Maintain accuracy and thoroughness throughout the assessment process.
+----------
+16->
+Evaluate the medical terminology and context in both the statement and clinical trial reports to determine the statement's validity based on the trial data. Clarify any ambiguities and data inconsistencies, and provide a conclusive answer: YES or NO.
+----------
+17->
+Assess the alignment of a statement with Clinical Trial Report (CTR) details by deciphering medical jargon and context, clarifying uncertainties or missing data. Issue a YES if the statement agrees and does not contradict CTR data.
+----------
+18->
+
+Assess the accuracy of the statement in light of the clinical trial report data. Decipher any medical jargon and understand the context within both the statement and report. Clarify any uncertainties or missing details to arrive at a definitive judgment.
+----------
+19->
+Assess the validity of the statement based on the clinical trial information by understanding the medical terminology and context in both the statement and report. Clarify any ambiguities or missing information to arrive at a definitive YES or NO response.
+----------

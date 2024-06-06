@@ -1,0 +1,26 @@
+0->Compose a clinical note following the format outlined in the provided example. Key sections to incorporate may include 'CHIEF COMPLAINT', 'CURRENT MEDICATIONS', 'PHYSICAL EXAM', 'HISTORY OF PRESENT ILLNESS', 'ASSESSMENT AND PLAN', among others. Refrain from adding extraneous details to ensure clarity and conciseness.  Sections should not be empty.
+----------
+1->Compose a clinical note following the format outlined in the provided example. Key sections to incorporate may include 'CHIEF COMPLAINT', 'CURRENT MEDICATIONS', 'PHYSICAL EXAM', 'HISTORY OF PRESENT ILLNESS', 'ASSESSMENT AND PLAN', among others. Refrain from adding extraneous details to ensure clarity and conciseness.  Sections should not be empty.
+----------
+2->Clinical Note:
+
+- CHIEF COMPLAINT: Patient presents with acute onset chest pain.
+
+- PHYSICAL EXAMINATION: Vital signs stable, chest auscultation reveals no abnormalities.
+
+- MEDICAL HISTORY: Previous myocardial infarction 5 years prior.
+
+- ASSESSMENT: Suspected recurrent angina.
+
+- PLAN: Order ECG and cardiac enzymes, prescribe nitroglycerin, and refer to cardiology.
+
+- REVIEW OF SYSTEMS: Negative for dyspnea, palpitations, syncope.
+
+- SOCIAL HISTORY: Non-smoker, moderate alcohol use.
+
+- PAST SURGICAL HISTORY: Cholecystectomy.
+----------
+3->Construct a detailed medical record, modeling after the given structured format, incorporating critical components including 'Principal Complaint', 'Current Illness Overview', 'Patient's Previous Health Record', 'Clinical Examination Findings', 'Diagnosis', and 'Treatment Strategy', with the addition of pertinent details such as 'Family Medical Background', 'Prescribed Medications', and 'Patient's Birth Record'. This record should be tailored for an expert audience, thoroughly capturing the patient's medical story.
+----------
+4->Develop a clinical note adhering to the given template, featuring essential components: 'CHIEF COMPLAINT', 'PATIENT EXAMINATION', 'PAST MEDICAL RECORDS', 'DIAGNOSIS EVALUATION', and 'TREATMENT PLAN'. Integrate optional elements such as 'SYSTEMS INVENTORY' and 'SOCIAL BACKGROUND', avoiding superfluous remarks. Maintain content precision.
+----------

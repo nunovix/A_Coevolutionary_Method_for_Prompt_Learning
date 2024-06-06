@@ -1,0 +1,75 @@
+Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+
+
+Determine the validity of the statement by interpreting the medical terminology and context in both the clinical trial report descriptions and the statement. Address any ambiguities or gaps in the information to ensure accurate assessment.
+----------
+
+
+Assess the consistency and lack of contradictions in the Clinical Trial Report (CTR) with regard to the statement. Provide essential CTR details to validate the statement's truthfulness (Answer: Yes or No).
+----------
+
+
+Evaluate the statement's authenticity by scrutinizing the complete clinical trial report data. Ensure all vital details are included and resolve any uncertainties to make an accurate determination. (Answer: Yes/No)
+----------
+
+Analyze the CTR and clinical trial report data in tandem to ascertain their congruence and accuracy in supporting the statement. If both sets of data align, respond with "Yes." Otherwise, respond with "No."
+----------
+
+
+Evaluate the accuracy and consistency of a clinical statement by examining the medical terminology, context, and data in both the Clinical Trial Report (CTR) descriptions and results. If the statement matches the verified CTR findings, respond with "YES". Otherwise, identify and clarify any ambiguities, discrepancies, or insufficient evidence to ensure a correct assessment.
+----------
+
+
+Assess the credibility of the clinical trial report data and provide a binary response: YES (if the data supports the statement) or NO (if it refutes it).
+----------
+
+
+Evaluate the conformity of the provided statement with the Clinical Trial Report (CTR) findings. Familiarize yourself with any medical jargon and context, and verify the alignment between the statement and CTR outcomes. Output: "CONSISTENT" for matching statements, "INCONSISTENT" for disparate statements. Supply pertinent CTR details as needed for confirmation.
+----------
+
+
+Determine the consistency and validity of the statement with the Clinical Trial Report (CTR) information. Gather and authenticate essential CTR details to clarify any ambiguities or discrepancies between the statement and the data. (Determination: Consistent and Valid or Inconsistent or Invalid)
+----------
+
+
+Assess the Clinical Trial Report (CTR) and accompanying data to determine if they confirm or refute the stated claim. Provide crucial CTR details that substantiate the claim's accuracy. Return "Yes," if the CTR or data substantiate the claim, or "No," if neither source verifies or contradicts it.
+----------
+
+
+Assess the accuracy and validity of a clinical statement by interpreting the medical terminology and context in both the Clinical Trial Report (CTR) passages and the statement itself. Gather essential CTR data for verification and validation, and resolve any ambiguities or discrepancies in the data to ensure an accurate evaluation.
+----------
+
+
+Assess the consistency and validity of the statement with the data presented in the Clinical Trial Report (CTR). Interpret the medical jargon and context of both the statement and the CTR to ensure agreement. Authenticate the data in the reports to confirm the statement and address any ambiguities or inconsistencies to ensure a trustworthy assessment. (Output: "Compatibility confirmed" or "Further investigation needed")
+----------
+
+
+Assess the congruence of the provided statement with the Clinical Trial Report (CTR) data. Ensure precision by interpreting any medical jargon, considering context, and verifying compatibility between the statement and CTR findings. Provide a binary response: "Yes" signifies consistent statements, "No" represents conflicting statements.
+----------
+
+Determine the concordance between the provided statement and Click-Through-Rate (CTR) data. Assess the alignment and validity of both data sets. Generate output as "Yes" for agreement, otherwise "No."
+----------
+
+Evaluate the consistency of the given statement with the information in the Clinical Trial Report (CTR). If consistent, provide the corresponding CTR details. If not, explain the discrepancies. (Indicate "Consistency confirmed" or "Discrepancies identified").
+----------
+
+
+Evaluate the clinical statement for compatibility and authenticity by scrutinizing both the CTR passages and the statement itself for consistency and factual correctness. Gather and authenticate crucial CTR details to ensure an accurate assessment and confirm the veracity of the statement. Elucidate any ambiguities or inadequacies in the data to prevent erroneous conclusions.
+----------
+
+
+Determine if the clinical trial report data and Control Group results correspond with the provided statement. If congruent and substantiate the claim, answer with "Yes." Otherwise, respond with "No."
+----------
+
+
+Determine the truthfulness of the statement by interpreting the medical terminology and context in the Clinical Trial Report data and the statement. Gather crucial CTR details to authenticate and verify the correspondence and authenticity of the data in both sources. Resolve any uncertainties or inconsistencies. (Outcome: Matched and Authentic (Affirmative) or Mismatched or Inauthentic (Negative))
+----------
+
+
+Assess the alignment and correctness of a clinical statement by understanding the medical terminology and context within each Clinical Trial Report (CTR) description. Identify and reconcile any discrepancies or inconsistencies in essential CTR details between the two sets of data. Provide a confirmation of "Yes" if both CTRs support the statement, or "No" if there are inconsistencies.
+----------
+
+
+Assess the conformity and authenticity of a clinical statement by scrutinizing the statement itself and the related Clinical Trial Report (CTR) sections. Confirm and authenticate CTR data, resolving any ambiguities or shortcomings for an accurate assessment. By analyzing the statement and CTR data in conjunction, decide if the statement aligns with the reported findings in the CTR. Respond with "Yes," if the statement is substantiated by either the statement or the CTR, and with "Undetermined," if neither supports nor contradicts it.
+----------

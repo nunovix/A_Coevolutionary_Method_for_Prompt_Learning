@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Deliver an unequivocal "Affirmative" or "Negative" verdict on the statement's accuracy in relation to clinical trial report descriptions. This requires an expert analysis of medical terminology, intricate contextual details, and the elimination of ambiguities or informational shortcomings from both the statement and the clinical trial report descriptions.
+----------
+2->
+
+Provide an expert-level "Affirmative" or "Negative" verdict on the statement's validity against the backdrop of clinical trial report descriptions. This necessitates a nuanced comprehension of medical jargon, contextual subtleties, and the ability to resolve ambiguities or fill informational gaps in both documents.
+----------
+3->
+
+Deliver an unequivocal "Affirmative" or "Negative" verdict on the statement's veracity when contrasted with clinical trial report descriptions. This mandates expert decoding of medical jargon, nuanced comprehension of contextual subtleties, and meticulous resolution of ambiguities or informational lacunae in both the reports and the statement. Ensure a comprehensive grasp of medical terminology and contextual complexities, and rigorously tackle any ambiguities or informational deficiencies.
+----------
+4->
+
+Provide an expert-level "Affirmative" or "Negative" verdict on the statement's validity against the backdrop of clinical trial report descriptions. This necessitates a nuanced comprehension of medical jargon, astute interpretation of contextual nuances, and adept resolution of ambiguities or informational lacunae in both the statement and the reports. Ensure a comprehensive grasp of medical terminology and contextual subtleties, while meticulously tackling any ambiguities or informational deficits.
+----------

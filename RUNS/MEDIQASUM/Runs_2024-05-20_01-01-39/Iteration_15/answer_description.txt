@@ -1,0 +1,10 @@
+0->Compose a clinical note following the format outlined in the provided example. Key sections to incorporate may include 'CHIEF COMPLAINT', 'CURRENT MEDICATIONS', 'PHYSICAL EXAM', 'HISTORY OF PRESENT ILLNESS', 'ASSESSMENT AND PLAN', among others. Refrain from adding extraneous details to ensure clarity and conciseness.  Sections should not be empty.
+----------
+1->Develop a clinical note adhering to the exemplar's structure, integrating critical components including 'PATIENT'S HISTORY', 'ACTIVE THERAPEUTICS', 'COMPREHENSIVE PHYSICAL ASSESSMENTS', and 'TENTATIVE DIAGNOSIS AND SUGGESTED FOLLOW-UP ACTIONS'. Ensure to include relevant information in each segment and provide additional explanations when needed for clarity, without compromising on conciseness or introducing inaccuracies.
+----------
+2->"Construct a clinical note in line with the exemplar structure, including sections 'PREMISE OF CARE', 'EXISTING THERAPEUTIC ACTIONS', 'KEY FINDINGS FROM PHYSICAL ASSESSMENT', 'ABBREVIATED HISTORY OF THE PROBLEM', 'DIAGNOSTIC THOUGHTS AND SPECIFIC FOLLOW-UPS'. Ensure each section is comprehensive and fill in any missing details for clarity, while maintaining conciseness. This instruction targets professionals in the medical field."
+----------
+3->- Construct a clinical note adhering to the specified structure, incorporating 'PREMISE OF CARE', 'CURRENT THERAPEUTIC INTERVENTIONS', 'PHYSICAL EXAMINATION INSIGHTS', 'HISTORICAL ANALYSIS OF THE CURRENT PROBLEM', and 'DIAGNOSTIC CONSIDERATIONS WITH SUGGESTED FOLLOW-UP ACTIONS'. Ensure that each section is detailed, filling in any missing information for accuracy and conciseness.
+----------
+4->"Compose a clinical note in the format provided, integrating key sections such as 'PREMISE OF CARE', 'CURRENT THERAPEUTIC INTERVENTIONS', 'PHYSICAL EXAM INSIGHTS', 'COMPREHENSIVE HISTORY OF THE CHIEF COMPLAINT', 'DIAGNOSTIC ANALYSIS AND SPECIFIC FOLLOW-UP ACTIONS'. Ensure each section is filled with pertinent details, avoiding any unnecessary elaboration to preserve clarity and succinctness."
+----------

@@ -1,0 +1,10 @@
+0->You will be given a sample clinical note as a reference. Your task is to create a new clinical note that mirrors the format of the example. Feel free to use similar section headings as those in the sample, though it's not mandatory.
+----------
+1->"Review the supplied clinical note excerpt and produce an analogous note with similar formatting and content. Adapt the sections to retain professional clarity for clinical specialists."
+----------
+2->You will be given a sample clinical note as a reference. Your task is to create a new clinical note that mirrors the format of the example. Feel free to use similar section headings as those in the sample, though it's not mandatory.
+----------
+3->Generate a clinical note replicating the sample format, including optional section headings for reference.
+----------
+4->"Develop a comprehensive clinical note, using the given note as a foundational template, ensuring a parallel structure and content. Adapt and refine the section contents to match expert standards."
+----------

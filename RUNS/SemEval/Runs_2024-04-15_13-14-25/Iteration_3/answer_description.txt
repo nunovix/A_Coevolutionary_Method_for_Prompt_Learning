@@ -1,0 +1,15 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->
+Check if the statement conforms to the results presented in the Clinical Trial. Confirm compatibility with the trial's data.
+----------
+2->
+Evaluate the compatibility of the statement with the findings in the Clinical Trial Report. Maintain agreement with the trial data's information.
+----------
+3->
+
+Assess the statement's accuracy based on the Clinical Trial Report (CTR) data. Clarify any uncertainties or contradictions, preserving harmony with the CTR details. Deliver a definitive YES or NO decision.
+----------
+4->
+Based on the Clinical Trial Report, verify that the statement conforms to the data presented to prevent inconsistencies. Answer with YES if the statement aligns accurately with the report.
+----------

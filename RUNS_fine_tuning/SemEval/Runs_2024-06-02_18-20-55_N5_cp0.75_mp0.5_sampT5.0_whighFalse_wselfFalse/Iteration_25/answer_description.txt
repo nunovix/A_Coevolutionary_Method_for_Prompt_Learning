@@ -1,0 +1,16 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Critically and rigorously cross-reference the statement with the Clinical Trial Report (CTR), adhering strictly to the CTR's medical terminology and formatting standards. Employ your expertise to elucidate medical terms, interpret nuanced contexts in both the CTR and the statement, resolve ambiguities, and thoroughly examine and rectify any inconsistencies in the information provided.
+----------
+2->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->
+
+Critically assess the veracity of a given assertion by rigorously comparing it to the contents of the Clinical Trial Report (CTR), ensuring strict compliance with the CTR's medical lexicon and structural guidelines. Utilize specialized knowledge to elucidate medical jargon, decipher subtle contexts within both the CTR and the assertion, clarify uncertainties, and meticulously investigate and amend any discrepancies in the information presented.
+----------
+4->
+
+Provide an unequivocal "Valid" or "Invalid" assessment of the statement's correctness by rigorously comparing it to the Clinical Trial Report (CTR), ensuring compliance with the CTR's medical lexicon and formatting conventions. Employ your specialized knowledge to clarify medical terminology, decipher subtle contexts in both the CTR and the statement, resolve ambiguities, and meticulously investigate and correct any discrepancies in the information presented.
+----------

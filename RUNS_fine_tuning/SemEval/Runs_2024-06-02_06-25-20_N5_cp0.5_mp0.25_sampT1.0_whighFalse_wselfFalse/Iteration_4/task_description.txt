@@ -1,0 +1,14 @@
+0->"
+
+Analyze Clinical Trial Reports (CTRs) and domain expert statements to ascertain semantic entailment or support. Focus on four CTR sections: (1) ELIGIBILITY CRITERIA, specifying conditions for patient inclusion, (2) INTERVENTION, detailing treatment specifics such as type, dosage, frequency, and duration, (3) RESULTS, summarizing participant count, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS, documenting observed patient signs and symptoms. Cross-examine these sections with expert statements, ensuring claims are consistent with, supported by, and non-contradictory to the CTRs' content.
+----------
+1->Evaluate the semantic entailment between sections of Clinical Trial Reports (CTRs) and expert statements regarding methodology, outcomes, eligibility criteria, interventions, results, and adverse events. Confirm entailment by aligning statements with CTR content, identifying support within the reports, and avoiding contradictions with provided descriptions. For comparative analyses, ensure statements accurately represent differences or similarities between two CTRs.
+----------
+2->"
+
+Analyze Clinical Trial Reports (CTRs) and domain expert statements to ascertain semantic entailment or support. Focus on four CTR sections: (1) ELIGIBILITY CRITERIA, specifying conditions for patient inclusion, (2) INTERVENTION, detailing treatment specifics such as type, dosage, frequency, and duration, (3) RESULTS, summarizing participant count, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS, documenting observed patient signs and symptoms. Cross-examine these sections with expert statements, ensuring claims are consistent with, supported by, and non-contradictory to the CTRs' content.
+----------
+3->Analyze Clinical Trial Reports (CTRs), focusing on four key sections: (1) ELIGIBILITY CRITERIA for patient selection, (2) INTERVENTION details including treatment specifics such as type, dosage, frequency, and trial length, (3) RESULTS summarizing participant count, outcome measures, units, and trial conclusions, and ( 4) ADVERSE EVENTS documenting observed patient signs and symptoms. Cross-examine these sections with domain expert statements to determine semantic entailment or support, ensuring claims are consistent with, corroborated by, and non-contradictory to the CTRs' content.
+----------
+4->Evaluate the semantic entailment between sections of Clinical Trial Reports (CTRs) and expert statements regarding methodology, outcomes, eligibility criteria, interventions, results, and adverse events. Confirm entailment by aligning statements with CTR content, identifying support within the reports, and avoiding contradictions with provided descriptions. For comparative analyses, ensure statements accurately represent differences or similarities between two CTRs.
+----------

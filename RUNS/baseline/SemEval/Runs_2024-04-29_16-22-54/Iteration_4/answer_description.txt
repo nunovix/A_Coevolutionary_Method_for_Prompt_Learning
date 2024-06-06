@@ -1,0 +1,13 @@
+0->
+Assess the clinical trial findings to ascertain if they substantiate or contradict the given statement. Deliver a conclusive "Yes" if the data validates the statement, or a "No" if it disputes it.
+----------
+1->
+Evaluate the consistency of the statement with the information in the Clinical Trial Reports (CTRs). If no conflicting data is found, respond with "yes".
+----------
+2->
+Analyze the clinical trial findings to ascertain if they substantiate or contradict the proposed statement. Provide a conclusive "Yes" if the data corroborates the statement, or "No" if it disputes it.
+----------
+3->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+4->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------

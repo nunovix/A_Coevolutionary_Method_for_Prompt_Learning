@@ -1,0 +1,16 @@
+0->Your task is determining support relationships between individual sections of Clinical Trial Reports (CTRs) and clinical statements. CTRs detail the methodology and findings of clinical trials, assessing effectiveness and safety of new treatments. CTRs consist of 4 sections: (1) ELIGIBILITY CRITERIA listing conditions for patient participation, (2) INTERVENTION description specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary detailing participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing signs and symptoms observed. Statements make claims about information in these sections, either for a single CTR or comparing two.
+----------
+1->Analyze Clinical Trial Reports (CTRs) by delineating the supportive relationships between their four principal sections—Eligibility Criteria, Intervention, Results, and Adverse Events—and associated clinical statements. These sections define patient participation conditions, treatment specifics (type, dosage, frequency, and duration), summarized participant data and outcomes, as well as documented adverse signs and symptoms. Interpret clinical statements in relation to these sections, referencing a single CTR or contrasting findings across multiple CTRs, ensuring precision and clarity for field experts.
+----------
+2->
+
+Conduct an exhaustive semantic analysis to correlate segments within Clinical Trial Reports (CTRs) and authoritative clinical statements, verifying therapeutic efficacy and safety profiles. Ensure alignment of expert assertions with CTRs' eligibility criteria, intervention specifics, outcomes, and adverse event documentation, maintaining coherence and non-contradiction in both individual and comparative analyses of CTRs.
+----------
+3->
+
+Conduct an exhaustive semantic analysis to link segments within Clinical Trial Reports (CTRs) with authoritative clinical statements, verifying therapeutic efficacy and safety profiles. Align expert claims with CTRs' eligibility criteria, intervention specifics, outcomes, and adverse event records, ensuring coherence and non-contradiction across individual or comparative CTR analyses. Confirm consistency and absence of contradictions with expert clinical assertions regarding eligibility criteria, intervention specifics, outcomes, and adverse events.
+----------
+4->
+
+Execute a comprehensive semantic analysis to correlate segments within Clinical Trial Reports (CTRs) with authoritative clinical claims, verifying therapeutic efficacy and safety profiles. Ensure alignment with expert testimonies regarding eligibility criteria, intervention specifics, outcomes, and adverse events across individual or multiple CTRs, confirming consistency and absence of contradictions with expert clinical assertions.
+----------

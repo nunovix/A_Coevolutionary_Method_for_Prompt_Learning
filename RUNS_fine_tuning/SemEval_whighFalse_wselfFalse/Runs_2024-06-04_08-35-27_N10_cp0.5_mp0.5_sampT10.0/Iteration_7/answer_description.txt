@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform an exhaustive verification of the accuracy within clinical trial records. Precise interpretation of medical jargon and contextual subtleties is imperative. Clarify any vagueness and fill informational gaps, utilizing pertinent data for thorough elucidation.
+----------
+2->
+
+Assess the veracity of assertions within clinical trial documentation by deciphering medical jargon and contextual cues, clarifying ambiguities, and filling informational voids utilizing available data.
+----------
+3->
+
+Conduct a meticulous assessment of the veracity of assertions in clinical trial documentation. Decode medical terminology and contextual nuances with exactitude. Elucidate ambiguities comprehensively and rectify informational lacunae.
+----------
+4->
+
+Perform a rigorous evaluation of the accuracy of statements within clinical trial records. Interpret medical jargon and contextual subtleties with precision. Thoroughly elucidate ambiguities and fill informational gaps.
+----------

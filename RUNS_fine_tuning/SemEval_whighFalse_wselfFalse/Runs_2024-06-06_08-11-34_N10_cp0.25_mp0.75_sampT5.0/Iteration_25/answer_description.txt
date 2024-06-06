@@ -1,0 +1,14 @@
+0->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+1->Determine if the statement is congruent with the Clinical Trial Report (CTR) descriptions by responding with a definitive YES or NO. A YES indicates agreement with the CTR descriptions, signifying no conflict with the provided information.
+----------
+2->
+
+Deliver an unequivocal YES or NO verdict to evaluate the congruence of the statement with the Clinical Trial Report (CTR) descriptions, maintaining strict adherence to the specified details.
+----------
+3->
+
+Deliver an unequivocal YES or NO verdict to determine the congruence of the statement with the Clinical Trial Report (CTR) descriptions, ensuring there is no discordance with the information provided.
+----------
+4->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------

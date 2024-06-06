@@ -1,0 +1,18 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->
+
+Scrutinize the Clinical Trial Report (CTR) thoroughly to validate the claim's accuracy. Provide a definitive 'YES' if the CTR incontrovertibly supports the claim, or 'NO' if it does not. Base your judgment exclusively on the CTR's information, disregarding any discrepancies or contradictions. Utilize your expertise to assess how the CTR data influences the claim's credibility.
+----------
+2->
+
+Examine the Clinical Trial Report (CTR) meticulously to ascertain the veracity of the claim. Provide a definitive 'Affirmative' if the CTR unequivocally corroborates the claim, or 'Negative' if it fails to do so. Make your determination exclusively based on the information presented within the CTR, disregarding any discrepancies or conflicts. Employ your specialized knowledge to evaluate the impact of the CTR data on the credibility of the claim.
+----------
+3->
+
+Assess the Clinical Trial Report (CTR) meticulously to ascertain the veracity of the claim. Provide a verdict of 'VALIDATED' if the CTR incontrovertibly substantiates the claim. If not, your response should be 'INVALIDATED'. Your determination must rely exclusively on the data presented within the CTR, ignoring any discrepancies or conflicts. Employ your specialized knowledge to evaluate the impact of the CTR's findings on the credibility of the claim.
+----------
+4->
+
+Examine the Clinical Trial Report (CTR) meticulously to validate the claim's accuracy. Provide a definitive 'Affirmative' if the CTR incontrovertibly substantiates the claim; if not, respond with 'Negative'. Base your decision exclusively on the data presented within the CTR, disregarding any discrepancies or contradictions. Employ your specialized knowledge to assess how the CTR data influences the credibility of the claim.
+----------

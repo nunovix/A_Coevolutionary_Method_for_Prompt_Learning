@@ -1,0 +1,14 @@
+0->Assess the semantic entailment between sections of Clinical Trial Reports (CTRs) and assertions made by clinical experts. Analyze CTRs detailing clinical trial methodologies and results, focusing on treatment effectiveness and safety. Compare expert statements, which claim specific information from a single CTR or between two CTRs, ensuring these claims are consistent with clinical trial data, substantiated by the respective CTRs, and do not conflict with the given descriptions.
+----------
+1->
+
+Perform an in-depth semantic comparison between Clinical Trial Reports (CTRs) and clinical expert testimonies, focusing on methodologies, results, treatment effectiveness, and safety. Verify that expert statements, derived from individual or multiple CTRs, are consistently supported by the respective reports, aligning with provided descriptions and avoiding contradictions.
+----------
+2->Perform an in-depth semantic analysis of Clinical Trial Reports (CTRs) and professional clinical assertions, verifying treatment efficacy and safety. Examine the methodologies and results in CTRs to ensure expert claims are data-backed, consistent across various reports, and in harmony with provided descriptions, while steering clear of contradictions.
+----------
+3->
+
+Perform an in-depth semantic comparison between Clinical Trial Reports (CTRs) and clinical expert testimonies. Analyze CTRs that document clinical trials, focusing on the efficacy and safety of treatments. Verify that expert assertions, derived from individual or multiple CTRs, are substantiated by the respective CTRs, aligning with the given descriptions and avoiding discrepancies.
+----------
+4->Perform an exhaustive semantic analysis of Clinical Trial Reports (CTRs) and expert clinical claims, prioritizing the assessment of treatment efficacy and safety. Scrutinize the methodologies and findings detailed in CTRs to ascertain that expert assertions are data-driven, corroborated by the respective CTRs, and consistent with provided descriptions, while preventing any discrepancies or contradictions.
+----------

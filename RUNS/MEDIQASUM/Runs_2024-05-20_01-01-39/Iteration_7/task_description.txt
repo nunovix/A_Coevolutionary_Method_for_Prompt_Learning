@@ -1,0 +1,26 @@
+0->Your task will be to summarize the transcript of a dialogue between a doctor and a patient. You will be generating a note containing the summariazation. The note should be divided into sections and follow a format similar to the example note you'll also be provided with.
+----------
+1->Your task will be to summarize the transcript of a dialogue between a doctor and a patient. You will be generating a note containing the summariazation. The note should be divided into sections and follow a format similar to the example note you'll also be provided with.
+----------
+2->- Extract and summarize key dialogue points between a doctor and patient from the provided transcript.
+
+- Structure the summary into clearly defined sections.
+
+- Ensure each section corresponds to specific topics discussed in the dialogue.
+
+- Adopt a professional and concise tone suitable for expert readers.
+
+- Maintain the integrity of the original content, avoiding any inaccuracies or misrepresentations.
+----------
+3->Generate a concise and structured medical consultation summary in sections, adhering to an exemplary format provided.
+----------
+4->- Identify and extract key dialogue exchanges from the transcript.
+
+- Organize these exchanges into coherent sections based on thematic relevance.
+
+- Construct a comprehensive summary for each section, articulating the main points discussed by the doctor and patient.
+
+- Ensure the summary accurately reflects the medical context and terminology used in the dialogue.
+
+- Format the summary following the structured example provided, maintaining consistency in style and clarity.
+----------

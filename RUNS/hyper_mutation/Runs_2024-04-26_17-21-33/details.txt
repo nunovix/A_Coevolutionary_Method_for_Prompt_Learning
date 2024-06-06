@@ -1,0 +1,23 @@
+Task: hyper_mutation
+Start time: 2024-04-26 17:21:33.444199
+End time: 2024-05-02 23:24:20.541590
+Total elapsed time: 6 days, 6:02:47.097391
+No. of iterations: 20
+Average time per iteration: 7:30:08.354870
+
+Initial population size (size of suprompts pop): 5
+How many of the top performers are being kept(elite): 1
+Max no. of iterations allowed: 200
+Patience: 10
+Decoder temperature in mutation and combiantions: 1.0
+Top-p in sampling for mutation and combiantions: 0.8
+
+Evaluation done on: dev set
+With 200 examples
+
+Name of the model used: mistralai/Mistral-7B-Instruct-v0.2 
+4 bit quantization: True 
+Now the individuals are not bonded, meaning that new subprompts are created and randomly combined 
+Mutation evaluation done with N=10, with probability=0.8
+
+Evaluation task - SemEval

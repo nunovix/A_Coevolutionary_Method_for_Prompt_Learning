@@ -1,0 +1,71 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->
+Interpret medical terminology and context in both the statement and report to determine if the statement's validity can be assessed based on the clinical trial information. Resolve ambiguities and data gaps.
+
+Response: YES/NO.
+----------
+2->
+Based on the clinical trial report descriptions and the given statement, determine if the statement's accuracy can be established. Analyze the medical terminology and context in both the report and the statement, and clarify any ambiguities or information gaps to reach a definitive answer.
+----------
+3->
+Yes or No: Can the CTR descriptions confirm or refute the statement? (Affirmative answer implies statement is supported, not contradicted by CTR descriptions.)
+----------
+4->
+Verify the validity of the statement by scrutinizing the clinical trial report and corresponding CTR descriptions. Resolve any unclear medical terminology or incomplete data to definitively approve or disapprove the statement with a straightforward YES or NO response.
+----------
+5->
+Indicate with a YES if the statement aligns and is supported by the Clinical Trial Report (CTR) descriptions.
+----------
+6->
+Evaluate the accuracy of the statement based on the clinical trial report data. This requires comprehending the medical jargon and context present in both the statement and the report. Respond with either "YES" for a valid statement, or "NO" for an invalid one.
+----------
+7->
+Evaluate the accuracy of the statement derived from Clinical Trial Reports. Decipher medical jargon and context. Clarify ambiguities and data discrepancies.
+
+Answer: [Provide a clear and concise response, affirming or denying the statement's validity based on the analysis of the Clinical Trial Reports.]
+----------
+8->
+Evaluate the statement's accuracy by deciphering the medical terminology and context present in both the statement and the clinical trial report. Clarify any ambiguities and data deficiencies. Determine if the CTR findings lend credence to or refute the statement. A positive indication implies corroboration, not refutation.
+----------
+9->
+Examine the clinical trial report and corresponding CTR descriptions to ensure accuracy and clarity of statements. Resolve any ambiguities or inadequacies in medical terminology or data, and verify that statements are consistent with the clinical trial report information. Confirm statements with a "Yes" if they are valid and non-contradictory based on the report data.
+----------
+10->
+Examine the clinical trial report and associated CTR descriptions to determine the statement's validity. Clarify any unclear medical terminology or incomplete data, resulting in a definitive YES or NO answer.
+----------
+11->
+Evaluate the accuracy of the statement by deciphering the medical terminology and context within the statement and Clinical Trial Report (CTR). Clarify any ambiguities and fill in data gaps as required. Deliver a YES response if the statement agrees and is substantiated by the corresponding CTR details.
+----------
+12->
+
+Assess the clinical trial reports to authenticate given statements, clarifying any ambiguous medical terminology, resolving discrepancies in clinical data, and reconciling any inconsistencies in report descriptions. Provide a definitive conclusion affirming or denying the statement's validity.
+----------
+13->
+
+Evaluate the statement's validity by examining its compatibility with the medical terminology and context in the clinical trial report. Clarify any ambiguities and fill in missing information through an understanding of the relevant medical terminology. Make a decision to approve or deny based on whether the clinical trial outcomes support or conflict with the statement.
+----------
+14->
+Based on a detailed analysis of the clinical trial report and its corresponding Concept Term Reports (CTRs), resolve any uncertainties and fill in any missing data using precise medical terminology. Interpret the meaning of the CTRs and assess if the findings align with or contradict the given statement. A positive connotation implies that the CTR findings strengthen the statement's validity.
+----------
+15->
+
+1. Evaluate Clinical Trial Reports for accuracy: Verify statements, understand medical jargon, clarify ambiguities, and resolve discrepancies in data. 
+
+[Determine the validity of the statement: Affirm if analysis supports it, or refute if inconsistencies are found. ]
+----------
+16->
+
+Assess the accuracy, relevance, and validity of each statement in correlation with the clinical trial report findings. Clarify any ambiguities in medical jargon and include all essential information. Formulate a conclusive determination based on this analysis.
+----------
+17->
+
+Evaluate and confirm the precision, accuracy, and consistency of statements in CTR descriptions against clinical trial report data. Resolve any discrepancies in medical terminology and ensure all necessary data is present for valid statement confirmation. Offer a definitive YES or NO decision based on this assessment.
+----------
+18->
+Verify the accuracy and consistency of medical terminology and statements in clinical trial reports, resolving any discrepancies or ambiguities to ensure valid statement confirmation based on the trial information.
+----------
+19->
+
+Evaluate the accuracy of the statement by deciphering medical terminology and context in both the statement and the Clinical Trial Report (CTR). Clarify any uncertainties and data discrepancies to maintain harmony between the statement and the CTR descriptions. Return a affirmative response if the CTR corroborates the statement, and a negative response if it contradicts it.
+----------

@@ -1,0 +1,14 @@
+0->Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR), ensuring the statement aligns with the CTR data and does not conflict with the provided descriptions.
+----------
+1->
+
+Perform a detailed examination of the statement's alignment with the Clinical Trial Report (CTR) data, ensuring an in-depth comprehension of medical jargon and context. Elucidate ambiguities and fill information voids within the CTR narrative. Render a conclusive judgment of 'CONSISTENT' or 'INCONSISTENT', affirming the statement's concordance with the CTR and ascertaining the non-existence of contradictions, intended for an expert readership.
+----------
+2->
+
+Conduct an in-depth analysis of the statement's alignment with the Clinical Trial Report (CTR) data, showcasing expertise in medical terminology and contextual comprehension. Integrate your findings into the CTR narrative by elucidating ambiguities and filling information voids. Deliver a conclusive verdict of 'CONSISTENT' or 'INCONSISTENT', justifying the statement's congruence with the CTR, while meticulously avoiding any discrepancies, prioritizing precision and lucidity for a specialist readership.
+----------
+3->Carry out a comprehensive analysis of the statement's alignment with the Clinical Trial Report (CTR) data, ensuring a thorough understanding of medical terminology and context. Integrate your findings into the CTR narrative, clarifying ambiguities and filling informational gaps. Render a definitive verdict of 'CONSISTENT' or 'INCONSISTENT', ascertaining the statement's congruence with the CTR, and ensuring no contradictions are present, all crafted for a specialist readership.
+----------
+4->Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR), ensuring the statement aligns with the CTR data and does not conflict with the provided descriptions.
+----------

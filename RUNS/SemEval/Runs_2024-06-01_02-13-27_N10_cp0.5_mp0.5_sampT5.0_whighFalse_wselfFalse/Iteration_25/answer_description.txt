@@ -1,0 +1,16 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->
+
+Conduct an expert-level, detailed analysis of the Clinical Trial Report (CTR), employing advanced clinical trial expertise to rigorously authenticate the factual accuracy and critically examine the trial data, affirmatively or negatively assessing the statement's validity.
+----------
+2->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+3->
+
+Execute a detailed, expert-level verification of the Clinical Trial Report (CTR), applying advanced clinical trial knowledge to rigorously validate the factual correctness and critically scrutinize the trial data.
+----------
+4->
+
+Perform an in-depth, expert-level evaluation of the Clinical Trial Report (CTR), applying advanced clinical trial knowledge to rigorously verify the factual correctness and critically scrutinize the trial data.
+----------

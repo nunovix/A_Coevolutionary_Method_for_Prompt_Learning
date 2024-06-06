@@ -1,0 +1,47 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->
+Based on the clinical trial report data, determine if the statement's validity can be established with a YES or NO response.
+----------
+2->
+
+1. Determine the conformity or disagreement between a statement and clinical trial results:
+   A. Conform: The statement aligns with the trial findings.
+   B. Disagree: The statement opposes the trial results.
+
+2. Evaluate the sufficiency of clinical trial data to establish the statement's accuracy:
+   A. Adequate: The data is sufficient to either authenticate or debunk the statement.
+   B. Inadequate: The data is insufficient to confirm or disprove the statement's validity.
+
+3. Determine the outcome of the statement-trial evaluation:
+   A. Confirm: When the statement conforms to the trial outcomes and there is sufficient data.
+   B. Reject: When the statement disagrees with the trial findings or the data is inadequate.
+
+4. Respond with a YES or NO based on the statement
+----------
+3->
+
+Assess the agreement between a given statement and clinical trial data, as well as the conclusiveness of the evidence:
+
+1. Consistent and Conclusive: The statement aligns with trial outcomes and the data provides robust and conclusive evidence to substantiate it.
+2. Inconsistent and Insufficient: The statement contradicts trial findings and the data does not refute it, or the data is insufficient to support either the statement or trial results.
+3. Indeterminate: The relationship between the statement and trial data remains ambiguous, warranting further investigation.
+
+Based on the assessment, decide on the action to take:
+
+A. Affirm: When the statement agrees with trial outcomes and the data is conclusive.
+B. Negate: When the statement contradicts trial findings or the data is insufficient.
+----------
+4->
+
+Assess the validity of a given statement by evaluating its alignment with clinical trial report outcomes and the adequacy of the data:
+
+1. Concordant and Adequate: The statement agrees with trial findings and the data provides robust evidence to substantiate it (YES).
+2. Discordant and Inadequate: The statement contradicts trial results or the data lacks sufficient evidence to prove it wrong (NO).
+3. Indeterminate: The relationship between the statement and trial data remains unclear, warranting further investigation.
+
+Determine your course of action based on the assessment of the statement-trial relationship and data adequacy:
+
+A. Affirm: When the statement aligns with trial findings and the data is sufficient.
+B. Negate: When the statement contradicts trial findings or the data is insufficient.
+----------

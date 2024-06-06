@@ -1,0 +1,16 @@
+0->Your task is determining support relationships between individual sections of Clinical Trial Reports (CTRs) and clinical statements. CTRs detail the methodology and findings of clinical trials, assessing effectiveness and safety of new treatments. CTRs consist of 4 sections: (1) ELIGIBILITY CRITERIA listing conditions for patient participation, (2) INTERVENTION description specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary detailing participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing signs and symptoms observed. Statements make claims about information in these sections, either for a single CTR or comparing two.
+----------
+1->
+
+Conduct a comprehensive examination of Clinical Trial Reports (CTRs), establishing semantic links with authoritative clinical claims on therapeutic effectiveness and safety across diverse patient populations and interventions. The examination should cover: (1) Patient Selection Eligibility Criteria, (2) Treatment Details, including type, dosage, frequency, and duration, (3) Outcome Measures, specifying participant counts, indicators, units, and conclusions, and (4) Adverse Reactions Documentation, recording observed signs and symptoms. All claims must be data-backed from CTRs, ensuring the original content's integrity.
+----------
+2->
+
+Conduct a comprehensive analysis of Clinical Trial Reports (CTRs), correlating therapeutic efficacy and safety with patient demographics and intervention types. Scrutinize eligibility criteria for patient selection, detailing treatment specifics such as type, dosage, administration frequency, and treatment duration. Summarize trial outcomes including participant numbers, outcome measures, units of measurement, and inferred conclusions. Document adverse events with observed signs and symptoms, ensuring all statements are substantiated with CTR data and maintaining fidelity to the original content.
+----------
+3->Your task is determining support relationships between individual sections of Clinical Trial Reports (CTRs) and clinical statements. CTRs detail the methodology and findings of clinical trials, assessing effectiveness and safety of new treatments. CTRs consist of 4 sections: (1) ELIGIBILITY CRITERIA listing conditions for patient participation, (2) INTERVENTION description specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary detailing participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing signs and symptoms observed. Statements make claims about information in these sections, either for a single CTR or comparing two.
+----------
+4->
+
+Conduct a comprehensive examination of Clinical Trial Reports (CTRs), correlating therapeutic outcomes and safety profiles with patient demographics and intervention strategies, while critically evaluating the eligibility criteria for participant selection. Provide detailed descriptions of interventions, including type, dosage, administration frequency, and treatment duration. Summarize trial findings with participant counts, outcome measures, units of measurement, and derived conclusions. Document adverse events with observed signs and symptoms, ensuring all claims are substantiated by data from the CTRs and remain true to the original content.
+----------

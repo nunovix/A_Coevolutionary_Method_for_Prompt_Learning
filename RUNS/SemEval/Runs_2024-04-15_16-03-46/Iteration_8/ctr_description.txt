@@ -1,0 +1,81 @@
+0->
+The descriptions correspond to information in one of the following clinical trial report sections: Introduction, Methods, Results, or Discussion.
+----------
+1->
+This instruction pertains to one of the four sections in a Clinical Trial Report.
+----------
+2->
+
+Collect crucial information from the designated parts of Clinical Trial Reports (CTRs): Introduction, Methods, Results, or Discussion.
+----------
+3->
+Retrieve the Introduction, Methods, Results, and Discussion sections from the designated clinical trial report repository.
+----------
+4->
+Extract and confirm the accuracy of the Introduction, Methods, Results, or Discussion sections from the Clinical Trial Report in the shared repository. Compare the extracted information with the given material descriptions to ensure correspondence. 
+
+Ensure the precision and consistency of the data in both the extracted sections and the provided material descriptions to avoid potential errors and confusion.
+----------
+5->
+
+Retrieve and analyze the following sections from a Clinical Trial Report in the shared database for comparison with specified material descriptions: Methods, detailing research methods and interventions; Results, presenting data and statistical analyses; and Discussion, interpreting findings, examining implications, and referencing related literature.
+----------
+6->
+The following instruction relates to a specific section in a Clinical Trial Report.
+----------
+7->
+
+Gather the Introduction, Methods, Results, and Discussion sections from the designated clinical trial reports. Extract the vital information contained therein.
+----------
+8->
+
+Identify and mark the relevant sections in the Clinical Trial Report from the shared repository, including: Methods (for research methods, interventions, and study participants), Results (for data and statistical analyses), and Discussion (for result interpretation, implications, limitations, and literature connection).
+----------
+9->
+
+Collect the Introduction, Methods, Results, and Discussion sections from Clinical Trial Reports in the shared repository. These parts contain the study objective, research goals, investigative methods, procedural details, subject demographics, findings presentation, statistical analyses, visual representations, result interpretations, study limitations, and comparisons to previous studies.
+----------
+10->
+
+Gather essential information from the Introduction, Methods, Results, and Discussion sections of Clinical Trial Reports. The Methods section provides details on research methods, interventions, and study participants. The Results section presents data and conducts statistical analyses. The Discussion section interprets results, explores implications, outlines limitations, and connects findings to relevant literature.
+----------
+11->
+
+Verify and authenticate the Introduction, Methods, Results, and Discussion segments of Clinical Trial Reports. Retrieve these sections and check for inclusion of the study objective, research goals, investigative methods, experimental procedures, data handling techniques, subject demographics, findings presentation, statistical analyses, visualizations, result interpretations, study limitations, comparisons to previous studies, and pertinent details. Match the extracted information with the supplied material descriptions to guarantee congruence and accuracy. Maintain consistency between the extracted sections and the given material descriptions to prevent errors and ambiguity.
+----------
+12->
+
+Retrieve the Introduction, Methods, Results, and Discussion sections from the selected Clinical Trial Reports (CTRs) in the repository.
+----------
+13->
+
+1. Review the specified clinical trial report:
+   a. Introduction: Familiarize yourself with the study background and objectives.
+   b. Methods: Analyze experimental procedures, participant demographics, and study design.
+   c. Results: Evaluate presented data, perform statistical analyses, and identify trends.
+   d. Discussion/Conclusion: Interpret results, discuss implications, limitations, and relate to existing literature.
+----------
+14->
+Retrieve the Introduction, Methods, Results, and Discussion sections from the clinical trial report repository. Extract and confirm the accuracy of these sections against the given material descriptions, ensuring precision and consistency to avoid potential errors and confusion.
+----------
+15->
+Locate the specific section in a Clinical Trial Report, which is one of its four primary components.
+----------
+16->
+
+Retrieve the specified sections (Introduction, Methods, Results, and Discussion) from the clinical trial reports in the shared database. Extract essential information from these sections for assessment against provided material descriptions. Isolate these sections for accurate analysis.
+----------
+17->
+Give careful attention to the following parts of Clinical Trial Reports:
+
+1. Introduction: Contains the study's justification, aims, and investigation plans.
+2. Methods: Delves into the trial design, data processing techniques, and subject demographics.
+3. Results and Discussion: Offers the unaltered data, executes statistical analyses, displays related graphics, explains the findings, admits study weaknesses, and links the results to pertinent literature.
+----------
+18->
+The descriptions correspond to information in one of the following clinical trial report sections: Introduction, Methods, Results, or Discussion.
+----------
+19->
+
+Verify and authenticate the accuracy of the following report sections: Introduction, Methods, Results, and Discussion, in the Clinical Trial Report accessed from the shared repository. Ensure consistency and congruence between the extracted information and the respective sections in the referenced material descriptions. Adjust the data alignment in both sources to maintain uniformity.
+----------

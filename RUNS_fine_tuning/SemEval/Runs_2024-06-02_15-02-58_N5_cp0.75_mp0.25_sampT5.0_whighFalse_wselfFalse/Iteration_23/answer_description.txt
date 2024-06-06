@@ -1,0 +1,14 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->
+
+Perform an expert-level validation of a clinical trial claim by meticulously analyzing the medical terminology and context in both the trial documentation and the claim, with a focus on resolving ambiguities and filling information gaps accurately. Ensure clarity, directness, and unwavering fidelity to the claim's original intent and meaning throughout the validation process.
+----------
+4->
+
+Conduct an expert-level validation of a clinical trial claim, necessitating a profound grasp of medical terminology and context-specific nuances within clinical trial documentation and the claim. This involves a thorough interpretation of medical language and context, resolving ambiguities, and filling any informational gaps, ensuring the integrity of the original claim's intent and meaning.
+----------

@@ -1,0 +1,38 @@
+0->Your task is determining support relationships between individual sections of Clinical Trial Reports (CTRs) and clinical statements. CTRs detail the methodology and findings of clinical trials, assessing effectiveness and safety of new treatments. CTRs consist of 4 sections: (1) ELIGIBILITY CRITERIA listing conditions for patient participation, (2) INTERVENTION description specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary detailing participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing signs and symptoms observed. Statements make claims about information in these sections, either for a single CTR or comparing two.
+----------
+1->
+
+Analyze Clinical Trial Reports (CTRs) by systematically breaking them down into four essential elements:
+
+1. Eligibility Criteria: Specify the inclusion and exclusion criteria for participants.
+
+2. Intervention: Outline the type of treatment, dosage, administration schedule, and treatment duration.
+
+3. Results: Summarize the participant demographics, outcome measures, units of measurement, and findings.
+
+4. Adverse Events: Record any observed signs and symptoms.
+
+Assess clinical claims by examining these elements individually for each CTR or by conducting comparative analyses across multiple CTRs.
+----------
+2->
+
+Identify and elucidate the supportive associations between distinct segments of Clinical Trial Reports (CTRs) and clinical assertions. Analyze CTRs to evaluate the efficacy and safety of novel therapeutic interventions. Break down CTRs into four key components: (1) ELIGIBILITY CRITERIA, detailing patient inclusion conditions, (2) INTERVENTION, outlining treatment type, dosage, frequency, and duration, (3) RESULTS, summarizing participant details, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS, documenting observed signs and symptoms. Correlate these components with clinical statements, either referencing a single CTR or contrasting two.
+----------
+3->
+
+Identify and elucidate the supportive associations between distinct segments of Clinical Trial Reports (CTRs) and clinical assertions. CTRs encapsulate the procedures and results of clinical trials, evaluating the efficacy and safety of novel therapeutic interventions. Break down CTRs into four primary components: (1) ELIGIBILITY CRITERIA, which outlines the prerequisites for patient inclusion, (2) INTERVENTION, detailing the nature, dosage, administration frequency, and treatment duration, (3) RESULTS, summarizing participant demographics, outcome metrics, units of measurement, and conclusions drawn, and (4) ADVERSE EVENTS, cataloging observed signs and symptoms. Analyze and substantiate claims made in relation to these segments, either pertaining to a single CTR or contrasting between two.
+----------
+4->
+
+Analyze Clinical Trial Reports (CTRs) by systematically breaking them down into four essential elements:
+
+1. Eligibility Criteria: Specify the inclusion and exclusion criteria for participants.
+
+2. Intervention: Outline the type of treatment, dosage, administration schedule, and treatment duration.
+
+3. Results: Summarize participant demographics, outcome measures, units of measurement, and findings.
+
+4. Adverse Events: Record any observed signs and symptoms.
+
+Assess clinical claims by examining these elements individually for each CTR or by conducting comparative analyses across multiple CTRs.
+----------

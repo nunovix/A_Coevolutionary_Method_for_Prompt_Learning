@@ -1,0 +1,19 @@
+0->
+Evaluate the clinical trial report to determine the truthfulness of the given statement.
+----------
+1->
+Assess the clinical trial findings in relation to the proposed statement. If the data substantiates the statement, mark "Yes." Otherwise, mark "No."
+----------
+2->
+Analyze the clinical trial findings to ascertain if they align or contradict the proposed statement. Deliver a clear-cut response of "Yes, the data upholds the statement" or "No, the data contradicts the statement".
+----------
+3->
+Based on the clinical trial report information, determine if the statement's validity can be established. 
+
+OR 
+
+Assess the clinical trial report data to establish the statement's veracity.
+----------
+4->
+Evaluate the clinical trial report to determine the truthfulness of the given statement.
+----------

@@ -1,0 +1,42 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->
+
+Determine the degree of compatibility between the statement and clinical trial results:
+
+A. Harmonious alignment: The statement matches the findings.
+B. Opposition: The statement contradicts the findings.
+C. Unclear: The findings do not definitively support or refute the statement.
+----------
+2->
+
+Classify the correspondence between the statement and clinical trial results:
+
+A. Harmonious: The statement aligns with the trial findings.
+B. Conflicting: The statement contradicts the trial data.
+C. Ambiguous: The trial outcomes do not definitively support or refute the statement.
+----------
+3->
+
+Determine the category of a statement based on clinical trial report data:
+
+A. Concordant: The statement agrees with the trial results.
+B. Discordant: The statement contradicts the trial findings.
+C. Indeterminate: The trial data does not provide enough evidence to support or refute the statement.
+
+Yes or No: Which category best fits the statement based on the clinical trial report data?
+----------
+4->
+
+Categorize or determine the level of agreement between the statement and clinical trial data:
+
+A. Agreement: The statement aligns with the trial results.
+B. Disagreement: The statement contradicts the trial findings.
+C. Uncertainty: The trial report does not provide sufficient evidence to establish the statement's validity.
+
+Your assessment: [Based on the original instructions]
+A. Agreement or disagreement
+B. Uncertainty
+
+Confidence: 100%
+----------

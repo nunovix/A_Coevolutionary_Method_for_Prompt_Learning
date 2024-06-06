@@ -1,0 +1,16 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Validate the statement's accuracy by providing a YES or NO answer, based on a comprehensive examination of clinical trial report details. This necessitates an expert-level understanding and interpretation of medical terminology and contextual subtleties present in both the reports and the statement, ensuring all ambiguities and informational gaps are meticulously addressed.
+----------
+2->
+
+Determine the statement's accuracy by thoroughly examining clinical trial report descriptions, interpreting medical terminology and context with precision, resolving ambiguities or information gaps, and provide a conclusive YES or NO verdict.
+----------
+3->
+
+Determine the statement's validity from clinical trial report descriptions by accurately interpreting medical terminology and context, resolving ambiguities or informational gaps, and providing a definitive YES or NO verdict.
+----------
+4->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------

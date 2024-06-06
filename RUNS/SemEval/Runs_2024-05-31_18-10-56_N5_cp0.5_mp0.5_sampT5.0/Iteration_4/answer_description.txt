@@ -1,0 +1,16 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->Perform a conclusive 'YES' or 'NO' evaluation of the claim's validity within the clinical trial report, utilizing medical terminology, contextual comprehension, ambiguity resolution, and information deficiency rectification.
+----------
+2->
+
+Perform an unequivocal YES or NO evaluation of the statement's accuracy, utilizing data extracted from clinical trial reports. Interpret medical jargon and contextual information, and address any ambiguities or missing data points.
+----------
+3->
+
+Determine affirmatively or negatively if the validity of the statement can be evaluated using data extracted from the clinical trial report.
+----------
+4->
+
+Assess whether it is possible to affirmatively or negatively determine the statement's validity based on data obtained from the clinical trial report.
+----------

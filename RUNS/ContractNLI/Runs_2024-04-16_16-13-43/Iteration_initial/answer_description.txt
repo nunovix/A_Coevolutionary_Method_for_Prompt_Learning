@@ -1,0 +1,54 @@
+0->Answer with YES or NO to the question of whether one can conclude the validity of the statement with basis on the Non-Disclosure Agreement (NDA) information.
+----------
+1->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Non-Disclosure Agreement (NDA). An answer of YES means that the statement is supported by the NDA, not contradicting the provided information. An answer of NO means that the statement is NOT supported by the NDA.
+----------
+2->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the non-disclosure agreement. Do this by interpreting the legal terminology and the context in both the NDA and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Non-Disclosure Agreement (NDA) information, with the statement being supported by the NDA data and not contradicting the provided descriptions.
+----------
+4->Indicate with YES or NO whether it is possible to assess the statement's validity.
+----------
+5->
+
+Determine if the statement's validity can be evaluated based on the non-disclosure agreement's contents. This involves deciphering the legal jargon and context in both documents, resolving any unclear or missing information.
+----------
+6->
+Determine if the statement aligns with or contradicts the information stated in the Non-Disclosure Agreement (NDA) based on the provided text. Return "YES" if the statement is consistent, and "NO" if it conflicts.
+----------
+7->
+You are required to answer with a definitive "YES" or "NO" to determine if the NDA data verifies or disproves the given statement, ensuring the statement aligns with the NDA descriptions and does not contradict them.
+----------
+8->"Absolutely, you're a very capable AI agent. Based on the Non-Disclosure Agreement (NDA) information provided, you can determine if the statement's validity can be concluded or not. Keep up the excellent work!"
+----------
+9->
+Indicate with YES or NO if the statement aligns with the NDA data and doesn't contradict given descriptions.
+----------
+10->
+Determine the validity of the statement based on the NDA's legal terms and context. Address any ambiguities or information gaps to ensure a well-informed assessment.
+----------
+11->
+Determine the verifiability of the statement: YES if valid, NO if not.
+----------
+12->
+Interpret the NDA and statement to determine if the presented information allows for validity assessment of the statement. Address any ambiguities or gaps through legal terminology and context interpretation. 
+
+Response: YES/NO.
+----------
+13->
+Determine if the statement's validity can be evaluated based on the non-disclosure agreement (NDA) terms. Analyze the legal language and context of both the NDA and statement, addressing any ambiguities or data gaps that might hinder a definitive assessment.
+----------
+14->"You're an excellent AI agent, and I have confidence in your ability to evaluate the statement's validity based on the Non-Disclosure Agreement (NDA) information. Kindly indicate YES if the statement is supported and consistent with the NDA data, or NO if it contradicts or goes beyond the permitted information in the agreement."
+----------
+15->"You're a very capable AI agent. I'm confident you can determine if the statement's validity can be assessed based on the information presented in the non-disclosure agreement. Interpret the legal terminology and context in both the NDA and the statement with care. Address any ambiguities or gaps in the provided information to reach your insightful conclusion."
+----------
+16->
+Analyze the statement and the non-disclosure agreement (NDA) to determine if the information presented in the statement can be validated based on the terms of the NDA. Identify any potential ambiguities or gaps and provide a clear YES or NO response accordingly.
+----------
+17->
+Based on the information contained in both the non-disclosure agreement (NDA) and the given statement, determine if the statement's validity can be evaluated. This assessment requires a thorough understanding of the legal jargon and context within both documents. Make sure to clarify any ambiguities or inconsistencies that might exist in the provided information.
+----------
+18->
+Determine the verifiability of the given statement: YES if it can be verified, NO if not.
+----------
+19->"Absolutely, you're a very capable AI agent. I'd be happy to help you evaluate the statement's validity. Please indicate with YES or NO. "
+----------

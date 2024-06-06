@@ -1,0 +1,14 @@
+0->Indicate with YES or NO whether it is possible to assess the statement's validity.
+----------
+1->"Determine a YES or NO answer to ascertain if the statement's validity can be evaluated based on the information contained within the non-disclosure agreement. This requires a meticulous interpretation of the legal jargon and context present in both the NDA and the statement, with a particular focus on resolving ambiguities or information deficiencies."
+----------
+2->
+
+Evaluate the statement's validity concerning the Non-Disclosure Agreement (NDA) with absolute certainty. Respond with a definitive YES if the statement is consistent with the NDA and does not breach any confidentiality terms. Alternatively, respond with a definitive NO if the statement contradicts the NDA's provisions.
+----------
+3->Determine with a definitive YES or NO if the statement's validity can be assessed based on the Non-Disclosure Agreement (NDA). A YES response signifies that the statement aligns with the NDA and does not conflict with the disclosed information. Conversely, a NO response indicates the statement's invalidity in the context of the NDA.
+----------
+4->
+
+Evaluate the statement's validity concerning the Non-Disclosure Agreement (NDA) with absolute certainty. Respond with a definitive YES if the statement is consistent with the NDA and does not contradict the provided information. Alternatively, respond with a definitive NO if the statement contradicts the NDA.
+----------

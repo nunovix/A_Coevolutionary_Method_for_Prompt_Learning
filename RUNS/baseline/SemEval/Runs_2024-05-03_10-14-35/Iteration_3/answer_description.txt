@@ -1,0 +1,14 @@
+0->
+Determine if the clinical trial report data suffices for evaluating the statement's veracity.
+----------
+1->
+Assess whether the clinical trial report data is sufficient to validate the given statement.
+----------
+2->
+Determine if the clinical trial report data permits an evaluation of the statement's validity. Answer with "Yes" or "No".
+----------
+3->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+4->
+Determine if the statement aligns with the information in the Clinical Trial Report (CTR) descriptions: YES if supported, NO if contradicted.
+----------

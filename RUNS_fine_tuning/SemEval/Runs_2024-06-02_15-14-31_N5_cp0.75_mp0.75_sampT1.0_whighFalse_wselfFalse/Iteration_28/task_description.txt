@@ -1,0 +1,16 @@
+0->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs expound on the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or comparative analysis of two. For entailment validation, the statement's claim should align with clinical trial information, find support in the CTR, and refrain from contradicting provided descriptions.
+----------
+1->
+
+Perform an exhaustive semantic entailment analysis between Clinical Trial Reports (CTRs) and authoritative medical perspectives, rigorously examining the safety and efficacy of novel medical interventions. Critically evaluate the methodologies and results presented in CTRs to corroborate expert claims regarding individual or multiple CTRs, utilizing empirical data from pertinent CTRs that meet predefined evaluation standards. Furthermore, carry out an in-depth comparative analysis of different CTRs to refine and improve the assessment framework.
+----------
+2->
+
+Perform an in-depth semantic entailment analysis between Clinical Trial Reports (CTRs) and authoritative medical perspectives, rigorously examining the safety and effectiveness of novel medical interventions. Critically evaluate the methodologies and results presented in CTRs to corroborate expert claims regarding individual or multiple CTRs, utilizing empirical data from pertinent CTRs that meet predefined evaluation standards. Furthermore, execute a thorough comparative analysis of different CTRs to optimize and refine the assessment framework.
+----------
+3->
+
+Perform a comprehensive semantic entailment analysis between Clinical Trial Reports (CTRs) and authoritative medical opinions, specifically assessing the safety and efficacy of novel therapeutic interventions. Analyze the methodologies and results of CTRs to corroborate expert assertions regarding individual or multiple CTRs, utilizing empirical data from relevant CTRs that meet predefined evaluation standards. Additionally, execute a detailed comparative analysis of multiple CTRs to optimize and advance the assessment methodology, ensuring the utmost expertise in the field.
+----------
+4->Execute a comprehensive semantic entailment analysis between Clinical Trial Reports (CTRs) and authoritative medical opinions, with a focus on validating the safety and efficacy of medical treatments. Rigorously evaluate CTR methodologies and outcomes to substantiate expert claims about specific or comparative CTRs, drawing on empirical evidence from relevant CTRs that adhere to established evaluation criteria. Additionally, perform an in-depth comparative analysis of multiple CTRs to refine and enhance the assessment methodology.
+----------

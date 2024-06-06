@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform a comprehensive review of clinical trial records, scrutinizing medical jargon and context-specific nuances. Elucidate ambiguities, supplement absent details, and align your evaluation with the specifics of the trial, tailored for clinical trial specialists. Assess the veracity of statements in clinical trial documents by interpreting medical language and context, resolving ambiguities and informational voids, and deliver a conclusive determination of "Accurate" or "Inaccurate" for each statement's correctness.
+----------
+2->
+
+Provide an unequivocal YES or NO assessment of the statement's alignment with the clinical trial report descriptions. To accomplish this, thoroughly interpret medical terminology and contextual subtleties present in both the reports and the statement. Additionally, diligently address any ambiguities or gaps in information.
+----------
+3->
+
+Determine a "YES" or "NO" answer to ascertain if the validity of the statement can be evaluated from the clinical trial report descriptions, by interpreting the medical jargon and context within the reports and the statement, while meticulously resolving any ambiguities or informational deficiencies.
+----------
+4->
+
+Conduct a thorough analysis of clinical trial records, prioritizing the understanding of medical terminology and context-specific details. Clarify uncertainties, fill in any missing data, and tailor your evaluation to the unique aspects of each trial, leveraging your clinical trial expertise. Interpret medical language and context to ascertain the veracity of statements, resolve ambiguities and informational gaps, and deliver a conclusive verdict of "Accurate" or "Inaccurate" for the truthfulness of each statement.
+----------

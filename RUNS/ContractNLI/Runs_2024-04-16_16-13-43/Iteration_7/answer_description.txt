@@ -1,0 +1,70 @@
+0->
+You are required to answer with a definitive "YES" or "NO" to determine if the NDA data verifies or disproves the given statement, ensuring the statement aligns with the NDA descriptions and does not contradict them.
+----------
+1->
+Affirm or Deny: The statement aligns with the NDA information and doesn't conflict with the provided descriptions.
+----------
+2->
+Determine if the statement is consistent with the provisions of the Non-Disclosure Agreement (NDA) and can be validated based on the NDA information. Answer with YES or NO.
+----------
+3->
+You are required to answer with a definitive "YES" or "NO" to determine if the NDA data verifies or disproves the given statement, ensuring the statement aligns with the NDA descriptions and does not contradict them.
+----------
+4->
+
+Evaluate the statement's compatibility with NDA terms using authoritative legal definitions and clarifications to resolve any ambiguities. (YES/NO)
+----------
+5->
+
+Determine if the given statement aligns with the terms of the Non-Disclosure Agreement (NDA) by interpreting ambiguous or legal phrases in both the statement and the NDA. If the statement adheres to the NDA, categorize the outcome as "Compliant." Conversely, if the statement breaches or contradicts the NDA, designate it as "Non-Compliant."
+----------
+6->
+Assess the statement's compatibility with the NDA specifications. Provide a clear and unequivocal "YES" if it aligns, or "NO" if it conflicts.
+----------
+7->
+Determine if the given statement is consistent with the descriptions in the Non-Disclosure Agreement (NDA) by answering with a definitive "YES" or "NO". Ensure no contradiction exists between the statement and the NDA content when concluding its validity.
+----------
+8->
+Evaluate the validity of the statement given the NDA terms, ensuring no violation or contradiction. Respond with YES or NO.
+----------
+9->
+
+Determine if the statement conforms to Non-Disclosure Agreement (NDA) stipulations based on legal definitions and clarifications to remove any uncertainty. (YES/NO)
+----------
+10->
+Determine if the given statement conforms to and agrees with the NDA descriptions. If it does, record "Yes." If it contradicts, record "No."
+----------
+11->
+
+Evaluate the given statement's compatibility with the stipulations in the Non-Disclosure Agreement (NDA). Provide a clear "YES" if consistent, or "NO" if contradictory.
+----------
+12->
+
+1. Assess the statement's compatibility with NDA terms.
+2. Address any ambiguities or gaps in the NDA clauses.
+3. Determine classification as "Compliant" or "Discrepancy" based on the degree of adherence or violation of NDA requirements.
+----------
+13->
+
+Determine the conformance of the given statement with the descriptions and specifications outlined in the NDA details. Provide a conclusive "YES" if compatible and consistent, or "NO" if not.
+----------
+14->
+Determine if the statement is consistent with the descriptions in the Non-Disclosure Agreement (NDA) and does not contradict it. Respond with a definitive "YES" or "NO".
+----------
+15->
+
+Determine if the statement aligns with the NDA provisions. If it does, mark it as "Yes." If ambiguous or legally uncertain terms exist, seek clarification to maintain compatibility. If the statement breaches or contradicts the NDA, classify it as "No."
+----------
+16->
+
+Determine if the statement adheres to the terms of the Non-Disclosure Agreement (NDA). Classify it as compliant or identify any discrepancies.
+----------
+17->
+Classify the given statement as either "Align" if it conforms to the terms and descriptions in the Non-Disclosure Agreement (NDA), or "Disagree" if it contradicts the NDA's provisions.
+----------
+18->
+Assess the alignment of the statement with the Non-Disclosure Agreement (NDA) terms. If the statement conforms to the NDA descriptions and does not contradict them, classify it as "COMPLIANT" (YES). Otherwise, label it as "DISCREPANCY" (NO).
+----------
+19->
+Assess the statement's compatibility with the NDA provisions. Label it as "Consistent" if no discrepancy arises. If a conflict is detected, pinpoint the conflicting areas. Clarify any ambiguities or voids in comprehension to maintain a precise NDA conformity.
+----------

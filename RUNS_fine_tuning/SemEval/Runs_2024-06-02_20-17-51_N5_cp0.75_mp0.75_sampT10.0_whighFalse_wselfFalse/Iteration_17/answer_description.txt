@@ -1,0 +1,16 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Confirm the validity of the statement's correctness by analyzing the clinical trial reports' descriptions. This task necessitates a thorough understanding of medical terminology and context in both the reports and the statement, while resolving ambiguities and information gaps meticulously.
+----------
+2->
+
+Conduct a comprehensive examination of the Clinical Trial Report (CTR), interpreting medical jargon and contextual nuances. Clarify ambiguities and identify missing data. Evaluate the truthfulness of each statement, categorizing them as 'Verified' or 'Falsified'.
+----------
+3->
+
+Provide a definitive "YES" or "NO" verdict on the possibility of validating the statement's correctness by analyzing the clinical trial report descriptions. This necessitates a precise interpretation of medical terminology and contextual understanding in both the reports and the statement, with a thorough resolution of ambiguities and information voids.
+----------
+4->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------

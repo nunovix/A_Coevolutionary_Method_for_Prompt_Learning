@@ -1,0 +1,10 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->Assess the validity of the statement based on clinical trial report data by interpreting medical terminology and context, addressing ambiguities and information gaps.
+----------
+2->Evaluate the clinical trial report descriptions to ascertain the statement's validity, YES or NO, by interpreting medical jargon and context, addressing ambiguities and information gaps.
+----------
+3->Evaluate the clinical trial report descriptions to ascertain the statement's validity, YES or NO, by interpreting medical jargon and context, addressing ambiguities and information gaps.
+----------
+4->Evaluate the clinical trial report data to determine the possibility of validating the statement, responding with a definitive YES or NO.
+----------

@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform an exhaustive analysis to verify the statement's alignment with the Clinical Trial Report (CTR) descriptions, requiring a deep understanding of medical terminology and context-specific nuances. Clarify any ambiguities and thoroughly address any information gaps. Classify the statement as "Congruent" if it accurately reflects the CTR content; otherwise, label it as "Non-Congruent". Provide a definitive "Congruent" or "Non-Congruent" verdict on the statement's consistency with the CTR descriptions, ensuring precision in medical terminology and context-specific details.
+----------
+2->
+
+Perform an exhaustive evaluation to ascertain the statement's correspondence with the Clinical Trial Report (CTR) descriptions, necessitating an in-depth comprehension of medical jargon and context-specific intricacies. Elucidate any vagueness and rigorously fill any informational voids. Categorize the statement as "Congruent" if it precisely mirrors the CTR content; if not, designate it as "Non-Congruent". Render an unequivocal "Congruent" or "Non-Congruent" determination regarding the statement's alignment with the CTR descriptions, guaranteeing exactitude in medical terminology and context-specific subtleties.
+----------
+3->
+
+Conduct a comprehensive evaluation to ascertain the statement's alignment with Clinical Trial Report (CTR) descriptions, necessitating an in-depth understanding of medical jargon and context-specific nuances. Elucidate any uncertainties and thoroughly address any gaps in information. Classify the statement as "Congruent" if it reflects the CTR content accurately; otherwise, categorize it as "Non-Congruent". Provide a clear and precise "Congruent" or "Non-Congruent" verdict on the statement's consistency with CTR descriptions, with particular emphasis on medical terminology and context-specific details.
+----------
+4->
+
+Conduct a comprehensive analysis to determine the statement's alignment with Clinical Trial Report (CTR) terminology, necessitating an exact understanding of medical terminology and context-specific subtleties. Elucidate ambiguities and fill any informational gaps. Label the statement as "Congruent" if it precisely reflects the CTR content; otherwise, mark it as "Non-Congruent". Deliver a definitive "Congruent" or "Non-Congruent" judgment on the statement's consistency with CTR descriptions, guaranteeing precision in medical language and context-specific details.
+----------

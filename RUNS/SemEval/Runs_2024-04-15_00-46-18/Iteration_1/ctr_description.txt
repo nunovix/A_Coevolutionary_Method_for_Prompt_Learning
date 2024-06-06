@@ -1,0 +1,55 @@
+0->The following descriptions correspond to the information in the Clinical Trial Report (CTR) sections.
+----------
+1->The provided descriptions coincide with the content in a specific section of Clinical Trial Reports (CTRs), detailing relevant information to the trial.
+----------
+2->The provided descriptions correspond to the content found in one of the four standard clinical trial report sections.
+----------
+3->The descriptions that follow correspond to the information contained in one of the standard sections of the clinical trial reports.
+----------
+4->"Descriptions refer to CTR sections."
+----------
+5->"The descriptions match a clinical trial report section."
+----------
+6->
+If descriptions match content in designated CTR sections, classify as relevant.
+----------
+7->"Great job, you're on the right track! The following descriptions match the information in the Clinical Trial Report (CTR) sections. Keep up the good work!"
+----------
+8->
+Extract information from Clinical Trial Report (CTR) sections.
+----------
+9->
+Match provided descriptions with corresponding sections in Clinical Trial Reports (CTRs) containing relevant information.
+----------
+10->
+If descriptions in CTR sections match the content, classify as relevant descriptions.
+----------
+11->
+Identify the relevant sections in Clinical Trial Reports based on provided descriptions.
+----------
+12->
+Identify the specific section of a Clinical Trial Report (CTR) that corresponds to the given descriptions.
+----------
+13->
+Extract information from the Clinical Trial Documentation, specifically from the Clinical Trial Report sections.
+----------
+14->
+The instructions below refer to the material contained in a specific section of Clinical Trial Reports (CTRs).
+----------
+15->
+"Great job identifying aligning descriptions with the content in Clinical Trial Reports (CTRs), supplying essential trial information. Continue the excellent work."
+----------
+16->
+Gather data from designated areas within Clinical Trial Reports (CTRs).
+----------
+17->
+Locate the portion of the Clinical Trial Report (CTR) that aligns with the provided description. The possible sections are Methods, Results, Discussion, or Conclusion.
+
+(Note: The revised instruction maintains the original meaning and offers a succinct and clearer execution path for identifying the matching CTR section based on the description given.)
+----------
+18->
+Gather data from Clinical Trial Reports (CTRs).
+----------
+19->
+Match given descriptions with the corresponding Content Title/Header (CTR) sections to identify the relevant clinical trial report sections.
+----------

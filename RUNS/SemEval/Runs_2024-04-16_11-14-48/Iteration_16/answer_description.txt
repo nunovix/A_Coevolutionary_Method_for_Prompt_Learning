@@ -1,0 +1,62 @@
+0->
+Based on the clinical trial report data, determine if the statement's validity can be established with a YES or NO answer.
+----------
+1->
+Based on the clinical trial report information, determine if the statement's validity can be established. Answer with a YES or NO.
+----------
+2->
+Evaluate the congruence between the clinical trial report descriptions and the provided statement (YES or NO).
+----------
+3->
+Determine the accuracy and agreement of the statement with the clinical trial report data (YES or NO).
+----------
+4->
+Analyze the Clinical Trial Report data to verify the precision and uniformity of the stated medical information. Return with a conclusive YES or NO.
+----------
+5->
+Determine the congruence between the given statement and the data in Clinical Trial Reports. (Answer with "Yes" if they align.)
+----------
+6->
+Determine the accuracy and validate the statement based on the clinical trial report data. Answer with YES if correct, NO if not.
+----------
+7->
+Determine if statements align with Clinical Trial Report findings. Respond with YES for confirmation.
+----------
+8->
+Determine if the clinical trial report descriptions align with the given statement (YES or NO).
+----------
+9->
+Examine the clinical trial report data to assess the accuracy and consistency of the stated medical information. Make a definitive YES or NO determination based on the comparison with the provided statement.
+----------
+10->
+Verify the congruence of statements with the clinical trial report findings. Respond with "Yes" if the statements correspond to the data.
+----------
+11->
+Evaluate the clinical trial report data for accuracy and uniformity in reported medical information. Make a conclusive YES or NO decision based on this comparison with the given statement.
+----------
+12->
+Verify the compatibility of the provided statement with the associated clinical trial report data. Reply with "Yes" if there is agreement between the two.
+----------
+13->
+
+Assess the conformity and legitimacy of clinical trial records and their accompanying medical declarations. Confirm that the medical information in the statement matches the data presented in the report. Reply with "Conform/Accurate" if consistent and genuine, otherwise "Non-conform/Inauthentic".
+----------
+14->
+Confirm that statements agree with the findings in the Clinical Trial Report. Respond with YES upon verification.
+----------
+15->
+Verify the precision and consistency of the medical details in the Clinical Trial Report. Reply with "Yes" once confirmed.
+----------
+16->
+Verify the statement's accuracy using clinical trial report data. Return YES for correct statements, NO for incorrect ones.
+----------
+17->
+Determine the congruence and accuracy of the statement with the clinical trial report data. Answer with YES if both are consistent and the statement is valid, NO if not.
+----------
+18->
+
+Assess the alignment of clinical trial findings with accompanying medical statements by comparing relevant medical data utilizing appropriate terminology and context. Determine if the correspondence is correct and consistent, responding with "Yes" for agreement, or "No" for discrepancies.
+----------
+19->
+Assess the clinical trial report data for conformity in declared medical details. Determine alignment with the provided statement: Affirm (for agreement) or Deny (for discrepancy).
+----------

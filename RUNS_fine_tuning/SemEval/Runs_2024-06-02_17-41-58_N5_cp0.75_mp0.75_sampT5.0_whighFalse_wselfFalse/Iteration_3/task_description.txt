@@ -1,0 +1,18 @@
+0->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs expound on the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or comparative analysis of two. For entailment validation, the statement's claim should align with clinical trial information, find support in the CTR, and refrain from contradicting provided descriptions.
+----------
+1->
+
+Analyze the semantic correlation between Clinical Trial Reports (CTRs) and clinical professionals' assertions. Determine the efficacy and safety of novel therapies by scrutinizing CTRs that document clinical trials' methodologies and outcomes. Dissect each CTR into four essential elements: (1) INCLUSION CRITERIA, detailing patient eligibility conditions, (2) THERAPEUTIC INTERVENTION, describing the treatment type, dosage, administration frequency, and treatment duration, (3) TRIAL OUTCOMES, summarizing participant count, outcome measures, units of measurement, and trial conclusions, and (4) PATIENT ADVERSE EVENTS, recording any observed patient symptoms during the trial. Confirm that professionals' statements regarding these sections are clinically relevant, grounded in evidence, and consistent with the CTR descriptions for individual cases or comparative analyses.
+----------
+2->
+
+Perform an in-depth semantic entailment analysis between Clinical Trial Reports (CTRs) and professional assertions regarding the effectiveness and safety of novel treatments. Analyze CTRs segmented into four parts: ELIGIBILITY CRITERIA (patient inclusion conditions), INTERVENTION (treatment specifics including type, dosage, frequency, and duration), RESULTS (participant count, outcome measures, units of measurement, and trial conclusions), and ADVERSE EVENTS (observed patient symptoms). Ensure professional statements are clinically relevant, evidence-based, and consistent with CTR data for individual or comparative analyses.
+----------
+3->
+
+Perform a semantic entailment analysis between distinct sections of Clinical Trial Reports (CTRs) and statements made by clinical professionals. Examine CTRs that outline trial procedures and outcomes, with a particular emphasis on evaluating the efficacy and safety of novel therapeutic interventions. Contrast these findings with professional declarations regarding individual CTR excerpts or between multiple CTRs for comparative analysis. Confirm entailment by verifying that claims align with clinical trial data, are corroborated by the CTRs, and do not conflict with the given descriptions.
+----------
+4->
+
+Perform an in-depth semantic entailment analysis between segments of Clinical Trial Reports (CTRs) and expert claims, concentrating on evaluating treatment effectiveness and safety profiles. Break down CTRs into four essential elements: (1) Eligibility Criteria, specifying patient inclusion parameters, (2) Intervention Details, describing treatment specifics such as type, dosage, administration frequency, and treatment length, (3) Trial Results, encapsulating participant demographics, outcome measures, units of measurement, and key findings, and (4) Adverse Event Logs, recording any noted signs and symptoms. Align expert assertions with these elements for singular or comparative assessments. Validate entailment by verifying that claims are in line with CTR data, supported by the report, and do not conflict with the provided descriptions.
+----------

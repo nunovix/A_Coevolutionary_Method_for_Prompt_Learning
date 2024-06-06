@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform an exhaustive verification of the statement's correctness by rigorously examining data from the Clinical Trial Report (CTR). Strictly follow the procedural guidelines outlined in the CTR. Correct any inconsistencies or missing information to ensure congruence with the original statement's context and narrative. Decipher intricate medical jargon and contextual nuances from both the CTR and the statement. Elucidate any vagueness or lack of information to conclusively determine the statement's validity. Respond with either "Confirmed" (YES) or "Refuted" (NO).
+----------
+2->
+
+Perform an exhaustive examination of the Clinical Trial Report (CTR) data, meticulously following procedural protocols. Correct any inconsistencies or missing elements to guarantee congruence with the claim's context and narrative. Decode intricate medical jargon and contextual nuances from both the CTR and the claim, clarifying vagueness and bridging informational voids to conclusively determine the claim's veracity as "Confirmed" (YES) or "Refuted" (NO).
+----------
+3->
+
+Perform a rigorous evaluation of the claim's truthfulness by thoroughly analyzing the data in the Clinical Trial Report (CTR), adhering strictly to the procedural protocols detailed in the CTR. Rectify any discrepancies or omissions to ensure alignment with the original claim's narrative. Interpret complex medical terminology and contextual subtleties in both the CTR and the claim, elucidating ambiguities or informational gaps to definitively ascertain the claim's validity as either "Affirmative" (YES) or "Negative" (NO).
+----------
+4->
+
+Conduct a thorough analysis of the clinical trial report's data, adhering strictly to procedural protocols. Rectify any inconsistencies or omissions to ensure congruence with the claim's context and narrative. Elucidate complex medical terminology and contextual subtleties from both the report and the claim, resolving ambiguities and filling informational gaps to definitively ascertain the claim's validity as "Confirmed" or "Refuted".
+----------

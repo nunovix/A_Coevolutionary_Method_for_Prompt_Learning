@@ -1,0 +1,22 @@
+0->Consider the problem of combining two different textual instructions, pertaining to the same task. The objective is to rephrase the main information common to the two descriptions, while keeping their meaning and intent. Assume that the audience for the resulting instruction consists of experts in the field. The combined instruction can either be shorter, summarizing the main points while keeping consistency with the original intent, or it can be made longer, by adding definitions and further clarifications. You will be penalized for the inclusion of incorrect information. The combined instruction should be concise and direct, and it should inform the execution of the task in a clearer way than the original instructions. Considering the aforementioned task description, combine the two textual instructions shown next in quotes, generating only the resulting instruction without any additional explanation.
+----------
+1->Develop an advanced directive that consolidates and refines two initial instructions related to rewriting descriptions. Create a directive that maintains the core purpose of each original instruction while enhancing clarity and precision. The directive may be more concise, distilling essential points, or more detailed, incorporating further specifications and explanations. This unified guidance should provide superior clarity and facilitate more precise execution by experts than the original instructions.
+----------
+2->Reconstruct and integrate two separate expert-level instructions pertaining to a singular task, ensuring the combined directive encapsulates the fundamental concepts common to both originals. Aim to formulate a comprehensive guide that retains the intent and information of the originals, while providing either a condensed or an enhanced version that offers clearer guidance and greater depth of explanation. The synthesized instruction should be a refined and accurate representation of the task, striving for enhanced clarity and precision over the originals.
+----------
+3->Consider the problem of combining two different textual instructions, pertaining to the same task. The objective is to rephrase the main information common to the two descriptions, while keeping their meaning and intent. Assume that the audience for the resulting instruction consists of experts in the field. The combined instruction can either be shorter, summarizing the main points while keeping consistency with the original intent, or it can be made longer, by adding definitions and further clarifications. You will be penalized for the inclusion of incorrect information. The combined instruction should be concise and direct, and it should inform the execution of the task in a clearer way than the original instructions. Considering the aforementioned task description, combine the two textual instructions shown next in quotes, generating only the resulting instruction without any additional explanation.
+----------
+4->Re-formulate two distinct textual instructions related to the same task by synthesizing their primary information, ensuring the preservation of meaning and intent, tailored for expert audiences. Enhance the resulting instruction either by condensing it into a clear, concise directive or by expanding it with precise definitions and additional elucidations. Penalties apply for inaccuracies. Ensure clarity and directness in execution guidance compared to the original instructions.
+
+
+Original Instructions:
+
+1. "Draft an overview of the fundamental principles guiding quantum mechanics for a peer-reviewed physics journal."
+
+2. "Write a detailed summary of quantum mechanics' basic theories for a scientific community newsletter."
+
+
+Combined Instruction:
+
+"Compose an expert-level summary that encapsulates the core principles of quantum mechanics, tailored for a peer-reviewed physics
+----------

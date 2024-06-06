@@ -1,0 +1,20 @@
+0->
+
+Examine the semantic entailment relationships between segments of Clinical Trial Reports (CTRs) and authoritative clinical assertions. CTRs document clinical trials, evaluating the effectiveness and safety of novel therapeutic interventions. Trials involve cohorts undergoing distinct treatments or possessing diverse baseline characteristics. CTRs are divided into four comprehensive sections: (1) INCLUSION CRITERIA, detailing patient eligibility conditions, (2) TREATMENT DETAILS, describing the intervention type, dosage, administration frequency, and treatment length, (3) RESULTS SUMMARY, summarizing participant demographics, outcome metrics, units of measurement, and findings, and (4) OBSERVED ADVERSE EVENTS, cataloging reported signs and symptoms. Expert assertions pertain to specific CTRs or juxtapose two. Validate entailment by ensuring the assertion is consistent with clinical trial data, corroborated by the CTR, and does not conflict with the provided descriptions.
+----------
+1->
+
+Examine the semantic entailment between segments of Clinical Trial Reports (CTRs) and authoritative clinical statements. CTRs document clinical trials evaluating new medical treatments' effectiveness and safety. These trials encompass patient groups with diverse eligibility criteria and baseline characteristics. CTRs are divided into four comprehensive sections: (1) INCLUSION CRITERIA, detailing patient eligibility conditions, (2) TREATMENT DETAILS, describing the intervention type, dosage, frequency, and treatment duration, (3) RESULTS SUMMARY, offering a succinct account of participant demographics, outcome measures, units of measurement, and results, and (4) OBSERVED ADVERSE EVENTS, cataloging reported signs and symptoms. Validate entailment by ensuring the statement is consistent with clinical trial data, corroborated by the CTR, and does not conflict with the provided descriptions.
+----------
+2->
+
+Conduct a comprehensive semantic analysis of Clinical Trial Reports (CTRs), ensuring alignment with established clinical principles. Validate the effectiveness and safety of treatments based on trial data. Examine research methodologies, inclusion/exclusion criteria for participants, intervention specifics, results summaries, and adverse event logs. Authenticate experts' claims for individual or multiple CTRs against the data, ensuring consistency across reports and providing detailed descriptions of each section: INCLUSION CRITERIA, TREATMENT DETAILS, RESULTS SUMMARY, and OBSERVED ADVERSE EVENTS.
+----------
+3->
+
+Perform an in-depth semantic evaluation of Clinical Trial Reports (CTRs), verifying compliance with recognized clinical standards. Confirm the effectiveness and safety of medical treatments using trial data. Rigorously evaluate the criteria for participant inclusion and exclusion, specifics of the interventions, summaries of results, and logs of adverse events. Authenticate expert assertions concerning individual or multiple CTRs against the data, ensuring uniformity across reports. Provide detailed descriptions for each section: INCLUSION CRITERIA, TREATMENT DETAILS, RESULTS SUMMARY, and OBSERVED ADVERSE EVENTS.
+----------
+4->
+
+Analyze the semantic entailment relationships between segments of Clinical Trial Reports (CTRs) and authoritative clinical statements. CTRs document clinical trials assessing the efficacy and safety of new medical treatments. Trials include groups of patients with varying eligibility criteria and baseline characteristics. CTRs are categorized into four detailed sections: (1) INCLUSION CRITERIA, specifying patient eligibility conditions, (2) TREATMENT DETAILS, outlining the intervention type, dosage, administration frequency, and treatment duration, (3) RESULTS SUMMARY, summarizing participant demographics, outcome metrics, units of measurement, and findings, and ( 4) OBSERVED ADVERSE EVENTS, listing reported signs and symptoms. Verify entailment by confirming that the statement aligns with clinical trial data, is supported by the CTR, and does not contradict the provided descriptions.
+----------

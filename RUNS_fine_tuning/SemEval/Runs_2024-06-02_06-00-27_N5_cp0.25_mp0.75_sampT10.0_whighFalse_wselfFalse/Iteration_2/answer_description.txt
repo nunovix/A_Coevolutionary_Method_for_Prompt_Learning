@@ -1,0 +1,18 @@
+0->
+
+Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR) data, ensuring the statement aligns with the CTR information and does not conflict with the given descriptions.
+----------
+1->
+
+Evaluate the validity of clinical trial report statements as "VALID" or "INVALID" based on the given information, considering medical terminology understanding and context interpretation within the reports and statements, and resolving ambiguities or informational gaps meticulously.
+----------
+2->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+3->
+
+Determine affirmatively or negatively if the validity of the statement can be evaluated using data extracted from the clinical trial report.
+----------
+4->
+
+Determine affirmatively or negatively if the validity of the statement can be evaluated using data extracted from the clinical trial report.
+----------

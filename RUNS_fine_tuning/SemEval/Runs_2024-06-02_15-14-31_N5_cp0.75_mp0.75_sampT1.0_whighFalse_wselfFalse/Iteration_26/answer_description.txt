@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Provide a definitive "Accurate" or "Inaccurate" assessment of the statement's validity after a thorough examination of medical jargon and context-specific subtleties present in clinical trial documentation. Conduct a meticulous comparison between the clinical trial records and the statement, applying a stringent analytical approach to clarify uncertainties and address any gaps in information.
+----------
+2->
+
+Provide a conclusive "Affirmative" or "Negative" assessment of the statement's accuracy by performing an exhaustive examination of medical jargon and contextual subtleties present in clinical trial records. Undertake a meticulous comparison between the trial documentation and the statement, employing a stringent analytical approach to clarify uncertainties and address any gaps in information.
+----------
+3->
+
+Provide a definitive "Accurate" or "Inaccurate" assessment of the statement's validity based on an exhaustive examination of medical jargon and context-specific subtleties present in clinical trial documentation. This involves a detailed juxtaposition of the statement against clinical trial records, employing a meticulous, systematic approach to clarify uncertainties and address any gaps in information.
+----------
+4->
+
+Deliver a conclusive "Affirmative" or "Negative" verdict on the statement's correctness, following a thorough analysis of medical terminology and contextual nuances within clinical trial documentation. Execute a precise comparison between the trial records and the statement, utilizing a rigorous analytical method to elucidate uncertainties and fill any informational voids.
+----------

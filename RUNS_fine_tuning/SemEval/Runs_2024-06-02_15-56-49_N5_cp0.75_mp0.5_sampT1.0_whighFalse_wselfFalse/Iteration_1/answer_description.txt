@@ -1,0 +1,10 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->Determine with a definitive YES or NO if the statement's validity can be ascertained from the Clinical Trial Report (CTR) data, ensuring the statement aligns with and is corroborated by the CTR descriptions without contradiction.
+----------
+2->Determine with a definitive YES or NO if the statement's validity can be ascertained from the Clinical Trial Report (CTR) descriptions. A positive response signifies that the statement aligns with and is corroborated by the information within the CTR, without presenting any contradictions.
+----------
+3->Determine with a YES or NO answer whether the statement's validity can be ascertained from the Clinical Trial Report (CTR) information, ensuring the statement aligns with the CTR data without contradicting the provided descriptions. This requires careful interpretation of medical terminology and context within both the CTR and the statement, while resolving any ambiguities or information deficiencies.
+----------
+4->Determine with a definitive YES or NO if the statement's validity can be ascertained from the Clinical Trial Report (CTR) data, ensuring it aligns with and is corroborated by the CTR descriptions without contradicting any provided information.
+----------

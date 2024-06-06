@@ -1,0 +1,12 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->Assess with a clear YES or NO whether the statement's validity can be ascertained from the Clinical Trial Report (CTR) data, verifying its consistency and corroboration with the CTR, and ensuring it aligns with the provided descriptions without any contradictions.
+----------
+2->Provide an unequivocal YES or NO verdict on the statement's congruence with the Clinical Trial Report (CTR) data, affirming its consistency with the CTR and absence of contradictions to the provided descriptions.
+----------
+3->Provide a definitive YES or NO verdict on the statement's validity based on its consistency with the Clinical Trial Report (CTR) data, ensuring it aligns with the CTR without contradictions to the provided descriptions.
+----------
+4->
+
+Evaluate the statement's alignment with the Clinical Trial Report (CTR) data by providing a definitive YES or NO response. Confirm that the statement is consistent with and supported by the CTR, with no deviations from the provided descriptions.
+----------

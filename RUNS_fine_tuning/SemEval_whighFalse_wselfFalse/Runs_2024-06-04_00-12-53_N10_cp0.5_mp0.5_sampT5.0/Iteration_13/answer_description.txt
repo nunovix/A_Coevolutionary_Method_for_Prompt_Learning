@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Conduct an exhaustive verification of the Clinical Trial Report data to authenticate the claim's validity, guaranteeing full alignment with CTR guidelines and correcting any inconsistencies. This task requires an in-depth understanding of medical jargon and a heightened awareness of contextual nuances.
+----------
+2->
+
+Conduct an exhaustive verification of the data within the Clinical Trial Report (CTR) to substantiate the claim's validity, guaranteeing absolute alignment with the CTR's descriptions and correcting any inconsistencies. This task requires an in-depth understanding of medical jargon and the nuances of contextual subtleties.
+----------
+3->
+
+Conduct an exhaustive verification of the Clinical Trial Report data to authenticate the claim's validity, guaranteeing full alignment with CTR descriptions and correcting any inconsistencies. This task requires an in-depth understanding of medical jargon and the nuances of contextual subtleties.
+----------
+4->
+
+Evaluate the Clinical Trial Report (CTR) data to validate the statement's accuracy, ensuring full alignment with CTR descriptions and resolving any inconsistencies. This requires a deep understanding of medical terminology and contextual nuances.
+----------

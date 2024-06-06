@@ -1,0 +1,16 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Render a conclusive YES or NO verdict to ascertain if the statement's truthfulness can be deduced from the Clinical Trial Report (CTR) data, guaranteeing that the statement aligns with the CTR details and refrains from contradicting the given descriptions.
+----------
+2->
+
+Verify the statement's validity as either definitively YES or NO based on the Clinical Trial Report (CTR) data. Ensure the statement aligns with and is corroborated by the CTR descriptions, devoid of any contradictions.
+----------
+3->Determine with a definitive YES or NO whether the statement's validity can be inferred from the Clinical Trial Report (CTR) data, ensuring alignment with the CTR information and absence of contradiction with the provided descriptions, while carefully interpreting medical terminology and context.
+----------
+4->
+
+Examine the Clinical Trial Report (CTR) data to conclusively affirm or negate the statement's validity, verifying that the statement is consistent with, and supported by, the CTR descriptions without any discrepancies.
+----------

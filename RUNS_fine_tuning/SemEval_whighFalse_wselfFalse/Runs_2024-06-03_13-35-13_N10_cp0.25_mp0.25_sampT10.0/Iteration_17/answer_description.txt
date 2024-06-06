@@ -1,0 +1,16 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->
+
+Examine the clinical trial report data meticulously to ascertain the veracity of the claim, providing a conclusive response of "CONFIRMED" for accuracy or "DENIED" for inaccuracy.
+----------
+2->
+
+Perform a rigorous evaluation of the clinical trial data presented in the report. Provide a definitive verdict of "CONFIRMED" if the statement aligns with the data, or "DENIED" if it does not.
+----------
+3->Determine affirmatively or negatively if it is possible to establish the statement's validity solely based on the information provided in the clinical trial report.
+----------
+4->
+
+Conduct a meticulous assessment of the clinical trial data within the report. Render a conclusive determination of "CONFIRMED" if the statement is corroborated by the data, or "DENIED" if contradicted.
+----------

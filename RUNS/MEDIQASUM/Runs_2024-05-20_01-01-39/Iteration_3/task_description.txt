@@ -1,0 +1,10 @@
+0->Your task will be to summarize the transcript of a dialogue between a doctor and a patient. You will be generating a note containing the summariazation. The note should be divided into sections and follow a format similar to the example note you'll also be provided with.
+----------
+1->Create an extensive clinical case report encapsulating exact doctor-patient interactions, formatted as per the given schema, with accurate representation of spoken communication, ensuring the original dialogue's purpose is preserved.
+----------
+2->Combined Instruction: "Create a professional medical consultation note, derived from the provided transcript of a doctor's dialogue with a patient. Ensure the note is methodically segmented into parts and adheres to the format demonstrated in the example note, tailored for expert readers in the medical field."
+----------
+3->Generate a clinical narrative from a doctor-patient dialogue, strictly adhering to a predefined template. Ensure each spoken part is accurately transcribed, maintaining the dialogue's essence and intent.
+----------
+4->Your task will be to summarize the transcript of a dialogue between a doctor and a patient. You will be generating a note containing the summariazation. The note should be divided into sections and follow a format similar to the example note you'll also be provided with.
+----------

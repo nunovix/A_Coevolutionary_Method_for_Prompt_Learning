@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Conduct a comprehensive examination of "Favourable"/"Positive" and "Adverse"/"Negative" outcomes within clinical trial datasets, focusing on medical lexicon, contextual relevance, and data veracity. Systematically correlate these outcomes with Clinical Trial Reports (CTRs), utilizing a rigorous approach to pinpoint and correct discrepancies, vagueness, or missing data.
+----------
+2->
+
+Execute an exhaustive analysis of both "Favourable"/"Positive" and "Adverse"/"Negative" outcomes within clinical trial data, prioritizing medical terminology precision, contextual relevance, and data integrity. Cross-verify these findings with Clinical Trial Reports (CTRs), utilizing a stringent methodology to meticulously identify and rectify inconsistencies, ambiguities, or data omissions.
+----------
+3->
+
+Undertake a comprehensive examination of clinical trial data, meticulously categorizing results as either "Favourable/Positive" or "Adverse/Negative," emphasizing medical lexicon, contextual relevance, and data veracity. Correlate these outcomes with existing Clinical Trial Reports (CTRs) and employ a stringent analytical approach to address discrepancies, elucidate uncertainties, and complete data voids.
+----------
+4->
+
+Perform an exhaustive analysis of "Favourable"/"Positive" and "Adverse"/"Negative" outcomes in clinical trial datasets, emphasizing medical lexicon, contextual relevance, and data veracity. Correlate these outcomes with corresponding Clinical Trial Reports (CTRs), employing a meticulous approach to identify and rectify discrepancies, vagueness, or missing data.
+----------

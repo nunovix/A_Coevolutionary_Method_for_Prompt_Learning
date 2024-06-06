@@ -1,0 +1,18 @@
+0->Your task is determining support relationships between individual sections of Clinical Trial Reports (CTRs) and clinical statements. CTRs detail the methodology and findings of clinical trials, assessing effectiveness and safety of new treatments. CTRs consist of 4 sections: (1) ELIGIBILITY CRITERIA listing conditions for patient participation, (2) INTERVENTION description specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary detailing participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing signs and symptoms observed. Statements make claims about information in these sections, either for a single CTR or comparing two.
+----------
+1->
+
+Perform an exhaustive semantic evaluation to establish connections between data extracted from Clinical Trial Reports (CTRs) and authoritative clinical guidelines. Confirm the efficacy and safety profiles of therapeutic interventions. Validate and synchronize expert consensus regarding eligibility criteria, specifics of interventions, outcomes, and adverse event reporting in both isolated and comparative analyses of CTRs. Maintain logical coherence, avoid contradictions, and adhere strictly to established clinical expertise.
+----------
+2->
+
+Conduct a comprehensive semantic evaluation to align data from Clinical Trial Reports (CTRs) and authoritative clinical guidelines. Validate the efficacy and safety measures of treatments. Confirm and harmonize expert opinions regarding eligibility criteria, intervention details, expected results, and adverse event reporting in both individual and comparative analyses of CTRs. Uphold logical coherence, prevent contradictions, and ensure congruence with recognized clinical expertise.
+----------
+3->
+
+Execute a comprehensive semantic analysis correlating data from Clinical Trial Reports (CTRs) and authoritative clinical guidelines to verify therapeutic effectiveness and safety. Authenticate expert opinions on eligibility criteria, intervention specifics, anticipated results, and adverse event documentation through both individual and comparative CTR analyses. Uphold logical consistency, avoid contradictions, and ensure compliance with established clinical expertise.
+----------
+4->
+
+Execute a comprehensive semantic analysis correlating data from Clinical Trial Reports (CTRs) and authoritative clinical guidelines to verify therapeutic efficacy and safety. Authenticate and harmonize expert opinions on eligibility criteria, intervention specifics, anticipated results, and adverse event documentation in both singular and comparative analyses of CTRs. Uphold logical coherence, avoid contradictions, and ensure congruence with established clinical expertise concerning eligibility criteria, intervention specifics, outcomes, and adverse event reporting.
+----------

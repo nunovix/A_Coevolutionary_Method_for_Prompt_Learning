@@ -1,0 +1,59 @@
+0->"Descriptions match CTR sections."
+----------
+1->
+Analyze the descriptions associated with one section of Clinical Trial Reports (CTRs).
+----------
+2->
+One of the sections in Clinical Trial Reports (CTRs) is the subject of the following descriptions.
+----------
+3->
+The descriptions that follow derive from the Clinical Trial Report (CTR) sections.
+----------
+4->
+In Clinical Trial Reports (CTRs), the given descriptions refer to distinct sections.
+----------
+5->"Extract information from the clinical trial reports' standard sections using the provided descriptions."
+----------
+6->
+Focus on the specific section in Clinical Trial Reports (CTRs) as detailed in Instructions 1 and 2.
+----------
+7->
+" The descriptions below align with the relevant information in the Clinical Trial Reports (CTRs) section. "
+----------
+8->
+Focus on the specific section in Clinical Trial Reports (CTRs) as detailed in Instructions 1 and 2 (aligns with the relevant information in the CTRs section).
+----------
+9->
+Extract information from the Clinical Trial Report using the descriptions provided in the CTR sections.
+----------
+10->
+Gather data from the designated sections of the Clinical Trial Report (as indicated in Instruction 2). Utilize the descriptive details present in the CTR sections to ensure precise information extraction.
+----------
+11->
+Gather crucial information from the uniform parts of Clinical Trial Reports (CTRs).
+----------
+12->
+
+1. Evaluate crucial information in specified areas of Clinical Trial Reports (CTRs).
+2. Rank the importance of key details in the designated sections of CTRs.
+----------
+13->
+Collect data from Clinical Trial Reports' CTR sections that correspond to the specified descriptions.
+----------
+14->
+Extract information from the clinical trial reports' standard sections using the provided descriptions for clarity and accuracy.
+----------
+15->
+Examine the detailed accounts of a designated part in Clinical Trial Reports (CTRs).
+----------
+16->
+Categorize descriptions based on their alignment with corresponding sections in Clinical Trial Reports (CTRs). Both instructions concern the designated CTR sections.
+----------
+17->
+Collect data from Clinical Trial Reports' CTR sections that match the provided descriptions.
+----------
+18->
+Thoroughly analyze the detailed descriptions of a designated section within Clinical Trial Reports (CTRs).
+----------
+19->"Focus on the key sections outlined in Instructions 1 and 2 in Clinical Trial Reports (CTRs), as these areas contain pivotal study information for extracting essential information using the provided descriptions."
+----------

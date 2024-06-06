@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Determine with absolute certainty (YES/NO) if the Clinical Trial Report (CTR) conclusively verifies the statement's correctness, demanding stringent correspondence with the CTR, unwavering adherence to the statement's particulars, precise interpretation of medical terminology and context, and thorough elucidation of any uncertainties or knowledge gaps, while skillfully reconciling expert-level comprehension discrepancies.
+----------
+2->
+
+Conduct an exhaustive and precise validation of the statement's accuracy by meticulously analyzing the Clinical Trial Report (CTR), with a focus on interpreting medical terminology and context accurately. Ensure strict adherence to the CTR, exact alignment with the statement's details, and comprehensive clarification of ambiguities or knowledge gaps, while adeptly bridging any expert-level comprehension deficits and filling informational voids. Determine with absolute certainty (YES/NO) if the CTR conclusively supports the statement's correctness.
+----------
+3->
+
+Validate the statement's accuracy by meticulously analyzing the Clinical Trial Report (CTR) details, ensuring a thorough understanding of medical terminology and context, precise alignment with the original claim, and detailed clarification and resolution of ambiguities and informational gaps.
+----------
+4->
+
+Execute a thorough validation of the statement's correctness by undertaking a detailed examination of the Clinical Trial Report (CTR). Interpret the medical jargon and context with precision, ensuring strict conformity to the CTR, exact correspondence to the statement's specifics, and exhaustive clarification of any vagueness, while diligently filling any informational voids.
+----------

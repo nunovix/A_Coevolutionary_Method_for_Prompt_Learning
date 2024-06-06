@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Provide a conclusive "Affirmative" or "Negative" verdict to evaluate the statement's congruence with the specifics of clinical trial reports, necessitating a meticulous comprehension of medical terminology and context-specific nuances in both the statement and the reports. Ensure precise elucidation of ambiguities and thorough coverage of all pertinent details.
+----------
+2->
+
+Deliver an unequivocal "Consistent" or "Inconsistent" assessment of the statement's alignment with clinical trial report narratives. Conduct a meticulous examination of medical terminology and context-specific nuances in both the statement and the reports. Clarify ambiguities with precision and integrate all relevant details comprehensively.
+----------
+3->
+
+Deliver a conclusive "Consistent/Inconsistent" or "Affirmative/Negative" assessment of the statement's alignment with clinical trial report narratives. Conduct a meticulous analysis of medical terminology and context-specific nuances in both the statement and the reports. Clarify ambiguities with precision and include all relevant details comprehensively.
+----------
+4->
+
+Provide a definitive "Consistent" or "Inconsistent" verdict on the alignment of the statement with the narratives of clinical trial reports, necessitating an in-depth analysis of medical terminology and context-specific nuances in both the statement and the reports. Clarify ambiguities and ensure comprehensive inclusion of all pertinent details.
+----------

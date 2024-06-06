@@ -1,0 +1,16 @@
+0->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs expound on the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or comparative analysis of two. For entailment validation, the statement's claim should align with clinical trial information, find support in the CTR, and refrain from contradicting provided descriptions.
+----------
+1->Assess the semantic entailment between sections of Clinical Trial Reports (CTRs) and expert assertions on treatment efficacy and safety. Conduct a thorough analysis of the detailed methodologies and outcomes in CTRs, verifying that expert claims are congruent with, substantiated by, and non-contradictory to the clinical trial data and accompanying descriptions.
+----------
+2->
+
+Perform a semantic entailment analysis correlating segments of Clinical Trial Reports (CTRs) with expert assertions regarding treatment efficacy and safety. Thoroughly examine the methodologies and findings presented in CTRs to ensure that expert statements align with, are supported by, and do not contradict the clinical trial data and narratives. This analysis should include individual CTR sections and comparative assessments between different CTRs.
+----------
+3->
+
+Conduct a semantic entailment analysis linking sections of Clinical Trial Reports (CTRs) with expert claims on treatment efficacy and safety. Rigorously scrutinize the methodologies and outcomes detailed in CTRs to confirm that expert claims are congruent with, substantiated by, and do not conflict with the clinical trial data and narratives. This analysis should encompass examination of individual CTR sections and comparative evaluations across various CTRs.
+----------
+4->
+
+Execute a detailed semantic entailment analysis between sections of Clinical Trial Reports (CTRs) and expert claims on treatment efficacy and safety. Rigorously scrutinize the methodologies, results, and narratives within CTRs to confirm that expert assertions are congruent with, substantiated by, and non-contradictory to the clinical trial evidence. This analysis should encompass individual CTR segments and facilitate comparative evaluations across various CTRs.
+----------

@@ -1,0 +1,50 @@
+0->"
+
+Analyze Clinical Trial Reports (CTRs) and domain expert statements to ascertain semantic entailment or support. Focus on four CTR sections: (1) ELIGIBILITY CRITERIA, specifying conditions for patient inclusion, (2) INTERVENTION, detailing treatment specifics such as type, dosage, frequency, and duration, (3) RESULTS, summarizing participant count, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS, documenting observed patient signs and symptoms. Cross-examine these sections with expert statements, ensuring claims are consistent with, supported by, and non-contradictory to the CTRs' content.
+----------
+1->"
+
+Analyze Clinical Trial Reports (CTRs) and domain expert statements to ascertain semantic entailment or support. Focus on four CTR sections: (1) ELIGIBILITY CRITERIA, specifying conditions for patient inclusion, (2) INTERVENTION, detailing treatment specifics such as type, dosage, frequency, and duration, (3) RESULTS, summarizing participant count, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS, documenting observed patient signs and symptoms. Cross-examine these sections with expert statements, ensuring claims are consistent with, supported by, and non-contradictory to the CTRs' content.
+----------
+2->
+
+Perform an in-depth analysis of Clinical Trial Reports (CTRs), scrutinizing four pivotal elements: 
+
+1. ELIGIBILITY CRITERIA: Evaluate the conditions for patient inclusion.
+
+2. INTERVENTION: Investigate treatment specifics, including type, dosage, frequency, and trial duration.
+
+3. RESULTS: Provide a summary of participant count, outcome measures, units, and trial conclusions.
+
+4. ADVERSE EVENTS: Record observed patient signs and symptoms.
+
+Cross-reference these sections with expert commentary to ensure semantic entailment or support, verifying that claims align with, are substantiated by, and do not contradict the content of the CTRs.
+----------
+3->
+
+Conduct a thorough examination of Clinical Trial Reports (CTRs), focusing on four key sections: 
+
+1. ELIGIBILITY CRITERIA: Assess the inclusion conditions for patients.
+
+2. INTERVENTION: Investigate treatment specifics, including type, dosage, administration frequency, and trial duration.
+
+3. RESULTS: Summarize participant counts, outcome measures, units of measurement, and conclusions.
+
+4. ADVERSE EVENTS: Document any observed patient signs and symptoms.
+
+Cross-reference these sections with domain expert statements to verify semantic entailment or support, ensuring claims are consistent with, corroborated by, and non-contradictory to the CTRs' content.
+----------
+4->
+
+Conduct a comprehensive analysis of Clinical Trial Reports (CTRs), focusing on four key components: 
+
+1. ELIGIBILITY CRITERIA: Examine patient inclusion conditions.
+
+2. INTERVENTION: Assess treatment specifics, including type, dosage, frequency, and trial duration.
+ 
+3. RESULTS: Summarize participant count, outcome measures, units, and trial conclusions.
+
+4. ADVERSE EVENTS: Document observed patient signs and symptoms.
+
+Cross-reference these sections with expert commentary to validate semantic entailment or support, ensuring claims are consistent with, corroborated by, and non-contradictory to the CTRs' content.
+----------

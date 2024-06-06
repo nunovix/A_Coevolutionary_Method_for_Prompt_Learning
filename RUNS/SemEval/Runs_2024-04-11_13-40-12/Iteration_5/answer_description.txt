@@ -1,0 +1,70 @@
+Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+
+
+Determine the validity of the statement by interpreting the medical terminology and context in both the clinical trial report descriptions and the statement. Address any ambiguities or gaps in the information to ensure accurate assessment.
+----------
+
+
+Assess the consistency and lack of contradictions in the Clinical Trial Report (CTR) with regard to the statement. Provide essential CTR details to validate the statement's truthfulness (Answer: Yes or No).
+----------
+
+Determine if the click-through rate (CTR) data aligns with the given statement. If the data verifies the statement, answer with "Yes." In contrast, if the data refutes or fails to validate the statement, respond with "No."
+----------
+
+Determine if the clinical trial results correspond with the stated observation. If they do, label "Yes". Otherwise, indicate "No".
+----------
+
+
+Evaluate the statement's compatibility with the Clinical Trial Report (CTR) data. Assess the CTR data to ensure its veracity and consistency with the statement. If matching, return "YES".
+----------
+
+Assess the agreement between the provided statement and the Clinical Trial Report (CTR) findings. Supply relevant CTR information to authenticate the statement's accuracy (Answer: Yes/No).
+----------
+
+Assess the consistency of Clinical Trial Reports and Controlled Trials Data with the given statement. Reply with "Yes" if the data corroborates the statement, and "No" if it conflicts or fails to sufficiently substantiate it.
+----------
+
+
+Assess the clinical trial report data to determine if it supports the statement's veracity and provides necessary details for consistency evaluation.
+----------
+
+
+Assess the alignment of statements with Clinical Trial Report (CTR) information. For any discrepancies, offer expert-backed clarifications based on CTR details. Make decisions that are grounded in comprehensive and conflict-free CTR data.
+----------
+
+
+Determine the validity of a clinical statement by deciphering its medical terminology and context in both the clinical trial report descriptions and the statement. Obtain crucial details from Clinical Trial Reports (CTRs) to authenticate and confirm the statement's accuracy, clarifying any uncertainties or inconsistencies in the data.
+----------
+
+
+Assess the alignment and validity of a clinical statement by interpreting the medical terminology and context in both the Clinical Trial Report (CTR) descriptions and the statement. Gather essential CTR details for verification and validation, and address any ambiguities or gaps in the information to ensure an accurate assessment.
+----------
+
+
+Determine if the provided statement aligns with the Clinical Trial Report (CTR) data. Decipher medical jargy and context, resolve any uncertainties, and ensure compatibility with CTR findings. Deliver output: "YES" for harmonious statements with CTR, "NO" for clashing statements.
+----------
+
+
+Assess the conformity and authenticity of the statement with the Clinical Trial Report (CTR) information. (Response: Affirmative if consistent and genuine, or Negative otherwise)
+----------
+
+Determine if the clinical trial results and CTR data correspond with the given statement. If they agree, respond with "Yes." If there is a contradiction or insufficient evidence, respond with "No."
+----------
+
+Evaluate the clinical trial report data in relation to the statement's claims. If there is consistency, return "YES". Otherwise, provide "NO".
+----------
+
+
+Assess the alignment of the statement with the findings in the Clinical Trial Report (CTR). If consistent, output "YES". Otherwise, return "NO".
+----------
+
+Verify the given statement by examining the data in the Clinical Trial Reports. If the statement is corroborated by the evidence, respond with YES.
+----------
+
+Determine if the provided statement aligns with the information in the Clinical Trial Report (CTR). If so, provide corresponding CTR details. If not, provide clarifying explanations. (YES for alignment, otherwise clarify).
+----------
+
+
+Assess the Clinical Trial Report (CTR) to determine the truthfulness of the statement. Supply vital CTR information if required for verification. Response: Affirm if consistent, Deny if conflicting or inconclusive.
+----------

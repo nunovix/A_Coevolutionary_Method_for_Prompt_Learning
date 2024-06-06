@@ -1,0 +1,173 @@
+Answer YES, NO or NOT MENTIONED to the question of whether one can conclude the validity of the statement with basis on the Non-Disclosure Agreement (NDA) information or if it is not present in the NDA.
+----------
+Indicate with either YES, NO or NOT MENTIONED whether it is possible to determine the validity of the statement based on the Non-Disclosure Agreement (NDA). An answer of YES means that the statement is supported by the NDA, not contradicting the provided information. An answer of NO means that the statement is NOT supported by the NDA. An answer of NOT MENTIONED means that the content of the statement is not referred to in the NDA.
+----------
+
+
+According to the Non-Disclosure Agreement (NDA), determine if the statement falls under:
+
+A. Agrees with NDA disclosures: YES
+B. Disagrees with NDA disclosures: NO
+C. Unrelated to NDA disclosures: NOT MENTIONED
+----------
+
+
+Determine if the statement is in agreement or contradiction with the information disclosed in the Non-Disclosure Agreement (NDA). Respond with:
+
+A. Agrees with NDA disclosures: YES
+B. Disagrees with NDA disclosures: NO
+C. Not mentioned or unrelated to NDA disclosures: NOT MENTIONED
+
+The statement's validity can be determined based on the NDA. If the statement supports or aligns with the information in the NDA, respond with A - Agrees with NDA disclosures (YES). If the statement contradicts or goes against the information in the NDA, respond with B - Disagrees with NDA disclosures (NO). If the statement is not related to the information in the NDA, respond with C - Not mentioned or unrelated to NDA disclosures (NOT MENTIONED).
+----------
+
+Based on the Non-Disclosure Agreement (NDA), assess the suitability of a statement for evaluating validity. If the statement aligns with the NDA's disclosures (YES), or is unrelated to the restricted information (NOT APPLICABLE), it can be used in the assessment. If the statement contradicts the NDA, it should be excluded (NO).
+----------
+
+Determine if the NDA permits the validation of a statement or if such information is excluded. 
+Answer: YES (if permissible), NO (if not permitted), or NOT MENTIONED (if ambiguous or unclear).
+----------
+
+Based on the Non-Disclosure Agreement (NDA), identify whether a given statement is:
+
+1. Supported: The statement aligns with the information disclosed in the NDA.
+2. Contradicted: The statement contradicts the information disclosed in the NDA.
+3. Not Referenced: The statement is not mentioned or addressed in the NDA.
+----------
+
+
+Based on the terms of the Non-Disclosure Agreement (NDA):
+
+1. If the statement aligns with the disclosed information: YES (Agrees with NDA disclosures)
+2. If the statement contradicts the disclosed information: NO (Disagrees with NDA disclosures)
+3. If the statement is unrelated to the disclosed information: NOT MENTIONED (Unrelated to NDA disclosures)
+----------
+
+
+Evaluate the consistency of the statement with the details outlined in the Non-Disclosure Agreement (NDA). Return the following response:
+
+A. Consistent with NDA details: YES
+B. Inconsistent with NDA details: NO
+C. Unrelated to NDA details: NOT MENTIONED
+
+The validity of the statement is contingent upon the NDA. If the statement harmonizes or aligns with the NDA's stipulations, respond with A - Consistent with NDA details (YES). Conversely, if the statement contradicts or violates the NDA's provisions, respond with B - Inconsistent with NDA details (NO). In all other cases, respond with C - Unrelated to NDA details (NOT MENTIONED).
+----------
+
+
+In accordance with the Non-Disclosure Agreement (NDA), determine if the statement falls under the following categories:
+
+1. Consistent with NDA disclosures: If yes, use the statement in the assessment.
+2. Unrelated to restricted information: If yes, use the statement in the assessment.
+3. Contradictory to NDA: If yes, exclude the statement from the assessment.
+----------
+
+Based on the Non-Disclosure Agreement (NDA), determine the suitability of a given statement for assessment:
+
+1. Supported: The statement aligns with the information disclosed in the NDA.
+2. Not Applicable: The statement is unrelated to the restricted information in the NDA.
+3. Contradicted: The statement contradicts the information disclosed in the NDA.
+
+The above instruction summarizes the main points of both instructions while keeping consistency with their original intent. It informs the assessment of a statement's suitability based on the NDA's disclosures, alignments, and contradictions.
+----------
+
+
+Based on the Non-Disclosure Agreement (NDA):
+
+1. If the statement aligns with or is unrelated to the disclosed information: YES (Applicable to NDA disclosures or Unrelated to NDA disclosures)
+2. If the statement contradicts the disclosed information: NO (Disagrees with NDA disclosures)
+----------
+
+
+Determine if the statement can be validated based on the information disclosed in the Non-Disclosure Agreement (NDA). Respond with:
+
+A. Can be validated with NDA information: YES
+B. Cannot be validated with NDA information: NO
+C. Not mentioned or unrelated to NDA information: NOT MENTIONED
+
+The statement's validity can be assessed by referring to the NDA information. If the statement can be confirmed or supported using the information disclosed in the NDA, respond with A - Can be validated with NDA information (YES). If the statement cannot be validated using the NDA information, respond with B - Cannot be validated with NDA information (NO). If the statement is not related to the information in the NDA, respond with C - Not mentioned or unrelated to NDA information (NOT MENTIONED).
+----------
+
+
+Determine if the NDA permits the disclosure of a statement aligning with or contradicting the agreed information. 
+Answer: YES (if permissible), NO (if not permitted), or NOT MENTIONED (if ambiguous or unclear). 
+
+The combined instruction rephrases the main information from both instructions while keeping the meaning and intent consistent. It also summarizes the main points and informs the execution of the task in a clearer way.
+----------
+
+Answer YES, NO, or NOT MENTIONED to the question of whether the NDA information provides sufficient basis for concluding the validity of a statement or if the statement is not addressed in the NDA.
+----------
+
+
+Based on the Non-Disclosure Agreement (NDA):
+
+1. If the statement agrees with or is unrelated to the NDA's disclosures: YES (Suitable for evaluation)
+2. If the statement contradicts the NDA: NO (Unsuitable for evaluation)
+----------
+
+
+Determine if the NDA permits the alignment or contradiction of a statement with the disclosed information:
+
+1. If it aligns: YES (Agrees with NDA disclosures)
+2. If it contradicts: NO (Disagrees with NDA disclosures)
+3. If it is unrelated or ambiguous/unclear: NOT MENTIONED (Unrelated or ambiguous/unclear in relation to NDA disclosures)
+
+This new instruction summarizes the main points from both instructions, while keeping consistency with their original intent. It also informs the execution of the task in a clearer way by using a direct and concise approach.
+----------
+
+Based on the Non-Disclosure Agreement (NDA), determine the suitability of a statement for assessment. If the statement aligns with or is not referenced in the NDA disclosures (YES or NOT REFERENCED), it can be used in the assessment. If the statement contradicts the NDA (CONTRADICTED), it should be excluded.
+----------
+
+Determine if the NDA provides information to validate or conclude the statement in question, and answer accordingly: YES, NO, or NOT MENTIONED.
+----------
+
+
+Determine if the statement is in agreement or disagreement with the NDA disclosures:
+
+A. Agrees with NDA disclosures: YES
+B. Disagrees with NDA disclosures: NO
+C. Not directly related to NDA disclosures: NOT MENTIONED
+
+The statement's consistency with the NDA should be evaluated. If the statement aligns or supports the information in the NDA, respond with A - Agrees with NDA disclosures (YES). If the statement contradicts or goes against the information in the NDA, respond with B - Disagrees with NDA disclosures (NO). If the statement does not have a clear connection to the information in the NDA, respond with C - Not directly related to NDA disclosures (NOT MENTIONED).
+----------
+
+
+Determine if the statement aligns, contradicts, or is unrelated to the disclosed information in the Non-Disclosure Agreement (NDA).
+
+Answer: YES (Agrees with NDA disclosures), NO (Disagrees with NDA disclosures), or NOT MENTIONED (Unrelated to NDA disclosures).
+----------
+
+
+Determine the agreement between the statement and the disclosed information in the Non-Disclosure Agreement (NDA):
+
+1. If the statement aligns with the disclosed information: YES
+2. If the statement contradicts the disclosed information: NO
+3. If the statement is unrelated to the disclosed information: NOT MENTIONED
+
+This combined instruction summarizes the main points of both instructions while keeping consistency with the original intent, allowing the audience to determine the agreement between a statement and the disclosed information in an NDA in a clearer way.
+----------
+
+
+Determine if the statement aligns, contradicts, or is unrelated to the disclosed information in the Non-Disclosure Agreement (NDA). Respond with:
+
+A. Aligns with NDA disclosures: YES
+B. Contradicts NDA disclosures: NO
+C. Unrelated to NDA disclosures: NOT MENTIONED
+----------
+
+
+Based on the terms of the Non-Disclosure Agreement (NDA):
+
+1. If the statement agrees with NDA disclosures: YES (Supported)
+2. If the statement contradicts NDA disclosures: NO (Contradicted)
+3. If the statement is unrelated to NDA disclosures: NOT MENTIONED (Not Referenced)
+----------
+
+
+Determine if the statement's validity can be concluded based on the information disclosed in the Non-Disclosure Agreement (NDA). Respond with:
+
+A. Can be concluded with NDA information: YES
+B. Cannot be concluded with NDA information: NO
+C. Not mentioned or unrelated to NDA information: NOT MENTIONED
+
+The statement's validity can be determined by evaluating its consistency with the information disclosed in the NDA. If the NDA contains relevant information that allows for the conclusion of the statement's validity, respond with A - Can be concluded with NDA information (YES). If the NDA does not provide sufficient information to determine the statement's validity, respond with B - Cannot be concluded with NDA information (NO). If the statement is not related to the information in the NDA, respond with C - Not mentioned or unrelated to NDA information (NOT MENTIONED).
+----------

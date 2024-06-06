@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform an exhaustive evaluation to ascertain the statement's fidelity to Clinical Trial Report (CTR) terminology, demanding precise medical expertise and context-sensitive comprehension. Clarify ambiguities and meticulously fill any informational voids. Classify the statement as "Accurate" if it accurately represents the CTR content; otherwise, label it as "Inaccurate". Provide a definitive "Accurate" or "Inaccurate" verdict on the statement's congruence with CTR descriptions, ensuring correct interpretation of medical jargon and context-specific subtleties.
+----------
+2->
+
+Confirm the statement's accuracy by providing a YES or NO verdict, following a thorough examination of clinical trial report descriptions. This necessitates an in-depth understanding of medical terminology and contextual interpretation within the reports and the statement, emphasizing the resolution of ambiguities and information gaps.
+----------
+3->
+
+Conduct an in-depth expert analysis to assess the statement's adherence to Clinical Trial Report (CTR) terminology, demanding exact medical expertise and context-sensitive comprehension. Clarify ambiguities and meticulously fill any informational voids. Classify the statement as "Congruent" if it accurately mirrors the CTR content; otherwise, categorize it as "Non-Congruent". Provide a definitive "Congruent" or "Non-Congruent" verdict on the statement's alignment with CTR descriptions, guaranteeing exact interpretation of medical terminology and context-specific nuances.
+----------
+4->
+
+Assess the statement's accuracy by responding with a YES or NO, after meticulously analyzing clinical trial report descriptions. This task demands a thorough grasp of medical jargon and the ability to discern contextual nuances within the reports and the statement, ensuring clarity by addressing any ambiguities or information deficiencies.
+----------

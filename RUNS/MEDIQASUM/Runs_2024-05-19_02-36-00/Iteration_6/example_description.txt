@@ -1,0 +1,10 @@
+0->You will be given a sample clinical note as a reference. Your task is to create a new clinical note that mirrors the format of the example. Feel free to use similar section headings as those in the sample, though it's not mandatory.
+----------
+1->Generate a replicated clinical note, adhering to the sample's structure and section titles, while maintaining equivalent content.
+----------
+2->Create a clinical note replicating the exemplar structure, drawing from the reference note, ensuring use of analogous section headings where applicable. Aim this instruction at domain experts, emphasizing clarity and conciseness while preserving original intent and meaning.
+----------
+3->Formulate a new clinical note emulating the example' input format, incorporating analogous section headings where applicable.
+----------
+4->"Craft a clinical note emulating the sample structure provided, drawing key elements for replication. Incortinsions are possible, utilizing parallel section headings as in the original; they are not mandatory."
+----------

@@ -1,0 +1,16 @@
+0->Assess the semantic entailment between sections of Clinical Trial Reports (CTRs) and assertions made by clinical experts. Analyze CTRs detailing clinical trial methodologies and results, focusing on treatment effectiveness and safety. Compare expert statements, which claim specific information from a single CTR or between two CTRs, ensuring these claims are consistent with clinical trial data, substantiated by the respective CTRs, and do not conflict with the given descriptions.
+----------
+1->
+
+Perform a comprehensive semantic entailment analysis between Clinical Trial Reports (CTRs) and expert assertions regarding therapeutic efficacy and safety. Scrutinize the methodologies and results detailed in CTRs to substantiate expert claims, verifying that these claims are evidence-based, corroborated by CTR data, and consistent with the given descriptions, devoid of any contradictions.
+----------
+2->Conduct a thorough semantic entailment analysis between Clinical Trial Reports (CTRs) and expert assertions on therapeutic efficacy and safety. Examine detailed methodologies and outcomes in CTRs to corroborate expert claims, ensuring they are data-driven, CTR-supported, and harmonious with provided descriptions, free from contradictions.
+----------
+3->
+
+Evaluate the semantic correlation between segments within Clinical Trial Reports (CTRs) and claims posited by clinical professionals. Conduct a thorough analysis of CTRs that encapsulate clinical trial protocols and outcomes, with a particular emphasis on the efficacy and safety of treatments. Cross-examine professional declarations that attribute particular details from a single CTR or juxtapose two CTRs, verifying that these assertions align with the clinical trial data, are corroborated by the pertinent CTRs, and remain congruent with the provided descriptions.
+----------
+4->
+
+Evaluate the semantic implications between segments of Clinical Trial Reports (CTRs) and clinical expert assertions. Conduct a detailed analysis of CTRs describing clinical trial protocols and outcomes, emphasizing treatment efficacy and safety profiles. Cross-examine expert declarations, asserting information derived from a single CTR or juxtaposing two CTRs, verifying that these assertions align with clinical trial findings, are corroborated by the pertinent CTRs, and remain congruent with the provided descriptions.
+----------

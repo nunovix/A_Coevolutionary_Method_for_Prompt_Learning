@@ -1,0 +1,18 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->
+
+Conduct an exhaustive analysis of the clinical trial report data to ascertain the veracity of the claim. Respond with 'CONFIRMED' if the claim is substantiated by the data, or 'DENIED' if it is contradicted.
+----------
+2->
+
+Analyze a clinical trial report comprehensively to ascertain the veracity of a given statement. Render a 'CONFIRMED' if the statement is accurate, or 'DENIED' if it is not, based solely on the complete data presented in the report.
+----------
+3->
+
+Perform a thorough examination of the clinical trial report data to definitively determine the accuracy of the statement. Provide a 'CONFIRMED' response if the statement holds true, or 'DENIED' if it does not.
+----------
+4->
+
+Conduct an exhaustive analysis of the clinical trial report data to ascertain the veracity of the claim. Respond with 'CONFIRMED' if the claim is substantiated by the data, or 'DENIED' if it is contradicted.
+----------

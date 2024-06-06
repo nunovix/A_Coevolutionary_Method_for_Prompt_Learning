@@ -1,0 +1,10 @@
+0->Compose a clinical note following the format outlined in the provided example. Key sections to incorporate may include 'CHIEF COMPLAINT', 'CURRENT MEDICATIONS', 'PHYSICAL EXAM', 'HISTORY OF PRESENT ILLNESS', 'ASSESSMENT AND PLAN', among others. Refrain from adding extraneous details to ensure clarity and conciseness.  Sections should not be empty.
+----------
+1->Create a clinical note adhering to the structure demonstrated in the example. Include essential segments such as 'PREMISE', 'PREVIOUS THERAPY', 'CURRENT TREATMENTS', 'RECENT PHYSICAL ASSESSMENT', 'CLIENT'S CURRENT HEALTH STORY', 'DIAGNOSIS AND STRATEGY'. Ensure no unnecessary details are added; maintain clarity and conciseness. Verify that each section contains pertinent information.
+----------
+2->- Construct a clinical note with the stipulated structure, incorporating crucial elements like 'PRESENTING COMPLAINT', 'ACTUAL MEDICATIONS', 'CIRCUMSTANTIAL PHYSICAL ASSESSMENT DETAILS', 'PROPOSED DIAGNOSIS', and supplementary pertinent details, whilst omitting extraneous information to ensure precision and succinctness.
+----------
+3->Construct a detailed clinical note emulating the given model, ensuring inclusion of 'PREMIUM CONCERNS', 'PAST MEDICATIONS', 'COMPREHENSIVE PHYSICAL ASSESSMENT', and adequately addressing sections like 'GENETIC PREDISPOSITION', 'STRATEGIC MEDICATION PLAN', and 'EARLY CHILDHOOD DETAILS' as necessary for complete medical documentation.
+----------
+4->Compose a clinical note following the standard template, incorporating 'INTRODUCTORY OBSERVATION', 'EXISTING MEDICATIONS', 'PHYSICAL SURVEY', 'RECENT ILLNESS BACKGROUND', and 'PROPOSED STRATEGY'. Exclude unnecessary details for clarity and brevity. Each segment must have pertinent information and must not contain placeholder entries.
+----------

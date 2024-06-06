@@ -1,0 +1,20 @@
+0->
+
+Evaluate semantic entailment relationships between distinct sections of Clinical Trial Reports (CTRs) and expert clinical statements. To confirm entailment, ensure the statement's claim is substantiated by the CTR and does not contradict the expert's assertions. Briefly, CTRs detail clinical trials' methodologies and results, assessing new treatments' effectiveness and safety. Comprehensive CTRs include four sections: (1) ELIGIBILITY CRITERIA, outlining patient inclusion conditions, (2) INTERVENTION, detailing treatment type, dosage, frequency, and duration, (3) RESULTS, summarizing participant statistics, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS, listing observed signs and symptoms. Analyze expert statements regarding information within these sections for a single CTR or comparative analysis of two CTRs.
+----------
+1->
+
+Evaluate the semantic relationships between segments within Clinical Trial Reports (CTRs) and authoritative clinical statements. Confirm that these statements are corroborated by the respective CTRs, concur with established clinical perspectives, and pertain to methodology, results, inclusion/exclusion criteria, specific treatments, or adverse effects in a singular CTR or when juxtaposing two CTRs.
+----------
+2->
+
+Evaluate semantic relationships between segments of Clinical Trial Reports (CTRs) and authoritative clinical statements pertaining to a single CTR or between two CTRs. Validate entailment by verifying that the statements are corroborated by the CTRs, are consistent with established clinical expertise, and relate to methodology, results, criteria for inclusion/exclusion, specific interventions, or adverse effects.
+----------
+3->
+
+Analyze the semantic entailment connections between Clinical Trial Reports (CTRs) and authoritative clinical assertions, concentrating on methodology, results, eligibility criteria, interventions, and adverse events. Break down each CTR into four distinct segments: (1) ELIGIBILITY CRITERIA, outlining patient inclusion conditions, (2) INTERVENTION, describing treatment specifics including type, dosage, administration frequency, and treatment length, (3) RESULTS, summarizing participant count, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS, listing observed signs and symptoms. Verify that expert assertions are corroborated by, related to, and do not contradict the CTR segments. To confirm entailment, the assertions must reference clinical trial data, be supported by the CTRs, and correspond with the given descriptions.
+----------
+4->
+
+Analyze the semantic entailment connections between Clinical Trial Reports (CTRs) and authoritative clinical assertions, concentrating on methodology, results, eligibility criteria, interventions, and adverse events. Break down each CTR into four distinct segments: (1) ELIGIBILITY CRITERIA, outlining patient inclusion conditions, (2) INTERVENTION, describing treatment specifics including type, dosage, frequency, and duration, (3) RESULTS, summarizing participant count, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS, listing observed signs and symptoms. Verify that expert assertions are corroborated by, related to, and do not contradict the CTR sections. To confirm entailment, the assertions must reference clinical trial data, be supported by the CTRs, and correspond with the given descriptions.
+----------

@@ -1,0 +1,16 @@
+0->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs expound on the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or comparative analysis of two. For entailment validation, the statement's claim should align with clinical trial information, find support in the CTR, and refrain from contradicting provided descriptions.
+----------
+1->
+
+Perform an in-depth semantic entailment evaluation between Clinical Trial Reports (CTRs) and clinical professionals' statements regarding the efficacy and safety of novel therapies. Validate that professionals' assertions are supported, evidenced, and aligned with the information presented in CTRs, ensuring there are no discrepancies or contradictions. Specifically, scrutinize the CTRs' inclusion/exclusion criteria, intervention details, outcome metrics, and adverse event logs to accurately assess the therapeutic effectiveness and safety.
+----------
+2->
+
+Conduct an in-depth examination of Clinical Trial Reports (CTRs) to evaluate their semantic correspondence with existing clinical guidelines. Scrutinize the alignment of inclusion/exclusion criteria, intervention specifics, outcome metrics, and documented adverse effects to gauge the efficacy and safety profiles of novel treatments. Validate the accuracy of expert assertions regarding CTR specifics for both singular and comparative evaluations, guaranteeing the absence of inconsistencies.
+----------
+3->Critically analyze Clinical Trial Reports (CTRs) to affirm semantic congruence with expert clinical claims. Examine inclusion/exclusion criteria, intervention specifics, outcomes, and adverse events to evaluate new therapies' effectiveness and safety. Verify that expert claims are consistent with CTR details, ensuring no contradictions in individual or comparative analyses.
+----------
+4->
+
+Carefully scrutinize Clinical Trial Reports (CTRs) to validate semantic alignment with established clinical claims. Focus on analyzing inclusion/exclusion criteria, specifics of interventions, measured outcomes, and recorded adverse events to assess the therapeutic effectiveness and safety profiles of innovative therapies. Ensure congruence between expert claims and CTR specifics, verifying the absence of inconsistencies for individual and comparative assessments.
+----------

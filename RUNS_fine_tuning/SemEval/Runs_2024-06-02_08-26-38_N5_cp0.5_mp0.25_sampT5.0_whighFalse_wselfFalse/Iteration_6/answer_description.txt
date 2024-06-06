@@ -1,0 +1,10 @@
+0->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+1->Determine definitively with a YES or NO if the statement's validity can be established from the Clinical Trial Report (CTR) descriptions. A positive response indicates that the statement is consistent with and corroborated by the CTR content, devoid of contradictions.
+----------
+2->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+3->Evaluate the statement's congruence with the content of Clinical Trial Reports (CTRs). Provide an unequivocal "Consistent" or "Inconsistent" determination, signifying whether the statement aligns with or contradicts the CTR details. Prioritize precision in understanding medical jargon and context, and clarify any ambiguities or information deficiencies.
+----------
+4->Determine with a definitive YES or NO if the statement's validity can be ascertained from the Clinical Trial Report (CTR) descriptions. A positive response signifies that the statement aligns with and is corroborated by the information within the CTR, without presenting any contradictions.
+----------

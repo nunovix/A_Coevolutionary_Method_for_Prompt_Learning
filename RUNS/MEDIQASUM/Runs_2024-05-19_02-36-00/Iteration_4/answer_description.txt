@@ -1,0 +1,10 @@
+0->Compose a clinical note following the format outlined in the provided example. Key sections to incorporate may include 'CHIEF COMPLAINT', 'CURRENT MEDICATIONS', 'PHYSICAL EXAM', 'HISTORY OF PRESENT ILLNESS', 'ASSESSMENT AND PLAN', among others. Refrain from adding extraneous details to ensure clarity and conciseness.  Sections should not be empty.
+----------
+1->Compose a clinical note following the format outlined in the provided example. Key sections to incorporate may include 'CHIEF COMPLAINT', 'CURRENT MEDICATIONS', 'PHYSICAL EXAM', 'HISTORY OF PRESENT ILLNESS', 'ASSESSMENT AND PLAN', among others. Refrain from adding extraneous details to ensure clarity and conciseness.  Sections should not be empty.
+----------
+2->"Create a clinical note structured around the mandatory template: 'CHIEF COMPLAINT', 'PATIENT EXAMINATION', 'PAST MEDICAL RECORDS', 'DIAGNOSIS EVALUATION', and 'TREATMENT PLAN'. Incorporate optional sections like 'SYSTEMS INVENTORY' and 'SOCIAL BACKGROUND' judiciously, ensuring concise and precise information."
+----------
+3->Develop a clinical note following the specified template, which should include: 'Chief Complaint', 'Patient Examination', 'Past Medical History', 'Diagnosis and Assessment', and 'Treatment Recommendation'. Integrate optional sections like 'Systems Review' and 'Social Context' where pertinent, focusing on brevity and accuracy.
+----------
+4->Generate a clinical note with the following structure: 'Chief Complaint', 'Patient Examination', 'Past Medical History', 'Diagnosis and Treatment Plan', and 'Recommended Interventions'. Each section should clearly and precisely articulate the current patient status and outline specialized clinical procedures.
+----------

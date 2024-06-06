@@ -1,0 +1,36 @@
+0->The objective is to examine semantic entailment relationships between individual sections of Clinical Trial Reports (CTRs) and statements articulated by clinical domain experts. CTRs elaborate on the procedures and findings of clinical trials, scrutinizing the effectiveness and safety of novel treatments. Each trial involves cohorts or arms exposed to distinct treatments or exhibiting diverse baseline characteristics. Comprehensive CTRs comprise four sections: (1) ELIGIBILITY CRITERIA delineating conditions for patient inclusion, (2) INTERVENTION particulars specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary encompassing participant statistics, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS cataloging signs and symptoms observed. Statements posit claims regarding the information within these sections, either for a single CTR or in comparative analysis of two. To establish entailment, the statement's assertion should harmonize with clinical trial data, find substantiation in the CTR, and avoid contradiction with the provided descriptions.
+----------
+1->
+
+Examine Clinical Trial Reports (CTRs) by dividing them into four detailed sections:
+
+1. Eligibility Criteria for Participants: Enumerate the specific requirements for patient selection.
+
+2. Detailed Treatment Regimen: Specify the intervention type, dosage, administration frequency, and treatment length.
+
+3. Measured Clinical Outcomes: Note the participant count, outcome metrics, units of measurement, and reported findings.
+
+4. Adverse Effects Record: Record all observed adverse signs and symptoms.
+
+Critically evaluate authoritative medical claims against specific CTRs or comparative studies. Confirm the accuracy of these claims by cross-referencing with clinical trial data, ensuring they are substantiated by the CTR, and are in agreement with comprehensive descriptions.
+----------
+2->
+
+Examine Clinical Trial Reports (CTRs) by dividing them into four detailed sections:
+
+1. Eligibility Criteria for Participants: Enumerate the specific requirements for patient inclusion.
+
+2. Detailed Treatment Regimen: Specify the intervention type, dosage, administration frequency, and treatment length.
+
+3. Measured Clinical Outcomes: Provide the participant count, outcome metrics, units of measurement, and reported findings.
+
+4. Record of Adverse Effects: Catalogue any noted adverse signs and symptoms.
+
+Critically evaluate authoritative medical claims against specific CTRs or comparative studies. Confirm the validity of these claims by cross-referencing with clinical trial data, ensuring alignment with the CTR, and verifying consistency with explicit descriptions.
+----------
+3->The objective is to examine semantic entailment relationships between individual sections of Clinical Trial Reports (CTRs) and statements articulated by clinical domain experts. CTRs elaborate on the procedures and findings of clinical trials, scrutinizing the effectiveness and safety of novel treatments. Each trial involves cohorts or arms exposed to distinct treatments or exhibiting diverse baseline characteristics. Comprehensive CTRs comprise four sections: (1) ELIGIBILITY CRITERIA delineating conditions for patient inclusion, (2) INTERVENTION particulars specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary encompassing participant statistics, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS cataloging signs and symptoms observed. Statements posit claims regarding the information within these sections, either for a single CTR or in comparative analysis of two. To establish entailment, the statement's assertion should harmonize with clinical trial data, find substantiation in the CTR, and avoid contradiction with the provided descriptions.
+----------
+4->
+
+Analyze the semantic entailment between sections of Clinical Trial Reports (CTRs) and expert assertions on the efficacy and safety of innovative therapies. Assess complete CTRs comprising four main segments: (1) Eligibility Criteria, specifying patient inclusion conditions, (2) Intervention Details, describing treatment specifics including type, dosage, frequency, and duration, (3) Results Summary, reporting participant demographics, outcome metrics, units of measurement, and trial conclusions, and (4) Adverse Events, listing observed signs and symptoms. Validate claims regarding data within these segments for a single CTR or across multiple CTRs. Confirm entailment by verifying the claim is consistent with clinical trial data, supported by the CTR content, and does not conflict with the descriptions provided.
+----------

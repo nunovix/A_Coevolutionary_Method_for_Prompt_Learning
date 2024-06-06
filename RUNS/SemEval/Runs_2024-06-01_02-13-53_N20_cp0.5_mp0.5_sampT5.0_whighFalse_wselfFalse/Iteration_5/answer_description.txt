@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Conduct a meticulous assessment of the clinical trial data presented in the report to definitively ascertain the veracity of the claim under scrutiny. Engage in an exhaustive examination of the medical lexicon and contextual details offered in both the report and the claim, systematically clarifying uncertainties and supplementing any missing data.
+----------
+2->
+
+Perform a meticulous analysis of the clinical trial data detailed in the report, with the goal of conclusively validating or refuting the claim in question. Undertake a thorough deconstruction of the medical terminology and contextual information provided in both the report and the claim, methodically resolving ambiguities and enhancing any insufficient details.
+----------
+3->
+
+Determine a "YES" or "NO" answer to ascertain the feasibility of validating the statement's accuracy using the clinical trial report descriptions provided. This requires the interpretation of medical jargon and contextual understanding from both the reports and the statement, with meticulous attention to resolving any ambiguities or information deficiencies.
+----------
+4->
+
+Execute a meticulous assessment of the clinical trial data presented in the report, aiming to definitively validate or refute the claim under scrutiny. Conduct an exhaustive examination of the medical lexicon and contextual cues in both the report and the claim, systematically clarifying uncertainties and completing any informational deficiencies.
+----------

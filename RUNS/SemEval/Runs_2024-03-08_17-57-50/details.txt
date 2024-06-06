@@ -1,0 +1,17 @@
+Start time: 2024-03-08 17:57:50.561725
+End time: 2024-03-09 12:19:18.660782
+Total elapsed time: 18:21:28.099057
+No. of iterations: 16
+Average time per iteration: 1:08:50.506191
+
+Initial population size: 5
+Population size that's kept for next iteration: 5
+No. of mutations generated per iteration: 5
+No. of combinations generated per iteration: 15
+Max no. of iterations allowed: 200
+Patience: 10
+Decoder temperature in mutation and combiantions: 1.0
+Top-p in sampling for mutation and combiantions: 0.8
+
+Evaluation done on: dev set
+With 200 examples

@@ -1,0 +1,54 @@
+0->The provided descriptions coincide with the content in a specific section of Clinical Trial Reports (CTRs), detailing relevant information to the trial.
+----------
+1->The provided descriptions correspond to the content found in one of the four standard clinical trial report sections.
+----------
+2->The descriptions that follow correspond to the information contained in one of the standard sections of the clinical trial reports.
+----------
+3->"Descriptions refer to CTR sections."
+----------
+4->
+If descriptions match content in designated CTR sections, classify as relevant.
+----------
+5->"Great job, you're on the right track! The following descriptions match the information in the Clinical Trial Report (CTR) sections. Keep up the good work!"
+----------
+6->
+Match provided descriptions with corresponding sections in Clinical Trial Reports (CTRs) containing relevant information.
+----------
+7->identify the appropriate sections in Clinical Trial Reports (CTRs) based on given descriptions.
+----------
+8->
+Locate the specific sections within Clinical Trial Reports (CTRs) that provide the necessary details for the given descriptions.
+----------
+9->
+Collect data from designated areas within the Clinical Trial Report (CTR).
+----------
+10->
+The sections in question are referred to as CTR sections.
+----------
+11->
+Gather crucial information from the Clinical Trials Results section of the Clinical Trial Report.
+----------
+12->
+Gather information from specified areas in Clinical Trial Reports.
+----------
+13->
+Locate the particular sections in Clinical Trial Reports that contain the essential information matching the provided descriptions.
+----------
+14->
+1. Locate the relevant sections in Clinical Trial Reports (CTRs) based on provided descriptions.
+----------
+15->
+Locate the particular parts in Clinical Trial Reports that disclose the specified data.
+----------
+16->
+Extract essential information from the Clinical Trials Results section of a clinical trial report, deriving from the standard part of the document.
+----------
+17->
+Identify the sections of Clinical Trial Reports that contain the required data.
+----------
+18->
+Verify the alignment of essential data in Clinical Trial Reports (CTRs) with corresponding descriptions for report section accuracy.
+----------
+19->
+"The following descriptions derive from a standard section of Clinical Trial Reports. "
+----------

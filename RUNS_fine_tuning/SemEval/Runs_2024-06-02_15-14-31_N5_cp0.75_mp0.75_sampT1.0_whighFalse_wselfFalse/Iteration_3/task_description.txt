@@ -1,0 +1,28 @@
+0->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs expound on the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or comparative analysis of two. For entailment validation, the statement's claim should align with clinical trial information, find support in the CTR, and refrain from contradicting provided descriptions.
+----------
+1->
+
+Perform a meticulous evaluation of Clinical Trial Reports (CTRs) to substantiate the accuracy of professional claims, concentrating on eligibility criteria, intervention details, result summaries, and recorded adverse events. Confirm that experts' assertions are semantically consistent with, supported by, and do not contradict the corresponding sections in the CTRs. Ensure that each CTR, generally comprising one to two patient groups, accurately assesses the effectiveness and safety of novel therapies. The CTRs are divided into four key sections: (1) Eligibility Criteria, specifying inclusion and exclusion criteria for participants, (2) Intervention, describing treatment specifics including dosage, administration frequency, and treatment duration, (3) Results, detailing participant demographics, observed outcomes, units of measurement, and conclusions, and (4) Adverse Events, documenting any observed signs and symptoms. Validate the alignment of expert statements with the clinical trial data.
+----------
+2->"
+
+Analyze the semantic alignment between sections of Clinical Trial Reports (CTRs) and authoritative clinical assertions, focusing on methodology, outcomes, eligibility, interventions, results, and adverse events. Each CTR, typically involving one to two patient groups, scrutinizes the efficacy and safety of innovative treatments. Break down the CTRs into four key components: (1) Eligibility Criteria, detailing inclusion and exclusion criteria for participants, (2) Intervention, outlining treatment specifics such as type, dosage, frequency, and duration, (3) Results, summarizing participant demographics, outcome measures, and study conclusions, and ( 4) Adverse Events, listing any observed side effects. Validate entailment by ensuring statements are consistent with CTR data, corroborated by the CTR, and do not contradict the original descriptions.
+----------
+3->
+
+Perform an in-depth examination of Clinical Trial Reports (CTRs) pertaining to a single to two patient groups to assess the safety and therapeutic effectiveness of novel medical treatments. Dissect the examination into four critical segments:
+
+1. Clarify the Patient Selection Criteria, encompassing both inclusion and exclusion parameters.
+
+2. Detail the Therapeutic Intervention, outlining the nature of the treatment, dosage, frequency of administration, and treatment period.
+
+3. Provide an overview of the Clinical Trial Findings, incorporating participant demographics, outcome metrics, units of measurement, and derived conclusions.
+
+4. Compile any Recorded Adverse Events, documenting observed signs and symptoms.
+
+Ensure all clinical claims are cross-verified with the CTRs, preserving logical consistency and preventing contradictions.
+----------
+4->
+
+Evaluate the semantic correlation between Clinical Trial Reports (CTRs) and professional assertions, concentrating on methodology, results, inclusion criteria, interventions, outcomes, and adverse reactions. Each CTR, comprising 1-2 patient groups, assesses the efficacy and safety of novel therapies. The CTRs are divided into four components: inclusion criteria for patient selection, comprehensive intervention details including type, dosage, frequency, and duration, results summarizing participant counts, outcome metrics, units, and conclusions, and a catalog of observed adverse events. Professional assertions must align with these components, supported by the CTRs without conflicting with the descriptions. Confirm entailment by verifying that the assertions are consistent with clinical trial data.
+----------

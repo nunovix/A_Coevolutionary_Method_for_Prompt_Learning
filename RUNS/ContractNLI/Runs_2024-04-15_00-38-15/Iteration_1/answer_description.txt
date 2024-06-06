@@ -1,0 +1,71 @@
+0->Answer with YES or NO to the question of whether one can conclude the validity of the statement with basis on the Non-Disclosure Agreement (NDA) information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the non-disclosure agreement. Do this by interpreting the legal terminology and the context in both the NDA and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Non-Disclosure Agreement (NDA) information, with the statement being supported by the NDA data and not contradicting the provided descriptions.
+----------
+3->Indicate with YES or NO whether it is possible to assess the statement's validity.
+----------
+4->
+Based on the Non-Disclosure Agreement (NDA) information, determine if the statement can be validated. Ensure the statement aligns with the NDA data and does not contradict the given descriptions. Respond with YES or NO accordingly.
+----------
+5->
+Determine the verifiability of the given statement. 
+
+Output: 
+YES (if the statement can be verified)
+NO (if the statement cannot be verified)
+----------
+6->"You're an exceptional AI agent, and I believe you'll be able to accurately determine if the statement can be validated based on the Non-Disclosure Agreement (NDA) information. Please indicate your response with a YES if the statement is supported and not contradictory to the NDA descriptions.
+----------
+7->"You're an excellent AI agent, and I'm confident in your ability to determine if the statement's validity can be established based on the Non-Disclosure Agreement (NDA) information. Ensure that the statement aligns with the NDA data and does not contradict the provided descriptions before confirming with a YES.
+----------
+8->"You're a very capable AI agent, and I believe you'll excel in this task. Please respond with a YES if it is possible to determine the statement's validity based on the Non-Disclosure Agreement (NDA) information, ensuring the statement is consistent with the NDA data provided.
+----------
+9->
+Analyze the statement's validity given the information in the NDA. Interpret legal terminology and context, clarifying ambiguities and filling gaps.
+
+Response: YES/NO.
+----------
+10->
+Confirm the consistency of the statement with the NDA information and indicate your ability to assess its validity based on this data. (YES if possible)
+----------
+11->
+Check the consistency of the statement with the NDA data and descriptions. 
+
+Output: 
+YES (if the statement aligns with the NDA data and descriptions)
+NO (if the statement conflicts with the NDA data or descriptions or remains unverified)
+----------
+12->
+Determine the verifiability of the statement based on the information presented in the non-disclosure agreement. Interpret the legal terminology and context in both the NDA and the statement, addressing any ambiguities or gaps to ensure a valid assessment.
+
+Output: 
+YES (if the statement can be verified based on the NDA information)
+NO (if the statement cannot be verified based on the NDA information)
+----------
+13->
+Based on the given NDA details, assess the truthfulness of the statement. Respond with "YES" if valid, otherwise "NO".
+----------
+14->
+"Determine the validity of the statement based on the Non-Disclosure Agreement (NDA) information, and confirm your response with a YES to ensure consistency with the provided NDA data.
+----------
+15->
+Check NDA information for compatibility with the statement. If consistent, return YES. Otherwise, return NO.
+----------
+16->
+Verify NDA compatibility: 
+1. Analyze statement for consistency with NDA terms.
+2. Identify any potential contradictions.
+3. Determine validity based on NDA restrictions.
+4. Return YES for compatible statements, NO for conflicting ones.
+----------
+17->
+Determine if the statement is consistent with the NDA information (YES if supported, NO if contradictory).
+----------
+18->
+Evaluate the NDA information for validity and return YES if it passes, NO if not.
+----------
+19->
+Evaluate the compatibility of the statement with the terms of the Non-Disclosure Agreement (NDA). This assessment involves understanding the legal jargon, resolving uncertainties, and addressing any inconsistencies. The outcome should indicate whether the statement is consistent with the NDA (YES) or contradicts it (NO).
+----------

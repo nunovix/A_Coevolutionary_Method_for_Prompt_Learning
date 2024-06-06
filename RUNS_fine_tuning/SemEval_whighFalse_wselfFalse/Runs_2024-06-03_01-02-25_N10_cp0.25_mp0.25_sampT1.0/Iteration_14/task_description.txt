@@ -1,0 +1,16 @@
+0->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs expound on the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or comparative analysis of two. For entailment validation, the statement's claim should align with clinical trial information, find support in the CTR, and refrain from contradicting provided descriptions.
+----------
+1->
+
+Conduct a semantic entailment analysis between segments of Clinical Trial Reports (CTRs) and expert assertions in the clinical domain. This involves assessing the effectiveness and safety of innovative therapeutic interventions as detailed in CTRs. Verify that expert claims regarding specific CTR segments are evidence-based, substantiated by CTR data, and align with provided descriptions, ensuring no contradictions arise.
+----------
+2->
+
+Conduct a semantic entailment analysis between Clinical Trial Reports (CTRs) and clinical experts' statements, meticulously scrutinizing the methodologies and outcomes of clinical trials to evaluate the efficacy and safety of novel treatments. Ensure that expert claims are substantiated by CTR data, align with provided descriptions, and maintain consistency without contradictions.
+----------
+3->
+
+Perform a semantic entailment analysis between segments from Clinical Trial Reports (CTRs) and expert assertions to evaluate the effectiveness and safety profiles of new drugs. Confirm that each expert assertion is evidence-based, supported by data from CTRs, and consistent with the provided descriptions, avoiding any discrepancies.
+----------
+4->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs expound on the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or comparative analysis of two. For entailment validation, the statement's claim should align with clinical trial information, find support in the CTR, and refrain from contradicting provided descriptions.
+----------

@@ -1,6 +1,3 @@
-# NOTAS FUTURAS
-# O CSQA está sem o phi 3 implementado porque ainda tem o prompt making separado do eval
-
 import os
 import sys
 import json
@@ -3380,3 +3377,8 @@ def create_plots_from_RUNS_folder(directory_path):
     plot_and_save_scores(all_scores, max_scores, directory_path, True, iteration_folders, ymin, ymax, score, keep_lists)  # For only top scores
 
     return None
+
+
+# NOTAS FUTURAS
+# O CSQA está sem o phi 3 implementado porque ainda tem o prompt making separado do eval
+

@@ -1,0 +1,74 @@
+0->Consider the task of determining semantic entailment relations between individual sections of Clinical Trial Reports (CTRs) and statements made by clinical domain experts. Note that CTRs outline the methodology and findings of a clinical trial, which are conducted to assess the effectiveness and safety of new treatments. Each trial involves 1-2 patient groups, called cohorts or arms, and these groups may receive different treatments, or have different baseline characteristics. The complete CTRs contain 4 sections, corresponding to (1) a list of the ELIGIBILITY CRITERIA corresponding to the conditions for patients to be allowed to take part in the clinical trial, (2) a description for the INTERVENTION that specifies the type, dosage, frequency, and duration of treatments being studied, (3) a summary of the RESULTS, detailing aspects such as the number of participants in the trial, the outcome measures, the units, and the conclusions, and (4) a list of ADVERSE EVENTS corresponding to signs and symptoms observed in patients during the clinical trial. In turn, the statements are sentences that make some type of claim about the information contained in one of the aforementioned sections, either considering a single CTR or comparing two CTRs. In order for the entailment relationship to be established, the claim in the statement should be related to the clinical trial information, it should be supported by the CTR, and it must not contradict the provided descriptions.
+----------
+1->
+
+Undertake a comprehensive semantic analysis of Clinical Trial Reports (CTRs) to evaluate the effectiveness and safety of emerging medical therapies. The analysis should meticulously cover six pivotal areas:
+
+1. Elucidate Participant Eligibility Criteria, emphasizing inclusion parameters.
+
+2. Articulate Treatment Protocols, detailing intervention types, dosage specifics, administration schedules, and treatment durations.
+
+3. Catalog Clinical Outcomes Measurement, specifying participant numbers, outcome metrics, units of measurement, and inferred results.
+
+4. Record Adverse Effects, documenting any symptoms manifested by participants.
+
+5. Establish Semantic Correlations between CTR segments and authoritative expert assertions, ensuring claims are evidence-based.
+
+6. Validate Clinical Relevance and Coherence with CTR narratives, corroborating methodologies, findings, eligibility criteria, interventions, participant outcomes, units of measurement, and recorded adverse events.
+
+Ensure medical precision, substantiate all statements with empirical evidence, ensure internal coherence within each section, and clearly delineate semantic links between CTR sections and authoritative expert statements, confirming congruence with CTR data.
+----------
+2->
+
+Conduct a comprehensive semantic analysis of Clinical Trial Reports (CTRs) to evaluate the effectiveness and safety of innovative medical treatments. This analysis should meticulously cover six pivotal areas:
+
+1. Define Participant Eligibility Criteria, emphasizing inclusion parameters.
+
+2. Detail Treatment Protocols, including types of interventions, precise dosages, administration schedules, and treatment durations.
+
+3. Describe Clinical Outcomes Measurement, detailing participant numbers, outcome metrics, units of measurement, and inferred results.
+
+4. Document Adverse Effects, recording any symptoms experienced by participants.
+
+5. Establish Semantic Links between CTR segments and authoritative expert claims, ensuring evidence-based assertions.
+
+6. Validate Clinical Relevance and Coherence with CTR narratives, corroborating methodologies, findings, eligibility criteria, interventions, participant outcomes, units of measurement, and recorded adverse events.
+
+Ensure medical precision, substantiate all statements with empirical evidence, maintain internal coherence within each section, and clearly articulate semantic links between CTR sections and authoritative expert statements, confirming congruence with CTR data.
+----------
+3->
+
+Conduct an exhaustive semantic dissection of Clinical Trial Reports (CTRs) to assess the therapeutic efficacy and safety profiles of novel medical interventions. The analysis must rigorously cover six critical domains:
+
+1. Clarify and detail Participant Eligibility Criteria, with a focus on inclusion parameters.
+
+2. Describe Treatment Protocols comprehensively, including types of interventions, dosage specifics, administration schedules, and treatment durations.
+
+3. Enumerate Clinical Outcomes Measurement, specifying participant counts, outcome metrics, units of measurement, and inferred results.
+
+4. Record Adverse Effects, documenting any symptoms exhibited by participants.
+
+5. Correlate Semantic Links between CTR segments and authoritative expert claims, ensuring claims are evidence-based.
+
+6. Confirm Clinical Relevance and Coherence with CTR narratives, verifying methodologies, findings, eligibility criteria, interventions, participant outcomes, units of measurement, and recorded adverse events.
+
+Maintain medical precision, substantiate all statements with empirical evidence, ensure internal coherence within each section, and distinctly articulate semantic connections between CTR sections and authoritative expert statements, verifying alignment with CTR data.
+----------
+4->
+
+Perform an exhaustive semantic dissection of Clinical Trial Reports (CTRs), scrutinizing clinical protocols to assess novel therapeutic approaches' efficacy and safety. This dissection should cover six critical domains:
+
+1. Specify the Eligibility Criteria for Participants, with a focus on inclusion criteria.
+
+2. Describe the Treatment Protocols, detailing types of interventions, dosages, administration schedules, and treatment durations.
+
+3. Detail the Measurement of Clinical Outcomes, including participant counts, outcome metrics, units of measurement, and derived conclusions.
+
+4. Document any Adverse Effects observed in participants.
+
+5. Establish semantic correlations between segments of CTRs and authoritative expert claims, ensuring claims are evidence-based.
+
+6. Verify Clinical Relevance and Coherence with CTR descriptions, aligning methodology, results, eligibility criteria, interventions, participant outcomes, units of measurement, and adverse events.
+
+Ensure medical accuracy, substantiate statements with empirical evidence, maintain internal coherence within each section, and clearly articulate semantic connections between CTR sections and authoritative expert statements, ensuring alignment with CTR data.
+----------

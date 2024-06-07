@@ -1,0 +1,16 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->
+
+Evaluate the truthfulness of assertions in Clinical Trial Documents (CTDs) with definitive "Confirmed" or "Denied" answers, strictly according to the presented evidence, guaranteeing absolute consistency and clarity, and requiring precise understanding of medical jargon and contextual nuances.
+----------
+3->
+
+Assess the truthfulness of assertions within clinical trial documentation by deciphering medical terminology and context, clarifying ambiguities, and addressing informational gaps.
+----------
+4->
+
+Determine the validity of statements within clinical trial reports by interpreting medical terminology and context, resolving ambiguities, and supplementing any informational deficiencies.
+----------

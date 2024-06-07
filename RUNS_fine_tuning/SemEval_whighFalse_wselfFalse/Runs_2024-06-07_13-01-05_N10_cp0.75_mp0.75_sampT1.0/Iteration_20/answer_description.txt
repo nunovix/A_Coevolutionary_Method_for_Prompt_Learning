@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Provide a definitive "Affirmed" or "Refuted" evaluation of the factual accuracy of statements within Clinical Trial Documents (CTDs), strictly adhering to the provided evidence. This task necessitates a profound understanding of medical jargon and contextual nuances. Elucidate ambiguities and ensure comprehensive completion of any informational voids.
+----------
+2->
+
+Provide a definitive "Affirmative" or "Negative" assessment of the factual correctness of statements within Clinical Trial Documents (CTDs), strictly adhering to the presented evidence. This requires an in-depth grasp of medical jargon and contextual nuances. Elucidate ambiguities with exactitude and diligently address any gaps in information.
+----------
+3->
+
+Deliver a conclusive "Confirmed" or "Disputed" determination on the factual correctness of statements within Clinical Trial Documents (CTDs), strictly adhering to the presented evidence. This task demands a deep understanding of medical terminology and contextual intricacies. Clarify ambiguities with exactitude and meticulously probe any informational lacunae.
+----------
+4->
+
+Deliver a conclusive "Confirmed" or "Disputed" determination on the factual correctness of statements within Clinical Trial Documents (CTDs), strictly adhering to the presented evidence. This task demands an in-depth understanding of medical terminology and contextual subtleties. Clarify ambiguities with precision and conduct a thorough investigation to fill any informational gaps.
+----------

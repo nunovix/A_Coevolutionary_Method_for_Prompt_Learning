@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Provide an unequivocal "Affirmative" or "Negative" verdict on the veracity of statements extracted from Clinical Trial Documents (CTDs), relying exclusively on the presented evidence, devoid of inconsistencies or ambiguities, and with exact understanding of medical terminology and contextual nuances.
+----------
+2->
+
+Evaluate the accuracy of statements in clinical trial reports by interpreting medical jargon and context, clarifying ambiguities, and filling in any informational gaps.
+----------
+3->
+
+Assess the accuracy of statements within clinical trial reports by deciphering medical terminology and context, clarifying ambiguities, and addressing informational gaps.
+----------
+4->
+
+Evaluate the veracity of assertions in clinical trial documentation by deciphering medical jargon and context, clarifying ambiguities, and filling informational voids.
+----------

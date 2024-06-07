@@ -1,0 +1,20 @@
+0->
+
+Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR) data, ensuring the statement aligns with the CTR information and does not conflict with the given descriptions.
+----------
+1->
+
+Evaluate the accuracy of assertions in clinical trial records by thoroughly interpreting medical terminology and context, elucidating ambiguities, and supplementing information gaps with exhaustive data sourced from both the statements and the Clinical Trial Report (CTR). Ascertain the statement's complete alignment with the CTR, providing an unequivocal 'YES' for congruence or 'NO' for non-congruence, while rigorously verifying for any inconsistencies.
+----------
+2->
+
+Assess the veracity of claims within clinical trial documentation by meticulously deciphering medical jargon and contextual nuances, clarifying any vagueness, and supplementing missing data with comprehensive information derived from both statements and the Clinical Trial Report (CTR). Confirm the statement's absolute congruence with the CTR, responding with a definitive 'YES' if consistent or 'NO' if inconsistent, and avoiding any discrepancies.
+----------
+3->
+
+Evaluate the truthfulness of assertions in clinical trial records by thoroughly interpreting medical terminology and context, elucidating ambiguities, and filling informational gaps using detailed information from both statements and the Clinical Trial Report (CTR). Verify that the statement is in complete agreement with the CTR, providing an unequivocal affirmative YES or negative NO, ensuring no inconsistencies are present.
+----------
+4->
+
+Assess the veracity of claims in clinical trial documentation by meticulously interpreting medical jargon and context, clarifying ambiguities, and bridging informational voids with comprehensive details from both statements and the Clinical Trial Report (CTR). Confirm that each statement aligns unequivocally with the CTR, responding with a definitive 'YES' for consistency or 'NO' for discrepancies.
+----------

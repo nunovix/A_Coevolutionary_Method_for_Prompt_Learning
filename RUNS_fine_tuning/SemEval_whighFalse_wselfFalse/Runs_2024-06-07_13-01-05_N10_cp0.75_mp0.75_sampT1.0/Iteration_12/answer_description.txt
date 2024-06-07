@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Provide an unambiguous "Confirmed" or "Denied" verdict on the accuracy of statements within Clinical Trial Documents (CTDs), strictly based on the presented evidence. This requires precise comprehension of medical terminology and contextual subtleties.
+----------
+2->
+
+Provide a definitive "Confirmed" or "Denied" assessment regarding the accuracy of statements in Clinical Trial Documents (CTDs), strictly based on the evidence provided. This requires precise comprehension of medical jargon and contextual subtleties.
+----------
+3->
+
+Provide a definitive "Confirmed" or "Denied" assessment regarding the accuracy of statements in Clinical Trial Documents (CTDs), strictly based on the evidence provided. This task necessitates precise comprehension of medical jargon and contextual subtleties.
+----------
+4->
+
+Deliver an unequivocal "Affirmative" or "Negative" determination regarding the veracity of statements within Clinical Trial Documents (CTDs), strictly adhering to the presented evidence. This requires exact understanding of medical terminology and contextual nuances.
+----------

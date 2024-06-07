@@ -1,0 +1,20 @@
+0->
+
+Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR) data, ensuring the statement aligns with the CTR information and does not conflict with the given descriptions.
+----------
+1->
+
+Conduct a meticulous validation of clinical trial assertions by precisely deciphering medical terminology and contextual nuances. Eliminate ambiguity and enhance any partial data with exhaustive details obtained from the Clinical Trial Report (CTR) and verified credible sources. Assess the claim's full correspondence with the CTR, clearly designating it as 'CONSISTENT' if it aligns or 'INCONSISTENT' if it diverges, with unwavering commitment to factual precision.
+----------
+2->
+
+Conduct a meticulous validation of clinical trial assertions by precisely deciphering medical terminology and contextual nuances. Eliminate ambiguity and enhance partial data with exhaustive details from both the Clinical Trial Report (CTR) and verified authoritative sources. Assess the claim's full correspondence with the CTR, clearly marking it as 'CONSISTENT' for agreement or 'INCONSISTENT' for divergence, with unwavering commitment to factual correctness.
+----------
+3->
+
+Evaluate the statement's consistency with the Clinical Trial Report (CTR) by providing a clear YES or NO verdict. This assessment should strictly adhere to the CTR's data, ensuring no contradiction with the report's details or any other provided descriptions. Additionally, interpret medical terminology and contextual subtleties with precision, enhance incomplete information with comprehensive details from the CTR and other reliable sources, and confirm the statement's full alignment with the CTR. Label the statement as 'CONSISTENT' if it aligns or 'INCONSISTENT' if it contradicts the CTR, thereby upholding the highest standard of factual accuracy.
+----------
+4->
+
+Perform a rigorous validation of clinical trial assertions by precisely deciphering medical jargon and contextual nuances. Eliminate vagueness and supplement partial data with exhaustive details from the Clinical Trial Report (CTR) and corroborative, reliable sources. Evaluate the claim's complete congruence with the CTR, marking it 'CONSISTENT' for alignment or 'INCONSISTENT' for discrepancies, ensuring unwavering commitment to factual precision.
+----------

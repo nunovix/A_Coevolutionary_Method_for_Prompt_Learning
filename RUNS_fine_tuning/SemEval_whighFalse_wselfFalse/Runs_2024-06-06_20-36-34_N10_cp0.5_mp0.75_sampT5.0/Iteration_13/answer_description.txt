@@ -1,0 +1,20 @@
+0->
+
+Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR) data, ensuring the statement aligns with the CTR information and does not conflict with the given descriptions.
+----------
+1->
+
+Confirm with a definitive YES or NO whether the statement's veracity can be determined solely from the Clinical Trial Report (CTR) data, ensuring it is consistent with the CTR details and does not contradict any provided descriptions.
+----------
+2->"
+
+Perform a rigorous verification of clinical trial claims by accurately interpreting medical jargon and contextual subtleties. Clarify ambiguities and supplement partial data with comprehensive details from both the Clinical Trial Report (CTR) and trusted authoritative references. Determine the claim's complete alignment with the CTR, unequivocally marking it as 'CONSISTENT' for agreement or 'INCONSISTENT' for discrepancies, with an unwavering dedication to factual integrity.
+----------
+3->
+
+Evaluate the statement's consistency with the Clinical Trial Report (CTR) by providing a definitive YES or NO answer. This assessment must strictly adhere to the CTR's guidelines, ensuring absolute alignment with the report's content without extraneous details. Accurately interpret medical terminology and contextual subtleties. Where necessary, fill in gaps with detailed information from the CTR and verified authoritative references. Confirm the statement's full alignment with the CTR as 'CONSISTENT' or 'INCONSISTENT' to uphold the highest standard of factual accuracy.
+----------
+4->
+
+Perform a meticulous verification of clinical trial assertions by precisely deciphering medical terminology and contextual nuances. Elucidate ambiguities and enrich partial data with exhaustive details from both the Clinical Trial Report (CTR) and verified authoritative sources. Assess the entirety of the claim's correspondence with the CTR, categorically designating it as 'CONSISTENT' for full agreement or 'INCONSISTENT' for variances, guaranteeing strict compliance with factual correctness.
+----------

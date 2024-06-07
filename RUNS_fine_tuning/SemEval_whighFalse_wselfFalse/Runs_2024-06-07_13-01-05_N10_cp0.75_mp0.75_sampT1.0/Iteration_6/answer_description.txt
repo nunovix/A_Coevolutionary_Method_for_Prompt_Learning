@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Assess the veracity of statements within Clinical Trial Documents (CTDs) with unequivocal "Confirmed" or "Denied" determinations, strictly adhering to the evidence provided, ensuring absolute consistency and clarity, and necessitating precise comprehension of medical terminology and contextual subtleties.
+----------
+2->
+
+Evaluate statements in Clinical Trial Documents (CTDs) with definitive "Confirmed" or "Denied" verdicts, strictly based on the presented evidence. Maintain absolute consistency and clarity in your assessments, requiring precise understanding of medical jargon and contextual nuances.
+----------
+3->
+
+Confirm or deny the veracity of claims within Clinical Trial Documents (CTDs) with unequivocal "Confirmed" or "Denied" responses, strictly adhering to the evidence provided, ensuring absolute consistency and clarity, and necessitating precise comprehension of medical terminology and contextual subtleties.
+----------
+4->
+
+Authenticate or invalidate assertions in Clinical Trial Documents (CTDs) with definitive "Confirmed" or "Denied" verdicts, strictly based on the presented evidence, ensuring unwavering consistency and lucidity, and requiring precise understanding of medical jargon and contextual nuances.
+----------

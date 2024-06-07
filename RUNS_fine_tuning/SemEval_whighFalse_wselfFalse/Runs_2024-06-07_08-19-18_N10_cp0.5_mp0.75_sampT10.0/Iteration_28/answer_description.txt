@@ -1,0 +1,18 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->
+
+Perform a conclusive evaluation to verify or invalidate the claim by rigorously examining data sourced from the clinical trial documentation.
+----------
+2->
+
+Verify the accuracy of the claim by thoroughly examining data extracted from the clinical trial report.
+----------
+3->
+
+Perform an exhaustive and definitive analysis of the clinical trial data within the report to conclusively determine the veracity of the statement under scrutiny.
+----------
+4->
+
+Conduct a comprehensive and definitive evaluation of the clinical trial data presented in the report to conclusively ascertain the validity of the claim being scrutinized.
+----------

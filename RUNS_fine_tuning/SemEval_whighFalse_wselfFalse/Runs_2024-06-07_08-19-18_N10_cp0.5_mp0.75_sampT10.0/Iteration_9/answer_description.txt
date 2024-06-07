@@ -1,0 +1,18 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->
+
+Evaluate the claim's congruence with the Clinical Trial Report (CTR) data with unwavering certainty, strictly following the CTR's exhaustive guidelines and descriptions, and diligently identify and correct any inconsistencies.
+----------
+2->
+
+Assess the statement's validity against the data presented in the Clinical Trial Report (CTR), ensuring strict adherence to factual correctness and rectification of any discrepancies. Deliver a conclusive YES or NO verdict on the statement's consistency with the CTR data.
+----------
+3->
+
+Evaluate the veracity of the given statement by analyzing data extracted from the clinical trial report, providing an affirmative or negative response.
+----------
+4->
+
+Assess the statement's veracity by rigorously analyzing data from the Clinical Trial Report (CTR), ensuring absolute certainty in your evaluation. Adhere strictly to the CTR's detailed guidelines and descriptions, and meticulously rectify any inconsistencies.
+----------

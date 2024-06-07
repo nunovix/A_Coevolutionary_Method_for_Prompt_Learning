@@ -1,0 +1,20 @@
+0->
+
+Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR) data, ensuring the statement aligns with the CTR information and does not conflict with the given descriptions.
+----------
+1->
+
+Perform an exhaustive assessment of clinical trial assertions by meticulously deciphering medical jargon and situational context, clarifying uncertainties, and integrating comprehensive data from both the assertions and the Clinical Trial Report (CTR). Confirm that the assertions are congruent with the CTR, categorizing them as 'CONSISTENT' if they align or 'INCONSISTENT' if they diverge, while rigorously checking for discrepancies.
+----------
+2->
+
+Evaluate the truthfulness of assertions in clinical trial records by thoroughly interpreting medical terminology and context, elucidating ambiguities, and filling informational gaps using detailed information from both statements and the Clinical Trial Report (CTR). Verify that the statement is in complete agreement with the CTR, providing an unequivocal affirmative YES or negative NO, ensuring no inconsistencies are present.
+----------
+3->
+
+Conduct a meticulous verification of claims in clinical trial records. Accurately decipher medical terminology and contextual subtleties. Elucidate any vagueness and enrich partial data with detailed information sourced from both the Clinical Trial Report (CTR) and relevant medical research publications. Confirm the claim's full alignment with the CTR and categorically state 'CONSISTENT' if accurate or 'INCONSISTENT' if not, maintaining unwavering commitment to factual correctness.
+----------
+4->
+
+Perform a thorough validation of clinical trial assertions by precisely deciphering medical jargon and contextual nuances. Elucidate any vagueness and supplement partial data with detailed information derived from both statements and the Clinical Trial Report (CTR). Ascertain the statement's complete congruence with the CTR, providing an unequivocal response of 'CONSISTENT' for agreement or 'INCONSISTENT' for inconsistencies, while maintaining rigorous factual integrity.
+----------

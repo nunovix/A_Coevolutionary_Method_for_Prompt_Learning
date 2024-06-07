@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Determine a "YES" or "NO" answer to ascertain if the validity of the statements within clinical trial report descriptions can be evaluated using the provided information, by interpreting medical jargon and context from both the reports and statements, while meticulously resolving any ambiguities or informational deficiencies.
+----------
+2->
+
+Assess each claim in Clinical Trial Documents (CTDs) with definitive certainty, classifying them as "Confirmed" or "Disputed," based solely on the evidence provided. Demonstrate a profound comprehension of medical terminology and contextual subtleties. Improve clarity by precisely resolving ambiguities and comprehensively addressing any gaps in information. Additionally, verify the claim's accuracy by interpreting the medical language and context of the CTDs concerning the claim, ensuring meticulous clarification of ambiguities and correction of informational shortcomings.
+----------
+3->
+
+Assess each claim within Clinical Trial Documents (CTDs) with definitive certainty, classifying them as "Verified" or "Challenged," relying exclusively on the evidence presented. Exhibit an advanced comprehension of medical lexicon and contextual subtleties. Precision is paramount in resolving ambiguities and information voids, and meticulous interpretation of medical vernacular and context is required within the CTDs to accurately determine the claim's veracity.
+----------
+4->
+
+Evaluate the veracity of assertions within clinical trial documentation by accurately deciphering medical jargon and contextual cues, meticulously clarifying ambiguities or filling informational voids. Provide a "VALID" or "INVALID" verdict based on your analysis.
+----------

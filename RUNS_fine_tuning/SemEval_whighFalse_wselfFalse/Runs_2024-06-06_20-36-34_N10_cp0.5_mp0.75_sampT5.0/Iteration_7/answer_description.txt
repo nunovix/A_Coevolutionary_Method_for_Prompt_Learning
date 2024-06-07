@@ -1,0 +1,20 @@
+0->
+
+Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR) data, ensuring the statement aligns with the CTR information and does not conflict with the given descriptions.
+----------
+1->
+
+Critically assess the veracity of claims within clinical trial documentation by meticulously deciphering medical jargon and contextual nuances, clarifying any vagueness, and filling information voids with comprehensive data from both the statements and the Clinical Trial Report (CTR). Confirm the statement's full consistency with the CTR and respond with a definitive 'CONSISTENT' for agreement or 'INCONSISTENT' for disagreement, while diligently checking for discrepancies.
+----------
+2->
+
+Perform a rigorous assessment of the veracity of assertions within clinical trial documentation. Interpret medical jargon and contextual nuances with precision, clarify any ambiguities, and supplement incomplete data with comprehensive information derived from both the Clinical Trial Report (CTR) and pertinent medical research literature. Validate the statement's complete correspondence with the CTR, and provide a definitive 'YES' for consistency or 'NO' for inconsistency, ensuring strict adherence to factual accuracy.
+----------
+3->
+
+Perform a meticulous assessment of the veracity of assertions within clinical trial documentation. Interpret medical jargon and contextual nuances with precision, clarify any uncertainties, and supplement partial data with comprehensive details sourced from both statements and the Clinical Trial Report (CTR). Validate the statement's complete correspondence with the CTR, providing an unequivocal 'YES' for consistency or 'NO' for discrepancies, maintaining rigorous factual consistency.
+----------
+4->
+
+Evaluate the truthfulness of assertions in clinical trial records by thoroughly interpreting medical terminology and context, elucidating ambiguities, and filling informational gaps using detailed information from both statements and the Clinical Trial Report (CTR). Verify that the statement is in complete agreement with the CTR, providing an unequivocal affirmative YES or negative NO, ensuring no inconsistencies are present.
+----------

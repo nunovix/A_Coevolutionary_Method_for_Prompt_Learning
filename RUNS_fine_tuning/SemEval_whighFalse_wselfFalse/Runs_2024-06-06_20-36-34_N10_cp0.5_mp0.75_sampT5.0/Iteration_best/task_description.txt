@@ -1,0 +1,4 @@
+0->
+
+Evaluate semantic entailment relationships between distinct sections of Clinical Trial Reports (CTRs) and expert clinical statements. To determine entailment, verify that the statement's claim is substantiated by the CTR and does not conflict with the provided descriptions. In essence, CTRs detail the methodology and results of clinical trials, assessing new treatments' effectiveness and safety. Comprehensive CTRs include four sections: (1) ELIGIBILITY CRITERIA, detailing patient inclusion conditions, (2) INTERVENTION, describing treatment type, dosage, frequency, and duration, (3) RESULTS, summarizing participant statistics, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS, documenting observed signs and symptoms. Analyze expert statements regarding information within these sections for a single CTR or in comparative analyses of two CTRs.
+----------

@@ -1,0 +1,48 @@
+0->Consider the task of determining semantic entailment relations between individual sections of Clinical Trial Reports (CTRs) and statements made by clinical domain experts. Note that CTRs outline the methodology and findings of a clinical trial, which are conducted to assess the effectiveness and safety of new treatments. Each trial involves 1-2 patient groups, called cohorts or arms, and these groups may receive different treatments, or have different baseline characteristics. The complete CTRs contain 4 sections, corresponding to (1) a list of the ELIGIBILITY CRITERIA corresponding to the conditions for patients to be allowed to take part in the clinical trial, (2) a description for the INTERVENTION that specifies the type, dosage, frequency, and duration of treatments being studied, (3) a summary of the RESULTS, detailing aspects such as the number of participants in the trial, the outcome measures, the units, and the conclusions, and (4) a list of ADVERSE EVENTS corresponding to signs and symptoms observed in patients during the clinical trial. In turn, the statements are sentences that make some type of claim about the information contained in one of the aforementioned sections, either considering a single CTR or comparing two CTRs. In order for the entailment relationship to be established, the claim in the statement should be related to the clinical trial information, it should be supported by the CTR, and it must not contradict the provided descriptions.
+----------
+1->
+
+Perform an in-depth semantic dissection of Clinical Trial Reports (CTRs), with an emphasis on clinical protocols to assess therapeutic interventions' efficacy and safety. The analysis should be segmented into four principal domains:
+
+1. Detail the Eligibility Criteria for Participants by comprehensively outlining inclusion criteria.
+
+2. Characterize Treatment Protocols by defining intervention types, specifying dosages, detailing administration schedules, and noting treatment durations.
+
+3. Compile Clinical Outcomes Measurement by listing participant numbers, identifying outcome metrics, specifying units of measurement, and summarizing derived conclusions.
+
+4. Document Adverse Effects by recording any observed symptoms in patients.
+
+Ensure medical precision, back up statements with empirical evidence, maintain coherence within each section, and articulate the semantic relationships between individual sections of CTRs and authoritative expert statements, confirming that claims are consistent with, supported by, and non-contradictory to the CTR data.
+----------
+2->
+
+Perform an exhaustive semantic dissection of Clinical Trial Reports (CTRs), concentrating on clinical protocols to assess therapeutic interventions' efficacy and safety. Segment the analysis into four principal domains:
+
+1. Clarify Participant Eligibility Criteria by exhaustively detailing inclusion criteria.
+
+2. Characterize Treatment Protocols by outlining intervention types, dosages, administration schedules, and treatment durations.
+
+3. Summarize Clinical Outcomes Measurement by listing participant counts, outcome metrics, units of measurement, and derived conclusions.
+
+4. Catalog Adverse Effects by documenting any observed patient symptoms.
+
+Ensure medical precision, substantiate statements with empirical evidence, maintain internal coherence within each section, and articulate semantic entailment relations between individual sections of CTRs and authoritative expert statements, ensuring claims are congruent with, substantiated by, and non-contradictory to the CTR data.
+----------
+3->
+
+Analyze the semantic entailment relationships between sections of Clinical Trial Reports (CTRs) and expert assertions, concentrating on methodology, results, eligibility criteria, interventions, participant outcomes, units of measurement, and adverse events. Each CTR, consisting of 1-2 patient cohorts or treatment arms, evaluates the efficacy and safety of novel therapies. Confirm the clinical significance, support from CTRs, and non-contradictory alignment with CTR descriptions.
+----------
+4->
+
+Perform an in-depth semantic dissection of Clinical Trial Reports (CTRs), with an emphasis on clinical protocols to assess therapeutic intervention efficacy and safety. Structure the analysis into four principal segments:
+
+1. Detail Participant Eligibility Criteria by comprehensively outlining inclusion criteria.
+
+2. Characterize Treatment Protocols by defining intervention types, specifying dosages, administration schedules, and treatment durations.
+
+3. Synthesize Clinical Outcomes Measurement by enumerating participant counts, identifying outcome metrics, specifying units of measurement, and summarizing derived conclusions.
+
+4. Catalog Adverse Effects by documenting observed patient symptoms.
+
+Maintain medical accuracy, support statements with empirical evidence, ensure coherence within each section, and articulate semantic entailment relations between individual sections of CTRs and authoritative expert statements, verifying that claims are consistent with, supported by, and non-contradictory to the CTR data.
+----------

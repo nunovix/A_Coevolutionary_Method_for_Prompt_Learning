@@ -1,0 +1,20 @@
+0->
+
+Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR) data, ensuring the statement aligns with the CTR information and does not conflict with the given descriptions.
+----------
+1->
+
+Conduct a meticulous comparison between a clinical trial assertion and its corresponding Clinical Trial Report (CTR), ensuring complete compliance with the CTR dataset. Deliver an unequivocal verdict of 'CONSISTENT' or 'INCONSISTENT' regarding the assertion's correspondence with the CTR. This evaluation must rigorously adhere to CTR guidelines, reflecting the report's principal content while excluding non-essential details. Accurately interpret medical terminology and contextual nuances. In the event of missing information, provide exhaustive details from the CTR and verified authoritative sources.
+----------
+2->
+
+Affirm with an unequivocal YES or NO as to whether the statement's truthfulness can be exclusively determined by examining the data within the Clinical Trial Report (CTR), maintaining rigorous compliance with the CTR's details and eschewing any discrepancies with the provided descriptions.
+----------
+3->
+
+Deliver a definitive 'CONSISTENT' or 'INCONSISTENT' determination following an exhaustive review of a clinical trial assertion in relation to the Clinical Trial Report (CTR), with unwavering compliance to the CTR's data. Ensure your evaluation is unequivocal, exact, and mirrors the CTR's substance, disregarding extraneous details. Accurately decipher medical terminology and contextual nuances, and fill in any gaps with detailed information sourced from the CTR and verified authoritative references.
+----------
+4->
+
+Affirm with an unequivocal YES or NO as to whether the statement's truthfulness can be exclusively determined by examining the contents of the Clinical Trial Report (CTR), maintaining rigorous compliance with the CTR's details and eschewing any discrepancies with the provided descriptions.
+----------

@@ -1,0 +1,20 @@
+0->
+
+Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR) data, ensuring the statement aligns with the CTR information and does not conflict with the given descriptions.
+----------
+1->
+
+Conduct a meticulous verification of clinical trial claims by accurately interpreting medical terminology and contextual subtleties. Clarify ambiguities and enrich incomplete data with comprehensive information sourced from both statements, the Clinical Trial Report (CTR), and other credible references. Confirm the statement's full alignment with the CTR, providing a definitive 'CONSISTENT' if it matches or 'INCONSISTENT' if it contradicts, with absolute dedication to factual accuracy.
+----------
+2->
+
+Perform a rigorous validation of claims within clinical trial documentation. Interpret medical jargon and contextual nuances with precision. Clarify ambiguities and supplement incomplete information by integrating comprehensive details from both the Clinical Trial Report (CTR) and pertinent medical research literature. Verify the claim's complete congruence with the CTR, and categorically determine as 'CONSISTENT' for accuracy or 'INCONSISTENT' for discrepancies, upholding the highest standard of factual integrity.
+----------
+3->
+
+Categorize each claim as 'CONSISTENT' or 'INCONSISTENT' by meticulously comparing it with data from the Clinical Trial Report (CTR) and relevant medical research literature. Ensure accurate understanding of medical terminology and contextual subtleties. Elucidate any ambiguities and incorporate exhaustive details from both sources for clarity.
+----------
+4->
+
+Verify with a clear YES or NO if the statement's truthfulness can be ascertained exclusively from the Clinical Trial Report (CTR) data, guaranteeing it aligns with the CTR specifics and refrains from conflicting with any given descriptions.
+----------

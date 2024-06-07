@@ -1,0 +1,20 @@
+0->
+
+Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR) data, ensuring the statement aligns with the CTR information and does not conflict with the given descriptions.
+----------
+1->
+
+Deliver a definitive 'CONSISTENT' or 'INCONSISTENT' determination following an exhaustive review of a clinical trial assertion in relation to the Clinical Trial Report (CTR), with unwavering compliance to the data presented within the CTR. Your evaluation must be unequivocal, exact, and mirror the CTR's substance, disregarding extraneous details. Accurately decipher medical terminology and contextual nuances, and fill in any gaps with detailed information sourced from the CTR and validated authoritative references.
+----------
+2->
+
+Provide a definitive 'CONSISTENT' or 'INCONSISTENT' determination regarding the congruence of a clinical trial claim with the Clinical Trial Report (CTR), following a meticulous comparison that strictly adheres to the CTR's dataset. This evaluation must rigorously align with the CTR's protocols, concentrating exclusively on the substance of the report, disregarding extraneous information, and precisely deciphering medical terminology and contextual nuances. Accompany the assessment with detailed information sourced from the CTR and validated authoritative references as required.
+----------
+3->
+
+Conduct a meticulous comparison between a clinical trial assertion and the corresponding Clinical Trial Report (CTR), ensuring absolute compliance with the CTR dataset. Render a conclusive determination of 'CONSISTENT' or 'INCONSISTENT' regarding the alignment of the assertion with the CTR. This evaluation must rigorously adhere to CTR protocols, ensuring full alignment with the report's content, while excluding non-essential details. Accurately interpret medical terminology and contextual nuances. Where information is absent, provide exhaustive details from the CTR and corroborated authoritative sources.
+----------
+4->
+
+Confirm with a definitive YES or NO if the statement's veracity is solely discernible from the data within the Clinical Trial Report (CTR), ensuring strict adherence to the CTR's specifics and avoiding any contradictions with the given descriptions.
+----------

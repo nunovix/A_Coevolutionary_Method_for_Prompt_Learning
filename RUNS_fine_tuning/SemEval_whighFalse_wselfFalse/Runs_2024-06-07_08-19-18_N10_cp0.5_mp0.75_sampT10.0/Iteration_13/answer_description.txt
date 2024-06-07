@@ -1,0 +1,18 @@
+0->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+1->
+
+Evaluate the statement's consistency with the data presented in the Clinical Trial Report (CTR), ensuring factual precision and correcting any inconsistencies. Provide a definitive affirmative or negative verdict regarding the statement's alignment with the CTR data.
+----------
+2->
+
+Perform a meticulous analysis of the statement's alignment with the data presented in the Clinical Trial Report (CTR). Maintain utmost clarity throughout the process. Adhere strictly to the CTR's detailed protocols and stipulations. Systematically identify and rectify any discrepancies. Provide a definitive assessment regarding the statement's consistency with the CTR data, confirming its validity or refuting it.
+----------
+3->
+
+Perform an indisputable assessment of the statement's consistency with the data presented in the Clinical Trial Report (CTR). Strictly follow the CTR's comprehensive protocols, thoroughly detect and correct any discrepancies, and deliver a conclusive affirmative or negative determination regarding the statement's alignment with the CTR data.
+----------
+4->
+
+Perform a meticulous analysis of the statement's alignment with the data presented in the Clinical Trial Report (CTR). Maintain utmost clarity throughout the process. Adhere strictly to the CTR's detailed guidelines and specifications. Systematically identify and rectify any discrepancies. Provide a definitive assessment regarding the statement's consistency with the CTR data, confirming its validity or refuting it.
+----------

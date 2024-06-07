@@ -1,0 +1,20 @@
+0->
+
+Evaluate semantic entailment relationships between distinct sections of Clinical Trial Reports (CTRs) and expert clinical statements. To determine entailment, verify that the statement's claim is substantiated by the CTR and does not conflict with the provided descriptions. In essence, CTRs detail the methodology and results of clinical trials, assessing new treatments' effectiveness and safety. Comprehensive CTRs include four sections: (1) ELIGIBILITY CRITERIA, detailing patient inclusion conditions, (2) INTERVENTION, describing treatment type, dosage, frequency, and duration, (3) RESULTS, summarizing participant statistics, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS, documenting observed signs and symptoms. Analyze expert statements regarding information within these sections for a single CTR or in comparative analyses of two CTRs.
+----------
+1->
+
+Analyze the semantic entailment between Clinical Trial Reports (CTRs) and authoritative clinical assertions. Confirm entailment by ensuring the claim within the expert statement is supported by the CTR and does not contradict the provided descriptions. CTRs encapsulate the procedures and findings of clinical trials, evaluating the efficacy and safety of novel therapies. Each comprehensive CTR comprises four distinct sections: (1) ELIGIBILITY CRITERIA, detailing inclusion conditions for patients, (2) INTERVENTION DETAILS, specifying treatment type, dosage, frequency, and duration, (3) RESULTS, summarizing participant statistics, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS, documenting observed signs and symptoms. Conduct this analysis for a single CTR or in comparative evaluations of two CTRs.
+----------
+2->
+
+Analyze the semantic entailment between sections of Clinical Trial Reports (CTRs) and authoritative clinical assertions. Confirm entailment by ensuring the claim within an expert statement is supported by the corresponding CTR and does not contradict the provided descriptions. CTRs encapsulate the procedures and findings of clinical trials, evaluating the efficacy and safety of novel therapeutic interventions. Each comprehensive CTR encompasses four key sections: (1) INCLUSION CRITERIA detailing eligibility conditions for participant selection, (2) TREATMENT DETAILS specifying the type of intervention, dosage, administration frequency, and treatment length, (3) PARTICIPANT OUTCOMES providing a summary of participant demographics, measured outcomes, units of measurement, and final conclusions, and (4) OBSERVED ADVERSE EVENTS documenting any noted signs and symptoms. Examine expert statements for semantic entailment within the context of a single CTR or in comparative analyses between two CTRs.
+----------
+3->
+
+Examine Clinical Trial Reports (CTRs) for semantic congruence with authoritative clinical assertions, concentrating on four pivotal segments: (1) ELIGIBILITY CRITERIA, outlining patient inclusion parameters, (2) INTERVENTION DETAILS, detailing the intervention's nature, dosage, administration frequency, and treatment span, (3) RESULTS, encapsulating participant demographics, outcome metrics, units of measurement, and findings, and (4) ADVERSE EVENTS, registering any noted signs and symptoms. Validate congruence by verifying that statements are corroborated by CTR data, remain consistent with the report, and are in harmony with pre-existing descriptions.
+----------
+4->
+
+Evaluate the semantic entailment between segments of Clinical Trial Reports (CTRs) and authoritative clinical statements, specifically assessing the effectiveness and safety profiles of novel therapeutics. This entailment analysis should cover inclusion criteria for patients, detailed specifications of interventions (including type, dosage, administration frequency, and treatment length), summaries of participant outcomes (including demographics, metrics, units, and conclusions), and documented adverse events. Verify entailment by ensuring alignment with clinical trial data, consistency with the CTR, and compliance with the provided descriptions.
+----------

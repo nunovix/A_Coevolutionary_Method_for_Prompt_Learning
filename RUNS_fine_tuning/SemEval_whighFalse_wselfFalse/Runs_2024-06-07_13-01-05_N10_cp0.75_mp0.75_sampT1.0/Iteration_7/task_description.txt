@@ -1,0 +1,48 @@
+0->Consider the task of determining semantic entailment relations between individual sections of Clinical Trial Reports (CTRs) and statements made by clinical domain experts. Note that CTRs outline the methodology and findings of a clinical trial, which are conducted to assess the effectiveness and safety of new treatments. Each trial involves 1-2 patient groups, called cohorts or arms, and these groups may receive different treatments, or have different baseline characteristics. The complete CTRs contain 4 sections, corresponding to (1) a list of the ELIGIBILITY CRITERIA corresponding to the conditions for patients to be allowed to take part in the clinical trial, (2) a description for the INTERVENTION that specifies the type, dosage, frequency, and duration of treatments being studied, (3) a summary of the RESULTS, detailing aspects such as the number of participants in the trial, the outcome measures, the units, and the conclusions, and (4) a list of ADVERSE EVENTS corresponding to signs and symptoms observed in patients during the clinical trial. In turn, the statements are sentences that make some type of claim about the information contained in one of the aforementioned sections, either considering a single CTR or comparing two CTRs. In order for the entailment relationship to be established, the claim in the statement should be related to the clinical trial information, it should be supported by the CTR, and it must not contradict the provided descriptions.
+----------
+1->
+
+Determine semantic entailment relations between individual sections of Clinical Trial Reports (CTRs) and expert clinical statements. CTRs document the methodology and results of clinical trials aimed at evaluating new treatments' effectiveness and safety. Each trial comprises 1-2 patient cohorts with distinct treatments or baseline characteristics. CTRs are divided into four sections: (1) ELIGIBILITY CRITERIA listing conditions for patient participation, (2) INTERVENTION detailing treatment type, dosage, frequency, and duration, (3) RESULTS summarizing participant count, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing observed patient signs and symptoms during the trial. Expert statements are claims related to one of these sections in a single or comparative CTR context. Establish entailment by ensuring the claim is clinically relevant, supported by CTR data, and non-contradictory to the descriptions.
+----------
+2->
+
+Analyze the semantic alignment between segments of Clinical Trial Reports (CTRs) and authoritative statements from clinical experts, ensuring verification of therapeutic efficacy and adverse event safety profiles. Dissect CTRs into four principal elements:
+
+1. Participant Selection Parameters: Specify inclusion and exclusion criteria for patient eligibility.
+
+2. Treatment Protocol Detailing: Outline the treatment type, dosage, frequency of administration, and the trial's timeframe.
+
+3. Efficacy and Safety Metrics: Enumerate participant demographics, efficacy markers, units of measurement, and conclusions drawn from the trial.
+
+4. Adverse Event Cataloging: Document all adverse events and symptoms reported during the trial.
+
+Ensure that expert claims are substantiated by data extracted from designated sections of the CTRs, maintaining congruence with each element's comprehensive description.
+----------
+3->
+
+Evaluate the semantic correlation between Clinical Trial Reports (CTRs) and authoritative clinical assertions, concentrating on therapeutic effectiveness and patient safety. Decompose CTRs into four principal elements:
+
+1. Eligibility Criteria for Participants: Establish the inclusion and exclusion criteria for patient selection.
+
+2. Specifics of the Treatment Regimen: Detail the type of intervention, dosage, frequency of administration, and duration of the treatment.
+
+3. Metrics for Treatment Efficacy and Safety: Enumerate participant demographics, efficacy indicators, units of measurement, and the results of the trial.
+
+4. Documentation of Adverse Effects: Record all observed adverse reactions and symptoms.
+
+Confirm that authoritative clinical claims are substantiated by data extracted from particular sections of CTRs, ensuring alignment with each element's comprehensive description.
+----------
+4->
+
+Conduct a semantic dissection of Clinical Trial Reports (CTRs), correlating them with expert clinical claims, with a particular emphasis on evaluating the effectiveness and safety of treatments. Decompose each CTR into four essential elements:
+
+1. Inclusion/Exclusion Criteria for Participants: Determine the specific criteria used to include or exclude patients.
+
+2. Treatment Specifications: Outline the type of intervention, dosage, frequency of administration, and the duration of the treatment.
+
+3. Efficacy and Safety Indicators: Characterize participant demographics, efficacy metrics, units of measurement, and documented results.
+
+4. Adverse Effects Logging: Document all observed adverse effects and related symptoms.
+
+Ensure that expert claims are substantiated by data extracted from individual CTRs or synthesized data from a collection of CTRs, strictly following the comprehensive descriptions of each element.
+----------

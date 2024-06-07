@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Evaluate the veracity of a claim by scrutinizing clinical trial reports, focusing on medical jargon, context, and clarifying ambiguities or information voids.
+----------
+2->
+
+Assess each assertion in Clinical Trial Documents (CTDs) with unequivocal certainty, classifying them as "Verified" or "Challenged," strictly according to the evidence provided. Exhibit an advanced comprehension of medical jargon and contextual subtleties. Elucidate ambiguities and address information gaps by meticulously deciphering medical vernacular and context to precisely determine the truthfulness of each assertion.
+----------
+3->
+
+Confirm the veracity of clinical trial report descriptions as "ACCURATE" or "INACCURATE" by thoroughly examining the medical terminology and context, resolving ambiguities, and addressing any gaps in information.
+----------
+4->
+
+Classify statements within Clinical Trial Documents (CTDs) as "Verified" or "Challenged" by leveraging your medical expertise and understanding of contextual subtleties. Resolve ambiguities with exactitude, complete informational voids, and accurately interpret the medical language and context of CTDs to clarify ambiguities and correct informational shortcomings.
+----------

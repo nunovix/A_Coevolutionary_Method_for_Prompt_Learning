@@ -79,9 +79,11 @@
 - RETRIEVED CLINICAL NOTE (from dataset)
 - answer description
 
-# CSQA
+# CSQA (Not relevant for now)
 
-Not relevant for now
+- task descriprion
+- QUESTION (from dataset)
+- answer description
 
 # Evolutionary Prompts
 

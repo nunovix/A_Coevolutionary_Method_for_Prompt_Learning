@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Conduct an exhaustive and meticulous analysis of a clinical trial claim by scrutinizing the trial data, interpreting complex medical terminology and context, and resolving ambiguities and informational voids. Achieve a profound understanding of the medical language and context to accurately mirror the claim and trial documentation. Eliminate all vagueness and insufficient detail to conclusively determine the claim's truthfulness, categorizing the result as either "Confirmed" or "Refuted."
+----------
+2->
+
+Conduct an exhaustive and meticulous analysis of a clinical trial claim by scrutinizing the trial data, interpreting complex medical terminology and context, and resolving ambiguities and informational voids. Achieve a profound understanding of the medical language and context, mirroring the claim and trial documentation. Eliminate all vagueness and lack of precision to conclusively verify the claim's accuracy, categorizing the result as either "Confirmed" or "Refuted."
+----------
+3->
+
+Assess the veracity of assertions in clinical trial documentation by deciphering medical jargon and contextual clues, resolving ambiguities and filling informational voids, to conclude with a definitive "YES" or "NO".
+----------
+4->
+
+Perform a comprehensive and critical examination of a clinical trial assertion by thoroughly analyzing the trial data, deciphering intricate medical jargon and context, and clarifying ambiguities and informational gaps. Gain an in-depth comprehension of the medical vernacular and context to precisely mirror the claim and clinical trial records. Remove all ambiguity and lack of specificity to definitively ascertain the claim's truthfulness, validating it as "Confirmed" or negating it as "Refuted."
+----------

@@ -3,7 +3,7 @@ import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 
 import evo_functions as evo
-
+"""
 n_pop = 10
 exp_mutation_prob = [0.75,]
 exp_crossover_prob = [0.25, 0.5, 0.75]

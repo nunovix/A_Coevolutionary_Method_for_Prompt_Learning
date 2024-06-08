@@ -2197,11 +2197,11 @@ def create_population(task, prompts_dict, initial,
     # if number of individuals larger then the number of subprompts then there will be repetitions allowed
     if n_pop > n_sub:
         indices = {}
-        for i in prompts_dict:
-            indices[i] = random.choices(list(range(n_sub)), k = n_pop-n_sub)
+        for j in prompts_dict:
+            indices[j] = random.choices(list(range(n_sub)), k = n_pop-n_sub)
 
         #print(f"indices-->{indices}")
-        for i in range(n_sub):
+        for i in range(n_pop-n_sub):
             prompts_index = {}
             for j in prompts_dict:
                 #print(f"indices[j,i]-->{indices[j,i]}")

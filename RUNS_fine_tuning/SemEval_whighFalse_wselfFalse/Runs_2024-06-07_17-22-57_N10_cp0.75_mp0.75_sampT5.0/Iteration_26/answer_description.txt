@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform an exhaustive evaluation of a clinical trial assertion by meticulously scrutinizing the trial data, deciphering medical jargon and context, and clarifying any uncertainties and missing information. Fully grasp the medical language and context as illustrated in both the claim and the clinical trial records. Eliminate all ambiguities and information voids to definitively ascertain whether the claim stands "Confirmed" or is "Refuted."
+----------
+2->
+
+Perform an exhaustive evaluation of a clinical trial assertion by scrutinizing the trial data, deciphering medical jargon and context, and clarifying uncertainties and information gaps. Gain an in-depth comprehension of the medical lexicon and context as demonstrated in the claim and clinical trial records. Eliminate all ambiguity and lack of detail to definitively ascertain the claim's accuracy, validating it as "Confirmed" or denying it as "Refuted."
+----------
+3->
+
+Execute a thorough analysis of a clinical trial assertion by meticulously examining the trial data, interpreting medical terminology and context, resolving ambiguities, and filling any data gaps. Achieve a deep understanding of the medical language and context from both the assertion and the clinical trial documentation. Address all uncertainties and incomplete data to conclusively determine if the assertion is "Confirmed" or "Refuted."
+----------
+4->
+
+Conduct a thorough analysis of a clinical trial claim by meticulously examining the trial data, interpreting medical terminology and context, resolving ambiguities, and addressing any gaps in information. Achieve a comprehensive understanding of the medical discourse and context as depicted in the claim alongside the clinical trial documentation. Rectify all imprecision and information deficits to conclusively determine the veracity of the claim, categorizing it as either "Confirmed" or "Refuted."
+----------

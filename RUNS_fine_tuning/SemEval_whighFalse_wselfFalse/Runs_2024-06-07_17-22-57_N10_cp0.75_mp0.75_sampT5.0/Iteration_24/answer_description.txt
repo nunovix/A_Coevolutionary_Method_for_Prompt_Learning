@@ -1,0 +1,16 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform an exhaustive evaluation of a clinical trial claim by meticulously analyzing trial data, accurately interpreting medical jargon and context, resolving ambiguities, and addressing informational gaps. Achieve a thorough understanding of the medical lexicon and context from both the claim and clinical trial documents. Rectify all uncertainties and informational deficiencies to conclusively determine the claim's validity, categorizing it as "Confirmed" or "Refuted."
+----------
+2->
+
+Conduct an exhaustive analysis of a clinical trial assertion by scrutinizing the trial data, deciphering medical jargon and context, and clarifying uncertainties and missing information. Develop a comprehensive grasp of the medical language and context as presented in both the claim and the clinical trial documents. Correct all ambiguities and information voids to definitively ascertain whether the claim stands "Confirmed" or is "Refuted."
+----------
+3->
+
+Determine a "YES" or "NO" answer to ascertain the feasibility of validating the statement's accuracy using the clinical trial report descriptions provided. Analyze the medical jargon and context within both the reports and the statement, meticulously resolving any ambiguities or informational deficiencies.
+----------
+4->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------

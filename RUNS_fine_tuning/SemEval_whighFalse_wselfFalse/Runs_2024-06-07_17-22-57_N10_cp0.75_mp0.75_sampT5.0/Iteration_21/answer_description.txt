@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Carefully scrutinize a clinical trial assertion by analyzing trial data, deciphering medical terminology and context, and clarifying ambiguities and information voids. Fully comprehend the medical language and context from both the assertion and clinical trial documents. Resolve all uncertainties and information shortcomings to definitively classify the assertion as either "Confirmed" or "Refuted."
+----------
+2->
+
+Perform a rigorous and precise verification of a clinical trial assertion's validity by meticulously scrutinizing trial data, accurately deciphering medical terminology and context, and resolving any ambiguities or information deficiencies. Achieve an exact comprehension of the medical lexicon and context from both the original assertion and clinical trial documentation. Eradicate all uncertainties and informational gaps to conclusively determine the assertion's factual accuracy, classifying the result as either "Confirmed" or "Refuted."
+----------
+3->
+
+Perform a thorough and meticulous verification of a clinical trial assertion's truthfulness by meticulously examining trial data, interpreting medical jargon and context, and resolving ambiguities and information gaps. Achieve a precise understanding of the medical language and context from both the original assertion and clinical trial records. Eliminate all uncertainties and information shortcomings to definitively ascertain the assertion's factual correctness, classifying it as either "Confirmed" or "Refuted."
+----------
+4->
+
+Conduct a meticulous and exact validation of a clinical trial statement's truthfulness by thoroughly examining trial data, accurately interpreting medical jargon and context, and resolving ambiguities and gaps in information. Gain a precise understanding of the medical language and context from both the original statement and clinical trial records. Eliminate all uncertainties and information shortcomings to definitively ascertain the statement's factual correctness, classifying it as either "Confirmed" or "Refuted."
+----------

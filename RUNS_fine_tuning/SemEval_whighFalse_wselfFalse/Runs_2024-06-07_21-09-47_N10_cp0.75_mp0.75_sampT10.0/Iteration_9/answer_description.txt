@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Provide an unequivocal "Affirmative" or "Negative" assessment of the statement's factual correctness based on clinical trial documentation. This task necessitates an in-depth understanding of medical jargon, contextual comprehension, and the capability to elucidate ambiguities or fill information gaps with exactitude.
+----------
+2->
+
+Provide an unequivocal "Affirmative" or "Negative" assessment of the statement's factual alignment with clinical trial report descriptions. This task demands an in-depth understanding and interpretation of medical jargon and context, as well as precise clarification of ambiguities and information gaps.
+----------
+3->
+
+Determine a "YES" or "NO" answer to ascertain if the validity of the statement can be evaluated from the clinical trial report descriptions, by interpreting the medical jargon and context within the reports and the statement, while meticulously resolving any ambiguities or informational deficiencies.
+----------
+4->
+
+Provide a definitive "Affirmative" or "Negative" verdict on the statement's factual congruence with clinical trial report descriptions, demanding a thorough grasp of medical terminology and contextual nuances. Ensure precise elucidation of any ambiguities or information voids.
+----------

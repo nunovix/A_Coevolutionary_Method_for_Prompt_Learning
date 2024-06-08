@@ -1,0 +1,16 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform an expert-level "Confirmed" or "Denied" evaluation of the statement's factual correctness, juxtaposing it with the clinical trial report. This task necessitates a profound comprehension of medical jargon and contextual subtleties. Elucidate any ambiguities and pinpoint pivotal details that may have been neglected.
+----------
+2->
+
+Deliver an expert-level "Confirmed" or "Denied" verdict on the statement's factual correctness, substantiated with evidence from the clinical trial report. Demonstrate an in-depth understanding of medical terminology and contextual nuances. Elucidate any ambiguities and accentuate pivotal details that could have been overlooked.
+----------
+3->
+
+Provide an expert-level verdict of "Confirmed", "Denied", "Affirmative", or "Negative" on the statement's factual congruence with the clinical trial report, demanding comprehensive knowledge of medical terminology and contextual subtleties. Clarify ambiguities and highlight significant details that may have been missed.
+----------
+4->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------

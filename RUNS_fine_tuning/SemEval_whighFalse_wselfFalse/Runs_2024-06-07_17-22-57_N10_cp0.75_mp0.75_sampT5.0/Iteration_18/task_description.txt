@@ -1,0 +1,14 @@
+0->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs expound on the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or comparative analysis of two. For entailment validation, the statement's claim should align with clinical trial information, find support in the CTR, and refrain from contradicting provided descriptions.
+----------
+1->
+
+Conduct a semantic entailment analysis between Clinical Trial Reports (CTRs) and expert testimonies to assess the effectiveness and safety of new medical treatments, as outlined in CTRs. Verify entailment by cross-referencing expert claims with empirical data from CTRs, ensuring consistency with recognized standards in both singular and comparative evaluations of CTRs.
+----------
+2->Conduct a semantic entailment analysis between Clinical Trial Reports (CTRs) and expert claims, focusing on the efficacy and safety of therapeutic interventions as detailed in CTRs. Ensure expert claims are substantiated by CTR data, accurately reflect CTR content, and adhere to comprehensive descriptions. Validate entailment for individual and comparative CTR analyses.
+----------
+3->Perform a semantic entailment analysis between Clinical Trial Reports (CTRs) and expert claims, assessing the efficacy and safety of new medical treatments as detailed in CTRs. Validate entailment by ensuring expert assertions are empirically supported by CTR data, consistent with established criteria, across both individual and comparative analyses of CTRs.
+----------
+4->
+
+Perform a semantic entailment evaluation between Clinical Trial Reports (CTRs) and professional assertions, specifically targeting the determination of new medical treatments' effectiveness and safety based on empirical data within CTRs. Confirm entailment by ensuring that professional claims are substantiated by evidence from CTRs, aligning with established benchmarks, during both individual and comparative analyses of CTRs.
+----------

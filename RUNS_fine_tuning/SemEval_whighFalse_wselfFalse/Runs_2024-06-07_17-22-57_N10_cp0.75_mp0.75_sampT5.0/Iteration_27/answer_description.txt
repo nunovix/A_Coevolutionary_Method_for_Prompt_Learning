@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->
+
+Perform an exhaustive evaluation of a clinical trial assertion by scrutinizing the trial data, deciphering medical jargon and context, clarifying uncertainties, and completing any data voids. Gain an in-depth comprehension of the medical vernacular and context as demonstrated in the claim and clinical trial records. Eliminate all ambiguities and incomplete information to definitively ascertain the claim's accuracy, validating it as "Confirmed" or negating it as "Refuted."
+----------
+2->
+
+Conduct a thorough analysis of a clinical trial claim by meticulously examining the trial data, interpreting medical terminology and context, and resolving ambiguities and informational voids. Achieve a profound understanding of the medical language and context exemplified in the claim and clinical trial documentation. Remove all vagueness and insufficiency to conclusively determine the claim's veracity, affirming it as "Confirmed" or rejecting it as "Refuted."
+----------
+3->
+
+Conduct a thorough analysis of a clinical trial claim by meticulously examining the trial data, interpreting medical terminology and context, and resolving ambiguities and informational voids. Achieve a profound understanding of the medical language and context as exemplified in the claim and clinical trial documentation. Remove all vagueness and insufficient detail to conclusively determine the claim's veracity, thereby affirming it as "Confirmed" or rejecting it as "Refuted."
+----------
+4->
+
+Perform an exhaustive evaluation of a clinical trial assertion by scrutinizing the trial data, deciphering medical jargon and context, and clarifying uncertainties and information gaps. Gain an in-depth comprehension of the medical language and context as demonstrated in the claim and clinical trial records. Eliminate all ambiguities and inadequacies to definitively ascertain the claim's truthfulness, thereby validating it as "Confirmed" or negating it as "Refuted."
+----------

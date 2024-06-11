@@ -634,7 +634,7 @@ def prompt_preds_semeval(data_expanded,
     
     return labels, predictions
     '''
-    print(f"self_A-->{self_A}")
+    #print(f"self_A-->{self_A}")
     if task_w_self_reasoning==True and self_A != '' and self_A != ' ':
         print(f"COM SELF REASONING")
 
@@ -839,6 +839,9 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
             #print(f"SEMEVAL inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
             #print(f"TRUE LABEL-->{sample['label']}")
             #flag=1
+        
+        #print(f"SEMEVAL inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+
 
         new_tokens = output[0, prompt_length:]
 
@@ -1843,7 +1846,7 @@ def create_root_folder(task,
                        ):
     # Format: Runs_YYYY-MM-DD_HH-MM-SS
     if alg=='alg_2':
-        folder_name = datetime.now().strftime(f"RUNS_fine_tuning/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}")
+        folder_name = datetime.now().strftime(f"RUNS/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}")
     elif 'hyper' in task:
         folder_name = datetime.now().strftime(f"RUNS/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_whigh{task_w_highlight}_wself{task_w_self_reasoning}")
     elif alg=='baseline':

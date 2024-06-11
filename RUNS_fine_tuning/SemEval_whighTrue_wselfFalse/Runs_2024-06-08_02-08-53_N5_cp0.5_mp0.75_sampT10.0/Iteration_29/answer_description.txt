@@ -1,0 +1,20 @@
+0->
+
+Render a definitive YES or NO judgment on the statement's accuracy, exclusively utilizing data extracted from the clinical trial report.
+----------
+1->
+
+Render a definitive YES or NO determination regarding the statement's accuracy, exclusively utilizing data extracted from the clinical trial report.
+----------
+2->
+
+Evaluate the claim's accuracy solely based on the clinical trial report's data, providing a definitive affirmative or negative response.
+----------
+3->
+
+Evaluate the statement's correctness solely based on the information provided in the clinical trial report, responding with a definitive YES or NO.
+----------
+4->
+
+Deliver an unequivocal YES or NO determination regarding the statement's veracity, exclusively utilizing data extracted from the clinical trial report, refraining from the inclusion of any supplementary information.
+----------

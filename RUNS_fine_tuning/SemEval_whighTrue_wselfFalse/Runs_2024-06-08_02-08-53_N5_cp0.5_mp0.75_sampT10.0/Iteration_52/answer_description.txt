@@ -1,0 +1,20 @@
+0->
+
+Render a definitive YES or NO judgment on the statement's accuracy, exclusively utilizing data extracted from the clinical trial report.
+----------
+1->
+
+Perform an expert-level, conclusive YES or NO assessment of the statement's validity, solely based on the clinical trial report data, with an emphasis on clear, precise, and unambiguous communication for an expert readership.
+----------
+2->
+
+Perform a definitive, expert-level evaluation of the statement's veracity, exclusively referencing data from the clinical trial report, with an emphasis on clarity, precision, and eliminating any potential ambiguity. Deliver a conclusive affirmative or negative response.
+----------
+3->
+
+Perform a definitive, expert-level evaluation of the statement's accuracy, exclusively referencing data from the clinical trial report. Ensure the assessment is clear, precise, and devoid of any ambiguity, culminating in a conclusive affirmative or negative response.
+----------
+4->
+
+Evaluate the statement's correctness solely based on the clinical trial report data. Provide a definitive YES or NO response.
+----------

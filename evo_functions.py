@@ -2174,6 +2174,11 @@ def create_population(task, prompts_dict, initial,
         n_pop = n_sub
     
     #print(f"n_pop-->{n_pop}")
+    if n_pop < n_sub:
+        n_necessary = n_pop
+    else:
+        n_necessary = n_sub
+    #print(f"n_necessary-->{n_necessary}")
     
     if initial == True:
         for i in range(n_sub):
@@ -2184,10 +2189,10 @@ def create_population(task, prompts_dict, initial,
     else:
         indices = {}
         for i in prompts_dict:
-            indices[i] = random.sample(list(range(n_sub)), n_sub)
+            indices[i] = random.sample(list(range(n_sub)), n_necessary)
 
         #print(f"indices-->{indices}")
-        for i in range(n_sub):
+        for i in range(n_necessary):
             prompts_index = {}
             for j in prompts_dict:
                 #print(f"indices[j,i]-->{indices[j,i]}")
@@ -2198,6 +2203,8 @@ def create_population(task, prompts_dict, initial,
     if n_pop > n_sub:
         indices = {}
         for j in prompts_dict:
+            #print(f"list(range(n_sub)-->{list(range(n_sub))}")
+            #print(f"n_pop-n_sub-->{n_pop-n_sub}")
             indices[j] = random.choices(list(range(n_sub)), k = n_pop-n_sub)
 
         #print(f"indices-->{indices}")
@@ -2700,8 +2707,11 @@ def evo_alg_2(task,
         # select elite population, n_top elements
         if n_top>0:
             elite_population, _ = pop_selection(population, n_top, n_top)
+        
+        print(f"n_sub-->{n_sub}")
+        print(f"n_top-->{n_top}")
 
-        for i in tqdm(range(n_sub-n_top), desc = f"iteration {iter} - generating off springs prompts"):
+        for i in tqdm(range(n_sub), desc = f"iteration {iter} - generating off springs prompts"):
             # iterate through the subprompts
             for j in population['prompts_dict'].keys():
 
@@ -2737,14 +2747,20 @@ def evo_alg_2(task,
                 offspring_prompts[j].append(mutated)
                 offspring_history[j].append(hist)
 
-        offspring_population = create_population(task, offspring_prompts, initial = False,
-                                                data_expanded = data_expanded, 
-                                                model=model, tokenizer=tokenizer, trie=trie, n_samples = data_size,
-                                                history = offspring_history, 
-                                                task_w_one_shot = task_w_one_shot,
-                                                task_w_highlight = task_w_highlight,
-                                                task_w_self_reasoning = task_w_self_reasoning,
-                                                n_pop=n_pop-n_top,)
+        #print(f"offspring_prompts-->{offspring_prompts}")
+        #print(f"n_pop-->{n_pop}")
+        #print(f"n_top-->{n_top}")
+        offspring_population = create_population(task, 
+                                                 offspring_prompts, 
+                                                 initial = False,
+                                                 n_pop = n_pop-n_top,
+                                                 data_expanded = data_expanded, 
+                                                 model=model, tokenizer=tokenizer, trie=trie, n_samples = data_size,
+                                                 history = offspring_history, 
+                                                 task_w_one_shot = task_w_one_shot,
+                                                 task_w_highlight = task_w_highlight,
+                                                 task_w_self_reasoning = task_w_self_reasoning,
+                                                 )
 
         #print(f"elite_population['prompts']-->{elite_population['prompts']}")
         #print(f"offspring_population['prompts']-->{offspring_population['prompts']}")

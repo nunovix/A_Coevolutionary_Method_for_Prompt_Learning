@@ -1,0 +1,16 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->
+
+Examine the Clinical Trial Report (CTR) data with unwavering certainty to classify statements as 'TRUE' or 'FALSE'. Maintain strict adherence to the CTR findings and meticulously ensure no deviations from the original descriptions occur.
+----------
+2->
+
+Utilize the Clinical Trial Report (CTR) as the sole reference to accurately determine the veracity of a statement, confirming its consistency with CTR data and adherence to the provided descriptions.
+----------
+3->Evaluate the Clinical Trial Report (CTR) thoroughly to definitively determine, based solely on its information, the truthfulness of a statement, classifying it as either 'TRUE' or 'FALSE'. Ensure the statement's consistency with the CTR, avoiding any discrepancies with the trial's descriptions.
+----------
+4->
+
+Provide an unequivocal 'Positive' or 'Negative' evaluation of the statement's veracity, strictly grounded in the data derived from the Clinical Trial Report (CTR). Ensure complete compliance with the CTR's conclusions and rigorously prevent any deviations from the original statements.
+----------

@@ -87,7 +87,27 @@
 
 # Evolutionary Prompts
 
-Contains the prompts that perform the mutations and the crossovers of the promtps, in the basic setup only the first ones from each are used. The other 4 are used as a initial population for the hyperevolution of the mutation and crossover prompts.
+Updating to new version where each will have 3 parts (folders evolutionary_prompts/combination and evolutionary_prompts/mutation)
+
+Previous version in the mutation_prompts.txt and combination_prompts.txt
+
+Contains the prompts that perform the mutations and the crossovers of the promtps, in the basic setup only the first ones from each are used. The other 4 are used as a initial population for the hyperevolution of the mutation and crossover prompts. Each tries a different approach, from exploratory to exploitation ones.
+
+## Mutation Prompts
+
+1. Base
+2. Shorter Prompt
+3. Exploratory
+4. Conservative
+5. Adds positive reinforcement
+
+## Crossover Prompts
+
+1. Base
+2. Combine the best parts while being concise
+3. Keep everything from both prompts
+4. Add positive reinforcement
+5. Take ideas from both and build onto them freely
 
 # Hyper Evolutionary Prompts
 

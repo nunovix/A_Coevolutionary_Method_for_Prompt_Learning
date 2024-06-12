@@ -1,0 +1,34 @@
+0->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+1->
+
+Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR) data, ensuring the statement aligns with the CTR information and does not conflict with the given descriptions.
+----------
+2->
+
+Determine a definitive YES or NO answer to evaluate whether the veracity of the statement can be inferred solely from the data presented in the Clinical Trial Report (CTR), verifying that the statement is consistent with the CTR content and does not conflict with the provided descriptions.
+----------
+3->
+
+Confirm with a definitive YES or NO whether the statement's veracity can be determined solely from the Clinical Trial Report (CTR) data, ensuring it is consistent with the CTR details and does not contradict the provided descriptions.
+----------
+4->
+
+Perform an in-depth analysis of the Clinical Trial Report (CTR) to verify the accuracy of the given claim, substantiating your determination with robust evidence extracted from the CTR data. Indicate 'Affirmative' if the claim is consistent with the evidence, or 'Negative' if there are inconsistencies or contradictions, and explicitly outline these discrepancies.
+----------
+5->
+
+Evaluate the statement's accuracy strictly based on the data within the Clinical Trial Report (CTR), verifying that it aligns precisely with the CTR information and does not conflict with any given descriptions.
+----------
+6->
+
+Assess the Clinical Trial Report (CTR) for conformity with established protocols, meticulously identifying any deviations or inconsistencies. Provide a "Compliant" verdict if the CTR aligns with the protocols, or issue a "Non-Compliant" determination if variances are found. Additionally, validate the accuracy of the report's claims by conducting a comprehensive analysis of the CTR data. Ensure your final conclusion is robustly supported by empirical evidence and accurately mirrors the report's findings.
+----------
+7->
+
+Assess the Clinical Trial Report (CTR) for protocol adherence, meticulously identifying any deviations or inconsistencies. Validate compliance with a "Compliant" verdict or record non-compliance with a "Non-Compliant" judgment. Additionally, corroborate the report's claims through a comprehensive analysis of the CTR data. Your conclusive assessment must be empirically supported and accurately mirror the report's findings.
+----------
+8->
+
+Deliver an unequivocal YES or NO determination regarding the statement's veracity, exclusively utilizing empirical evidence from the Clinical Trial Report (CTR). Confirm that the statement aligns with the CTR and refrains from contradicting its recorded outcomes.
+----------

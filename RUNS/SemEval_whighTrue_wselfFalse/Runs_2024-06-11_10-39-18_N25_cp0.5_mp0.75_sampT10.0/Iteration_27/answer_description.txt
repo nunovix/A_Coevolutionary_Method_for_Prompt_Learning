@@ -1,0 +1,28 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+4->
+
+Conduct a definitive YES or NO evaluation of the statement's alignment with the clinical trial report's specifics, carefully deciphering medical terminology and contextual nuances present in both the report and the statement, while clarifying ambiguities and filling information voids with exactitude.
+----------
+5->
+
+Determine affirmatively or negatively if it is possible to establish the statement's validity solely based on the information provided in the clinical trial report.
+----------
+6->
+
+Conduct a definitive YES or NO evaluation of the statement's alignment with clinical trial report descriptions, by accurately deciphering medical jargon, understanding contextual nuances, and precisely resolving ambiguities or information voids.
+----------
+7->
+
+Conduct a definitive YES or NO evaluation of the Clinical Trial Report's factual correctness by meticulously deciphering medical jargon, contextual nuances, and resolving any ambiguities or missing data with unwavering accuracy.
+----------
+8->
+
+Conduct an unequivocal YES or NO verification of the statement's alignment with the Clinical Trial Report (CTR) descriptions by meticulously deciphering medical terminology and contextual nuances present in both the CTR and the statement. Elucidate any ambiguities and meticulously address informational gaps with exactitude.
+----------

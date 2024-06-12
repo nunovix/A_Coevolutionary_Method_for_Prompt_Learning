@@ -1,0 +1,34 @@
+0->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+1->
+
+Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR) data, ensuring the statement aligns with the CTR information and does not conflict with the given descriptions.
+----------
+2->
+
+Determine a definitive YES or NO answer to evaluate whether the veracity of the statement can be inferred solely from the data presented in the Clinical Trial Report (CTR), verifying that the statement is consistent with the CTR content and does not conflict with the provided descriptions.
+----------
+3->
+
+Confirm with a definitive YES or NO whether the statement's veracity can be determined solely from the Clinical Trial Report (CTR) data, ensuring it is consistent with the CTR details and does not contradict the provided descriptions.
+----------
+4->
+
+Conduct a rigorous evaluation of Clinical Trial Reports (CTRs) to conclusively determine the veracity of each statement, providing an unequivocal YES or NO answer. Your assessment must strictly conform to the data presented in the CTR, accurately mirror the CTR's account without deviation, and exclude any discrepancies.
+----------
+5->
+
+Examine the Clinical Trial Report (CTR) data meticulously to ascertain the veracity of the claim, providing an unequivocal YES or NO response. This determination must be robustly substantiated by the CTR data, guaranteeing absolute consistency with the report's content.
+----------
+6->
+
+Carefully scrutinize the data within the Clinical Trial Report (CTR) to conclusively substantiate or negate the assertion, providing an unequivocal YES or NO response. This determination must be exclusively based on the CTR data and should not contradict any information presented therein.
+----------
+7->
+
+Assess the Clinical Trial Report (CTR) data meticulously to definitively validate or refute the claim, offering a clear YES or NO answer. This conclusion must be strictly supported by the data within the CTR and must not conflict with any information contained therein.
+----------
+8->
+
+Formulate a conclusive YES or NO response to ascertain if the statement's truthfulness can be deduced exclusively from the data within the Clinical Trial Report (CTR), ensuring the statement aligns with the CTR content and does not contradict any descriptions provided.
+----------

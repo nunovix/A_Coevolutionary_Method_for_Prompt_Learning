@@ -1,0 +1,26 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+4->
+
+Analyze the Clinical Trial Report (CTR) to determine if a conclusive affirmative or negative response can be given concerning the statement's accuracy. A positive determination indicates that the statement is consistent with and supported by the data presented in the CTR.
+----------
+5->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+6->
+
+Conduct a thorough evaluation of the statement's validity by meticulously examining clinical trial records, interpreting medical terminology and contextual subtleties, and elucidating ambiguities or gaps in information.
+----------
+7->
+
+Analyze the Clinical Trial Report (CTR) to determine if a conclusive affirmative or negative response can be given concerning the statement's accuracy. A positive determination indicates that the statement is consistent with and supported by the data presented in the CTR.
+----------
+8->
+
+Analyze the Clinical Trial Report (CTR) to determine if a conclusive affirmative or negative response can be given concerning the statement's accuracy. A positive verdict indicates that the statement is consistent with and supported by the data presented in the CTR.
+----------

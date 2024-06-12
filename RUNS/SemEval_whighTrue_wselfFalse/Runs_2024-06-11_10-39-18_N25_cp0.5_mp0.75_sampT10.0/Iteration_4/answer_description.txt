@@ -1,0 +1,26 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+4->
+
+Evaluate the alignment of a statement with the Clinical Trial Report (CTR) descriptions to ascertain its validity. Provide a YES if the statement is consistent with the CTR descriptions and NO if there is a discrepancy.
+----------
+5->
+
+Evaluate the statement's alignment with Clinical Trial Report (CTR) descriptions for consistency and absence of conflict. Respond with a definitive YES or NO.
+----------
+6->
+
+Assess the alignment of the given statement with the Clinical Trial Report (CTR) descriptions by providing a definitive YES or NO answer. A 'YES' signifies that the statement is in harmony with the CTR descriptions and does not conflict with the information supplied.
+----------
+7->Determine with a definitive YES or NO if the statement's validity can be ascertained from the Clinical Trial Report (CTR) descriptions. A positive response signifies that the statement aligns with and is corroborated by the information within the CTR, without presenting any contradictions.
+----------
+8->
+
+Analyze data solely from a clinical trial report to definitively determine if the statement is true or false.
+----------

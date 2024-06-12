@@ -1,0 +1,28 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+4->
+
+Assess each statement's adherence to the Clinical Trial Report (CTR) standards by classifying them as "Compliant" or "Non-Compliant" with respect to the guidelines. This assessment requires a thorough understanding of medical terminology and context, ensuring each statement's relevance to the CTR guidelines and the statement itself, with a particular emphasis on resolving ambiguities and supplementing missing details.
+----------
+5->
+
+Classify each claim as 'Affirmative' or 'Negative' in accordance with its congruence with the particulars detailed within the Clinical Trial Report (CTR).
+----------
+6->
+
+Evaluate each statement in relation to the Clinical Trial Report (CTR) details to ascertain its alignment. Indicate 'CONFIRMED' for statements that are consistent with the CTR details, or 'INCONSISTENT' for those that diverge.
+----------
+7->
+
+Determine if the statement's validity can be ascertained from the Clinical Trial Report (CTR) descriptions by responding with either YES or NO. A positive response signifies that the statement aligns with the CTR descriptions and does not conflict with the information provided.
+----------
+8->
+
+Assess each claim against the specifics detailed in the Clinical Trial Report (CTR). Validate 'Affirmative' for claims that align with the CTR specifics, and 'Negative' for those that do not.
+----------

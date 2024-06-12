@@ -4,15 +4,15 @@ import shutil
 import pandas as pd
 
 # Path to the SemEval directory
-semeval_path = 'RUNS_fine_tuning/SemEval'
-output_dir = 'hyperparameter_optimization_results'
+semeval_path = 'RUNS_fine_tuning/SemEval_whighFalse_wselfFalse'
+output_dir = 'hyperparameter_optimization_results_N10'
 images_dir = os.path.join(output_dir, 'images')
 
 # Create output directories if they don't exist
 os.makedirs(images_dir, exist_ok=True)
 
 # Regex pattern to extract hyperparameters from folder names
-pattern = re.compile(r'Runs_\d{4}-\d{2}-\d{2}_\d{2}-\d{2}-\d{2}_N(\d+)_cp([0-9.]+)_mp([0-9.]+)_sampT([0-9.]+)_whigh(False|True)_wself(False|True)')
+pattern = re.compile(r'Runs_\d{4}-\d{2}-\d{2}_\d{2}-\d{2}-\d{2}_N(\d+)_cp([0-9.]+)_mp([0-9.]+)_sampT([0-9.]+)')
 
 # List to store the extracted information
 data = []
@@ -209,3 +209,7 @@ for key, dataframe in averages.items():
     print(f"Summary HTML table saved as '{html_output_path}'")
 
 print("All HTML tables and summary views have been saved successfully.")
+# Print a sample HTML output
+sample_html = render_html_table(df_sorted.head(5), "Sample HTML Output")
+print(sample_html)
+

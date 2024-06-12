@@ -1,0 +1,34 @@
+0->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+1->
+
+Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR) data, ensuring the statement aligns with the CTR information and does not conflict with the given descriptions.
+----------
+2->
+
+Determine a definitive YES or NO answer to evaluate whether the veracity of the statement can be inferred solely from the data presented in the Clinical Trial Report (CTR), verifying that the statement is consistent with the CTR content and does not conflict with the provided descriptions.
+----------
+3->
+
+Confirm with a definitive YES or NO whether the statement's veracity can be determined solely from the Clinical Trial Report (CTR) data, ensuring it is consistent with the CTR details and does not contradict the provided descriptions.
+----------
+4->
+
+Provide a definitive YES or NO verdict on the statement's accuracy, solely based on empirical data from the Clinical Trial Report (CTR). Ensure the statement is consistent with the CTR findings and does not oppose its documented results.
+----------
+5->
+
+Confirm with a definitive YES or NO whether the statement's veracity can be determined solely from the Clinical Trial Report (CTR) data, ensuring it is consistent with the CTR details and does not contradict the provided descriptions.
+----------
+6->
+
+Provide a definitive YES or NO verdict on the statement's accuracy, solely based on empirical evidence from the Clinical Trial Report (CTR). Ensure your assessment is consistent with the CTR's recorded results and does not conflict with its documented findings.
+----------
+7->
+
+Assess the statement's veracity solely through the data presented in the Clinical Trial Report (CTR), ensuring it is congruent with the CTR's data and refrains from contradicting any provided descriptions.
+----------
+8->
+
+Critically assess the statement's validity using empirical evidence exclusively from the Clinical Trial Report (CTR). Confirm that the statement aligns with the CTR findings and refrain from contradicting the documented results.
+----------

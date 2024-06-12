@@ -1,0 +1,28 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+4->
+
+Determine a definitive YES or NO on the statement's accuracy, solely utilizing data derived from a clinical trial report.
+----------
+5->
+
+Determine affirmatively or negatively whether the clinical trial report data substantiate the conclusion of the statement's validity.
+----------
+6->
+
+Determine if the statement's validity can be ascertained from the Clinical Trial Report (CTR) descriptions by responding with either YES or NO. A positive response signifies that the statement aligns with the CTR descriptions and does not conflict with the information provided.
+----------
+7->
+
+Evaluate the statement's validity based on the information provided in the Clinical Trial Report (CTR) descriptions. Confirm with a definitive YES if the statement is consistent and supported by the CTR, devoid of any contradictions.
+----------
+8->
+
+Evaluate with absolute certainty (YES/NO) the veracity of the statement based on the data from the Clinical Trial Report (CTR), confirming that your conclusion is consistent with and does not conflict with the information presented in the CTR.
+----------

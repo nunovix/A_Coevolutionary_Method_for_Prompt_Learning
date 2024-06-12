@@ -1,0 +1,28 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+4->
+
+Critically assess the statement's accuracy by scrutinizing clinical trial documentation, deciphering medical jargon and contextual nuances, and clarifying any vagueness or missing information.
+----------
+5->
+
+Assess each statement's congruence with the Clinical Trial Report (CTR) details, classifying it as 'Congruent' or 'Incongruent'. A statement is 'Congruent' if it aligns with the CTR details, complies with the given information, and lacks contradictions.
+----------
+6->
+
+Evaluate each statement's validity based on the information provided in the Clinical Trial Report (CTR) descriptions. Confirm with a definitive YES if the statement is consistent and supported by the CTR data; otherwise, respond with a definitive NO.
+----------
+7->
+
+Determine affirmatively or negatively if it is possible to establish the statement's validity solely based on the information provided in the clinical trial report.
+----------
+8->
+
+Evaluate the Clinical Trial Report (CTR) to ascertain if a definitive YES or NO answer can be provided regarding the statement's validity. A positive response signifies that the statement aligns with and is corroborated by the CTR's information.
+----------

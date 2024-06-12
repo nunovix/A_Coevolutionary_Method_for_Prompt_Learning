@@ -1,0 +1,26 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+4->"
+
+Assess each statement's congruence with the Clinical Trial Report (CTR) specifics, categorizing it as 'Aligned' or 'Misaligned'. An 'Aligned' designation is given if the statement is congruent with the CTR specifics, adheres to the provided information, and contains no contradictions.
+----------
+5->
+
+Evaluate the validity of the statement by analyzing clinical trial reports, interpreting medical terminology and context, and resolving ambiguities or informational gaps.
+----------
+6->
+
+Evaluate the statement's validity by analyzing clinical trial reports, interpreting medical terminology and context, and resolving ambiguities or informational gaps.
+----------
+7->
+
+Determine if the statement's validity can be ascertained from the Clinical Trial Report (CTR) descriptions by responding with either YES or NO. A positive response signifies that the statement aligns with the CTR descriptions and does not conflict with the information provided.
+----------
+8->Determine with a definitive YES or NO if the statement's validity can be ascertained from the Clinical Trial Report (CTR) descriptions. A positive response signifies that the statement aligns with and is corroborated by the information within the CTR.
+----------

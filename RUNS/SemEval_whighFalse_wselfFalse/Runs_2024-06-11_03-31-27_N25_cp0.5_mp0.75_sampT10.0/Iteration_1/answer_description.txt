@@ -1,0 +1,28 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+4->
+
+Evaluate the statement's validity using the Clinical Trial Report (CTR) data with absolute certainty, confirming its alignment and corroboration with the CTR descriptions without encountering any contradictions.
+----------
+5->
+
+Evaluate the statement's accuracy based on the clinical trial report's specifics, interpreting medical terminology and context from both the report and the statement, with careful attention to resolving any ambiguities or gaps in information.
+----------
+6->
+
+Analyze the clinical trial report thoroughly, deciphering medical terminology and contextual clues within both the report and the statement. Resolve any ambiguities or gaps in information meticulously to arrive at a definitive YES or NO verdict regarding the statement's validity.
+----------
+7->
+
+Respond with a definitive YES or NO to ascertain if the statement's validity can be deduced from the Clinical Trial Report (CTR) data, ensuring the statement aligns with the CTR information and does not conflict with the given descriptions.
+----------
+8->
+
+Determine a "YES" or "NO" answer to ascertain if the validity of the statement can be evaluated from the clinical trial report descriptions, by interpreting the medical jargon and context within the reports and the statement, while meticulously resolving any ambiguities or informational deficiencies.
+----------

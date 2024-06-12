@@ -1,0 +1,28 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->
+
+Conduct a definitive YES or NO evaluation of the statement's alignment with the clinical trial report's specifics, carefully deciphering medical terminology and contextual nuances present in both the report and the statement, while clarifying ambiguities and filling information voids with exactitude.
+----------
+4->
+
+Determine a "YES" or "NO" response regarding the ability to affirm the statement's validity based solely on the provided clinical trial report data.
+----------
+5->
+
+Assess the Clinical Trial Report (CTR) descriptions to conclusively determine the veracity of each statement. Respond with a definitive YES if the statement is consistent and supported by the CTR descriptions, or with a definitive NO if the statement contradicts the CTR information.
+----------
+6->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+7->
+
+Perform an unequivocal YES or NO assessment of the statement's congruence with the clinical trial report's details, meticulously interpreting medical jargon and context-specific subtleties in both the report and the statement. Elucidate any ambiguities and accurately supplement missing information.
+----------
+8->
+
+Conduct a definitive YES or NO assessment of the Clinical Trial Report's factual correctness by thoroughly analyzing medical jargon, contextual nuances, and resolving any ambiguities or data gaps with unwavering accuracy.
+----------

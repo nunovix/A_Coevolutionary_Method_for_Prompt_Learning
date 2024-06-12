@@ -1,0 +1,28 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+4->
+
+Determine affirmatively or negatively if it is possible to establish the statement's validity based solely on the information provided in the clinical trial report.
+----------
+5->
+
+Evaluate each statement against the Clinical Trial Report (CTR) for congruence and corroboration, responding with 'CONGRUENT AND CORROBORATE' or 'INCONGRUENT AND NON-CORROBORATE'. Furthermore, verify the statement's validity in relation to the CTR data, and reply with 'VALID' or 'INVALID'.
+----------
+6->
+
+Assess each statement's validity against the Clinical Trial Report (CTR) specifics to verify its correctness. Provide a definitive YES if it aligns with the CTR details, or a clear NO if it does not.
+----------
+7->
+
+Evaluate each assertion in relation to the specifics outlined in the Clinical Trial Report (CTR) to ascertain its accuracy. Confirm alignment with the CTR details by responding with 'YES'; if not, respond with 'NO' unequivocally.
+----------
+8->
+
+Assess each statement's alignment and verification against the Clinical Trial Report (CTR) descriptions by clearly marking 'CONGRUENT' for alignment and verification, or 'INCONGRUENT' for misalignment and lack of verification.
+----------

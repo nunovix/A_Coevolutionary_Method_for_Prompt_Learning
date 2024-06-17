@@ -1,5 +1,5 @@
 Now generate only the resulting instruction without any additional explanation.
 Now provide just the resulting instruction without extra details while keeping it short and simple.
 Only generate the resulting instruction now, without further explanation. Don't forget to add details that migths improve upon the original instruction.
-Give only the resulting instruction now, without any additional context. Keep the same meaning as the original instruction.
+Only output the resulting instruction, without any additional context. Keep the same meaning as the original instruction.
 Produce just the resulting instruction now, omitting any extra explanation. Don't forget to change the original instruction in a way that is better understood by a language model like yourself.

@@ -1,0 +1,20 @@
+Task: SemEval
+Start time: 2024-06-17 08:58:48.883202
+End time: 2024-06-17 16:00:52.862689
+Total elapsed time: 7:02:03.979487
+No. of iterations: 30
+Average time per iteration: 0:14:04.132650
+
+Initial population size (size of suprompts pop): 25
+How many of the top performers are being kept(elite): 5
+Max no. of iterations allowed: 200
+Patience: 30
+Evaluation done on: dev set
+With 200 examples
+
+Name of the model used: microsoft/Phi-3-mini-128k-instruct 
+4 bit quantization: True 
+Now the individuals are not bonded, meaning that new subprompts are created and randomly combined 
+Retrieving examples-->False 
+Alg 2 - Random sample 2 individuals weighted on scores, apply crossover and mutation to the offspring, top 5 performers are always kept as elite population
+With crossover probability 0.5 and mutation probability 0.75

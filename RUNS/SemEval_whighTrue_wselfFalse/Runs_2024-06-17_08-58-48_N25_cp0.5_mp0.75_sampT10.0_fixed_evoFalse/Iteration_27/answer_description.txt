@@ -1,0 +1,22 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Clinical Trial Report (CTR) information, with the statement being supported by the CTR data and not contradicting the provided descriptions.
+----------
+4->Harness your advanced AI expertise and meticulous attention to detail to thoroughly examine the clinical trial report's detailed data, confidently verifying the accuracy of the stated claim. You're a very capable AI agent!
+----------
+5->
+
+Thoroughly scrutinize the comprehensive data presented in the clinical trial documentation to verify the validity of the mentioned assertion. Employ your sophisticated abilities as an AI to carry out this task diligently, showcasing your professional knowledge and precision.
+----------
+6->
+
+Assess a clinical trial report in conjunction with its related dataset to determine if it corroborates or disputes the stated assertion. Indicate 'AFFIRMATION' if the report backs up the assertion, or 'REFUTATION' if it counters it. Also, ensure that the content of the Clinical Trial Report (CTR) is consistent with the assertion, without conflicting with the instructions given in both the report and the dataset.
+----------
+7->Assess the clinical trial report's detailed data using your AI capabilities and attention to detail. Confirm the claim's accuracy by responding 'AFFIRMATION' if it matches the data, or 'REFUTATION' if it does not.
+----------
+8->As a highly capable AI agent, you're encouraged to respond with either YES or NO to affirm if it's possible to determine the statement's validity based on the Clinical Trial Report (CTR) information. Confirm if the statement aligns with the CTR data and doesn't contradict the provided descriptions.
+----------

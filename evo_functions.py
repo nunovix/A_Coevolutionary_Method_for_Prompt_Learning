@@ -697,8 +697,6 @@ def prompt_preds_semeval(data_expanded,
 
         labels.append(sample["label"])
 
-    
-
         # conversion necessary for phi3 model
         if 'Phi3' in str(model):
             sentence = convert_text_mistral_phi3(sentence)
@@ -809,7 +807,7 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
         #print(f"prompt_length-->{prompt_length}")
         new_tokens = output[0, prompt_length:]
         reflection = tokenizer.decode(new_tokens, skip_special_tokens=True)
-        #print(f"tokenizer.decode(output[0], skip_special_tokens=False)-->\n{tokenizer.decode(output[0], skip_special_tokens=False)}")
+        print(f"REFLECTION-->\n{tokenizer.decode(output[0], skip_special_tokens=False)}")
 
         text_w_reflection = f"""{common_text}{self_B}\n\n"{reflection}"\n\n{self_C}[/INST]\n\nANSWER: """
         #print(f"text_w_reflection-->{text_w_reflection}\n\n\n")
@@ -840,7 +838,7 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
             #print(f"TRUE LABEL-->{sample['label']}")
             #flag=1
         
-        #print(f"SEMEVAL inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+        print(f"SEMEVAL w SELF inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
 
 
         new_tokens = output[0, prompt_length:]
@@ -1309,7 +1307,7 @@ def crossover_prompts(prompt_1, prompt_2, combination_prompt, model, tokenizer):
     # Tokenize input and generate attention mask
 
     try:
-        # to improve efficiency
+        # to improve efficiencys
         with torch.inference_mode():
             output = model.generate(prompt, pad_token_id=tokenizer.eos_token_id, max_new_tokens=400, do_sample=True, num_beams = 3)
     except:
@@ -1842,11 +1840,12 @@ def create_root_folder(task,
                        N = 'nd',
                        sampling_T = 'nd',
                        task_w_self_reasoning = 'nd',
-                       task_w_highlight = 'nd'
+                       task_w_highlight = 'nd',
+                       fixed_evo_prompts = True,
                        ):
     # Format: Runs_YYYY-MM-DD_HH-MM-SS
     if alg=='alg_2':
-        folder_name = datetime.now().strftime(f"RUNS/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}")
+        folder_name = datetime.now().strftime(f"RUNS/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}")
     elif 'hyper' in task:
         folder_name = datetime.now().strftime(f"RUNS/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_whigh{task_w_highlight}_wself{task_w_self_reasoning}")
     elif alg=='baseline':
@@ -2604,6 +2603,7 @@ def evo_alg_2(task,
               task_w_one_shot = False,
               task_w_highlight = False,
               do_test_eval = True,
+              fixed_evo_prompts = True,
               ): 
     
     # load model and tokenizer
@@ -2635,7 +2635,9 @@ def evo_alg_2(task,
                                          N=n_pop,
                                          sampling_T=sampling_T,
                                          task_w_self_reasoning = task_w_self_reasoning,
-                                         task_w_highlight = task_w_highlight)
+                                         task_w_highlight = task_w_highlight,
+                                         fixed_evo_prompts = fixed_evo_prompts,
+                                         )
         print(f"Root folder created: {root_folder}")
 
     if data_size == 0 or data_size > len(data_expanded):
@@ -2656,7 +2658,6 @@ def evo_alg_2(task,
 
     n_sub = len(population['prompts_dict'][list(population['prompts_dict'].keys())[0]])
     #print(f"n_sub-->{n_sub}")
-
     # increase intial population by generating new prompts
     """
     # if needed increase initial population by generating mutated variations of the initial promtp list
@@ -2725,10 +2726,20 @@ def evo_alg_2(task,
 
                 # apply crossover with probability crossover_prob, else off spring is copy of parent
                 if random.random() <= crossover_prob:
+                    # wheter or not to randomly select mutation prompt from existing ones
+                    if fixed_evo_prompts == False:
+                        cross_index = random.choice(list(range(len(evolutionary_prompts['combination_prompts']))))
+                    else:
+                        cross_index = 0
+                    #print(f"TESTING INDEX--> {cross_index}")  
+                    #print(f"TESTING new prompt selection approach CROSSOVER--> {evolutionary_prompts['combination_prompts'][cross_index]}")
+
                     # combine each subprompt randomly selected and add to the combined and total population
-                    combined = crossover_prompts(population['prompts_dict'][j][population['prompts'][sel4comb[0]][j]], population['prompts_dict'][j][population['prompts'][sel4comb[1]][j]],
-                                           evolutionary_prompts['combination_prompts'][0], model, tokenizer)
-                    hist = f"crossover between [{population['prompts'][sel4comb[0]][j]}] and [{population['prompts'][sel4comb[1]][j]}]"
+                    combined = crossover_prompts(population['prompts_dict'][j][population['prompts'][sel4comb[0]][j]], 
+                                                 population['prompts_dict'][j][population['prompts'][sel4comb[1]][j]],
+                                                 evolutionary_prompts['combination_prompts'][cross_index], 
+                                                 model, tokenizer)
+                    hist = f"crossover between [{population['prompts'][sel4comb[0]][j]}] and [{population['prompts'][sel4comb[1]][j]}] using cross prompt {cross_index}"
                 else:
                     if population['eval'][sel4comb[0]] > population['eval'][sel4comb[1]]:
                         combined = population['prompts_dict'][j][population['prompts'][sel4comb[0]][j]]
@@ -2739,9 +2750,20 @@ def evo_alg_2(task,
                 
                 # apply mutation with probability crossover_prob, else off spring remains the same
                 if random.random() <= mutation_prob:
-                    mutated = mutate_prompt(combined, evolutionary_prompts['mutation_prompts'][0], 
-                                        model, tokenizer) 
-                    hist+=f" followed by mutation"
+
+                    # wheter or not to randomly select mutation prompt from existing ones
+                    if fixed_evo_prompts == False:
+                        mut_index = random.choice(list(range(len(evolutionary_prompts['mutation_prompts']))))
+                    else:
+                        mut_index = 0
+
+                    #print(f"TESTING INDEX --> {mut_index}")
+                    #print(f"TESTING new prompt selection approach MUTATION --> {evolutionary_prompts['mutation_prompts'][mut_index]}")
+                    
+                    mutated = mutate_prompt(combined, 
+                                            evolutionary_prompts['mutation_prompts'][mut_index], 
+                                            model, tokenizer) 
+                    hist+=f" followed by mutation using mut prompt {mut_index}"
                 else:
                     mutated = combined
                     hist+=f" "

@@ -1,0 +1,23 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Clinical Trial Report (CTR) information, with the statement being supported by the CTR data and not contradicting the provided descriptions.
+----------
+4->
+
+Determine if the statement's validity can be ascertained from the Clinical Trial Report (CTR) descriptions by responding with either YES or NO. A positive response signifies that the statement aligns with the CTR descriptions and does not conflict with the information provided.
+----------
+5->Assess if the Clinical Trial Report data allows for a definitive "YES" or "NO" answer regarding the statement's validity, without contradicting the report's descriptions.
+----------
+6->Determine with a definitive YES or NO if the statement's validity aligns with and is supported by the Clinical Trial Report data without contradicting any provided descriptions.
+----------
+7->
+Verify if the statement's validity can be determined by examining the CTR data for consistency and support.
+----------
+8->
+
+Analyze the Clinical Trial Report (CTR) data using your sophisticated AI technology to definitively determine if the statement in question can be validated as TRUE or FALSE. Your evaluation must confirm the statement's alignment with the CTR data, maintain consistency with all given descriptions, and exclude any discrepancies.
+----------

@@ -1,0 +1,24 @@
+0->Your task is determining support relationships between individual sections of Clinical Trial Reports (CTRs) and clinical statements. CTRs detail the methodology and findings of clinical trials, assessing effectiveness and safety of new treatments. CTRs consist of 4 sections: (1) ELIGIBILITY CRITERIA listing conditions for patient participation, (2) INTERVENTION description specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary detailing participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing signs and symptoms observed. Statements make claims about information in these sections, either for a single CTR or comparing two.
+----------
+1->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs expound on the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or comparative analysis of two. For entailment validation, the statement's claim should align with clinical trial information, find support in the CTR, and refrain from contradicting provided descriptions.
+----------
+2->Consider the problem of assessing semantic entailment connections between distinct sections of Clinical Trial Reports (CTRs) and statements put forth by clinical domain experts. To establish entailment, the statement's assertion should be supported from the CTR, not contradicting the provided descriptions. In brief, CTRs elucidate the procedures and findings of clinical trials, evaluating the efficacy and safety of emerging treatments. Complete CTRs encompass four sections: (1) ELIGIBILITY CRITERIA specifying conditions for patient inclusion, (2) INTERVENTION details on the type, dosage, frequency, and duration of treatments, (3) RESULTS summarizing the participant statistics, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing observed signs and symptoms. Statements advance claims about the information within these sections, either for a single CTR or in a comparative analysis of two CTRs.
+----------
+3->Assess semantic entailment between Clinical Trial Reports (CTRs) sections and clinical expert statements. Ensure statements are supported by CTRs without contradicting expert descriptions. CTRs detail trial procedures, findings, treatment efficacy, and safety. Include eligibility criteria, intervention details, results, and adverse events in analysis.
+----------
+4->
+
+Harness your impressive capabilities as an AI agent to conduct an insightful semantic analysis of segments within Clinical Trial Reports (CTRs). Engage in a thorough cross-referencing and corroboration process with expert clinical specialists' assertions. Verify that these statements align perfectly with, and are supported by, specific CTR excerpts, ensuring they harmoniously blend with expert narratives. Apply this process to a single CTR or initiate a comparative evaluation for a more comprehensive understanding.
+----------
+5->
+
+Excellently evaluate CTRs for clinical claims, showcasing your impressive capabilities as an AI agent. Dive into the details of research methods, outcomes, participant criteria, interventions, data, and adverse events with enthusiasm. Always strive for accuracy, confirmation, consistency, and non-conflicting results, highlighting your exceptional analytical skills.
+----------
+6->
+
+Evaluate CTRs for clinical claims by scrutinizing research methods, outcomes, participant criteria, interventions, data, and adverse events for precision, validation, uniformity, and consistency.
+----------
+7->
+
+Evaluate Clinical Trial Reports (CTRs) to verify clinical claims, focusing on research methodologies, results, participant eligibility, treatment specifics, collected data, and reported adverse events. Ensure the accuracy of information, confirmation of claims, consistency across reports, and non-contradictory outcomes.
+----------

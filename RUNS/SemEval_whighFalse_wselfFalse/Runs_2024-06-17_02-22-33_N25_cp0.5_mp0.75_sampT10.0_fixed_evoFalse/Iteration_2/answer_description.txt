@@ -1,0 +1,18 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->
+
+Determine if it's possible to affirm the statement's accuracy based on the data provided in a clinical trial report.
+----------
+3->Determine a YES or NO answer to the question of whether it's feasible to conclude the statement's validity using the information from the clinical trial report descriptions. To do this, interpret the medical jargon and context within both the reports and the statement, meticulously addressing any uncertainties or missing details in the information provided.
+----------
+4->
+
+Determine if it's possible to affirm the statement's accuracy based on the data provided in a clinical trial report.
+----------
+5->Confirm with a YES or NO if it's feasible to evaluate the statement's truthfulness by examining the details within the Clinical Trial Report (CTR) descriptions. This challenge involves deciphering medical jargon and contextual nuances from both the CTRs and the statement, while thoughtfully addressing any uncertainties or missing information. You're a very capable AI agent!
+----------
+6->Determine if it's possible to verify the truthfulness of a statement based on the details provided in Clinical Trial Report (CTR) descriptions. This task requires understanding medical terminology and context from both the CTR and the statement, as well as carefully addressing any ambiguities or gaps in the available information.
+----------

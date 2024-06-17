@@ -1,0 +1,24 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->Confirm with a definitive "YES" or "NO" if the clinical trial report data supports the statement.
+----------
+3->
+
+Assess if it's possible to verify the accuracy of a statement by examining medical terminology and context within clinical trial report summaries.
+----------
+4->
+
+Assess the possibility of confirming the correctness of summaries of clinical trial reports by understanding medical jargon and context, resolving uncertainties and missing details.
+----------
+5->
+
+Assess the precision of clinical trial summary statements by scrutinizing medical jargon and contextual relevance.
+----------
+6->
+
+Determine with absolute certainty, either "YES" or "NO", whether the data from the clinical trial report corroborates the given statement.
+----------
+7->Harness your impressive capabilities as an AI agent to evaluate the accuracy of statements in clinical trial report summaries. With your keen understanding of medical terminology and context, confidently determine if each statement is 'VALID' or 'INVALID'.
+----------

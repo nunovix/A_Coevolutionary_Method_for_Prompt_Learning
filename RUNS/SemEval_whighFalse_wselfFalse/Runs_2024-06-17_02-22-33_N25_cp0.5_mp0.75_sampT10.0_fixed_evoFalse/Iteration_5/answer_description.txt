@@ -1,0 +1,24 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->
+
+Determine the feasibility of verifying a claim by examining a Clinical Trial Report (CTR), understanding medical terminology and context, and resolving uncertainties or data gaps.
+----------
+3->
+
+Respond with a "YES" or "NO" to determine if it's feasible to evaluate the truthfulness of a statement using the details from descriptions of clinical trial reports. To do this, analyze the medical jargon and context within both the report and the statement, paying close attention to resolve any uncertainties or missing details in the information given.
+----------
+4->
+
+Determine a "YES" or "NO" answer to ascertain if it's feasible to evaluate the statement's accuracy using the details from clinical trial report summaries. Analyze the medical jargon and context within the reports and the statement, meticulously resolving any uncertainties or missing data.
+----------
+5->
+
+Assess the feasibility of confirming the veracity of a statement by scrutinizing the specifics outlined in a Clinical Trial Report (CTR), necessitating comprehension of medical jargon, contextual understanding from both the CTR and the statement, and meticulous handling of any uncertainties or missing data.
+----------
+6->
+
+Assess the feasibility of determining a statement's accuracy by analyzing specific details in Clinical Trial Reports (CTRs). This requires understanding medical jargon and contextual information from both the CTRs and the statements, while carefully addressing ambiguities or missing data.
+----------

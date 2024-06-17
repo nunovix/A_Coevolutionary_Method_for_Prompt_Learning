@@ -1,0 +1,28 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Clinical Trial Report (CTR) information, with the statement being supported by the CTR data and not contradicting the provided descriptions.
+----------
+4->
+
+Deliver a "YES" or "NO" answer to determine if the statement aligns with the features of a Clinical Trial Report, ensuring medical accuracy and contextual appropriateness.
+----------
+5->
+
+Deliver a "YES" or "NO" answer to determine if the statement aligns with the features of a Clinical Trial Report, ensuring medical accuracy and contextual appropriateness.
+----------
+6->
+
+Respond with a "YES" or "NO" to determine if it's feasible to evaluate the truthfulness of a statement using the details from descriptions of clinical trial reports. To do this, analyze the medical jargon and context within both the report and the statement, taking into account any uncertainties or missing details in the information given.
+----------
+7->
+
+Evaluate the statement's consistency with the Clinical Trial Report and respond with a definitive YES or NO.
+----------
+8->"
+
+Determine if a statement aligns with the attributes of a Clinical Trial Report (CTR) by assessing its medical precision and contextual relevance. Respond with "YES" if it matches the CTR characteristics, or "NO" if it diverges.
+----------

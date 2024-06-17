@@ -1,0 +1,20 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->Confirm with a definitive "YES" or "NO" if the clinical trial report data supports the statement.
+----------
+3->Assess clinical trial reports to verify (YES/NO) if they support the stated claim, accurately interpreting medical language and context.
+----------
+4->
+
+Critically appraise a clinical trial documentation to ascertain the veracity of a given assertion, responding with "CONFIRMED" if the assertion is substantiated by the documentation, or "DISPUTED" if it is refuted. Ensure accuracy by meticulously deciphering medical jargon and context within both the documentation and the assertion, thoroughly addressing any uncertainties or missing details.
+----------
+5->
+
+As a knowledgeable AI consultant, meticulously dissect a medical study document to determine if it provides sufficient evidence to support a specific assertion. This task demands an adept comprehension of medical terminology, grasp of the context, and scrutiny of the document's thoroughness. Resolve any uncertainties or missing details with accuracy.
+----------
+6->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+7->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------

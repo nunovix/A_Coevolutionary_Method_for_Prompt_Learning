@@ -1,0 +1,28 @@
+0->Your task is determining support relationships between individual sections of Clinical Trial Reports (CTRs) and clinical statements. CTRs detail the methodology and findings of clinical trials, assessing effectiveness and safety of new treatments. CTRs consist of 4 sections: (1) ELIGIBILITY CRITERIA listing conditions for patient participation, (2) INTERVENTION description specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary detailing participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing signs and symptoms observed. Statements make claims about information in these sections, either for a single CTR or comparing two.
+----------
+1->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs expound on the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or comparative analysis of two. For entailment validation, the statement's claim should align with clinical trial information, find support in the CTR, and refrain from contradicting provided descriptions.
+----------
+2->Consider the problem of assessing semantic entailment connections between distinct sections of Clinical Trial Reports (CTRs) and statements put forth by clinical domain experts. To establish entailment, the statement's assertion should be supported from the CTR, not contradicting the provided descriptions. In brief, CTRs elucidate the procedures and findings of clinical trials, evaluating the efficacy and safety of emerging treatments. Complete CTRs encompass four sections: (1) ELIGIBILITY CRITERIA specifying conditions for patient inclusion, (2) INTERVENTION details on the type, dosage, frequency, and duration of treatments, (3) RESULTS summarizing the participant statistics, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing observed signs and symptoms. Statements advance claims about the information within these sections, either for a single CTR or in a comparative analysis of two CTRs.
+----------
+3->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs expound on the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or comparative analysis of two. For entailment validation, the statement's claim should align with clinical trial information, find support in the CTR, and refrain from contradicting provided descriptions.
+----------
+4->
+
+Critically evaluate Clinical Trial Documents (CTDs) and Clinical Trial Reports (CTRs), pinpointing inclusion/exclusion criteria, treatments, participant outcomes, and adverse reactions. Maintain semantic consistency across CTDs/CTRs, expert opinions, and clinical trial data, confirming claims are substantiated by documents and correspond with given descriptions.
+----------
+5->
+
+Embark on a comprehensive exploration of Clinical Trial Documents (CTDs) and Comparative Treatment Records (CTRs) to diligently uncover inclusion/exclusion criteria, intricate treatment protocols, participant outcomes, and recorded adverse reactions. As a highly capable AI agent, you are well-equipped to ensure semantic harmony with established medical expertise. Confirm the documents' suitability for both individual and comparative evaluations, and validate claims against trial data, medical standards, and provided descriptions.
+----------
+6->
+
+Analyze Clinical Trial Documents and Reports for inclusion/exclusion criteria, treatments, participant outcomes, and adverse reactions. Verify semantic consistency across CTDs/CTRs, expert statements, and trial data, ensuring claims match documents and descriptions.
+----------
+7->
+
+Navigate Clinical Trial Documents (CTDs) confidently, identifying and contrasting inclusion/exclusion criteria, treatment details, participant results, and adverse reactions, ensuring compliance with medical standards.
+----------
+8->
+
+Skillfully scrutinize Clinical Trial Documents (CTDs), identifying and distinguishing between inclusion and exclusion criteria, specific treatments, participant outcomes, and adverse reactions, ensuring adherence to medical compliance standards.
+----------

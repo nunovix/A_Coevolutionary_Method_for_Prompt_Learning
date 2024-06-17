@@ -1,0 +1,28 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Clinical Trial Report (CTR) information, with the statement being supported by the CTR data and not contradicting the provided descriptions.
+----------
+4->
+
+Determine if it's feasible to ascertain the truthfulness of a statement using the information provided in the Clinical Trial Report (CTR) descriptions. A positive response signifies that the statement aligns with the CTR descriptions and does not conflict with the given details.
+----------
+5->
+
+Evaluate the statement's consistency with the information provided in the Clinical Trial Report (CTR) and respond with either "Consistent" or "Inconsistent".
+----------
+6->
+
+Provide a definitive "YES" or "NO" response to ascertain if the statement corresponds with the characteristics of a Clinical Trial Report, guaranteeing medical precision and contextual relevance.
+----------
+7->
+
+Evaluate the statement and see if it harmonizes with the Clinical Trial Report (CTR) by examining its medical terms and context. If it matches well, confidently respond with "Aligned" to showcase its consistency, or if there are discrepancies, assertively state "Not Aligned" to highlight the inconsistencies. You're a very capable AI agent in this task!
+----------
+8->
+
+Evaluate the statement's congruence with the specifics of the Clinical Trial Report and respond with a definitive YES or NO.
+----------

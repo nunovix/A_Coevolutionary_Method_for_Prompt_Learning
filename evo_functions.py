@@ -1283,6 +1283,42 @@ def mutate_prompt(prompt, mutation_prompt, model, tokenizer):
 
     return mutated
 
+def new_mutate_prompt(prompt, 
+                      mutation_prompt_dict, 
+                      model, 
+                      tokenizer):
+
+    # case with empty string in self reflection prompts
+    if prompt == '' or prompt == ' ':
+        return ''
+    instruction = '[INST]' + mutation_prompt + """\n\nINSTRUCTION:" """ + prompt + """ "[/INST]""" + "\n\nNEW INSTRUCTION: "
+    #print(f"instruction-->{instruction}")
+
+    # conversion necessary for phi3 model
+    if 'Phi3' in str(model):
+        instruction = convert_text_mistral_phi3(instruction)
+
+    prompt = tokenizer.encode(instruction, return_tensors="pt", return_attention_mask=True).to('cuda')
+
+    prompt_length = prompt[0].shape[0]
+
+    try:
+        # to improve efficiency
+        with torch.inference_mode():
+            output = model.generate(prompt, pad_token_id=tokenizer.eos_token_id, max_new_tokens=400, do_sample=True, num_beams = 3)
+    except:
+        output = ''
+
+    new_tokens = output[0, prompt_length:]
+    mutated = tokenizer.decode(new_tokens, skip_special_tokens=True)
+    #print(f"MUTATE PROMPT)-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+
+    if mutated.startswith('"') and mutated.endswith('"'):
+        # Remove the quotes
+        return mutated[1:-1]
+
+    return mutated
+
 
 # function to combine prompts using an LLM
 # takes a combination prompt (asking to join two instructions) and two subprompt (to be combined), outputs the NEW combined subprompt

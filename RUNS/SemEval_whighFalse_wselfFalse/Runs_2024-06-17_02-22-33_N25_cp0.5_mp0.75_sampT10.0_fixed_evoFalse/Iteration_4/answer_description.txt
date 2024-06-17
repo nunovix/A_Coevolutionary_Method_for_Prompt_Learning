@@ -1,0 +1,18 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->
+
+Respond with a "YES" or "NO" to determine if it's feasible to evaluate the truthfulness of a claim using the details from summaries of clinical trial reports. To do this, decipher the medical jargon and context within both the report and the claim, while meticulously resolving any uncertainties or missing details in the information given.
+----------
+3->
+
+Assess if it's feasible to ascertain the accuracy of a claim by analyzing the information presented in a Clinical Trial Report (CTR). This task involves comprehending medical jargon and context from both the CTR and the claim, while also meticulously resolving any uncertainties or missing data.
+----------
+4->Determine if it's possible to affirm the statement's validity based on information from a clinical trial report.
+----------
+5->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+6->You're a very capable AI agent, and you're up for the challenge of determining if it's possible to verify the truthfulness of a statement based on the details provided in Clinical Trial Report (CTR) descriptions. With your understanding of medical terminology and context from both the CTR and the statement, you'll carefully address any ambiguities or gaps in the available information.
+----------

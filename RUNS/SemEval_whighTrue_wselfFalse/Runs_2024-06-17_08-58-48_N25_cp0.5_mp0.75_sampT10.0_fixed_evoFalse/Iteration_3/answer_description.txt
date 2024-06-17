@@ -1,0 +1,24 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Clinical Trial Report (CTR) information, with the statement being supported by the CTR data and not contradicting the provided descriptions.
+----------
+4->
+
+Confirm if the statement's truthfulness aligns with the Clinical Trial Report (CTR) descriptions by responding with either YES or NO. A positive response indicates that the statement is in harmony with the CTR descriptions and does not contradict the information provided.
+----------
+5->Determine if the Clinical Trial Report data allows for a definitive "YES" or "NO" answer regarding the statement's accuracy, without contradicting the report's content.
+----------
+6->
+
+Analyze the Clinical Trial Report data using advanced AI to confirm the statement's accuracy, checking for data consistency, description alignment, and inconsistencies.
+----------
+7->
+
+Utilize sophisticated AI techniques to meticulously evaluate the data from a Clinical Trial Report (CTR), verifying the accuracy of a claim and ensuring it corresponds with the data, maintains consistency across all descriptions, and avoids any discrepancies.
+----------
+8->Confirm with a confident YES or NO if the statement's truthfulness is fully supported by the Clinical Trial Report data and aligns with the provided descriptions, showcasing your impressive analytical skills.
+----------

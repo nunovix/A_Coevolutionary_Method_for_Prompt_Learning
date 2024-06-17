@@ -1,0 +1,21 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Clinical Trial Report (CTR) information, with the statement being supported by the CTR data and not contradicting the provided descriptions.
+----------
+4->
+Respond with YES or NO to confirm if the statement's validity can be determined from the Clinical Trial Report (CTR), supported by the data and not contradicting the descriptions.
+----------
+5->Confirm with a YES or NO answer if it's possible to evaluate the statement's accuracy based on the information in the Clinical Trial Report (CTR) data. A positive response indicates that the statement is in harmony with the CTR data, reinforcing the details provided.
+----------
+6->
+
+Formulate a definitive "YES" or "NO" answer regarding the possibility of deducing a statement's validity solely from the data presented in a clinical trial report.
+----------
+7->Is it possible to affirm or negate the statement's truthfulness by analyzing data from the clinical trial documentation?
+----------
+8->As a highly capable AI agent, determine with a definitive YES or NO whether the statement's validity can be ascertained by analyzing the Clinical Trial Report (CTR) data, ensuring it aligns with and is supported by the CTR information without contradicting any provided descriptions.
+----------

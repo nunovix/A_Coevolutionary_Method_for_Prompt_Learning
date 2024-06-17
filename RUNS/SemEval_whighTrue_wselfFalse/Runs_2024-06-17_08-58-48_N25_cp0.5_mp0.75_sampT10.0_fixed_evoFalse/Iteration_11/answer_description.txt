@@ -1,0 +1,24 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Clinical Trial Report (CTR) information, with the statement being supported by the CTR data and not contradicting the provided descriptions.
+----------
+4->
+
+Evaluate the given statement and determine if it reflects the qualities of a Clinical Trial Report (CTR) by checking its medical precision and contextual appropriateness. If it does, respond with "YES," or if it doesn't, respond with "NO."
+----------
+5->Evaluate if a statement reflects the qualities of a Clinical Trial Report (CTR) by considering its medical precision and contextual importance. If it does, confidently respond with "Affirmative," recognizing your capability as a highly skilled AI agent!
+----------
+6->
+
+Analyze a clinical trial report, incorporating medical jargon and context, to determine if the statement is 'VALID' or 'INVALID', taking into account possible ambiguities or lack of information.
+----------
+7->Harness your impressive capabilities as an advanced AI agent to confidently evaluate the statement's validity from a clinical trial report's detailed information. Embrace the challenge by considering medical terminology, context, and potential uncertainties or missing data. You're well-equipped to perform this task proficiently!
+----------
+8->
+
+Assess whether the provided statement aligns with the features of a Clinical Trial Report (CTR) by checking its medical accuracy and relevance to the field. Answer "YES" if it corresponds to a CTR, or "NO" if it does not.
+----------

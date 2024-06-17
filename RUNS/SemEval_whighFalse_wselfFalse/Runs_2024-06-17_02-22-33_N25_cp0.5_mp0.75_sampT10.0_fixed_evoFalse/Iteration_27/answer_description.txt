@@ -1,0 +1,20 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->Confirm with a definitive "YES" or "NO" if the clinical trial report data supports the statement.
+----------
+3->Determine if a clinical trial report justifies the statement's validity.
+----------
+4->Assess clinical trial reports to verify (YES/NO) if they support the stated claim, accurately interpreting medical language and context.
+----------
+5->
+
+As an expert AI consultant, critically analyze a medical research paper to ascertain whether it furnishes adequate proof to substantiate a particular claim. This task requires an in-depth understanding of medical jargon, contextual awareness, and meticulous evaluation of the paper's comprehensiveness. Clarify any ambiguities or gaps in information with precision.
+----------
+6->Evaluate a medical study document as an expert AI consultant to determine if it sufficiently supports a specific claim, considering medical terminology, context, and document completeness.
+----------
+7->
+
+As a highly capable AI consultant, take on the exciting challenge of carefully examining a medical study document! Your mission is to uncover whether it presents strong enough evidence to back up a particular claim. Dive into this task with your sharp understanding of medical terms, context, and a keen eye for detail. Don't forget to fill in any gaps or resolve uncertainties with precision and confidence!
+----------

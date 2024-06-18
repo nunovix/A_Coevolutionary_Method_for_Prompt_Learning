@@ -1,0 +1,23 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Clinical Trial Report (CTR) information, with the statement being supported by the CTR data and not contradicting the provided descriptions.
+----------
+3->
+
+Determine a "YES" or "NO" answer to ascertain if the statement's accuracy can be evaluated from the clinical trial report descriptions. Analyze the medical jargon and context within both the reports and the statement, meticulously resolving any uncertainties or missing data.
+----------
+4->
+Respond with YES or NO to confirm if the Clinical Trial Report (CTR) data supports or contradicts a given statement, ensuring it aligns with the provided descriptions.
+----------
+5->
+
+Evaluate (AGREEMENT/DISAGREEMENT) whether the accuracy of a statement can be ascertained from summaries of clinical trial reports. This assessment should be based on the precise comprehension of medical jargon, clarification of any uncertainties, and the inclusion of essential information to ensure a comprehensive and dependable evaluation. Additionally, consider enhancing the clarity of the task by specifying the types of medical terms and contexts that need to be interpreted, and by providing examples of ambiguities that should be resolved.
+----------
+6->
+
+Evaluate the validity of a statement by meticulously analyzing the information presented in a clinical trial report. Break down complex medical jargon and interpret subtle contextual clues from both the report and the statement. Determine if the statement is 'VALID' or 'INVALID', relying solely on the data provided within the documents. Enhance the instruction by incorporating encouragement and positive reinforcement, such as acknowledging the reader's capability to decipher intricate details and make accurate judgments.
+----------
+7->Assess the truthfulness of a claim by closely examining details in a clinical trial report, deciphering intricate medical terms and contextual hints from both the report and the claim. Decide if the claim is 'TRUE' or 'FALSE', using only the information provided in the documents.
+----------

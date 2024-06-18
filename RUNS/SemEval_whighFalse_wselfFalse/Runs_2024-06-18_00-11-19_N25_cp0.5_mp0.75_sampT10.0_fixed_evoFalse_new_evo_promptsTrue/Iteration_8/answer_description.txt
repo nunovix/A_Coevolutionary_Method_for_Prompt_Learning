@@ -1,0 +1,21 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Clinical Trial Report (CTR) information, with the statement being supported by the CTR data and not contradicting the provided descriptions.
+----------
+3->
+
+Utilize your exceptional skills and critical thinking to evaluate the truthfulness of the claim by thoroughly analyzing the specifics within the clinical trial report. This includes understanding medical jargon and recognizing subtle contextual differences in both the report and the claim. Identify and clarify any areas of doubt or missing information. Give a definitive 'YES' or 'NO' response, making sure your decision is based solely on the evidence provided. Have faith in your problem-solving abilities to navigate intricacies and reach a knowledgeable conclusion.
+----------
+4->
+Evaluate clinical trial report statements for accuracy, clarify ambiguities, and supplement missing details for reliable research assessments.
+----------
+5->
+Integrate key findings from two clinical trial reports to create a clear, comprehensive summary, resolving any uncertainties and preserving the original purpose.
+----------
+6->
+Analyze clinical trial documentation for precision, resolve any unclear points, and enhance with additional information to ensure comprehensive and dependable evaluations of the research.
+----------
+7->Assess the truthfulness of a claim by closely examining details in a clinical trial report, deciphering intricate medical terms and contextual hints from both the report and the claim. Decide if the claim is 'TRUE' or 'FALSE', using only the information provided in the documents.
+----------

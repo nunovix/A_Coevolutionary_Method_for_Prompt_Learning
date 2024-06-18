@@ -1,0 +1,24 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Clinical Trial Report (CTR) information, with the statement being supported by the CTR data and not contradicting the provided descriptions.
+----------
+3->
+
+"Carefully scrutinize clinical trial summaries to guarantee they are clear, decipher and articulate complex medical terms in layman's terms, and make sure they are comprehensive. Compare the summaries' results with the full trial data to check for factual consistency. Take pride in your contribution to making clinical trial information more user-friendly and dependable!"
+----------
+4->
+
+Assess the correctness of claims made in summaries and overviews of medical research papers. Understand and explain medical jargon, make complex ideas more accessible, and clarify any unclear points or missing information. Verify each claim by responding with "Affirmative" or "Negative", and provide clear evidence from the source material. Offer detailed justifications for your verdicts to enhance precision and learning.
+----------
+5->
+Evaluate clinical trial report statements for accuracy by understanding medical terms and context, comparing with given data, resolving uncertainties, and simplifying complex language. Provide a clear YES or NO verdict.
+----------
+6->
+Is it possible to affirm or deny the statement's accuracy using the Clinical Trial Report, ensuring it aligns with the report's data and descriptions?
+----------
+7->
+
+Evaluate the accuracy of statements from clinical trial summaries and abstracts by interpreting medical terms and context. Clarify specialized language, simplify complex concepts, and resolve ambiguities or data gaps. Confirm each statement's validity with "YES" or "NO", supported by direct references from the original documents. Include pertinent details for thorough validation of each statement's truthfulness, and acknowledge correct evaluations to promote accuracy and proficiency.
+----------

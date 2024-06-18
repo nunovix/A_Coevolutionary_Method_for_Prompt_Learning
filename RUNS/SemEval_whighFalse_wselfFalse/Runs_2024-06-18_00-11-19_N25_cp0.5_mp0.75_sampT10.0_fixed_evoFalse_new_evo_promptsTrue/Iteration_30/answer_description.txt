@@ -1,0 +1,25 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Clinical Trial Report (CTR) information, with the statement being supported by the CTR data and not contradicting the provided descriptions.
+----------
+3->
+
+Evaluate whether it's feasible to verify the accuracy of a claim by examining descriptions from clinical trial documentation. Thoroughly decipher the medical jargon and context found in both the trial summaries and the claim, taking into account any uncertainties or missing data. Make sure to incorporate all pertinent details from the initial guidelines and craft a final directive that is lucid, thorough, and enlightening.
+----------
+4->
+Determine with 'YES' or 'NO' if it's feasible to evaluate a statement's accuracy by analyzing two clinical trial summary reports and the statement, considering medical terminology, context, ambiguities, and information gaps.
+----------
+5->
+
+Evaluate the statement's validity against a clinical trial summary by providing a 'VALID' or 'INVALID' response. Carefully examine medical terminology and context in both the summary and the statement, resolving ambiguities or data gaps through thorough analysis. Ensure your assessment upholds scientific research integrity and contributes to knowledge advancement. Confirm the statement's consistency with the summary's findings and conclusions for improved clarity.
+----------
+6->
+
+Determine a "YES" or "NO" answer to verify the statement's accuracy, using clinical trial report data. Analyze medical terms and context in the report and statement, clarify ambiguities, and fill informational gaps with expert knowledge.
+----------
+7->
+
+Critically analyze a statement's alignment with clinical trial report details, focusing on medical terminology and context. Address any ambiguities or missing information to conclusively answer "YES" or "NO". Enhance clarity and detail by integrating the most pertinent information from both the original statement and the clinical trial report descriptions.
+----------

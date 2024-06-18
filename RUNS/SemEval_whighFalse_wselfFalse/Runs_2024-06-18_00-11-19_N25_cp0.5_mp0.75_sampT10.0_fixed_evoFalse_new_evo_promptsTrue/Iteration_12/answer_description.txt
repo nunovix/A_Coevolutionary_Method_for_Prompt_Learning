@@ -1,0 +1,24 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Clinical Trial Report (CTR) information, with the statement being supported by the CTR data and not contradicting the provided descriptions.
+----------
+3->
+
+Analyze clinical trial report summaries to decide if a "YES" or "NO" answer can be provided regarding their ability to assess the truthfulness of a given statement. Carefully consider the medical jargon and context presented in both the report and the statement. Be vigilant for any ambiguous details or information that may be lacking. Additionally, enhance the clarity of the task by incorporating explanations of medical terms and ensuring the statement's relevance to the report's content.
+----------
+4->
+Evaluate the statement's validity using only data from a clinical trial report.
+----------
+5->
+
+Evaluate if "YES" or "NO" answers can confirm the truth of a statement derived from clinical trial report summaries. Examine medical terms and contexts in both the summaries and the statement. Clearly define medical terms and contexts, identify ambiguities or information gaps, and provide affirmations to encourage detailed and precise analysis.
+----------
+6->
+Respond with YES or NO to determine if the statement's validity can be assessed from clinical trial report descriptions, considering medical terms and context.
+----------
+7->
+
+Examine the provided Clinical Trial Report (CTR) thoroughly. Assess whether it conclusively supports or contradicts a particular claim, taking into account all the intricate details presented in the report. Enhance the clarity of this task by ensuring the language is precise and unambiguous. Additionally, consider incorporating examples or hypothetical scenarios to illustrate the process of determining the report's stance on the claim for better comprehension.
+----------

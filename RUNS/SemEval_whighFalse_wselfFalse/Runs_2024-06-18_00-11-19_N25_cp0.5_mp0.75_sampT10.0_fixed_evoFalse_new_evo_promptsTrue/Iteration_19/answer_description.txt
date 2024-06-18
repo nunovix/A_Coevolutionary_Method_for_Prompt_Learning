@@ -1,0 +1,26 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Clinical Trial Report (CTR) information, with the statement being supported by the CTR data and not contradicting the provided descriptions.
+----------
+3->
+
+Examine the Clinical Trial Report (CTR) for completeness and accuracy. Decide with a 'YES' or 'NO' if the given statement is factually consistent with the CTR's content, making sure it aligns with the data without conflicting with either the CTR or the two provided descriptions. Pay close attention to medical terminology and contextual nuances from both the CTR and the statement. Clarify any ambiguities or information gaps. Simplify complex medical terms for better comprehension, and ensure all crucial details are captured.
+----------
+4->
+
+Assess the correctness of statements from clinical trial report summaries. Extract key information, clarify medical terms, and fill information gaps for better comprehension.
+----------
+5->
+
+Assess the validity of statements derived from clinical trial report summaries by carefully analyzing the medical terminology and context provided. Synthesize the essential information from each summary, clarify any complex medical terms, and enhance understanding by addressing any ambiguities or missing details. Confirm the accuracy of each statement with a 'YES' if it is valid, or 'NO' if it is not, based on the comprehensive information from both summaries. Celebrate each correct determination as a step towards mastering clinical evaluation!
+----------
+6->
+
+Check if a statement matches the Clinical Trial Report data, confirming agreement between the CTR and the statement without any discrepancies. Simplify medical jargon and explain any subtle differences in context between the sources. Fill in missing details for full comprehension. Recognize your ability to decode intricate medical language with praise and aim for a brief yet thorough instruction that reflects the main points of both descriptions.
+----------
+7->"
+
+Determine 'ACCURATE' or 'INACCURATE' for the alignment of statements with clinical trial report summaries. Integrate motivational affirmations like "you're skillfully deciphering medical language" to boost clarity. Carefully extract and consolidate pivotal details from both the clinical trial report and the statement in question. Translate complex medical terms into layman's language for enhanced understanding, ensuring no vital information is overlooked for a full grasp of the content.
+----------

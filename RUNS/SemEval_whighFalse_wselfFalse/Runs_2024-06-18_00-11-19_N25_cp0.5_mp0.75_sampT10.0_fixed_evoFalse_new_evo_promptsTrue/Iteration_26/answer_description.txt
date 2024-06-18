@@ -1,0 +1,23 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Clinical Trial Report (CTR) information, with the statement being supported by the CTR data and not contradicting the provided descriptions.
+----------
+3->
+
+Evaluate the given Clinical Trial Report (CTR) to decide if it's feasible to affirm or deny the statement's accuracy. The statement should align with the data from the CTR and not conflict with the trial's details.
+----------
+4->
+
+Assess with a "YES" or "NO" whether the statement's validity can be ascertained from the Clinical Trial Report (CTR), ensuring it aligns with the CTR's data and findings without contradicting any provided descriptions. Incorporate expert-level clarifications and definitions to elucidate medical terms and contexts, addressing ambiguities and information gaps comprehensively.
+----------
+5->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+6->
+
+Assess if it's possible to affirmatively answer YES or NO regarding the statement's truthfulness, based on the details from the clinical trial reports. Break down the medical terms and context from both the reports and the statement, ensuring clarity by addressing any ambiguities or gaps in information. Celebrate your meticulous analysis with positive reinforcement, recognizing your capability to handle complex tasks.
+----------
+7->
+"Evaluate the clinical trial report to confirm the statement's reliability. Respond 'YES' if reliable, 'NO' if not. Your assessment is vital for maintaining scientific research integrity. Great job aiding knowledge progression!"
+----------

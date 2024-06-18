@@ -1,0 +1,26 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Clinical Trial Report (CTR) information, with the statement being supported by the CTR data and not contradicting the provided descriptions.
+----------
+3->
+
+Evaluate the accuracy of findings presented in summaries of medical research studies. Identify essential details, clarify complex medical jargon, and enhance understanding by providing additional context where necessary. Also, examine the claims against the provided data from the full research study.
+----------
+4->
+
+Determine a "YES" or "NO" answer to see if it's feasible to evaluate the truthfulness of a given statement using the details from descriptions of clinical trial reports. To do this, carefully decipher the medical jargon and context within both the reports and the statement, taking into account any unclear points or missing details in the information provided.
+----------
+5->
+
+Evaluate statements from clinical trial summaries and abstracts for correctness by analyzing medical terminology and context. Extract key details, simplify complex terms, and improve clarity by resolving uncertainties or missing information. Confirm each statement's accuracy with 'YES' or 'NO', providing evidence from the original texts. Enhance the instruction by adding pertinent details for a clear, informative assessment of each statement's validity.
+----------
+6->
+
+Evaluate the accuracy of conclusions in clinical trial abstracts. Identify and clarify essential details, demystify medical jargon, and complete any missing information to enhance understanding. Additionally, analyze the statements against the provided clinical trial data.
+----------
+7->
+
+Determine a "YES" or "NO" answer to see if it's feasible to evaluate the truthfulness of a given statement using the details from descriptions of clinical trial reports. To do this, carefully decipher the medical jargon and context within both the reports and the statement, taking into account any unclear points or missing details in the information provided.
+----------

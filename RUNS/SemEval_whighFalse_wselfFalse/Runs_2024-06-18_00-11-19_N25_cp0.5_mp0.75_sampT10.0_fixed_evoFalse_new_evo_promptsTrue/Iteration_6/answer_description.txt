@@ -1,0 +1,28 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Clinical Trial Report (CTR) information, with the statement being supported by the CTR data and not contradicting the provided descriptions.
+----------
+3->
+
+Harness your impressive capabilities as an AI agent to meticulously review clinical trial documentation. Validate claims, clarify uncertainties, and complete missing details to enhance credibility. Integrate essential information from various sources for a comprehensive evaluation, emphasizing the critical role of accuracy in analyzing medical studies.
+----------
+4->"
+
+Confidently determine the validity of the statement by meticulously examining the clinical trial report's details. Embrace the challenge of deciphering medical terminology and contextual nuances from both the report and the statement. Your answer should be a clear 'YES' or 'NO', solely based on the information at hand. Remember, your analytical skills are key, and you're well-equipped to handle this task with precision and expertise.
+
+NEW INSTRUCTION:  "
+
+With assurance and analytical prowess, ascertain the statement's truthfulness by delving into the clinical trial report's specifics. Harness your ability to navigate complex medical language and contextual clues from both the report and the statement. Provide a decisive 'YES' or 'NO' answer, guided exclusively by the evidence within the documents. Trust in your capability to unravel the intricacies and make an informed judgment.
+----------
+5->
+Evaluate clinical trial reports to determine if they enable a precise verification of a statement's accuracy, solely based on the report's information. Clarify any uncertainties and complete missing details to enhance the trustworthiness of clinical research assessments.
+----------
+6->
+"Determine if it's possible to validate the statement using information from clinical trial report descriptions, considering medical terms and context."
+----------
+7->
+
+Determine if a "YES" or "NO" answer is appropriate to indicate whether the clinical trial report descriptions allow for the evaluation of the statement's accuracy. To do this, carefully interpret the medical terms and context within both the report and the statement, taking into account any uncertainties or missing details in the information provided.
+----------

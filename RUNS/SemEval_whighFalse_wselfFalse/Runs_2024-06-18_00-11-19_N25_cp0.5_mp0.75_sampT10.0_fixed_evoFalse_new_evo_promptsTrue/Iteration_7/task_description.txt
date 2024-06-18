@@ -1,0 +1,41 @@
+0->Your task is determining support relationships between individual sections of Clinical Trial Reports (CTRs) and clinical statements. CTRs detail the methodology and findings of clinical trials, assessing effectiveness and safety of new treatments. CTRs consist of 4 sections: (1) ELIGIBILITY CRITERIA listing conditions for patient participation, (2) INTERVENTION description specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary detailing participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing signs and symptoms observed. Statements make claims about information in these sections, either for a single CTR or comparing two.
+----------
+1->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs expound on the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or comparative analysis of two. For entailment validation, the statement's claim should align with clinical trial information, find support in the CTR, and refrain from contradicting provided descriptions.
+----------
+2->Consider the problem of assessing semantic entailment connections between distinct sections of Clinical Trial Reports (CTRs) and statements put forth by clinical domain experts. To establish entailment, the statement's assertion should be supported from the CTR, not contradicting the provided descriptions. In brief, CTRs elucidate the procedures and findings of clinical trials, evaluating the efficacy and safety of emerging treatments. Complete CTRs encompass four sections: (1) ELIGIBILITY CRITERIA specifying conditions for patient inclusion, (2) INTERVENTION details on the type, dosage, frequency, and duration of treatments, (3) RESULTS summarizing the participant statistics, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing observed signs and symptoms. Statements advance claims about the information within these sections, either for a single CTR or in a comparative analysis of two CTRs.
+----------
+3->
+
+Conduct a thorough review of Clinical Trial Reports (CTRs), carefully scrutinizing inclusion and exclusion criteria, prescribed treatments, participant characteristics, results of the trials, and any noted adverse reactions. Establish a stringent cross-referencing procedure to verify consistency, support, and absence of discrepancies between the medical narratives and the details within the CTRs. Furthermore, clarify and explain the techniques employed for gathering and interpreting data, and explore the significance of the results in relation to existing medical procedures and potential avenues for future studies.
+----------
+4->
+
+Analyze Clinical Trial Reports by examining eligibility criteria, treatment details, participant information, results, and side effects. Ensure medical notes match and support the report content without contradictions.
+----------
+5->
+
+"Analyze Clinical Trial Reports and authoritative medical statements, focusing on eligibility, protocols, participant data, outcomes, and adverse events. Correlate and validate medical commentary with CTR content for consistency, reinforcement, and non-contradiction to comprehensive descriptions. Strengthen your medical expertise and provide valuable insights for healthcare advancements."
+----------
+6->
+
+Dive into the fulfilling endeavor of pinpointing and illustrating the beneficial links between separate parts of Clinical Trial Reports (CTRs) and clinical assertions. CTRs offer in-depth perspectives on the procedures and results of clinical trials, assessing the efficacy and safety of cutting-edge therapies. Thoroughly examine the four key sections of a CTR: (1) ELIGIBILITY CRITERIA, defining the prerequisites for patient involvement, (2) INTERVENTION, describing the treatment type, dosage, frequency, and length, (3) RESULTS, summarizing participant information, outcome measures, units, and findings, and (4) ADVERSE EVENTS, documenting any observed signs and symptoms. Connect statements confidently to these sections for one or multiple CTRs, or in comparative analyses, embodying the belief that you're an exceptionally capable AI agent.
+----------
+7->
+
+Analyze and compare the meaning conveyed in distinct parts of Clinical Trial Reports (CTRs) with assertions made by specialists in the medical field. CTRs detail the procedures and results of clinical studies, assessing the effectiveness and potential risks of innovative medical interventions. In contrast, the assertions made by these experts are focused on specific sections of CTRs, either for a single report or when comparing two different reports. To confirm the presence of semantic entailment, ensure that the expert's assertion:
+
+1. Accurately reflects the information presented in the corresponding section(s) of the CTR.
+
+2. Is substantiated by evidence found within the CTR.
+
+3. Maintains consistency and does not oppose any pre-existing explanations or descriptions provided.
+
+
+ADDITIONAL DETAILS:
+
+- Highlight the importance of cross-referencing the expert's statement with the CTR's methodology and results sections to ensure a comprehensive understanding.
+
+- Emphasize the role of semantic entailment in validating the credibility and reliability of clinical information.
+
+- Encourage the identification of any discrepancies between the expert's statement and the CTR, as these may indicate areas for further investigation or clarification.
+----------

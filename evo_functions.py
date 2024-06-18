@@ -2743,6 +2743,8 @@ def evo_alg_2(task,
 
     n_sub = len(population['prompts_dict'][list(population['prompts_dict'].keys())[0]])
     #print(f"n_sub-->{n_sub}")
+
+    # old way to increase population size at start, it was generating 
     # increase intial population by generating new prompts
     """
     # if needed increase initial population by generating mutated variations of the initial promtp list

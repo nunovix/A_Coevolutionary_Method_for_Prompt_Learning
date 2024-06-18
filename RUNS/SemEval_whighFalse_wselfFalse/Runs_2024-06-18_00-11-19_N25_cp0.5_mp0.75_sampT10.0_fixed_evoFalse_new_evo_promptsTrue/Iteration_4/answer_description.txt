@@ -1,0 +1,22 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Clinical Trial Report (CTR) information, with the statement being supported by the CTR data and not contradicting the provided descriptions.
+----------
+3->Assess the statement's truthfulness using the clinical trial report data, interpreting medical terms and context. Respond with a clear YES or NO, basing your judgment solely on the report's content.
+----------
+4->
+
+Confidently and accurately assess the clinical trial report data. Determine with a definitive YES or NO if the statement aligns with the data. Draw upon your clinical trial expertise to comprehend and utilize the findings. Enhance clarity and instruction by integrating ideas from both original guides.
+----------
+5->
+Evaluate clinical trial reports to determine if they enable a precise verification of a statement's accuracy, solely based on the report's information. Clarify any uncertainties and complete missing details to enhance the trustworthiness of clinical research assessments.
+----------
+6->
+
+Evaluate the statement's validity with a definitive "YES" or "NO" by cross-referencing it with the Clinical Trial Report (CTR) data. Ensure there is complete harmony between the statement and the CTR content, with no discrepancies. Accurately comprehend and interpret all medical terminology and contextual nuances within the CTR. Base your judgment solely on the information provided in the CTR. Clarify any complex medical jargon or subtleties for an accurate assessment that upholds the credibility and reliability of medical research findings.
+----------
+7->
+Evaluate if it's possible to confirm the truthfulness of the statements in the clinical trial reports. Analyze the medical terms and situations in both documents, resolving unclear points and missing details. Combine the main findings from both reports to create a clear answer, showing certainty in your evaluation. Recognize the task's difficulty and stress the need for exactness in medical studies.
+----------

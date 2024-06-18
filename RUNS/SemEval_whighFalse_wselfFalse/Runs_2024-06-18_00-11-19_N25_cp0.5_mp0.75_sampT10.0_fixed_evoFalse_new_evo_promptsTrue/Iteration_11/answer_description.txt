@@ -1,0 +1,22 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Clinical Trial Report (CTR) information, with the statement being supported by the CTR data and not contradicting the provided descriptions.
+----------
+3->
+
+Evaluate a statement's truthfulness based on summaries from clinical trial reports. This task demands careful analysis of medical jargon and situations, resolving uncertainties and missing details accurately. Improve clarity by specifying medical terms and contexts for analysis, and identify examples of potential ambiguities.
+----------
+4->
+Respond with YES or NO to confirm if the Clinical Trial Report (CTR) supports or contradicts a given statement.
+----------
+5->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+6->
+
+Determine if a "YES" or "NO" answer can be given on whether the clinical trial report descriptions allow for the evaluation of the statement's accuracy. To do this, interpret the medical terms and context within both the report and the statement, paying close attention to any unclear details or missing information.
+----------
+7->
+Determine if it is possible to affirm the statement's validity based solely on information from a clinical trial report.
+----------

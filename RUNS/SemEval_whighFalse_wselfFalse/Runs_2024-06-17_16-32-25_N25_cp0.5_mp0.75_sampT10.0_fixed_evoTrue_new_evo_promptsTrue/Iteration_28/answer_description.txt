@@ -1,0 +1,30 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->Indicate with a YES or NO response whether it is possible to assess the statement's validity based on the clinical trial report data.
+----------
+3->
+
+Perform an exact YES or NO verification of the statement's correctness by meticulously analyzing data from clinical trial records and pertinent descriptions. Focus on deciphering medical terminology and context-specific subtleties to clarify ambiguities and fill in gaps, ensuring the assessment aligns with expert understanding.
+----------
+4->
+
+Assess the veracity of assertions within clinical trial documentation. Classify each assertion as "VALID" if it aligns with the information presented or "INVALID" if it does not, necessitating expertise in medical jargon and contextual understanding from the documents. Clarify ambiguities and address any informational deficiencies.
+----------
+5->
+
+Evaluate the clinical trial report data to ascertain if they corroborate the veracity of the statement in question.
+----------
+6->
+
+Evaluate clinical trial report statements for validity, categorizing each as "VALID" or "INVALID" based solely on the provided content. This task necessitates expert-level comprehension and interpretation of medical jargon and contextual nuances within the reports, with a particular emphasis on clarifying ambiguities and addressing informational voids.
+----------
+7->
+
+Conduct a precise YES or NO evaluation of statement accuracy in clinical trial records and related narratives, utilizing medical terminology proficiency and contextual comprehension to resolve ambiguities and fill information gaps, aligning with expert analysis.
+----------
+8->
+
+Determine a "YES" or "NO" answer to ascertain whether the validity of the statements within clinical trial report descriptions can be evaluated based on the provided information. This assessment necessitates the interpretation of medical jargon and contextual understanding from both the reports and the statements, with meticulous attention to resolving any ambiguities or information deficiencies.
+----------

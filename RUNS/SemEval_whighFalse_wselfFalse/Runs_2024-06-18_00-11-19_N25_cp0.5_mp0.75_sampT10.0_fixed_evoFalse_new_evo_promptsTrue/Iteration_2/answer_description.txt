@@ -1,0 +1,24 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the clinical trial report information.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement's validity based on the information presented in the clinical trial report descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->You MUST respond with either YES or NO to indicate whether it is possible to determine the statement's validity based on the Clinical Trial Report (CTR) information, with the statement being supported by the CTR data and not contradicting the provided descriptions.
+----------
+3->
+Evaluate Clinical Trial Reports (CTRs) to see if they agree with a specific statement, responding with "YES" for agreement or "NO" for disagreement.
+----------
+4->
+
+Perform an unequivocal evaluation of a claim originating from a clinical trial documentation. Render a conclusive verdict of either 'YES' or 'NO', grounded solely on the data presented within the document. Your proficiency in deciphering clinical trial outcomes is paramount to uphold the integrity and exactitude of your analysis. In your assessment, integrate all pertinent information from the initial instructions, incorporating necessary definitions and elucidations to enhance clarity, comprehensiveness, and informative value.
+----------
+5->
+Determine if clinical trial reports allow for an exact assessment of a statement's truthfulness, using only the report's data. Ensure clarity by resolving ambiguities and filling information gaps, aiding the reliability of clinical research evaluations.
+----------
+6->
+
+Evaluate the given clinical trial report to determine if you can confidently verify the statement's accuracy. Respond with either "YES" or "NO".
+----------
+7->
+
+Carefully analyze the clinical trial report data with utmost precision and certainty. Determine with a clear YES or NO if the statement in question aligns with the data provided. Your expertise in deciphering clinical trial outcomes is crucial for this task. Ensure your judgment is solely based on the report's content, and be prepared to clarify any medical jargon or contextual nuances for better understanding and application. Remember, your meticulous assessment contributes significantly to the field of medical research!
+----------

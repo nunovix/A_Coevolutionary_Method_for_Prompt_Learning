@@ -2858,7 +2858,8 @@ def evo_alg_2(task,
                 #print(f"sel4comb-->{sel4comb}")
 
                 # apply crossover with probability crossover_prob, else off spring is copy of parent
-                if random.random() <= crossover_prob:
+                # if the same prompt is selected twice, just copy one as well
+                if random.random() <= crossover_prob and sel4comb[0][j] != sel4comb[1][j]:
                     cross_prompt_index = {}
                     cross_prompt = {}
                     # wheter or not to randomly select mutation prompt from existing ones
@@ -2887,9 +2888,9 @@ def evo_alg_2(task,
                     # combine each subprompt randomly selected and add to the combined and total population
                     if new_evo_prompt_format == False:
                         combined = crossover_prompts(population['prompts_dict'][j][population['prompts'][sel4comb[0]][j]], 
-                                                    population['prompts_dict'][j][population['prompts'][sel4comb[1]][j]],
-                                                    evolutionary_prompts['combination_prompts'][cross_index], 
-                                                    model, tokenizer)
+                                                     population['prompts_dict'][j][population['prompts'][sel4comb[1]][j]],
+                                                     evolutionary_prompts['combination_prompts'][cross_index], 
+                                                     model, tokenizer)
                         hist = f"crossover between [{population['prompts'][sel4comb[0]][j]}] and [{population['prompts'][sel4comb[1]][j]}] using cross prompt {cross_index}"
                     else:
                         combined = new_crossover_prompts(population['prompts_dict'][j][population['prompts'][sel4comb[0]][j]], 
@@ -2898,7 +2899,7 @@ def evo_alg_2(task,
                                                         model, tokenizer)
                         hist = f"crossover between [{population['prompts'][sel4comb[0]][j]}] and [{population['prompts'][sel4comb[1]][j]}] using cross prompt {cross_prompt_index}"
                 else:
-                    if population['eval'][sel4comb[0]] > population['eval'][sel4comb[1]]:
+                    if population['eval'][sel4comb[0]] >= population['eval'][sel4comb[1]]:
                         combined = population['prompts_dict'][j][population['prompts'][sel4comb[0]][j]]
                         hist = f"copy of [{population['prompts'][sel4comb[0]][j]}]"
                     else:

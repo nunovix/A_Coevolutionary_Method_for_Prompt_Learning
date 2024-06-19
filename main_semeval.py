@@ -1,6 +1,6 @@
 import os
 # set available gpu's
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+os.environ["CUDA_VISIBLE_DEVICES"] = "4"
 
 import evo_functions as evo
 
@@ -9,9 +9,9 @@ best_prompt, best_score_iterations = evo.evo_alg_2(task = "SemEval",
                                                     quantize_model_4bits = True,
                                                     n_pop = 25,
                                                     n_top = 5,
-                                                    mutation_prob=0.75,
-                                                    crossover_prob=0.5,
-                                                    sampling_T = 10.0,
+                                                    mutation_prob=0.10,
+                                                    crossover_prob=0.10,
+                                                    sampling_T = 1.0,
                                                     patience = 30,
                                                     max_iter = 200,
                                                     data_size = 0, # number of examples where the prompts are evaluate 0 means all
@@ -22,7 +22,7 @@ best_prompt, best_score_iterations = evo.evo_alg_2(task = "SemEval",
                                                     do_test_eval = True,
                                                     new_evo_prompt_format=True
                                                     )
-
+"""
 best_prompt, best_score_iterations = evo.evo_alg_2(task = "SemEval", 
                                                     model_name = "microsoft/Phi-3-mini-128k-instruct",
                                                     quantize_model_4bits = True,
@@ -40,7 +40,7 @@ best_prompt, best_score_iterations = evo.evo_alg_2(task = "SemEval",
                                                     fixed_evo_prompts=False,
                                                     do_test_eval = True,
                                                     new_evo_prompt_format=True
-                                                    )
+                                                    )"""
 
 """best_prompt, best_score_iterations = evo.evo_alg_2(task = "SemEval", 
                                                     model_name = "microsoft/Phi-3-mini-128k-instruct",

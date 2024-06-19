@@ -54,6 +54,18 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
         data_expanded = extract_MEDIQASUM_data(retrieve_similar_examples = w_one_shot)
         trie = None
 
+    elif task_name == 'hyper_mutation':
+        prompts_path = 'INITIAL_PROMPTS/evolutionary_prompts/mutation'
+        # done with semeval data
+        data_expanded = extract_SemEval_data(extract_examples = w_one_shot)
+        trie = get_Marisa_Trie('SemEval', tokenizer)
+
+    elif task_name == 'hyper_crossover':
+        prompts_path = 'INITIAL_PROMPTS/evolutionary_prompts/combination'
+        # done with semeval data
+        data_expanded = extract_SemEval_data(extract_examples = w_one_shot)
+        trie = get_Marisa_Trie('SemEval', tokenizer)
+
     else:
         print(f"'{task_name}' is not a valid task name!")
         sys.exit()
@@ -65,6 +77,7 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
                                                        task_w_self_reasoning=w_self_reasoning,
                                                        task_w_highlight = w_highlight
                                                        )
+    print(f"initial_population_prompts NEW-->{initial_population_prompts}")
     
     # check if number of examples in each subpromtp is the same
     tam = []
@@ -158,9 +171,9 @@ def extract_lines_to_dict(folder_path, task,
     elif task == 'new_mutation':
         ordered_filenames = ['task_description', 'instruction_description', 'answer_description']
     elif task == 'hyper_mutation':
-        ordered_filenames = ['mutation_prompts']
+        ordered_filenames = ['task_description', 'instruction_description', 'answer_description']
     elif task == 'hyper_crossover':
-        ordered_filenames = ['combination_prompts']
+        ordered_filenames = ['task_description', 'instruction_description', 'answer_description']
     else:
         print(f"At extract_lines_to_dict: '{task}' is not a valid task name!")
         sys.exit()
@@ -1285,6 +1298,8 @@ def mutate_prompt(prompt, mutation_prompt, model, tokenizer):
     mutated = tokenizer.decode(new_tokens, skip_special_tokens=True)
     #print(f"MUTATE PROMPT)-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
 
+    mutated = mutated.lstrip()
+
     if mutated.startswith('"') and mutated.endswith('"'):
         # Remove the quotes
         return mutated[1:-1]
@@ -1292,7 +1307,7 @@ def mutate_prompt(prompt, mutation_prompt, model, tokenizer):
     return mutated
 
 def new_mutate_prompt(prompt, 
-                      mutation_prompt_dict, 
+                      mutation_prompt_dict, # just  a dict with the repective parts names
                       model, 
                       tokenizer):
 
@@ -1319,7 +1334,9 @@ def new_mutate_prompt(prompt,
 
     new_tokens = output[0, prompt_length:]
     mutated = tokenizer.decode(new_tokens, skip_special_tokens=True)
-    #print(f"NEW MUTATE PROMPT)-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+    print(f"NEW MUTATE PROMPT)-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+
+    mutated = mutated.lstrip()
 
     if mutated.startswith('"') and mutated.endswith('"'):
         # Remove the quotes
@@ -1361,6 +1378,8 @@ def crossover_prompts(prompt_1, prompt_2, combination_prompt, model, tokenizer):
     combined = tokenizer.decode(new_tokens, skip_special_tokens=True)
     #print(f"CROSSOVER PROMPT)-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
 
+    combined = combined.lstrip()
+
     if combined.startswith('"') and combined.endswith('"'):
         # Remove the quotes
         return combined[1:-1]
@@ -1396,7 +1415,9 @@ def new_crossover_prompts(prompt_1, prompt_2, combination_prompt_dict, model, to
 
     new_tokens = output[0, prompt_length:]
     combined = tokenizer.decode(new_tokens, skip_special_tokens=True)
-    #print(f"NEW CROSSOVER PROMPT)-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+    print(f"NEW CROSSOVER PROMPT)-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+
+    combined = combined.lstrip()
 
     if combined.startswith('"') and combined.endswith('"'):
         # Remove the quotes
@@ -1577,7 +1598,14 @@ def convert_preds_from_yesno_contractnli(preds):
 # function to evaluate prompt population
 # outputs a list with the scores for each prompt
 # n_samples is the no. of samples where the evaluation will be done
-def eval_pop(population, data_expanded, model, tokenizer, trie, n_samples, N=10, mutation_prob=0.8,# last 2 only for hyper
+def eval_pop(population, 
+             data_expanded, 
+             model, 
+             tokenizer, 
+             trie, 
+             n_samples, 
+             N=10, # FOR HYPERMUTATION ONLY (number of individuals generated using the evo prompt for evaluation)
+             mutation_prob=0.8, # FOR HYPERMUTATION ONLY (probability of mutation/ crossover for each subprompt of each individual)
              only_rouge = True, # for mediqasum 
              save_preds4semeval_test = False,
              folder = None,
@@ -1821,7 +1849,7 @@ def eval_pop(population, data_expanded, model, tokenizer, trie, n_samples, N=10,
     elif task == "hyper_mutation":
         for i in tqdm(range(n_pop), desc = f"Evaluating prompt population"):
 
-            # semeval prompts
+            # semeval prompts, always te same
             semeval_prompts = extract_lines_to_dict('INITIAL_PROMPTS/SemEval_initial_population_prompts', task='SemEval')
             task_desc = semeval_prompts['task_description'][0]
             ctr_desc = semeval_prompts['ctr_description'][0]
@@ -1829,8 +1857,6 @@ def eval_pop(population, data_expanded, model, tokenizer, trie, n_samples, N=10,
             ans_desc = semeval_prompts['answer_description'][0]
             prompt = [task_desc, ctr_desc, stat_desc, ans_desc]
 
-            #N = 6
-            #mutation_prob = 0.8
             # loop to perform N mutations at random to a random number of parts of the base prompt
             # that's always the same
             # the score is then the averaged value 
@@ -1839,13 +1865,24 @@ def eval_pop(population, data_expanded, model, tokenizer, trie, n_samples, N=10,
                 new_P = []
                 for p in prompt:
                     if random.random() <= mutation_prob:
-                        mutated = mutate_prompt(p, 
-                                    mutation_prompt = prompts['mutation_prompts'][population['prompts'][i]['mutation_prompts']],
-                                    model=model,
-                                    tokenizer=tokenizer)
+                        #old mutation way
+                        #mutated = mutate_prompt(p, 
+                                    #mutation_prompt = prompts['mutation_prompts'][population['prompts'][i]['mutation_prompts']],
+                                    #model=model,
+                                    #tokenizer=tokenizer)
+                        # new mutation way
+                        mutation_prompt_dict = {'task_description': prompts['task_description'][population['prompts'][i]['task_description']],
+                                                'instruction_description': prompts['instruction_description'][population['prompts'][i]['instruction_description']],
+                                                'answer_description': prompts['answer_description'][population['prompts'][i]['answer_description']]
+                                                }
+                        mutated = new_mutate_prompt(p,
+                                                    mutation_prompt_dict = mutation_prompt_dict,
+                                                    model=model,
+                                                    tokenizer=tokenizer)
                     else:
                         mutated = p
                     new_P.append(mutated)
+                print("new_P-->{new_P}")
                 labels, predictions = prompt_preds_semeval(data_expanded[:n_samples], 
                                                 new_P[0],
                                                 new_P[1],
@@ -1863,7 +1900,7 @@ def eval_pop(population, data_expanded, model, tokenizer, trie, n_samples, N=10,
     elif task == "hyper_crossover":
         for i in tqdm(range(n_pop), desc = f"Evaluating prompt population"):
 
-            # semeval prompts
+            # semeval prompts, always the same
             semeval_prompts = extract_lines_to_dict('INITIAL_PROMPTS/SemEval_initial_population_prompts', task='SemEval')
             task_desc = semeval_prompts['task_description'][0]
             ctr_desc = semeval_prompts['ctr_description'][0]
@@ -1887,14 +1924,23 @@ def eval_pop(population, data_expanded, model, tokenizer, trie, n_samples, N=10,
                 new_P = []
                 for p_1, p_2 in zip(prompt_1, prompt_2):
                     if random.random() <= mutation_prob:
-                        crosovered = crossover_prompts(p_1,
-                                                       p_2,
-                                                       combination_prompt=prompts['combination_prompts'][population['prompts'][i]['combination_prompts']],
-                                                       model=model,
-                                                       tokenizer=tokenizer)
-
+                        #crosovered = crossover_prompts(p_1,
+                                                       #p_2,
+                                                       #combination_prompt=prompts['combination_prompts'][population['prompts'][i]['combination_prompts']],
+                                                       #model=model,
+                                                       #tokenizer=tokenizer)
+                        crossover_prompt_dict = {'task_description': prompts['task_description'][population['prompts'][i]['task_description']],
+                                                'instruction_description': prompts['instruction_description'][population['prompts'][i]['instruction_description']],
+                                                'answer_description': prompts['answer_description'][population['prompts'][i]['answer_description']]
+                                                }
+                        crosovered = new_crossover_prompts(p_1, 
+                                                           p_2,
+                                                           combination_prompt_dict = crossover_prompt_dict,
+                                                           model=model,
+                                                           tokenizer=tokenizer)
                     else:
                         crosovered = p_1
+
                     new_P.append(crosovered)
                 labels, predictions = prompt_preds_semeval(data_expanded[:n_samples], 
                                                 new_P[0],

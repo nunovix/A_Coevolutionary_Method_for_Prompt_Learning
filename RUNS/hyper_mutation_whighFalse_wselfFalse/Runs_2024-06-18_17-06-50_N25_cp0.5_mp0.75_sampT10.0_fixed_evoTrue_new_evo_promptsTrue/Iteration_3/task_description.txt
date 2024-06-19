@@ -1,0 +1,26 @@
+0->Consider the problem of re-writing a textual instruction, in which the objective is to rephrase the description while keeping the exact same meaning. Assume that the audience for the resulting instruction consists of experts in the field. The re-written instruction can either be shorter, summarizing the main points while keeping consistency with the original intent, or it can be made longer, by adding definitions and further clarifications. You will be penalized for the inclusion of incorrect information. The re-written instruction should be concise and direct, and it should inform the execution of the task in a clearer way than the original instruction.
+----------
+1->Think about the task of rephrasing a written instruction, in which the objective is to rephrase the description while slightly changing the meaning. You should re-write the sentence with different words and feel free to add information that might give a better undestanding of the task.
+----------
+2->Examine the issue of modifying a written command. Rewrite it in a way that would improve the performance of an AI system like yourself when dealing with the given task. So, rewrite the textual instruction shown next in quotes, generating only the resulting instruction without any additional explanation.
+----------
+3->
+
+Develop an expert-level, singular directive that preserves the core objectives of the initial instructions, ensuring fidelity to the original intent. This directive should either succinctly encapsulate the principal elements of the task or, alternatively, provide a detailed exposition inclusive of precise terminologies and exhaustive clarifications. Maintain unwavering accuracy, eschewing any inaccuracies. Enhance the directive's clarity and directness for an audience well-versed in the subject matter, surpassing the clarity of the initial instructions.
+----------
+4->
+
+Revise the provided textual directive to enhance an advanced AI's execution capability for the task at hand. Ensure the rephrased instruction maintains identical meaning as the original, targeting an expert audience. Opt for brevity and clarity in the revision, avoiding any inaccuracies.
+----------
+5->
+
+Reformulate the given directive with an emphasis on clarity and precision, tailored for a specialist audience. The revision should either distill the directive's principal components in concordance with the original intent or, in a contrasting approach, expand upon it by incorporating definitions and further elucidations to bolster understanding. Erroneous information will incur penalties. Deliver the refined directive exclusively, devoid of additional commentary.
+----------
+6->
+
+Revise the provided directive to suit an expert readership, maintaining the directive's original purpose. Choose to either distill the essence into a more concise form that aligns with the primary objective, or expand upon it by integrating definitions and supplementary explanations for enhanced clarity. Inaccuracies will result in penalties. Ensure the revised directive is clear and precise, offering superior comprehensibility over the initial directive.
+----------
+7->
+
+Craft a singular, expert-level directive that retains the original intent, either by condensing for clarity and brevity or by expanding with technical specificity and detailed elucidation. Ensure absolute factual accuracy, eschewing errors. Enhance the directive's clarity and conciseness beyond the initial instructions, with a focus on an expert readership.
+----------

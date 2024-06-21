@@ -1,0 +1,18 @@
+0->Now provide just the resulting instruction without extra details. Don't forget to take the best parts from each of the original instructions.
+----------
+1->Produce just the resulting instruction now, omitting any extra explanation. Add new ideas to the new instruction you will be creating.
+----------
+2->Synthesize a comprehensive, expert-level directive that encapsulates the essence of the original task, ensuring precision and clarity in its articulation.
+----------
+3->Craft a revised, expert-level directive that encapsulates the original instruction's essence without deviation in meaning. Ensure the directive is succinct yet comprehensive, incorporating all pertinent details from the initial instruction, and refrain from introducing inaccuracies.
+----------
+4->Develop a succinct, expert-level revision of the given directives, preserving their core intent and message without alteration. Ensure the revision is both brief and exhaustive, encapsulating all critical components from the original text. Exclude any inaccuracies strictly. Augment clarity and comprehension for a specialist readership by incorporating relevant definitions and detailed explanations as required.
+----------
+5->Devise an expert-level, comprehensive directive that retains the fundamental intent of the original, ensuring brevity, inclusion of all critical elements, and absolute accuracy.
+----------
+6->Craft a concise yet comprehensive expert-level revision of the original directive, ensuring the preservation of its fundamental intent and unchanged meaning. The revision must encapsulate all pivotal aspects of the original directive and must strictly exclude any inaccuracies.
+----------
+7->Devise an expert-level revision of the initial directive, preserving its core intent without altering its meaning. The revised directive should be both succinct and exhaustive, integrating all critical elements from the original, and must strictly avoid any inaccuracies.
+----------
+8->Develop a succinct, expert-level directive that integrates the core principles of the initial instructions, maintaining their intended meanings without alteration. The directive must be brief, encompass all critical components from the original instructions, and strictly forbid any inaccuracies.
+----------

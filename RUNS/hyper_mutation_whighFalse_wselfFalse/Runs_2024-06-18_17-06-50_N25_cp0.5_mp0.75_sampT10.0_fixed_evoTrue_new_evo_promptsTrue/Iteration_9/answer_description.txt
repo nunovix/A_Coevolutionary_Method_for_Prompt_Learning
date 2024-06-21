@@ -1,0 +1,28 @@
+0->Now generate only the resulting instruction without any additional explanation.
+----------
+1->Only output the resulting instruction, without any additional context. Keep the same meaning as the original instruction.
+----------
+2->
+
+Produce the final output exclusively, devoid of supplementary context. Maintain the original instruction's intent and meaning.
+----------
+3->
+
+Craft the definitive output, excluding extraneous context, preserving the original instruction's intent and meaning.
+----------
+4->
+
+Generate the final output, stripped of any non-essential context, while preserving the original intent and meaning of the instructions.
+----------
+5->
+
+Craft the definitive output, excluding extraneous context, preserving the original instruction's intent and meaning.
+----------
+6->
+
+Formulate an expert-level, succinct directive that distills the quintessential elements of both initial instructions, ensuring fidelity to their original intent and meaning, devoid of extraneous context or elucidations.
+----------
+7->
+
+Devise a comprehensive, expert-level directive that encapsulates the pivotal aspects from the original instructions, ensuring factual precision, tailored for an audience well-versed in the subject matter, and enhancing clarity for exact execution by a sophisticated language model.
+----------

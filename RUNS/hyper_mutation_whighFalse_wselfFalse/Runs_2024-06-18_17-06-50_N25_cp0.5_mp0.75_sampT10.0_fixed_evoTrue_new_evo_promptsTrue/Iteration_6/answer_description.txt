@@ -1,0 +1,24 @@
+0->Now generate only the resulting instruction without any additional explanation.
+----------
+1->Only output the resulting instruction, without any additional context. Keep the same meaning as the original instruction.
+----------
+2->
+
+Devise a comprehensive, expert-level directive that encapsulates the core elements of the original instructions, ensuring clarity, precision, and fidelity to the original intent, devoid of inaccuracies, and crafted for an audience well-versed in the subject matter.
+----------
+3->
+
+Devise a comprehensive, expert-level directive that encapsulates the core elements from the original instructions, ensuring fidelity to the original meaning and enhancing clarity for precise execution by a sophisticated language model.
+----------
+4->
+
+Craft a detailed, expert-level revision of the quoted instruction, preserving its original purpose and meaning. The revision should be either a concise summary or an elaborated version with exact definitions and clarifications, strictly excluding any inaccuracies.
+----------
+5->
+
+Devise an expert-level directive that encapsulates the essential elements from the original instructions, ensuring factual accuracy, targeting a knowledgeable audience, and improving clarity for precise execution by an advanced language model.
+----------
+6->
+
+Formulate an expert-level directive that encapsulates the core components of the initial directive, ensuring clarity and precision in task execution, without deviating from the original intent or introducing inaccuracies.
+----------

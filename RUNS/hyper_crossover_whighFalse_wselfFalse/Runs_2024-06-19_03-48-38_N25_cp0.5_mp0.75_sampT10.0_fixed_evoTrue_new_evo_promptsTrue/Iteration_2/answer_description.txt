@@ -1,0 +1,18 @@
+0->Now provide just the resulting instruction without extra details. Don't forget to take the best parts from each of the original instructions.
+----------
+1->Only generate the resulting instruction now, without further explanation. Do no fotget to keep all the information from both the original instructions.
+----------
+2->Produce just the resulting instruction now, omitting any extra explanation. Add new ideas to the new instruction you will be creating.
+----------
+3->Produce just the resulting instruction now, omitting any extra explanation. Add new ideas to the new instruction you will be creating.
+----------
+4->Synthesize a comprehensive, expert-level directive that encapsulates the essence of the original task, ensuring precision and clarity in its articulation.
+----------
+5->Synthesize the core directives from both original instructions, tailored for an expert audience, ensuring clarity and conciseness in the execution of the task. Incorporate pertinent definitions and clarifications where necessary to enhance understanding without deviating from the original intent or introducing inaccuracies.
+----------
+6->Craft a revised, expert-level directive that encapsulates the original instruction's essence without altering its intended meaning. Ensure the rephrased instruction is either succinctly summarized or expanded with precise definitions and clarifications, avoiding any inaccuracies.
+----------
+7->Compile and distill the principal directives from the initial set of instructions, reformulated for a specialist readership. Prioritize clarity and succinctness in the task's execution. Integrate relevant definitions and elucidations to bolster comprehension, provided they do not stray from the original purpose or introduce errors.
+----------
+8->Craft a revised, expert-level directive that encapsulates the original instruction's essence without deviation in meaning. Ensure the directive is succinct yet comprehensive, incorporating all pertinent details from the initial instruction, and refrain from introducing inaccuracies.
+----------

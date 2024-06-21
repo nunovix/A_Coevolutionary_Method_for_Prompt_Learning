@@ -2859,7 +2859,7 @@ def evo_alg_2(task,
 
                 # apply crossover with probability crossover_prob, else off spring is copy of parent
                 # if the same prompt is selected twice, just copy one as well
-                if random.random() <= crossover_prob and sel4comb[0][j] != sel4comb[1][j]:
+                if random.random() <= crossover_prob and population['prompts_dict'][j][population['prompts'][sel4comb[0]][j]] != population['prompts_dict'][j][population['prompts'][sel4comb[1]][j]]:
                     cross_prompt_index = {}
                     cross_prompt = {}
                     # wheter or not to randomly select mutation prompt from existing ones

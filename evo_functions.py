@@ -29,6 +29,9 @@ from semeval_evaluation import main as semeval_test_evaluation
 # for batching
 from torch.utils.data import DataLoader, TensorDataset
 
+# backend to improve inference speed
+from unsloth import FastLanguageModel
+
 # function to select dataset and extract initial population of prompts 
 # and the prompts to perform mutation and crossover
 # also returns trie (to condition decoding for NLI tasks)
@@ -1225,26 +1228,17 @@ def load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct",
                 )
         # try to load with flahs attention if gpu allows it
         #print(f"load MODEL 5-")
-        try:
-            model = AutoModelForCausalLM.from_pretrained(
-                checkpoint, 
-                device_map="cuda", 
-                torch_dtype="auto", 
-                trust_remote_code=True, 
-                quantization_config = config,
-                attn_implementation="flash_attention_2",
-                #attn_implementation='eager',
-            )
-        except:
-            model = AutoModelForCausalLM.from_pretrained(
-                "microsoft/Phi-3-mini-4k-instruct", 
-                device_map="cuda", 
-                torch_dtype="auto", 
-                trust_remote_code=True, 
-                quantization_config = config,
-                #attn_implementation="flash_attention_2",
-                attn_implementation='eager',
-            )
+
+        model = AutoModelForCausalLM.from_pretrained(
+            checkpoint, 
+            device_map="cuda", 
+            torch_dtype="auto", 
+            trust_remote_code=True, 
+            quantization_config = config,
+            attn_implementation="flash_attention_2",
+            #attn_implementation='eager',
+        )
+
         #print(f"load MODEL 6-")
         tokenizer = AutoTokenizer.from_pretrained("microsoft/Phi-3-mini-4k-instruct")
         #print(f"load MODEL 7-")

@@ -43,17 +43,17 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
                                                 ):
 
     if task_name == 'SemEval':
-        prompts_path = 'INITIAL_PROMPTS/SemEval_initial_population_prompts'
+        prompts_path = 'INITIAL_PROMPTS/SemEval'
         data_expanded = extract_SemEval_data(extract_examples = w_one_shot)
         trie = get_Marisa_Trie(task_name, tokenizer)
 
     elif task_name == 'ContractNLI':
-        prompts_path = 'INITIAL_PROMPTS/ContractNLI_initial_population_prompts'
+        prompts_path = 'INITIAL_PROMPTS/ContractNLI'
         data_expanded = extract_ContractNLI_data()
         trie = get_Marisa_Trie(task_name, tokenizer)
 
     elif task_name == 'MEDIQASUM':
-        prompts_path = 'INITIAL_PROMPTS/MEDIQASUM_initial_population_prompts'
+        prompts_path = 'INITIAL_PROMPTS/MEDIQASUM'
         data_expanded = extract_MEDIQASUM_data(retrieve_similar_examples = w_one_shot)
         trie = None
 
@@ -80,7 +80,7 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
                                                        task_w_self_reasoning=w_self_reasoning,
                                                        task_w_highlight = w_highlight
                                                        )
-    print(f"initial_population_prompts NEW-->{initial_population_prompts}")
+    #print(f"initial_population_prompts NEW-->{initial_population_prompts}")
     
     # check if number of examples in each subpromtp is the same
     tam = []
@@ -578,7 +578,7 @@ def prompt_creation_semeval(data_expanded,
         sentence = f"""[INST]{sentence}{answer_description}[/INST]ANSWER:"""
 
         # conversion necessary for phi3 model
-        if 'Phi3' in str(model):
+        if 'Phi3' in model_name_global:
             sentence = convert_text_mistral_phi3(sentence)
 
         labels.append(sample["label"])
@@ -722,7 +722,7 @@ def prompt_preds_semeval(data_expanded,
         labels.append(sample["label"])
 
         # conversion necessary for phi3 model
-        if 'Phi3' in str(model):
+        if 'Phi3' in model_name_global:
             sentence = convert_text_mistral_phi3(sentence)
 
         prompt = tokenizer.encode(sentence, return_tensors="pt", return_attention_mask=True).to('cuda')
@@ -795,6 +795,7 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
     labels = []
     preds = []
     flag=0
+    token_len = []
     for sample in tqdm(data_expanded, desc='Self Reasoning'):
         primary = "\n".join(sample['primary_evidence'])
         text = f"""{task_description}\n\n{ctr_description}\n\nPrimary Trial: "{primary}"\n\n """
@@ -807,7 +808,7 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
         common_text = f"""[INST]{text}{statement_description}\n\n"{sample['statement']}"\n\n"""
         text_self = f"""{common_text}{self_A}[/INST]\n\nANSWER: """
 
-        #if 'Phi3' in str(model):
+        #if 'Phi3' in model_name_global:
             #common_text = convert_text_mistral_phi3(common_text)
 
         #cached = tokenizer.encode(common_text, return_tensors="pt")
@@ -815,12 +816,15 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
         #cached_outputs.past_key_values = [[y[:, :, :-1] for y in x] for x in cached_outputs.past_key_values]
 
         # conversion necessary for phi3 model
-        if 'Phi3' in str(model):
+        #print(f"STR MODEL--->{str(model)}")
+        if 'Phi3' in model_name_global:
+            
             text_self = convert_text_mistral_phi3(text_self)
 
         prompt = tokenizer.encode(text_self, return_tensors="pt", return_attention_mask=True).to('cuda')
 
         prompt_length = prompt[0].shape[0]
+        print(f"PROMPT_LEN REF-->{prompt_length}")
 
         with torch.inference_mode():
             output = model.generate(prompt, 
@@ -842,13 +846,15 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
         torch.cuda.empty_cache()
 
         # conversion necessary for phi3 model
-        if 'Phi3' in str(model):
+        if 'Phi3' in model_name_global:
             text_w_reflection = convert_text_mistral_phi3(text_w_reflection)
 
         prompt = tokenizer.encode(text_w_reflection, return_tensors="pt", return_attention_mask=True).to('cuda')
 
         #prompt = tokenizer.encode(text_w_reflection, return_tensors="pt").to('cuda')
         prompt_length = prompt[0].shape[0]
+        print(f"PROMPT_LEN-->{prompt_length}")
+        token_len.append(prompt_length)
         #print(f"prompt_length-->{prompt_length}")
 
         with torch.inference_mode():
@@ -877,6 +883,23 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
         torch.cuda.empty_cache()
         
         predictions, _ = convert_preds_from_yesno(preds)
+
+    token_len = np.array(token_len)
+    print(f"TOKEN LEN STATS - SELF REASONING")
+    # Calculate statistics
+    min_value = np.min(token_len)
+    max_value = np.max(token_len)
+    mean_value = np.mean(token_len)
+    percentile_25 = np.percentile(token_len, 25)
+    percentile_75 = np.percentile(token_len, 75)
+    # Print results
+    print(f"Minimum value: {min_value}")
+    print(f"Maximum value: {max_value}")
+    print(f"Mean value: {mean_value}")
+    print(f"25th percentile: {percentile_25}")
+    print(f"75th percentile: {percentile_75}")
+
+
 
     return labels, predictions
 
@@ -986,7 +1009,7 @@ def prompt_preds_contractnli_span(data_expanded, task_description, doc_descripti
                 cached_outputs.past_key_values = [[y[:, :, :-1] for y in x] for x in cached_outputs.past_key_values]
 
             # conversion necessary for phi3 model
-            if 'Phi3' in str(model):
+            if 'Phi3' in model_name_global:
                 prompt_text = convert_text_mistral_phi3(prompt_text)
 
             prompt = tokenizer.encode(prompt_text, return_tensors="pt", return_attention_mask=True).to('cuda')
@@ -1150,7 +1173,7 @@ def prompt_preds_mediqasum(data_expanded, task_description, example_description,
         labels.append(sample["note"])
 
         # conversion necessary for phi3 model
-        if 'Phi3' in str(model):
+        if 'Phi3' in model_name_global:
             sentence = convert_text_mistral_phi3(sentence)
             print(f"messages prompts-->{sentence}\n\n\n\n\n\n\n\n")
 
@@ -1214,11 +1237,29 @@ def load_quantized_model(model_name: str):
 def load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct",
                quantized = True):
     
-    #print(f"load MODEL 1-")
+
     torch.cuda.empty_cache()
-    #print(f"load MODEL 2-")
+    global model_name_global
+
+    if checkpoint == "unsloth/Phi-3-mini-4k-instruct":
+        print(f"CHECKPOINT-->{checkpoint}")
+        model_name_global = 'Phi3'
+        max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
+        dtype = None # None for auto detection. Float16 for Tesla T4, V100, Bfloat16 for Ampere+
+        load_in_4bit = True # Use 4bit quantization to reduce memory usage. Can be False.
+
+        model, tokenizer = FastLanguageModel.from_pretrained(
+            model_name = "unsloth/Phi-3-mini-4k-instruct", # Choose ANY! eg teknium/OpenHermes-2.5-Mistral-7B
+            #max_seq_length = max_seq_length,
+            dtype = dtype,
+            load_in_4bit = load_in_4bit,
+            # token = "hf_...", # use one if using gated models like meta-llama/Llama-2-7b-hf
+        )
+        FastLanguageModel.for_inference(model) # Enable native 2x faster inference
+        return model, tokenizer
+
     if 'Phi-3' in checkpoint:
-        #print(f"load MODEL 4-")
+        model_name_global = 'Phi3'
         
         config = BitsAndBytesConfig(
                 load_in_4bit=True,
@@ -1227,7 +1268,6 @@ def load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct",
                 bnb_4bit_compute_dtype=torch.bfloat16
                 )
         # try to load with flahs attention if gpu allows it
-        #print(f"load MODEL 5-")
 
         model = AutoModelForCausalLM.from_pretrained(
             checkpoint, 
@@ -1238,14 +1278,12 @@ def load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct",
             attn_implementation="flash_attention_2",
             #attn_implementation='eager',
         )
-
-        #print(f"load MODEL 6-")
-        tokenizer = AutoTokenizer.from_pretrained("microsoft/Phi-3-mini-4k-instruct")
-        #print(f"load MODEL 7-")
+        tokenizer = AutoTokenizer.from_pretrained(checkpoint)
         return model, tokenizer
 
     else:
         # loading
+        model_name_global = checkpoint
         tokenizer = AutoTokenizer.from_pretrained(checkpoint, device_map = 'cuda')
 
         if quantized == False:
@@ -1258,8 +1296,6 @@ def load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct",
             # Set pad_token_id to eos_token_id if pad_token is not defined
             tokenizer.pad_token = tokenizer.eos_token
             model.config.pad_token_id = tokenizer.convert_tokens_to_ids(tokenizer.pad_token)
-
-        #model = model.to('cuda')  # Move model to GPU
 
         return model, tokenizer
 
@@ -1274,7 +1310,7 @@ def mutate_prompt(prompt, mutation_prompt, model, tokenizer):
     #print(f"instruction-->{instruction}")
 
     # conversion necessary for phi3 model
-    if 'Phi3' in str(model):
+    if 'Phi3' in model_name_global:
         instruction = convert_text_mistral_phi3(instruction)
 
     prompt = tokenizer.encode(instruction, return_tensors="pt", return_attention_mask=True).to('cuda')
@@ -1312,7 +1348,7 @@ def new_mutate_prompt(prompt,
     #print(f"instruction-->{instruction}")
 
     # conversion necessary for phi3 model
-    if 'Phi3' in str(model):
+    if 'Phi3' in model_name_global:
         instruction = convert_text_mistral_phi3(instruction)
 
     prompt = tokenizer.encode(instruction, return_tensors="pt", return_attention_mask=True).to('cuda')
@@ -1353,7 +1389,7 @@ def crossover_prompts(prompt_1, prompt_2, combination_prompt, model, tokenizer):
     instruction = '[INST]' + combination_prompt + "\n\nINSTRUCTION 1: " + """ " """ + prompt_1 + """ " """ + "\n\nINSTRUCTION 2: " + """ " """ + prompt_2 + """ " """ + '[/INST]' + "\n\nNEW INSTRUCTION: "
 
     # conversion necessary for phi3 model
-    if 'Phi3' in str(model):
+    if 'Phi3' in model_name_global:
         instruction = convert_text_mistral_phi3(instruction)
 
     prompt = tokenizer.encode(instruction, return_tensors="pt", return_attention_mask=True).to('cuda')
@@ -1392,7 +1428,7 @@ def new_crossover_prompts(prompt_1, prompt_2, combination_prompt_dict, model, to
     instruction = '[INST]' + combination_prompt_dict['task_description'] + "\n" + combination_prompt_dict['instruction_description'] + "\n\nINSTRUCTION 1: " + """ " """ + prompt_1 + """ " """ + "\n\nINSTRUCTION 2: " + """ " """ + prompt_2 + """ " \n\n""" + combination_prompt_dict['answer_description'] +  '[/INST]' + "\n\nNEW INSTRUCTION: "
 
     # conversion necessary for phi3 model
-    if 'Phi3' in str(model):
+    if 'Phi3' in model_name_global:
         instruction = convert_text_mistral_phi3(instruction)
 
     prompt = tokenizer.encode(instruction, return_tensors="pt", return_attention_mask=True).to('cuda')
@@ -1844,7 +1880,7 @@ def eval_pop(population,
         for i in tqdm(range(n_pop), desc = f"Evaluating prompt population"):
 
             # semeval prompts, always te same
-            semeval_prompts = extract_lines_to_dict('INITIAL_PROMPTS/SemEval_initial_population_prompts', task='SemEval')
+            semeval_prompts = extract_lines_to_dict('INITIAL_PROMPTS/SemEval', task='SemEval')
             task_desc = semeval_prompts['task_description'][0]
             ctr_desc = semeval_prompts['ctr_description'][0]
             stat_desc = semeval_prompts['statement_description'][0]
@@ -1895,7 +1931,7 @@ def eval_pop(population,
         for i in tqdm(range(n_pop), desc = f"Evaluating prompt population"):
 
             # semeval prompts, always the same
-            semeval_prompts = extract_lines_to_dict('INITIAL_PROMPTS/SemEval_initial_population_prompts', task='SemEval')
+            semeval_prompts = extract_lines_to_dict('INITIAL_PROMPTS/SemEval', task='SemEval')
             task_desc = semeval_prompts['task_description'][0]
             ctr_desc = semeval_prompts['ctr_description'][0]
             stat_desc = semeval_prompts['statement_description'][0]

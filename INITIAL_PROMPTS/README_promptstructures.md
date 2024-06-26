@@ -87,11 +87,19 @@
 
 # Evolutionary Prompts
 
-Updating to new version where each will have 3 parts (folders evolutionary_prompts/combination and evolutionary_prompts/mutation)
+OLD VERSION in combination_prompts.txt and muatation_prompts.txt - had only one part instead of the 3
 
-Previous version in the mutation_prompts.txt and combination_prompts.txt
+NEW VERSION (with 3 parts)
+- task descriprion
+- instruction description
+- INSTRUCTION/INSTRUCTIONS
+- answer description
 
-Contains the prompts that perform the mutations and the crossovers of the promtps, in the basic setup only the first ones from each are used. The other 4 are used as a initial population for the hyperevolution of the mutation and crossover prompts. Each tries a different approach, from exploratory to exploitation ones.
+NEW VERSION in the folders INITIAL_PROMPTS/evolutionary_prompts/mutation and INITIAL_PROMPTS/evolutionary_prompts/combination
+
+It contains the prompts that perform the mutations and the crossovers of the promtps, in the basic setup only the first ones from each are used. The other 4 are used as a initial population for the hyperevolution of the mutation and crossover prompts. 
+
+Each subprompt is trying to explain the task of performing the mutation/crossover operation in different ways. Ranging from giving the LLM more freedom (exploratory) to asking for only a slight rewriting of the original instruction (exploit). Below are what each individual description is trying to acomplish. ie: the 2nd description in the task_description, instruction_description and answer_description is trying to ask the LLM for a more condensed version of the original instruction.
 
 ## Mutation Prompts
 
@@ -111,4 +119,4 @@ Contains the prompts that perform the mutations and the crossovers of the promtp
 
 # Hyper Evolutionary Prompts
 
-For now they perform the mutation and crossover of the mutation and crossover prompts in the hyper evolutionary setting.
+DEPRECATED - was being use to perform the mutation and crossover operations on the mutation/crossover prompts during the hyper mutation

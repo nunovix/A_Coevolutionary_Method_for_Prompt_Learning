@@ -1,6 +1,0 @@
-0->Indicate with either YES or NO whether the statement is valid based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
-----------
-1->Confirm the statement's validity of the presence or absence or presence in Clinical Trial Report (CTR) based on-point evaluation of required and excluded elements in the CTR.
-----------
-2->Assess the validity of a statement regarding the Clinlinical presence or presence in a Clinical Trial Report (CTR) by conducting a comprehensive evaluation of required and excluded elements within the CTR. Respond with YES oral YES or not supported by the CTR data, non-contradict the provided descriptions. Respond with a definitive YES or NO.
-----------

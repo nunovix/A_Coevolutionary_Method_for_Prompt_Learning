@@ -1,8 +1,0 @@
-0->Provide a YES or NO response indicating the statement's validity based on the information presented in the CTR descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
-----------
-1->Evaluate the statement's validity against CTRT descriptions using CTR descriptions, dissecting medical jargon and context, resolving ambiguities, and ambiguities. Render a conclusive YES or NO verdict based on the CTR descriptions' information.
-----------
-2->Determine the veracity of the given statement using the statement in the CTR descriptions, interpreting medical jargon and context from CTR information, and resolving ambiguities or information gaps.
-----------
-3->Evaluate the statement's validating against CTR descriptions, interpreting medical jarguments and context, resolving ambiguities,ies, and ambiguities. Render a conclusive YES or NO verdict based on the CTR descriptions' information.
-----------

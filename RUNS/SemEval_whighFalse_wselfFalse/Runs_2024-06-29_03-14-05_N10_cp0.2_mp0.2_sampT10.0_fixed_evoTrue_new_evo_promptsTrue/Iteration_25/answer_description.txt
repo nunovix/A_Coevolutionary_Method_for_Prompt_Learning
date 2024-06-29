@@ -1,0 +1,11 @@
+0->Assess the Clinical Trial Report (CTR) for claim validity of its claims, and provide a conclusive 'Affirmative' or 'Negative' verdict.
+----------
+1->Evaluate the Clinical Trial Report (CTR) for each claim veracity of claims, and deliver a definitive "Valid" or "Invalid" judgment for the claims.
+----------
+2->Assess the Clinical Trial Report (CTR) for the validity of claims, and provide a conclusive verdict of 'claims are valid" or "claims are invalid".
+
+
+response: Assess the Clinical Trial Report (CTR) for claim veracity, and provide a conclusive verdict of "valid" or "invalid" for each claim.
+----------
+3->Evaluate the Clinical Trial Report (CTR) for claim veracity, and respond with a definitive claims, YES or NO.
+----------

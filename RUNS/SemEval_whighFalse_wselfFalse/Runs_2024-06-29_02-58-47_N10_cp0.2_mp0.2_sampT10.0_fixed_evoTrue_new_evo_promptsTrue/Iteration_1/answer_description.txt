@@ -1,0 +1,8 @@
+0->Assessentially assess the statement's objective, invalidity or validate it, based on the Clinical Trial Report (CTR information, NO or YES or NO."
+----------
+1->Check the statement's validity based on the clinical trial report data, providing a YES or NO response.
+----------
+2->Determine the validity of a statement based on the Clinical Trial Report (CTR) by responding with either YES or NO. A positive response signifies that the statement aligns with the CTR data and does not contradict).
+----------
+3->Indicate with either YES or NO whether the statement is valid based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------

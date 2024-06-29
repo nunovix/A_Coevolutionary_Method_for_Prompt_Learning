@@ -1,0 +1,16 @@
+0->You MUST respond with either YES or NO to indicate if the statement is valid based on the Clinical Trial Report (CTR) information, having determined that the statement is supported by the CTR data, and that it doesn't contradict the provided descriptions.
+----------
+1->You MUST respond with either YES or NO to indicate if the statement is valid based on the Clinical Trial Report (CTR) information, having determined that the statement is supported by the CTR data, and that it doesn't contradict the provided descriptions.
+----------
+2->You MUST respond with either YES or NO to indicate if the statement is valid based on the Clinical Trial Report (CTR) information, having determined that the statement is supported by the CTR data, and that it doesn't contradict the provided descriptions.
+----------
+3->"Assess the validity of a statement using the Clinical Trial Report (CTR) data, ensuring YES if the statement aligns with the CTR data, and provided descriptions.
+----------
+4->You MUST respond with either YES or NO to indicate if the statement is valid based on the Clinical Trial Report (CTR) information, having determined that the statement is supported by the CTR data, and that it doesn't contradict the provided descriptions.
+----------
+5->Evaluate the statement's validity using the CTR data in the Clinical Trial Report. Confirm if the statement aligns with the CTR Report's or negate if contradictory contradicts or lacks support. Respond with "YES if YES, and NO otherwise validity.
+----------
+6->You MUST respond with either YES or NO to indicate if the statement is valid based on the Clinical Trial Report (CTR) information, having determined that the statement is supported by the CTR data, and that it doesn't contradict the provided descriptions.
+----------
+7->Assess the validity of a statement based on Clinical Trial Report (CTR) descriptions. Provide a YES if the statement aligns with the CTR descriptions and does not contradict the provided information, or a NO if it does not.
+----------

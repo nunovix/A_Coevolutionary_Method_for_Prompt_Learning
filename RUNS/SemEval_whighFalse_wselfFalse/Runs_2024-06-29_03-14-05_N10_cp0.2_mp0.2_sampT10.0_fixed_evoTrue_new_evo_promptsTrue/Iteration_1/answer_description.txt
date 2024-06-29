@@ -1,0 +1,10 @@
+0->Check the statement's validity based on the clinical trial report data, providing a YES or NO response.
+----------
+1->Provide a YES or NO response indicating the statement's validity based on the information presented in the CTR descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->Determine the validity of a given Clining from the Clinical Trial Report (CTR) by identifying a YES or NO response, by evaluating the presence or absence of specific mentions within the CTR descriptions.
+----------
+3->Determine the veracity of the statement using the CTR descriptions, interpreting medical jargon and contextually. Address ambiguities or information gaps in both the report and statement. Provide a YES or NO answer.
+----------
+4->Determine YES or not possible to affirm validity of statement validity based on the Clinical Trial Report (CTR) by critically evaluating the.
+----------

@@ -1,0 +1,8 @@
+0->Assess the Clinical Trial Report (CTR) for the accuracy.
+
+- [Response]: Assess the Clinical Trial Report (CTR) for claim veracity, and provide a definitive verdicting or negating the claims.
+----------
+1->Evaluate the Clinical Trial Report (CTR) for claim veracity, and deliver a definitive verdict of "YES or " or NONO on the accuracy of the claims presented.
+----------
+2->Assess the Clinical Trial Report (CTR) for the validity of claims, and provide a conclusive verdict of 'claims are verifiable" or "claims are not verifiable."
+----------

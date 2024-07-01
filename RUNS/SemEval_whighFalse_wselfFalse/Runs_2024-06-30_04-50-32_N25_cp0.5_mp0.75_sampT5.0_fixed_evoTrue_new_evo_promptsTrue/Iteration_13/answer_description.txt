@@ -1,0 +1,14 @@
+0->Indicate with either YES or NO whether the statement is valid based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+1->You MUST respond with either YES or NO to indicate if the statement is valid based on the Clinical Trial Report (CTR) information, having determined that the statement is supported by the CTR data, and that it doesn't contradict the provided descriptions.
+----------
+2->Verify the accuracy of a statement extracted from the Clinical Trial Report (CTR) by affirming with 'YES' if it is substantiated by the CTR data and congruent with the given descriptions, devoid of any discrepancies.
+----------
+3->Confirm the validity of a Clinical Trial Report (CTR) statement by responding 'YES' if it aligns with the CTR data and descriptions, ensuring no inconsistencies are present.
+----------
+4->Evaluate a statement's congruence with Clinical Trial Report (CTR) data by categorizing it as 'CONGRUENT' for alignment with CTR results and compliance with predefined criteria, or 'INCONGRUENT' for discrepancies. Confirm the statement's validity by responding 'YES' if it corresponds with CTR data, or 'NO' if it contradicts or deviates from the CTR descriptions.
+----------
+5->Evaluate a statement's congruence with the Clinical Trial Report (CTR) findings by classifying it as 'CONSISTENT' if it corresponds with the CTR results and meets the established benchmarks, or 'INCONSISTENT' if it diverges from these benchmarks. This evaluation necessitates a comprehensive grasp of the CTR's particulars and stipulations.
+----------
+6->Confirm the congruence of a statement derived from the Clinical Trial Report (CTR) data by responding 'YES' if it aligns with the CTR results and context, or 'NO' if it contradicts these criteria.
+----------

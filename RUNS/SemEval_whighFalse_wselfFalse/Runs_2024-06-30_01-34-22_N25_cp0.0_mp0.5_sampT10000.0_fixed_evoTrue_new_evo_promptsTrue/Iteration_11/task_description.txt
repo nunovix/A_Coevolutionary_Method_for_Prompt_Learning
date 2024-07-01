@@ -1,0 +1,4 @@
+0->Evaluate the semantic entailment between Clinical Trial Reports (CTRs) segments and clinical domain experts' assertions. CTRs document clinical trials' methodologies and outcomes, evaluating new treatments' efficacy and safety. Confirm entailment by verifying that experts' claims are supported by CTR data and align with provided descriptions.
+----------
+1->Evaluate the semantic entailment between Clinical Trial Reports (CTRs) segments and clinical domain experts' claims. CTRs document clinical trials' methodologies and outcomes, evaluating new treatments' efficacy and safety. Confirm entailment by verifying that the expert's claim is supported by CTR data and aligns with the provided descriptions.
+----------

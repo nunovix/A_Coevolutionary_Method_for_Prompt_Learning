@@ -1,0 +1,16 @@
+0->Indicate with either YES or NO whether the statement is valid based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+1->You MUST respond with either YES or NO to indicate if the statement is valid based on the Clinical Trial Report (CTR) information, having determined that the statement is supported by the CTR data, and that it doesn't contradict the provided descriptions.
+----------
+2->Verify the accuracy of a statement extracted from the Clinical Trial Report (CTR) by affirming with 'YES' if it is substantiated by the CTR data and congruent with the given descriptions, devoid of any discrepancies.
+----------
+3->Confirm the congruence of a statement with the Clinical Trial Report (CTR) data by responding 'YES' if it aligns with the CTR outcomes and complies with the stipulated descriptions, or 'NO' if it contradicts these criteria.
+----------
+4->Validate the alignment of a statement with the Clinical Trial Report (CTR) data by categorizing it as 'CONGRUENT' if it corresponds with the CTR findings and meets the predefined criteria, or 'INCONGRUENT' if it diverges from these standards. This evaluation hinges on the statement's congruence with the CTR data and compliance with the stipulated descriptions.
+----------
+5->Validate a statement's congruence with the Clinical Trial Report (CTR) data by categorizing it as 'CONGRUENT' if it corresponds with CTR results and fulfills predefined criteria, or 'INCONGRUENT' if it diverges. Furthermore, unequivocally confirm the statement's validity by responding 'YES' if it is consistent with CTR data, or 'NO' if it contradicts or deviates from the given descriptions.
+----------
+6->Confirm the validity of a statement derived from the Clinical Trial Report (CTR) data by responding with 'YES' if the statement aligns with the CTR findings and does not conflict with the given descriptions, or 'NO' if it does not meet these criteria.
+----------
+7->Validate the statement's congruence with the Clinical Trial Report (CTR) data by affirming 'YES' if it corresponds with the CTR findings and complies with the designated criteria, or 'NO' if it diverges from these parameters.
+----------

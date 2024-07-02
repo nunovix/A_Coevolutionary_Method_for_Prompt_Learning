@@ -2109,17 +2109,20 @@ def create_root_folder(task,
                        alg = 'alg_2',
                        crossover_prob = 'nd',
                        mutation_prob = 'nd',
+                       operation_prob= 'nd',
+                       mutation_operation_prob='nd',
                        N = 'nd',
                        sampling_T = 'nd',
                        task_w_self_reasoning = 'nd',
                        task_w_highlight = 'nd',
                        fixed_evo_prompts = 'nd',
                        new_evo_prompts = 'nd',
-
                        ):
     # Format: Runs_YYYY-MM-DD_HH-MM-SS
     if alg=='alg_2':
-        folder_name = datetime.now().strftime(f"RUNS/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
+        folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
+    elif alg=='alg_3':
+        folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_op{operation_prob}_mop{mutation_operation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
     elif 'hyper' in task:
         folder_name = datetime.now().strftime(f"RUNS/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_whigh{task_w_highlight}_wself{task_w_self_reasoning}")
     elif alg=='baseline':
@@ -2272,6 +2275,8 @@ def save_details_alg_2(root_folder, n_pop,
                  task,
                  model_name,
                  quantize_model_4bits,
+                 operation_prob=0.75,
+                 mutation_operation_prob=0.5,
                  mutation_prob=0.5,
                  crossover_prob=0.5,
                  alg='alg_2',
@@ -2317,6 +2322,9 @@ def save_details_alg_2(root_folder, n_pop,
         if alg == 'alg_2':
             file.write(f"Alg 2 - Random sample 2 individuals weighted on scores, apply crossover and mutation to the offspring, top {n_top} performers are always kept as elite population\n")
             file.write(f"With crossover probability {crossover_prob} and mutation probability {mutation_prob}\n")
+        if alg == 'alg_3':
+            file.write(f"ALG 3\n")
+            file.write(f"With operation probability {operation_prob} and mutation operation probability {mutation_operation_prob}\n")
         elif 'hyper' in alg:
             file.write(f"Mutation evaluation done with N={N}, with probability={eval_mutation_prob}\n")
             file.write(f"Evaluation task - > {evaluation_task}\n")
@@ -2896,7 +2904,7 @@ def evo_alg(task, initial_prompts, evolutionary_prompts,
 
 ##############################################################
 def evo_alg_2(task, 
-              model_name = "microsoft/Phi-3-mini-128k-instruct",
+              model_name = "microsoft/Phi-3-mini-4k-instruct",
               quantize_model_4bits = True,
               n_pop = 5, # initial population size and the number of elements kepts at each iteration
               n_top = 1, # how many of the top performing options are being kept in the population at the end of each iteration (rest are randomized)
@@ -3193,6 +3201,269 @@ def evo_alg_2(task,
         test_eval(task=task, RUN_folder_path = root_folder, model_name=model_name)
 
     return best_pop, best_score_iterations
+
+
+
+# varies from alg_2 by instead of performing crossovers followed by mutations performing either only a crossover or a mutation to 
+# generate new individuals
+##############################################################
+def evo_alg_3(task, 
+              model_name = "microsoft/Phi-3-mini-128k-instruct",
+              quantize_model_4bits = True,
+              n_pop = 5, # initial population size and the number of elements kepts at each iteration
+              n_top = 1, # how many of the top performing options are being kept in the population at the end of each iteration (rest are randomized)
+              operation_prob=0.75,
+              mutation_operation_prob=0.5, # 1-mutation_operation_prob will be the crossover operation probability, considering we only have 2 operations
+              sampling_T = 5.0,
+              patience = 20,
+              max_iter = 200,
+              save = True,
+              eval_data = 'dev', # dev or train
+              data_size = 0, # no. of samples where the prompts are evaluated, if =0 all are used
+              retrieve_examples = False, # use retrieval with embedding model instead of random for 1-shot learning
+              task_w_self_reasoning = False,
+              task_w_one_shot = False,
+              task_w_highlight = False,
+              do_test_eval = True,
+              fixed_evo_prompts = True,
+              new_evo_prompt_format = True,
+              ): 
+    
+    # load model and tokenizer
+    # wether or not to quantize model
+    model, tokenizer = load_model(checkpoint = model_name, quantized = quantize_model_4bits)
+    
+    data_expanded, initial_prompts, evolutionary_prompts, trie, new_mutation_prompts, new_cross_prompts = sel_task_dataset_initial_prompts_evo_prompts(task_name=task,
+                                                                                                                                                        tokenizer=tokenizer,
+                                                                                                                                                        w_one_shot=task_w_one_shot,
+                                                                                                                                                        w_self_reasoning=task_w_self_reasoning,
+                                                                                                                                                        w_highlight=task_w_highlight
+                                                                                                                                                        )
+    
+    tam = []
+    for key in initial_prompts:
+        tam.append(len(initial_prompts[key]))
+
+    # list to save best score at each iteration
+    best_score_iterations = []
+    start_time = datetime.now()
+    
+    # Call the function to create the folder and print its name
+    if save == True:
+        root_folder = create_root_folder(task,
+                                         alg = 'alg_3',
+                                         operation_prob=operation_prob,
+                                         mutation_operation_prob=operation_prob,
+                                         N=n_pop,
+                                         sampling_T=sampling_T,
+                                         task_w_self_reasoning = task_w_self_reasoning,
+                                         task_w_highlight = task_w_highlight,
+                                         fixed_evo_prompts = fixed_evo_prompts,
+                                         new_evo_prompts=new_evo_prompt_format
+                                         )
+        print(f"Root folder created: {root_folder}")
+
+    if data_size == 0 or data_size > len(data_expanded):
+        data_size = len(data_expanded)
+
+    population = create_population(task, 
+                                   initial_prompts, 
+                                   initial = True,
+                                   n_pop=n_pop,
+                                   data_expanded = data_expanded, 
+                                   model=model, tokenizer=tokenizer, trie=trie, n_samples = data_size,
+                                   task_w_one_shot = task_w_one_shot,
+                                   task_w_highlight = task_w_highlight,
+                                   task_w_self_reasoning = task_w_self_reasoning)
+
+    n_sub = len(population['prompts_dict'][list(population['prompts_dict'].keys())[0]])
+
+    patience_counter = 0
+    iter = 0
+    #print(f"initial_population eval-->{population['eval']}")
+    best_score_iterations.append(max(population['eval']))
+
+    # for the best individual baseline related change
+    best_pop, keep_list = pop_selection(population, 1, 1)
+    
+    if save == True:
+        save_population('initial', population, root_folder, keep_list=list(range(n_pop)))
+        print(f"Data saved for iteration {iter}.")
+    
+    while patience_counter < patience and iter < max_iter:
+
+        # score best, done here so it can work as the baseline as well, as the best individual is not neecessarily passed to the next generation
+        # Create a new dictionary with the same keys, but values are lists with only the selected indices
+        if max(population['eval']) >= best_pop['eval'][0]: 
+            best_pop, keep_list = pop_selection(population, 1, 1)
+
+        offspring_prompts = {key: [] for key in population['prompts_dict'].keys()}
+        offspring_history = {key: [] for key in population['prompts_dict'].keys()}
+
+        # select elite population, n_top elements
+        if n_top>0:
+            elite_population, _ = pop_selection(population, n_top, n_top)
+
+        for i in tqdm(range(n_sub), desc = f"iteration {iter} - generating off springs prompts"):
+            # iterate through the subprompts
+            for j in population['prompts_dict'].keys():
+
+                soft_max_scores = softmax(np.array(population['eval'])/sampling_T)
+                sel4comb = list(np.random.choice(range(len(population['eval'])), size=2, replace=False, p = soft_max_scores)) 
+
+                # apply an operation with a probability
+                if random.random() <= operation_prob:
+                    if random.random() <= 1 - mutation_operation_prob and population['prompts_dict'][j][population['prompts'][sel4comb[0]][j]] != population['prompts_dict'][j][population['prompts'][sel4comb[1]][j]]:
+                        cross_prompt_index = {}
+                        cross_prompt = {}
+                        # wheter or not to randomly select mutation prompt from existing ones
+                        if fixed_evo_prompts == False:
+
+                            if new_evo_prompt_format == False:
+                                cross_index = random.choice(list(range(len(evolutionary_prompts['combination_prompts']))))
+                            else:
+                                for key in new_cross_prompts:
+                                    #print(f"key-->{key}")
+                                    cross_prompt_index[key] = random.choice(list(range(len(new_cross_prompts[key]))))
+                                    cross_prompt[key] = new_cross_prompts[key][cross_prompt_index[key]]
+                            
+                        else:
+                            if new_evo_prompt_format == False:
+                                cross_index = 0
+                            else:
+                                for key in new_cross_prompts:
+                                    #print(f"key-->{key}")
+                                    cross_prompt_index[key] = 0
+                                    cross_prompt[key] = new_cross_prompts[key][cross_prompt_index[key]]
+
+                        # combine each subprompt randomly selected and add to the combined and total population
+                        if new_evo_prompt_format == False:
+                            new_prompt = crossover_prompts(population['prompts_dict'][j][population['prompts'][sel4comb[0]][j]], 
+                                                        population['prompts_dict'][j][population['prompts'][sel4comb[1]][j]],
+                                                        evolutionary_prompts['combination_prompts'][cross_index], 
+                                                        model, tokenizer)
+                            hist = f"crossover between [{population['prompts'][sel4comb[0]][j]}] and [{population['prompts'][sel4comb[1]][j]}] using cross prompt {cross_index}"
+                        else:
+                            new_prompt = new_crossover_prompts(population['prompts_dict'][j][population['prompts'][sel4comb[0]][j]], 
+                                                            population['prompts_dict'][j][population['prompts'][sel4comb[1]][j]],
+                                                            cross_prompt, 
+                                                            model, tokenizer)
+                            hist = f"crossover between [{population['prompts'][sel4comb[0]][j]}] and [{population['prompts'][sel4comb[1]][j]}] using cross prompt {cross_prompt_index}"
+
+                    else: # apply mutation with prob mutation_operation_prob
+                        mutation_prompt_index = {}
+                        mutation_prompt = {}
+
+                        # wheter or not to randomly select mutation prompt from existing ones
+                        if fixed_evo_prompts == False:
+                            if new_evo_prompt_format == False:
+                                mut_index = random.choice(list(range(len(evolutionary_prompts['mutation_prompts']))))
+                            else:
+                                for key in new_mutation_prompts:
+                                    #print(f"key-->{key}")
+                                    mutation_prompt_index[key] = random.choice(list(range(len(new_mutation_prompts[key]))))
+                                    mutation_prompt[key] = new_mutation_prompts[key][mutation_prompt_index[key]]
+
+                        else:
+                            if new_evo_prompt_format == False:
+                                mut_index = 0
+                            else:
+                                for key in new_mutation_prompts:
+                                    mutation_prompt_index[key] = 0
+                                    mutation_prompt[key] = new_mutation_prompts[key][mutation_prompt_index[key]]
+
+                        if new_evo_prompt_format == False:
+                            new_prompt = mutate_prompt(population['prompts_dict'][j][population['prompts'][sel4comb[0]][j]], 
+                                                    evolutionary_prompts['mutation_prompts'][mut_index], 
+                                                    model, tokenizer) 
+                            hist=f"mutation using mut prompt {mut_index}"
+                        else:
+                            new_prompt = new_mutate_prompt(population['prompts_dict'][j][population['prompts'][sel4comb[0]][j]],
+                                                        mutation_prompt,
+                                                        model, tokenizer)
+                            hist=f"mutation using mut prompt {mutation_prompt_index}"
+
+                else: # nothing happens to the given subprompt, it is just a copy of the first chosen one. with prob 1-operation_prob
+                    new_prompt = population['prompts_dict'][j][population['prompts'][sel4comb[0]][j]]
+                    hist = f"copy of [{population['prompts'][sel4comb[0]][j]}]"
+
+                # adding subprompt and history, same for all cases
+                hist+=f" from iteration {iter}"
+                offspring_prompts[j].append(new_prompt)
+                offspring_history[j].append(hist)
+
+        # after all the new prompts are generated create and evaluate new individuals
+        offspring_population = create_population(task, 
+                                                 offspring_prompts, 
+                                                 initial = False,
+                                                 n_pop = n_pop-n_top,
+                                                 data_expanded = data_expanded, 
+                                                 model=model, tokenizer=tokenizer, trie=trie, n_samples = data_size,
+                                                 history = offspring_history, 
+                                                 task_w_one_shot = task_w_one_shot,
+                                                 task_w_highlight = task_w_highlight,
+                                                 task_w_self_reasoning = task_w_self_reasoning,
+                                                 )
+
+        if n_top == 0:
+            population = deepcopy(offspring_population)
+        else:
+            population = combine_populations(elite_population, offspring_population)
+
+        population = remove_duplicates_and_remap(population)
+
+        if max(population['eval']) > best_pop['eval'][0]:
+            patience_counter = 0
+        # difference to the if is that there was no overall improvment so patience counter increases
+        else:
+            patience_counter += 1
+
+        sorted_population = sort_pop(population)
+        print(f"sorted evaluation at iteration {iter + 1} (all elements)-->{sorted_population['eval']}")
+
+
+        # Call the function
+        if save == True:
+            #print(f"sorted_population['prompts']-->{sorted_population['prompts']}")
+            save_population(iter+1, sorted_population, root_folder, list(range(n_pop)))
+            best_score_iterations.append(max(sorted_population['eval']))
+        # increase iter counter
+        iter += 1
+
+    # Create a new dictionary with the same keys, but values are lists with only the selected indices
+    # best_pop, keep_list = pop_selection(sorted_population, 1, 1) # DEPRECATED
+
+    if save == True:
+            save_population('best', best_pop, root_folder, [0])
+            print(f"Data saved for iteration best.")
+            end_time = datetime.now()
+            save_details_alg_2(root_folder, n_pop, 
+                            n_top, # no. of top elements being kept
+                            start_time, 
+                            end_time,
+                            patience,
+                            max_iter,
+                            iter,
+                            best_score_iterations,
+                            eval_data,
+                            data_size,
+                            task,
+                            model_name,
+                            quantize_model_4bits,
+                            operation_prob=operation_prob,
+                            mutation_operation_prob=mutation_operation_prob,
+                            retrieve_examples=retrieve_examples,
+                            alg='alg_3',
+                            )
+            
+            create_plots_from_RUNS_folder(root_folder)
+
+    if do_test_eval == True:
+        print(f"test set evaluation")
+        test_eval(task=task, RUN_folder_path = root_folder, model_name=model_name)
+
+    return best_pop, best_score_iterations
+
 
 
 ##############################################################
@@ -3681,7 +3952,7 @@ def plot_and_save_scores(all_scores, max_scores, directory_path, display_only_to
 def create_plots_from_RUNS_folder(directory_path):
     if "SemEval" in directory_path or "hyper" in directory_path:
         ymin = 0.50
-        ymax = 0.75
+        ymax = 0.80
         score = 'F1-Score'
     elif 'CSQA' in directory_path:
         ymin = 0.50

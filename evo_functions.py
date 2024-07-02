@@ -1377,6 +1377,7 @@ def load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct",
             #attn_implementation='eager',
         )
         tokenizer = AutoTokenizer.from_pretrained(checkpoint)
+        print(f"MODELO CORETO")
         return model, tokenizer
 
     else:
@@ -1583,11 +1584,13 @@ def get_Marisa_Trie(task, tokenizer):
     
     encoded_possibilities = []
     for pos in possibilities:
-        encoded_possibilities.append(tokenizer.encode(pos) + [tokenizer.eos_token_id])
+        encoded_possibilities.append([tokenizer.bos_token_id] + tokenizer.encode(pos) + [tokenizer.eos_token_id])
 
     class MyMarisaTrie(MarisaTrie):
         def __init__(self, data): super().__init__(data)
         def get(self, data, length_to_ignore): return super().get([tokenizer.bos_token_id] + data[length_to_ignore:])
+    print(f"tokenizer.bos_token_id-->{tokenizer.bos_token_id}")
+    print(f"ENCODED POSSIBILITIES-->{encoded_possibilities}")
     trie = MyMarisaTrie(encoded_possibilities)
 
     return trie

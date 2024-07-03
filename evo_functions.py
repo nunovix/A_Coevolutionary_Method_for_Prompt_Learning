@@ -3329,9 +3329,9 @@ def evo_alg_3(task,
             for j in population['prompts_dict'].keys():
 
                 #soft_max_scores = softmax(np.array(population['eval'])/sampling_T)
-                print(f"population['eval']-->{population['eval']}")
+                #print(f"population['eval']-->{population['eval']}")
                 soft_max_scores = softmax_samp_T(population['eval'], sampling_T)
-                print(f"soft_max_scores-->{soft_max_scores}")
+                #print(f"soft_max_scores-->{soft_max_scores}")
                 sel4comb = list(np.random.choice(range(len(population['eval'])), size=2, replace=False, p = soft_max_scores)) 
 
                 # apply an operation with a probability

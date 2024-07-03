@@ -115,7 +115,7 @@ class MarisaTrie(object):
         self.cache_fist_branch = cache_fist_branch
         if self.cache_fist_branch:
             self.zero_iter = list({sequence[0] for sequence in sequences})
-            print(f"len(self.zero_iter)-->{len(self.zero_iter)}")
+            #print(f"len(self.zero_iter)-->{len(self.zero_iter)}")
             assert len(self.zero_iter) == 1
             self.first_iter = list({sequence[1] for sequence in sequences})
 

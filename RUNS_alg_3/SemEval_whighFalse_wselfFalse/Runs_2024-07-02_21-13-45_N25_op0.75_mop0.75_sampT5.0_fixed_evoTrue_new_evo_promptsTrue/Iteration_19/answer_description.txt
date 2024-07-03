@@ -1,0 +1,18 @@
+0->Evaluate the statement's validity based on the Clinical Trial Report (CTR) descriptions, providing a YES or NO response if it aligns with the provided information.
+----------
+1->Verify the accuracy of the given statement using the data from the clinical trial report, and respond with 'YES' if the statement is correct or 'NO' if it is not.
+----------
+2->Evaluate the given statement's accuracy against the data in the Clinical Trial Report (CTR) and respond with 'ACCURATE' or 'INACCURATE'. 
+----------
+3->Cross-reference the provided assertion with the Clinical Trial Report (CTR) documentation. Respond with 'ACCURATE' or 'INACCURATE' if the assertion aligns with the data, or 'DISCONGRUENT' if it diverges.
+----------
+4->Confirm the validity of the provided assertion by cross-referencing with the clinical trial documentation, and reply with 'CONFIRMED' if the assertion aligns with the data or 'INVALID' if it does not.
+----------
+5->Cross-examine the given statement against the Clinical Trial Report (CTR) documentation. Indicate 'CONSISTENT' if the statement is corroborated by the data, or 'CONTRADICTORY' if it is at odds with the findings.
+----------
+6->Evaluate the provided assertion in relation to the Clinical Trial Report (CTR) details. Affirm 'CONSISTENT' if the assertion aligns with the report's conclusions, or 'MISALIGNED' if it diverges. Should the assertion conflict with the report, declare 'CONTRADICTORY'.
+----------
+7->Cross-examine the given claim against the Clinical Trial Report (CTR) data. Provide 'CONFIRMED' if the claim is substantiated, 'INVALID' if contradicted, or 'ACCURATE' or 'INACCURATE' reflecting the claim's fidelity to the CTR findings.
+----------
+8->Cross-examine the given statement against the contents of the Clinical Trial Report (CTR). Provide a verdict of 'AGREE', 'DISAGREE', 'EXACT', or 'MISMATCH' if the statement corresponds with the report's findings, or 'MISALIGNED' if it contradicts.
+----------

@@ -1,0 +1,20 @@
+Task: SemEval
+Start time: 2024-07-02 21:13:45.973420
+End time: 2024-07-03 01:33:22.195797
+Total elapsed time: 4:19:36.222377
+No. of iterations: 22
+Average time per iteration: 0:11:48.010108
+
+Initial population size (size of suprompts pop): 25
+How many of the top performers are being kept(elite): 5
+Max no. of iterations allowed: 200
+Patience: 10
+Evaluation done on: dev set
+With 200 examples
+
+Name of the model used: microsoft/Phi-3-mini-4k-instruct 
+4 bit quantization: True 
+Now the individuals are not bonded, meaning that new subprompts are created and randomly combined 
+Retrieving examples-->False 
+ALG 3
+With operation probability 0.75 and mutation operation probability 0.5

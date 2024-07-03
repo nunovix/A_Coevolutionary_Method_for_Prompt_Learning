@@ -1589,8 +1589,8 @@ def get_Marisa_Trie(task, tokenizer):
     class MyMarisaTrie(MarisaTrie):
         def __init__(self, data): super().__init__(data)
         def get(self, data, length_to_ignore): return super().get([tokenizer.bos_token_id] + data[length_to_ignore:])
-    print(f"tokenizer.bos_token_id-->{tokenizer.bos_token_id}")
-    print(f"ENCODED POSSIBILITIES-->{encoded_possibilities}")
+    #print(f"tokenizer.bos_token_id-->{tokenizer.bos_token_id}")
+    #print(f"ENCODED POSSIBILITIES-->{encoded_possibilities}")
     trie = MyMarisaTrie(encoded_possibilities)
 
     return trie
@@ -2707,6 +2707,22 @@ def min_max(scores, eps=0.05):
 # for sampling with softmax
 def softmax(x): return np.exp(x) / np.sum(np.exp(x), axis=0)
 
+# for sampling with softmax and a given sampling Temperature, if none is provided a equal probability will be given to all elements
+def softmax_samp_T(x, sampling_T = 5.0):
+
+    if sampling_T == None or sampling_T == 0:
+        return [1/len(x)] * len(x)
+
+    x = np.array(x)
+    # if values in decimal form convert to percentage so that sampling T works as desired
+    if max(x) < 1:
+        x = 100 * x
+
+    # apply sampling T
+    x = x/sampling_T
+
+    return np.exp(x) / np.sum(np.exp(x), axis=0)
+
 
 # !!!!!!! DEPRECATED since you updated the representation of population['prompt'] from a list of list to a lsit of dictionaries
 # function to run the evolutionary alg, with a initial population of prompts
@@ -3044,7 +3060,8 @@ def evo_alg_2(task,
             # iterate through the subprompts
             for j in population['prompts_dict'].keys():
 
-                soft_max_scores = softmax(np.array(population['eval'])/sampling_T)
+                #soft_max_scores = softmax(np.array(population['eval'])/sampling_T)
+                soft_max_scores = softmax_samp_T(population['eval'], sampling_T)
                 sel4comb = list(np.random.choice(range(len(population['eval'])), size=2, replace=False, p = soft_max_scores)) 
 
                 # apply crossover with probability crossover_prob, else off spring is copy of parent
@@ -3210,7 +3227,7 @@ def evo_alg_2(task,
 # varies from alg_2 by instead of performing crossovers followed by mutations performing either only a crossover or a mutation to 
 # generate new individuals
 ##############################################################
-def evo_alg_3(task, 
+def evo_alg_3(task,
               model_name = "microsoft/Phi-3-mini-128k-instruct",
               quantize_model_4bits = True,
               n_pop = 5, # initial population size and the number of elements kepts at each iteration
@@ -3256,7 +3273,7 @@ def evo_alg_3(task,
         root_folder = create_root_folder(task,
                                          alg = 'alg_3',
                                          operation_prob=operation_prob,
-                                         mutation_operation_prob=operation_prob,
+                                         mutation_operation_prob=mutation_operation_prob,
                                          N=n_pop,
                                          sampling_T=sampling_T,
                                          task_w_self_reasoning = task_w_self_reasoning,
@@ -3311,7 +3328,10 @@ def evo_alg_3(task,
             # iterate through the subprompts
             for j in population['prompts_dict'].keys():
 
-                soft_max_scores = softmax(np.array(population['eval'])/sampling_T)
+                #soft_max_scores = softmax(np.array(population['eval'])/sampling_T)
+                print(f"population['eval']-->{population['eval']}")
+                soft_max_scores = softmax_samp_T(population['eval'], sampling_T)
+                print(f"soft_max_scores-->{soft_max_scores}")
                 sel4comb = list(np.random.choice(range(len(population['eval'])), size=2, replace=False, p = soft_max_scores)) 
 
                 # apply an operation with a probability

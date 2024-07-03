@@ -1,34 +1,27 @@
-import os
-# set available gpu's
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+import numpy as np
 
-from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer
-from trie import MarisaTrie
+# for sampling with softmax and a given sampling Temperature, if none is provided a equal probability will be given to all elements
+def softmax_samp_T(x, sampling_T = 5.0):
 
-model = AutoModelForCausalLM.from_pretrained("microsoft/Phi-3-mini-4k-instruct")
-tokenizer = AutoTokenizer.from_pretrained("microsoft/Phi-3-mini-4k-instruct")
+    if sampling_T == None or sampling_T == 0:
+        return [1/len(x)] * len(x)
 
-class MyMarisaTrie(MarisaTrie):
-    def __init__(self, data): super().__init__(data)
-    def get(self, data, length_to_ignore): return super().get([tokenizer.bos_token_id] + data[length_to_ignore:])
+    x = np.array(x)
+    # if values in decimal form convert to percentage so that sampling T works as desired
+    if max(x) < 1:
+        x = 100 * x
 
-trie = MyMarisaTrie([[tokenizer.bos_token_id] + tokenizer.encode("Yes.") + [tokenizer.eos_token_id],
-                     [tokenizer.bos_token_id] + tokenizer.encode("Maybe.") + [tokenizer.eos_token_id],
-                     [tokenizer.bos_token_id] + tokenizer.encode("No.") + [tokenizer.eos_token_id]])
+    # apply sampling T
+    x = x/sampling_T
 
-prompt = tokenizer.encode("<|system|>\nYou are a helpful assistant.<|end|>\n<|user|>\nQuestion?<|end|>\n<|assistant|>\n ", return_tensors="pt")
-prompt_length = prompt[0].shape[0]
+    return np.exp(x) / np.sum(np.exp(x), axis=0)
 
-print("Constrained output...")
-output = model.generate(prompt, pad_token_id=tokenizer.eos_token_id, max_length=20, prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
-print(tokenizer.decode(output[0]))
 
-print("Unconstrained output...")
-output = model.generate(prompt, pad_token_id=tokenizer.eos_token_id, max_length=20)
-print(tokenizer.decode(output[0]))
-
-print("Using cached results...")
-cached_outputs = model(prompt, return_dict=True,)
-cached_outputs.past_key_values = [[y[:, :, :-1] for y in x] for x in cached_outputs.past_key_values]
-output = model.generate(prompt, past_key_values=cached_outputs.past_key_values, pad_token_id=tokenizer.eos_token_id, max_new_tokens=15, use_cache=True,)
-print(tokenizer.decode(output[0]))
+a = [0.72, 0.58, 0.5, 0.68, 0.65]
+b = [72, 58, 50, 68, 65]
+print(f"a-->{a}")
+print(f"softmax_samp_T(a, 1.0)-->{softmax_samp_T(a, 1.0)}")
+print(f"a-->{a}")
+print(f"softmax_samp_T(a, 5.0)-->{softmax_samp_T(a, 5.0)}")
+print(f"a-->{a}")
+print(f"softmax_samp_T(a, 10.0)-->{softmax_samp_T(a, 10.0)}")

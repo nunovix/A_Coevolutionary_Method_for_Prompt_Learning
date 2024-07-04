@@ -1,0 +1,8 @@
+0->Assess the CTR descriptions for medical terminology accuracy and context relevance. Respond with 'YES' if the statement aligns with the information, or 'NO' if it does not, considering any uncertainties or informational deficiencies.
+----------
+1->Evaluate the CTR descriptions for medical terminology accuracy and context relevance. Respond with 'YES' if the statement aligns with the information, or 'NO' if it does not, considering any uncertainties or informational deficiencies.
+----------
+2->Assess the Click-Through Rate (CTR) descriptions for their precision in medical terminology and pertinence to the subject matter. Provide a 'YES' if the description is accurate and contextually appropriate, or 'NO' if there are discrepancies or lacking details.
+----------
+3->Assess the accuracy and contextual relevance of medical terminology used in Click-Through Rate (CTR) descriptions. Respond with 'YES' for precise and appropriate usage, or 'NO' for inaccuracies or lack of detail.
+----------

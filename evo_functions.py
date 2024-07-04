@@ -109,7 +109,7 @@ def print_memory_stats():
 
 # function to convert string to be tokenized from the format expected by the mistral model to the 
 # format expected by the phi 3 model
-def convert_text_mistral_phi3(input_string):
+def convert_text_mistral_phi3(input_string, tok):
     # Check if both start and end markers are present
     start_index = input_string.find('[INST]')
     end_index = input_string.find('[/INST]')
@@ -123,9 +123,12 @@ def convert_text_mistral_phi3(input_string):
         content = input_string[start_index + 6:end_index].strip()
     if start_index != -1 and end_index == -1:
         content = input_string[start_index + 6:].strip()
+
+    # finding the task description part to be moved to the system part of the input
+    system_part_index = content.find('\n')
     
     # Create the message dictionary
-    phi_format = f"<|user|>\n{content}<|end|>\n<|assistant|>{input_string[end_index+7:]}"
+    phi_format = f"<|system|>\n{content[:system_part_index]}<|end|>\n<|user|>\n{content[system_part_index+2:]}<|end|>\n<|assistant|>{input_string[end_index+7:]}"
     message = [{"role": "user", "content": content},
                 {"role": "assistant", "content":  input_string[end_index+7:]},]
     
@@ -135,7 +138,6 @@ def convert_text_mistral_phi3(input_string):
     #print(f"type(message)-->{type(message)}")
     
     return phi_format
-
 # extract txt files in folder_path to dict with all the subprompts for task, ctr, statement and answer description
 def extract_lines_to_dict(folder_path, task, 
                           task_w_self_reasoning=False,
@@ -1441,7 +1443,7 @@ def new_mutate_prompt(prompt,
                       mutation_prompt_dict, # just  a dict with the repective parts names
                       model, 
                       tokenizer):
-    print(f"NEW MUTATE")
+    print(f"NEW MUTATE BOS")
 
     # case with empty string in self reflection prompts
     if prompt == '' or prompt == ' ':
@@ -1471,7 +1473,7 @@ def new_mutate_prompt(prompt,
 
     new_tokens = output[0, prompt_length:]
     mutated = tokenizer.decode(new_tokens, skip_special_tokens=True)
-    #print(f"NEW MUTATE PROMPT)-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+    print(f"NEW MUTATE PROMPT)-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
 
     mutated = mutated.lstrip()
 
@@ -1585,6 +1587,7 @@ def get_Marisa_Trie(task, tokenizer):
     encoded_possibilities = []
     for pos in possibilities:
         encoded_possibilities.append([tokenizer.bos_token_id] + tokenizer.encode(pos) + [tokenizer.eos_token_id])
+        #encoded_possibilities.append([tokenizer.bos_token_id] + tokenizer.encode(pos))
 
     class MyMarisaTrie(MarisaTrie):
         def __init__(self, data): super().__init__(data)

@@ -1,27 +1,35 @@
-import numpy as np
+import torch 
+from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline 
 
-# for sampling with softmax and a given sampling Temperature, if none is provided a equal probability will be given to all elements
-def softmax_samp_T(x, sampling_T = 5.0):
+torch.random.manual_seed(0) 
+model = AutoModelForCausalLM.from_pretrained( 
+    "microsoft/Phi-3-mini-128k-instruct",  
+    device_map="cuda",  
+    torch_dtype="auto",  
+    trust_remote_code=True,  
+) 
 
-    if sampling_T == None or sampling_T == 0:
-        return [1/len(x)] * len(x)
+tokenizer = AutoTokenizer.from_pretrained("microsoft/Phi-3-mini-4k-instruct") 
 
-    x = np.array(x)
-    # if values in decimal form convert to percentage so that sampling T works as desired
-    if max(x) < 1:
-        x = 100 * x
+messages = [ 
+    {"role": "system", "content": "You are a helpful AI assistant."}, 
+    {"role": "user", "content": "Can you provide ways to eat combinations of bananas and dragonfruits?"}, 
+    {"role": "assistant", "content": "Sure! Here are some ways to eat bananas and dragonfruits together: 1. Banana and dragonfruit smoothie: Blend bananas and dragonfruits together with some milk and honey. 2. Banana and dragonfruit salad: Mix sliced bananas and dragonfruits together with some lemon juice and honey."}, 
+    {"role": "user", "content": "What about solving an 2x + 3 = 7 equation?"}, 
+] 
 
-    # apply sampling T
-    x = x/sampling_T
+pipe = pipeline( 
+    "text-generation", 
+    model=model, 
+    tokenizer=tokenizer, 
+) 
 
-    return np.exp(x) / np.sum(np.exp(x), axis=0)
+generation_args = { 
+    "max_new_tokens": 500, 
+    "return_full_text": False, 
+    "temperature": 0.0, 
+    "do_sample": False, 
+}
 
-
-a = [0.72, 0.58, 0.5, 0.68, 0.65]
-b = [72, 58, 50, 68, 65]
-print(f"a-->{a}")
-print(f"softmax_samp_T(a, 1.0)-->{softmax_samp_T(a, 1.0)}")
-print(f"a-->{a}")
-print(f"softmax_samp_T(a, 5.0)-->{softmax_samp_T(a, 5.0)}")
-print(f"a-->{a}")
-print(f"softmax_samp_T(a, 10.0)-->{softmax_samp_T(a, 10.0)}")
+output = pipe(messages, **generation_args) 
+print(output[0])

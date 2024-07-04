@@ -1,0 +1,8 @@
+0->Confirm the validity of the given statement by responding with YES if it aligns with the Clinical Trial Report (CTR) descriptions, or NO if it contradicts the provided information.
+----------
+1->Confirm the validity of the statement by responding with YES if it aligns with the Clinical Trial Report (CTR) descriptions, or NO if it contradicts them.
+----------
+2->Verify the accuracy of the statement against the Clinical Trial Report (CTR) specifications. Respond with 'YES' if the statement is consistent with the CTR details, or 'NO' if there is a discrepancy.
+----------
+3->Confirm the statement's alignment with the Clinical Trial Report (CTR) guidelines. Reply 'YES' for compliance or 'NO' for inconsistency.
+----------

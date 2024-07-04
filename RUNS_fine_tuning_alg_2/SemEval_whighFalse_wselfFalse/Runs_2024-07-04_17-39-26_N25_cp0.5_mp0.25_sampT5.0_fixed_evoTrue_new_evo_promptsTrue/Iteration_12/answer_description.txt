@@ -1,0 +1,12 @@
+0->Evaluate the statement's validity by interpreting the medical terminology and context in both the CTR descriptions and the clinical trial report data, addressing any ambiguities or information gaps.
+----------
+1->Evaluate the validity of the statement by carefully assessing the presence or absence of specific mentions in the Clinical Trial Report (CTR) descriptions, interpreting the medical terminology and context, addressing any ambiguities or information gaps. Answer 'YES' if the statement aligns with the CTR or 'NO' if it does not, ensuring consistency with the CTR data, correct understanding of medical terminology, and no conflict with the report's content.
+----------
+2->Evaluate the validity of the statement by carefully assessing the presence or absence of specific mentions in the Clinical Trial Report (CTR) descriptions, interpreting the medical terminology and context, and addressing any ambiguities or information gaps.
+----------
+3->Assess the accuracy of the given assertion by thoroughly reviewing the Clinical Trial Report (CTR) for evidence supporting or refuting the claim, interpreting medical jargon within the context, and resolving any uncertainties or missing details. Provide a 'YES' if the assertion is substantiated by the CTR or 'NO' if it contradicts the report's findings, ensuring alignment with the CTR's data, precise comprehension of medical terminology, and absence of discrepancies with the report's content.
+----------
+4->Evaluate the validity of the statement by meticulously examining the Clinical Trial Report (CTR) for the presence or absence of specified elements, interpreting the medical terminology and context, and addressing any ambiguities or information gaps. Answer 'YES' if the statement aligns with the CTR or 'NO' if it does not, ensuring consistency with the CTR data, correct understanding of medical terminology, and no conflict with the report's content.
+----------
+5->Assess the accuracy of the given statement against the Clinical Trial Report (CTR) details, ensuring comprehension of medical terms and context, resolving uncertainties, and confirming alignment with the report's findings. Respond with 'CONFIRMED' if the statement is consistent with the CTR, or 'INCONCLUSIVE' if discrepancies are found.
+----------

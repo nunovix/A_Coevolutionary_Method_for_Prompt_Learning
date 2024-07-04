@@ -1,0 +1,8 @@
+0->Confirm the validity of the statement by examining the Clinical Trial Report (CTR) for evidence supporting or refuting the claim.
+----------
+1->Determine if the statement's validity can be inferred from the Clinical Trial Report (CTR) details, by evaluating the presence or absence of specified elements within the CTR content.
+----------
+2->Examine the Clinical Trial Report (CTR) to ascertain the validity of the statement by evaluating the presence or absence of specified elements that either support or refute the claim.
+----------
+3->Verify the statement's accuracy by reviewing the Clinical Trial Report (CTR) for corroborating or contradicting evidence.
+----------

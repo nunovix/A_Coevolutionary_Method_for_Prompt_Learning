@@ -1,0 +1,14 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->Indicate with either YES or NO whether the statement is valid based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Evaluate the statement's validity by interpreting the medical terminology and context in both the CTR descriptions and the clinical trial report data, addressing any ambiguities or information gaps.
+----------
+3->Assess the accuracy of the Clinical Trial Report (CTR) statements by critically analyzing the medical terminology and context provided, resolving any uncertainties or missing details.
+----------
+4->Evaluate the validity of the statement by interpreting the medical terminology and context in both the Clinical Trial Report (CTR) descriptions, addressing any ambiguities or information gaps, and indicate with either YES or NO whether the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+5->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+6->Cross-check the given statement against the Clinical Trial Report (CTR) to confirm its accuracy. Validate that the statement is consistent with the CTR data, correctly understands the medical terminology, and does not conflict with the report's content. Report the statement's validity as 'YES' if it aligns with the CTR or 'NO' if it does not.
+----------

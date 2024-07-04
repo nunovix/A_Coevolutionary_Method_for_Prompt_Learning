@@ -1,0 +1,16 @@
+0->Indicate with either YES or NO whether the statement is valid based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+1->You MUST respond with either YES or NO to indicate if the statement is valid based on the Clinical Trial Report (CTR) information, having determined that the statement is supported by the CTR data, and that it doesn't contradict the provided descriptions.
+----------
+2->Respond with either YES or NO to confirm if the statement is valid according to the Clinical Trial Report (CTR) information, ensuring that the statement aligns with the CTR data and does not contradict the provided descriptions.
+----------
+3->Determine the validity of a given statement concerning the Clinical Trial Report (CTR) by answering YES if the statement is corroborated by the CTR descriptions and does not contradict the provided information, or NO if the statement lacks support or contradicts the CTR descriptions.
+----------
+4->Evaluate the accuracy of a given statement in relation to the Clinical Trial Report (CTR) by providing a YES if the statement is substantiated by the CTR descriptions and is consistent with the provided information, or a NO if the statement is unsupported or contradicts the CTR descriptions.
+----------
+5->Assess the accuracy of the given statement by cross-referencing with the Clinical Trial Report (CTR) details, confirming consistency with the CTR data, and verifying that it does not conflict with the existing descriptions. Provide a definitive YES or NO as your response.
+----------
+6->Evaluate the accuracy of a statement related to the Clinical Trial Report (CTR) by responding with 'YES' if the statement aligns with and is substantiated by the CTR content, or 'NO' if the statement is unsupported or conflicts with the CTR details.
+----------
+7->Assess the validity of a given statement concerning the Clinical Trial Report (CTR) by answering YES if the statement is corroborated by the CTR descriptions and does not contradict the provided information, or NO if the statement lacks support or contradicts the CTR descriptions.
+----------

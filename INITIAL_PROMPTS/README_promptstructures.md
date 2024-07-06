@@ -87,15 +87,15 @@
 
 # Evolutionary Prompts
 
-OLD VERSION in combination_prompts.txt and muatation_prompts.txt - had only one part instead of the 3
+OLD VERSION in combination_prompts.txt and muatation_prompts.txt - had only one part instead of the 3 (kept for now just in case)
+
+NEW VERSION in the folders INITIAL_PROMPTS/evolutionary_prompts/mutation and INITIAL_PROMPTS/evolutionary_prompts/combination
 
 NEW VERSION (with 3 parts)
 - task descriprion
 - instruction description
 - INSTRUCTION/INSTRUCTIONS
 - answer description
-
-NEW VERSION in the folders INITIAL_PROMPTS/evolutionary_prompts/mutation and INITIAL_PROMPTS/evolutionary_prompts/combination
 
 It contains the prompts that perform the mutations and the crossovers of the promtps, in the basic setup only the first ones from each are used. The other 4 are used as a initial population for the hyperevolution of the mutation and crossover prompts. 
 

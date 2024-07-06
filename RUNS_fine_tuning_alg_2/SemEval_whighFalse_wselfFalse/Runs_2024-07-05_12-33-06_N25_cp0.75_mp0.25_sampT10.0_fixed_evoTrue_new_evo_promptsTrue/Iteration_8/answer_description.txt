@@ -1,0 +1,14 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->Provide a YES or NO response indicating the statement's validity based on the information presented in the CTR descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->Evaluate the validity of a medical assertion by meticulously contrasting it with evidence from the Clinical Trial Report (CTR), interpreting medical terminology and context from both the report and the assertion. Address any ambiguities or lacking information to definitively ascertain whether the assertion is accurate (YES) or inaccurate (NO), ensuring that the verdict reflects whether the assertion is corroborated by the CTR data and does not conflict with the report's content.
+----------
+3->Evaluate the validity of a medical claim by comparing it with the findings from the Clinical Trial Report (CTR), interpreting medical terminology and context from both the claim and the report. Resolve any ambiguities or insufficient details to conclusively determine if the claim is substantiated (YES) or refuted (NO), ensuring that the conclusion is supported by the CTR data and does not contradict the report's information.
+----------
+4->Assess the accuracy of a medical assertion by cross-referencing it with the Clinical Trial Report (CTR), deciphing medical jargon and situational context from both the assertion and the report. Clarify any uncertainties or lacking specifics to definitively ascertain whether the assertion is corroborated (YES) or negated (NO), guaranteeing that the verdict is backed by the CTR data and remains congruent with the report's content.
+----------
+5->Evaluate the validity of a medical assertion by meticulously contrasting it with evidence from the Clinical Trial Report (CTR), interpreting medical terminology and context from both the assertion and the report. Address any ambiguities or lacking information to definitively ascertain whether the assertion is accurate (YES) or inaccurate (NO), ensuring that the verdict reflects whether the assertion is corroborated by the CTR data and does not conflict with the report's content.
+----------
+6->Evaluate the validity of a medical claim by comparing it with the Clinical Trial Report (CTR), interpreting medical terminology and context from both the claim and the report. Resolve any ambiguities or insufficient details to conclusively determine if the claim is substantiated (YES) or refuted (NO), ensuring that the conclusion is supported by the CTR data and does not contradict the report's information.
+----------

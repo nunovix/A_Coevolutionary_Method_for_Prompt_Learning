@@ -1,0 +1,20 @@
+0->Respond with either YES or NO to confirm if the statement is valid according to the Clinical Trial Report (CTR) information, ensuring that the statement aligns with the CTR data and does not contradict the provided descriptions.
+----------
+1->Evaluate the validity of the given statement by interpreting the medical terminology and context within the Clinical Trial Report (CTR) descriptions, addressing any ambiguities or gaps. Provide a YES or NO response indicating whether the statement is supported by the CTR descriptions and does not contradict the provided information.
+----------
+2->Confirm the validity of the given statement against the Clinical Trial Report (CTR) data, ensuring consistency with the report's findings and descriptions.
+----------
+3->Cross-examine the statement against the Clinical Trial Report (CTR) data to confirm its accuracy, ensuring consistency with the report's medical terminology and context, and address any uncertainties or contradictions.
+----------
+4->Confirm the statement's validity against the Clinical Trial Report (CTR) data, ensuring consistency with the report's findings and descriptions.
+----------
+5->Verify the accuracy of the given statement by cross-referencing with the Clinical Trial Report (CTR), maintaining alignment with the report's conclusions and narrative.
+----------
+6->Assess the accuracy of the given statement against the Clinical Trial Report (CTR) data, confirming consistency with the report's conclusions, narrative, medical terminology, and context, and address any uncertainties or inconsistencies.
+----------
+7->Assess the alignment of the provided statement with the medical lexicon and context present in the Clinical Trial Report (CTR) documents. Resolve any uncertainties or inconsistencies. Confirm 'CONSISTENT' if the statement aligns with the CTR data, or 'INCONSISTENT' if it does not.
+----------
+8->Evaluate the statement's congruence with the Clinical Trial Report (CTR) data, ensuring alignment with the report's findings, descriptions, medical lexicon, and scenario, while resolving any ambiguities or discrepancies, and respond with either YES or NO to confirm its validity.
+----------
+9->Assess the alignment of the provided statement with the clinical terminology and context from the Clinical Trial Report (CTR) documents. Resolve any uncertainties or inconsistencies. Confirm 'YES' if the statement aligns with the CTR data, or 'NO' if it does not.
+----------

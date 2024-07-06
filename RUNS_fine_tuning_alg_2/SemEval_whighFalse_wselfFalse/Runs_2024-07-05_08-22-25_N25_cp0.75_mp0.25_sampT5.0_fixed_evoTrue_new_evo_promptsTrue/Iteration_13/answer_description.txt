@@ -1,0 +1,10 @@
+0->Evaluate the statement's validity using the Clinical Trial Report (CTR) details, focusing on the presence or absence of specified elements within the CTR descriptions.
+----------
+1->Assess the accuracy of the given statement by cross-referencing with the specified components detailed in the Clinical Trial Report (CTR).
+----------
+2->Assess the validity and accuracy of the given statement by cross-referencing with the specified components detailed in the Clinical Trial Report (CTR).
+----------
+3->Evaluate the statement's correctness and precision by comparing it with the corresponding details in the Clinical Trial Report (CTR), verifying that the report's content precisely mirrors the statement's assertions.
+----------
+4->Evaluate the statement's validity against the Clinical Trial Report (CTR) by verifying the inclusion or exclusion of key elements outlined in the CTR descriptions, and conclude with a clear YES or NO on the statement's accuracy.
+----------

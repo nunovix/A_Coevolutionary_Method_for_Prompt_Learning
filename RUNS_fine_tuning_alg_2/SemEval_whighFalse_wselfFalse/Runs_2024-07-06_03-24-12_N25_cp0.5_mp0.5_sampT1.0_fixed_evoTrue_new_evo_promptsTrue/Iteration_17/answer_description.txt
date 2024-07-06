@@ -1,0 +1,4 @@
+0->Evaluate the statement's validity in relation to the Clinical Trial Report (CTR) data, affirming its accuracy and consistency with the report's content, and respond with either YES or NO to indicate if the statement is valid based on the CTR information, having determined that the statement is supported by the CTR data, and that it doesn't contradict the provided descriptions.
+----------
+1->Evaluate the accuracy of the provided assertion in relation to the Clinical Trial Report (CTR) data, ensuring it reflects the report's conclusions accurately. Respond with 'YES' if the assertion is substantiated by the CTR data and harmonizes with the report's content; otherwise, reply with 'NO'.
+----------

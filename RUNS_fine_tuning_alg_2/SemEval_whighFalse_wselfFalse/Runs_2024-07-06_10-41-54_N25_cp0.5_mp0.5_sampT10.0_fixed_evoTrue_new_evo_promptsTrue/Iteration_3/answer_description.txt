@@ -1,0 +1,14 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->Provide a YES or NO response indicating the statement's validity based on the information presented in the CTR descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->Determine YES or NO if the Clinical Trial Report (CTR) substantiates the statement's accuracy, by evaluating the presence or absence of specified elements within the CTR documentation.
+----------
+3->Assess the accuracy of the provided statement against the Clinical Trial Report (CTR) details. Confirm 'YES' if the statement is substantiated by the CTR data, aligns with the report's content, and maintains consistency; otherwise, confirm 'NO' if the statement is unsubstantiated, misaligned, or contradicts the report.
+----------
+4->Assess the veracity of the given assertion by examining the Clinical Trial Report (CTR) for evidence supporting or refuting the statement. Analyze the CTR's content for specified details, interpret medical terminology and context, and address any ambiguities or lack of information. If the assertion is corroborated by the CTR and aligns with the documented facts, reply with YES; if not, reply with NO.
+----------
+5->Evaluate the accuracy of a Clinical Trial Report (CTR) by examining its content for essential components, deciphing medical jargon, and resolving uncertainties or missing details.
+----------
+6->Assess the accuracy of the provided statement against the Clinical Trial Report (CTR) details. Confirm 'YES' if the statement is substantiated by the CTR content, backed by evidence, and aligns with the report's narrative; otherwise, confirm 'NO' if the statement is unsubstantiated, unsupported, or contradicts the report.
+----------

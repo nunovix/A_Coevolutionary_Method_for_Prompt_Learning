@@ -1,0 +1,18 @@
+0->Respond with either YES or NO to confirm if the statement is valid according to the Clinical Trial Report (CTR) information, ensuring that the statement aligns with the CTR data and does not contradict the provided descriptions.
+----------
+1->Evaluate the validity of the given statement by interpreting the medical terminology and context within the Clinical Trial Report (CTR) descriptions, addressing any ambiguities or gaps. Provide a YES or NO response indicating whether the statement is supported by the CTR descriptions and does not contradict the provided information.
+----------
+2->Confirm the validity of the given statement against the Clinical Trial Report (CTR) data, ensuring consistency with the report's findings and descriptions.
+----------
+3->Cross-examine the statement against the Clinical Trial Report (CTR) data to confirm its accuracy, ensuring consistency with the report's medical terminology and context, and address any uncertainties or contradictions.
+----------
+4->Assess the accuracy of the statement in relation to the medical terminology and context found in the Clinical Trial Report (CTR) descriptions, resolving any uncertainties or inconsistencies. Respond with 'YES' if the statement aligns with and is substantiated by the CTR descriptions, or 'NO' if it contradicts or lacks support from the provided information.
+----------
+5->Confirm the statement's validity by comparing it with the Clinical Trial Report's findings and narrative to ensure consistency.
+----------
+6->Examine the provided statement meticulously against the Clinical Trial Report (CTR) data to ensure accuracy, adherence to medical terminology, and contextual relevance, and address any uncertainties or inconsistencies.
+----------
+7->Carefully compare the given statement with the Clinical Trial Report (CTR) data to validate its precision, aligning with the report's medical lexicon and context, and resolve any ambiguities or discrepancies.
+----------
+8->Confirm the statement's validity against the Clinical Trial Report (CTR) data, ensuring consistency with the report's findings and descriptions.
+----------

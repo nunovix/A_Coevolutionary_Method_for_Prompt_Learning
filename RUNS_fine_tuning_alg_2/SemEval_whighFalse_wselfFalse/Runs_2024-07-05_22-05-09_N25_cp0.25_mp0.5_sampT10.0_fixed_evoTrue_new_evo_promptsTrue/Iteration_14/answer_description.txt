@@ -1,0 +1,14 @@
+0->Assess the accuracy of the given statement against the Clinical Trial Report (CTR) details. Respond with 'YES' if the statement is substantiated by the CTR content, or 'NO' if it is refuted or unsupported by the CTR descriptions.
+----------
+1->Assess the accuracy of the given statement against the evidence presented in the Clinical Trial Report (CTR). Respond with 'YES' if the statement is substantiated by the CTR details, or 'NO' if the statement is refuted or unsupported by the CTR content.
+----------
+2->Determine YES or NO if the Clinical Trial Report (CTR) substantiates the statement's validity, by evaluating the presence or absence of specified elements within the CTR's content.
+----------
+3->Evaluate the veracity of the provided assertion in relation to the specifics outlined in the Clinical Trial Report (CTR). Indicate 'YES' if the assertion is corroborated by the CTR details, or 'NO' if the assertion is contradicted or lacks support from the CTR content.
+----------
+4->Evaluate the given statement's alignment with the Clinical Trial Report (CTR) findings, confirming 'YES' if the statement is substantiated by the evidence within the CTR, or 'NO' if the statement is refuted or unsupported by the CTR data.
+----------
+5->Evaluate the veracity of the provided assertion in relation to the Clinical Trial Report (CTR) specifics. Affirm with 'YES' if the assertion is corroborated by the CTR details, or deny with 'NO' if the assertion is contradicted or lacks support from the CTR descriptions.
+----------
+6->Assess whether the Clinical Trial Report (CTR) corroborates the statement's accuracy by identifying the presence or lack thereof of the required elements in the CTR's documentation.
+----------

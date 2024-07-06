@@ -1,0 +1,6 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->Evaluate the statement's validity based on the Clinical Trial Report (CTR) details, focusing on the presence or absence of specified elements within the report.
+----------
+2->Evaluate the accuracy of the given medical assertion by thoroughly comparing it with the content of Clinical Trial Reports (CTRs), taking into account medical jargon, situational context, and resolving any uncertainties or lacking details. Provide a conclusive YES or NO verdict on the assertion's correctness, contingent upon explicit references within the CTRs.
+----------

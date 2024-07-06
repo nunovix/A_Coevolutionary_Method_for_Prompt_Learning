@@ -1,0 +1,14 @@
+0->Evaluate the statement's validity in relation to the Clinical Trial Report (CTR) data, affirming its accuracy and consistency with the report's content, and respond with either YES or NO to indicate if the statement is valid based on the CTR information, having determined that the statement is supported by the CTR data, and that it doesn't contradict the provided descriptions.
+----------
+1->Evaluate the validity of the statement in relation to the Clinical Trial Report (CTR) data, affirming its accuracy and consistency with the report's content.
+----------
+2->Assess the veracity of the given statement against the data presented in the Clinical Trial Report (CTR), confirming its precision and alignment with the report's findings. Provide a definitive YES if the statement is corroborated by the CTR data and does not conflict with the report's descriptions, or a definitive NO if it is not substantiated or contradicts the report's content.
+----------
+3->Assess the veracity of the given statement against the Clinical Trial Report (CTR) data, confirming its alignment with the report's findings. Respond with 'YES' if the statement is corroborated by the CTR data and does not conflict with the report's descriptions, or 'NO' if it is not substantiated or contradicts the report.
+----------
+4->Evaluate the veracity of the given assertion concerning the Clinical Trial Report (CTR) data, confirming its precision and alignment with the report's findings. Provide a definitive YES or NO to denote whether the assertion is substantiated by the CTR information, ensuring that the assertion is corroborated by the CTR content and does not conflict with the report's descriptions.
+----------
+5->Assess the veracity of the given assertion concerning the Clinical Trial Report (CTR) data, confirming its precision and alignment with the report's findings. Respond with 'YES' if the assertion is substantiated by the CTR data and does not conflict with the report's descriptions, or 'NO' if it is not.
+----------
+6->Assess the veracity of the given assertion concerning the Clinical Trial Report (CTR) data, confirming its precision and alignment with the report's findings. Provide a definitive YES if the assertion is corroborated by the CTR data, ensuring that the assertion neither refutes nor diverges from the report's descriptions.
+----------

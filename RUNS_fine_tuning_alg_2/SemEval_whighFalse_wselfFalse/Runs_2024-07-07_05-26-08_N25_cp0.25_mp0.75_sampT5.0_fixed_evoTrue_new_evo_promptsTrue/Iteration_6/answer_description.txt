@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating the statement's validity based on the information presented in the CTR descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->Evaluate the statement's validity against the Clinical Trial Report (CTR) data, ensuring it aligns with the report's findings and does not conflict with the given descriptions. Respond with YES if the statement is substantiated by the CTR, or NO if it is not.
+----------
+2->Evaluate the congruence between the provided Clinical Trial Report (CTR) details and the Click-Through Rate (CTR) specifications. Analyze the inclusion of required components, interpret medical jargon within the context, and address any ambiguities or lack of information. Confirm 'YES' if the statement aligns with the descriptions, or 'NO' if there is a discrepancy.
+----------
+3->Evaluate the alignment of the provided assertion with the evidence and narrative detailed in the Clinical Trial Report (CTR). Affirm with 'YES' if the assertion is substantiated by the CTR, or deny with 'NO' if the assertion is contradicted or lacks support.
+----------
+4->Assess the validity of the given statement by cross-referencing with the Clinical Trial Report (CTR) descriptions. Interpret medical terminology and context accurately, resolving any uncertainties or information deficiencies.
+----------
+5->Assess the accuracy of the provided statement by cross-referencing with the Clinical Trial Report (CTR) data. Confirm that the statement is consistent with the report's conclusions and descriptions. Reply with 'YES' if the statement is corroborated by the CTR, or 'NO' if it contradicts the report's findings.
+----------
+6->Assess the alignment of the Clinical Trial Report (CTR) content with the Click-Through Rate (CTR) criteria, ensuring all mandatory elements are present, interpreting medical terminology accurately, and resolving any uncertainties or insufficiencies. Validate 'YES' for compliance or 'NO' for non-conformity.
+----------
+7->Assess the alignment of the Clinical Trial Report (CTR) content with the Click-Through Rate (CTR) criteria, ensuring all mandatory elements are present, interpreting medical terminology accurately, and resolving any uncertainties or insufficiencies.
+----------
+8->Assess the veracity of the provided statement in relation to the Clinical Trial Report (CTR) data, confirming its congruence with the report's conclusions and absence of contradiction with the outlined descriptions. Reply with 'YES' if the statement is corroborated by the CTR, or 'NO' if it is refuted.
+----------

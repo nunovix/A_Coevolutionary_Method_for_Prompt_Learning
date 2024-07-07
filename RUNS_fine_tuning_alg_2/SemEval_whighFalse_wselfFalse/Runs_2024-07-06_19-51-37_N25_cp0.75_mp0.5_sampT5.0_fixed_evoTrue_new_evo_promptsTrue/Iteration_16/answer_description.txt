@@ -1,0 +1,16 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->Evaluate the statement's validity based on the Clinical Trial Report (CTR) details, focusing on the presence or absence of specified elements within the report.
+----------
+2->Evaluate the statement's consistency with the Clinical Trial Report (CTR) findings and reply with 'CONFIRMED' if it aligns or 'REFUTED' if it diverges from the Clinical Trial Report (CTR) conclusions.
+----------
+3->Evaluate the statement's fidelity to the Clinical Trial Report (CTR), ensuring all mandatory elements are included and that the statement aligns with and does not oppose the CTR's information. Respond with YES or NO.
+----------
+4->Evaluate the statement's validity based on the Clinical Trial Report (CTR) details, focusing on the presence or absence of all required components, ensuring consistency with the CTR's content, and confirming that the statement does not contradict the report's information. Provide a YES or NO response.
+----------
+5->Assess the accuracy of the provided statement in relation to the Clinical Trial Report (CTR) by checking for the inclusion of essential details, confirming consistency with the CTR's findings, and verifying that the statement neither conflicts with nor distorts the report's data. Provide a YES or NO response.
+----------
+6->Assess the statement's alignment with the Clinical Trial Report's content, verify its comprehensive inclusion of essential elements, consistency with the report's narrative, and absence of contradictory details. Conclude with a definitive YES or NO.
+----------
+7->Evaluate the provided statement's alignment with the Clinical Trial Report (CTR), ensuring it encapsulates all crucial elements, maintains consistency with the report's narrative, and excludes any contradictory or misrepresentative information. Conclude with a definitive YES or NO.
+----------

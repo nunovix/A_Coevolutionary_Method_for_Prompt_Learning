@@ -1,0 +1,18 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->You MUST respond with either YES or NO to indicate if the statement is valid based on the Clinical Trial Report (CTR) information, having determined that the statement is supported by the CTR data, and that it doesn't contradict the provided descriptions.
+----------
+2->Evaluate the given statement's alignment with the Clinical Trial Report (CTR) content. Affirm 'YES' if the statement is unequivocally corroborated by the CTR findings and aligns with the report's narrative. Conversely, affirm 'NO' if the statement lacks support from the CTR data, is unsubstantiated, or contradicts the report's content.
+----------
+3->Evaluate the alignment of the provided assertion with the evidence and narrative presented in the Clinical Trial Report (CTR). Confirm 'YES' if the assertion is substantiated by the CTR findings, unambiguously corroborated, and consistent with the report's narrative. Alternatively, confirm 'NO' if the assertion is not supported by the CTR data, lacks evidence, or contradicts the report's content.
+----------
+4->Assess the given statement in relation to the evidence and storyline presented in the Clinical Trial Report (CTR). Validate 'YES' if the statement is unequivocally supported by the CTR findings and aligns with the report's narrative. Conversely, validate 'NO' if the statement is not backed by the CTR data, is unsubstantiated, or contradicts the report's content.
+----------
+5->Evaluate the specified assertion in relation to the evidence and storyline within the Clinical Trial Report (CTR). Confirm 'YES' if the assertion is fully corroborated by the CTR findings and congruent with the report's narrative. Alternatively, confirm 'NO' if the assertion is not substantiated by the CTR data, lacks corroborative evidence, or is at odds with the report's narrative.
+----------
+6->Evaluate the provided assertion against the evidence and narrative within the Clinical Trial Report (CTR). Confirm 'YES' if the assertion is substantiated by the CTR findings, unambiguously corroborated, and consistent with the report's narrative. Alternatively, confirm 'NO' if the assertion is not supported by the CTR data, lacks evidence, or contradicts the report's content. Additionally, ensure the accuracy of the CTR content by thoroughly checking for the inclusion or exclusion of designated components in the CTR documentation.
+----------
+7->Evaluate the statement's validity against the Clinical Trial Report (CTR) data, ensuring it aligns with the report's findings and does not conflict with the given descriptions. Respond with YES if the statement is corroborated by the CTR, or NO if it is not.
+----------
+8->Determine YES or NO if the Clinical Trial Report (CTR) substantiates the statement's validity, scrutinizing the presence or absence of specified elements within the CTR's content.
+----------

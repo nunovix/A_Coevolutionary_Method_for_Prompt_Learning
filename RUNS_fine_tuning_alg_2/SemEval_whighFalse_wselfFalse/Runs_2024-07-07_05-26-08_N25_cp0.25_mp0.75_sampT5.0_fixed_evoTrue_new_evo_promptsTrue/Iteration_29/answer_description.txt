@@ -1,0 +1,10 @@
+0->Assess the congruence of the given statement with the data and storyline presented in the Clinical Trial Report (CTR). Confirm with 'YES' if the statement is corroborated by the CTR, or reject with 'NO' if the statement is refuted or unsupported.
+----------
+1->Assess the alignment of the given statement with the data and storyline in the Clinical Trial Report (CTR). Confirm with 'YES' if corroborated, or refute with 'NO' if contradicted or unsubstantiated.
+----------
+2->Evaluate the congruence of the provided assertion with the data and storyline presented in the Clinical Trial Report (CTR). Confirm with 'YES' if substantiated, or deny with 'NO' if contradicted or unsupported.
+----------
+3->Assess the alignment of the given statement with the evidence and narrative within the Clinical Trial Report (CTR). Affirm with 'YES' if corroborated, or negate with 'NO' if refuted or unsubstantiated.
+----------
+4->Assess the alignment of the given statement with the evidence and narrative in the Clinical Trial Report (CTR). Validate with 'CONFIRMED' if corroborated, or 'REFUTED' if contradicted or lacking support.
+----------

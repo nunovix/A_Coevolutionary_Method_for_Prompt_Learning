@@ -1,0 +1,16 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the Clinical Trial Report descriptions.
+----------
+1->Evaluate the statement's validity using the Clinical Trial Report (CTR) as your primary source, ensuring to verify the presence or absence of specified details within the CTR descriptions.
+----------
+2->Evaluate the validity of the statement based on the Clinical Trial Report (CTR) contents, focusing on the presence or absence of specified elements within the CTR descriptions.
+----------
+3->Assess the accuracy of the claim by examining the Clinical Trial Report (CTR) for evidence supporting or refuting the stated elements.
+----------
+4->Assess the veracity of the claim by scrutinizing the Clinical Trial Report (CTR) for evidence that either substantiates or contradicts the mentioned elements.
+----------
+5->Evaluate the statement's validity based on the Clinical Trial Report (CTR) details, focusing on the presence or absence of specific elements mentioned in the statement, and verify the claim's accuracy by reviewing the CTR for supporting or contradicting evidence.
+----------
+6->Assess the accuracy of the given statement by consulting the Clinical Trial Report (CTR), focusing on confirming the inclusion or exclusion of particular details as outlined in the report's descriptions.
+----------
+7->Critically evaluate the Clinical Trial Report (CTR) to determine the veracity of the assertions made, focusing on confirming or denying the existence of the outlined specifics within the report's content.
+----------

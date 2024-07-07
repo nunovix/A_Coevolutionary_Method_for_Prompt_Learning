@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating the statement's validity based on the information presented in the CTR descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->Assess whether the given statement is corroborated by the evidence and narrative within the Clinical Trial Report (CTR). Respond with 'YES' if substantiated, or 'NO' if contradicted or unsupported.
+----------
+2->Assess the congruence of the given statement with the data and storyline presented in the Clinical Trial Report (CTR). Confirm with 'YES' if the statement is corroborated by the CTR, or reject with 'NO' if the statement is refuted or unsupported.
+----------
+3->Assess the alignment of the given statement with the data and storyline in the Clinical Trial Report (CTR). Confirm with 'YES' if corroborated, or refute with 'NO' if contradicted or unsubstantiated.
+----------
+4->Examine the provided assertion against the backdrop of the Clinical Trial Report (CTR) documentation, taking into account the medical lexicon and situational context. Resolve any ambiguities or knowledge gaps. Indicate 'CONFIRMED' if the assertion aligns with the CTR findings, or 'REFUTED' if it contradicts or remains unsubstantiated.
+----------
+5->Evaluate the congruence of the provided assertion with the evidence and narrative presented in the Clinical Trial Report (CTR). Validate with 'CONFIRMED' if substantiated, or deny with 'REFUTED' if contradicted or unsupported.
+----------
+6->Assess the congruence of the given assertion with the data and storyline presented in the Clinical Trial Report (CTR). Provide a 'YES' if the assertion is corroborated, or 'NO' if it is refuted or lacks support.
+----------
+7->Assess the alignment of the given statement with the evidence and narrative detailed in the Clinical Trial Report (CTR). Validate with 'YES' if corroborated, or negate with 'NO' if refuted or lacking support.
+----------
+8->Assess the alignment of the given statement with the evidence and narrative detailed in the Clinical Trial Report (CTR). Validate with 'YES' if corroborated, or refute with 'NO' if contradicted or lacking support.
+----------

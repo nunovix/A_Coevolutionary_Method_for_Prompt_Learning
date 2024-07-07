@@ -1,0 +1,20 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->Evaluate the statement's validity based on the Clinical Trial Report (CTR) details, focusing on the presence or absence of specified elements within the report.
+----------
+2->Evaluate the statement's consistency with the Clinical Trial Report (CTR) findings and reply with 'CONFIRMED' if it aligns or 'REFUTED' if it diverges from the Clinical Trial Report (CTR) conclusions.
+----------
+3->Evaluate the statement's fidelity to the Clinical Trial Report (CTR), ensuring all mandatory elements are included and that the statement aligns with and does not oppose the CTR's information. Respond with YES or NO.
+----------
+4->Evaluate the statement's validity based on the Clinical Trial Report (CTR) details, focusing on the presence or absence of all required components, ensuring consistency with the CTR's content, and confirming that the statement does not contradict the report's information. Provide a YES or NO response.
+----------
+5->Evaluate the statement's validity against the Clinical Trial Report (CTR) by confirming the presence of all required components, ensuring alignment with the CTR's content, verifying inclusion of critical details, maintaining consistency with the CTR's conclusions, and ensuring the statement neither contradicts nor misrepresents the report's data. Indicate compliance with 'YES' or non-compliance with 'NO'.
+----------
+6->Evaluate the statement's fidelity to the Clinical Trial Report (CTR), ensuring all mandatory elements are included, that the statement aligns with and does not oppose the CTR's information, and assess its consistency with the CTR findings. Conclude the validity of the statement based on the CTR information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions. Respond with 'YES', 'NO', 'CONFIRMED', or 'REFUTED'.
+----------
+7->Assess the statement's fidelity to the Clinical Trial Report (CTR) by checking for all mandatory elements, confirming content alignment, verifying critical detail inclusion, ensuring consistency with the CTR's conclusions, and ensuring no contradiction or misrepresentation of the report's data. Respond with 'YES' for compliance or 'NO' for non-compliance.
+----------
+8->Assess the accuracy of the provided statement in relation to the Clinical Trial Report (CTR), verifying the presence of all essential components and confirming its consistency with the CTR's content without contradiction.
+----------
+9->Evaluate the statement's fidelity to the Clinical Trial Report (CTR) by ensuring it includes all mandatory elements, aligns with the CTR's narrative, verifies critical data presence, remains consistent with the CTR's findings, and does not contradict or distort the report's information. Provide a response of 'YES', 'NO', 'CONFIRMED', or 'REFUTED'.
+----------

@@ -1,0 +1,14 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->Provide a YES or NO response indicating the statement's validity based on the information presented in the CTR descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->You MUST respond with either YES or NO to indicate if the statement is valid based on the Clinical Trial Report (CTR) information, having determined that the statement is supported by the CTR data, and that it doesn't contradict the provided descriptions.
+----------
+3->Assess the veracity of the presented assertion by comparing it with the specifics outlined in the Clinical Trial Report (CTR), ensuring adherence to medical nomenclature and situational context. Resolve any ambiguities or lacking details. Indicate 'Affirmative' if the assertion corresponds with the CTR findings, or 'Negative' if it diverges.
+----------
+4->Evaluate the statement's validity against the Clinical Trial Report (CTR) data, ensuring it aligns with the report's findings and does not conflict with the given descriptions. Respond with YES if the statement is substantiated by the CTR, or NO if it is not.
+----------
+5->Evaluate the congruence between the provided Clinical Trial Report (CTR) details and the Click-Through Rate (CTR) specifications. Analyze the inclusion of required components, interpret medical jargon within the context, and address any ambiguities or lack of information. Confirm 'YES' if the statement aligns with the descriptions, or 'NO' if there is a discrepancy.
+----------
+6->Evaluate the alignment of the provided assertion with the evidence and narrative detailed in the Clinical Trial Report (CTR). Affirm with 'YES' if the assertion is substantiated by the CTR, or deny with 'NO' if the assertion is contradicted or lacks support.
+----------

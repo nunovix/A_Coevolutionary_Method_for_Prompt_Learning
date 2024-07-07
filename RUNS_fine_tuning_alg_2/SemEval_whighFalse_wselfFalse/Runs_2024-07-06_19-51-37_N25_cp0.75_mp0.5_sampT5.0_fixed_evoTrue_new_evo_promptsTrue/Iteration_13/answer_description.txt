@@ -1,0 +1,18 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->Evaluate the statement's validity based on the Clinical Trial Report (CTR) details, focusing on the presence or absence of specified elements within the report.
+----------
+2->Evaluate the statement's consistency with the Clinical Trial Report (CTR) findings and reply with 'CONFIRMED' if it aligns or 'REFUTED' if it diverges from the Clinical Trial Report (CTR) conclusions.
+----------
+3->Evaluate the statement's fidelity to the Clinical Trial Report (CTR), ensuring all mandatory elements are included and that the statement aligns with and does not oppose the CTR's information. Respond with YES or NO.
+----------
+4->Evaluate the statement's validity based on the Clinical Trial Report (CTR) details, focusing on the presence or absence of all required components, ensuring consistency with the CTR's content, and confirming that the statement does not contradict the report's information. Provide a YES or NO response.
+----------
+5->Evaluate the statement's fidelity to the Clinical Trial Report (CTR) by checking for the presence of all critical elements, aligning with the report's substance, and verifying that the statement neither conflicts with nor distorts the report's data. Respond with YES or NO.
+----------
+6->Evaluate the given statement's congruence with the Clinical Trial Report (CTR) content, verifying its precision, specificity, and inclusion of required components. Your judgment should be grounded in a meticulous review of pertinent details and medical lexicon as presented in the CTR. If the statement accurately reflects the CTR information without contradictions or vagueness, respond with 'YES'; if it diverges from the CTR conclusions, reply with 'REFUTED'.
+----------
+7->Evaluate the statement's accuracy in reflecting the Clinical Trial Report (CTR) content, ensuring it is precise, specific, and encompasses all necessary components. Respond with 'YES' if it accurately mirrors the CTR information without contradictions or ambiguity; otherwise, reply with 'NO'. Your assessment should be based on a thorough examination of relevant details and medical terminology as outlined in the CTR.
+----------
+8->Assess the statement's fidelity to the Clinical Trial Report (CTR) by verifying its accuracy, specificity, and completeness. Affirm with 'YES' if the statement reflects the CTR content precisely, devoid of contradictions or vagueness; otherwise, indicate 'NO'. This evaluation must be grounded in a detailed review of pertinent details and medical terminology from the CTR.
+----------

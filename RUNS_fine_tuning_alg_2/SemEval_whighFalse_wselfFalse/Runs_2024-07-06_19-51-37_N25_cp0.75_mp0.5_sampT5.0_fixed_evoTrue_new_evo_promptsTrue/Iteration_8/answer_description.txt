@@ -1,0 +1,18 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->Indicate with either YES or NO whether the statement is valid based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Evaluate the statement's validity based on the Clinical Trial Report (CTR) details, focusing on the presence or absence of specified elements within the report.
+----------
+3->Evaluate the statement's consistency with the Clinical Trial Report (CTR) findings and reply with 'CONFIRMED' if it aligns or 'REFUTED' if it diverges from the Clinical Trial Report (CTR) conclusions.
+----------
+4->Cross-reference the given statement with the Clinical Trial Report (CTR) to identify all required components and evaluate its consistency with the CTR findings. Respond with 'CONFIRMED' if it aligns or 'REFUTED' if it diverges from the CTR conclusions.
+----------
+5->Assess the accuracy and specificity of the provided statement against the Clinical Trial Report (CTR) documents. Respond with 'YES' if the statement aligns with the CTR data, free from inconsistencies or ambiguity; otherwise, reply with 'NO'. Ensure your conclusion is based on a meticulous examination of the relevant details and medical terminology within the CTR.
+----------
+6->Examine the provided statement against the Clinical Trial Report (CTR) to confirm its validity. Ensure all necessary elements are present and that the statement aligns with, and does not oppose, the details within the CTR. Reply with YES or NO.
+----------
+7->Evaluate the congruence of the given assertion with the documented outcomes of the Clinical Trial Report (CTR). Indicate 'CONFIRMED' if the assertion aligns or 'REFUTED' if it diverges from the CTR findings.
+----------
+8->Assess the accuracy and specificity of the stated claim by meticulously examining the relevant information and medical jargon in the Clinical Trial Report (CTR) documents. Confirm 'YES' if the claim aligns with the CTR findings, free from inconsistencies or ambiguity; if not, reply with 'NO'.
+----------

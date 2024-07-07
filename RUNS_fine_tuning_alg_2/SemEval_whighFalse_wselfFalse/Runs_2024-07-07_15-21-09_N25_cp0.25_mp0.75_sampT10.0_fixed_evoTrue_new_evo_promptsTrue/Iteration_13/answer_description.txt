@@ -1,0 +1,12 @@
+0->Evaluate the statement's validity using the Clinical Trial Report (CTR) data, focusing on the presence or absence of specified elements within the report.
+----------
+1->Carefully analyze the medical assertion using specific terminology and context from the Clinical Trial Reports (CTRs). Address any ambiguities or gaps. Indicate 'CONFIRMED' if the assertion is corroborated by the CTR data, or 'DISCONFIRMED' if it is contradicted.
+----------
+2->Examine the medical claim with precision, employing appropriate clinical terminology and context derived from the Clinical Trial Reports (CTRs). Resolve any uncertainties or deficiencies. Mark the claim as 'CONFIRMED' if substantiated by the CTR evidence, or 'DISCONFIRMED' if refuted.
+----------
+3->Assess the accuracy of the given statement by examining the Clinical Trial Report (CTR) for evidence supporting or refuting its claims.
+----------
+4->Carefully scrutinize the medical assertion, utilizing precise clinical language and context from the Clinical Trial Reports (CTRs). Address any ambiguities or shortcomings. Validate 'CONFIRMED' if substantiated by CTR evidence, or 'DISCONFIRMED' if contradicted.
+----------
+5->Examine the medical claim rigorously, employing exact clinical terminology and referencing specific data from Clinical Trial Reports (CTRs) to resolve any uncertainties or deficiencies. Affirm the claim as 'CONFIRMED' if corroborated by CTR findings, or classify it as 'DISCONFIRMED' if refuted.
+----------

@@ -1,0 +1,16 @@
+0->Evaluate the statement's validity using the Clinical Trial Report (CTR) data, focusing on the presence or absence of specified elements within the report.
+----------
+1->Carefully analyze the medical assertion using specific terminology and context from the Clinical Trial Reports (CTRs). Address any ambiguities or gaps. Indicate 'CONFIRMED' if the assertion is corroborated by the CTR data, or 'DISCONFIRMED' if it is contradicted.
+----------
+2->Examine the medical claim with precision, employing appropriate clinical terminology and context derived from the Clinical Trial Reports (CTRs). Resolve any uncertainties or deficiencies. Mark the claim as 'CONFIRMED' if substantiated by the CTR evidence, or 'DISCONFIRMED' if refuted.
+----------
+3->Examine the medical claim with meticulous attention to detail, employing accurate clinical terminology and referencing the relevant Clinical Trial Reports (CTRs). Resolve any uncertainties or gaps in information. Affirm the claim as 'CONFIRMED' if corroborated by CTR findings, or classify it as 'DISCONFIRMED' if refuted.
+----------
+4->Carefully evaluate the validity of the medical assertion using precise clinical language and context from the Clinical Trial Reports (CTRs), addressing any ambiguities or insu0fficiencies. Indicate 'CONFIRMED' if substantiated by CTR evidence, or 'DISCONFIRMED' if contradicted.
+----------
+5->Examine the medical claim with meticulous attention to detail, employing specific clinical terminology and context derived from the Clinical Trial Reports (CTRs). Resolve any uncertainties or deficiencies. Affirm 'CONFIRMED' if corroborated by CTR findings, or 'DISCONFIRMED' if refuted.
+----------
+6->Carefully scrutinize the Clinical Trial Reports (CTRs) to validate medical assertions, resolving any uncertainties or inconsistencies. Mark 'CONFIRMED' for substantiated claims or 'DISCONFIRMED' for unsubstantiated ones, paying particular attention to the inclusion or exclusion of specific details in the report.
+----------
+7->Assess the accuracy of the given statement by examining the Clinical Trial Report (CTR) for evidence supporting or refuting its claims.
+----------

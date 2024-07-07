@@ -1,0 +1,18 @@
+0->Provide a YES or NO response indicating the statement's validity based on the information presented in the CTR descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->You MUST respond with either YES or NO to indicate if the statement is valid based on the Clinical Trial Report (CTR) information, having determined that the statement is supported by the CTR data, and that it doesn't contradict the provided descriptions.
+----------
+2->Check the statement's validity based on the clinical trial report data, providing a YES or NO response.
+----------
+3->Evaluate the validity of the given medical statement by cross-referencing with the Clinical Trial Report (CTR) descriptions, taking into account medical terminology and context. Address any uncertainties or information deficiencies. Respond with 'YES' if the statement aligns with the CTR data, or 'NO' if it does not.
+----------
+4->Evaluate the statement's validity using the Clinical Trial Report (CTR) data, focusing on the presence or absence of specified elements within the report.
+----------
+5->Carefully compare the provided medical assertion with corresponding details from the Clinical Trial Reports (CTRs), taking into account the specific medical jargon and situational context. Resolve any ambiguities or lack of information. Indicate 'CONFIRMED' if the assertion is consistent with the CTR findings, or 'DISCONFIRMED' if there is a discrepancy.
+----------
+6->Evaluate the veracity of the given statement using the data from the clinical trial report, and respond with 'YES' if the statement is accurate or 'NO' if it is not.
+----------
+7->Assess the accuracy of the provided medical assertion by comparing it with the specifics outlined in the Clinical Trial Reports (CTRs), taking into account medical jargon and context. Resolve any ambiguities or lack of information. Reply with 'CONFIRMED' if the assertion is consistent with the CTR details, or 'REFUTED' if it is not.
+----------
+8->Evaluate the statement's validity against the Clinical Trial Report (CTR) data, ensuring it aligns with the report's findings and does not conflict with the given descriptions. Respond with YES if the statement is corroborated by the CTR, or NO if it is not.
+----------

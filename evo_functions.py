@@ -412,6 +412,7 @@ def extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data',
                              use_retrieves_sentences_files = True,
                              retrieve_sentences = False,
                              save_retrieved_sentences = False,
+                             task_w_oracle_spans = True, # for the experience with the oracle spans the results in the task's paper are only reported with 2 classes, excluding the NotMentioned one. that's why this flag is needed
                              ):
 
     file_path = os.path.join(folder, f"{type}_w_retrieved.json")
@@ -426,52 +427,65 @@ def extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data',
     type += '.json'
     split = type
     data = json.load(open(f"{folder}/{split}"))
-    #print(f"stringaroni-->{folder}/{split}")
-    #print(f"data-->{data}")
-    #print(f"data.keys()-->{data.keys()}")
-
     # dictionary to store the statements
     statements = {}
     for i in data['labels']:
         statements[i] = data['labels'][i]['hypothesis']
 
-    #print(f"data['documents'][0].keys()-->{data['documents'][0].keys()}")
-    #print(f"data['documents'][0]['text']-->{data['documents'][0]['text']}")
-    #print(f"data['documents'][0]['annotation_sets'][0]['annotations']-->{data['documents'][0]['annotation_sets'][0]['annotations']}")
-    
     data_expanded = []
+    number_oracle_spans = []
+    just_labels = []
     for doc in data['documents']:
         text = doc['text']
         spans = doc['spans']
-        #print(f"text-->{text}")
 
-        #print(f"doc[0]['annotation_sets'][0]['annotations']-->{doc['annotation_sets'][0]['annotations']}")
         for stat_name in doc['annotation_sets'][0]['annotations']:
 
-            stat = statements[stat_name]
-            #print(f"stat-->{stat}")
-
             label = doc['annotation_sets'][0]['annotations'][stat_name]['choice']
+            # if only dealing with orcale spans skip data elements with NotMentioned label
+            if label == 'NotMentioned' and task_w_oracle_spans == True:
+                continue
 
-            # if only dealing with spans
-            if label != 'NotMentioned':
-                spans_index = doc['annotation_sets'][0]['annotations'][stat_name]['spans']
-                #print(f"label-->{label}")
+            stat = statements[stat_name]
+            spans_index = doc['annotation_sets'][0]['annotations'][stat_name]['spans']
+            # add to data_expanded, (each text has several statements associated with it)
+            temp = {}
+            temp['text'] = text
+            temp["statement"] = stat
+            temp["label"] = label
+            temp["spans"] = spans
+            temp["spans_index"] = spans_index
+            data_expanded.append(temp)
 
-                # add to data_expanded, (each text has several statements associated with it)
-                temp = {}
-                temp['text'] = text
-                temp["statement"] = stat
-                temp["label"] = label
-                temp["spans"] = spans
-                temp["spans_index"] = spans_index
-                data_expanded.append(temp)
-    
+            number_oracle_spans.append(len(spans_index))
+            just_labels.append(label)
+
+    number_oracle_spans = np.array(number_oracle_spans)
+
+    # Calculate average
+    average = np.mean(number_oracle_spans)
+
+    # Calculate percentiles
+    percentile_25 = np.percentile(number_oracle_spans, 25)
+    percentile_75 = np.percentile(number_oracle_spans, 75)
+    percentile_90 = np.percentile(number_oracle_spans, 90)
+    rounded_percentile_90 = round(percentile_90)
+
+    # Print the results
+    print(f"Average: {average}")
+    print(f"25th Percentile: {percentile_25}")
+    print(f"75th Percentile: {percentile_75}")
+    print(f"90th Percentile: {percentile_90}")
+    print(f"Rounded 90th Percentile: {rounded_percentile_90}")
+
+    from collections import Counter
+    print(f"Counter ting")
+    print(Counter(just_labels))
+
     if retrieve_sentences == True:
         prev_contract = 0
         sentences = []
         for i in tqdm(range(len(data_expanded)), desc='Retrieving...'):
-            
             
             if prev_contract != data_expanded[i]['text']:
                 for s in data_expanded[i]["spans"]:
@@ -479,18 +493,13 @@ def extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data',
                     #print(f"sentences-->{sentences}")
                 
                 sentences_embeddings = embed_texts(sentences)
-
             statement_embedding = embed_texts([data_expanded[i]['statement']])
-
             embeddings = np.vstack((statement_embedding, sentences_embeddings))
-            
             similarities = cos_sim(embeddings[:1], embeddings[1:])[0]
-            #print(f"similarities-->{similarities}")
             # Get indices of the 3 largest similarities
             top_indices = np.argsort(similarities)[-3:].tolist()[::-1]
             print(f"top_indices-->{top_indices}")
             # Retrieve the sentences corresponding to the top 3 indices
-            #print(f"len(sentences)-->{len(sentences)}")
             top_sentences = [sentences[idx] for idx in top_indices]
             print(f"statement-->{data_expanded[i]['statement']}")
             print(f"top_sentences-->{top_sentences}")

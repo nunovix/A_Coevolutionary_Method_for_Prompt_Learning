@@ -1,25 +1,17 @@
 import os
 # set available gpu's
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "5"
 
 
-from evo_functions import extract_SemEval_data, extract_lines_to_dict
+from evo_functions import extract_ContractNLI_data
 
-data = extract_SemEval_data(folder = 'DATASETS/SemEval_data', 
-                         type = 'gold_test', 
-                         extract_examples = False,
-                         use_retrieves_sentences_files = False,
-                         retrieve_sentences = True,
-                         save_retrieved_sentences = True)
-
-#gold_test
-#dev
-"""pp = extract_lines_to_dict("INITIAL_PROMPTS/SemEval_initial_population_prompts", 'SemEval', 
-                          task_w_self_reasoning=False,
-                          task_w_highlights=True,
-                          task_w_one_shot=False)
-
-"""
+data = extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data', 
+                                type = 'dev',
+                                use_retrieves_sentences_files = False,
+                                retrieve_sentences = False,
+                                save_retrieved_sentences = False,
+                                task_w_oracle_spans = False,
+                                )
 
 
 

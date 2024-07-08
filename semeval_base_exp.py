@@ -1,12 +1,12 @@
 import os
 # set available gpu's
-os.environ["CUDA_VISIBLE_DEVICES"] = "4"
+os.environ["CUDA_VISIBLE_DEVICES"] = "5"
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 import evo_functions as evo
 
-mutation_probs = [0.25, 0.5, 0.75]
-cross_probs = [0.25, 0.5, 0.75]
+mutation_probs = [0.75]
+cross_probs = [0.5, 0.75]
 sampling_T = [1.0, 5.0, 10.0]
 
 

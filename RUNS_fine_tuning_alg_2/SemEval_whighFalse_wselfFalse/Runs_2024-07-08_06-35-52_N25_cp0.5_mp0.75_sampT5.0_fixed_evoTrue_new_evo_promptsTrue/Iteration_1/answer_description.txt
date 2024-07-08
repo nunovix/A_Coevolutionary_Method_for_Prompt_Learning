@@ -1,0 +1,16 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->Indicate with either YES or NO whether the statement is valid based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Provide a YES or NO response indicating the statement's validity based on the information presented in the CTR descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+3->You MUST respond with either YES or NO to indicate if the statement is valid based on the Clinical Trial Report (CTR) information, having determined that the statement is supported by the CTR data, and that it doesn't contradict the provided descriptions.
+----------
+4->Evaluate the accuracy of the given statement against the data from the clinical trial report, and respond with 'YES' if it aligns or 'NO' if it does not.
+----------
+5->Evaluate the statement's validity against the Clinical Trial Report (CTR) data, ensuring it aligns with the report's findings and does not conflict with the given descriptions. Respond with YES if the statement is corroborated by the CTR, or NO if it is not.
+----------
+6->Evaluate the accuracy of the given statement by cross-referencing with the Clinical Trial Report (CTR) descriptions. Interpret medical terminology and context meticulously, resolving any uncertainties or information deficits. Respond with 'Affirmative' if the statement aligns with the CTR data, or 'Negative' if it does not.
+----------
+7->Evaluate the accuracy of the given statement by comparing the clinical trial report details with the corresponding Clinical Trial Report (CTR) descriptions. Interpret the medical terms and context, and resolve any uncertainties or missing information. Deliver a conclusive YES or NO answer.
+----------

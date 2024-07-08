@@ -105,8 +105,8 @@ Each subprompt is trying to explain the task of performing the mutation/crossove
 
 1. Base
 2. Shorter Prompt
-3. Exploratory
-4. Conservative
+3. Asks for words to be replaced by synonyms
+4. Asks for the order of the sentences to be changed
 5. Adds positive reinforcement
 
 ## Crossover Prompts

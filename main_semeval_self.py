@@ -24,5 +24,5 @@ best_prompt, best_score_iterations = evo.evo_alg_2(task = "SemEval",
                                                     fixed_evo_prompts=True,
                                                     do_test_eval = True,
                                                     new_evo_prompt_format=True,
-                                                    save=True,
+                                                    save=False,
                                                     )

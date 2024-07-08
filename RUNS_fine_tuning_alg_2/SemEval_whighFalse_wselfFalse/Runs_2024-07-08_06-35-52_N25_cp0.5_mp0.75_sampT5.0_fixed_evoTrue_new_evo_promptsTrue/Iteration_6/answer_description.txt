@@ -1,0 +1,16 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->You MUST respond with either YES or NO to indicate if the statement is valid based on the Clinical Trial Report (CTR) information, having determined that the statement is supported by the CTR data, and that it doesn't contradict the provided descriptions.
+----------
+2->Evaluate the statement's validity against the Clinical Trial Report (CTR) data, ensuring it aligns with the report's findings and descriptions without contradiction. Respond with a definitive YES or NO.
+----------
+3->Evaluate the statement's validity against the Clinical Trial Report (CTR) data, ensuring it aligns with the report's findings and does not conflict with the given descriptions. Respond with YES if the statement is corroborated by the CTR, or NO if it is not.
+----------
+4->Assess the accuracy of the given statement in relation to the Clinical Trial Report (CTR) data, confirming consistency with the report's conclusions and narrative. Provide a conclusive YES or NO.
+----------
+5->Assess the accuracy of the given statement by cross-referencing with the Clinical Trial Report (CTR) data, affirming consistency with the report's results and narrative. Conclude with a definitive YES or NO.
+----------
+6->Evaluate the Clinical Trial Report (CTR) to confirm whether the stated criteria are substantiated by the report's data, ensuring consistency with the report's conclusions and avoiding any contradictions with the provided descriptions. Respond with 'CONFIRMED' if the criteria are substantiated and the statement aligns with the CTR, or 'REFUTED' if the criteria are unsubstantiated or the statement contradicts the report's findings.
+----------
+7->Evaluate the statement's validity against the Clinical Trial Report (CTR) data, ensuring it aligns with the report's findings and descriptions without contradiction. Provide a conclusive YES or NO.
+----------

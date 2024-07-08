@@ -1,0 +1,18 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->You MUST respond with either YES or NO to indicate if the statement is valid based on the Clinical Trial Report (CTR) information, having determined that the statement is supported by the CTR data, and that it doesn't contradict the provided descriptions.
+----------
+2->Evaluate the statement's validity against the Clinical Trial Report (CTR) data, ensuring it aligns with the report's findings and descriptions without contradiction. Respond with a definitive YES or NO.
+----------
+3->Evaluate the statement's validity against the Clinical Trial Report (CTR) data, ensuring it aligns with the report's findings and does not conflict with the given descriptions. Respond with YES if the statement is corroborated by the CTR, or NO if it is not.
+----------
+4->Critically assess the given assertion in relation to the Clinical Trial Report (CTR) data. Confirm if the assertion is congruent with the CTR's conclusions and storyline. Reply with 'CONFIRMED' if the assertion matches the CTR, or 'CONTRADICTED' if it does not.
+----------
+5->Assess the accuracy of the given statement in relation to the Clinical Trial Report (CTR) data, confirming consistency with the report's conclusions and narrative. Provide a conclusive YES or NO.
+----------
+6->Assess the validity of the given statement by cross-referencing it with the Clinical Trial Report (CTR) data, ensuring consistency with the report's findings. Provide a definitive YES if the statement is substantiated by the CTR, or a definitive NO if it contradicts the report's information.
+----------
+7->Assess the accuracy of the provided statement by cross-referencing with the Clinical Trial Report (CTR) data. Confirm that the statement is consistent with the report's conclusions and descriptions, and respond with 'Affirmative' if the statement is substantiated by the CTR, or 'Negative' if it contradicts the report's findings.
+----------
+8->Assess the accuracy of the provided statement in relation to the Clinical Trial Report (CTR) data, confirming its consistency with the report's findings and descriptions. Respond with 'CONFIRMED' if the statement aligns with the CTR, or 'INCONSISTENT' if it contradicts the report's content.
+----------

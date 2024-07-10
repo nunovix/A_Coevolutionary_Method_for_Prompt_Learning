@@ -1,0 +1,18 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions, while interpreting the medical terminology and the context in both the report and the statement, addressing any ambiguities or gaps in the provided information.
+----------
+2->Evaluate the statement's validity based on the Clinical Trial Report (CTR) details, ensuring to verify the presence or absence of specified elements within the CTR documentation.
+----------
+3->Evaluate the statement's validity using the Clinical Trial Report (CTR) data, focusing on the presence or absence of specified details within the report.
+----------
+4->Evaluate the statement's validity based on the Clinical Trial Report (CTR) details, focusing on the presence or absence of specific mentions, interpreting medical terminology and context, and resolving any ambiguities or information gaps.
+----------
+5->Assess the accuracy of the given statement by cross-referencing with the Clinical Trial Report (CTR) documentation, confirming the inclusion or exclusion of the required elements.
+----------
+6->Assess the accuracy of the given statement by examining the Clinical Trial Report (CTR) for evidence supporting or refuting the mentioned details.
+----------
+7->Determine YES or NO if the Clinical Trial Report (CTR) substantiates the statement's validity, by meticulously evaluating the presence or absence of specified elements within the CTR's content.
+----------
+8->Assess the validity of the given statement by meticulously examining the Clinical Trial Report (CTR) for explicit mentions or the lack thereof, interpreting medical terminology and context, and addressing any ambiguities or information gaps.
+----------

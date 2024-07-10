@@ -1,0 +1,10 @@
+0->Confirm the statement's validity using the Clinical Trial Report (CTR) data, verifying the presence or absence of mentioned elements and ensuring no contradictions with the CTR descriptions.
+----------
+1->Confirm the statement's validity by comparing it with the Clinical Trial Report, ensuring all required elements are identified and reconciling any inconsistencies with the report's findings.
+----------
+2->Validate the statement's accuracy by cross-referencing it with the Clinical Trial Report (CTR) data, ensuring the statement aligns with the report's descriptions, identifies all necessary elements, and resolves any discrepancies.
+----------
+3->Confirm the statement's validity by comparing it with the Clinical Trial Report (CTR), verifying all relevant details, and addressing any inconsistencies with the report's findings.
+----------
+4->Confirm the statement's validity by comparing it with data from the Clinical Trial Report (CTR), ensuring it accurately reflects the report's content, includes all required details, and addresses any inconsistencies.
+----------

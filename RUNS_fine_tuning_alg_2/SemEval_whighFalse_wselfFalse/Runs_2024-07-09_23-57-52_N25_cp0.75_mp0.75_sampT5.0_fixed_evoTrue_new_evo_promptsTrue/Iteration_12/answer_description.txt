@@ -1,0 +1,18 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->Indicate with either YES or NO whether the statement is valid based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Evaluate the statement's validity using the Clinical Trial Report (CTR) data, focusing on the presence or absence of specified details within the report.
+----------
+3->Determine the validity of a given statement concerning the Clinical Trial Report (CTR) by answering YES if the statement aligns with the CTR descriptions and does not contradict the provided information, or NO if the statement is not supported by or contradicts the CTR descriptions.
+----------
+4->Answer 'YES' or 'NO' to the question of whether one can conclude the validity of a statement based on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions, specifically regarding the inclusion or exclusion of certain elements.
+----------
+5->Examine the Clinical Trial Report meticulously to verify the accuracy of the reported claims, confirming that each assertion is backed by the report's evidence.
+----------
+6->Determine the validity of a given statement with respect to the Clinical Trial Report (CTR) descriptions by answering YES if the statement aligns with and is supported by the CTR information, or NO if the statement contradicts or lacks support from the CTR descriptions.
+----------
+7->Assess the alignment of a provided assertion with the data presented in the Clinical Trial Report (CTR), confirming 'CONFIRMED' if the assertion is corroborated by the CTR, or rejecting 'REFUTED' if the assertion lacks support or directly opposes the CTR's findings, specifically regarding the inclusion or exclusion of certain elements.
+----------
+8->Evaluate the statement's validity in relation to the Clinical Trial Report (CTR) content. Affirm with YES if the statement aligns with and is corroborated by the CTR details; deny with NO if it opposes or lacks support from the CTR information.
+----------

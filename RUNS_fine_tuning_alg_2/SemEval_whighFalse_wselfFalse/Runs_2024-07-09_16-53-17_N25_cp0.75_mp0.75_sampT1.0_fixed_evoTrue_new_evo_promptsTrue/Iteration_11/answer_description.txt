@@ -1,0 +1,16 @@
+0->Evaluate the statement's validity based on the Clinical Trial Report (CTR) descriptions, providing a YES or NO response if the statement is supported by the CTR data and does not contradict the provided information.
+----------
+1->Evaluate the statement's validity in relation to the Clinical Trial Report (CTR) details. Affirm with YES if the statement aligns with and is corroborated by the CTR information; deny with NO if it opposes or lacks support from the CTR data.
+----------
+2->Assess the accuracy of the provided statement against the contents of the Clinical Trial Report (CTR). Confirm with 'YES' if the statement is consistent with and substantiated by the CTR details; reject with 'NO' if the statement contradicts or is unsupported by the CTR data.
+----------
+3->Assess the accuracy of the provided statement against the evidence presented in the Clinical Trial Report (CTR). Confirm with 'YES' if the statement is consistent with and substantiated by the CTR details; reject with 'NO' if the statement contradicts or is unsupported by the CTR findings.
+----------
+4->Evaluate the veracity of the subsequent assertion in relation to the contents of the Clinical Trial Report (CTR). Validate with 'CONFIRMED' if the assertion aligns with and is corroborated by the CTR evidence; deny with 'REFUTED' if the assertion diverges from or lacks support from the CTR findings.
+----------
+5->Evaluate the veracity of the subsequent assertion in relation to the Clinical Trial Report (CTR) contents. Validate with 'CONFIRMED' if the assertion aligns with and is corroborated by the CTR details; deny with 'REFUTED' if the assertion contradicts or lacks support from the CTR data.
+----------
+6->Assess the accuracy of the given statement against the Clinical Trial Report (CTR) data. Confirm with 'YES' if the statement is consistent with and substantiated by the CTR details; reject with 'NO' if the statement contradicts or is unsupported by the CTR information.
+----------
+7->Assess the accuracy of the given statement against the Clinical Trial Report (CTR) specifics. Confirm with 'YES' if the statement is consistent with and substantiated by the CTR data; deny with 'NO' if it contradicts or is unsupported by the CTR information. Validate with 'CONFIRMED' if the statement precisely mirrors and is substantiated by the CTR findings; deny with 'REFUTED' if the statement contradicts or is unsupported by the CTR data.
+----------

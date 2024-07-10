@@ -4,15 +4,15 @@ import shutil
 import pandas as pd
 
 # Path to the SemEval directory
-semeval_path = 'RUNS_fine_tuning/SemEval_whighFalse_wselfFalse'
-output_dir = 'hyperparameter_optimization_results_N10'
+semeval_path = 'RUNS_fine_tuning_alg_2/SemEval_whighFalse_wselfFalse'
+output_dir = 'RUNS_fine_tuning_alg_2/hyperparameter_optimization_results'
 images_dir = os.path.join(output_dir, 'images')
 
 # Create output directories if they don't exist
 os.makedirs(images_dir, exist_ok=True)
 
-# Regex pattern to extract hyperparameters from folder names
-pattern = re.compile(r'Runs_\d{4}-\d{2}-\d{2}_\d{2}-\d{2}-\d{2}_N(\d+)_cp([0-9.]+)_mp([0-9.]+)_sampT([0-9.]+)')
+# Updated regex pattern to extract hyperparameters from folder names
+pattern = re.compile(r'Runs_\d{4}-\d{2}-\d{2}_\d{2}-\d{2}-\d{2}_N(\d+)_cp([0-9.]+)_mp([0-9.]+)_sampT([0-9.]+).*')
 
 # List to store the extracted information
 data = []
@@ -163,7 +163,7 @@ def render_html_table(df, title):
     for _, row in df.iterrows():
         html += '<tr>'
         for col in df.columns:
-            if col == 'Image':
+            if col == 'Evolution of F1-score in the Dev Set':
                 if row[col]:
                     html += f'<td><img src="{row[col]}" width="300"></td>'
                 else:
@@ -182,7 +182,10 @@ def render_html_table(df, title):
 html_views = [
     ("hyperparameter_optimization_by_sampling_temperature.html", df_sorted.sort_values(by=['Sampling Temperature'])),
     ("hyperparameter_optimization_by_crossover_probability.html", df_sorted.sort_values(by=['Crossover Probability'])),
-    ("hyperparameter_optimization_by_mutation_probability.html", df_sorted.sort_values(by=['Mutation Probability']))
+    ("hyperparameter_optimization_by_mutation_probability.html", df_sorted.sort_values(by=['Mutation Probability'])),
+    ("hyperparameter_optimization_by_test_set_f1_score.html", df_sorted.sort_values(by=['Test Set F1 Score'], ascending=False)),
+    ("hyperparameter_optimization_by_number_of_improvements.html", df_sorted.sort_values(by=['Number of Improvements during the evolution'], ascending=False)),
+    ("hyperparameter_optimization_by_devset_f1.html", df_sorted.sort_values(by=['Dev Set Best F1 Score'], ascending=False))
 ]
 
 for filename, dataframe in html_views:
@@ -212,4 +215,3 @@ print("All HTML tables and summary views have been saved successfully.")
 # Print a sample HTML output
 sample_html = render_html_table(df_sorted.head(5), "Sample HTML Output")
 print(sample_html)
-

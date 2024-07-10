@@ -40,6 +40,7 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
                                                 w_self_reasoning=False,
                                                 w_one_shot=False,
                                                 w_highlight=False,
+                                                task_w_oracle_spans=True, #for contract nli
                                                 ):
 
     if task_name == 'SemEval':
@@ -49,8 +50,8 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
 
     elif task_name == 'ContractNLI':
         prompts_path = 'INITIAL_PROMPTS/ContractNLI'
-        data_expanded = extract_ContractNLI_data()
-        trie = get_Marisa_Trie(task_name, tokenizer)
+        data_expanded = extract_ContractNLI_data(task_w_oracle_spans=task_w_oracle_spans)
+        trie = get_Marisa_Trie(task_name, tokenizer, task_w_oracle_spans=task_w_oracle_spans)
 
     elif task_name == 'MEDIQASUM':
         prompts_path = 'INITIAL_PROMPTS/MEDIQASUM'
@@ -78,7 +79,8 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
                                                        task = task_name, 
                                                        task_w_one_shot=w_one_shot,
                                                        task_w_self_reasoning=w_self_reasoning,
-                                                       task_w_highlight = w_highlight
+                                                       task_w_highlight = w_highlight,
+                                                       task_w_oracle_spans=task_w_oracle_spans,
                                                        )
     #print(f"initial_population_prompts NEW-->{initial_population_prompts}")
     
@@ -145,7 +147,10 @@ def convert_text_mistral_phi3(input_string):
 def extract_lines_to_dict(folder_path, task, 
                           task_w_self_reasoning=False,
                           task_w_highlight=False,
-                          task_w_one_shot=False):
+                          task_w_one_shot=False,
+                          task_w_oracle_spans=True, # contract nli only
+                          task_w_full_contract=False,  # contract nli only
+                          ):
 
     #task = folder_path.split('_')[0]
     if task == 'SemEval':
@@ -162,9 +167,14 @@ def extract_lines_to_dict(folder_path, task,
             sys.exit()
 
     elif task == 'ContractNLI':
-        ordered_filenames = ['task_description', 'doc_description', 'statement_description', 'answer_description']
+        ordered_filenames = ['task_description']
+        if task_w_full_contract == True:
+            ordered_filenames += ['doc_description']
+
         if task_w_highlight == True:
-            ordered_filenames = ['task_description', 'doc_description', 'statement_description', 'highlight_description', 'answer_description']
+            ordered_filenames += ['highlight_description']
+
+        ordered_filenames += ['statement_description', 'answer_description']
 
     elif task == 'CSQA':
         ordered_filenames = ['task_description', 'answer_description']
@@ -415,12 +425,17 @@ def extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data',
                              task_w_oracle_spans = True, # for the experience with the oracle spans the results in the task's paper are only reported with 2 classes, excluding the NotMentioned one. that's why this flag is needed
                              ):
 
-    file_path = os.path.join(folder, f"{type}_w_retrieved.json")
+    file_path = os.path.join(folder, f"{type}_w_retrieved_task_w_oracle_spans_False.json")
     if use_retrieves_sentences_files == True and os.path.exists(file_path):
         # Load from a JSON file
         with open(file_path, 'r') as file:
             data_list = json.load(file)
         print(f"Used data with already retrieved examples from {file_path}")
+
+        # case where we only want yes or no cases
+        if task_w_oracle_spans == True:
+            data_list = [d for d in data_list if d['label'] != 'NotMentioned']
+
         return data_list
 
     type_no_extension = type
@@ -497,7 +512,7 @@ def extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data',
             embeddings = np.vstack((statement_embedding, sentences_embeddings))
             similarities = cos_sim(embeddings[:1], embeddings[1:])[0]
             # Get indices of the 3 largest similarities
-            top_indices = np.argsort(similarities)[-3:].tolist()[::-1]
+            top_indices = np.argsort(similarities)[-4:].tolist()[::-1]
             print(f"top_indices-->{top_indices}")
             # Retrieve the sentences corresponding to the top 3 indices
             top_sentences = [sentences[idx] for idx in top_indices]
@@ -507,7 +522,7 @@ def extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data',
             prev_contract = data_expanded[i]['text']
         
         if save_retrieved_sentences == True:
-            save_path = os.path.join(folder, f"{type_no_extension}_w_retrieved.json")
+            save_path = os.path.join(folder, f"{type_no_extension}_w_retrieved_task_w_oracle_spans_{task_w_oracle_spans}.json")
             with open(save_path, 'w') as file:
                 json.dump(data_expanded, file)
             print(f"Examples with retreival svaed to {save_path}")
@@ -1586,15 +1601,18 @@ def new_crossover_prompts(prompt_1, prompt_2, combination_prompt_dict, model, to
 # used to limit decoding options
 # given the task a set of possible answers is selected, which are then tokenized and used
 # to create the MarisaTrie object
-def get_Marisa_Trie(task, tokenizer):
+def get_Marisa_Trie(task, tokenizer, task_w_oracle_spans=True):
     if task == 'SemEval' or task == 'SemEval_self':
         # IR ALTERAR A FUNÇÃO QUE depois CONVERTE PARA AS OPTIONS REAIS
         possibilities = ["YES", "NO"]
     elif task == 'CSQA':
         possibilities = ['A', 'B', 'C', 'D', 'E']
     elif task == 'ContractNLI':
-        possibilities = ['UNMENTIONED', 'YES', 'NO']
-        possibilities = ['YES', 'NO']
+        if task_w_oracle_spans==True:
+            possibilities = ['YES', 'NO']
+        else:
+            possibilities = ['UNMENTIONED', 'YES', 'NO']
+        
     
     encoded_possibilities = []
     for pos in possibilities:
@@ -2957,6 +2975,7 @@ def evo_alg_2(task,
               do_test_eval = True,
               fixed_evo_prompts = True,
               new_evo_prompt_format = True,
+              task_w_oracle_spans = True, # contract nli related
               ): 
     
     # load model and tokenizer
@@ -2967,7 +2986,8 @@ def evo_alg_2(task,
                                                                                                                                                         tokenizer=tokenizer,
                                                                                                                                                         w_one_shot=task_w_one_shot,
                                                                                                                                                         w_self_reasoning=task_w_self_reasoning,
-                                                                                                                                                        w_highlight=task_w_highlight
+                                                                                                                                                        w_highlight=task_w_highlight,
+                                                                                                                                                        task_w_oracle_spans = task_w_oracle_spans,
                                                                                                                                                         )
     
     tam = []
@@ -3003,7 +3023,9 @@ def evo_alg_2(task,
                                    model=model, tokenizer=tokenizer, trie=trie, n_samples = data_size,
                                    task_w_one_shot = task_w_one_shot,
                                    task_w_highlight = task_w_highlight,
-                                   task_w_self_reasoning = task_w_self_reasoning)
+                                   task_w_self_reasoning = task_w_self_reasoning,
+                                   task_w_oracle_spans=task_w_oracle_spans,
+                                   )
 
     n_sub = len(population['prompts_dict'][list(population['prompts_dict'].keys())[0]])
 
@@ -3176,6 +3198,7 @@ def evo_alg_2(task,
                                                  task_w_one_shot = task_w_one_shot,
                                                  task_w_highlight = task_w_highlight,
                                                  task_w_self_reasoning = task_w_self_reasoning,
+                                                 task_w_oracle_spans=task_w_oracle_spans,
                                                  )
 
         if n_top ==0:
@@ -3309,7 +3332,8 @@ def evo_alg_3(task,
                                    model=model, tokenizer=tokenizer, trie=trie, n_samples = data_size,
                                    task_w_one_shot = task_w_one_shot,
                                    task_w_highlight = task_w_highlight,
-                                   task_w_self_reasoning = task_w_self_reasoning)
+                                   task_w_self_reasoning = task_w_self_reasoning,
+                                   task_w_oracle_spans=task_w_oracle_spans,)
 
     n_sub = len(population['prompts_dict'][list(population['prompts_dict'].keys())[0]])
 
@@ -3441,6 +3465,7 @@ def evo_alg_3(task,
                                                  task_w_one_shot = task_w_one_shot,
                                                  task_w_highlight = task_w_highlight,
                                                  task_w_self_reasoning = task_w_self_reasoning,
+                                                 task_w_oracle_spans=task_w_oracle_spans,
                                                  )
 
         if n_top == 0:

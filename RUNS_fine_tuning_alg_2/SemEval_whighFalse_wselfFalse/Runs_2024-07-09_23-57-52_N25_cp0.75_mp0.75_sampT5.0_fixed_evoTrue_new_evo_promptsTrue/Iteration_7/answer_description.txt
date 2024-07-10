@@ -1,0 +1,16 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->Indicate with either YES or NO whether the statement is valid based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Evaluate the statement's validity using the Clinical Trial Report (CTR) data, focusing on the presence or absence of specified details within the report.
+----------
+3->Determine the validity of a given statement concerning the Clinical Trial Report (CTR) by answering YES if the statement aligns with the CTR descriptions and does not contradict the provided information, or NO if the statement is not supported by or contradicts the CTR descriptions.
+----------
+4->Assess the accuracy of a statement related to the Clinical Trial Report (CTR) by responding with 'YES' if the statement is consistent with the CTR's content and does not present any contradictions, or 'NO' if the statement diverges from or opposes the CTR's content.
+----------
+5->Evaluate the validity of a given statement concerning the Clinical Trial Report (CTR) by answering YES if the statement aligns with the CTR descriptions and does not contradict the provided information, or NO if the statement is not supported by or contradicts the CTR descriptions.
+----------
+6->Carefully analyze the Clinical Trial Report (CTR) to ascertain if it substantiates the stated claim's validity, by evaluating the presence or absence of specified elements within the CTR's content, and issue a conclusive verdict on the claim's validity.
+----------
+7->Assess the Clinical Trial Report (CTR) to verify the accuracy of a specific claim by thoroughly reviewing the CTR for the inclusion or exclusion of particular details.
+----------

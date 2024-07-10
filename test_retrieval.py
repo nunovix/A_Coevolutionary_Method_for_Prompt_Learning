@@ -8,9 +8,9 @@ from evo_functions import extract_ContractNLI_data
 data = extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data', 
                                 type = 'dev',
                                 use_retrieves_sentences_files = False,
-                                retrieve_sentences = False,
-                                save_retrieved_sentences = False,
-                                task_w_oracle_spans = False,
+                                retrieve_sentences = True,
+                                save_retrieved_sentences = True,
+                                task_w_oracle_spans=False,
                                 )
 
 

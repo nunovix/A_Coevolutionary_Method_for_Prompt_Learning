@@ -1,5 +1,5 @@
 Generate the rephrased instruction without any additional explanation, keeping it short and simple.
-Considering all previous information, produce the resulting instruction, without giving additional any context or details about the reasoning process.
-Generate the result of rephrasing the instruction, carefully considering the task description and without explaining how the rephrasing was produced.
+Considering all previous information, produce the resulting instruction, without giving any additional context or details about the reasoning process.
+Generate the result of rewriting the instruction, carefully considering the task description and without explaining how the result was produced.
 Produce only the resulting instruction, without any additional context. 
 State the result of rephrasing the instruction according to the task description, omitting any further contextualization.

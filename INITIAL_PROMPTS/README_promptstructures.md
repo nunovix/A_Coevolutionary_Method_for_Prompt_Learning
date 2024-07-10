@@ -49,21 +49,30 @@
 
 # Contract NLI
 
-## Setup with only oracle spans
+## Setup with only oracle spans (for this variation in the dataset's paper the statements with label NOT MENTIONED are filtered out)
 
 - task descriprion
-- doc description (describes the NDA's sections)
+- highlight description (describes the NDA's oracle spans (parts))
 - ORACLE NDA SPANS (from dataset)
 - statement description
 - STATEMENT (from dataset)
-- answer description
+- answer description 2 labels
 
-## Setup with full NDA and oracle spans or retrived spans
+## Setup with full NDA 
 
 - task descriprion
-- full doc description (not added yet)
+- doc description
 - FULL NDA (from dataset)
-- ORACLE NDA SPANS or RETRIEVED NDA SPANS(from dataset)
+- statement description
+- STATEMENT (from dataset)
+- answer description 3 labels
+
+## Setup with full NDA and retrived spans
+
+- task descriprion
+- doc description
+- FULL NDA (from dataset)
+- RETRIEVED NDA SPANS(from dataset)
 - statement description
 - STATEMENT (from dataset)
 - answer description

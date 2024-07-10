@@ -1,5 +1,5 @@
-Now generate only the resulting instruction without any additional explanation.
-Now provide just the resulting instruction without extra details while keeping it short and simple.
-Only generate the resulting instruction now, without further explanation. Don't forget to add details that migths improve upon the original instruction.
-Only output the resulting instruction, without any additional context.
-Produce just the resulting instruction now, omitting any extra explanation. Don't forget to change the original instruction in a way that is better understood by a language model like yourself.
+Generate the rephrased instruction without any additional explanation, keeping it short and simple.
+Considering all previous information, produce the resulting instruction, without giving additional any context or details about the reasoning process.
+Generate the result of rephrasing the instruction, carefully considering the task description and without explaining how the rephrasing was produced.
+Produce only the resulting instruction, without any additional context. 
+State the result of rephrasing the instruction according to the task description, omitting any further contextualization.

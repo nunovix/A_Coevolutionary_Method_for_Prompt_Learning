@@ -1,0 +1,20 @@
+0->Confirm the statement's validity by consulting the Clinical Trial Report; reply with YES or NO.
+----------
+1->Verify the accuracy of the given statement by consulting the Clinical Trial Report.
+----------
+2->Ensure the statement's consistency with the Clinical Trial Report's findings and narrative.
+----------
+3->Confirm the statement's consistency with the Clinical Trial Report's findings and narrative. Answer YES or NO.
+----------
+4->Confirm the statement's correctness using the Clinical Trial Report.
+----------
+5->Ensure the statement aligns with the Clinical Trial Report's conclusions and storyline. Respond with YES or NO.
+----------
+6->Verify if the statement aligns with the Clinical Trial Report's conclusions and storyline. Respond with YES or NO.
+----------
+7->Ensure the Clinical Trial Report's findings and narrative are accurate and consistent.
+----------
+8->Ensure the Clinical Trial Report's content aligns with its findings; affirm 'YES' for consistency, 'NO' for discrepancies.
+----------
+9->Evaluate the Clinical Trial Report's fidelity to its findings and narrative; respond with 'CONFIRMED' if it aligns, 'REJECTED' if it does not.
+----------

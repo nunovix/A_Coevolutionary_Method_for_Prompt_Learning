@@ -1,0 +1,20 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->Indicate with either YES or NO whether the statement is valid based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->You MUST respond with either YES or NO to indicate if the statement is valid based on the Clinical Trial Report (CTR) information, having determined that the statement is supported by the CTR data, and that it doesn't contradict the provided descriptions.
+----------
+3->Cross-reference the given medical statement with the Clinical Trial Report (CTR) to verify its validity, resolving ambiguities and ensuring accurate interpretation of medical terminology, numeric data, and qualifiers. Respond with 'YES' if the statement aligns with the CTR, or 'NO' if it contradicts.
+----------
+4->Answer YES or NO to determine the validity of the statement based on the Clinical Trial Report (CTR) information, ensuring that the statement is supported by the CTR data and does not contradict the provided descriptions.
+----------
+5->Evaluate the medical statement's accuracy against the Clinical Trial Report, resolving ambiguities and interpreting medical terminology, figures, and qualifiers accurately. Answer 'YES' if it aligns or 'NO' if it contradicts.
+----------
+6->Cross-check the medical assertion with the Clinical Trial Report to confirm its accuracy, clarifying any uncertainties and interpreting medical terms, numbers, and qualifiers correctly. Answer 'YES' if it matches the CTR, or 'NO' if it does not.
+----------
+7->Cross-check the medical statement against the Clinical Trial Report to confirm its accuracy, clarify any uncertainties, and correctly understand medical terms, numbers, and qualifiers. Respond with 'YES' if it matches the report, or 'NO' if it doesn't.
+----------
+8->Assess the medical statement's alignment with the Clinical Trial Report, resolving ambiguities and accurately interpreting medical terminology, figures, and qualifiers. Answer 'YES' if it matches or 'NO' if it does not.
+----------
+9->Cross-check the medical statement against the Clinical Trial Report to confirm its accuracy, clarifying any uncertainties and interpreting medical terms, numbers, and qualifiers correctly. Answer 'YES' if it matches the report, or 'NO' if it doesn't.
+----------

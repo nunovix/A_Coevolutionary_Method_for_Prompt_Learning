@@ -1,0 +1,12 @@
+0->Answer with YES or NO to the question of whether one can conclude the validity of the statement with basis on the Non-Disclosure Agreement (NDA) information.
+----------
+1->Determine the validity of the statement in relation to the Non-Disclosure Agreement (NDA) by interpreting the legal terminology and context. Provide a YES or NO response, ensuring the statement is fully supported by the NDA.
+----------
+2->You MUST respond with either YES or NO to indicate whether it is possible to state that the statement is valid based on the information provided in the Non-Disclosure Agreement (NDA). For the answer to be YES, the statement must be fully supported by the NDA.
+----------
+3->Assess the non-disclosure agreement's terms for accuracy and clarity, resolving any uncertainties or missing details.
+----------
+4->Confirm the legal statement's validity with YES or NO.
+----------
+5->Evaluate the validity of the legal statement by interpreting the non-disclosure agreement's legal terminology and context, addressing any ambiguities or information gaps.
+----------

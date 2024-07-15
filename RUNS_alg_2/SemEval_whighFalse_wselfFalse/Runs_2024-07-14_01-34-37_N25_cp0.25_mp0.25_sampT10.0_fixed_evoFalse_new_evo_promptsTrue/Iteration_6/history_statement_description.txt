@@ -1,0 +1,18 @@
+0->initial
+----------
+1->copy of [3]  from iteration 0
+----------
+2->copy of [1] followed by mutation using mut prompt {'task_description': 4, 'instruction_description': 3, 'answer_description': 4} from iteration 0
+----------
+3->crossover between [2] and [4] using cross prompt {'task_description': 4, 'instruction_description': 1, 'answer_description': 3}  from iteration 2
+----------
+4->crossover between [2] and [0] using cross prompt {'task_description': 3, 'instruction_description': 0, 'answer_description': 4}  from iteration 5
+----------
+5->copy of [2]  from iteration 5
+----------
+6->copy of [0] followed by mutation using mut prompt {'task_description': 3, 'instruction_description': 0, 'answer_description': 1} from iteration 5
+----------
+7->copy of [1] followed by mutation using mut prompt {'task_description': 2, 'instruction_description': 4, 'answer_description': 2} from iteration 5
+----------
+8->copy of [0]  from iteration 5
+----------

@@ -1,0 +1,8 @@
+0->Check the statement's validity based on the clinical trial report data, providing a YES or NO response.
+----------
+1->Evaluate the validity of the given statement by examining the Clinical Trial Report (CTR) information. Ensure that your assessment considers the presence or absence of relevant mentions within the CTR descriptions. Provide a definitive YES or NO response to affirm or negate the statement's validity.
+----------
+2->Confirm the statement's accuracy using the clinical trial report data; respond with YES or NO.
+----------
+3->Evaluate the accuracy of the given assertion by examining the relevant data from the clinical trial documentation, and respond with either 'Affirmative' or 'Negative'.
+----------

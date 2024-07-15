@@ -42,6 +42,7 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
                                                 w_highlight=False, # for semeval and contract nli
                                                 task_w_oracle_spans=False, #for contract nli
                                                 task_w_full_contract=False,  #for contract nli
+                                                task_w_2_labels = True, #for contract nli
                                                 ):
 
     if task_name == 'SemEval':
@@ -51,8 +52,8 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
 
     elif task_name == 'ContractNLI':
         prompts_path = 'INITIAL_PROMPTS/ContractNLI'
-        data_expanded = extract_ContractNLI_data(task_w_oracle_spans=task_w_oracle_spans)
-        trie = get_Marisa_Trie(task_name, tokenizer, task_w_oracle_spans=task_w_oracle_spans)
+        data_expanded = extract_ContractNLI_data(task_w_2_labels=task_w_2_labels)
+        trie = get_Marisa_Trie(task_name, tokenizer, task_w_2_labels=task_w_2_labels)
 
     elif task_name == 'MEDIQASUM':
         prompts_path = 'INITIAL_PROMPTS/MEDIQASUM'
@@ -81,8 +82,8 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
                                                        task_w_one_shot=w_one_shot,
                                                        task_w_self_reasoning=w_self_reasoning,
                                                        task_w_highlight = w_highlight,
-                                                       task_w_oracle_spans = task_w_oracle_spans,
                                                        task_w_full_contract = task_w_full_contract,
+                                                       task_w_2_labels = task_w_2_labels
                                                        )
     #print(f"initial_population_prompts NEW-->{initial_population_prompts}")
     
@@ -132,7 +133,7 @@ def convert_text_mistral_phi3(input_string):
     system_part_index = content.find('\n')
     
     # Create the message dictionary
-    phi_format = f"<s> <|system|>\n{content[:system_part_index]}<|end|>\n<|user|>\n{content[system_part_index+2:]}<|end|>\n<|assistant|>{input_string[end_index+7:]}"
+    phi_format = f"<s> <|system|>\n{content[:system_part_index]}<|end|>\n<|user|>\n{content[system_part_index+1:]}<|end|>\n<|assistant|>{input_string[end_index+7:]}"
     #phi_format = f"<|system|>\n{content[:system_part_index]}<|end|>\n<|user|>\n{content[system_part_index+2:]}<|end|>\n<|assistant|>{input_string[end_index+7:]}"
     #phi_format = f"<s> <|user|>\n{content}<|end|>\n<|assistant|>{input_string[end_index+7:]}"
     #phi_format = f"<|user|>\n{content}<|end|>\n<|assistant|>{input_string[end_index+7:]}"
@@ -150,8 +151,8 @@ def extract_lines_to_dict(folder_path, task,
                           task_w_self_reasoning=False,
                           task_w_one_shot=False,
                           task_w_highlight=False, # semeval and contract_nli
-                          task_w_oracle_spans=False, # contract_nli only
                           task_w_full_contract=False,  # contract_nli only
+                          task_w_2_labels = True,  # contract_nli only
                           ):
 
     #task = folder_path.split('_')[0]
@@ -172,10 +173,10 @@ def extract_lines_to_dict(folder_path, task,
         ordered_filenames = ['task_description']
         if task_w_full_contract == True:
             ordered_filenames += ['doc_description']
-        if task_w_highlight == True  or task_w_oracle_spans == True:
+        if task_w_highlight == True:
             ordered_filenames += ['highlight_description']
         ordered_filenames += ['statement_description']
-        if task_w_oracle_spans == True:
+        if task_w_2_labels == True:
             ordered_filenames += ['answer_description_2_labels']
         else:
             ordered_filenames += ['answer_description_3_labels']
@@ -425,12 +426,12 @@ def extract_CSQA_data(file_path = 'DATASETS/CSQA_data', type='dev'):
 def extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data', 
                              type = 'dev',
                              use_retrieves_sentences_files = True,
-                             retrieve_sentences = False,
-                             save_retrieved_sentences = False,
-                             task_w_oracle_spans = True, # for the experience with the oracle spans the results in the task's paper are only reported with 2 classes, excluding the NotMentioned one. that's why this flag is needed
+                             retrieve_sentences = True,
+                             save_retrieved_sentences = True,
+                             task_w_2_labels = True, # for the experience with the oracle spans the results in the task's paper are only reported with 2 classes, excluding the NotMentioned one. that's why this flag is needed
                              ):
 
-    file_path = os.path.join(folder, f"{type}_w_retrieved_task_w_oracle_spans_False.json")
+    file_path = os.path.join(folder, f"{type}_w_retrieved_task_w_2_labels_False.json")
     if use_retrieves_sentences_files == True and os.path.exists(file_path):
         # Load from a JSON file
         with open(file_path, 'r') as file:
@@ -438,7 +439,7 @@ def extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data',
         print(f"Used data with already retrieved examples from {file_path}")
 
         # case where we only want yes or no cases
-        if task_w_oracle_spans == True:
+        if task_w_2_labels == True:
             data_list = [d for d in data_list if d['label'] != 'NotMentioned']
 
         return data_list
@@ -462,10 +463,6 @@ def extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data',
         for stat_name in doc['annotation_sets'][0]['annotations']:
 
             label = doc['annotation_sets'][0]['annotations'][stat_name]['choice']
-            # if only dealing with orcale spans skip data elements with NotMentioned label
-            if label == 'NotMentioned' and task_w_oracle_spans == True:
-                continue
-
             stat = statements[stat_name]
             spans_index = doc['annotation_sets'][0]['annotations'][stat_name]['spans']
             # add to data_expanded, (each text has several statements associated with it)
@@ -516,7 +513,7 @@ def extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data',
             statement_embedding = embed_texts([data_expanded[i]['statement']])
             embeddings = np.vstack((statement_embedding, sentences_embeddings))
             similarities = cos_sim(embeddings[:1], embeddings[1:])[0]
-            # Get indices of the 3 largest similarities
+            # Get indices of the 4 largest similarities
             top_indices = np.argsort(similarities)[-4:].tolist()[::-1]
             print(f"top_indices-->{top_indices}")
             # Retrieve the sentences corresponding to the top 3 indices
@@ -527,10 +524,22 @@ def extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data',
             prev_contract = data_expanded[i]['text']
         
         if save_retrieved_sentences == True:
-            save_path = os.path.join(folder, f"{type_no_extension}_w_retrieved_task_w_oracle_spans_{task_w_oracle_spans}.json")
+            save_path = os.path.join(folder, f"{type_no_extension}_w_retrieved_task_w_2_labels_{task_w_2_labels}.json")
             with open(save_path, 'w') as file:
                 json.dump(data_expanded, file)
             print(f"Examples with retreival svaed to {save_path}")
+
+    from collections import Counter
+    print(f"Counter ting")
+    print(Counter(just_labels))
+
+    # case where we only want yes or no cases
+    if task_w_2_labels == True:
+        data_expanded = [d for d in data_expanded if d['label'] != 'NotMentioned']
+
+    from collections import Counter
+    print(f"Counter ting")
+    print(Counter(just_labels))
 
     return data_expanded
 
@@ -1097,7 +1106,12 @@ def prompt_preds_contractnli_span(data_expanded,
                                   answer_description,
                                   model, 
                                   tokenizer, 
-                                  trie):
+                                  trie,
+                                  doc_description = " ",
+                                  task_w_highlight = True,
+                                  task_w_oracle_spans = True,
+                                  task_w_full_contract = True,
+                                  ):
     labels = []
     preds = []
     per_doc_labels = []
@@ -1107,45 +1121,70 @@ def prompt_preds_contractnli_span(data_expanded,
     single_doc_preds = []
     single_doc_labels = []
 
+    cached_text = 0
+
     for sample in tqdm(data_expanded, desc='Evaluating prompts for individual'):
         if sample['label'] != 'NotMentioned':
-            before_nda = f"""[INST]{task_description}\n\n{highlight_description}\n """
-            #print(f"before_nda-->{before_nda}")
-            # add spans
-            marker = 0
-            for i in sample['spans_index']:
-                before_nda += f"\n"
-                if marker == 0:
-                    before_nda += f""" " """
-                    marker = 1
-                
-                before_nda += f"{sample['text'][sample['spans'][i][0]:sample['spans'][i][1]]}"
+            before_nda = f"""[INST]{task_description}"""
+
+            if task_w_full_contract == True:
+                before_nda += f""" \n\n{doc_description}\n  "{sample['text']}" \n """ 
+
+            prompt_wo_statement_text = before_nda
+
+            if task_w_highlight == True:
+                before_nda += f""" \n\n{highlight_description}\n  """ 
+
+                if task_w_oracle_spans == True:
             
-            #print(f"before_nda-->{before_nda}")
-            before_nda += f""" " \n\n"""
-            prompt_wo_statement_text = f"{before_nda}{statement_description}\n\n"
-            prompt_text = f"""{prompt_wo_statement_text}"{sample['statement']}"\n\n{answer_description}[/INST]\n\nANSWER: """
+                    # add oracle spans
+                    marker = 0
+                    for i in sample['spans_index']:
+                        before_nda += f"\n"
+                        if marker == 0:
+                            before_nda += f""" " """
+                            marker = 1
+                        before_nda += f"{sample['text'][sample['spans'][i][0]:sample['spans'][i][1]]}"
+                # use retrieved
+                else:
+                    #print(f"howdy mate, we're using retrieved here, worry not handsome fella")
+                    marker = 0
+                    for span in sample['retrieved_sentences']:
+                        before_nda += f"\n"
+                        if marker == 0:
+                            before_nda += f""" " """
+                            marker = 1
+                        before_nda += f"{span}"
+                    
+                #print(f"before_nda-->{before_nda}")
+                before_nda += f""" " \n\n"""
+
+
+            before_nda = f"{before_nda}{statement_description}\n\n"
+            prompt_text = f"""{before_nda}"{sample['statement']}"\n\n{answer_description}[/INST]\n\nANSWER: """
             #print(f"prompt-->{prompt}")
 
-            cached_text = 0
+            # conversion necessary for phi3 model
+            if 'Phi3' in model_name_global:
+                prompt_text = convert_text_mistral_phi3(prompt_text)
+
+            
             #torch.cuda.empty_cache()
             labels.append(sample["label"])
 
             # cache part of input that does not change from prompt to prompt
             if prompt_wo_statement_text == cached_text:
-                #print(f"equal text")
+                #print(f"EQUAL EQUAL EQUAL")
                 pass
             else:
-                #print(f"new text")
+                #print(f"NEW NEW NEW")
                 cached_text = prompt_wo_statement_text
                 cached = tokenizer.encode(cached_text, return_tensors="pt")
                 with torch.inference_mode():
                     cached_outputs = model(cached, return_dict=True,)
                 cached_outputs.past_key_values = [[y[:, :, :-1] for y in x] for x in cached_outputs.past_key_values]
 
-            # conversion necessary for phi3 model
-            if 'Phi3' in model_name_global:
-                prompt_text = convert_text_mistral_phi3(prompt_text)
+            
 
             prompt = tokenizer.encode(prompt_text, return_tensors="pt", return_attention_mask=True).to('cuda')
 
@@ -1161,7 +1200,7 @@ def prompt_preds_contractnli_span(data_expanded,
             # Skip the input tokens by starting the slice at input_length
             new_tokens = output[0, prompt_length:]
 
-            print(f"tokenizer.decode(new_tokens)-->{tokenizer.decode(output[0])}")
+            #print(f"tokenizer.decode(new_tokens)-->{tokenizer.decode(output[0])}")
             pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
             #print(f"pred-->{pred}")
             #print(f"sample['label']-->{sample['label']}")
@@ -1614,19 +1653,19 @@ def new_crossover_prompts(prompt_1, prompt_2, combination_prompt_dict, model, to
 # used to limit decoding options
 # given the task a set of possible answers is selected, which are then tokenized and used
 # to create the MarisaTrie object
-def get_Marisa_Trie(task, tokenizer, task_w_oracle_spans=True):
+def get_Marisa_Trie(task, tokenizer, task_w_2_labels=True):
     if task == 'SemEval' or task == 'SemEval_self':
         # IR ALTERAR A FUNÇÃO QUE depois CONVERTE PARA AS OPTIONS REAIS
         possibilities = ["YES", "NO"]
     elif task == 'CSQA':
         possibilities = ['A', 'B', 'C', 'D', 'E']
     elif task == 'ContractNLI':
-        if task_w_oracle_spans==True:
+        if task_w_2_labels==True:
             possibilities = ['YES', 'NO']
         else:
             possibilities = ['NOT MENTIONED', 'YES', 'NO']
         
-    
+    print(f"Marisa Trie possibilities-->{possibilities}")
     encoded_possibilities = []
     for pos in possibilities:
         encoded_possibilities.append([tokenizer.bos_token_id] + tokenizer.encode(pos) + [tokenizer.eos_token_id])
@@ -1810,7 +1849,8 @@ def eval_pop(population,
              task_w_self_reasoning = False,
              task_w_highlight = False, # semevla and contract nli
              task_w_oracle_spans = False, # contract nli only
-             task_w_full_contract = False, # contract nli only 
+             task_w_full_contract = True, # contract nli only
+             task_w_2_labels = True, # contract nli only
              ): 
     prompts = population['prompts_dict']
     task = population['task']
@@ -1966,61 +2006,47 @@ def eval_pop(population,
         population['f1_scores'] = []
         population['confusion_matrix'] = []
         for i in tqdm(range(n_pop), desc = f"Evaluating prompt population"):
-
-            if task_w_highlight == True and task_w_oracle_spans == True and task_w_full_contract == False:
-                labels, predictions, per_doc_labels, per_doc_predictions = prompt_preds_contractnli_span(data_expanded[:n_samples], 
-                                                                                                     task_description = prompts['task_description'][population['prompts'][i]['task_description']], 
-                                                                                                     highlight_description = prompts['highlight_description'][population['prompts'][i]['highlight_description']], 
-                                                                                                     statement_description = prompts['statement_description'][population['prompts'][i]['statement_description']],
-                                                                                                     answer_description = prompts['answer_description_2_labels'][population['prompts'][i]['answer_description_2_labels']],
-                                                                                                     model = model,
-                                                                                                     tokenizer = tokenizer,
-                                                                                                     trie = trie,
-                                                                                                     )
-            elif task_w_highlight == False and task_w_oracle_spans == False and task_w_full_contract == True:
-                pass
-            elif task_w_highlight == True and task_w_oracle_spans == False and task_w_full_contract == True:
-                pass
             
-                                                                                                    
+            if task_w_2_labels == True:
+                labels, predictions, per_doc_labels, per_doc_predictions = prompt_preds_contractnli_span(data_expanded[:n_samples], 
+                                                                                                        task_description = prompts['task_description'][population['prompts'][i]['task_description']], 
+                                                                                                        highlight_description = prompts['highlight_description'][population['prompts'][i]['highlight_description']], 
+                                                                                                        statement_description = prompts['statement_description'][population['prompts'][i]['statement_description']],
+                                                                                                        answer_description = prompts['answer_description_2_labels'][population['prompts'][i]['answer_description_2_labels']],
+                                                                                                        model = model,
+                                                                                                        tokenizer = tokenizer,
+                                                                                                        trie = trie,
+                                                                                                        doc_description=prompts['doc_description'][population['prompts'][i]['doc_description']],
+                                                                                                        task_w_highlight = task_w_highlight,
+                                                                                                        task_w_oracle_spans = task_w_oracle_spans,
+                                                                                                        task_w_full_contract = task_w_full_contract,
+                                                                                                        )
+            else:
+                labels, predictions, per_doc_labels, per_doc_predictions = prompt_preds_contractnli_span(data_expanded[:n_samples], 
+                                                                                                        task_description = prompts['task_description'][population['prompts'][i]['task_description']], 
+                                                                                                        highlight_description = prompts['highlight_description'][population['prompts'][i]['highlight_description']], 
+                                                                                                        statement_description = prompts['statement_description'][population['prompts'][i]['statement_description']],
+                                                                                                        answer_description = prompts['answer_description_3_labels'][population['prompts'][i]['answer_description_3_labels']],
+                                                                                                        model = model,
+                                                                                                        tokenizer = tokenizer,
+                                                                                                        trie = trie,
+                                                                                                        doc_description=prompts['doc_description'][population['prompts'][i]['doc_description']],
+                                                                                                        task_w_highlight = task_w_highlight,
+                                                                                                        task_w_oracle_spans = task_w_oracle_spans,
+                                                                                                        task_w_full_contract = task_w_full_contract,
+                                                                                                        )
+
+        
+                                                                                                
             #preds, n_not_founds = convert_preds_from_yesno_contractnli(predictions)
-            preds, n_not_founds = convert_preds_from_yesno(predictions)
+            preds, _ = convert_preds_from_yesno(predictions)
             score = accuracy_score(y_true=labels, y_pred=preds)
             print(f"score-->{score}")
             population['eval'].append(score)
 
             # f-1 score for more detailed analysis
-            #f1_scores_per_class = f1_score(y_true=labels, y_pred=preds, average=None)
-
-            f1s = []
-            f1_c = 0
-            f1_e = 0
-            n_docs = len(per_doc_labels)
-            #print("PRINT")
-            #print(f"n_docs-->{n_docs}")
-            n_examples=0
-            for doc in range(n_docs):
-                doc_preds = per_doc_predictions[doc]
-                doc_labels = per_doc_labels[doc]
-                n_examples+=len(doc_labels)
-                #report = classification_report(y_true=labels, y_pred=preds)
-                f1_scores_per_class_per_doc = f1_score(y_true=doc_labels, y_pred=doc_preds, average=None, labels=['Contradiction', 'Entailment'])
-                #print(f"f1_scores_per_class_per_doc-->{f1_scores_per_class_per_doc}")
-                f1_c += f1_scores_per_class_per_doc[0]
-                #print(f"f1_c-->{f1_c}")
-                f1_e += f1_scores_per_class_per_doc[1]
-                #print(f"f1_e-->{f1_e}")
-            
-            f1_c = f1_c/n_docs
-            f1_e = f1_e/n_docs
-            f1_scores_per_class = [f1_c, f1_e]
-            #print(f"f1_scores_per_class-->{f1_scores_per_class}")
-
-            #print(f"n_examples-->{n_examples}")
-            #print(f"len(predictions)-->{len(predictions)}")
-
-            # Find unique class labels
             unique_labels = np.unique(np.concatenate((labels, preds)))
+            f1_scores_per_class = f1_score(y_true=labels, y_pred=preds, average=None, labels=unique_labels)
             # Pair each unique class label with its F1-score
             label_to_f1 = dict(zip(unique_labels, f1_scores_per_class))
             population['f1_scores'].append(label_to_f1)
@@ -2070,12 +2096,6 @@ def eval_pop(population,
                 new_P = []
                 for p in prompt:
                     if random.random() <= mutation_prob:
-                        #old mutation way
-                        #mutated = mutate_prompt(p, 
-                                    #mutation_prompt = prompts['mutation_prompts'][population['prompts'][i]['mutation_prompts']],
-                                    #model=model,
-                                    #tokenizer=tokenizer)
-                        # new mutation way
                         mutation_prompt_dict = {'task_description': prompts['task_description'][population['prompts'][i]['task_description']],
                                                 'instruction_description': prompts['instruction_description'][population['prompts'][i]['instruction_description']],
                                                 'answer_description': prompts['answer_description'][population['prompts'][i]['answer_description']]
@@ -2129,11 +2149,6 @@ def eval_pop(population,
                 new_P = []
                 for p_1, p_2 in zip(prompt_1, prompt_2):
                     if random.random() <= mutation_prob:
-                        #crosovered = crossover_prompts(p_1,
-                                                       #p_2,
-                                                       #combination_prompt=prompts['combination_prompts'][population['prompts'][i]['combination_prompts']],
-                                                       #model=model,
-                                                       #tokenizer=tokenizer)
                         crossover_prompt_dict = {'task_description': prompts['task_description'][population['prompts'][i]['task_description']],
                                                 'instruction_description': prompts['instruction_description'][population['prompts'][i]['instruction_description']],
                                                 'answer_description': prompts['answer_description'][population['prompts'][i]['answer_description']]
@@ -2494,6 +2509,8 @@ def create_population(task, prompts_dict, initial,
                       task_w_highlight = False,
                       task_w_self_reasoning = False,
                       task_w_oracle_spans = False,
+                      task_w_full_contract = True,
+                      task_w_2_labels = True,
                       ):
 
     prompts = []
@@ -2577,6 +2594,8 @@ def create_population(task, prompts_dict, initial,
                             task_w_self_reasoning = task_w_self_reasoning,
                             task_w_highlight = task_w_highlight,
                             task_w_oracle_spans = task_w_oracle_spans,
+                            task_w_full_contract=task_w_full_contract,
+                            task_w_2_labels=task_w_2_labels
                             )
 
     #print(f"depois de criar")
@@ -2692,7 +2711,7 @@ def test_eval(task,
               task_w_highlight = False
               ):
 
-
+    print(f"TEST")
     model, tokenizer = load_model(checkpoint = model_name, quantized = quantize_model_4bits)
 
     if task == 'MEDIQASUM':
@@ -3004,6 +3023,7 @@ def evo_alg_2(task,
               new_evo_prompt_format = True,
               task_w_oracle_spans = False, # contract nli only
               task_w_full_contract =  False, # contract nli only
+              task_w_2_labels = True, # contract nli only
               ): 
     
     # load model and tokenizer
@@ -3016,7 +3036,8 @@ def evo_alg_2(task,
                                                                                                                                                         w_self_reasoning=task_w_self_reasoning,
                                                                                                                                                         w_highlight=task_w_highlight,
                                                                                                                                                         task_w_oracle_spans = task_w_oracle_spans,
-                                                                                                                                                        task_w_full_contract = task_w_full_contract
+                                                                                                                                                        task_w_full_contract = task_w_full_contract,
+                                                                                                                                                        task_w_2_labels = task_w_2_labels,
                                                                                                                                                         )
 
 
@@ -3060,6 +3081,8 @@ def evo_alg_2(task,
                                    task_w_highlight = task_w_highlight,
                                    task_w_self_reasoning = task_w_self_reasoning,
                                    task_w_oracle_spans=task_w_oracle_spans,
+                                   task_w_full_contract = task_w_full_contract,
+                                   task_w_2_labels=task_w_2_labels,
                                    )
 
     n_sub = len(population['prompts_dict'][list(population['prompts_dict'].keys())[0]])
@@ -3143,14 +3166,14 @@ def evo_alg_2(task,
                     cross_prompt = {}
                     # wheter or not to randomly select mutation prompt from existing ones
                     if fixed_evo_prompts == False:
-
                         if new_evo_prompt_format == False:
                             cross_index = random.choice(list(range(len(evolutionary_prompts['combination_prompts']))))
                         else:
+                            cross_index = random.choice(list(range(len(new_cross_prompts['task_description']))))
                             for key in new_cross_prompts:
                                 #print(f"key-->{key}")
-                                cross_prompt_index[key] = random.choice(list(range(len(new_cross_prompts[key]))))
-                                cross_prompt[key] = new_cross_prompts[key][cross_prompt_index[key]]
+                                #cross_prompt_index[key] = random.choice(list(range(len(new_cross_prompts[key]))))
+                                cross_prompt[key] = new_cross_prompts[key][cross_index]
                         
                     else:
                         if new_evo_prompt_format == False:
@@ -3192,10 +3215,10 @@ def evo_alg_2(task,
                         if new_evo_prompt_format == False:
                             mut_index = random.choice(list(range(len(evolutionary_prompts['mutation_prompts']))))
                         else:
+                            mut_index = random.choice(list(range(len(new_mutation_prompts['task_description']))))
                             for key in new_mutation_prompts:
                                 #print(f"key-->{key}")
-                                mutation_prompt_index[key] = random.choice(list(range(len(new_mutation_prompts[key]))))
-                                mutation_prompt[key] = new_mutation_prompts[key][mutation_prompt_index[key]]
+                                mutation_prompt[key] = new_mutation_prompts[key][mut_index]
 
                     else:
                         if new_evo_prompt_format == False:
@@ -3234,6 +3257,8 @@ def evo_alg_2(task,
                                                  task_w_highlight = task_w_highlight,
                                                  task_w_self_reasoning = task_w_self_reasoning,
                                                  task_w_oracle_spans=task_w_oracle_spans,
+                                                 task_w_full_contract = task_w_full_contract,
+                                                 task_w_2_labels=task_w_2_labels,
                                                  )
 
         if n_top ==0:

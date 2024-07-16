@@ -15,6 +15,7 @@ from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
 from matplotlib.colors import to_rgba, to_hex
 from copy import deepcopy
+from collections import Counter
 
 # embbedings library used in retrieval
 from sentence_transformers import SentenceTransformer
@@ -495,7 +496,6 @@ def extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data',
     print(f"90th Percentile: {percentile_90}")
     print(f"Rounded 90th Percentile: {rounded_percentile_90}")
 
-    from collections import Counter
     print(f"Counter ting")
     print(Counter(just_labels))
 
@@ -789,8 +789,8 @@ def prompt_preds_semeval(data_expanded,
                                     prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
 
 
-        #print(f"SEMEVAL inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
-        #print(f"TRUE LABEL-->{sample['label']}")
+        print(f"SEMEVAL inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+        print(f"TRUE LABEL-->{sample['label']}")
 
         new_tokens = output[0, prompt_length:]
 
@@ -1124,111 +1124,110 @@ def prompt_preds_contractnli_span(data_expanded,
     cached_text = 0
 
     for sample in tqdm(data_expanded, desc='Evaluating prompts for individual'):
-        if sample['label'] != 'NotMentioned':
-            before_nda = f"""[INST]{task_description}"""
+        before_nda = f"""[INST]{task_description}"""
 
-            if task_w_full_contract == True:
-                before_nda += f""" \n\n{doc_description}\n  "{sample['text']}" \n """ 
+        if task_w_full_contract == True:
+            before_nda += f""" \n\n{doc_description}\n  "{sample['text']}" \n """ 
 
-            prompt_wo_statement_text = before_nda
+        prompt_wo_statement_text = before_nda
 
-            if task_w_highlight == True:
-                before_nda += f""" \n\n{highlight_description}\n  """ 
+        if task_w_highlight == True:
+            before_nda += f""" \n\n{highlight_description}\n  """ 
 
-                if task_w_oracle_spans == True:
-            
-                    # add oracle spans
-                    marker = 0
-                    for i in sample['spans_index']:
-                        before_nda += f"\n"
-                        if marker == 0:
-                            before_nda += f""" " """
-                            marker = 1
-                        before_nda += f"{sample['text'][sample['spans'][i][0]:sample['spans'][i][1]]}"
-                # use retrieved
-                else:
-                    #print(f"howdy mate, we're using retrieved here, worry not handsome fella")
-                    marker = 0
-                    for span in sample['retrieved_sentences']:
-                        before_nda += f"\n"
-                        if marker == 0:
-                            before_nda += f""" " """
-                            marker = 1
-                        before_nda += f"{span}"
-                    
-                #print(f"before_nda-->{before_nda}")
-                before_nda += f""" " \n\n"""
-
-
-            before_nda = f"{before_nda}{statement_description}\n\n"
-            prompt_text = f"""{before_nda}"{sample['statement']}"\n\n{answer_description}[/INST]\n\nANSWER: """
-            #print(f"prompt-->{prompt}")
-
-            # conversion necessary for phi3 model
-            if 'Phi3' in model_name_global:
-                prompt_text = convert_text_mistral_phi3(prompt_text)
-
-            
-            #torch.cuda.empty_cache()
-            labels.append(sample["label"])
-
-            # cache part of input that does not change from prompt to prompt
-            if prompt_wo_statement_text == cached_text:
-                #print(f"EQUAL EQUAL EQUAL")
-                pass
+            if task_w_oracle_spans == True:
+        
+                # add oracle spans
+                marker = 0
+                for i in sample['spans_index']:
+                    before_nda += f"\n"
+                    if marker == 0:
+                        before_nda += f""" " """
+                        marker = 1
+                    before_nda += f"{sample['text'][sample['spans'][i][0]:sample['spans'][i][1]]}"
+            # use retrieved
             else:
-                #print(f"NEW NEW NEW")
-                cached_text = prompt_wo_statement_text
-                cached = tokenizer.encode(cached_text, return_tensors="pt")
-                with torch.inference_mode():
-                    cached_outputs = model(cached, return_dict=True,)
-                cached_outputs.past_key_values = [[y[:, :, :-1] for y in x] for x in cached_outputs.past_key_values]
+                #print(f"howdy mate, we're using retrieved here, worry not handsome fella")
+                marker = 0
+                for span in sample['retrieved_sentences']:
+                    before_nda += f"\n"
+                    if marker == 0:
+                        before_nda += f""" " """
+                        marker = 1
+                    before_nda += f"{span}"
+                
+            #print(f"before_nda-->{before_nda}")
+            before_nda += f""" " \n\n"""
 
-            
 
-            prompt = tokenizer.encode(prompt_text, return_tensors="pt", return_attention_mask=True).to('cuda')
+        before_nda = f"{before_nda}{statement_description}\n\n"
+        prompt_text = f"""{before_nda}"{sample['statement']}"\n\n{answer_description}[/INST]\n\nANSWER: """
+        #print(f"prompt-->{prompt}")
 
-            prompt_length = prompt[0].shape[0]
-            #print(f"prompt_length-->{prompt_length}")
+        # conversion necessary for phi3 model
+        if 'Phi3' in model_name_global:
+            prompt_text = convert_text_mistral_phi3(prompt_text)
+
+        
+        #torch.cuda.empty_cache()
+        labels.append(sample["label"])
+
+        # cache part of input that does not change from prompt to prompt
+        if prompt_wo_statement_text == cached_text:
+            #print(f"EQUAL EQUAL EQUAL")
+            pass
+        else:
+            #print(f"NEW NEW NEW")
+            cached_text = prompt_wo_statement_text
+            cached = tokenizer.encode(cached_text, return_tensors="pt")
             with torch.inference_mode():
-                output = model.generate(prompt, past_key_values=cached_outputs.past_key_values, 
-                                    #pad_token_id=tokenizer.eos_token_id, 
-                                    max_new_tokens=6, use_cache=True,
-                                    prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
+                cached_outputs = model(cached, return_dict=True,)
+            cached_outputs.past_key_values = [[y[:, :, :-1] for y in x] for x in cached_outputs.past_key_values]
 
-            # Decode only the newly generated tokens
-            # Skip the input tokens by starting the slice at input_length
-            new_tokens = output[0, prompt_length:]
+        
 
-            #print(f"tokenizer.decode(new_tokens)-->{tokenizer.decode(output[0])}")
-            pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
-            #print(f"pred-->{pred}")
-            #print(f"sample['label']-->{sample['label']}")
+        prompt = tokenizer.encode(prompt_text, return_tensors="pt", return_attention_mask=True).to('cuda')
 
-            preds.append(pred)
+        prompt_length = prompt[0].shape[0]
+        #print(f"prompt_length-->{prompt_length}")
+        with torch.inference_mode():
+            output = model.generate(prompt, past_key_values=cached_outputs.past_key_values, 
+                                #pad_token_id=tokenizer.eos_token_id, 
+                                max_new_tokens=6, use_cache=True,
+                                prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
 
-            # to calculate f1 scores according to the paper (macro avg micro avgs per document)
-            if sample['text'] == doc:
-                single_doc_preds.append(pred)
-                single_doc_labels.append(sample["label"])
+        # Decode only the newly generated tokens
+        # Skip the input tokens by starting the slice at input_length
+        new_tokens = output[0, prompt_length:]
 
-            else:
-                doc = sample['text']
-                single_doc_preds, _ = convert_preds_from_yesno(single_doc_preds)
-                per_doc_preds.append(single_doc_preds)
-                per_doc_labels.append(single_doc_labels)
-                single_doc_preds = []
-                single_doc_labels = []
-                single_doc_preds.append(pred)
-                single_doc_labels.append(sample["label"])
-    
+        #print(f"INFERENCE CONTRACTNLI-->{tokenizer.decode(output[0])}")
+        pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
+        #print(f"pred-->{pred}")
+        #print(f"sample['label']-->{sample['label']}")
+
+        preds.append(pred)
+
+        # to calculate f1 scores according to the paper (macro avg micro avgs per document)
+        if sample['text'] == doc:
+            single_doc_preds.append(pred)
+            single_doc_labels.append(sample["label"])
+
+        else:
+            doc = sample['text']
+            single_doc_preds, _ = convert_preds_from_yesno(single_doc_preds)
+            per_doc_preds.append(single_doc_preds)
+            per_doc_labels.append(single_doc_labels)
+            single_doc_preds = []
+            single_doc_labels = []
+            single_doc_preds.append(pred)
+            single_doc_labels.append(sample["label"])
+
     single_doc_preds, _ = convert_preds_from_yesno(single_doc_preds)
     per_doc_preds.append(single_doc_preds)
     per_doc_labels.append(single_doc_labels)
 
-    predictions, _ = convert_preds_from_yesno(preds)
+    #predictions, _ = convert_preds_from_yesno(preds)
     
-    return labels, predictions, per_doc_labels, per_doc_preds #listas de dimensão (n_docs) 
+    return labels, preds, per_doc_labels, per_doc_preds #listas de dimensão (n_docs) 
 
 def extract_MEDIQASUM_data(folder_name='DATASETS/MEDIQASUM_data', 
                            type = 'valid', 
@@ -1552,7 +1551,7 @@ def new_mutate_prompt(prompt,
 
     new_tokens = output[0, prompt_length:]
     mutated = tokenizer.decode(new_tokens, skip_special_tokens=True)
-    #print(f"NEW MUTATE PROMPT)-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+    print(f"NEW MUTATE PROMPT)-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
 
     mutated = mutated.lstrip()
 
@@ -1640,7 +1639,7 @@ def new_crossover_prompts(prompt_1, prompt_2, combination_prompt_dict, model, to
 
     new_tokens = output[0, prompt_length:]
     combined = tokenizer.decode(new_tokens, skip_special_tokens=True)
-    #print(f"NEW CROSSOVER PROMPT)-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+    print(f"NEW CROSSOVER PROMPT)-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
 
     combined = combined.lstrip()
 
@@ -1804,7 +1803,7 @@ def convert_preds_from_yesno(preds):
             preds_2.append('Entailment')
         elif i == 'NO' or i == 'No' or i == 'no' or i == 'Contradiction':
             preds_2.append('Contradiction')
-        elif i == 'NOT MENTIONED':
+        elif i == 'NOT MENTIONED' or i == 'NotMentioned':
             preds_2.append('NotMentioned')
         else:
             print('olha as labels')
@@ -2039,7 +2038,10 @@ def eval_pop(population,
         
                                                                                                 
             #preds, n_not_founds = convert_preds_from_yesno_contractnli(predictions)
+            print(f"\n\n Counter(labels)-->{Counter(labels)}")
+            print(f"Counter(predictions)-->{Counter(predictions)}")
             preds, _ = convert_preds_from_yesno(predictions)
+            print(f"Counter(preds)-->{Counter(preds)}")
             score = accuracy_score(y_true=labels, y_pred=preds)
             print(f"score-->{score}")
             population['eval'].append(score)
@@ -2192,10 +2194,17 @@ def create_root_folder(task,
                        task_w_highlight = 'nd',
                        fixed_evo_prompts = 'nd',
                        new_evo_prompts = 'nd',
+                       task_w_oracle_spans = 'nd', # contract nli only
+                       task_w_full_contract =  'nd', # contract nli only
+                       task_w_2_labels = 'nd', # contract nli only
                        ):
     # Format: Runs_YYYY-MM-DD_HH-MM-SS
     if alg=='alg_2':
-        folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
+        if task == 'SemEval':
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
+        elif task == 'ContractNLI':
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
+
     elif alg=='alg_3':
         folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_op{operation_prob}_mop{mutation_operation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
     elif 'hyper' in task:
@@ -2864,7 +2873,7 @@ def evo_alg(task, initial_prompts, evolutionary_prompts,
     elif task == "CSQA":
         data_expanded = extract_CSQA_data(type = eval_data)
     elif task == "ContractNLI":
-        data_expanded = extract_ContractNLI_data(type = eval_data)
+        data_expanded = extract_ContractNLI_data(type = 'dev')
 
     if data_size == 0 or data_size > len(data_expanded):
         data_size = len(data_expanded)
@@ -3064,7 +3073,10 @@ def evo_alg_2(task,
                                          task_w_self_reasoning = task_w_self_reasoning,
                                          task_w_highlight = task_w_highlight,
                                          fixed_evo_prompts = fixed_evo_prompts,
-                                         new_evo_prompts=new_evo_prompt_format
+                                         new_evo_prompts=new_evo_prompt_format,
+                                         task_w_oracle_spans = task_w_oracle_spans, # contract nli only
+                                         task_w_full_contract =  task_w_full_contract, # contract nli only
+                                         task_w_2_labels = task_w_2_labels, # contract nli only
                                          )
         print(f"Root folder created: {root_folder}")
 

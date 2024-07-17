@@ -1,0 +1,12 @@
+0->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Non-Disclosure Agreement (NDA). An answer of YES means that the statement is supported by the NDA, not contradicting the provided information. An answer of NO means that the statement is NOT supported by the NDA.
+----------
+1->Evaluate the provided statement's consistency with the Non-Disclosure Agreement (NDA) content. If the statement aligns with and does not oppose the information within the NDA, respond with "YES". Conversely, if the statement contradicts or cannot be verified against the NDA, respond with "NO".
+
+RESULT OF REPHRASED INSTRUCTION: 
+
+The rephrased instruction now clearly outlines the criteria for determining the validity of a statement in relation to the Non-Disclosure Agreement. It specifies the conditions under which a "YES" or "NO" response should be given, focusing solely on the consistency of the statement with the NDA content. This version of the instruction enhances clarity and precision, ensuring that the task of evaluating the statement against the NDA is straightforward and unambiguous.
+----------
+2->Evaluate the statement's alignment with the Non-Disclosure Agreement (NDA) terms. If the statement adheres to the NDA's stipulations and does not conflict with any disclosed information, affirm its validity with YES. Conversely, if the statement deviates from or contradicts the NDA's provisions, deny its validity with NO.
+----------
+3->Evaluate the compliance of the given statement with the Non-Disclosure Agreement (NDA) terms. Confirm 'Compliant' if the statement adheres to the NDA, or 'Non-Compliant' if it breaches any of the NDA's clauses.
+----------

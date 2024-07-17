@@ -1122,7 +1122,7 @@ def prompt_preds_contractnli_span(data_expanded,
     single_doc_labels = []
 
     cached_text = 0
-
+    print_once_flag = 0
     for sample in tqdm(data_expanded, desc='Evaluating prompts for individual'):
         before_nda = f"""[INST]{task_description}"""
 
@@ -1199,7 +1199,9 @@ def prompt_preds_contractnli_span(data_expanded,
         # Skip the input tokens by starting the slice at input_length
         new_tokens = output[0, prompt_length:]
 
-        #print(f"INFERENCE CONTRACTNLI-->{tokenizer.decode(output[0])}")
+        if print_once_flag == 0:
+            print(f"INFERENCE CONTRACTNLI-->{tokenizer.decode(output[0])}")
+            print_once_flag = 1
         pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
         #print(f"pred-->{pred}")
         #print(f"sample['label']-->{sample['label']}")
@@ -2005,6 +2007,7 @@ def eval_pop(population,
         population['f1_scores'] = []
         population['confusion_matrix'] = []
         for i in tqdm(range(n_pop), desc = f"Evaluating prompt population"):
+            print(f"CHAVES-->{population['prompts_dict'].keys()}")
             
             if task_w_2_labels == True:
                 labels, predictions, per_doc_labels, per_doc_predictions = prompt_preds_contractnli_span(data_expanded[:n_samples], 
@@ -2603,8 +2606,8 @@ def create_population(task, prompts_dict, initial,
                             task_w_self_reasoning = task_w_self_reasoning,
                             task_w_highlight = task_w_highlight,
                             task_w_oracle_spans = task_w_oracle_spans,
-                            task_w_full_contract=task_w_full_contract,
-                            task_w_2_labels=task_w_2_labels
+                            task_w_full_contract = task_w_full_contract,
+                            task_w_2_labels = task_w_2_labels
                             )
 
     #print(f"depois de criar")
@@ -2717,7 +2720,10 @@ def test_eval(task,
               retrieve_examples = False, # use retrieval with embedding model instead of random for 1-shot learning
               task_w_self_reasoning = False,
               task_w_one_shot = False,
-              task_w_highlight = False
+              task_w_highlight = False,
+              task_w_oracle_spans= False, # contract nli only
+              task_w_full_contract = True, # contract nli only
+              task_w_2_labels = True, # contract nli only
               ):
 
     print(f"TEST")
@@ -2729,7 +2735,14 @@ def test_eval(task,
         trie = get_Marisa_Trie(task, tokenizer)
     
     best_path = os.path.join(RUN_folder_path, 'Iteration_best/')    
-    best_prompts = extract_lines_to_dict(best_path, task=task)
+    best_prompts = extract_lines_to_dict(best_path, 
+                                         task=task,
+                                         task_w_one_shot=task_w_one_shot,
+                                         task_w_self_reasoning=task_w_self_reasoning,
+                                         task_w_highlight=task_w_highlight,
+                                         task_w_full_contract=task_w_full_contract,
+                                         task_w_2_labels=task_w_2_labels
+                                         )
     #print(f"best_prompts-->{best_prompts}")
 
     if task == 'SemEval' or task == 'SemEval_self':
@@ -2748,7 +2761,13 @@ def test_eval(task,
                                            data_expanded = data_expanded, 
                                            model=model, tokenizer=tokenizer, trie=trie, n_samples=0, only_rouge=False, 
                                            save_preds4semeval_test = save_preds4semeval_test,
-                                           folder = RUN_folder_path+'/Iteration_best/')
+                                           folder = RUN_folder_path+'/Iteration_best/',
+                                           task_w_one_shot = task_w_one_shot,
+                                           task_w_highlight = task_w_highlight,
+                                           task_w_self_reasoning = task_w_self_reasoning,
+                                           task_w_oracle_spans=task_w_oracle_spans,
+                                           task_w_full_contract = task_w_full_contract,
+                                           task_w_2_labels=task_w_2_labels,)
     
 
     score = best_pop['eval']
@@ -3327,8 +3346,17 @@ def evo_alg_2(task,
             create_plots_from_RUNS_folder(root_folder)
 
     if do_test_eval == True:
-        print(f"test set evaluation")
-        test_eval(task=task, RUN_folder_path = root_folder, model_name=model_name)
+        print(f"IN TEST SET EVAL")
+        test_eval(task=task, 
+                  RUN_folder_path = root_folder, 
+                  model_name=model_name,
+                  task_w_one_shot = task_w_one_shot,
+                  task_w_highlight = task_w_highlight,
+                  task_w_self_reasoning = task_w_self_reasoning,
+                  task_w_oracle_spans=task_w_oracle_spans, # contract nli only
+                  task_w_full_contract = task_w_full_contract, # contract nli only
+                  task_w_2_labels=task_w_2_labels, # contract nli only
+                  )        
 
     return best_pop, best_score_iterations
 

@@ -5,6 +5,7 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 import evo_functions as evo
 
+"""
 # baseline, sem hall of fame, só com mut, não guiada
 best_prompt, best_score_iterations = evo.evo_alg_2(task = "ContractNLI", 
                                                             model_name = "microsoft/Phi-3-mini-128k-instruct",
@@ -89,4 +90,3 @@ best_prompt, best_score_iterations = evo.evo_alg_2(task = "ContractNLI",
                                                             do_test_eval = True,
                                                             save = True,
                                                             )
-"""

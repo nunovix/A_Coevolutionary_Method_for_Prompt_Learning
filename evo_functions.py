@@ -792,7 +792,7 @@ def prompt_preds_semeval(data_expanded,
         if flag ==0:
             print(f"SEMEVAL inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
             print(f"TRUE LABEL-->{sample['label']}")
-            falg = 1
+            flag = 1
 
         new_tokens = output[0, prompt_length:]
 
@@ -1203,7 +1203,7 @@ def prompt_preds_contractnli_span(data_expanded,
 
         if print_once_flag == 0:
             print(f"INFERENCE CONTRACTNLI-->{tokenizer.decode(output[0])}")
-            sprint(f"sample['label']-->{sample['label']}")
+            print(f"sample['label']-->{sample['label']}")
             print_once_flag = 1
         pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
         #print(f"pred-->{pred}")

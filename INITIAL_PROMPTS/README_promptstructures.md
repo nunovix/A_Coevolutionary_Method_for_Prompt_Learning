@@ -49,33 +49,36 @@
 
 # Contract NLI
 
-## Setup with only oracle spans (for this variation in the dataset's paper the statements with label NOT MENTIONED are filtered out)
+## Setup with full NDA + oracle spans (2 labels)
 
 - task descriprion
-- highlight description (describes the NDA's oracle spans (parts))
+- doc description
+- FULL NDA (from dataset)
+- highlight description
 - ORACLE NDA SPANS (from dataset)
 - statement description
 - STATEMENT (from dataset)
-- answer description 2 labels
+- answer description (2 labels)
 
-## Setup with full NDA 
-
-- task descriprion
-- doc description
-- FULL NDA (from dataset)
-- statement description
-- STATEMENT (from dataset)
-- answer description 3 labels
-
-## Setup with full NDA and retrived spans
+## Setup with full NDA + retrieved spans (2 labels)
 
 - task descriprion
 - doc description
 - FULL NDA (from dataset)
-- RETRIEVED NDA SPANS(from dataset)
+- RETRIEVED NDA SPANS (using the model from hf Alibaba-NLP/gte-large-en-v1.5)
 - statement description
 - STATEMENT (from dataset)
-- answer description
+- answer description (2 labels)
+
+## Setup with full NDA + retrieved spans (3 labels)
+
+- task descriprion
+- doc description
+- FULL NDA (from dataset)
+- 4 RETRIEVED NDA SPANS (using the model from hf Alibaba-NLP/gte-large-en-v1.5)
+- statement description
+- STATEMENT (from dataset)
+- answer description (3 labels)
 
 # MEDIQA SUM
 
@@ -85,7 +88,7 @@
 - dialogue description
 - DIALOGUE (from dataset)
 - example description
-- RETRIEVED CLINICAL NOTE (from dataset)
+- RETRIEVED CLINICAL NOTE (using the model from hf Alibaba-NLP/gte-large-en-v1.5 on the dialogues)
 - answer description
 
 # CSQA (Not relevant for now)

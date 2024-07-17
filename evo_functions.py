@@ -1333,11 +1333,17 @@ def similar_example_retrieval(sample, data_expanded, filter_by_dataset=True):
     print(f"RETRIEVAL - similar_example_retrieval function - ->similarity_score-->{similarity_score}")
     return notes_list[closest_index]
 
-def prompt_preds_mediqasum(data_expanded, task_description, example_description, dialog_description, answer_description,
-                              model, tokenizer):
+def prompt_preds_mediqasum(data_expanded, 
+                           task_description, 
+                           example_description, 
+                           dialog_description, 
+                           answer_description,
+                           model, 
+                           tokenizer):
 
     labels = []
     preds = []
+    print_once_flag = 0
 
     for sample in tqdm(data_expanded):
 
@@ -1350,12 +1356,13 @@ def prompt_preds_mediqasum(data_expanded, task_description, example_description,
         sentence = f"""{prompt}Example Note:\n"{example}" """
         dialogue = "".join(sample['dialogue'])
         sentence = f"""[INST]{sentence}\n\n{dialog_description}\n\n"{dialogue}"\n\n{answer_description}[/INST]\n\nClinical Note:"""
+        
         labels.append(sample["note"])
 
         # conversion necessary for phi3 model
         if 'Phi3' in model_name_global:
             sentence = convert_text_mistral_phi3(sentence)
-            print(f"messages prompts-->{sentence}\n\n\n\n\n\n\n\n")
+            #print(f"messages prompts-->{sentence}\n\n\n\n\n\n\n\n")
 
         prompt = tokenizer.encode(sentence, return_tensors="pt", return_attention_mask=True).to('cuda')
             
@@ -1372,6 +1379,11 @@ def prompt_preds_mediqasum(data_expanded, task_description, example_description,
         # Decode only the newly generated tokens
         # Skip the input tokens by starting the slice at input_length
         new_tokens = output[0, prompt_length:]
+
+        if print_once_flag == 0:
+            print(f"INFERENCE MEDIQA SUM-->{tokenizer.decode(output[0])}")
+            print(f"sample['note']-->{sample['note']}")
+            print_once_flag = 1
 
         pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
         preds.append(pred)
@@ -2079,11 +2091,9 @@ def eval_pop(population,
             
             #print(f"antes da eval{tt}")
             score = mediqasum_evaluation.evaluate_texts(predictions, labels, only_rouge = only_rouge)
-            #print(f"depois da eval{tt}")
+            print(f"\n\n MEDIQA SUM SCORE ROUGE-->{score}")
             population['eval'].append(score)
-            #print(f"1111111 da eval{tt}")
             population['full_eval'].append(score)
-            #print(f"2222222 da eval{tt}")
 
     elif task == "hyper_mutation":
         for i in tqdm(range(n_pop), desc = f"Evaluating prompt population"):
@@ -2188,7 +2198,7 @@ def eval_pop(population,
     return population
 
 # create folder to store each run of the evo_alg function
-def create_root_folder(task, 
+def create_root_folder(task,
                        alg = 'alg_2',
                        crossover_prob = 'nd',
                        mutation_prob = 'nd',
@@ -2210,6 +2220,8 @@ def create_root_folder(task,
             folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
         elif task == 'ContractNLI':
             folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
+        elif task == 'MEDIQASUM':
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
 
     elif alg=='alg_3':
         folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_op{operation_prob}_mop{mutation_operation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")

@@ -5,8 +5,6 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 import evo_functions as evo
 
-
-
 evo.test_eval("SemEval", 
           'RUNS_alg_2/SemEval_whighTrue_wselfFalse/Runs_2024-07-15_03-42-41_N25_cp0.25_mp0.25_sampT10.0_fixed_evoTrue_new_evo_promptsTrue',
               model_name = "microsoft/Phi-3-mini-4k-instruct",

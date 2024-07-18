@@ -1,0 +1,14 @@
+0->You are tasked with identifying support relationships between sections of Non-Disclosure Agreements (NDAs) and statements concerning confidentiality obligations. NDAs detail the framework for the exchange and protection of sensitive information, including what is considered confidential, usage obligations, agreement duration, exclusions, etc. Statements make claims about these contents, and your task is to assess if these claims are supported or contradicted in the NDA.
+----------
+1->Examine NDAs to verify if confidentiality statements are upheld or refuted, focusing on confidentiality scope, usage terms, duration, and exclusions.
+----------
+2->Evaluate NDAs to determine if confidentiality statements regarding scope, usage, duration, and exclusions are upheld or refuted.
+----------
+3->Assess NDAs to verify if confidentiality statements are upheld or refuted, focusing on confidentiality scope, usage terms, duration, and exclusions.
+----------
+4->Assess NDAs for compliance with confidentiality clauses, scrutinizing scope, usage, duration, and exclusions.
+----------
+5->Conduct a comprehensive analysis of NDAs to ascertain the validity of confidentiality statements, scrutinizing the scope, usage terms, duration, and exclusions, and identify the support or contradiction between NDAs and confidentiality claims.
+----------
+6->Examine NDAs to verify if confidentiality statements within are substantiated or refuted, focusing on confidentiality scope, usage terms, duration, and exclusions.
+----------

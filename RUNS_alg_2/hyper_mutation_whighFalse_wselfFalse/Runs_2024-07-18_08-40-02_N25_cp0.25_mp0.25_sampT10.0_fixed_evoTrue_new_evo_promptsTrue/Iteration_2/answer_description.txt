@@ -1,0 +1,10 @@
+0->Generate the result of rewriting the instruction, carefully considering the task description and without explaining how the result was produced.
+----------
+1->State the result of rephrasing the instruction according to the task description, omitting any further contextualization.
+----------
+2->Craft a concise, expert-level summary of the original task, ensuring accuracy and clarity in the rephrased directive.
+----------
+3->Rephrase the given text, maintaining the original meaning for an expert audience, ensuring brevity and clarity.
+----------
+4->Synthesize the core objectives from both original instructions into a single, expert-level directive that encapsulates the essence of the tasks, ensuring accuracy and brevity.
+----------

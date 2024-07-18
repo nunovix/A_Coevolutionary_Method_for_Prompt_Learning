@@ -26,7 +26,7 @@ best_prompt, best_score_iterations = evo.evo_alg_2(task = "ContractNLI",
                                                             do_test_eval = True,
                                                             save = True,
                                                             )
-
+"""
 # w oracle spans 2 labels
 best_prompt, best_score_iterations = evo.evo_alg_2(task = "ContractNLI", 
                                                             model_name = "microsoft/Phi-3-mini-128k-instruct",
@@ -43,11 +43,11 @@ best_prompt, best_score_iterations = evo.evo_alg_2(task = "ContractNLI",
                                                             task_w_oracle_spans = True,
                                                             task_w_full_contract = True,
                                                             task_w_2_labels=True,
-                                                            fixed_evo_prompts = True,
+                                                            fixed_evo_prompts = False,
                                                             do_test_eval = True,
                                                             save = True,
                                                             )
-"""
+
 # w retrieved spans 2 labels
 best_prompt, best_score_iterations = evo.evo_alg_2(task = "ContractNLI", 
                                                             model_name = "microsoft/Phi-3-mini-128k-instruct",
@@ -64,7 +64,7 @@ best_prompt, best_score_iterations = evo.evo_alg_2(task = "ContractNLI",
                                                             task_w_oracle_spans = False,
                                                             task_w_full_contract = True,
                                                             task_w_2_labels=True,
-                                                            fixed_evo_prompts = True,
+                                                            fixed_evo_prompts = False,
                                                             do_test_eval = True,
                                                             save = True,
                                                             )
@@ -86,7 +86,7 @@ best_prompt, best_score_iterations = evo.evo_alg_2(task = "ContractNLI",
                                                             task_w_oracle_spans = False,
                                                             task_w_full_contract = True,
                                                             task_w_2_labels=False,
-                                                            fixed_evo_prompts = True,
+                                                            fixed_evo_prompts = False,
                                                             do_test_eval = True,
                                                             save = True,
                                                             )

@@ -5,7 +5,7 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 import evo_functions as evo
 
-best_prompt, best_score_iterations = evo.evo_alg_2(task = "hyper_crossover", 
+"""best_prompt, best_score_iterations = evo.evo_alg_2(task = "hyper_crossover", 
                                                     model_name = "microsoft/Phi-3-mini-4k-instruct",
                                                     quantize_model_4bits = True,
                                                     n_pop = 25,
@@ -23,7 +23,7 @@ best_prompt, best_score_iterations = evo.evo_alg_2(task = "hyper_crossover",
                                                     do_test_eval = False,
                                                     new_evo_prompt_format=True,
                                                     save=True,
-                                                    )
+                                                    )"""
 best_prompt, best_score_iterations = evo.evo_alg_2(task = "hyper_mutation", 
                                                     model_name = "microsoft/Phi-3-mini-4k-instruct",
                                                     quantize_model_4bits = True,

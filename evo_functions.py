@@ -434,6 +434,7 @@ def extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data',
 
     file_path = os.path.join(folder, f"{type}_w_retrieved_task_w_2_labels_False.json")
     if use_retrieves_sentences_files == True and os.path.exists(file_path):
+        print(f"LOADE")
         # Load from a JSON file
         with open(file_path, 'r') as file:
             data_list = json.load(file)
@@ -1474,7 +1475,7 @@ def load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct",
             #attn_implementation='eager',
         )
         tokenizer = AutoTokenizer.from_pretrained(checkpoint)
-        print(f"MODELO CORETO")
+        print(f"Phi-3 selecionado")
         return model, tokenizer
 
     else:
@@ -2221,6 +2222,8 @@ def create_root_folder(task,
         elif task == 'ContractNLI':
             folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
         elif task == 'MEDIQASUM':
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
+        elif task == 'hyper_crossover' or task == 'hyper_mutation':
             folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
 
     elif alg=='alg_3':

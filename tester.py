@@ -1,46 +1,88 @@
-import numpy as np
+class Create_Population:
+    def __init__(self,
+                 data_expanded, 
+                 model, 
+                 tokenizer, 
+                 trie, 
+                 n_samples,
+                 n_pop = None,
+                 history = None,
+                 N=10, # for the hyper mutation thing
+                 mutation_prob=0.8,
+                 only_rouge = True,
+                 save_preds4semeval_test = False,
+                 folder = None,
+                 task_w_one_shot = False,
+                 task_w_highlight = False,
+                 task_w_self_reasoning = False,
+                 task_w_oracle_spans = False,
+                 task_w_full_contract = True,
+                 task_w_2_labels = True,):
+        
+        self.data_expanded = data_expanded
+        self.model = model
+        self.tokenizer = tokenizer
+        self.trie = trie
+        self.n_samples = n_samples
+        self.n_pop = n_pop
+        self.history = history
+        self.N = N
+        self.mutation_prob = mutation_prob
+        self.only_rouge = only_rouge
+        self.save_preds4semeval_test = save_preds4semeval_test
+        self.folder = folder
+        self.task_w_one_shot = task_w_one_shot
+        self.task_w_highlight = task_w_highlight
+        self.task_w_self_reasoning = task_w_self_reasoning
+        self.task_w_oracle_spans = task_w_oracle_spans
+        self.task_w_full_contract = task_w_full_contract
+        self.task_w_2_labels = task_w_2_labels
 
-# for sampling with softmax and a given sampling Temperature, if none is provided a equal probability will be given to all elements
-def softmax_samp_T(x, sampling_T = 5.0):
 
-    if sampling_T == None or sampling_T == 0:
-        return [1/len(x)] * len(x)
+    def __add__(self, other):
+        """Overload the + operator to add the value of two MyClass instances."""
+        if isinstance(other, MyClass):
+            return MyClass(self.value + other.value)
+        else:
+            return MyClass(self.value + other)
 
-    x = np.array(x)
-    # if values in decimal form convert to percentage so that sampling T works as desired
-    if max(x) < 1:
-        x = 100 * x
+    def copy(self):
+        """Return a new instance of MyClass with the same value."""
+        return MyClass(self.value)
 
-    # apply sampling T
-    x = x/sampling_T
+# Example usage:
+obj1 = MyClass(10)
+obj2 = MyClass(5)
 
-    return np.exp(x) / np.sum(np.exp(x), axis=0)
+print("Initial value of obj1:", obj1.value)  # Output: 10
+print("Initial value of obj2:", obj2.value)  # Output: 5
 
-a = [0.72, 0.71, 0.70, 0.66, 0.59]
+obj3 = obj1 + obj2
+print("Value of obj3 (obj1 + obj2):", obj3.value)  # Output: 15
 
-print(a)
-print(softmax_samp_T(a, 5))
-print(softmax_samp_T(a, 10))
-print(softmax_samp_T(a, 20))
+obj4 = obj1 + 7
+print("Value of obj4 (obj1 + 7):", obj4.value)  # Output: 17
 
+new_obj = obj1.copy()
+print("Copy's value:", new_obj.value)  # Output: 10
 
-"""import os
-# set available gpu's
-os.environ["CUDA_VISIBLE_DEVICES"] = "4"
-
-from evo_functions import load_model
-
-model, tokenizer = load_model(checkpoint = "microsoft/Phi-3-mini-4k-instruct", quantized = True)
-
-
-bos = [tokenizer.bos_token_id]
-eos = [tokenizer.eos_token_id]
-
-print(f"BOS-->{bos}")
-print(f"EOS-->{eos}")
-
-print("after decoding")
-bos_conv = tokenizer.decode(bos, skip_special_tokens=False)
-eos_conv = tokenizer.decode(eos, skip_special_tokens=False)
-print(f"BOS after-->{bos_conv}")
-print(f"EOS after-->{eos_conv}")"""
+def create_population(task, prompts_dict, initial,
+                      data_expanded, 
+                      model, 
+                      tokenizer, 
+                      trie, 
+                      n_samples,
+                      n_pop = None,
+                      history = None,
+                      N=10, # for the hyper mutation thing
+                      mutation_prob=0.8,
+                      only_rouge = True,
+                      save_preds4semeval_test = False,
+                      folder = None,
+                      task_w_one_shot = False,
+                      task_w_highlight = False,
+                      task_w_self_reasoning = False,
+                      task_w_oracle_spans = False,
+                      task_w_full_contract = True,
+                      task_w_2_labels = True,
+                      ):

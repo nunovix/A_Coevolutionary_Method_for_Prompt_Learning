@@ -1,0 +1,10 @@
+0->Generate the rephrased instruction without any additional explanation, keeping it short and simple.
+----------
+1->Considering all previous information, produce the resulting instruction, without giving any additional context or details about the reasoning process.
+----------
+2->Generate the result of rewriting the instruction, carefully considering the task description and without explaining how the result was produced.
+----------
+3->Produce only the resulting instruction, without any additional context.
+----------
+4->State the result of rephrasing the instruction according to the task description, omitting any further contextualization.
+----------

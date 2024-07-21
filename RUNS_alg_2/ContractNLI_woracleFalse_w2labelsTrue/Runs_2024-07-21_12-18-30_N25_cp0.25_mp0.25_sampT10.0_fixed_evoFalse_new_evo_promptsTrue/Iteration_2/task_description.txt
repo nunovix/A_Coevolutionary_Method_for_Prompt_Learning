@@ -1,0 +1,12 @@
+0->Consider the task of establishing semantic entailment relations between parts of a Non-Disclosure Agreement (NDA) and assertions about the agreement's confidentiality obligations. Note that NDAs outline the terms for sharing and protecting sensitive information, detailing aspects such as the definition of confidential information, obligations of the parties, duration of the agreement, exclusions, and other pertinent terms. The goal is to determine whether a statement is supported or contradicted by the NDA content.
+----------
+1->Consider the challenge of assessing semantic entailment between distinct sections of Non-Disclosure Agreements (NDAs) and related statements. NDAs outline procedures and obligations for protecting confidential information, including its scope, usage obligations, duration of protection, and exclusions. Evaluate whether the statements' assertions about the NDA are supported or contradicted by the agreement's descriptions.
+----------
+2->Examine the NDAs to verify if confidentiality statements are backed by the agreements, focusing on information handling conditions, definitions, obligations, term, and exclusions.
+----------
+3->Conduct a thorough analysis of Non-Disclosure Agreements (NDAs), focusing on the semantic relationships between the NDA's confidentiality clauses and specific assertions regarding the scope, usage, duration, and exclusions of the agreement. Assess whether these assertions are substantiated or refuted by the actual content of the NDAs.
+----------
+4->Analyze the semantic relationship between different parts of Confidentiality Agreements (CAs) and corresponding assertions. CAs detail the methods and responsibilities for safeguarding private data, encompassing its range, permissible use, time frame of confidentiality, and exceptions. Determine if the assertions about the CA are corroborated or refuted by the agreement's content.
+----------
+5->Perform an in-depth examination of Non-Disclosure Agreements (NDAs), scrutinizing the connections between the confidentiality clauses and explicit statements about the extent, application, time frame, and exceptions within the NDAs. Evaluate if these statements are backed by the NDAs' actual text.
+----------

@@ -1,0 +1,12 @@
+0->Consider the problem of rewriting a textual instruction, in which the objective is to rephrase the descriptions by changing the phrasing or the ordering of the explanations, while keeping the exact same meaning. Assume that the audience for the resulting instruction consists of experts in the field. The rewritten instruction can either be shorter, summarizing the main points while keeping consistency with the original intent, or it can be made longer, by adding definitions and further clarifications. You will be penalized for the inclusion of incorrect information. The re-written instruction should be concise and direct, and it should inform the execution of the task in a clearer way than the original instruction.
+----------
+1->Revise the provided directive, preserving its core message. Employ varied vocabulary while retaining straightforwardness, accuracy, and specificity for an expert readership. Condense the main ideas succinctly, steering clear of errors, and improving understanding beyond the initial wording.
+----------
+2->Think about the task of modifying a written instruction, with a focus on improving the performance of AI systems when executing the task. You should rephrase the instruction by changing the wording and the ordering of the commands, ensuring that the new version enhances the clarity and effectiveness of the descriptions. Attend to the nuances of the original instruction, and make sure that the rewritten version is precise, actionable, and free of ambiguities, thereby facilitating a seamless execution of the task.
+----------
+3->Rewrite the given text with altered phrasing or rearranged explanations, ensuring the meaning remains unchanged. Tailor your revision for an expert audience, aiming for brevity and precision. Avoid inaccuracies and enhance clarity for task execution.
+----------
+4->Amend the provided text by altering its phrasing or restructuring its explanations, ensuring the original intent and meaning are preserved. Adjust the content to suit an expert audience, choosing between a succinct version or a more detailed one. Steer clear of inaccuracies and ensure the task is communicated with utmost clarity.
+----------
+5->Refine and consolidate the provided directives, preserving their core objectives for an expert audience. Employ varied vocabulary to articulate the central ideas succinctly, accurately, and with enhanced clarity, ensuring a comprehensive understanding surpasses the initial directives.
+----------

@@ -1,0 +1,16 @@
+0->Considering all previous information, produce the resulting instruction, without giving any additional context or details about the reasoning process.
+----------
+1->Generate the result of rewriting the instruction, carefully considering the task description and without explaining how the result was produced.
+----------
+2->Produce only the resulting instruction, without any additional context.
+----------
+3->State the result of rephrasing the instruction according to the task description, omitting any further contextualization.
+----------
+4->Generate the rephrased instruction without any additional explanation, keeping it short and simple.
+----------
+5->Craft a concise, expert-level summary of the original task, ensuring accuracy and clarity in the rephrased directive.
+----------
+6->Craft a concise, expert-level rewrite of the provided text, ensuring the essence remains unchanged.
+----------
+7->Synthesize the core directives from the provided task descriptions into a succinct, expert-level directive that encapsulates the essence of both, ensuring accuracy and clarity.
+----------

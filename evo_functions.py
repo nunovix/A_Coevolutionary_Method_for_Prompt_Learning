@@ -22,7 +22,7 @@ from sentence_transformers import SentenceTransformer
 from sentence_transformers.util import cos_sim
 
 # fucntion to evaluate mediqa sum summarization (avg between BLEU, ROUGE and BERTSCORE)
-import mediqasum_evaluation
+#import mediqasum_evaluation
 
 # semeval evaluation
 from semeval_evaluation import main as semeval_test_evaluation
@@ -31,7 +31,10 @@ from semeval_evaluation import main as semeval_test_evaluation
 from torch.utils.data import DataLoader, TensorDataset
 
 # backend to improve inference speed
-from unsloth import FastLanguageModel
+#from unsloth import FastLanguageModel
+
+# for rouge metric in mediqa chat task
+import evaluate
 
 # function to select dataset and extract initial population of prompts 
 # and the prompts to perform mutation and crossover
@@ -171,7 +174,10 @@ def extract_lines_to_dict(folder_path, task,
             sys.exit()
 
     elif task == 'ContractNLI':
-        ordered_filenames = ['task_description']
+        if task_w_2_labels == True:
+            ordered_filenames = ['task_description']
+        else:
+            ordered_filenames = ['task_description_3_labels']
         if task_w_full_contract == True:
             ordered_filenames += ['doc_description']
         if task_w_highlight == True:
@@ -442,7 +448,13 @@ def extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data',
 
         # case where we only want yes or no cases
         if task_w_2_labels == True:
+            print(f"filtering out the NotMentioned examples...")
             data_list = [d for d in data_list if d['label'] != 'NotMentioned']
+
+        labels = []
+        for ex in data_list:
+            labels.append(ex['label'])
+        print(Counter(labels))
 
         return data_list
 
@@ -497,9 +509,6 @@ def extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data',
     print(f"90th Percentile: {percentile_90}")
     print(f"Rounded 90th Percentile: {rounded_percentile_90}")
 
-    print(f"Counter ting")
-    print(Counter(just_labels))
-
     if retrieve_sentences == True:
         prev_contract = 0
         sentences = []
@@ -529,18 +538,11 @@ def extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data',
             with open(save_path, 'w') as file:
                 json.dump(data_expanded, file)
             print(f"Examples with retreival svaed to {save_path}")
-
-    from collections import Counter
-    print(f"Counter ting")
-    print(Counter(just_labels))
-
+    
     # case where we only want yes or no cases
     if task_w_2_labels == True:
         data_expanded = [d for d in data_expanded if d['label'] != 'NotMentioned']
 
-    from collections import Counter
-    print(f"Counter ting")
-    print(Counter(just_labels))
 
     return data_expanded
 
@@ -877,6 +879,8 @@ def prompt_creation_semeval_self_A(data_expanded,
 def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, statement_description,
                                  self_A, self_B, self_C, model, tokenizer, trie):
     
+    """
+    
     reflection_samples = prompt_creation_semeval_self_A(data_expanded=data_expanded, 
                                             task_description=task_description, 
                                             ctr_description=ctr_description, 
@@ -891,6 +895,7 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
     flag=0
     token_len = []
     for sample, reflection in tqdm(zip(data_expanded, reflections), desc='Self Reasoning'):
+        
 
         primary = "\n".join(sample['primary_evidence'])
         text = f'''{task_description}\n\n{ctr_description}\n\nPrimary Trial: "{primary}"\n\n '''
@@ -961,7 +966,7 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
         if 'Phi3' in model_name_global:    
             text_self = convert_text_mistral_phi3(text_self)
 
-        FastLanguageModel.for_inference(model)
+        #FastLanguageModel.for_inference(model)
         prompt = tokenizer.encode(text_self, return_tensors="pt", return_attention_mask=True).to('cuda')
 
         prompt_length = prompt[0].shape[0]
@@ -1005,12 +1010,12 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
                                 max_new_tokens=6, 
                                 #use_cache=True,
                                 prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
-        #if flag == 0:
-            #print(f"SEMEVAL inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
-            #print(f"TRUE LABEL-->{sample['label']}")
-            #flag=1
+        if flag == 0:
+            print(f"SEMEVAL inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+            print(f"TRUE LABEL-->{sample['label']}")
+            flag=1
         
-        print(f"SEMEVAL w SELF inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+        #print(f"SEMEVAL w SELF inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
 
         new_tokens = output[0, prompt_length:]
 
@@ -1040,7 +1045,7 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
     #print(f"25th percentile: {percentile_25}")
     #print(f"75th percentile: {percentile_75}")
 
-    """
+    
     return labels, predictions
     
 
@@ -1081,23 +1086,22 @@ def prompt_creation_contractnli(data_expanded, task_description, doc_description
 def prompt_creation_contractnli_span(data_expanded, task_description, doc_description, statement_description, answer_description):
     samples = []
     for sample in data_expanded:
-        if sample['label'] != 'NotMentioned':
-            before_nda = f"""[INST]{task_description}\n\n{doc_description}\n """
-            # add spans
-            marker = 0
-            for i in sample['spans_index']:
-                before_nda += f"\n"
-                if marker == 0:
-                    before_nda += f""" " """
-                    marker = 1
-                
-                before_nda += f"{sample['text'][sample['spans'][i][0]:sample['spans'][i][1]]}"
+        before_nda = f"""[INST]{task_description}\n\n{doc_description}\n """
+        # add spans
+        marker = 0
+        for i in sample['spans_index']:
+            before_nda += f"\n"
+            if marker == 0:
+                before_nda += f""" " """
+                marker = 1
             
-            before_nda += f""" " \n\n"""
-            prompt_wo_statement = f"{before_nda}{statement_description}\n\n"
-            prompt = f"""{prompt_wo_statement}"{sample['statement']}"\n\n{answer_description}[/INST]\n\nANSWER: """
-            temp = {"text":prompt, "label":sample['label'], "text2cache" : prompt_wo_statement}
-            samples.append(temp)
+            before_nda += f"{sample['text'][sample['spans'][i][0]:sample['spans'][i][1]]}"
+        
+        before_nda += f""" " \n\n"""
+        prompt_wo_statement = f"{before_nda}{statement_description}\n\n"
+        prompt = f"""{prompt_wo_statement}"{sample['statement']}"\n\n{answer_description}[/INST]\n\nANSWER: """
+        temp = {"text":prompt, "label":sample['label'], "text2cache" : prompt_wo_statement}
+        samples.append(temp)
 
     return samples
 
@@ -1239,8 +1243,9 @@ def extract_MEDIQASUM_data(folder_name='DATASETS/MEDIQASUM_data',
                            type = 'valid', 
                            used_retrieved_file = True,
                            retrieve_similar_examples = True,
-                           save_retrieved = False
+                           save_retrieved = True,
                            ):
+    
     file_path = os.path.join(folder_name, f"{type}_w_retrieved.json")
     if used_retrieved_file == True and os.path.exists(file_path):
         # Load from a JSON file
@@ -1277,6 +1282,7 @@ def extract_MEDIQASUM_data(folder_name='DATASETS/MEDIQASUM_data',
 
         # extract train_data
         for i in tqdm(range(len(data_list)), desc= 'Retrieving examples'):
+            print(f"ENCOUNTER ID-->{data_list[i]['encounter_id']}")
             #notes_list = []
             train_dialogue_list = []
             for example in train_data_list:
@@ -1299,7 +1305,7 @@ def extract_MEDIQASUM_data(folder_name='DATASETS/MEDIQASUM_data',
 
         if save_retrieved == True:
             # Save to a JSON file
-            save_path = os.path.join(folder_name, f"valid_w_retrieved.json")
+            save_path = os.path.join(folder_name, f"{type}_w_retrieved.json")
             with open(save_path, 'w') as file:
                 json.dump(data_list, file)
             print(f"Examples with retreival svaed to {save_path}")
@@ -1340,10 +1346,17 @@ def prompt_preds_mediqasum(data_expanded,
                            dialog_description, 
                            answer_description,
                            model, 
-                           tokenizer):
+                           tokenizer,
+                           save_test_predictions = False,
+                           folder = None):
 
     labels = []
     preds = []
+
+    if save_test_predictions == True:
+        encounter_ids = []
+        dialogues = []
+
     print_once_flag = 0
 
     for sample in tqdm(data_expanded):
@@ -1360,6 +1373,10 @@ def prompt_preds_mediqasum(data_expanded,
         
         labels.append(sample["note"])
 
+        if save_test_predictions == True:
+            encounter_ids.append(sample["encounter_id"])
+            dialogues.append(sample["dialogue"])
+
         # conversion necessary for phi3 model
         if 'Phi3' in model_name_global:
             sentence = convert_text_mistral_phi3(sentence)
@@ -1372,10 +1389,10 @@ def prompt_preds_mediqasum(data_expanded,
             
             output = model.generate(prompt, 
                                     #pad_token_id=tokenizer.eos_token_id, 
-                                    max_new_tokens=1200,
+                                    max_new_tokens=2000,
                                     do_sample=True,
                                     num_beams = 3
-                                    )  
+                                    )
 
         # Decode only the newly generated tokens
         # Skip the input tokens by starting the slice at input_length
@@ -1384,13 +1401,26 @@ def prompt_preds_mediqasum(data_expanded,
         if print_once_flag == 0:
             print(f"INFERENCE MEDIQA SUM-->{tokenizer.decode(output[0])}")
             print(f"sample['note']-->{sample['note']}")
-            print_once_flag = 1
+            print_once_flag = 0
 
         pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
         preds.append(pred)
 
         del prompt, output
         torch.cuda.empty_cache()
+
+    if save_test_predictions == True:
+        print(f"SAVING CSV folder for mediqa chat")
+        # Column names
+        column_names = ["encounter_id", "dialogue", "note"]
+        # Combine the lists into rows
+        rows = zip(encounter_ids, dialogues, preds)
+        # Write to CSV file
+        file_name = folder + "test_predictions.csv"
+        with open(file_name, 'w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(column_names)  # Write the column names
+            writer.writerows(rows)  # Write the data rows
 
     return labels, preds
 
@@ -1681,6 +1711,8 @@ def get_Marisa_Trie(task, tokenizer, task_w_2_labels=True):
             possibilities = ['YES', 'NO']
         else:
             possibilities = ['NOT MENTIONED', 'YES', 'NO']
+    else:
+        return None
         
     print(f"Marisa Trie possibilities-->{possibilities}")
     encoded_possibilities = []
@@ -1848,6 +1880,16 @@ def convert_preds_from_yesno_contractnli(preds):
 
     return preds_2, no_of_not_founds
 
+def compute_rouge_scores(references, predictions):
+    # Load the ROUGE metric
+    rouge_scorer = evaluate.load('rouge')
+    
+    # Compute the ROUGE scores
+    rouge_scores = rouge_scorer.compute(references=references, predictions=predictions)
+    
+    rouge_1 = rouge_scores['rouge1']
+    return rouge_scores, rouge_1
+
 # function to evaluate prompt population
 # outputs a list with the scores for each prompt
 # n_samples is the no. of samples where the evaluation will be done
@@ -1860,7 +1902,7 @@ def eval_pop(population,
              N=10, # FOR HYPERMUTATION ONLY (number of individuals generated using the evo prompt for evaluation)
              mutation_prob=0.8, # FOR HYPERMUTATION ONLY (probability of mutation/ crossover for each subprompt of each individual)
              only_rouge = True, # for mediqasum 
-             save_preds4semeval_test = False,
+             save_test_predictions = False,
              folder = None,
              task_w_one_shot = False,
              task_w_self_reasoning = False,
@@ -1941,8 +1983,8 @@ def eval_pop(population,
             cm = confusion_matrix(y_true=labels, y_pred=predictions, labels=unique_labels)
             population['confusion_matrix'].append(cm)
 
-            if save_preds4semeval_test == True:
-                print(f"save_preds4semeval_test-->{save_preds4semeval_test}")
+            if save_test_predictions == True:
+                print(f"save_test_predictions-->{save_test_predictions}")
                 uuid_list = []
                 for ex in data_expanded[:n_samples]:
                     uuid_list.append(ex['id'])
@@ -1989,8 +2031,8 @@ def eval_pop(population,
 
             population['eval'].append(score)
 
-            if save_preds4semeval_test == True:
-                print(f"save_preds4semeval_test-->{save_preds4semeval_test}")
+            if save_test_predictions == True:
+                print(f"save_test_predictions-->{save_test_predictions}")
                 uuid_list = []
                 for ex in data_expanded[:n_samples]:
                     uuid_list.append(ex['id'])
@@ -2041,7 +2083,7 @@ def eval_pop(population,
                                                                                                         )
             else:
                 labels, predictions, per_doc_labels, per_doc_predictions = prompt_preds_contractnli_span(data_expanded[:n_samples], 
-                                                                                                        task_description = prompts['task_description'][population['prompts'][i]['task_description']], 
+                                                                                                        task_description = prompts['task_description_3_labels'][population['prompts'][i]['task_description_3_labels']], 
                                                                                                         highlight_description = prompts['highlight_description'][population['prompts'][i]['highlight_description']], 
                                                                                                         statement_description = prompts['statement_description'][population['prompts'][i]['statement_description']],
                                                                                                         answer_description = prompts['answer_description_3_labels'][population['prompts'][i]['answer_description_3_labels']],
@@ -2061,6 +2103,7 @@ def eval_pop(population,
             print(f"Counter(predictions)-->{Counter(predictions)}")
             preds, _ = convert_preds_from_yesno(predictions)
             print(f"Counter(preds)-->{Counter(preds)}")
+            print(f"Counter(labels)-->{Counter(labels)}")
             score = accuracy_score(y_true=labels, y_pred=preds)
             print(f"score-->{score}")
             population['eval'].append(score)
@@ -2088,13 +2131,15 @@ def eval_pop(population,
                                                          answer_description =  prompts['answer_description'][population['prompts'][i]['answer_description']],
                                                          model=model,
                                                          tokenizer=tokenizer,
+                                                         save_test_predictions = save_test_predictions,
+                                                         folder = folder
                                                          )
             
             #print(f"antes da eval{tt}")
-            score = mediqasum_evaluation.evaluate_texts(predictions, labels, only_rouge = only_rouge)
-            print(f"\n\n MEDIQA SUM SCORE ROUGE-->{score}")
-            population['eval'].append(score)
-            population['full_eval'].append(score)
+            rouge_scores, rouge_1 = compute_rouge_scores(references=labels, predictions=predictions)
+            print(f"\n\n MEDIQA SUM SCORE ROUGE_1-->{rouge_1}")
+            population['eval'].append(rouge_1)
+            population['full_eval'].append(rouge_scores)
 
     elif task == "hyper_mutation":
         for i in tqdm(range(n_pop), desc = f"Evaluating prompt population"):
@@ -2533,7 +2578,7 @@ def create_population(task, prompts_dict, initial,
                       N=10, # for the hyper mutation thing
                       mutation_prob=0.8,
                       only_rouge = True,
-                      save_preds4semeval_test = False,
+                      save_test_predictions = False,
                       folder = None,
                       task_w_one_shot = False,
                       task_w_highlight = False,
@@ -2619,7 +2664,8 @@ def create_population(task, prompts_dict, initial,
     population = eval_pop(population, data_expanded = data_expanded, 
                             model=model, tokenizer=tokenizer, trie=trie, n_samples = n_samples, N=N, mutation_prob=mutation_prob,
                             only_rouge=only_rouge,
-                            save_preds4semeval_test = save_preds4semeval_test, folder = folder,
+                            save_test_predictions = save_test_predictions, 
+                            folder = folder,
                             task_w_one_shot = task_w_one_shot,
                             task_w_self_reasoning = task_w_self_reasoning,
                             task_w_highlight = task_w_highlight,
@@ -2734,7 +2780,7 @@ def test_eval(task,
               RUN_folder_path, # Run folder
               model_name = "microsoft/Phi-3-mini-128k-instruct",
               quantize_model_4bits = True,
-              save_preds4semeval_test=False, # is turned to true if it's the semeval task
+              save_test_predictions=False,
               retrieve_examples = False, # use retrieval with embedding model instead of random for 1-shot learning
               task_w_self_reasoning = False,
               task_w_one_shot = False,
@@ -2747,10 +2793,7 @@ def test_eval(task,
     print(f"TEST")
     model, tokenizer = load_model(checkpoint = model_name, quantized = quantize_model_4bits)
 
-    if task == 'MEDIQASUM':
-        trie = None
-    else:
-        trie = get_Marisa_Trie(task, tokenizer)
+    trie = get_Marisa_Trie(task, tokenizer, task_w_2_labels=task_w_2_labels)
     
     best_path = os.path.join(RUN_folder_path, 'Iteration_best/')    
     best_prompts = extract_lines_to_dict(best_path, 
@@ -2766,19 +2809,20 @@ def test_eval(task,
     if task == 'SemEval' or task == 'SemEval_self':
         # extract SemEval data
         data_expanded = extract_SemEval_data(type = 'gold_test')
-        save_preds4semeval_test = True
+        save_test_predictions = True
     #elif task == "CSQA":
         #data_expanded = extract_CSQA_data(type = eval_data)
     elif task == "ContractNLI":
-        data_expanded = extract_ContractNLI_data(type = 'test')
+        data_expanded = extract_ContractNLI_data(type = 'test', task_w_2_labels=task_w_2_labels)
     elif task == "MEDIQASUM":
-        data_expanded = extract_MEDIQASUM_data()
+        data_expanded = extract_MEDIQASUM_data(type = 'clinicalnlp_taskB_test1')
+        save_test_predictions = True
 
     # criar pop e avaliar
     best_pop = create_population(task, best_prompts, initial = True,
                                            data_expanded = data_expanded, 
-                                           model=model, tokenizer=tokenizer, trie=trie, n_samples=0, only_rouge=False, 
-                                           save_preds4semeval_test = save_preds4semeval_test,
+                                           model=model, tokenizer=tokenizer, trie=trie, n_samples=0, only_rouge=True, 
+                                           save_test_predictions =  save_test_predictions,
                                            folder = RUN_folder_path+'/Iteration_best/',
                                            task_w_one_shot = task_w_one_shot,
                                            task_w_highlight = task_w_highlight,

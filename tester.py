@@ -1,88 +1,77 @@
-class Create_Population:
-    def __init__(self,
-                 data_expanded, 
-                 model, 
-                 tokenizer, 
-                 trie, 
-                 n_samples,
-                 n_pop = None,
-                 history = None,
-                 N=10, # for the hyper mutation thing
-                 mutation_prob=0.8,
-                 only_rouge = True,
-                 save_preds4semeval_test = False,
-                 folder = None,
-                 task_w_one_shot = False,
-                 task_w_highlight = False,
-                 task_w_self_reasoning = False,
-                 task_w_oracle_spans = False,
-                 task_w_full_contract = True,
-                 task_w_2_labels = True,):
+import os
+# set available gpu's
+os.environ["CUDA_VISIBLE_DEVICES"] = "3"
+
+from datasets import load_dataset
+import json
+import numpy as np
+from sentence_transformers.util import cos_sim
+from evo_functions import embed_texts
+from tqdm import tqdm
+
+def extract_LEXSUM_data(folder_name='DATASETS/LEXSUM_data', 
+                        type = 'validation', # possible types validation and test
+                        used_retrieved_file = True,):
+    
+    file_path = os.path.join(folder_name, f"{type}_w_retrieved.json")
+    if used_retrieved_file == True and os.path.exists(file_path):
+        # Load from a JSON file
+        with open(file_path, 'r') as file:
+            data_list = json.load(file)
+        print(f"Used data with already retrieved examples from {file_path}")
+        return data_list
         
-        self.data_expanded = data_expanded
-        self.model = model
-        self.tokenizer = tokenizer
-        self.trie = trie
-        self.n_samples = n_samples
-        self.n_pop = n_pop
-        self.history = history
-        self.N = N
-        self.mutation_prob = mutation_prob
-        self.only_rouge = only_rouge
-        self.save_preds4semeval_test = save_preds4semeval_test
-        self.folder = folder
-        self.task_w_one_shot = task_w_one_shot
-        self.task_w_highlight = task_w_highlight
-        self.task_w_self_reasoning = task_w_self_reasoning
-        self.task_w_oracle_spans = task_w_oracle_spans
-        self.task_w_full_contract = task_w_full_contract
-        self.task_w_2_labels = task_w_2_labels
+    dataset = load_dataset("allenai/multi_lexsum", name="v20220616")
+
+    # Define the column to check for None values and the columns to keep
+    column_to_check = 'summary/short'
+    columns_to_keep = ['id', 'sources', 'summary/short']
+
+    dataset_dict = {}
+    for split in dataset:
+        # Filter and select columns
+        dataset_dict[split] = [
+            {key: row[key] for key in columns_to_keep}
+            for row in dataset[split] if row[column_to_check] is not None
+        ]
+        # join strings of contract
+        for i in range(len(dataset_dict[split])):
+            dataset_dict[split][i]['sources'] = " ".join(dataset_dict[split][i]['sources'])
+
+    train_sources_list = []
+    for example in dataset_dict['train']:
+        train_sources_list.append(example["sources"])
+    print(f"len(train_sources_list)-->{len(train_sources_list)}")
+
+    print(f"Embedding training data...")
+    train_embeddings = embed_texts(train_sources_list)
+
+    for i in tqdm(range(len(dataset_dict['validation'])), desc="validation"):
+        validation_embedding = embed_texts([dataset_dict['validation'][i]['sources']])
+        similarities = cos_sim(validation_embedding, train_embeddings)
+        closest_index = np.argmax(similarities)
+        dataset_dict['validation'][i]['retrieved_sources'] = dataset_dict['train'][closest_index]['sources']
+        dataset_dict['validation'][i]['retrieved_summary/short'] = dataset_dict['train'][closest_index]['summary/short']
+
+    # Save to a JSON file
+    save_path = os.path.join(folder_name, f"validation_w_retrieved.json")
+    with open(save_path, 'w') as file:
+        json.dump(dataset_dict['validation'], file)
+    print(f"Examples with retreival svaed to {save_path}")
+
+    for i in tqdm(range(len(dataset_dict['test'])), desc='test'):
+        test_embedding = embed_texts([dataset_dict['test'][i]['sources']])
+        similarities = cos_sim(test_embedding, train_embeddings)
+        closest_index = np.argmax(similarities)
+        dataset_dict['test'][i]['retrieved_sources'] = dataset_dict['train'][closest_index]['sources']
+        dataset_dict['test'][i]['retrieved_summary/short'] = dataset_dict['train'][closest_index]['summary/short']
 
 
-    def __add__(self, other):
-        """Overload the + operator to add the value of two MyClass instances."""
-        if isinstance(other, MyClass):
-            return MyClass(self.value + other.value)
-        else:
-            return MyClass(self.value + other)
+    # Save to a JSON file
+    save_path = os.path.join(folder_name, f"test_w_retrieved.json")
+    with open(save_path, 'w') as file:
+        json.dump(dataset_dict['test'], file)
+    print(f"Examples with retreival svaed to {save_path}")
 
-    def copy(self):
-        """Return a new instance of MyClass with the same value."""
-        return MyClass(self.value)
 
-# Example usage:
-obj1 = MyClass(10)
-obj2 = MyClass(5)
-
-print("Initial value of obj1:", obj1.value)  # Output: 10
-print("Initial value of obj2:", obj2.value)  # Output: 5
-
-obj3 = obj1 + obj2
-print("Value of obj3 (obj1 + obj2):", obj3.value)  # Output: 15
-
-obj4 = obj1 + 7
-print("Value of obj4 (obj1 + 7):", obj4.value)  # Output: 17
-
-new_obj = obj1.copy()
-print("Copy's value:", new_obj.value)  # Output: 10
-
-def create_population(task, prompts_dict, initial,
-                      data_expanded, 
-                      model, 
-                      tokenizer, 
-                      trie, 
-                      n_samples,
-                      n_pop = None,
-                      history = None,
-                      N=10, # for the hyper mutation thing
-                      mutation_prob=0.8,
-                      only_rouge = True,
-                      save_preds4semeval_test = False,
-                      folder = None,
-                      task_w_one_shot = False,
-                      task_w_highlight = False,
-                      task_w_self_reasoning = False,
-                      task_w_oracle_spans = False,
-                      task_w_full_contract = True,
-                      task_w_2_labels = True,
-                      ):
+extract_LEXSUM_data(used_retrieved_file=False)

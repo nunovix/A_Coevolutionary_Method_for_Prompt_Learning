@@ -1,0 +1,16 @@
+0->initial
+----------
+1->initial
+----------
+2->crossover between [4] and [2] using cross prompt {}  from iteration 3
+----------
+3->crossover between [4] and [3] using cross prompt {}  from iteration 4
+----------
+4->crossover between [4] and [3] using cross prompt {}  from iteration 4
+----------
+5->copy of [3]  from iteration 4
+----------
+6->copy of [3]  from iteration 4
+----------
+7->copy of [4]  from iteration 4
+----------

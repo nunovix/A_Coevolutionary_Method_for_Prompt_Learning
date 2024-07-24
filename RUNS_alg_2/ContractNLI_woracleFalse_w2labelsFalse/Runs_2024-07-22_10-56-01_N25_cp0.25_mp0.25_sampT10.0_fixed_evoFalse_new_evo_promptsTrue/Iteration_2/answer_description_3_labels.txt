@@ -1,0 +1,12 @@
+0->Answer with YES, NO, or NOT MENTIONED, to the question of whether one can conclude the validity of the statement with basis on the information from the Non-Disclosure Agreement (NDA). An answer of NOT MENTIONED means that the information in the statement is not referenced in the NDA.
+----------
+1->You MUST respond with either YES, NO, or NOT MENTIONED, to indicate whether it is possible to state that the statement is valid based on the information provided in the Non-Disclosure Agreement (NDA). For the answer to be YES, the statement must be fully supported by the NDA. An answer of NOT MENTIONED means that the information in the statement is not referenced in the NDA.
+----------
+2->Indicate with YES, NO, or NOT MENTIONED, whether the legal statement is valid. Answering NOT MENTIONED means that the statement is neither supported or contradicted by the NDA.
+----------
+3->Indicate whether it is possible to determine the validity of the statement based on the Non-Disclosure Agreement (NDA), answering either YES, NO, or NOT MENTIONED. An answer of YES means that the statement is supported by the NDA, not contradicting the provided information. An answer of NO means that the statement is NOT supported by the NDA. An answer of NOT MENTIONED means that the statement is neither supported nor contradicted by the NDA.
+----------
+4->Determine the validity of a specific legal statement by analyzing the Non-Disclosure Agreement (NDA). If the statement is directly supported or contradicted by the NDA, answer YES. If the NDA neither supports nor contradicts the statement, answer NO. If the statement's validity cannot be ascertained due to a lack of reference in the NDA, answer NOT MENTIONED.
+----------
+5->Determine if the Non-Disclosure Agreement (NDA) provides sufficient evidence to affirm the statement's accuracy. If the statement lacks reference in the NDA, respond with NOT MENTIONED.
+----------

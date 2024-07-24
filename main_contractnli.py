@@ -1,9 +1,32 @@
 import os
 # set available gpu's
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "5"
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 import evo_functions as evo
+
+
+"""evo.extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data', 
+                             type = 'test',
+                             use_retrieves_sentences_files = False,
+                             retrieve_sentences = True,
+                             save_retrieved_sentences = True,
+                             task_w_2_labels = False,
+                             )"""
+
+evo.test_eval('ContractNLI',
+              'RUNS_alg_2/ContractNLI_woracleFalse_w2labelsFalse/Runs_2024-07-22_10-56-01_N25_cp0.25_mp0.25_sampT10.0_fixed_evoFalse_new_evo_promptsTrue', # Run folder
+              model_name = "microsoft/Phi-3-mini-128k-instruct",
+              quantize_model_4bits = True,
+              save_test_predictions=False,
+              retrieve_examples = False, # use retrieval with embedding model instead of random for 1-shot learning
+              task_w_self_reasoning = False,
+              task_w_one_shot = False,
+              task_w_highlight = True,
+              task_w_oracle_spans= False, # contract nli only
+              task_w_full_contract = True, # contract nli only
+              task_w_2_labels = False, # contract nli only
+              )
 
 """
 # baseline, sem hall of fame, só com mut, não guiada
@@ -26,6 +49,8 @@ best_prompt, best_score_iterations = evo.evo_alg_2(task = "ContractNLI",
                                                             do_test_eval = True,
                                                             save = True,
                                                             )
+"""
+
 """
 # w oracle spans 2 labels
 best_prompt, best_score_iterations = evo.evo_alg_2(task = "ContractNLI", 
@@ -90,3 +115,4 @@ best_prompt, best_score_iterations = evo.evo_alg_2(task = "ContractNLI",
                                                             do_test_eval = True,
                                                             save = True,
                                                             )
+"""

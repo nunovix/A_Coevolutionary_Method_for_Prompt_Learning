@@ -1,0 +1,10 @@
+0-> Determine the validity of the statement regarding the Non-Disclosure Agreement (NDA) by responding with YES if the statement is fully supported by the NDA, NO if it is not, or NOT MENTIONED if the information in the statement is not referenced in the NDA. 
+----------
+1->Evaluate the accuracy of a given statement in relation to the Non-Disclosure Agreement (NDA) contents. Provide a response of YES if the statement is completely substantiated by the NDA, NO if it is not, or NOT MENTIONED if the statement does not appear in the NDA.
+----------
+2->Assess the accuracy of the NDA-related claim and reply with YES, NO, or NOT MENTIONED based on its presence in the document.
+----------
+3->Assess whether the Non-Disclosure Agreement (NDA) confirms, contradicts, or lacks any mention of the specific statement provided, and reply with 'YES' if confirmed, 'NO' if contradicted, or 'NOT MENTIONED' if the statement is not covered in the NDA.
+----------
+4->Assess whether the Non-Disclosure Agreement (NDA) substantiates the statement provided. Respond with 'YES' if fully supported, 'NO' if unsupported, or 'NOT MENTIONED' if the statement lacks reference in the NDA.
+----------

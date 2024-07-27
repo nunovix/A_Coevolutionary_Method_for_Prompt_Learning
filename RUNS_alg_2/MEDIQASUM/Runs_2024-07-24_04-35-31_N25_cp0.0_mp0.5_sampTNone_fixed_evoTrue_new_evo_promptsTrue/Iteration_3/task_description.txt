@@ -1,0 +1,8 @@
+0->Compose a healthcare note that encapsulates all the relevant information in a verbal exchange between a doctor and a patient. Adhere to standard recommendations for structuring clinical notes, considering parts such as the History of the Present Illness (HPI), a Review of Systems (ROS), conclusions from a Physical Examination (PE), lab and imaging results, and other relevant tests, and finally the doctor's Assessment and treatment Plan (A/P). As a way to aid you in the wrtiting of the note, you'll also be provided with an example note. Use it as a way to know the proper structure you should use.
+----------
+1->Synthesize a brief medical record from the dialogue between the patient and healthcare provider. Extract crucial clinical details like prescribed drugs, diagnoses, health issues, traumas, and reported symptoms. Organize the record using either SOAP or APSO format to ensure clarity and brevity.
+----------
+2->Compile a succinct medical encounter note from the patient-provider conversation. Identify key clinical information such as medications, diagnoses, conditions, injuries, and symptoms. Structure the note using SOAP or APSO format for clarity and conciseness.
+----------
+3->Synthesize a brief medical record from the dialogue between the patient and healthcare provider. Extract crucial clinical details like prescribed drugs, diagnoses, health issues, traumas, and symptoms. Organize the record using either SOAP or APSO format to ensure clarity and brevity.
+----------

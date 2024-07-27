@@ -1011,7 +1011,7 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
                                 #use_cache=True,
                                 prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
         if flag == 0:
-            print(f"SEMEVAL inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+            print(f"SEMEVAL SELF inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
             print(f"TRUE LABEL-->{sample['label']}")
             flag=1
         

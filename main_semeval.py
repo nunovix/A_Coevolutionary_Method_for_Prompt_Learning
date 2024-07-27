@@ -18,12 +18,13 @@ best_prompt, best_score_iterations = evo.evo_alg_2(task = "SemEval",
                                                             max_iter = 200,
                                                             data_size = 0, # number of examples where the prompts are evaluate 0 means all
                                                             task_w_one_shot = False,
-                                                            task_w_self_reasoning = True,
+                                                            task_w_self_reasoning = False,
                                                             task_w_highlight = False,
-                                                            fixed_evo_prompts = False,
+                                                            fixed_evo_prompts = True,
                                                             do_test_eval = True,
                                                             new_evo_prompt_format = True,
                                                             save = True,
+                                                            use_optimized_evo_prompts = True
                                                             )
 
 """

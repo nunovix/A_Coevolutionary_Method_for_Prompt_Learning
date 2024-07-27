@@ -47,6 +47,7 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
                                                 task_w_oracle_spans=False, #for contract nli
                                                 task_w_full_contract=False,  #for contract nli
                                                 task_w_2_labels = True, #for contract nli
+                                                use_optimized_evo_prompts = False,
                                                 ):
 
     if task_name == 'SemEval':
@@ -103,10 +104,15 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
     # prompts to perform mutation and crossover
     evolutionary_prompts = extract_lines_to_dict("INITIAL_PROMPTS/evolutionary_prompts", task = "Evo_prompts")
 
-    new_mutation_prompts = extract_lines_to_dict("INITIAL_PROMPTS/evolutionary_prompts/mutation", task = "new_mutation")
-    #print(f"NEW NEW-->{new_mutation_prompts}")
+    if use_optimized_evo_prompts == False:
+        new_mutation_prompts = extract_lines_to_dict("INITIAL_PROMPTS/evolutionary_prompts/mutation", task = "new_mutation")
+        new_cross_prompts = extract_lines_to_dict("INITIAL_PROMPTS/evolutionary_prompts/combination", task = "new_mutation")
+    else:
+        new_mutation_prompts = extract_lines_to_dict("INITIAL_PROMPTS/hyper_optimized_evolutionary_prompts/mutation", task = "new_mutation")
+        new_cross_prompts = extract_lines_to_dict("INITIAL_PROMPTS/hyper_optimized_evolutionary_prompts/combination", task = "new_mutation")
+    print(f"NEW NEW-->{new_mutation_prompts}")
+    print(f"NEW NEW-->{new_cross_prompts}")
 
-    new_cross_prompts = extract_lines_to_dict("INITIAL_PROMPTS/evolutionary_prompts/combination", task = "new_mutation")
     #print(f"NEW NEW-->{new_cross_prompts}")
     
     return data_expanded, initial_population_prompts, evolutionary_prompts, trie, new_mutation_prompts, new_cross_prompts
@@ -3114,6 +3120,7 @@ def evo_alg_2(task,
               task_w_oracle_spans = False, # contract nli only
               task_w_full_contract =  False, # contract nli only
               task_w_2_labels = True, # contract nli only
+              use_optimized_evo_prompts = False,
               ): 
     
     # load model and tokenizer
@@ -3128,7 +3135,11 @@ def evo_alg_2(task,
                                                                                                                                                         task_w_oracle_spans = task_w_oracle_spans,
                                                                                                                                                         task_w_full_contract = task_w_full_contract,
                                                                                                                                                         task_w_2_labels = task_w_2_labels,
+                                                                                                                                                        use_optimized_evo_prompts = use_optimized_evo_prompts,
                                                                                                                                                         )
+    
+    print(f"new_mutation_prompts-->{new_mutation_prompts}")
+    print(f"new_cross_prompts-->{new_cross_prompts}")
 
 
     print(f"initial_prompts.keys()-->{initial_prompts.keys()}")
@@ -3159,7 +3170,30 @@ def evo_alg_2(task,
                                          task_w_full_contract =  task_w_full_contract, # contract nli only
                                          task_w_2_labels = task_w_2_labels, # contract nli only
                                          )
-        print(f"Root folder created: {root_folder}")
+        
+        if new_evo_prompt_format == True:
+            print(f"Root folder created: {root_folder}")
+            # Specify the folder path and file name
+            file_name = 'mutation_prompts.txt'
+            file_path = os.path.join(root_folder, file_name)
+            # Ensure the folder exists
+            os.makedirs(root_folder, exist_ok=True)
+            # Write the dictionary to a file
+            with open(file_path, 'w') as file:
+                for key, value in new_mutation_prompts.items():
+                    file.write(f'{key}: {value}\n')
+
+            file_name = 'cross_prompts.txt'
+            file_path = os.path.join(root_folder, file_name)
+            # Ensure the folder exists
+            os.makedirs(root_folder, exist_ok=True)
+            # Write the dictionary to a file
+            with open(file_path, 'w') as file:
+                for key, value in new_cross_prompts.items():
+                    file.write(f'{key}: {value}\n')
+
+                        
+        
 
     if data_size == 0 or data_size > len(data_expanded):
         data_size = len(data_expanded)

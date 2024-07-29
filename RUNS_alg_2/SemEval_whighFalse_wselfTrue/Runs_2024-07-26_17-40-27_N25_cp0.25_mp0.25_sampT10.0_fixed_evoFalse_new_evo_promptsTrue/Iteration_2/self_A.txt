@@ -1,0 +1,16 @@
+0->Taking into account the statement and the Clinical Trial Report (CTR) descriptions, summarize in a very concise way the main reasoning steps that would allow one to conclude if the statement is supported by the CTR descriptions.
+----------
+1->Considering the statement alongside the CTR descriptions, outline the critical reasoning steps necessary to determine whether the statement is corroborated by the information within the CTR. Keep it short.
+----------
+2->After reviewing the statement and the Clinical Trial Report (CTR) descriptions, detail the logical sequence of reasoning steps required to assess whether the evidence in the CTR supports the statement.
+----------
+3->In light of the given statement and the clinical trial information, enumerate the key reasoning processes needed to evaluate if the statement is valid. Be succinct.
+----------
+4->Analyze the provided clinical trial data and statement to determine the validity of the statement. Outline the essential reasoning steps required for this evaluation. Keep your explanation concise.
+
+RESULT:
+
+The rephrased instruction now clearly requests an analysis of clinical trial data in conjunction with a specific statement to ascertain the statement's validity. It specifies the need for a concise outline of the reasoning steps involved in the evaluation process.
+----------
+5->Examine the Clinical Trial Report (CTR) to determine if the statement aligns with the report's conclusions. Summarize the key logical steps succinctly.
+----------

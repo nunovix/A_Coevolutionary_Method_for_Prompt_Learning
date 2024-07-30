@@ -4,23 +4,23 @@
 
 - task descriprion
 - ctr description
-- PRIMARY CTR's SECTION (from dataset)
-- (SECONDARY CTR's SECTION) (from dataset)
+- PRIMARY CTR's SECTION [from dataset]
+- (SECONDARY CTR's SECTION) [from dataset]
 - statement description
-- STATEMENT (from dataset)
+- STATEMENT [from dataset]
 - answer description
 
 ## Setup with retrieved highlights
 
 - task descriprion
 - ctr description
-- PRIMARY CTR's SECTION (from dataset)
-- (SECONDARY CTR's SECTION) (from dataset)
+- PRIMARY CTR's SECTION [from dataset]
+- (SECONDARY CTR's SECTION) [from dataset]
 - statement description
-- STATEMENT (from dataset)
+- STATEMENT [from dataset]
 - highlights description
-- PRIMARY CTR HIGHLIGHTS (retrieved from the CTR's section)
-- SECONDARY CTR HIGHLIGHTS (retrieved from the CTR's section)
+- PRIMARY CTR HIGHLIGHTS [retrieved from the CTR's section]
+- SECONDARY CTR HIGHLIGHTS [retrieved from the CTR's section]
 - answer description
 
 ## Setup with self-reasoning
@@ -29,23 +29,23 @@
 
 - task descriprion
 - ctr description
-- PRIMARY CTR's SECTION (from dataset)
-- (SECONDARY CTR's SECTION) (from dataset)
+- PRIMARY CTR's SECTION [from dataset]
+- (SECONDARY CTR's SECTION) [from dataset]
 - statement description
-- STATEMENT (from dataset)
-- self reasoning prompt A (asks for the resoning chain)
+- STATEMENT [from dataset]
+- self reasoning prompt A - asks for the resoning chain
 
 ### Prompt for the answer using the REASONING CHAIN
 
 - task descriprion
 - ctr description
-- PRIMARY CTR's SECTION (from dataset)
-- (SECONDARY CTR's SECTION) (from dataset)
+- PRIMARY CTR's SECTION [from dataset]
+- (SECONDARY CTR's SECTION) [from dataset]
 - statement description
-- STATEMENT (from dataset)
-- self reasoning prompt B (description of the resoning chain)
+- STATEMENT [from dataset]
+- self reasoning prompt B - description of the resoning chain
 - REASONING CHAIN
-- self reasoning prompt C (prompts for the answer while asking to take the reasoning chain into account)
+- self reasoning prompt C - asks for the answer while asking to take the reasoning chain into account
 
 # Contract NLI
 
@@ -53,31 +53,31 @@
 
 - task descriprion
 - doc description
-- FULL NDA (from dataset)
+- FULL NDA [from dataset]
 - highlight description
-- ORACLE NDA SPANS (from dataset)
+- ORACLE NDA SPANS [from dataset]
 - statement description
-- STATEMENT (from dataset)
+- STATEMENT [from dataset]
 - answer description (2 labels)
 
 ## Setup with full NDA + retrieved spans (2 labels)
 
 - task descriprion
 - doc description
-- FULL NDA (from dataset)
+- FULL NDA [from dataset]
 - RETRIEVED NDA SPANS (using the model from hf Alibaba-NLP/gte-large-en-v1.5)
 - statement description
-- STATEMENT (from dataset)
+- STATEMENT [from dataset]
 - answer description (2 labels)
 
 ## Setup with full NDA + retrieved spans (3 labels)
 
 - task descriprion
 - doc description
-- FULL NDA (from dataset)
+- FULL NDA [from dataset]
 - 4 RETRIEVED NDA SPANS (using the model from hf Alibaba-NLP/gte-large-en-v1.5)
 - statement description
-- STATEMENT (from dataset)
+- STATEMENT [from dataset]
 - answer description (3 labels)
 
 # MEDIQA SUM
@@ -86,7 +86,7 @@
 
 - task descriprion
 - dialogue description
-- DIALOGUE (from dataset)
+- DIALOGUE [from dataset]
 - example description
 - RETRIEVED CLINICAL NOTE (using the model from hf Alibaba-NLP/gte-large-en-v1.5 on the dialogues)
 - answer description
@@ -94,7 +94,7 @@
 # CSQA (Not relevant for now)
 
 - task descriprion
-- QUESTION (from dataset)
+- QUESTION [from dataset]
 - answer description
 
 # Evolutionary Prompts
@@ -131,4 +131,4 @@ Each subprompt is trying to explain the task of performing the mutation/crossove
 
 # Hyper Evolutionary Prompts
 
-DEPRECATED - was being use to perform the mutation and crossover operations on the mutation/crossover prompts during the hyper mutation
+NOT USED - was being use to perform the mutation and crossover operations on the mutation/crossover prompts during the hyper mutation

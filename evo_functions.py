@@ -31,10 +31,13 @@ from semeval_evaluation import main as semeval_test_evaluation
 from torch.utils.data import DataLoader, TensorDataset
 
 # backend to improve inference speed
-#from unsloth import FastLanguageModel
+from unsloth import FastLanguageModel
 
 # for rouge metric in mediqa chat task
 import evaluate
+
+# for LEX SUM dataset
+from datasets import load_dataset
 
 # function to select dataset and extract initial population of prompts 
 # and the prompts to perform mutation and crossover
@@ -63,6 +66,11 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
     elif task_name == 'MEDIQASUM':
         prompts_path = 'INITIAL_PROMPTS/MEDIQASUM'
         data_expanded = extract_MEDIQASUM_data(retrieve_similar_examples = w_one_shot)
+        trie = None
+
+    elif task_name == 'LEXSUM':
+        prompts_path = 'INITIAL_PROMPTS/LEXSUM'
+        data_expanded = extract_LEXSUM_data()
         trie = None
 
     elif task_name == 'hyper_mutation':
@@ -203,6 +211,8 @@ def extract_lines_to_dict(folder_path, task,
         else:
             print(f"MEDIQASUM only with one_shot flag true")
             sys.exit()
+    elif task == 'LEXSUM':
+        ordered_filenames = ['task_description', 'example_description', 'doc_description', 'answer_description']
     elif task == 'Evo_prompts':
         ordered_filenames = ['mutation_prompts', 'combination_prompts']
     elif task == 'new_mutation':
@@ -1318,6 +1328,160 @@ def extract_MEDIQASUM_data(folder_name='DATASETS/MEDIQASUM_data',
     
     return data_list
 
+
+def extract_LEXSUM_data(folder_name='DATASETS/LEXSUM_data', 
+                        type = 'validation', # possible types validation and test
+                        used_retrieved_file = True,):
+    
+    file_path = os.path.join(folder_name, f"{type}_w_retrieved.json")
+    if used_retrieved_file == True and os.path.exists(file_path):
+        # Load from a JSON file
+        with open(file_path, 'r') as file:
+            data_list = json.load(file)
+        print(f"Used data with already retrieved examples from {file_path}")
+        return data_list
+        
+    dataset = load_dataset("allenai/multi_lexsum", name="v20220616")
+
+    # Define the column to check for None values and the columns to keep
+    column_to_check = 'summary/short'
+    columns_to_keep = ['id', 'sources', 'summary/short']
+
+    dataset_dict = {}
+    for split in dataset:
+        # Filter and select columns
+        dataset_dict[split] = [
+            {key: row[key] for key in columns_to_keep}
+            for row in dataset[split] if row[column_to_check] is not None
+        ]
+        # join strings of contract
+        for i in range(len(dataset_dict[split])):
+            dataset_dict[split][i]['sources'] = " ".join(dataset_dict[split][i]['sources'])
+
+    train_sources_list = []
+    for example in dataset_dict['train']:
+        train_sources_list.append(example["sources"])
+    print(f"len(train_sources_list)-->{len(train_sources_list)}")
+
+    print(f"Embedding training data...")
+    train_embeddings = embed_texts(train_sources_list)
+
+    for i in tqdm(range(len(dataset_dict['validation'])), desc="validation"):
+        validation_embedding = embed_texts([dataset_dict['validation'][i]['sources']])
+        similarities = cos_sim(validation_embedding, train_embeddings)
+        closest_index = np.argmax(similarities)
+        dataset_dict['validation'][i]['retrieved_sources'] = dataset_dict['train'][closest_index]['sources']
+        dataset_dict['validation'][i]['retrieved_summary/short'] = dataset_dict['train'][closest_index]['summary/short']
+
+    # Save to a JSON file
+    save_path = os.path.join(folder_name, f"validation_w_retrieved.json")
+    with open(save_path, 'w') as file:
+        json.dump(dataset_dict['validation'], file)
+    print(f"Examples with retreival svaed to {save_path}")
+
+    for i in tqdm(range(len(dataset_dict['test'])), desc='test'):
+        test_embedding = embed_texts([dataset_dict['test'][i]['sources']])
+        similarities = cos_sim(test_embedding, train_embeddings)
+        closest_index = np.argmax(similarities)
+        dataset_dict['test'][i]['retrieved_sources'] = dataset_dict['train'][closest_index]['sources']
+        dataset_dict['test'][i]['retrieved_summary/short'] = dataset_dict['train'][closest_index]['summary/short']
+
+
+    # Save to a JSON file
+    save_path = os.path.join(folder_name, f"test_w_retrieved.json")
+    with open(save_path, 'w') as file:
+        json.dump(dataset_dict['test'], file)
+    print(f"Examples with retreival svaed to {save_path}")
+
+
+def prompt_preds_lexsum(data_expanded, 
+                           task_description, 
+                           example_description, 
+                           doc_description, 
+                           answer_description,
+                           model, 
+                           tokenizer,
+                           save_test_predictions = False,
+                           folder = None):
+    labels = []
+    preds = []
+
+    if save_test_predictions == True:
+        ids = []
+        docs = []
+
+    print_once_flag = 0
+
+    for sample in tqdm(data_expanded):
+
+        prompt = task_description + '\n\n' + example_description + '\n\n'
+        example = sample['retrieved_summary/short']
+
+        """
+        ## VERIFICAR ISTO
+        if 'retrieved_summary/short' in sample.keys():
+            example = sample['retrieved_summary/short']
+        else:
+            example = random_example_retrieval(sample, data_expanded)
+        """
+        sentence = f"""{prompt}Example Summary:\n"{example}" """
+        doc = "".join(sample['sources'])
+        sentence = f"""[INST]{sentence}\n\n{doc_description}\n\n"{doc}"\n\n{answer_description}[/INST]\n\nSummary:"""
+        
+        labels.append(sample["note"])
+
+        if save_test_predictions == True:
+            ids.append(sample["id"])
+            docs.append(sample["sources"])
+
+        # conversion necessary for phi3 model
+        if 'Phi3' in model_name_global:
+            sentence = convert_text_mistral_phi3(sentence)
+            #print(f"messages prompts-->{sentence}\n\n\n\n\n\n\n\n")
+
+        prompt = tokenizer.encode(sentence, return_tensors="pt", return_attention_mask=True).to('cuda')
+            
+        prompt_length = prompt[0].shape[0]
+        with torch.inference_mode():
+            
+            output = model.generate(prompt, 
+                                    #pad_token_id=tokenizer.eos_token_id, 
+                                    max_new_tokens=2000,
+                                    do_sample=True,
+                                    num_beams = 3
+                                    )
+
+        # Decode only the newly generated tokens
+        # Skip the input tokens by starting the slice at input_length
+        new_tokens = output[0, prompt_length:]
+
+        if print_once_flag == 0:
+            print(f"INFERENCE LEX SUM-->{tokenizer.decode(output[0])}")
+            print(f"sample['note']-->{sample['note']}")
+            print_once_flag = 0
+
+        pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
+        preds.append(pred)
+
+        del prompt, output
+        torch.cuda.empty_cache()
+
+    if save_test_predictions == True:
+        print(f"SAVING CSV folder for mediqa chat")
+        # Column names
+        column_names = ["id", "dialogue", "summary/short"]
+        # Combine the lists into rows
+        rows = zip(ids, docs, preds)
+        # Write to CSV file
+        file_name = folder + "test_predictions.csv"
+        with open(file_name, 'w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(column_names)  # Write the column names
+            writer.writerows(rows)  # Write the data rows
+
+    return labels, preds
+                
+
 # randomly select example
 def random_example_retrieval(sample, data_expanded):
     for example in data_expanded:
@@ -1485,7 +1649,7 @@ def load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct",
             load_in_4bit = load_in_4bit,
             # token = "hf_...", # use one if using gated models like meta-llama/Llama-2-7b-hf
         )
-        #FastLanguageModel.for_inference(model) # Enable native 2x faster inference
+        FastLanguageModel.for_inference(model) # Enable native 2x faster inference
         print("Model max position embeddings:", model.config.max_position_embeddings)
         print("Tokenizer model max length:", tokenizer.model_max_length)
         return model, tokenizer
@@ -1892,7 +2056,7 @@ def compute_rouge_scores(references, predictions):
     
     # Compute the ROUGE scores
     rouge_scores = rouge_scorer.compute(references=references, predictions=predictions)
-    
+    print(f"rouge_scores-->{rouge_scores}")
     rouge_1 = rouge_scores['rouge1']
     return rouge_scores, rouge_1
 
@@ -2146,6 +2310,29 @@ def eval_pop(population,
             print(f"\n\n MEDIQA SUM SCORE ROUGE_1-->{rouge_1}")
             population['eval'].append(rouge_1)
             population['full_eval'].append(rouge_scores)
+    
+    elif task == 'LEXSUM':
+        population['full_eval'] = []
+        tt = 0
+        for i in tqdm(range(n_pop), desc = f"Evaluating prompt population"):
+            tt+=1
+            #print(f"ttt 1--->{tt}")
+            labels, predictions = prompt_preds_lexsum(data_expanded[:n_samples], 
+                                                         task_description = prompts['task_description'][population['prompts'][i]['task_description']], 
+                                                         example_description = prompts['example_description'][population['prompts'][i]['example_description']], 
+                                                         dialog_description = prompts['doc_description'][population['prompts'][i]['doc_description']],
+                                                         answer_description =  prompts['answer_description'][population['prompts'][i]['answer_description']],
+                                                         model=model,
+                                                         tokenizer=tokenizer,
+                                                         save_test_predictions = save_test_predictions,
+                                                         folder = folder
+                                                         )
+            
+            #print(f"antes da eval{tt}")
+            rouge_scores, rouge_1 = compute_rouge_scores(references=labels, predictions=predictions)
+            print(f"\n\n LEXSUM SUM SCORE ROUGE_1-->{rouge_1}")
+            population['eval'].append(rouge_1)
+            population['full_eval'].append(rouge_scores)
 
     elif task == "hyper_mutation":
         for i in tqdm(range(n_pop), desc = f"Evaluating prompt population"):
@@ -2272,8 +2459,8 @@ def create_root_folder(task,
             folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
         elif task == 'ContractNLI':
             folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
-        elif task == 'MEDIQASUM':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
+        elif task == 'MEDIQASUM' or task == 'LEXSUM':
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")  
         elif task == 'hyper_crossover' or task == 'hyper_mutation':
             folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
 
@@ -2823,6 +3010,9 @@ def test_eval(task,
     elif task == "MEDIQASUM":
         data_expanded = extract_MEDIQASUM_data(type = 'clinicalnlp_taskB_test1')
         save_test_predictions = True
+    elif task == "LEXSUM":
+        data_expanded = extract_LEXSUM_data(type = 'test')
+        save_test_predictions = True
 
     # criar pop e avaliar
     best_pop = create_population(task, best_prompts, initial = True,
@@ -2862,8 +3052,8 @@ def test_eval(task,
             file.write(f"Acc score: {score}\n")
             file.write(f"F1 scores: {f1_scores}\n")
             file.write(f"Confusion matrix: {confusion_matrix}\n")
-        elif task == 'MEDIQASUM':
-            full_scores = best_pop['eval']
+        elif task == 'MEDIQASUM' or task == 'LEXSUM' :
+            full_scores = best_pop['full_eval']
             file.write(f"Full scores: {full_scores}\n")
 
     print(f"test set evaluation-->{score}, saved to {file_name}")

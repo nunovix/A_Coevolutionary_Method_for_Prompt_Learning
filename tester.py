@@ -74,4 +74,9 @@ def extract_LEXSUM_data(folder_name='DATASETS/LEXSUM_data',
     print(f"Examples with retreival svaed to {save_path}")
 
 
-extract_LEXSUM_data(used_retrieved_file=False)
+data_val = extract_LEXSUM_data(type = 'validation')
+print(data_val)
+data_test = extract_LEXSUM_data(type = 'test')
+print(data_test)
+
+# keys--> retrieved_summary/short, retrieved_sources, sources, summary/short, id

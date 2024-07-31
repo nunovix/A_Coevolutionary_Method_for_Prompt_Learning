@@ -13,7 +13,7 @@ import evo_functions as evo
                              save_retrieved_sentences = True,
                              task_w_2_labels = False,
                              )"""
-
+##
 evo.test_eval('ContractNLI',
               'RUNS_alg_2/ContractNLI_woracleFalse_w2labelsFalse/Runs_2024-07-22_10-56-01_N25_cp0.25_mp0.25_sampT10.0_fixed_evoFalse_new_evo_promptsTrue', # Run folder
               model_name = "microsoft/Phi-3-mini-128k-instruct",

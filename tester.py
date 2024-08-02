@@ -1,82 +1,112 @@
 import os
-# set available gpu's
-os.environ["CUDA_VISIBLE_DEVICES"] = "3"
+import shutil
+from evo_functions import save_population
 
-from datasets import load_dataset
-import json
-import numpy as np
-from sentence_transformers.util import cos_sim
-from evo_functions import embed_texts
-from tqdm import tqdm
-
-def extract_LEXSUM_data(folder_name='DATASETS/LEXSUM_data', 
-                        type = 'validation', # possible types validation and test
-                        used_retrieved_file = True,):
+def load_population(iteration, root_folder, task = 'SemEval'):
+    # Initialize the population dictionary
+    population = {
+        'prompts_dict': {},
+        'history': {},
+        'eval': [],
+        'task': '',
+        'prompts': [],
+        'f1_scores': [],
+        'confusion_matrix': [],
+    }
     
-    file_path = os.path.join(folder_name, f"{type}_w_retrieved.json")
-    if used_retrieved_file == True and os.path.exists(file_path):
-        # Load from a JSON file
-        with open(file_path, 'r') as file:
-            data_list = json.load(file)
-        print(f"Used data with already retrieved examples from {file_path}")
-        return data_list
-        
-    dataset = load_dataset("allenai/multi_lexsum", name="v20220616")
+    # Define the iteration folder path
+    iteration_folder = os.path.join(root_folder, f"Iteration_{iteration}")
+    
+    # Read prompts_dict
+    for filename in os.listdir(iteration_folder):
+        if filename.endswith(".txt") and not filename.startswith("history_") and filename not in ["evaluations.txt", "f1_scores.txt", "confusion_matrix.txt", "full_eval.txt", "population.txt", "keep_list.txt"]:
+            key = filename[:-4]  # Remove the .txt extension
+            file_path = os.path.join(iteration_folder, filename)
+            with open(file_path, 'r') as file:
+                lines = file.readlines()
+                values = [line.split("->", 1)[1].strip() for line in lines if "->" in line]
+            population['prompts_dict'][key] = values
+    
+    # Read history
+    for filename in os.listdir(iteration_folder):
+        if filename.startswith("history_") and filename.endswith(".txt"):
+            key = filename[len("history_"):-4]
+            file_path = os.path.join(iteration_folder, filename)
+            with open(file_path, 'r') as file:
+                lines = file.readlines()
+                values = [line.split("->", 1)[1].strip() for line in lines if "->" in line]
+            population['history'][key] = values
+    
+    # Read evaluations
+    additional_file_path = os.path.join(iteration_folder, "evaluations.txt")
+    with open(additional_file_path, 'r') as file:
+        population['eval'] = [line.strip() for line in file.readlines()]
 
-    # Define the column to check for None values and the columns to keep
-    column_to_check = 'summary/short'
-    columns_to_keep = ['id', 'sources', 'summary/short']
+    # Check if task-specific files exist and read them
+    additional_file_path = os.path.join(iteration_folder, "f1_scores.txt")
+    if os.path.exists(additional_file_path):
+        with open(additional_file_path, 'r') as file:
+            population['f1_scores'] = [line.strip() for line in file.readlines()]
 
-    dataset_dict = {}
-    for split in dataset:
-        # Filter and select columns
-        dataset_dict[split] = [
-            {key: row[key] for key in columns_to_keep}
-            for row in dataset[split] if row[column_to_check] is not None
-        ]
-        # join strings of contract
-        for i in range(len(dataset_dict[split])):
-            dataset_dict[split][i]['sources'] = " ".join(dataset_dict[split][i]['sources'])
+    additional_file_path = os.path.join(iteration_folder, "confusion_matrix.txt")
+    if os.path.exists(additional_file_path):
+        with open(additional_file_path, 'r') as file:
+            population['confusion_matrix'] = [line.strip() for line in file.readlines()]
 
-    train_sources_list = []
-    for example in dataset_dict['train']:
-        train_sources_list.append(example["sources"])
-    print(f"len(train_sources_list)-->{len(train_sources_list)}")
+    additional_file_path = os.path.join(iteration_folder, "full_eval.txt")
+    if os.path.exists(additional_file_path):
+        with open(additional_file_path, 'r') as file:
+            population['full_eval'] = [line.strip() for line in file.readlines()]
 
-    print(f"Embedding training data...")
-    train_embeddings = embed_texts(train_sources_list)
+    # Read population
+    additional_file_path = os.path.join(iteration_folder, "population.txt")
+    with open(additional_file_path, 'r') as file:
+        population_lines = [line.strip().split(", ") for line in file.readlines()]
+        population['prompts'] = [line[0] for line in population_lines]
+        # Populate eval without duplicating the same eval items from evaluations.txt
+        eval_items = [line[1] for line in population_lines]
+        population['eval'] = eval_items
 
-    for i in tqdm(range(len(dataset_dict['validation'])), desc="validation"):
-        validation_embedding = embed_texts([dataset_dict['validation'][i]['sources']])
-        similarities = cos_sim(validation_embedding, train_embeddings)
-        closest_index = np.argmax(similarities)
-        dataset_dict['validation'][i]['retrieved_sources'] = dataset_dict['train'][closest_index]['sources']
-        dataset_dict['validation'][i]['retrieved_summary/short'] = dataset_dict['train'][closest_index]['summary/short']
+    # Read keep_list
+    keep_list = []
+    additional_file_path = os.path.join(iteration_folder, "keep_list.txt")
+    with open(additional_file_path, 'r') as file:
+        keep_list = [line.strip() for line in file.readlines()]
 
-    # Save to a JSON file
-    save_path = os.path.join(folder_name, f"validation_w_retrieved.json")
-    with open(save_path, 'w') as file:
-        json.dump(dataset_dict['validation'], file)
-    print(f"Examples with retreival svaed to {save_path}")
+    population['task'] = task
 
-    for i in tqdm(range(len(dataset_dict['test'])), desc='test'):
-        test_embedding = embed_texts([dataset_dict['test'][i]['sources']])
-        similarities = cos_sim(test_embedding, train_embeddings)
-        closest_index = np.argmax(similarities)
-        dataset_dict['test'][i]['retrieved_sources'] = dataset_dict['train'][closest_index]['sources']
-        dataset_dict['test'][i]['retrieved_summary/short'] = dataset_dict['train'][closest_index]['summary/short']
+    return population, keep_list
 
 
-    # Save to a JSON file
-    save_path = os.path.join(folder_name, f"test_w_retrieved.json")
-    with open(save_path, 'w') as file:
-        json.dump(dataset_dict['test'], file)
-    print(f"Examples with retreival svaed to {save_path}")
+# Sample data structure
+iteration = 1
+root_folder = "test_data"
+population = {
+    'prompts_dict': {'key1': ['value1', 'value2'], 'key2': ['value3']},
+    'history': {'key1': ['value1', 'value2'], 'key2': ['value3']},
+    'eval': ['eval1', 'eval2', 'eval3'],
+    'task': 'SemEval',
+    'prompts': ['prompt1', 'prompt2', 'prompt3'],
+    'f1_scores': ['0.9', '0.8', '0.7'],
+    'confusion_matrix': ['matrix1', 'matrix2', 'matrix3'],
+}
+keep_list = ['keep1', 'keep2']
+
+# Save the sample data
+save_population(iteration, population, root_folder, keep_list)
+
+# Load the data back
+loaded_population, loaded_keep_list = load_population(iteration, root_folder)
 
 
-data_val = extract_LEXSUM_data(type = 'validation')
-print(data_val)
-data_test = extract_LEXSUM_data(type = 'test')
-print(data_test)
+print(f"population-->{population}")
+print(f"loaded_population-->{loaded_population}")
 
-# keys--> retrieved_summary/short, retrieved_sources, sources, summary/short, id
+# Compare the original and loaded data
+assert population == loaded_population, "Population data does not match!"
+assert keep_list == loaded_keep_list, "Keep list does not match!"
+
+print("Data successfully saved and loaded. The data structures match!")
+
+# Cleanup
+shutil.rmtree(root_folder)

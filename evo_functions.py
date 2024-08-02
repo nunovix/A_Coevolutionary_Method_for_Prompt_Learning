@@ -801,6 +801,7 @@ def prompt_preds_semeval(data_expanded,
         prompt = tokenizer.encode(sentence, return_tensors="pt", return_attention_mask=True).to('cuda')
 
         prompt_length = prompt[0].shape[0]
+        FastLanguageModel.for_inference(model)
         with torch.inference_mode():
             output = model.generate(prompt, 
                                     #pad_token_id=tokenizer.eos_token_id, 
@@ -809,8 +810,8 @@ def prompt_preds_semeval(data_expanded,
 
 
         if flag ==0:
-            print(f"SEMEVAL inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
-            print(f"TRUE LABEL-->{sample['label']}")
+            #print(f"SEMEVAL inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+            #print(f"TRUE LABEL-->{sample['label']}")
             flag = 1
 
         new_tokens = output[0, prompt_length:]
@@ -1674,6 +1675,7 @@ def load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct",
             attn_implementation="flash_attention_2",
             #attn_implementation='eager',
         )
+        FastLanguageModel.for_inference(model)
         tokenizer = AutoTokenizer.from_pretrained(checkpoint)
         print(f"Phi-3 selecionado")
         return model, tokenizer
@@ -2867,7 +2869,8 @@ def create_population(task, prompts_dict, initial,
                             task_w_2_labels = task_w_2_labels
                             )
 
-    #print(f"depois de criar")
+    print(f"POP-->{population}")
+    print(f"POP KEYS-->{population.keys()}")
     return population
 
 # function to combine two populations
@@ -3386,7 +3389,7 @@ def evo_alg_2(task,
         
 
     if data_size == 0 or data_size > len(data_expanded):
-        data_size = len(data_expanded)
+        data_size = len(data_expanded) 
 
     population = create_population(task, 
                                    initial_prompts, 

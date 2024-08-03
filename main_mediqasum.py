@@ -1,10 +1,10 @@
 import os
 # set available gpu's
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 #os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 import evo_functions as evo
-"""best_prompt, best_score_iterations = evo.evo_alg_2(task = "MEDIQASUM", 
+best_prompt, best_score_iterations = evo.evo_alg_2(task = "MEDIQASUM", 
                                                             model_name = "microsoft/Phi-3-mini-4k-instruct",
                                                             #model_name = "unsloth/Phi-3-mini-4k-instruct",
                                                             quantize_model_4bits = True,
@@ -19,10 +19,12 @@ import evo_functions as evo
                                                             fixed_evo_prompts = False,
                                                             do_test_eval = False,
                                                             save = True,
-                                                            task_w_one_shot = True
-                                                            )"""
+                                                            task_w_one_shot = True,
+                                                            resume_run=True,
+                                                            resume_run_folder="RUNS_alg_2/MEDIQASUM/Runs_2024-08-01_17-24-23_N25_cp0.25_mp0.25_sampT10.0_fixed_evoFalse_new_evo_promptsTrue"
+                                                            )
 
-best_prompt, best_score_iterations = evo.evo_alg_2(task = "MEDIQASUM", 
+"""best_prompt, best_score_iterations = evo.evo_alg_2(task = "MEDIQASUM", 
                                                             model_name = "microsoft/Phi-3-mini-4k-instruct",
                                                             #model_name = "unsloth/Phi-3-mini-4k-instruct",
                                                             quantize_model_4bits = True,
@@ -40,5 +42,5 @@ best_prompt, best_score_iterations = evo.evo_alg_2(task = "MEDIQASUM",
                                                             task_w_one_shot = True,
                                                             resume_run=True,
                                                             resume_run_folder="RUNS_alg_2/MEDIQASUM/Runs_2024-07-24_04-35-31_N25_cp0.0_mp0.5_sampTNone_fixed_evoTrue_new_evo_promptsTrue"
-                                                            )
+                                                            )"""
 

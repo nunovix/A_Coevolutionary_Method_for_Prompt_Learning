@@ -1448,7 +1448,7 @@ def prompt_preds_lexsum(data_expanded,
             
             output = model.generate(prompt, 
                                     #pad_token_id=tokenizer.eos_token_id, 
-                                    max_new_tokens=2000,
+                                    max_new_tokens=150,
                                     do_sample=True,
                                     num_beams = 3
                                     )
@@ -3421,9 +3421,6 @@ def evo_alg_2(task,
         root_folder = resume_run_folder
         # load population thing
         best_score_iterations, patience_counter, population, current_iteration_num, best_pop = extract_max_eval_and_patience(root_folder=root_folder, task=task)
-        
-        # current iter
-        iter = current_iteration_num+1
     
     while patience_counter < patience and iter < max_iter:
 
@@ -4579,7 +4576,7 @@ def extract_max_eval_and_patience(root_folder, task):
             max_eval = max(eval_values)
             max_eval_values.append(max_eval)
             
-            if max_eval > max_eval_value:
+            if max_eval >= max_eval_value:
                 max_eval_value = max_eval
                 max_eval_iteration = iteration_folder
     

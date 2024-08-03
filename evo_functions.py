@@ -39,6 +39,9 @@ import evaluate
 # for LEX SUM dataset
 from datasets import load_dataset
 
+# functions to resume runs local
+from load_resume_functions import extract_max_eval_and_patience
+
 # function to select dataset and extract initial population of prompts 
 # and the prompts to perform mutation and crossover
 # also returns trie (to condition decoding for NLI tasks)
@@ -2753,7 +2756,6 @@ def pop_selection(population, # population (dictionary with keys: prompts and ev
         #print(f"pop['confusion_matrix']-->{pop['confusion_matrix']}")
     
     if pop['task'] == 'MEDIQASUM':
-
         sorted_full_scores = sorted_pop['full_eval']
         keep_full_scores = [sorted_full_scores[i] for i in keep_list]
         pop['full_eval'] = keep_full_scores
@@ -3314,6 +3316,8 @@ def evo_alg_2(task,
               task_w_full_contract =  False, # contract nli only
               task_w_2_labels = True, # contract nli only
               use_optimized_evo_prompts = False,
+              resume_run = False,
+              resume_run_folder = None,
               ): 
     
     # load model and tokenizer
@@ -3338,130 +3342,97 @@ def evo_alg_2(task,
     print(f"initial_prompts.keys()-->{initial_prompts.keys()}")
     for key in initial_prompts:
         print(f"key-->{key}")
-        print(f"initial_prompts[key][0]-->{initial_prompts[key][0]}")                                                                                                                                       
+        print(f"initial_prompts[key][0]-->{initial_prompts[key][0]}") 
+        print(f"len(initial_prompts[key])-->{len(initial_prompts[key])}")   
+        n_sub = len(initial_prompts[key])
 
-    tam = []
-    for key in initial_prompts:
-        tam.append(len(initial_prompts[key]))
+    if data_size == 0 or data_size > len(data_expanded):
+        data_size = len(data_expanded) 
 
     # list to save best score at each iteration
     best_score_iterations = []
     start_time = datetime.now()
     
     # Call the function to create the folder and print its name
-    if save == True:
-        root_folder = create_root_folder(task,
-                                         crossover_prob=crossover_prob,
-                                         mutation_prob=mutation_prob,
-                                         N=n_pop,
-                                         sampling_T=sampling_T,
-                                         task_w_self_reasoning = task_w_self_reasoning,
-                                         task_w_highlight = task_w_highlight,
-                                         fixed_evo_prompts = fixed_evo_prompts,
-                                         new_evo_prompts=new_evo_prompt_format,
-                                         task_w_oracle_spans = task_w_oracle_spans, # contract nli only
-                                         task_w_full_contract =  task_w_full_contract, # contract nli only
-                                         task_w_2_labels = task_w_2_labels, # contract nli only
-                                         )
-        
-        if new_evo_prompt_format == True:
-            print(f"Root folder created: {root_folder}")
-            # Specify the folder path and file name
-            file_name = 'mutation_prompts.txt'
-            file_path = os.path.join(root_folder, file_name)
-            # Ensure the folder exists
-            os.makedirs(root_folder, exist_ok=True)
-            # Write the dictionary to a file
-            with open(file_path, 'w') as file:
-                for key, value in new_mutation_prompts.items():
-                    file.write(f'{key}: {value}\n')
+     
+    if resume_run == False:
+        if save == True:
+            root_folder = create_root_folder(task,
+                                            crossover_prob=crossover_prob,
+                                            mutation_prob=mutation_prob,
+                                            N=n_pop,
+                                            sampling_T=sampling_T,
+                                            task_w_self_reasoning = task_w_self_reasoning,
+                                            task_w_highlight = task_w_highlight,
+                                            fixed_evo_prompts = fixed_evo_prompts,
+                                            new_evo_prompts=new_evo_prompt_format,
+                                            task_w_oracle_spans = task_w_oracle_spans, # contract nli only
+                                            task_w_full_contract =  task_w_full_contract, # contract nli only
+                                            task_w_2_labels = task_w_2_labels, # contract nli only
+                                            )
+            
+            if new_evo_prompt_format == True:
+                print(f"Root folder created: {root_folder}")
+                # Specify the folder path and file name
+                file_name = 'mutation_prompts.txt'
+                file_path = os.path.join(root_folder, file_name)
+                # Ensure the folder exists
+                os.makedirs(root_folder, exist_ok=True)
+                # Write the dictionary to a file
+                with open(file_path, 'w') as file:
+                    for key, value in new_mutation_prompts.items():
+                        file.write(f'{key}: {value}\n')
 
-            file_name = 'cross_prompts.txt'
-            file_path = os.path.join(root_folder, file_name)
-            # Ensure the folder exists
-            os.makedirs(root_folder, exist_ok=True)
-            # Write the dictionary to a file
-            with open(file_path, 'w') as file:
-                for key, value in new_cross_prompts.items():
-                    file.write(f'{key}: {value}\n')
-
+                file_name = 'cross_prompts.txt'
+                file_path = os.path.join(root_folder, file_name)
+                # Ensure the folder exists
+                os.makedirs(root_folder, exist_ok=True)
+                # Write the dictionary to a file
+                with open(file_path, 'w') as file:
+                    for key, value in new_cross_prompts.items():
+                        file.write(f'{key}: {value}\n')
                         
-        
-
-    if data_size == 0 or data_size > len(data_expanded):
-        data_size = len(data_expanded) 
-
-    population = create_population(task, 
-                                   initial_prompts, 
-                                   initial = True,
-                                   n_pop=n_pop,
-                                   data_expanded = data_expanded, 
-                                   model=model, tokenizer=tokenizer, trie=trie, n_samples = data_size,
-                                   task_w_one_shot = task_w_one_shot,
-                                   task_w_highlight = task_w_highlight,
-                                   task_w_self_reasoning = task_w_self_reasoning,
-                                   task_w_oracle_spans=task_w_oracle_spans,
-                                   task_w_full_contract = task_w_full_contract,
-                                   task_w_2_labels=task_w_2_labels,
-                                   )
-
-    n_sub = len(population['prompts_dict'][list(population['prompts_dict'].keys())[0]])
-
-    # old way to increase population size at start, it was generating 
-    # increase intial population by generating new prompts
-    """
-    # if needed increase initial population by generating mutated variations of the initial promtp list
-    if n_pop > tam[0]:
-        print(f"n_pop > tam[0]-->{n_pop} > {tam[0]}")
-
-        extra_prompts = {key: [] for key in initial_prompts.keys()}
-        extra_history = {key: [] for key in initial_prompts.keys()}
-
-        # iterate through each prompt to generate mutations
-        for i in tqdm(range(n_pop-tam[0]), desc = f"Generating extra initial pop"):
-            # iterate through the subprompts
-            for j in initial_prompts.keys():
-                # mutate each subprompt and add to the mutated population prompts
-                #rndm choice of the operator to be used
-                mutation_prompt_index = random.choice(list(range(len(evolutionary_prompts['mutation_prompts']))))
-                #random choice of the prompt to be mutated
-                ind_prompt = random.choice(list(range(tam[0])))
-                mutated = mutate_prompt(initial_prompts[j][ind_prompt], evolutionary_prompts['mutation_prompts'][mutation_prompt_index], 
-                                        model, tokenizer) 
-                
-                hist = f"mutated from {ind_prompt}, using mutation prompt {mutation_prompt_index}"
-
-                extra_prompts[j].append(mutated)
-                extra_history[j].append(hist)
-
-        extra_population = create_population(task, extra_prompts, initial = True,
-                                               data_expanded = data_expanded,
-                                               model=model, tokenizer=tokenizer, trie=trie, n_samples = data_size,
-                                               history=extra_history, 
-                                               task_w_one_shot = task_w_one_shot,
-                                               task_w_highlight = task_w_highlight,
-                                               task_w_self_reasoning = task_w_self_reasoning)
-        population = combine_populations(population, extra_population)
-    """
-    patience_counter = 0
-    iter = 0
-    #print(f"initial_population eval-->{population['eval']}")
-    best_score_iterations.append(max(population['eval']))
-
-    # for the best individual baseline related change
-    best_pop, keep_list = pop_selection(population, 1, 1)
-
+        population = create_population(task, 
+                                    initial_prompts, 
+                                    initial = True,
+                                    n_pop=n_pop,
+                                    data_expanded = data_expanded, 
+                                    model=model, tokenizer=tokenizer, trie=trie, n_samples = data_size,
+                                    task_w_one_shot = task_w_one_shot,
+                                    task_w_highlight = task_w_highlight,
+                                    task_w_self_reasoning = task_w_self_reasoning,
+                                    task_w_oracle_spans=task_w_oracle_spans,
+                                    task_w_full_contract = task_w_full_contract,
+                                    task_w_2_labels=task_w_2_labels,
+                                    )
     
-    if save == True:
-        save_population('initial', population, root_folder, keep_list=list(range(n_pop)))
-        print(f"Data saved for iteration {iter}.")
+
+        patience_counter = 0
+        iter = 0
+        #print(f"initial_population eval-->{population['eval']}")
+        best_score_iterations.append(max(population['eval']))
+
+        # for the best individual baseline related change
+        best_pop, _ = pop_selection(population, 1, 1)
+
+        
+        if save == True:
+            save_population('initial', population, root_folder, keep_list=list(range(n_pop)))
+            print(f"Data saved for iteration {iter}.")
+    else:
+        root_folder = resume_run_folder
+        # load population thing
+        best_score_iterations, patience, population, current_iteration_num, best_pop = extract_max_eval_and_patience(root_folder=root_folder, task=task)
+        
+        # current iter
+        iter = current_iteration_num+1
     
     while patience_counter < patience and iter < max_iter:
 
         # score best, done here so it can work as the baseline as well, as the best individual is not neecessarily passed to the next generation
         # Create a new dictionary with the same keys, but values are lists with only the selected indices
         if max(population['eval']) >= best_pop['eval'][0]: 
-            best_pop, keep_list = pop_selection(population, 1, 1)
+            best_pop, _ = pop_selection(population, 1, 1)
 
         offspring_prompts = {key: [] for key in population['prompts_dict'].keys()}
         offspring_history = {key: [] for key in population['prompts_dict'].keys()}

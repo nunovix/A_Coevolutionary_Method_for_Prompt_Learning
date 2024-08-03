@@ -9,6 +9,7 @@ import random
 import numpy as np
 import csv
 import re
+import ast
 from trie import MarisaTrie # to condition decoder
 #from marisa_trie import Trie as MarisaTrie 
 from datetime import datetime, timedelta
@@ -38,9 +39,6 @@ import evaluate
 
 # for LEX SUM dataset
 from datasets import load_dataset
-
-# functions to resume runs local
-from load_resume_functions import extract_max_eval_and_patience
 
 # function to select dataset and extract initial population of prompts 
 # and the prompts to perform mutation and crossover
@@ -3422,7 +3420,7 @@ def evo_alg_2(task,
     else:
         root_folder = resume_run_folder
         # load population thing
-        best_score_iterations, patience, population, current_iteration_num, best_pop = extract_max_eval_and_patience(root_folder=root_folder, task=task)
+        best_score_iterations, patience_counter, population, current_iteration_num, best_pop = extract_max_eval_and_patience(root_folder=root_folder, task=task)
         
         # current iter
         iter = current_iteration_num+1
@@ -4455,3 +4453,171 @@ def create_plots_from_RUNS_folder(directory_path):
 # NOTAS FUTURAS
 # O CSQA está sem o phi 3 implementado porque ainda tem o prompt making separado do eval
 
+
+
+# function to load population from iteration's folder
+def load_population(iteration, root_folder, task):
+    # Initialize the population dictionary
+    population = {
+        'prompts_dict': {},
+        'history': {},
+        'eval': [],
+        'full_eval': [],
+        'task': task,
+        'prompts': [],
+        #'f1_scores': [],
+        #'confusion_matrix': [],
+    }
+    
+    # Define the iteration folder path
+    iteration_folder = os.path.join(root_folder, f"Iteration_{iteration}")
+
+    # Read prompts_dict
+    for filename in os.listdir(iteration_folder):
+        if filename.endswith(".txt") and not filename.startswith("history_") and filename not in ["evaluations.txt", "f1_scores.txt", "confusion_matrix.txt", "full_eval.txt", "population.txt", "keep_list.txt"]:
+            key = filename[:-4]  # Remove the .txt extension
+            file_path = os.path.join(iteration_folder, filename)
+            with open(file_path, 'r') as file:
+                lines = file.readlines()
+                values = []
+                for line in lines:
+                    line = line.strip()
+                    if '->' in line:
+                        value = line.split('->', 1)[1].strip()
+                        if value:
+                            values.append(value)
+                population['prompts_dict'][key] = values
+
+    # Read history
+    for filename in os.listdir(iteration_folder):
+        if filename.startswith("history_") and filename.endswith(".txt"):
+            key = filename[len("history_"):-4]
+            file_path = os.path.join(iteration_folder, filename)
+            with open(file_path, 'r') as file:
+                lines = file.readlines()
+                values = []
+                for line in lines:
+                    line = line.strip()
+                    if '->' in line:
+                        value = line.split('->', 1)[1].strip()
+                        if value:
+                            values.append(value)
+                population['history'][key] = values
+
+    # Read evaluations
+    additional_file_path = os.path.join(iteration_folder, "evaluations.txt")
+    if os.path.exists(additional_file_path):
+        with open(additional_file_path, 'r') as file:
+            population['eval'] = [line.strip() for line in file if line.strip()]
+
+    # Read task-specific files
+    additional_file_path = os.path.join(iteration_folder, "full_eval.txt")
+    if os.path.exists(additional_file_path):
+        with open(additional_file_path, 'r') as file:
+            population['full_eval'] = [line.strip() for line in file if line.strip()]
+
+    # Read task-specific files
+    additional_file_path = os.path.join(iteration_folder, "f1_scores.txt")
+    if os.path.exists(additional_file_path):
+        with open(additional_file_path, 'r') as file:
+            population['f1_scores'] = [line.strip() for line in file if line.strip()]
+
+    additional_file_path = os.path.join(iteration_folder, "confusion_matrix.txt")
+    if os.path.exists(additional_file_path):
+        with open(additional_file_path, 'r') as file:
+            population['confusion_matrix'] = [line.strip() for line in file if line.strip()]
+
+    # Read population
+    additional_file_path = os.path.join(iteration_folder, "population.txt")
+    if os.path.exists(additional_file_path):
+        with open(additional_file_path, 'r') as file:
+            lines = file.readlines()
+            prompts = []
+            evals = []
+            for line in lines:
+                line = line.strip()
+                if ", " in line:
+                    parts = line.rsplit(", ", 1)
+                    if len(parts) == 2:
+                        prompts.append(ast.literal_eval(parts[0]))
+                        evals.append(float(parts[1]))
+            population['prompts'] = prompts
+            population['eval'] = evals
+
+    # Read keep_list
+    additional_file_path = os.path.join(iteration_folder, "keep_list.txt")
+    if os.path.exists(additional_file_path):
+        with open(additional_file_path, 'r') as file:
+            keep_list = [line.strip() for line in file if line.strip()]
+    else:
+        keep_list = []
+
+    return population, keep_list
+
+
+# function to load info to resume a run
+def extract_max_eval_and_patience(root_folder, task):
+    # Get all iteration folders including the initial one
+    iteration_folders = [f for f in os.listdir(root_folder) if f.startswith("Iteration_")]
+    iteration_folders.sort(key=lambda x: (int(x.split('_')[1]) if x != "Iteration_initial" else -1))
+    
+    max_eval_values = []
+    max_eval_iteration = None
+    max_eval_value = -float('inf')
+    
+    # Determine the iteration with the maximum evaluation value
+    for iteration_folder in iteration_folders:
+        evaluations_file_path = os.path.join(root_folder, iteration_folder, "evaluations.txt")
+        
+        if not os.path.exists(evaluations_file_path):
+            continue
+        
+        with open(evaluations_file_path, 'r') as file:
+            eval_values = [float(line.strip()) for line in file.readlines()]
+        
+        if eval_values:
+            max_eval = max(eval_values)
+            max_eval_values.append(max_eval)
+            
+            if max_eval > max_eval_value:
+                max_eval_value = max_eval
+                max_eval_iteration = iteration_folder
+    
+    # Determine the current iteration number and folder
+    current_iteration_folder = iteration_folders[-1] if iteration_folders else "None"
+    current_iteration_num = (int(current_iteration_folder.split('_')[1]) if current_iteration_folder != "Iteration_initial" else 0)
+    
+    # Calculate patience
+    if max_eval_iteration:
+        max_eval_iteration_num = int(max_eval_iteration.split('_')[1]) if max_eval_iteration != "Iteration_initial" else 0
+        patience = 0
+        for iteration_folder in iteration_folders:
+            iteration_num = int(iteration_folder.split('_')[1]) if iteration_folder != "Iteration_initial" else 0
+            if iteration_num > max_eval_iteration_num:
+                evaluations_file_path = os.path.join(root_folder, iteration_folder, "evaluations.txt")
+                
+                if not os.path.exists(evaluations_file_path):
+                    continue
+                
+                with open(evaluations_file_path, 'r') as file:
+                    eval_values = [float(line.strip()) for line in file.readlines()]
+                
+                if eval_values:
+                    max_eval = max(eval_values)
+                    if max_eval <= max_eval_value:
+                        patience += 1
+                    else:
+                        patience = 0
+    
+    # Load the population of the latest iteration
+    print(f"current_iteration_num.: {current_iteration_num}")
+    population, _ = load_population(current_iteration_num, root_folder, task)
+
+    print(f"best iter no.: {max_eval_iteration_num}")
+    best_population, _ = load_population(max_eval_iteration_num, root_folder, task)
+    best_pop, _ = pop_selection(best_population, 1, 1)
+
+    print(f"max_eval_values: {max_eval_values}")
+    print(f"patience: {patience}")
+    
+    return max_eval_values, patience, population, current_iteration_num, best_pop

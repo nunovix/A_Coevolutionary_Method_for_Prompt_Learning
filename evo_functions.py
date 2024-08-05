@@ -3420,7 +3420,7 @@ def evo_alg_2(task,
     else:
         root_folder = resume_run_folder
         # load population thing
-        best_score_iterations, patience_counter, population, current_iteration_num, best_pop = extract_max_eval_and_patience(root_folder=root_folder, task=task)
+        best_score_iterations, patience_counter, population, iter, best_pop = extract_max_eval_and_patience(root_folder=root_folder, task=task)
     
     while patience_counter < patience and iter < max_iter:
 

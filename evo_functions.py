@@ -40,6 +40,8 @@ import evaluate
 # for LEX SUM dataset
 from datasets import load_dataset
 
+from evaluate import load
+
 # function to select dataset and extract initial population of prompts 
 # and the prompts to perform mutation and crossover
 # also returns trie (to condition decoding for NLI tasks)
@@ -119,8 +121,8 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
     else:
         new_mutation_prompts = extract_lines_to_dict("INITIAL_PROMPTS/hyper_optimized_evolutionary_prompts/mutation", task = "new_mutation")
         new_cross_prompts = extract_lines_to_dict("INITIAL_PROMPTS/hyper_optimized_evolutionary_prompts/combination", task = "new_mutation")
-    print(f"NEW NEW-->{new_mutation_prompts}")
-    print(f"NEW NEW-->{new_cross_prompts}")
+    #print(f"NEW NEW-->{new_mutation_prompts}")
+    #print(f"NEW NEW-->{new_cross_prompts}")
 
     #print(f"NEW NEW-->{new_cross_prompts}")
     
@@ -670,14 +672,14 @@ def batch_inference(all_prompts, model, tokenizer, trie, batch_size=3):
             with torch.no_grad():
                 outputs = model.generate(input_ids=input_ids, 
                                         #attention_mask=attention_mask, 
-                                        #pad_token_id=tokenizer.eos_token_id, 
+                                        pad_token_id=tokenizer.eos_token_id, 
                                         max_new_tokens=3,
                                         prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
         else:
             with torch.no_grad():
                 outputs = model.generate(input_ids=input_ids, 
                                         #attention_mask=attention_mask, 
-                                        #pad_token_id=tokenizer.eos_token_id, 
+                                        pad_token_id=tokenizer.eos_token_id, 
                                         max_new_tokens=250,
                                         do_sample=True, num_beams = 3)
 
@@ -805,7 +807,7 @@ def prompt_preds_semeval(data_expanded,
         FastLanguageModel.for_inference(model)
         with torch.inference_mode():
             output = model.generate(prompt, 
-                                    #pad_token_id=tokenizer.eos_token_id, 
+                                    pad_token_id=tokenizer.eos_token_id, 
                                     max_new_tokens = 3,
                                     prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
 
@@ -992,7 +994,7 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
         #with torch.inference_mode():
         output = model.generate(prompt, 
                                 #past_key_values=cached_outputs.past_key_values, 
-                                #pad_token_id=tokenizer.eos_token_id, 
+                                pad_token_id=tokenizer.eos_token_id, 
                                 max_new_tokens=150, 
                                 #use_cache=True, 
                                 do_sample=True, num_beams = 3)
@@ -1024,7 +1026,7 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
         #with torch.inference_mode():
         output = model.generate(prompt, 
                                 #past_key_values=cached_outputs.past_key_values, 
-                                #pad_token_id=tokenizer.eos_token_id, 
+                                pad_token_id=tokenizer.eos_token_id, 
                                 max_new_tokens=6, 
                                 #use_cache=True,
                                 prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
@@ -1216,7 +1218,7 @@ def prompt_preds_contractnli_span(data_expanded,
         #print(f"prompt_length-->{prompt_length}")
         with torch.inference_mode():
             output = model.generate(prompt, past_key_values=cached_outputs.past_key_values, 
-                                #pad_token_id=tokenizer.eos_token_id, 
+                                pad_token_id=tokenizer.eos_token_id, 
                                 max_new_tokens=6, use_cache=True,
                                 prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
 
@@ -1430,7 +1432,7 @@ def prompt_preds_lexsum(data_expanded,
         doc = "".join(sample['sources'])
         sentence = f"""[INST]{sentence}\n\n{doc_description}\n\n"{doc}"\n\n{answer_description}[/INST]\n\nSummary:"""
         
-        labels.append(sample["note"])
+        labels.append(sample["summary/short"])
 
         if save_test_predictions == True:
             ids.append(sample["id"])
@@ -1438,16 +1440,18 @@ def prompt_preds_lexsum(data_expanded,
 
         # conversion necessary for phi3 model
         if 'Phi3' in model_name_global:
+            print(f"len(sentence)-->{len(sentence)}")
             sentence = convert_text_mistral_phi3(sentence)
             #print(f"messages prompts-->{sentence}\n\n\n\n\n\n\n\n")
 
-        prompt = tokenizer.encode(sentence, return_tensors="pt", return_attention_mask=True).to('cuda')
+        prompt = tokenizer.encode(sentence[:70000], return_tensors="pt", return_attention_mask=True).to('cuda')
             
         prompt_length = prompt[0].shape[0]
+        print(f"prompt_length-->{prompt_length}")
         with torch.inference_mode():
             
             output = model.generate(prompt, 
-                                    #pad_token_id=tokenizer.eos_token_id, 
+                                    pad_token_id=tokenizer.eos_token_id, 
                                     max_new_tokens=150,
                                     do_sample=True,
                                     num_beams = 3
@@ -1459,14 +1463,14 @@ def prompt_preds_lexsum(data_expanded,
 
         if print_once_flag == 0:
             print(f"INFERENCE LEX SUM-->{tokenizer.decode(output[0])}")
-            print(f"sample['note']-->{sample['note']}")
+            print(f"sample['summary/short']-->{sample['summary/short']}")
             print_once_flag = 0
 
         pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
         preds.append(pred)
 
-        del prompt, output
-        torch.cuda.empty_cache()
+        #del prompt, output
+        #torch.cuda.empty_cache()
 
     if save_test_predictions == True:
         print(f"SAVING CSV folder for mediqa chat")
@@ -1560,7 +1564,7 @@ def prompt_preds_mediqasum(data_expanded,
         with torch.inference_mode():
             
             output = model.generate(prompt, 
-                                    #pad_token_id=tokenizer.eos_token_id, 
+                                    pad_token_id=tokenizer.eos_token_id, 
                                     max_new_tokens=2000,
                                     do_sample=True,
                                     num_beams = 3
@@ -1721,7 +1725,7 @@ def mutate_prompt(prompt, mutation_prompt, model, tokenizer):
         # to improve efficiency
         with torch.inference_mode():
             output = model.generate(prompt, 
-                                    #pad_token_id=tokenizer.eos_token_id, 
+                                    pad_token_id=tokenizer.eos_token_id, 
                                     max_new_tokens=400, do_sample=True, num_beams = 3)
     except:
         output = ''
@@ -1762,7 +1766,7 @@ def new_mutate_prompt(prompt,
         # to improve efficiency
         with torch.inference_mode():
             output = model.generate(prompt, 
-                                    #pad_token_id=tokenizer.eos_token_id, 
+                                    pad_token_id=tokenizer.eos_token_id, 
                                     max_new_tokens=300, 
                                     do_sample=True, 
                                     repetition_penalty=1.2,
@@ -1809,7 +1813,7 @@ def crossover_prompts(prompt_1, prompt_2, combination_prompt, model, tokenizer):
         # to improve efficiencys
         with torch.inference_mode():
             output = model.generate(prompt, 
-                                    #pad_token_id=tokenizer.eos_token_id, 
+                                    pad_token_id=tokenizer.eos_token_id, 
                                     max_new_tokens=400, 
                                     do_sample=True, num_beams = 3)
     except:
@@ -1851,7 +1855,7 @@ def new_crossover_prompts(prompt_1, prompt_2, combination_prompt_dict, model, to
         # to improve efficiencys
         with torch.inference_mode():
             output = model.generate(prompt, 
-                                    #pad_token_id=tokenizer.eos_token_id, 
+                                    pad_token_id=tokenizer.eos_token_id, 
                                     max_new_tokens=300, 
                                     repetition_penalty=1.2,
                                     do_sample=True, num_beams = 3)
@@ -1916,7 +1920,7 @@ def semeval_predictions(model, tokenizer, samples, trie):
             prompt_length = prompt[0].shape[0]
 
             output = model.generate(prompt, 
-                                    #pad_token_id=tokenizer.eos_token_id, 
+                                    pad_token_id=tokenizer.eos_token_id, 
                                     max_length=prompt_length+6, 
                                     prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))        
             #print(f"tokenizer.decode(output[0], skip_special_tokens=False)-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
@@ -1945,7 +1949,7 @@ def csqa_predictions(model, tokenizer, samples, trie):
             prompt_length = prompt[0].shape[0]
 
             output = model.generate(prompt, 
-                                    #pad_token_id=tokenizer.eos_token_id, 
+                                    pad_token_id=tokenizer.eos_token_id, 
                                     max_length=prompt_length+6, 
                                     prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
             
@@ -1994,7 +1998,7 @@ def contractnli_predictions(model, tokenizer, samples, trie):
             #print(f"prompt_length-->{prompt_length}")
             try:
                 output = model.generate(prompt, past_key_values=cached_outputs.past_key_values, 
-                                        #pad_token_id=tokenizer.eos_token_id, 
+                                        pad_token_id=tokenizer.eos_token_id, 
                                         max_new_tokens=6, use_cache=True,
                                         prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
             except:
@@ -2323,7 +2327,7 @@ def eval_pop(population,
             labels, predictions = prompt_preds_lexsum(data_expanded[:n_samples], 
                                                          task_description = prompts['task_description'][population['prompts'][i]['task_description']], 
                                                          example_description = prompts['example_description'][population['prompts'][i]['example_description']], 
-                                                         dialog_description = prompts['doc_description'][population['prompts'][i]['doc_description']],
+                                                         doc_description = prompts['doc_description'][population['prompts'][i]['doc_description']],
                                                          answer_description =  prompts['answer_description'][population['prompts'][i]['answer_description']],
                                                          model=model,
                                                          tokenizer=tokenizer,
@@ -2333,8 +2337,18 @@ def eval_pop(population,
             
             #print(f"antes da eval{tt}")
             rouge_scores, rouge_1 = compute_rouge_scores(references=labels, predictions=predictions)
+            rouge_2 = rouge_scores['rouge2']
+            rouge_L = rouge_scores['rougeL']
             print(f"\n\n LEXSUM SUM SCORE ROUGE_1-->{rouge_1}")
-            population['eval'].append(rouge_1)
+            score = (rouge_1 + rouge_2 + rouge_L)/3
+            population['eval'].append(score)
+
+            if save_test_predictions == True:
+                # calculating bert score
+                bertscore = load("bertscore")
+                bert_scores = bertscore.compute(predictions=predictions, references=labels, lang="en")
+                rouge_scores.update(bert_scores)
+
             population['full_eval'].append(rouge_scores)
 
     elif task == "hyper_mutation":
@@ -2976,7 +2990,7 @@ def test_eval(task,
               RUN_folder_path, # Run folder
               model_name = "microsoft/Phi-3-mini-128k-instruct",
               quantize_model_4bits = True,
-              save_test_predictions=False,
+              save_test_predictions=True,
               retrieve_examples = False, # use retrieval with embedding model instead of random for 1-shot learning
               task_w_self_reasoning = False,
               task_w_one_shot = False,
@@ -3333,15 +3347,15 @@ def evo_alg_2(task,
                                                                                                                                                         use_optimized_evo_prompts = use_optimized_evo_prompts,
                                                                                                                                                         )
     
-    print(f"new_mutation_prompts-->{new_mutation_prompts}")
-    print(f"new_cross_prompts-->{new_cross_prompts}")
+    #print(f"new_mutation_prompts-->{new_mutation_prompts}")
+    #print(f"new_cross_prompts-->{new_cross_prompts}")
 
 
-    print(f"initial_prompts.keys()-->{initial_prompts.keys()}")
+    #print(f"initial_prompts.keys()-->{initial_prompts.keys()}")
     for key in initial_prompts:
-        print(f"key-->{key}")
-        print(f"initial_prompts[key][0]-->{initial_prompts[key][0]}") 
-        print(f"len(initial_prompts[key])-->{len(initial_prompts[key])}")   
+        #print(f"key-->{key}")
+        #print(f"initial_prompts[key][0]-->{initial_prompts[key][0]}") 
+        #print(f"len(initial_prompts[key])-->{len(initial_prompts[key])}")   
         n_sub = len(initial_prompts[key])
 
     if data_size == 0 or data_size > len(data_expanded):

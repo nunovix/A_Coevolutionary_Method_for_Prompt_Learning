@@ -1440,9 +1440,10 @@ def prompt_preds_lexsum(data_expanded,
 
         # conversion necessary for phi3 model
         if 'Phi3' in model_name_global:
-            print(f"len(sentence)-->{len(sentence)}")
             sentence = convert_text_mistral_phi3(sentence)
             #print(f"messages prompts-->{sentence}\n\n\n\n\n\n\n\n")
+            #print(f"len(sentence)-->{len(sentence)}")
+            #print(f"messages prompts-->{sentence[:200]}\n\n\n\n\n\n\n\n")
 
         prompt = tokenizer.encode(sentence[:70000], return_tensors="pt", return_attention_mask=True).to('cuda')
             

@@ -5,9 +5,9 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "3"
 
 import evo_functions as evo
 
-
+# já para a versão normal, not baseline
 evo.test_eval(task="MEDIQASUM", 
-                  RUN_folder_path = 'RUNS_alg_2/MEDIQASUM/Runs_2024-07-24_04-35-31_N25_cp0.0_mp0.5_sampTNone_fixed_evoTrue_new_evo_promptsTrue', 
+                  RUN_folder_path = 'RUNS_alg_2/MEDIQASUM/Runs_2024-08-01_17-24-23_N25_cp0.25_mp0.25_sampT10.0_fixed_evoFalse_new_evo_promptsTrue', 
                   model_name="microsoft/Phi-3-mini-4k-instruct",
                   task_w_one_shot = True,
                   task_w_highlight = False,

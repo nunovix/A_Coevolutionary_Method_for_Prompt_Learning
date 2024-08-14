@@ -1,0 +1,4 @@
+from evo_functions import create_plots_from_RUNS_folder
+
+root_folder = 'RUNS_alg_2/MEDIQASUM/Runs_2024-07-24_04-35-31_N25_cp0.0_mp0.5_sampTNone_fixed_evoTrue_new_evo_promptsTrue'
+create_plots_from_RUNS_folder(root_folder)

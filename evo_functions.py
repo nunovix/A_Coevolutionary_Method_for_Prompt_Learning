@@ -1445,7 +1445,8 @@ def prompt_preds_lexsum(data_expanded,
             #print(f"len(sentence)-->{len(sentence)}")
             #print(f"messages prompts-->{sentence[:200]}\n\n\n\n\n\n\n\n")
 
-        prompt = tokenizer.encode(sentence[:70000], return_tensors="pt", return_attention_mask=True).to('cuda')
+        prompt = tokenizer.encode(sentence, return_tensors="pt", return_attention_mask=True).to('cuda')
+        print(f"len(prompt)-->{len(prompt)}")
             
         prompt_length = prompt[0].shape[0]
         print(f"prompt_length-->{prompt_length}")
@@ -1576,8 +1577,8 @@ def prompt_preds_mediqasum(data_expanded,
         new_tokens = output[0, prompt_length:]
 
         if print_once_flag == 0:
-            print(f"INFERENCE MEDIQA SUM-->{tokenizer.decode(output[0])}")
-            print(f"sample['note']-->{sample['note']}")
+            #print(f"INFERENCE MEDIQA SUM-->{tokenizer.decode(output[0])}")
+            #print(f"sample['note']-->{sample['note']}")
             print_once_flag = 0
 
         pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
@@ -1777,7 +1778,7 @@ def new_mutate_prompt(prompt,
 
     new_tokens = output[0, prompt_length:]
     mutated = tokenizer.decode(new_tokens, skip_special_tokens=True)
-    print(f"NEW MUTATE PROMPT)-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+    #print(f"NEW MUTATE PROMPT)-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
 
     mutated = mutated.lstrip()
 
@@ -1865,7 +1866,7 @@ def new_crossover_prompts(prompt_1, prompt_2, combination_prompt_dict, model, to
 
     new_tokens = output[0, prompt_length:]
     combined = tokenizer.decode(new_tokens, skip_special_tokens=True)
-    print(f"NEW CROSSOVER PROMPT)-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+    #print(f"NEW CROSSOVER PROMPT)-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
 
     combined = combined.lstrip()
 
@@ -4396,8 +4397,8 @@ def create_plots_from_RUNS_folder(directory_path):
         ymax = 0.95
         score = 'Accuracy'
     elif 'MEDIQASUM' in directory_path:
-        ymin = 0
-        ymax = 100
+        ymin = 0.25
+        ymax = 0.55
         score = 'Rouge-1 F1'
     else:
         print(f"Incorrect task name")

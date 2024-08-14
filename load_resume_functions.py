@@ -200,8 +200,8 @@ def extract_max_eval_and_patience(root_folder, task):
     population, _ = load_population(current_iteration_num, root_folder, task)
 
     print(f"best iter no.: {max_eval_iteration_num}")
-    best_population, _ = load_population(max_eval_iteration_num, root_folder, task)
-    best_pop, _ = pop_selection(best_population, 1, 1)
+    #best_population, _ = load_population(max_eval_iteration_num, root_folder, task)
+    #best_pop, _ = pop_selection(best_population, 1, 1)
 
     print(f"max_eval_values: {max_eval_values}")
     print(f"patience: {patience}")
@@ -214,6 +214,9 @@ def extract_max_eval_and_patience(root_folder, task):
 #max_eval_values, patience, population, current_iteration_num, best_pop = extract_max_eval_and_patience(root_folder, task='SemEval')
 
 root_folder = "RUNS_alg_2/MEDIQASUM/Runs_2024-07-24_04-35-31_N25_cp0.0_mp0.5_sampTNone_fixed_evoTrue_new_evo_promptsTrue"
+root_folder =  'RUNS_alg_2/MEDIQASUM/Runs_2024-08-01_17-24-23_N25_cp0.25_mp0.25_sampT10.0_fixed_evoFalse_new_evo_promptsTrue'
+
+
 max_eval_values, patience, population, current_iteration_num, best_pop = extract_max_eval_and_patience(root_folder, task='MEDIQASUM')
 
 print("Max eval values for each iteration:", max_eval_values)

@@ -1031,8 +1031,8 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
                                 #use_cache=True,
                                 prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
         if flag == 0:
-            print(f"SEMEVAL SELF inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
-            print(f"TRUE LABEL-->{sample['label']}")
+            #print(f"SEMEVAL SELF inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+            #print(f"TRUE LABEL-->{sample['label']}")
             flag=1
         
         #print(f"SEMEVAL w SELF inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
@@ -1345,11 +1345,12 @@ def extract_LEXSUM_data(folder_name='DATASETS/LEXSUM_data',
         print(f"Used data with already retrieved examples from {file_path}")
         return data_list
         
-    dataset = load_dataset("allenai/multi_lexsum", name="v20220616")
+    #dataset = load_dataset("allenai/multi_lexsum", name="v20220616")
+    dataset = load_dataset("dennlinger/eur-lex-sum")
 
     # Define the column to check for None values and the columns to keep
-    column_to_check = 'summary/short'
-    columns_to_keep = ['id', 'sources', 'summary/short']
+    column_to_check = 'summary'
+    columns_to_keep = ['celex_id', 'reference', 'summary']
 
     dataset_dict = {}
     for split in dataset:
@@ -1360,22 +1361,22 @@ def extract_LEXSUM_data(folder_name='DATASETS/LEXSUM_data',
         ]
         # join strings of contract
         for i in range(len(dataset_dict[split])):
-            dataset_dict[split][i]['sources'] = " ".join(dataset_dict[split][i]['sources'])
+            dataset_dict[split][i]['reference'] = " ".join(dataset_dict[split][i]['reference'])
 
     train_sources_list = []
     for example in dataset_dict['train']:
-        train_sources_list.append(example["sources"])
-    print(f"len(train_sources_list)-->{len(train_sources_list)}")
+        train_sources_list.append(example["reference"])
+    print(f"len(reference)-->{len(train_sources_list)}")
 
     print(f"Embedding training data...")
     train_embeddings = embed_texts(train_sources_list)
 
     for i in tqdm(range(len(dataset_dict['validation'])), desc="validation"):
-        validation_embedding = embed_texts([dataset_dict['validation'][i]['sources']])
+        validation_embedding = embed_texts([dataset_dict['validation'][i]['reference']])
         similarities = cos_sim(validation_embedding, train_embeddings)
         closest_index = np.argmax(similarities)
-        dataset_dict['validation'][i]['retrieved_sources'] = dataset_dict['train'][closest_index]['sources']
-        dataset_dict['validation'][i]['retrieved_summary/short'] = dataset_dict['train'][closest_index]['summary/short']
+        dataset_dict['validation'][i]['retrieved_sources'] = dataset_dict['train'][closest_index]['reference']
+        dataset_dict['validation'][i]['retrieved_summary/short'] = dataset_dict['train'][closest_index]['summary']
 
     # Save to a JSON file
     save_path = os.path.join(folder_name, f"validation_w_retrieved.json")
@@ -1384,11 +1385,11 @@ def extract_LEXSUM_data(folder_name='DATASETS/LEXSUM_data',
     print(f"Examples with retreival svaed to {save_path}")
 
     for i in tqdm(range(len(dataset_dict['test'])), desc='test'):
-        test_embedding = embed_texts([dataset_dict['test'][i]['sources']])
+        test_embedding = embed_texts([dataset_dict['test'][i]['reference']])
         similarities = cos_sim(test_embedding, train_embeddings)
         closest_index = np.argmax(similarities)
-        dataset_dict['test'][i]['retrieved_sources'] = dataset_dict['train'][closest_index]['sources']
-        dataset_dict['test'][i]['retrieved_summary/short'] = dataset_dict['train'][closest_index]['summary/short']
+        dataset_dict['test'][i]['retrieved_sources'] = dataset_dict['train'][closest_index]['reference']
+        dataset_dict['test'][i]['retrieved_summary/short'] = dataset_dict['train'][closest_index]['summary']
 
 
     # Save to a JSON file

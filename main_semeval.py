@@ -1,6 +1,6 @@
 import os
 # set available gpu's
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+os.environ["CUDA_VISIBLE_DEVICES"] = "4"
 #os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 import evo_functions as evo

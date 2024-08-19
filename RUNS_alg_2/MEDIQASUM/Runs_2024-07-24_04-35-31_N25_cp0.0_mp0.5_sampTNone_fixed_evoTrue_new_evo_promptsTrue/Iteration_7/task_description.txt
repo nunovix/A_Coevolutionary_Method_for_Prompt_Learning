@@ -1,8 +1,0 @@
-0->Compile a concise medical summary from the patient-doctor conversation. Identify key clinical information such as medications, diagnoses, health concerns, injuries, and symptoms. Structure the summary using SOAP or APSO format for clear and succinct communication.
-----------
-1->Compile a concise medical summary from the patient-physician conversation, focusing on key clinical information such as medications, diagnoses, health concerns, injuries, and symptoms. Structure the summary using either SOAP or APSO format for clarity and brevity.
-----------
-2->Synthesize a brief medical report from the dialogue between the patient and physician, highlighting crucial clinical details like prescribed drugs, diagnoses, health issues, traumas, and symptoms. Organize the report using either SOAP or APSO format to ensure clarity and brevity.
-----------
-3->Synthesize a brief medical report from the dialogue between the patient and physician. Extract crucial clinical details like prescribed drugs, diagnoses, health issues, traumas, and symptoms. Organize the report using either SOAP or APSO format to ensure clarity and brevity.
-----------

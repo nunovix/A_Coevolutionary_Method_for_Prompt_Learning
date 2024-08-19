@@ -1,5 +1,0 @@
-Acc score: [0.5581061692969871]
-F1 scores: [{'Contradiction': 0.38461538461538464, 'Entailment': 0.6387243735763098, 'NotMentioned': 0.4847761194029851}]
-Confusion matrix: [array([[ 60,  55, 105],
-       [  6, 701, 261],
-       [ 26, 471, 406]])]

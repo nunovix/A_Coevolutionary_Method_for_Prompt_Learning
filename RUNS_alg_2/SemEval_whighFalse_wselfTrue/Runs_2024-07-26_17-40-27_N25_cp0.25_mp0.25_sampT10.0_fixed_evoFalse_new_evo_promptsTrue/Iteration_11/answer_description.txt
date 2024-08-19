@@ -1,8 +1,0 @@
-0->Evaluate the validity of the given statement by cross-referencing it with the provided Clinical Trial Report (CTR) data. Respond with a definitive YES if the statement is supported by the CTR information, or a definitive NO if the statement lacks support from the CTR data.
-----------
-1->Evaluate the statement's validity by examining the Clinical Trial Report (CTR) contents. Determine if the statement's assertions are supported or contradicted by the information provided in the CTR.
-----------
-2->Examine the Clinical Trial Report (CTR) meticulously to confirm the statement's validity, ensuring it aligns with the report's findings and avoids any discrepancies.
-----------
-3->Assess the accuracy of the given statement by thoroughly reviewing the contents of the Clinical Trial Report (CTR). Confirm whether the evidence within the CTR substantiates or refutes the claims made in the statement.
-----------

@@ -1,4 +1,4 @@
 # Ignore cache directory
 cache/
-DATASETS/LEXSUM_data/test_w_retrieved.json
-DATASETS/LEXSUM_data/validation_w_retrieved.json
+DATASETS/
+RUNS_alg_2/

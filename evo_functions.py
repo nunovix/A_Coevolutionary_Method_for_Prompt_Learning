@@ -671,14 +671,14 @@ def batch_inference(all_prompts, model, tokenizer, trie, batch_size=3):
         if trie != None:
             with torch.no_grad():
                 outputs = model.generate(input_ids=input_ids, 
-                                        #attention_mask=attention_mask, 
+                                        attention_mask=attention_mask, 
                                         pad_token_id=tokenizer.eos_token_id, 
                                         max_new_tokens=3,
                                         prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
         else:
             with torch.no_grad():
                 outputs = model.generate(input_ids=input_ids, 
-                                        #attention_mask=attention_mask, 
+                                        attention_mask=attention_mask, 
                                         pad_token_id=tokenizer.eos_token_id, 
                                         max_new_tokens=250,
                                         do_sample=True, num_beams = 3)
@@ -801,12 +801,13 @@ def prompt_preds_semeval(data_expanded,
         if 'Phi3' in model_name_global:
             sentence = convert_text_mistral_phi3(sentence)
 
-        prompt = tokenizer.encode(sentence, return_tensors="pt", return_attention_mask=True).to('cuda')
+        encoded_inputs = tokenizer(sentence, return_tensors="pt", return_attention_mask=True).to('cuda')
 
-        prompt_length = prompt[0].shape[0]
+        prompt_length = encoded_inputs['input_ids'][0].shape[0]
         FastLanguageModel.for_inference(model)
         with torch.inference_mode():
-            output = model.generate(prompt, 
+            output = model.generate(encoded_inputs['input_ids'], 
+                                    attention_mask=encoded_inputs['attention_mask'],
                                     pad_token_id=tokenizer.eos_token_id, 
                                     max_new_tokens = 3,
                                     prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
@@ -843,13 +844,13 @@ def prompt_creation_semeval_self(data_expanded, task_description, ctr_descriptio
         text_self = f"""[INST]{text}{statement_description}\n\n"{sample['statement']}"\n\n{self_A}[/INST]\n\nANSWER: """
 
         # Tokenize input and generate attention mask
-        prompt_self = tokenizer.encode(text_self, return_tensors="pt").to('cuda')
-        prompt_length = prompt_self[0].shape[0]
+        encoded_inputs_self = tokenizer(text_self, return_tensors="pt", return_attention_mask=True).to('cuda')
+        prompt_length = encoded_inputs_self['input_ids'][0].shape[0]
         
         try:
             # to improve efficiency
             with torch.inference_mode():
-                output = model.generate(prompt_self, pad_token_id=tokenizer.eos_token_id, max_new_tokens=100, do_sample=True, num_beams = 3)
+                output = model.generate(encoded_inputs_self['input_ids'], attention_mask=encoded_inputs_self['attention_mask'], pad_token_id=tokenizer.eos_token_id, max_new_tokens=100, do_sample=True, num_beams = 3)
         except:
             output = ''
             prompt_length = 0
@@ -987,12 +988,13 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
             text_self = convert_text_mistral_phi3(text_self)
 
         #FastLanguageModel.for_inference(model)
-        prompt = tokenizer.encode(text_self, return_tensors="pt", return_attention_mask=True).to('cuda')
+        encoded_inputs = tokenizer(text_self, return_tensors="pt", return_attention_mask=True).to('cuda')
 
-        prompt_length = prompt[0].shape[0]
+        prompt_length = encoded_inputs['input_ids'][0].shape[0]
         
         #with torch.inference_mode():
-        output = model.generate(prompt, 
+        output = model.generate(encoded_inputs['input_ids'],
+                                attention_mask=encoded_inputs['attention_mask'],
                                 #past_key_values=cached_outputs.past_key_values, 
                                 pad_token_id=tokenizer.eos_token_id, 
                                 max_new_tokens=150, 
@@ -1016,15 +1018,16 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
         if 'Phi3' in model_name_global:
             text_w_reflection = convert_text_mistral_phi3(text_w_reflection)
 
-        prompt = tokenizer.encode(text_w_reflection, return_tensors="pt", return_attention_mask=True).to('cuda')
+        encoded_inputs = tokenizer(text_w_reflection, return_tensors="pt", return_attention_mask=True).to('cuda')
 
         #prompt = tokenizer.encode(text_w_reflection, return_tensors="pt").to('cuda')
-        prompt_length = prompt[0].shape[0]
+        prompt_length = encoded_inputs['input_ids'][0].shape[0]
         print(f"PROMPT_LEN-->{prompt_length}")
         token_len.append(prompt_length)
 
         #with torch.inference_mode():
-        output = model.generate(prompt, 
+        output = model.generate(encoded_inputs['input_ids'], 
+                                attention_mask=encoded_inputs['attention_mask'],
                                 #past_key_values=cached_outputs.past_key_values, 
                                 pad_token_id=tokenizer.eos_token_id, 
                                 max_new_tokens=6, 
@@ -1210,14 +1213,14 @@ def prompt_preds_contractnli_span(data_expanded,
                 cached_outputs = model(cached, return_dict=True,)
             cached_outputs.past_key_values = [[y[:, :, :-1] for y in x] for x in cached_outputs.past_key_values]
 
-        
+        encoded_inputs = tokenizer(prompt_text, return_tensors="pt", return_attention_mask=True).to('cuda')
 
-        prompt = tokenizer.encode(prompt_text, return_tensors="pt", return_attention_mask=True).to('cuda')
-
-        prompt_length = prompt[0].shape[0]
+        prompt_length = encoded_inputs['input_ids'][0].shape[0]
         #print(f"prompt_length-->{prompt_length}")
         with torch.inference_mode():
-            output = model.generate(prompt, past_key_values=cached_outputs.past_key_values, 
+            output = model.generate(encoded_inputs['input_ids'], 
+                                    attention_mask=encoded_inputs['attention_mask'],
+                                    past_key_values=cached_outputs.past_key_values, 
                                 pad_token_id=tokenizer.eos_token_id, 
                                 max_new_tokens=6, use_cache=True,
                                 prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
@@ -1458,14 +1461,15 @@ def prompt_preds_lexsum(data_expanded,
             #print(f"len(sentence)-->{len(sentence)}")
             #print(f"messages prompts-->{sentence[:200]}\n\n\n\n\n\n\n\n")
 
-        prompt = tokenizer.encode(sentence, return_tensors="pt", return_attention_mask=True).to('cuda')
+        encoded_inputs = tokenizer(sentence, return_tensors="pt", return_attention_mask=True).to('cuda')
         #print(f"len(prompt)-->{len(prompt)}")
             
-        prompt_length = prompt[0].shape[0]
+        prompt_length = encoded_inputs['input_ids'][0].shape[0]
         print(f"prompt_length in tokens-->{prompt_length}")
         with torch.inference_mode():
             
-            output = model.generate(prompt, 
+            output = model.generate(encoded_inputs['input_ids'], 
+                                    attention_mask=encoded_inputs['attention_mask'], 
                                     pad_token_id=tokenizer.eos_token_id, 
                                     max_new_tokens=150,
                                     do_sample=True,
@@ -1573,12 +1577,13 @@ def prompt_preds_mediqasum(data_expanded,
             sentence = convert_text_mistral_phi3(sentence)
             #print(f"messages prompts-->{sentence}\n\n\n\n\n\n\n\n")
 
-        prompt = tokenizer.encode(sentence, return_tensors="pt", return_attention_mask=True).to('cuda')
+        encoded_inputs = tokenizer(sentence, return_tensors="pt", return_attention_mask=True).to('cuda')
             
-        prompt_length = prompt[0].shape[0]
+        prompt_length = encoded_inputs['input_ids'][0].shape[0]
         with torch.inference_mode():
             
-            output = model.generate(prompt, 
+            output = model.generate(encoded_inputs['input_ids'], 
+                                    attention_mask=encoded_inputs['attention_mask'],
                                     pad_token_id=tokenizer.eos_token_id, 
                                     max_new_tokens=2000,
                                     do_sample=True,
@@ -1732,14 +1737,15 @@ def mutate_prompt(prompt, mutation_prompt, model, tokenizer):
     if 'Phi3' in model_name_global:
         instruction = convert_text_mistral_phi3(instruction)
 
-    prompt = tokenizer.encode(instruction, return_tensors="pt", return_attention_mask=True).to('cuda')
+    encoded_inputs = tokenizer(instruction, return_tensors="pt", return_attention_mask=True).to('cuda')
 
-    prompt_length = prompt[0].shape[0]
+    prompt_length = encoded_inputs['input_ids'][0].shape[0]
 
     try:
         # to improve efficiency
         with torch.inference_mode():
-            output = model.generate(prompt, 
+            output = model.generate(encoded_inputs['input_ids'], 
+                                    attention_mask=encoded_inputs['attention_mask'],
                                     pad_token_id=tokenizer.eos_token_id, 
                                     max_new_tokens=400, do_sample=True, num_beams = 3)
     except:
@@ -1773,14 +1779,15 @@ def new_mutate_prompt(prompt,
     if 'Phi3' in model_name_global:
         instruction = convert_text_mistral_phi3(instruction)
 
-    prompt = tokenizer.encode(instruction, return_tensors="pt", return_attention_mask=True).to('cuda')
+    encoded_inputs = tokenizer(instruction, return_tensors="pt", return_attention_mask=True).to('cuda')
 
-    prompt_length = prompt[0].shape[0]
+    prompt_length = encoded_inputs['input_ids'][0].shape[0]
 
     try:
         # to improve efficiency
         with torch.inference_mode():
-            output = model.generate(prompt, 
+            output = model.generate(encoded_inputs['input_ids'], 
+                                    attention_mask=encoded_inputs['attention_mask'],
                                     pad_token_id=tokenizer.eos_token_id, 
                                     max_new_tokens=300, 
                                     do_sample=True, 
@@ -1819,15 +1826,15 @@ def crossover_prompts(prompt_1, prompt_2, combination_prompt, model, tokenizer):
     if 'Phi3' in model_name_global:
         instruction = convert_text_mistral_phi3(instruction)
 
-    prompt = tokenizer.encode(instruction, return_tensors="pt", return_attention_mask=True).to('cuda')
+    encoded_inputs = tokenizer(instruction, return_tensors="pt", return_attention_mask=True).to('cuda')
 
-    prompt_length = prompt[0].shape[0]
+    prompt_length = encoded_inputs['input_ids'][0].shape[0]
     # Tokenize input and generate attention mask
 
     try:
         # to improve efficiencys
         with torch.inference_mode():
-            output = model.generate(prompt, 
+            output = model.generate(encoded_inputs['input_ids'], attention_mask=encoded_inputs['attention_mask'], 
                                     pad_token_id=tokenizer.eos_token_id, 
                                     max_new_tokens=400, 
                                     do_sample=True, num_beams = 3)
@@ -1861,15 +1868,15 @@ def new_crossover_prompts(prompt_1, prompt_2, combination_prompt_dict, model, to
     if 'Phi3' in model_name_global:
         instruction = convert_text_mistral_phi3(instruction)
 
-    prompt = tokenizer.encode(instruction, return_tensors="pt", return_attention_mask=True).to('cuda')
+    encoded_inputs = tokenizer(instruction, return_tensors="pt", return_attention_mask=True).to('cuda')
 
-    prompt_length = prompt[0].shape[0]
+    prompt_length = encoded_inputs['input_ids'][0].shape[0]
     # Tokenize input and generate attention mask
 
     try:
         # to improve efficiencys
         with torch.inference_mode():
-            output = model.generate(prompt, 
+            output = model.generate(encoded_inputs['input_ids'], attention_mask=encoded_inputs['attention_mask'], 
                                     pad_token_id=tokenizer.eos_token_id, 
                                     max_new_tokens=300, 
                                     repetition_penalty=1.2,
@@ -1931,10 +1938,10 @@ def semeval_predictions(model, tokenizer, samples, trie):
         for sample in tqdm(samples, desc = f"Generating Predictions with LLM"):
             labels.append(sample["label"])
             # Tokenize input and generate attention mask
-            prompt = tokenizer.encode(sample["text"], return_tensors="pt", padding=True, truncation=True, return_attention_mask=True).to('cuda')
-            prompt_length = prompt[0].shape[0]
+            encoded_inputs = tokenizer(sample["text"], return_tensors="pt", padding=True, truncation=True, return_attention_mask=True).to('cuda')
+            prompt_length = encoded_inputs['input_ids'][0].shape[0]
 
-            output = model.generate(prompt, 
+            output = model.generate(encoded_inputs['input_ids'], attention_mask=encoded_inputs['attention_mask'],
                                     pad_token_id=tokenizer.eos_token_id, 
                                     max_length=prompt_length+6, 
                                     prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))        
@@ -1960,10 +1967,10 @@ def csqa_predictions(model, tokenizer, samples, trie):
         for sample in tqdm(samples, desc = f"Generating Predictions with LLM"):
             labels.append(sample["label"])
             # Tokenize input and generate attention mask
-            prompt = tokenizer.encode(sample["text"], return_tensors="pt", padding=True, truncation=True, return_attention_mask=True).to('cuda')
-            prompt_length = prompt[0].shape[0]
+            encoded_inputs = tokenizer(sample["text"], return_tensors="pt", padding=True, truncation=True, return_attention_mask=True).to('cuda')
+            prompt_length = encoded_inputs['input_ids'][0].shape[0]
 
-            output = model.generate(prompt, 
+            output = model.generate(encoded_inputs['input_ids'], attention_mask=encoded_inputs['attention_mask'],
                                     pad_token_id=tokenizer.eos_token_id, 
                                     max_length=prompt_length+6, 
                                     prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
@@ -2008,11 +2015,11 @@ def contractnli_predictions(model, tokenizer, samples, trie):
 
 
             # Tokenize input and generate attention mask
-            prompt = tokenizer.encode(sample["text"], return_tensors="pt").to('cuda')
-            prompt_length = prompt[0].shape[0]
+            encoded_inputs = tokenizer(sample["text"], return_tensors="pt").to('cuda')
+            prompt_length = encoded_inputs['input_ids'][0].shape[0]
             #print(f"prompt_length-->{prompt_length}")
             try:
-                output = model.generate(prompt, past_key_values=cached_outputs.past_key_values, 
+                output = model.generate(encoded_inputs['input_ids'], attention_mask=encoded_inputs['attention_mask'], past_key_values=cached_outputs.past_key_values, 
                                         pad_token_id=tokenizer.eos_token_id, 
                                         max_new_tokens=6, use_cache=True,
                                         prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))

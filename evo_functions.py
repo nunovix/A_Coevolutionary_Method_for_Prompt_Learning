@@ -1346,7 +1346,7 @@ def extract_LEXSUM_data(folder_name='DATASETS/LEXSUM_data',
         return data_list
         
     #dataset = load_dataset("allenai/multi_lexsum", name="v20220616")
-    dataset = load_dataset("dennlinger/eur-lex-sum")
+    dataset = load_dataset("dennlinger/eur-lex-sum", 'english')
 
     # Define the column to check for None values and the columns to keep
     column_to_check = 'summary'
@@ -1360,13 +1360,15 @@ def extract_LEXSUM_data(folder_name='DATASETS/LEXSUM_data',
             for row in dataset[split] if row[column_to_check] is not None
         ]
         # join strings of contract
-        for i in range(len(dataset_dict[split])):
-            dataset_dict[split][i]['reference'] = " ".join(dataset_dict[split][i]['reference'])
+        #for i in range(len(dataset_dict[split])):
+            #dataset_dict[split][i]['reference'] = " ".join(dataset_dict[split][i]['reference'])
+            #dataset_dict[split][i]['summary'] = " ".join(dataset_dict[split][i]['summary'])
 
     train_sources_list = []
     for example in dataset_dict['train']:
         train_sources_list.append(example["reference"])
     print(f"len(reference)-->{len(train_sources_list)}")
+
 
     print(f"Embedding training data...")
     train_embeddings = embed_texts(train_sources_list)
@@ -1384,6 +1386,12 @@ def extract_LEXSUM_data(folder_name='DATASETS/LEXSUM_data',
         json.dump(dataset_dict['validation'], file)
     print(f"Examples with retreival svaed to {save_path}")
 
+    print(f"dataset_dict['validation']-->{dataset_dict['validation'][0]}")
+    print(f"dataset_dict['validation']-->{dataset_dict['validation'][0].keys()}")
+
+    for i in dataset_dict['validation'][0]:
+        print(f"len(dataset_dict['validation'][0][{i}])-->{len(dataset_dict['validation'][0][i])}")
+
     for i in tqdm(range(len(dataset_dict['test'])), desc='test'):
         test_embedding = embed_texts([dataset_dict['test'][i]['reference']])
         similarities = cos_sim(test_embedding, train_embeddings)
@@ -1391,7 +1399,7 @@ def extract_LEXSUM_data(folder_name='DATASETS/LEXSUM_data',
         dataset_dict['test'][i]['retrieved_sources'] = dataset_dict['train'][closest_index]['reference']
         dataset_dict['test'][i]['retrieved_summary/short'] = dataset_dict['train'][closest_index]['summary']
 
-
+    
     # Save to a JSON file
     save_path = os.path.join(folder_name, f"test_w_retrieved.json")
     with open(save_path, 'w') as file:
@@ -1430,14 +1438,18 @@ def prompt_preds_lexsum(data_expanded,
             example = random_example_retrieval(sample, data_expanded)
         """
         sentence = f"""{prompt}Example Summary:\n"{example}" """
-        doc = "".join(sample['sources'])
-        sentence = f"""[INST]{sentence}\n\n{doc_description}\n\n"{doc}"\n\n{answer_description}[/INST]\n\nSummary:"""
+        #sentence = prompt
+
+        doc = "".join(sample['reference'])
+        sentence = f"""[INST]{sentence}\n\n{doc_description}\n\n"{doc[:100]}"\n\n{answer_description}[/INST]\n\nSummary:"""
         
-        labels.append(sample["summary/short"])
+        labels.append(sample["summary"])
+
+        print(f"sentence-->{sentence}")
 
         if save_test_predictions == True:
-            ids.append(sample["id"])
-            docs.append(sample["sources"])
+            ids.append(sample["celex_id"])
+            docs.append(sample["reference"])
 
         # conversion necessary for phi3 model
         if 'Phi3' in model_name_global:
@@ -1447,10 +1459,10 @@ def prompt_preds_lexsum(data_expanded,
             #print(f"messages prompts-->{sentence[:200]}\n\n\n\n\n\n\n\n")
 
         prompt = tokenizer.encode(sentence, return_tensors="pt", return_attention_mask=True).to('cuda')
-        print(f"len(prompt)-->{len(prompt)}")
+        #print(f"len(prompt)-->{len(prompt)}")
             
         prompt_length = prompt[0].shape[0]
-        print(f"prompt_length-->{prompt_length}")
+        print(f"prompt_length in tokens-->{prompt_length}")
         with torch.inference_mode():
             
             output = model.generate(prompt, 
@@ -1465,8 +1477,8 @@ def prompt_preds_lexsum(data_expanded,
         new_tokens = output[0, prompt_length:]
 
         if print_once_flag == 0:
-            print(f"INFERENCE LEX SUM-->{tokenizer.decode(output[0])}")
-            print(f"sample['summary/short']-->{sample['summary/short']}")
+            #print(f"INFERENCE LEX SUM-->{tokenizer.decode(output[0])}")
+            print(f"sample['summary/short']-->{sample['summary']}")
             print_once_flag = 0
 
         pred = tokenizer.decode(new_tokens, skip_special_tokens=True)

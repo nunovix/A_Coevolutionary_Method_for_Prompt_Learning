@@ -1010,7 +1010,7 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
         #print(f"text_w_reflection-->{text_w_reflection}\n\n\n")
 
         # to improve memory usage of gpu
-        del prompt, output
+        #del encoded_inputs, output
         # Clear GPU cache
         torch.cuda.empty_cache()
 
@@ -1022,7 +1022,7 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
 
         #prompt = tokenizer.encode(text_w_reflection, return_tensors="pt").to('cuda')
         prompt_length = encoded_inputs['input_ids'][0].shape[0]
-        print(f"PROMPT_LEN-->{prompt_length}")
+        #print(f"PROMPT_LEN-->{prompt_length}")
         token_len.append(prompt_length)
 
         #with torch.inference_mode():
@@ -1047,7 +1047,7 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
         labels.append(sample["label"])
 
         # to improve memory usage of gpu
-        del prompt, output
+        #del encoded_inputs, output
         # Clear GPU cache
         torch.cuda.empty_cache()
         
@@ -1488,7 +1488,7 @@ def prompt_preds_lexsum(data_expanded,
         pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
         preds.append(pred)
 
-        #del prompt, output
+        #del encoded_inputs, output
         #torch.cuda.empty_cache()
 
     if save_test_predictions == True:
@@ -1602,7 +1602,7 @@ def prompt_preds_mediqasum(data_expanded,
         pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
         preds.append(pred)
 
-        del prompt, output
+        #del encoded_inputs, output
         torch.cuda.empty_cache()
 
     if save_test_predictions == True:
@@ -2336,7 +2336,7 @@ def eval_pop(population,
             
             #print(f"antes da eval{tt}")
             rouge_scores, rouge_1 = compute_rouge_scores(references=labels, predictions=predictions)
-            print(f"\n\n MEDIQA SUM SCORE ROUGE_1-->{rouge_1}")
+            #print(f"\n\n MEDIQA SUM SCORE ROUGE_1-->{rouge_1}")
             population['eval'].append(rouge_1)
             population['full_eval'].append(rouge_scores)
     

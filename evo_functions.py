@@ -669,14 +669,14 @@ def batch_inference(all_prompts, model, tokenizer, trie, batch_size=3):
         prompt_length = input_ids.shape[1]
         
         if trie != None:
-            with torch.no_grad():
+            with torch.inference_mode():
                 outputs = model.generate(input_ids=input_ids, 
                                         attention_mask=attention_mask, 
                                         pad_token_id=tokenizer.eos_token_id, 
                                         max_new_tokens=3,
                                         prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
         else:
-            with torch.no_grad():
+            with torch.inference_mode():
                 outputs = model.generate(input_ids=input_ids, 
                                         attention_mask=attention_mask, 
                                         pad_token_id=tokenizer.eos_token_id, 
@@ -992,14 +992,14 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
 
         prompt_length = encoded_inputs['input_ids'][0].shape[0]
         
-        #with torch.inference_mode():
-        output = model.generate(encoded_inputs['input_ids'],
-                                attention_mask=encoded_inputs['attention_mask'],
-                                #past_key_values=cached_outputs.past_key_values, 
-                                pad_token_id=tokenizer.eos_token_id, 
-                                max_new_tokens=150, 
-                                #use_cache=True, 
-                                do_sample=True, num_beams = 3)
+        with torch.inference_mode():
+            output = model.generate(encoded_inputs['input_ids'],
+                                    attention_mask=encoded_inputs['attention_mask'],
+                                    #past_key_values=cached_outputs.past_key_values, 
+                                    pad_token_id=tokenizer.eos_token_id, 
+                                    max_new_tokens=150, 
+                                    #use_cache=True, 
+                                    do_sample=True, num_beams = 3)
 
         #print(f"prompt_length-->{prompt_length}")
         new_tokens = output[0, prompt_length:]
@@ -1025,14 +1025,14 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
         #print(f"PROMPT_LEN-->{prompt_length}")
         token_len.append(prompt_length)
 
-        #with torch.inference_mode():
-        output = model.generate(encoded_inputs['input_ids'], 
-                                attention_mask=encoded_inputs['attention_mask'],
-                                #past_key_values=cached_outputs.past_key_values, 
-                                pad_token_id=tokenizer.eos_token_id, 
-                                max_new_tokens=6, 
-                                #use_cache=True,
-                                prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
+        with torch.inference_mode():
+            output = model.generate(encoded_inputs['input_ids'], 
+                                    attention_mask=encoded_inputs['attention_mask'],
+                                    #past_key_values=cached_outputs.past_key_values, 
+                                    pad_token_id=tokenizer.eos_token_id, 
+                                    max_new_tokens=6, 
+                                    #use_cache=True,
+                                    prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
         if flag == 0:
             #print(f"SEMEVAL SELF inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
             #print(f"TRUE LABEL-->{sample['label']}")
@@ -1467,7 +1467,6 @@ def prompt_preds_lexsum(data_expanded,
         prompt_length = encoded_inputs['input_ids'][0].shape[0]
         print(f"prompt_length in tokens-->{prompt_length}")
         with torch.inference_mode():
-            
             output = model.generate(encoded_inputs['input_ids'], 
                                     attention_mask=encoded_inputs['attention_mask'], 
                                     pad_token_id=tokenizer.eos_token_id, 
@@ -1581,7 +1580,6 @@ def prompt_preds_mediqasum(data_expanded,
             
         prompt_length = encoded_inputs['input_ids'][0].shape[0]
         with torch.inference_mode():
-            
             output = model.generate(encoded_inputs['input_ids'], 
                                     attention_mask=encoded_inputs['attention_mask'],
                                     pad_token_id=tokenizer.eos_token_id, 
@@ -1969,12 +1967,12 @@ def csqa_predictions(model, tokenizer, samples, trie):
             # Tokenize input and generate attention mask
             encoded_inputs = tokenizer(sample["text"], return_tensors="pt", padding=True, truncation=True, return_attention_mask=True).to('cuda')
             prompt_length = encoded_inputs['input_ids'][0].shape[0]
-
-            output = model.generate(encoded_inputs['input_ids'], attention_mask=encoded_inputs['attention_mask'],
-                                    pad_token_id=tokenizer.eos_token_id, 
-                                    max_length=prompt_length+6, 
-                                    prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
-            
+            with torch.inference_mode():
+                output = model.generate(encoded_inputs['input_ids'], attention_mask=encoded_inputs['attention_mask'],
+                                        pad_token_id=tokenizer.eos_token_id, 
+                                        max_length=prompt_length+6, 
+                                        prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
+                
             #print(f"tokenizer.decode(output[0], skip_special_tokens=False)-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
 
             # Decode only the newly generated tokens
@@ -2019,7 +2017,8 @@ def contractnli_predictions(model, tokenizer, samples, trie):
             prompt_length = encoded_inputs['input_ids'][0].shape[0]
             #print(f"prompt_length-->{prompt_length}")
             try:
-                output = model.generate(encoded_inputs['input_ids'], attention_mask=encoded_inputs['attention_mask'], past_key_values=cached_outputs.past_key_values, 
+                with torch.inference_mode():
+                    output = model.generate(encoded_inputs['input_ids'], attention_mask=encoded_inputs['attention_mask'], past_key_values=cached_outputs.past_key_values, 
                                         pad_token_id=tokenizer.eos_token_id, 
                                         max_new_tokens=6, use_cache=True,
                                         prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))

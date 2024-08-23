@@ -214,7 +214,7 @@ def extract_max_eval_and_patience(root_folder, task):
 #max_eval_values, patience, population, current_iteration_num, best_pop = extract_max_eval_and_patience(root_folder, task='SemEval')
 
 root_folder = "RUNS_alg_2/SemEval_whighFalse_wselfTrue/Runs_2024-07-26_17-40-27_N25_cp0.25_mp0.25_sampT10.0_fixed_evoFalse_new_evo_promptsTrue"
-root_folder =  'RUNS_alg_2/MEDIQASUM/Runs_2024-08-01_17-24-23_N25_cp0.25_mp0.25_sampT10.0_fixed_evoFalse_new_evo_promptsTrue'
+#root_folder =  'RUNS_alg_2/MEDIQASUM/Runs_2024-08-01_17-24-23_N25_cp0.25_mp0.25_sampT10.0_fixed_evoFalse_new_evo_promptsTrue'
 
 
 max_eval_values, patience, population, current_iteration_num, best_pop = extract_max_eval_and_patience(root_folder, task='MEDIQASUM')

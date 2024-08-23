@@ -1,5 +1,5 @@
 # Functions to infer data quality and save results to new file. 
-# Method base on the method Ask-LLM from the paper https://arxiv.org/pdf/2402.09668v1
+# Approach based on the method Ask-LLM from the paper https://arxiv.org/pdf/2402.09668v1
 
 import torch
 import torch.nn.functional as F

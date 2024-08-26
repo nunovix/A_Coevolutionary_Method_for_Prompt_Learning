@@ -1899,7 +1899,6 @@ def new_crossover_prompts(prompt_1, prompt_2, combination_prompt_dict, model, to
 # to create the MarisaTrie object
 def get_Marisa_Trie(task, tokenizer, task_w_2_labels=True):
     if task == 'SemEval' or task == 'SemEval_self':
-        # IR ALTERAR A FUNÇÃO QUE depois CONVERTE PARA AS OPTIONS REAIS
         possibilities = ["YES", "NO"]
     elif task == 'CSQA':
         possibilities = ['A', 'B', 'C', 'D', 'E']

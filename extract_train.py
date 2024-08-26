@@ -1,8 +1,8 @@
 import os
 # set available gpu's
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
-from evo_functions import extract_SemEval_data, extract_ContractNLI_data, extract_MEDIQASUM_data
+from evo_functions import extract_SemEval_data, extract_ContractNLI_data, extract_MEDIQASUM_data, extract_LEXSUM_data
 """
 extract_SemEval_data(folder = 'DATASETS/SemEval_data', 
                          type = 'train', 
@@ -20,4 +20,6 @@ extract_SemEval_data(folder = 'DATASETS/SemEval_data',
                              task_w_2_labels = False, # for the experience with the oracle spans the results in the task's paper are only reported with 2 classes, excluding the NotMentioned one. that's why this flag is needed
                              )"""
 
-extract_MEDIQASUM_data(type = 'train')
+#extract_MEDIQASUM_data(type = 'train')
+
+extract_LEXSUM_data(type = 'train')

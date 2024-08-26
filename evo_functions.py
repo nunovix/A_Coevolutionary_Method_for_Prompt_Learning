@@ -1362,20 +1362,30 @@ def extract_LEXSUM_data(folder_name='DATASETS/LEXSUM_data',
             {key: row[key] for key in columns_to_keep}
             for row in dataset[split] if row[column_to_check] is not None
         ]
-        # join strings of contract
-        #for i in range(len(dataset_dict[split])):
-            #dataset_dict[split][i]['reference'] = " ".join(dataset_dict[split][i]['reference'])
-            #dataset_dict[split][i]['summary'] = " ".join(dataset_dict[split][i]['summary'])
 
     train_sources_list = []
     for example in dataset_dict['train']:
         train_sources_list.append(example["reference"])
     print(f"len(reference)-->{len(train_sources_list)}")
 
-
     print(f"Embedding training data...")
     train_embeddings = embed_texts(train_sources_list)
 
+    for i in tqdm(range(len(dataset_dict['train'])), desc="train"):
+        validation_embedding = embed_texts([dataset_dict['train'][i]['reference']])
+        similarities = cos_sim(validation_embedding, train_embeddings)
+        sorted_indices = np.argsort(similarities)[::-1] 
+        second_largest_index = sorted_indices[1] # select 2nd largest so that we are not selecting the same one
+        dataset_dict['train'][i]['retrieved_sources'] = dataset_dict['train'][second_largest_index]['reference']
+        dataset_dict['train'][i]['retrieved_summary/short'] = dataset_dict['train'][second_largest_index]['summary']
+
+    # Save to a JSON file
+    save_path = os.path.join(folder_name, f"train_w_retrieved.json")
+    with open(save_path, 'w') as file:
+        json.dump(dataset_dict['train'], file)
+    print(f"Examples with retrieval saved to {save_path}")
+
+    """
     for i in tqdm(range(len(dataset_dict['validation'])), desc="validation"):
         validation_embedding = embed_texts([dataset_dict['validation'][i]['reference']])
         similarities = cos_sim(validation_embedding, train_embeddings)
@@ -1387,13 +1397,7 @@ def extract_LEXSUM_data(folder_name='DATASETS/LEXSUM_data',
     save_path = os.path.join(folder_name, f"validation_w_retrieved.json")
     with open(save_path, 'w') as file:
         json.dump(dataset_dict['validation'], file)
-    print(f"Examples with retreival svaed to {save_path}")
-
-    print(f"dataset_dict['validation']-->{dataset_dict['validation'][0]}")
-    print(f"dataset_dict['validation']-->{dataset_dict['validation'][0].keys()}")
-
-    for i in dataset_dict['validation'][0]:
-        print(f"len(dataset_dict['validation'][0][{i}])-->{len(dataset_dict['validation'][0][i])}")
+    print(f"Examples with retrieval saved to {save_path}")
 
     for i in tqdm(range(len(dataset_dict['test'])), desc='test'):
         test_embedding = embed_texts([dataset_dict['test'][i]['reference']])
@@ -1401,13 +1405,14 @@ def extract_LEXSUM_data(folder_name='DATASETS/LEXSUM_data',
         closest_index = np.argmax(similarities)
         dataset_dict['test'][i]['retrieved_sources'] = dataset_dict['train'][closest_index]['reference']
         dataset_dict['test'][i]['retrieved_summary/short'] = dataset_dict['train'][closest_index]['summary']
-
     
     # Save to a JSON file
     save_path = os.path.join(folder_name, f"test_w_retrieved.json")
     with open(save_path, 'w') as file:
         json.dump(dataset_dict['test'], file)
-    print(f"Examples with retreival svaed to {save_path}")
+    print(f"Examples with retrieval saved to {save_path}")
+    """
+    return None
 
 
 def prompt_preds_lexsum(data_expanded, 

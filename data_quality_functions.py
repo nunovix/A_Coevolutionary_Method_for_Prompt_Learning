@@ -3,7 +3,7 @@
 
 import torch
 import torch.nn.functional as F
-from evo_functions import load_model, extract_SemEval_data, extract_ContractNLI_data, extract_MEDIQASUM_data
+from evo_functions import load_model, extract_SemEval_data, extract_ContractNLI_data, extract_MEDIQASUM_data, extract_LEXSUM_data
 import json
 from tqdm import tqdm
 
@@ -37,6 +37,13 @@ def generate_string_for_mediqasum_data_quality(datapoint: dict):
 
     return mediqasum_text
 
+def generate_string_for_lexsum_data_quality(datapoint: dict):
+    print(datapoint.keys())
+
+    mediqasum_text = f"""Legal Act:\n{datapoint['reference']}\n\nSummary:\n{datapoint['summary']}"""
+
+    return mediqasum_text
+
 
 def data_quality_inference(data_quality_prompt, model, tokenizer):
 
@@ -54,9 +61,9 @@ def data_quality_inference(data_quality_prompt, model, tokenizer):
                                 )
         
 
-    #generated_ids = output.sequences[0, :]  # Exclude the input part
-    #generated_text = tokenizer.decode(generated_ids, skip_special_tokens=True)
-    #print(f"generated_text-->{generated_text}")
+    generated_ids = output.sequences[0, :]  # Exclude the input part
+    generated_text = tokenizer.decode(generated_ids, skip_special_tokens=True)
+    print(f"generated_text-->{generated_text}")
 
     # Decode the generated sequence (excluding input)
     generated_ids = output.sequences[0, encoded_inputs['input_ids'].shape[-1]:]  # Exclude the input part
@@ -79,21 +86,21 @@ def data_quality_inference(data_quality_prompt, model, tokenizer):
 
     #print(f"YES_token_prob-->{yes_token_prob}")
 
-    """# Get the top 10 tokens with highest probabilities
+    # Get the top 10 tokens with highest probabilities
     top_k_probs, top_k_ids = torch.topk(probabilities, 10, dim=-1)
 
     # Convert token ids to actual tokens and print them with their probabilities
     top_k_tokens = tokenizer.convert_ids_to_tokens(top_k_ids.squeeze().tolist())
     for token, prob in zip(top_k_tokens, top_k_probs.squeeze().tolist()):
         print(f"Token: {token}, Probability: {prob:.4f}")
-    print(f"\n\n")"""
-    
+    print(f"\n\n")
         
     return yes_token_prob
 
 # function to assess data quality on the dataset folders from 
 def data_quality_assessment_and_save(task: str,
-                                     save = True):
+                                     save = True,
+                                     phi_model = '4k'):
 
     # base_data_quality_prompt = f"""The previous paragraph demarcated within ### and ### is a datapoint from a dataset. Your task is to determine whether this datapoint is a well-structured and informative example that would be valuable for evaluating the performance of a large-language model. An informative datapoint should be well-formatted, contain some usable knowledge of the task, and serve as a strong representation of the overall dataset.\n\nOPTIONS:\n- yes\n- no """
     base_data_quality_prompt = f"""Considering that an informative datapoint should be well-formatted, contain usable knowledge, and serve as a strong representation of the overall dataset, assess whether this datapoint is a well-structured and informative example that would be valuable for assessing the performance of a large language model, when considering a task related to classifying instances from the dataset. Answer with either YES or NO."""
@@ -108,17 +115,14 @@ def data_quality_assessment_and_save(task: str,
         train_data = extract_ContractNLI_data(type = 'train')
         validation_data = extract_ContractNLI_data(type = 'dev')
 
-        #print(validation_data[0])
-        #print(validation_data[0].keys())
-
     elif task == "MEDIQASUM":
         train_data = extract_MEDIQASUM_data(type = 'train')
         validation_data = extract_MEDIQASUM_data(type = 'valid')
 
-        #print(validation_data[0])
-        #print(validation_data[0].keys())
-    elif task == "task4":
-        pass
+    elif task == "LEXSUM":
+        train_data = extract_LEXSUM_data(type = 'train')
+        validation_data = extract_LEXSUM_data(type = 'validation')
+
     else:
         raise ValueError("Invalid task provided.")
     
@@ -139,8 +143,8 @@ def data_quality_assessment_and_save(task: str,
             datapoint_string = generate_string_for_contractnli_data_quality(full_data[i])
         elif task == "MEDIQASUM":
             datapoint_string = generate_string_for_mediqasum_data_quality(full_data[i])
-        elif task == "task4":
-            pass
+        elif task == "LEXSUM":
+            datapoint_string = generate_string_for_lexsum_data_quality(full_data[i])
 
         # Combine with base_string
         # data_quality_prompt = f"<s><|user|>\n###\n{datapoint_string}\n###\n\n{base_data_quality_prompt}<|end|>\n<|assistant|>"
@@ -150,9 +154,10 @@ def data_quality_assessment_and_save(task: str,
         full_data[i]['data_quality_prompt'] = data_quality_prompt
         #processed_data.append({"original_data": item, "combined_string": combined_string, "score": None})
     
-    # Step 3: Perform inferences in a loop
-
-    model, tokenizer = load_model(checkpoint = "microsoft/Phi-3-mini-4k-instruct", quantized = True)
+    if phi_model == '4k':
+        model, tokenizer = load_model(checkpoint = "microsoft/Phi-3-mini-4k-instruct", quantized = True)
+    elif phi_model == '128k':
+        model, tokenizer = load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct", quantized = True)
 
     for i in tqdm(range(len(full_data)), desc = 'Performing Data Quality Inference'):
         data_quality_score = data_quality_inference(data_quality_prompt = full_data[i]["data_quality_prompt"], 

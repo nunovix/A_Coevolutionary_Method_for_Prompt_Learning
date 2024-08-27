@@ -54,38 +54,39 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
                                                 task_w_full_contract=False,  #for contract nli
                                                 task_w_2_labels = True, #for contract nli
                                                 use_optimized_evo_prompts = False,
+                                                use_data_sorted_by_dq = False,
                                                 ):
 
     if task_name == 'SemEval':
         prompts_path = 'INITIAL_PROMPTS/SemEval'
-        data_expanded = extract_SemEval_data(extract_examples = w_one_shot)
+        data_expanded = extract_SemEval_data(extract_examples = w_one_shot, use_data_sorted_by_dq = use_data_sorted_by_dq)
         trie = get_Marisa_Trie(task_name, tokenizer)
 
     elif task_name == 'ContractNLI':
         prompts_path = 'INITIAL_PROMPTS/ContractNLI'
-        data_expanded = extract_ContractNLI_data(task_w_2_labels=task_w_2_labels)
+        data_expanded = extract_ContractNLI_data(task_w_2_labels=task_w_2_labels, use_data_sorted_by_dq = use_data_sorted_by_dq)
         trie = get_Marisa_Trie(task_name, tokenizer, task_w_2_labels=task_w_2_labels)
 
     elif task_name == 'MEDIQASUM':
         prompts_path = 'INITIAL_PROMPTS/MEDIQASUM'
-        data_expanded = extract_MEDIQASUM_data(retrieve_similar_examples = w_one_shot)
+        data_expanded = extract_MEDIQASUM_data(retrieve_similar_examples = w_one_shot, use_data_sorted_by_dq = use_data_sorted_by_dq)
         trie = None
 
     elif task_name == 'LEXSUM':
         prompts_path = 'INITIAL_PROMPTS/LEXSUM'
-        data_expanded = extract_LEXSUM_data()
+        data_expanded = extract_LEXSUM_data(use_data_sorted_by_dq = use_data_sorted_by_dq)
         trie = None
 
     elif task_name == 'hyper_mutation':
         prompts_path = 'INITIAL_PROMPTS/evolutionary_prompts/mutation'
         # done with semeval data
-        data_expanded = extract_SemEval_data(extract_examples = w_one_shot)
+        data_expanded = extract_SemEval_data(extract_examples = w_one_shot, use_data_sorted_by_dq = use_data_sorted_by_dq)
         trie = get_Marisa_Trie('SemEval', tokenizer)
 
     elif task_name == 'hyper_crossover':
         prompts_path = 'INITIAL_PROMPTS/evolutionary_prompts/combination'
         # done with semeval data
-        data_expanded = extract_SemEval_data(extract_examples = w_one_shot)
+        data_expanded = extract_SemEval_data(extract_examples = w_one_shot, use_data_sorted_by_dq = use_data_sorted_by_dq)
         trie = get_Marisa_Trie('SemEval', tokenizer)
 
     else:
@@ -269,9 +270,14 @@ def extract_SemEval_data(folder = 'DATASETS/SemEval_data',
                          extract_examples = False,
                          use_retrieves_sentences_files = True,
                          retrieve_sentences = True,
-                         save_retrieved_sentences = True):
+                         save_retrieved_sentences = True,
+                         use_data_sorted_by_dq = False):
+    
+    if use_data_sorted_by_dq == True:
+        file_path = "DATASETS/DATA_QUALITY/SemEval_data_quality.json"
+    else:
+        file_path = os.path.join(folder, f"{type}_w_retrieved.json")
 
-    file_path = os.path.join(folder, f"{type}_w_retrieved.json")
     if use_retrieves_sentences_files == True and os.path.exists(file_path):
         # Load from a JSON file
         with open(file_path, 'r') as file:
@@ -454,10 +460,15 @@ def extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data',
                              use_retrieves_sentences_files = True,
                              retrieve_sentences = True,
                              save_retrieved_sentences = True,
-                             task_w_2_labels = True, # for the experience with the oracle spans the results in the task's paper are only reported with 2 classes, excluding the NotMentioned one. that's why this flag is needed
+                             task_w_2_labels = True, # for the experience with the oracle spans the results in the task's paper are only reported with 2 classes, excluding the NotMentioned one. that's why this flag is needed,
+                             use_data_sorted_by_dq = False,
                              ):
 
-    file_path = os.path.join(folder, f"{type}_w_retrieved_task_w_2_labels_False.json")
+    if use_data_sorted_by_dq == True:
+        file_path = "DATASETS/DATA_QUALITY/ContractNLI_data_quality.json"
+    else:
+        file_path = os.path.join(folder, f"{type}_w_retrieved_task_w_2_labels_False.json")
+
     if use_retrieves_sentences_files == True and os.path.exists(file_path):
         print(f"LOADE")
         # Load from a JSON file
@@ -1267,9 +1278,14 @@ def extract_MEDIQASUM_data(folder_name='DATASETS/MEDIQASUM_data',
                            used_retrieved_file = True,
                            retrieve_similar_examples = True,
                            save_retrieved = True,
+                           use_data_sorted_by_dq = False,
                            ):
-    
-    file_path = os.path.join(folder_name, f"{type}_w_retrieved.json")
+
+    if use_data_sorted_by_dq == True:
+        file_path = "DATASETS/DATA_QUALITY/MEDIQASUM_data_quality.json"
+    else:
+        file_path = os.path.join(folder_name, f"{type}_w_retrieved.json")
+
     if used_retrieved_file == True and os.path.exists(file_path):
         # Load from a JSON file
         with open(file_path, 'r') as file:
@@ -1338,9 +1354,15 @@ def extract_MEDIQASUM_data(folder_name='DATASETS/MEDIQASUM_data',
 
 def extract_LEXSUM_data(folder_name='DATASETS/LEXSUM_data', 
                         type = 'validation', # possible types validation and test
-                        used_retrieved_file = True,):
-    
-    file_path = os.path.join(folder_name, f"{type}_w_retrieved.json")
+                        used_retrieved_file = True,
+                        use_data_sorted_by_dq = False,
+                        ):
+
+    if use_data_sorted_by_dq == True:
+        file_path = "DATASETS/DATA_QUALITY/LEXSUM_data_quality.json"
+    else:
+        file_path = os.path.join(folder_name, f"{type}_w_retrieved.json")
+
     if used_retrieved_file == True and os.path.exists(file_path):
         # Load from a JSON file
         with open(file_path, 'r') as file:
@@ -1374,6 +1396,7 @@ def extract_LEXSUM_data(folder_name='DATASETS/LEXSUM_data',
     for i in tqdm(range(len(dataset_dict['train'])), desc="train"):
         validation_embedding = embed_texts([dataset_dict['train'][i]['reference']])
         similarities = cos_sim(validation_embedding, train_embeddings)
+        similarities = np.ravel(similarities)
         sorted_indices = np.argsort(similarities)[::-1] 
         second_largest_index = sorted_indices[1] # select 2nd largest so that we are not selecting the same one
         dataset_dict['train'][i]['retrieved_sources'] = dataset_dict['train'][second_largest_index]['reference']
@@ -3355,6 +3378,7 @@ def evo_alg_2(task,
               use_optimized_evo_prompts = False,
               resume_run = False,
               resume_run_folder = None,
+              use_data_sorted_by_dq = False,
               ): 
     
     # load model and tokenizer
@@ -3370,6 +3394,7 @@ def evo_alg_2(task,
                                                                                                                                                         task_w_full_contract = task_w_full_contract,
                                                                                                                                                         task_w_2_labels = task_w_2_labels,
                                                                                                                                                         use_optimized_evo_prompts = use_optimized_evo_prompts,
+                                                                                                                                                        use_data_sorted_by_dq = use_data_sorted_by_dq,
                                                                                                                                                         )
     
     #print(f"new_mutation_prompts-->{new_mutation_prompts}")

@@ -3489,7 +3489,6 @@ def evo_alg_2(task,
                                     task_w_2_labels=task_w_2_labels,
                                     )
     
-
         patience_counter = 0
         iter = 0
         #print(f"initial_population eval-->{population['eval']}")
@@ -3498,7 +3497,6 @@ def evo_alg_2(task,
         # for the best individual baseline related change
         best_pop, _ = pop_selection(population, 1, 1)
 
-        
         if save == True:
             save_population('initial', population, root_folder, keep_list=list(range(n_pop)))
             print(f"Data saved for iteration {iter}.")

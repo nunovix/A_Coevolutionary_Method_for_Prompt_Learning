@@ -1,0 +1,14 @@
+0->Confirm the statement's validity by consulting the Clinical Trial Report; reply with YES or NO.
+----------
+1->Verify the accuracy of the given statement by consulting the Clinical Trial Report.
+----------
+2->Confirm the statement's correctness using the Clinical Trial Report.
+----------
+3->Confirm the Clinical Trial Report's statement for accuracy; reply 'YES' if correct, 'NO' if incorrect.
+----------
+4->Verify the accuracy of the Clinical Trial Report's content; respond with 'ACCURATE' if true, 'INACCURATE' if false.
+----------
+5->Verify the Clinical Trial Report's accuracy.
+----------
+6->Verify the accuracy of the given statement by reviewing the Clinical Trial Report. Respond with 'YES' if the statement is correct, or 'NO' if it is not.
+----------

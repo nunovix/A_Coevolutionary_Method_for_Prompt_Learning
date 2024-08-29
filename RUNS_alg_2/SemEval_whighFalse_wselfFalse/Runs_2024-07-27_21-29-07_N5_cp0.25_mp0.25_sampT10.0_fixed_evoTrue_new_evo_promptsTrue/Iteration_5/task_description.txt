@@ -1,0 +1,10 @@
+0->Evaluate semantic entailment between clinical trial reports (CTRs) sections and expert statements. Ensure statements are substantiated by CTR content and do not conflict with provided details. CTRs detail trial procedures and outcomes, divided into: (1) Eligibility Criteria for patient inclusion, (2) Interventions for various cohorts, (3) Results with participant data and outcomes, and (4) Adverse Events observed. Assess claims related to single or comparative CTRs.
+----------
+1->Examine the semantic relationships within Clinical Trial Reports (CTRs) and expert commentary, verifying that all assertions are substantiated by evidence and do not conflict with one another. Scrutinize entailment across individual or comparative CTRs, focusing on: (1) Eligibility Criteria, (2) Interventions, (3) Results, and (4) Adverse Events.
+----------
+2->Analyze the semantic relationship between sections of clinical trial reports (CTRs) and corresponding expert analyses. Verify that expert assertions are evidence-based and harmonious with the CTRs' findings. CTRs encompass: (1) Patient inclusion criteria, (2) Treatment protocols for different groups, (3) Data on participant responses and results, and (4) Recorded adverse events. Scrutinize expert commentary on individual or comparative CTRs.
+----------
+3->Analyze the semantic entailment between sections of Clinical Trial Reports (CTRs) and expert statements, ensuring claims are evidence-based and non-contradictory. CTRs are divided into: (1) Eligibility Criteria, (2) Interventions, (3) Results, and (4) Adverse Events. Assess entailment for individual or comparative CTRs.
+----------
+4->Analyze the semantic relationship between expert commentary and specific segments of clinical trial documentation. Verify that expert assertions are corroborated by the trial data and maintain consistency with the documented findings. Clinical trial documents are segmented into: (1) Patient inclusion criteria, (2) Treatment protocols for different groups, (3) Outcome data and participant results, and (4) Recorded adverse events. Scrutinize expert analyses concerning individual or comparative trials.
+----------

@@ -1,0 +1,22 @@
+0->Verify the accuracy of the statement by consulting the clinical trial report.
+----------
+1->Verify the statement's validity based on the clinical trial documentation.
+----------
+2->Evaluate the validity of the given statement by meticulously cross-referencing it with the information provided in the Clinical Trial Reports (CTRs). This involves a thorough examination of medical terminology, context, numerical data, and qualifiers within both the CTRs and the statement. Address any ambiguities or information gaps comprehensively. Provide a definitive YES or NO, indicating whether the statement accurately reflects the content of the CTRs.
+----------
+3->Confirm the statement's accuracy by conducting a detailed examination of the relevant clinical trial report.
+----------
+4->"Verify the validity of the assertion by meticulously examining the relevant clinical trial data."
+
+RESULT:
+
+The rephrased instruction remains focused on assessing the truthfulness of a statement by scrutinizing the pertinent clinical trial data. It maintains the essence of the original directive while enhancing clarity and specificity.
+----------
+5->Confirm the accuracy of the claim using the provided clinical trial data.
+----------
+6->"Examine the clinical trial documentation thoroughly to ascertain the accuracy of the provided statement."
+
+RESULT:
+
+The rephrased instruction now clearly directs the AI system to perform a detailed review of the clinical trial documentation with the objective of confirming the truthfulness of the statement in question.
+----------

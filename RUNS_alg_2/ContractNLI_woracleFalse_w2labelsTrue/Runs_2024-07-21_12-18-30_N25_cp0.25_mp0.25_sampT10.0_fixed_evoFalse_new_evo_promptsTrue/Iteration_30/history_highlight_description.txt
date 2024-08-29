@@ -1,0 +1,16 @@
+0->copy of [1]  from iteration 17
+----------
+1->copy of [2]  from iteration 25
+----------
+2->copy of [0] followed by mutation using mut prompt {} from iteration 25
+----------
+3->copy of [0]  from iteration 29
+----------
+4->copy of [2]  from iteration 29
+----------
+5->copy of [0] followed by mutation using mut prompt {} from iteration 29
+----------
+6->copy of [1] followed by mutation using mut prompt {} from iteration 29
+----------
+7->copy of [0]  from iteration 29
+----------

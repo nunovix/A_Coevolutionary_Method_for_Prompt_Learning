@@ -1,0 +1,14 @@
+0->Indicate with either YES or NO whether the statement is valid based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+1->Assess the validity of a statement using the Clinical Trial Report (CTR) data, providing a definitive YES or NO answer that confirms whether the statement aligns with and is supported by the CTR data without contradicting the provided descriptions.
+----------
+2->Assess the validity of a statement by cross-referencing it with Clinical Trial Report (CTR) data, providing a definitive YES or NO response. Ensure the statement is congruent with and substantiated by the CTR data, avoiding contradictions with the given descriptions. This evaluation is intended for experts in the field, who require precise and clear guidance for task execution.
+----------
+3->Perform a definitive YES or NO evaluation of a statement's validity using Clinical Trial Report (CTR) data, ensuring that the assessment aligns with and is supported by the CTR data, while avoiding contradictions with the provided descriptions.
+----------
+4->Conduct a definitive YES or NO assessment of a statement's validity by cross-referencing it with Clinical Trial Report (CTR) data, ensuring congruence with and substantiation by the CTR data, while avoiding contradictions with provided descriptions. This expert-level task requires precise and clear guidance for execution.
+----------
+5->Conduct a definitive YES or NO assessment of a statement's validity based on the Clinical Trial Report (CTR) data, ensuring it aligns with, is supported by, and does not contradict the CTR data or provided descriptions.
+----------
+6->Perform a definitive YES or NO validation of a statement's accuracy by cross-referencing it with Clinical Trial Report (CTR) data, ensuring the statement aligns with and is corroborated by the CTR data and does not conflict with the provided descriptions. This task is designed for field experts, necessitating precise and unambiguous guidance for its execution.
+----------

@@ -1,0 +1,16 @@
+0->Produce only the resulting instruction, without any additional context.
+----------
+1->State the result of rephrasing the instruction according to the task description, omitting any further contextualization.
+----------
+2->Craft a concise, expert-level rewrite of the provided text, ensuring the essence remains unchanged.
+----------
+3->Refine the given text for an expert audience, preserving its original intent. Deliver a succinct revision.
+----------
+4->Synthesize a precise, expert-level summary of the original task, maintaining accuracy and clarity.
+----------
+5->Synthesize a succinct, expert-level summary of the original task descriptions, maintaining accuracy and clarity.
+----------
+6->Synthesize a concise, expert-level summary of the original task, ensuring accuracy and clarity.
+----------
+7->Rephrase the given text, maintaining the original meaning for an expert audience, ensuring brevity and clarity.
+----------

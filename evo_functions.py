@@ -17,6 +17,7 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import to_rgba, to_hex
 from copy import deepcopy
 from collections import Counter
+import torch.nn.functional as F
 
 # embbedings library used in retrieval
 from sentence_transformers import SentenceTransformer
@@ -820,9 +821,29 @@ def prompt_preds_semeval(data_expanded,
             output = model.generate(encoded_inputs['input_ids'], 
                                     attention_mask=encoded_inputs['attention_mask'],
                                     pad_token_id=tokenizer.eos_token_id, 
+                                    max_new_tokens = 1,
+                                    return_dict_in_generate=True,
+                                    output_scores=True)
+        
+        # Calculate probabilities
+        logits = output.scores[-1]  # logits of the last token
+        probabilities = F.softmax(logits, dim=-1)
+        # Get the top 10 tokens with highest probabilities
+        top_k_probs, top_k_ids = torch.topk(probabilities, 20, dim=-1)
+
+        # Convert token ids to actual tokens and print them with their probabilities
+        top_k_tokens = tokenizer.convert_ids_to_tokens(top_k_ids.squeeze().tolist())
+        for token, prob in zip(top_k_tokens, top_k_probs.squeeze().tolist()):
+            print(f"Token: {token}, Probability: {prob:.8f}")
+        print(f"\n\n")
+
+        with torch.inference_mode():
+            output = model.generate(encoded_inputs['input_ids'], 
+                                    attention_mask=encoded_inputs['attention_mask'],
+                                    pad_token_id=tokenizer.eos_token_id, 
                                     max_new_tokens = 3,
                                     prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
-
+    
 
         if flag ==0:
             #print(f"SEMEVAL inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
@@ -832,7 +853,7 @@ def prompt_preds_semeval(data_expanded,
         new_tokens = output[0, prompt_length:]
 
         pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
-        #print(f"pred-->{pred}")
+        print(f"pred-->{pred}")
         preds.append(pred)
 
     predictions, _ = convert_preds_from_yesno(preds)

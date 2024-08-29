@@ -1,0 +1,18 @@
+0->Assess the Clinical Trial Documentation for accuracy in medical specifics, quantitative information, and terminology, and respond with 'Yes' or 'No'.
+----------
+1->Assess the accuracy of the Clinical Trial Documentation (CTD) by providing a 'Yes' or 'No' response, focusing specifically on medical details, numerical data, and specialized terminology.
+----------
+2->Evaluate the medical trial records for precision in clinical details, numerical data, and jargon; reply with 'Affirmative' or 'Negative'.
+----------
+3->Evaluate the medical trial records for precision in health-related details, numerical data, and vocabulary, and reply with 'Affirmative' or 'Negative'.
+----------
+4->Evaluate the medical trial documentation for accuracy in health-related details, numerical precision, and correct use of specialized terms, and reply with 'Affirmative' or 'Negative'.
+----------
+5->Review the Medical Trial Documentation (MTD) for precision in clinical details, numerical accuracy, and correct application of medical terminology. Provide a verdict of 'Approved' or 'Rejected'.
+----------
+6->Review the Clinical Trial Documentation (CTD) for precision in medical details, numerical accuracy, and correct use of specialized terminology. Respond with 'Yes' if all criteria are met, or 'No' if any discrepancies are found.
+----------
+7->Evaluate the Clinical Trial Documentation (CTD) for medical accuracy, numerical precision, and correct use of specialized terms. Respond with 'Affirmative' or 'Negative'.
+----------
+8->Carefully review the Clinical Trial Documentation (CTD) to verify the accuracy of medical information, ensure numerical data is precise, and confirm the correct application of specialized medical terminology. Provide a 'Yes' or 'No' response.
+----------

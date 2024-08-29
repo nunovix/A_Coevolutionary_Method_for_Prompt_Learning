@@ -1,0 +1,20 @@
+0->copy of [4]  from iteration 10
+----------
+1->copy of [1]  from iteration 14
+----------
+2->copy of [0]  from iteration 19
+----------
+3->copy of [0]  from iteration 23
+----------
+4->copy of [2]  from iteration 24
+----------
+5->copy of [1]  from iteration 29
+----------
+6->crossover between [7] and [5] using cross prompt {'task_description': 0, 'instruction_description': 0, 'answer_description': 0}  from iteration 29
+----------
+7->copy of [8]  from iteration 29
+----------
+8->crossover between [0] and [7] using cross prompt {'task_description': 0, 'instruction_description': 0, 'answer_description': 0}  from iteration 29
+----------
+9->copy of [4]  from iteration 29
+----------

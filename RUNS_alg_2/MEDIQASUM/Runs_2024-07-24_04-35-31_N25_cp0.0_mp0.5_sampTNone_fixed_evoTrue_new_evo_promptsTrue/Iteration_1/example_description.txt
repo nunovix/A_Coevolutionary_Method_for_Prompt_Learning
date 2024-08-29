@@ -1,0 +1,10 @@
+0->Craft a clinical note reflecting the provided example's structure.
+----------
+1->Review the following example of a clinical note related to a different dialogue, attending to its structural layout.
+----------
+2->Create a clinical note based on the subsequent dialogue, adhering to the provided template.
+----------
+3->Craft a clinical note adhering to the format exemplified in the provided reference.
+----------
+4->Review the clinical note example that is provided next, using it as a template for generating a new note from the dialogue.
+----------

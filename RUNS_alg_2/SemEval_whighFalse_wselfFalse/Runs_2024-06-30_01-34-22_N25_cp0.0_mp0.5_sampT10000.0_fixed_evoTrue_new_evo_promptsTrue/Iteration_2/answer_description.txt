@@ -1,0 +1,6 @@
+0->Assess the statement's validity based on clinical trial data, and provide a conclusive YES or NO response.
+----------
+1->Determine the veracity of the given statement by analyzing the CTR descriptions, interpreting medical terminology, and considering the context within both the report and the statement, while resolving any ambiguities or information deficiencies.
+----------
+2->Determine the veracity of the given statement by analyzing the medical terminology and context within the CTR descriptions, taking into account any potential ambiguities or information deficiencies. Respond with a 'YES' for validity or 'NO' for invalidity.
+----------

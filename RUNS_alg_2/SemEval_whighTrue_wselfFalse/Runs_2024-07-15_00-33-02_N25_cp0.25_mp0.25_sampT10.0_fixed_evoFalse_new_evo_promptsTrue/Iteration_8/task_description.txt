@@ -1,0 +1,10 @@
+0->Evaluate the semantic entailment between statements from clinical domain experts and specific sections of Clinical Trial Reports (CTRs), which include ELIGIBILITY CRITERIA, INTERVENTION details, RESULTS, and ADVERSE EVENTS. Ensure that expert claims are substantiated by the CTR data and do not contradict the provided descriptions.
+----------
+1->Analyze the consistency between expert opinions in the clinical field and the corresponding segments of Clinical Trial Reports (CTRs), focusing on ELIGIBILITY CRITERIA, INTERVENTION specifics, RESULTS, and REPORTED ADVERSE EVENTS. Verify that the experts' assertions are corroborated by the CTR content and remain congruent with the outlined descriptions.
+----------
+2->Assess the validity of clinical experts' assertions by cross-referencing with Clinical Trial Reports, focusing on ELIGIBILITY CRITERIA, INTERVENTION specifics, RESULTS, and REPORTED ADVERSE EVENTS, ensuring consistency and non-contradiction.
+----------
+3->Evaluate the alignment of clinical experts' views with Clinical Trial Reports (CTRs) on ELIGIBILITY CRITERIA, INTERVENTION details, RESULTS, and REPORTED ADVERSE EVENTS, ensuring consistency and absence of contradictions.
+----------
+4->Assess the logical consistency between expert opinions in the clinical field and corresponding segments of Clinical Trial Reports (CTRs), focusing on ELIGIBILITY CRITERIA, INTERVENTION specifics, RESULTS, and REPORTED ADVERSE EVENTS. Verify that expert assertions are corroborated by the CTR content and are not in conflict with the documented information.
+----------

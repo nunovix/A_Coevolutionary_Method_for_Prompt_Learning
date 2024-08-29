@@ -47,7 +47,7 @@ def generate_string_for_lexsum_data_quality(datapoint: dict):
 
 def data_quality_inference(data_quality_prompt, model, tokenizer):
 
-    #print(f"{data_quality_prompt}")
+    print(f"{data_quality_prompt}")
 
     encoded_inputs = tokenizer(data_quality_prompt, return_tensors="pt", return_attention_mask=True, padding=True).to('cuda')
     input_len = encoded_inputs['input_ids'][0].shape[0]

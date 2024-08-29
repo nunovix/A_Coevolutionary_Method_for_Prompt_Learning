@@ -1,0 +1,18 @@
+0->initial
+----------
+1->copy of [2]  from iteration 2
+----------
+2->copy of [1] followed by mutation using mut prompt {} from iteration 4
+----------
+3->copy of [4]  from iteration 6
+----------
+4->crossover between [0] and [3] using cross prompt {}  from iteration 7
+----------
+5->crossover between [0] and [3] using cross prompt {}  from iteration 7
+----------
+6->crossover between [2] and [3] using cross prompt {}  from iteration 7
+----------
+7->crossover between [3] and [2] using cross prompt {}  from iteration 7
+----------
+8->crossover between [0] and [2] using cross prompt {}  from iteration 7
+----------

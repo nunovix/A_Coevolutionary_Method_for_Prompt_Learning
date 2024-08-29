@@ -1,0 +1,16 @@
+0->copy of [1]  from iteration 0
+----------
+1->copy of [2]  from iteration 1
+----------
+2->copy of [0] followed by mutation using mut prompt {'task_description': 3, 'instruction_description': 1, 'answer_description': 3} from iteration 4
+----------
+3->copy of [2]  from iteration 9
+----------
+4->copy of [2]  from iteration 9
+----------
+5->copy of [2]  from iteration 9
+----------
+6->copy of [0]  from iteration 9
+----------
+7->copy of [0]  from iteration 9
+----------

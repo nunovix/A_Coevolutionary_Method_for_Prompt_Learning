@@ -1,0 +1,16 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->Carefully review the Clinical Trial Report (CTR) to determine if it contains sufficient evidence to support or refute the statement in question. Conduct a thorough comparison between the statement's content and the data or findings presented in the CTR. Your assessment should be grounded in a detailed analysis of both the statement and the CTR, leading to a definitive conclusion regarding the statement's accuracy.
+----------
+2->Evaluate the statement's validity by examining the Clinical Trial Report (CTR) contents. Determine whether the statement is supported or contradicted by the information within the CTR. Your assessment must be comprehensive, taking into account all pertinent details from the CTR to substantiate or negate the statement's accuracy.
+----------
+3->Carefully review the Clinical Trial Report (CTR) to verify the accuracy of a specific claim. Ensure your assessment is clear, unambiguous, and leaves no room for misinterpretation. Determine whether the claim should be included or excluded from the CTR based on its substantiation.
+
+RESULT:
+
+The rephrased instruction provides a direct and unambiguous directive for evaluating the accuracy of a claim in relation to the Clinical Trial Report's content.
+----------
+4->Critically evaluate the Clinical Trial Report (CTR) to determine if it contains sufficient evidence to either substantiate or refute the specific claim in question. Ensure a meticulous comparison between the claim's content and the CTR's presented data and conclusions, leading to a definitive assessment of the claim's credibility. Conclude with a clear YES or NO, based on the presence or absence of pertinent information within the CTR.
+----------
+5->Assess the credibility of the claim by scrutinizing the contents of the Clinical Trial Report. Ascertain if the claim is corroborated or refuted by the data provided in the report. Ensure your evaluation is thorough, incorporating all relevant information from the report to confirm or dispute the claim's correctness.
+----------

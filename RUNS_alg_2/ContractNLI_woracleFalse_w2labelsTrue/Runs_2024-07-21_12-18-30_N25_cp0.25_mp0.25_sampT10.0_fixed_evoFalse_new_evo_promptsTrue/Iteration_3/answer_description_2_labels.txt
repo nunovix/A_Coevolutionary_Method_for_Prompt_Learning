@@ -1,0 +1,16 @@
+0->Confirm the legitimacy of the legal assertion by responding with YES or NO.
+----------
+1->Assess the accuracy of the legal assertion and reply with either 'ACCURATE' or 'INACCURATE'. "
+
+RESULT: 
+
+"ACCURATE
+----------
+2->Examine the Non-Disclosure Agreement (NDA) to ascertain the presence of specific legal terminology and contextual elements that substantiate or refute the statement under scrutiny, while resolving any uncertainties or missing details.
+----------
+3->Indicate with YES or NO whether the legal statement is valid.
+----------
+4->Assess the validity of the legal claim presented. Provide a definitive answer in the form of 'YES' if the claim is substantiated, or 'NO' if it lacks evidentiary support.
+----------
+5->Verify the legal claim's validity; reply with YES or NO.
+----------

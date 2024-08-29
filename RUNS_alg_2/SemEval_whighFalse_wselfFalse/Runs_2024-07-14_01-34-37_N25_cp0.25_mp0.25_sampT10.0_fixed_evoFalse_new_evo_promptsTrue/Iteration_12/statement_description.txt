@@ -1,0 +1,8 @@
+0->Contemplate the ensuing statement formulated by a clinical expert or researcher. Carefully consider the conditions that should be present or absent from the CTR descriptions, when assessing the statement, together with associated details such as numeric quantities and other qualifiers.
+----------
+1->Review the subsequent statement provided by a domain specialist, attending to the medical terminology and carefully addressing any ambiguities.
+----------
+2->Carefully analyze the provided Clinical Trial Registration (CTR) descriptions authored by a clinical expert or researcher. Your objective is to meticulously evaluate the content for the precise inclusion or exclusion of particular medical conditions, ensuring that all numeric values are accurately represented. Pay close attention to the qualifiers that may affect the interpretation of the data. Remove any extraneous information that does not contribute to a clear understanding of the clinical trial's scope, objectives, and methodologies. Ensure that the revised CTR descriptions are succinct yet comprehensive, facilitating an unambiguous assessment of the trial's design, participant criteria, interventions, and anticipated outcomes.
+----------
+3->Reflect on the statement crafted by a clinical expert or researcher. Assess the Clinical Trial Registration (CTR) descriptions, ensuring the inclusion or exclusion of specific conditions, as well as the accurate representation of numeric values and pertinent qualifiers. Focus on evaluating the necessary and unnecessary elements within the CTR descriptions to accurately assess the statement.
+----------

@@ -1,0 +1,16 @@
+0->Evaluate the Clinical Trial (CTR) description's accuracy. Respond with 'YES' or 'NO' to affirm or refute the statement's correctness.
+----------
+1->Considering the earlier discussion, evaluate the clinical details, numerical data, and additional descriptors in the Clinical Trial Report (CTR). Determine the accuracy of the statement by responding with either 'Affirmative' or 'Negative' based solely on the content of the CTR.
+----------
+2->Assess the accuracy of the Clinical Trial Report (CTR) by responding with 'Affirmative' or 'Negative', focusing on clinical details, numerical data, and descriptors.
+----------
+3->Examine the Clinical Trial Report's (CTR) methodology, results, clinical details, numerical data, and descriptors to determine if the conclusions are substantiated by the evidence. Respond with 'Affirmative' if the evidence supports the conclusions, or 'Negative' if it does not.
+----------
+4->Assess the Clinical Trial Documentation for accuracy in medical specifics, quantitative information, and terminology, and respond with 'Yes' or 'No'.
+----------
+5->Carefully examine the Clinical Trial Report's (CTR) methodology, results, clinical details, numerical data, and descriptors to determine if the conclusions drawn are substantiated by the evidence presented. Provide a response of 'YES' if the evidence supports the conclusions, or 'NO' if it does not. Ensure your assessment is thorough, accurate, and leaves no room for ambiguity, catering to experts in the field.
+----------
+6->Evaluate the precision of the Clinical Trial Documentation (CTD) by replying with 'Yes' or 'No', concentrating on medical specifics, figures, and terminology.
+----------
+7->Assess the Clinical Trial Documentation's accuracy focusing on medical details, numerical data, and terminology.
+----------

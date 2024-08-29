@@ -1,0 +1,10 @@
+0->Assess the accuracy of the legal assertion and reply with either 'ACCURATE' or 'INACCURATE'. "
+
+RESULT: 
+
+"ACCURATE
+----------
+1->Evaluate the correctness of the legal statement and respond with 'ACCURATE' or 'INACCURATE'.
+----------
+2->Evaluate the legal statement's correctness and respond with 'ACCURATE' or 'INACCURATE'.
+----------

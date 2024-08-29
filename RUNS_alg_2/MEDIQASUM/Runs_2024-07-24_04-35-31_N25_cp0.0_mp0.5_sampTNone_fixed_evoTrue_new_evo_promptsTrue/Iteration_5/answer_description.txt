@@ -1,0 +1,10 @@
+0->Compile a comprehensive clinical note using the specified headings: ASSESSMENT, CLINICAL HISTORY, CHIEF COMPLAINT, MEDICATIONS, EXAM, FAMILY HISTORY, HISTORY OF PRESENT ILLNESS, IMPRESSION, INSTRUCTIONS, MEDICAL HISTORY, PAST MEDICAL HISTORY, PAST SURGICAL HISTORY, PHYSICAL EXAM, PHYSICAL EXAMINATION, PLAN, RESULTS, REVIEW OF SYSTEMS, SOCIAL HISTORY, VITALS, VITALS REVIEWED.
+----------
+1->Compile a comprehensive clinical note with specified sections: Assessment, Assessment and Plan Clinical History, Chief Complaint, Current Medications, Examination, Family History, History of Present Illness, Impression, Instructions, Medical History, Medications, Past Medical History, Past Surgical History, Physical Exam, Physical Examination, Plan, Results, Review of Systems, Social History, Vital Signs, Vital Signs Reviewed.
+----------
+2->Compile a succinct clinical note, detailing assessment, clinical history, chief complaint, medications, examination, family history, history of present illness, impression, instructions, medical history, past medical history, past surgical history, physical exam, physical examination, plan, results, review of systems, social history, and vital signs.
+----------
+3->Create a clinical note with the following mandatory headings: ASSESSMENT, ASSESSMENT AND PLAN CLINICAL HISTORY, CHIEF COMPLAINT, CURRENT MEDICATIONS, EXAM, FAMILY HISTORY, HISTORY OF PRESENT ILLNESS, IMPRESSION, INSTRUCTIONS, MEDICAL HISTORY, MEDICATIONS, PAST MEDICAL HISTORY, PAST SURGICAL HISTORY, PHYSICAL EXAM, PHYSICAL EXAMINATION, PLAN, RESULTS, REVIEW OF SYSTEMS, SOCIAL HISTORY, VITALS, VITALS REVIEWED. Ensure all sections are filled with pertinent clinical data from the conversation.
+----------
+4->Prepare a concise clinical note with the following sections: ASSESSMENT, CLINICAL HISTORY, CHIEF COMPLAINT, MEDICATIONS, EXAM, FAMILY HISTORY, HISTORY OF PRESENT ILLNESS, IMPRESSION, INSTRUCTIONS, MEDICAL HISTORY, PAST MEDICAL HISTORY, PAST SURGICAL HISTORY, PHYSICAL EXAM, PHYSICAL EXAMINATION, PLAN, RESULTS, REVIEW OF SYSTEMS, SOCIAL HISTORY, VITALS, VITALS REVIEWED.
+----------

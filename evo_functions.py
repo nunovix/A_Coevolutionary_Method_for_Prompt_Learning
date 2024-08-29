@@ -3723,6 +3723,7 @@ def evo_alg_3(task,
               do_test_eval = True,
               fixed_evo_prompts = True,
               new_evo_prompt_format = True,
+              task_w_oracle_spans = True,
               ): 
     
     # load model and tokenizer

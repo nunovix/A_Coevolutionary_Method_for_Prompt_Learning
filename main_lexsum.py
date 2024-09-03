@@ -5,7 +5,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 import evo_functions as evo
 best_prompt, best_score_iterations = evo.evo_alg_2(task = "LEXSUM", 
-                                                            model_name = "microsoft/Phi-3-mini-4k-instruct",
+                                                            model_name = "microsoft/Phi-3-mini-128k-instruct",
                                                             #model_name = "unsloth/Phi-3-mini-4k-instruct",
                                                             quantize_model_4bits = True,
                                                             n_pop = 5,

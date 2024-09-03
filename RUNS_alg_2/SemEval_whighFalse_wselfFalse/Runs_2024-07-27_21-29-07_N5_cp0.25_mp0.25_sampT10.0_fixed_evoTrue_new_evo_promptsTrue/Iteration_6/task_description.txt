@@ -1,8 +1,0 @@
-0->Evaluate semantic entailment between clinical trial reports (CTRs) sections and expert statements. Ensure statements are substantiated by CTR content and do not conflict with provided details. CTRs detail trial procedures and outcomes, divided into: (1) Eligibility Criteria for patient inclusion, (2) Interventions for various cohorts, (3) Results with participant data and outcomes, and (4) Adverse Events observed. Assess claims related to single or comparative CTRs.
-----------
-1->Evaluate the congruence between clinical trial reports (CTRs) and expert interpretations, verifying that expert opinions are substantiated by and align with the data presented in the CTRs. Analyze the CTRs, which encompass: (1) Eligibility criteria for patient enrollment, (2) Treatment regim0ns for various cohorts, (3) Data on participant reactions and outcomes, and (4) Documented adverse events. Scrutinize expert reviews of individual or comparative CTRs for accuracy, succinctness, specificity, and lucidity.
-----------
-2->Analyze the semantic relationship between sections of clinical trial reports (CTRs) and corresponding expert analyses. Verify that expert assertions are evidence-based and harmonious with the CTRs' findings. CTRs encompass: (1) Patient inclusion criteria, (2) Treatment protocols for different groups, (3) Data on participant responses and results, and (4) Recorded adverse events. Scrutinize expert commentary on individual or comparative CTRs.
-----------
-3->Critically assess expert evaluations of Clinical Trial Reports (CTRs), ensuring they are evidence-based, concise, precise, and clear, focusing on: (1) Patient inclusion criteria, (2) Treatment protocols, (3) Participant response data, and (4) Adverse event records.
-----------

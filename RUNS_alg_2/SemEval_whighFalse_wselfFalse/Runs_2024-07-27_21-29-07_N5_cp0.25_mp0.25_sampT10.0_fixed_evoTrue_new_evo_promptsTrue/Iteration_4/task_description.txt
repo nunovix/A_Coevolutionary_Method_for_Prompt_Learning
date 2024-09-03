@@ -1,4 +1,0 @@
-0->Evaluate semantic entailment between clinical trial reports (CTRs) sections and expert statements. Ensure statements are substantiated by CTR content and do not conflict with provided details. CTRs detail trial procedures and outcomes, divided into: (1) Eligibility Criteria for patient inclusion, (2) Interventions for various cohorts, (3) Results with participant data and outcomes, and (4) Adverse Events observed. Assess claims related to single or comparative CTRs.
-----------
-1->Analyze the semantic entailment between sections of Clinical Trial Reports (CTRs) and expert statements, ensuring claims are evidence-based and non-contradictory. CTRs are divided into: (1) Eligibility Criteria, (2) Interventions, (3) Results, and (4) Adverse Events. Assess entailment for individual or comparative CTRs.
-----------

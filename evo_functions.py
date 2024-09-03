@@ -816,8 +816,8 @@ def prompt_preds_semeval(data_expanded,
         encoded_inputs = tokenizer(sentence, return_tensors="pt", return_attention_mask=True).to('cuda')
 
         prompt_length = encoded_inputs['input_ids'][0].shape[0]
-        FastLanguageModel.for_inference(model)
-        with torch.inference_mode():
+        
+        """with torch.inference_mode():
             output = model.generate(encoded_inputs['input_ids'], 
                                     attention_mask=encoded_inputs['attention_mask'],
                                     pad_token_id=tokenizer.eos_token_id, 
@@ -835,8 +835,8 @@ def prompt_preds_semeval(data_expanded,
         top_k_tokens = tokenizer.convert_ids_to_tokens(top_k_ids.squeeze().tolist())
         for token, prob in zip(top_k_tokens, top_k_probs.squeeze().tolist()):
             print(f"Token: {token}, Probability: {prob:.8f}")
-        print(f"\n\n")
-
+        print(f"\n\n")"""
+        FastLanguageModel.for_inference(model)
         with torch.inference_mode():
             output = model.generate(encoded_inputs['input_ids'], 
                                     attention_mask=encoded_inputs['attention_mask'],
@@ -1493,14 +1493,16 @@ def prompt_preds_lexsum(data_expanded,
             example = random_example_retrieval(sample, data_expanded)
         """
         sentence = f"""{prompt}Example Summary:\n"{example}" """
-        #sentence = prompt
+        sentence = task_description + '\n\n'
 
-        doc = "".join(sample['reference'])
-        sentence = f"""[INST]{sentence}\n\n{doc_description}\n\n"{doc[:100]}"\n\n{answer_description}[/INST]\n\nSummary:"""
+        #doc = "".join(sample['reference'])
+        #print(f"sample['reference']-->{sample['reference']}")
+        doc = sample['reference']
+        sentence = f"""[INST]{sentence}\n\n{doc_description}\n\n"{doc[:]}"\n\n{answer_description}[/INST]\n\nSummary:"""
         
         labels.append(sample["summary"])
 
-        print(f"sentence-->{sentence}")
+        #print(f"sentence-->{sentence}")
 
         if save_test_predictions == True:
             ids.append(sample["celex_id"])
@@ -1513,7 +1515,7 @@ def prompt_preds_lexsum(data_expanded,
             #print(f"len(sentence)-->{len(sentence)}")
             #print(f"messages prompts-->{sentence[:200]}\n\n\n\n\n\n\n\n")
 
-        encoded_inputs = tokenizer(sentence, return_tensors="pt", return_attention_mask=True).to('cuda')
+        encoded_inputs = tokenizer(sentence[:], return_tensors="pt", return_attention_mask=True).to('cuda')
         #print(f"len(prompt)-->{len(prompt)}")
             
         prompt_length = encoded_inputs['input_ids'][0].shape[0]
@@ -1532,9 +1534,9 @@ def prompt_preds_lexsum(data_expanded,
         new_tokens = output[0, prompt_length:]
 
         if print_once_flag == 0:
-            #print(f"INFERENCE LEX SUM-->{tokenizer.decode(output[0])}")
+            print(f"INFERENCE LEX SUM-->{tokenizer.decode(output[0])}")
             print(f"sample['summary/short']-->{sample['summary']}")
-            print_once_flag = 0
+            print_once_flag = 1
 
         pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
         preds.append(pred)
@@ -3545,7 +3547,7 @@ def evo_alg_2(task,
                             cross_index = random.choice(list(range(len(new_cross_prompts['task_description']))))
                             for key in new_cross_prompts:
                                 #print(f"key-->{key}")
-                                #cross_prompt_index[key] = random.choice(list(range(len(new_cross_prompts[key]))))
+                                cross_prompt_index[key] = cross_index
                                 cross_prompt[key] = new_cross_prompts[key][cross_index]
                         
                     else:
@@ -3590,7 +3592,7 @@ def evo_alg_2(task,
                         else:
                             mut_index = random.choice(list(range(len(new_mutation_prompts['task_description']))))
                             for key in new_mutation_prompts:
-                                #print(f"key-->{key}")
+                                mutation_prompt_index[key] = mut_index
                                 mutation_prompt[key] = new_mutation_prompts[key][mut_index]
 
                     else:

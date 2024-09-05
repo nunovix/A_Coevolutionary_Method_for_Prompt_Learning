@@ -59,10 +59,13 @@ def data_quality_inference(data_quality_prompt, model, tokenizer):
                                 return_dict_in_generate=True,
                                 output_scores=True,
                                 )
-        
+    
+
+
     generated_ids = output.sequences[0, :]  # Exclude the input part
-    generated_text = tokenizer.decode(generated_ids, skip_special_tokens=True)
-    print(f"generated_text-->{generated_text}")
+    full_generated_text = tokenizer.decode(generated_ids, skip_special_tokens=True)
+    print(f"generated_text-->{full_generated_text}")
+
 
     # Decode the generated sequence (excluding input)
     generated_ids = output.sequences[0, encoded_inputs['input_ids'].shape[-1]:]  # Exclude the input part

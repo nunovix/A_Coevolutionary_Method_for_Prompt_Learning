@@ -843,7 +843,6 @@ def prompt_preds_semeval(data_expanded,
                                     pad_token_id=tokenizer.eos_token_id, 
                                     max_new_tokens = 3,
                                     prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
-    
 
         if flag ==0:
             #print(f"SEMEVAL inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
@@ -853,12 +852,11 @@ def prompt_preds_semeval(data_expanded,
         new_tokens = output[0, prompt_length:]
 
         pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
-        print(f"pred-->{pred}")
+        #print(f"pred-->{pred}")
         preds.append(pred)
 
     predictions, _ = convert_preds_from_yesno(preds)
     return labels, predictions
-    
 
 
 def prompt_creation_semeval_self(data_expanded, task_description, ctr_description, statement_description,

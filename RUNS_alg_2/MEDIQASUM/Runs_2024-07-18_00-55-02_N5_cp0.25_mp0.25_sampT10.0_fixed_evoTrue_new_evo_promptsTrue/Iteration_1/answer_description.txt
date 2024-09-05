@@ -1,6 +1,0 @@
-0->Compose the medical note by following the format outlined in the example. Important structural elements to consider for inclusion are the CHIEF COMPLAINT, CURRENT MEDICATIONS, PHYSICAL EXAMS, HISTORY OF THE PRESENT ILLNESS, or ASSESSMENT AND PLAN, among others. Aim for clarity and conciseness.
-----------
-1->Create the structured clinical note, summarizing the key informaton in the input dialogue and mirroring the structure of the example. Consider including sections such as CHIEF COMPLAINT, PHYSICAL EXAMINATION, MEDICAL HISTORY, ASSESSMENT, PLAN, and potentially also REVIEW OF SYSTEMS, SOCIAL HISTORY, or PAST SURGICAL HISTORY. Be thorough, clear, and brief.
-----------
-2->Synthesize a concise clinical note from the dialogue, adhering to the structural guidelines exemplified, ensuring accuracy and clarity in the description.
-----------

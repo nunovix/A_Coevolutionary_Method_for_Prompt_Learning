@@ -1,0 +1,10 @@
+0->Evaluate the given statement for its validity within the context of the Clinical Trial Report (CTR) descriptions. If the statement aligns with and is corroborated by the information presented in the CTR, respond with "YES." Conversely, if the statement contradicts or lacks support from the CTR descriptions, your response should be "NO."
+----------
+1->Evaluate the veracity of the given assertion in relation to the information presented in the Clinical Trial Report. Provide a 'YES' if the assertion is corroborated by the CTR details; otherwise, respond with 'NO'.
+----------
+2->Assess whether the statement aligns with the findings in the Clinical Trial Report (CTR). Respond with "YES" if it does, or "NO" if it does not.
+----------
+3->Review the provided Clinical Trial Report (CTR) descriptions. Determine if the statement in question accurately reflects the content of the CTR. If the statement is substantiated by the CTR, reply with "VALIDATED." If the statement does not align with or is contradicted by the CTR, respond with "INVALIDATED."
+----------
+4->Evaluate the given statement for its validity within the context of the Clinical Trial Report (CTR) descriptions. If the statement aligns with and is corroborated by the information presented in the CTR, respond with "YES." Conversely, if the statement contradicts or lacks support from the CTR descriptions, your response should be "NO." 
+----------

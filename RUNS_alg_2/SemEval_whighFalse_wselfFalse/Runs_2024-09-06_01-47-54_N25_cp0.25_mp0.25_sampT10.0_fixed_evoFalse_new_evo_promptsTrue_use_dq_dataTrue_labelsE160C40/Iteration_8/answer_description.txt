@@ -1,0 +1,6 @@
+0->Check the statement's validity based on the clinical trial report data, providing a YES or NO response.
+----------
+1->Assess the accuracy of the claim based on information from the Clinical Trial Report, and provide a clear YES or NO answer.
+----------
+2->Assess the veracity of the provided statement by meticulously analyzing the corresponding data extracted from the clinical trial report. Conclude your evaluation with a definitive 'YES' if the statement aligns with the report's findings, or 'NO' if there is a discrep0pancy.
+----------

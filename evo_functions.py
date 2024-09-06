@@ -3422,12 +3422,38 @@ def evo_alg_2(task,
                                                                                                                                                         use_optimized_evo_prompts = use_optimized_evo_prompts,
                                                                                                                                                         use_data_sorted_by_dq = use_data_sorted_by_dq,
                                                                                                                                                         )
-    # select portion of the data base on data size value
+    
+    # keep data balanced if dq
+    if use_data_sorted_by_dq == True:
+        balanced_data = []
+        if task == 'SemEval':
+            per_label_size = int(data_size/2)
+            ent_num = 0
+            cont_num = 0
+            for data in data_expanded:
+                if data['label'] == 'Entailment' and ent_num < per_label_size:
+                    balanced_data.append(data)
+                    ent_num+=1
+
+                elif data['label'] == 'Contradiction' and cont_num < per_label_size:
+                    balanced_data.append(data)
+                    cont_num+=1
+
+            data_expanded = balanced_data
+        else:
+            sys.exit('Task not Defined with DQ file!')
+
+    # check label dist
+    dq_labels = []
+    for data in data_expanded:
+        dq_labels.append(data['label'])
+    print(Counter(dq_labels))
+
+    # normal data size adjustment
     if data_size <= 0:
         pass
     else:
         data_expanded = data_expanded[:data_size]
-
 
     if use_data_sorted_by_dq == True:
         if 'score' in data_expanded[0].keys():

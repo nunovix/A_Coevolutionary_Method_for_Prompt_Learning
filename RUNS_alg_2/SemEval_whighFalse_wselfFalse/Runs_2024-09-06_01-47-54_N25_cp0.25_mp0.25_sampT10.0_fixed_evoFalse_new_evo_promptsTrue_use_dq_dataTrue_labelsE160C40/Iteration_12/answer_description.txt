@@ -1,0 +1,6 @@
+0->Assess the accuracy of the claim based on information from the Clinical Trial Report, and provide a clear YES or NO answer.
+----------
+1->Evaluate the validity of the statement using data from the Clinical Trial Documentation and respond with a definitive YES or NO.
+----------
+2->Evaluate the validity of the stated assertion using data extracted exclusively from the provided Clinical Trial Report. Deliver a definitive response in the form of either 'YES' or 'NO' to affirm or refute the claim.
+----------

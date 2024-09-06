@@ -1,0 +1,6 @@
+0->Assess the accuracy of the claim based on information from the Clinical Trial Report, and provide a clear YES or NO answer.
+----------
+1->Carefully compare the provided statement with the evidence presented in the Clinical Trial Report. Determine whether the statement accurately reflects the report's findings. Respond with a definitive 'YES' if the statement is correct, or 'NO' if it is not.
+----------
+2->Assess the accuracy of the claim based on information from the Clinical Trial Documentation, and provide a conclusive affirmation or negation.
+----------

@@ -2218,7 +2218,7 @@ def eval_pop(population,
                                                        )
 
             score = f1_score(y_true=labels, y_pred=predictions, average='macro')
-            print(f"score at eval-->{score}")
+            #print(f"score at eval-->{score}")
             population['eval'].append(score)
 
             # f-1 score for more detailed analysis
@@ -2541,17 +2541,18 @@ def create_root_folder(task,
                        task_w_oracle_spans = 'nd', # contract nli only
                        task_w_full_contract =  'nd', # contract nli only
                        task_w_2_labels = 'nd', # contract nli only
+                       use_data_sorted_by_dq = 'nd',
                        ):
     # Format: Runs_YYYY-MM-DD_HH-MM-SS
     if alg=='alg_2':
         if task == 'SemEval':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}_use_dq_data{use_data_sorted_by_dq}")
         elif task == 'ContractNLI':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}")
         elif task == 'MEDIQASUM' or task == 'LEXSUM':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")  
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}")  
         elif task == 'hyper_crossover' or task == 'hyper_mutation':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}")
 
     elif alg=='alg_3':
         folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_op{operation_prob}_mop{mutation_operation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
@@ -2876,8 +2877,8 @@ def create_population(task, prompts_dict, initial,
     tam = []
     #print(f"PROMPT_DICT-->{prompts_dict}")
     for key in prompts_dict:
-        print(key)
-        print(len(prompts_dict[key]))
+        #print(key)
+        #print(len(prompts_dict[key]))
         tam.append(len(prompts_dict[key]))
     # Check if all elements are equal
     all_equal = all(element == tam[0] for element in tam)
@@ -2956,8 +2957,8 @@ def create_population(task, prompts_dict, initial,
                             task_w_2_labels = task_w_2_labels
                             )
 
-    print(f"POP-->{population}")
-    print(f"POP KEYS-->{population.keys()}")
+    #print(f"POP-->{population}")
+    #print(f"POP KEYS-->{population.keys()}")
     return population
 
 # function to combine two populations
@@ -3421,6 +3422,18 @@ def evo_alg_2(task,
                                                                                                                                                         use_optimized_evo_prompts = use_optimized_evo_prompts,
                                                                                                                                                         use_data_sorted_by_dq = use_data_sorted_by_dq,
                                                                                                                                                         )
+    # select portion of the data base on data size value
+    if data_size <= 0:
+        pass
+    else:
+        data_expanded = data_expanded[:data_size]
+
+
+    if use_data_sorted_by_dq == True:
+        if 'score' in data_expanded[0].keys():
+            print(f"data_expanded[0]['score']-->{data_expanded[0]['score']}")
+        else:
+            sys.exit("use_data_sorted_by_dq selected but data does not contain it!!")
     
     #print(f"new_mutation_prompts-->{new_mutation_prompts}")
     #print(f"new_cross_prompts-->{new_cross_prompts}")
@@ -3456,6 +3469,7 @@ def evo_alg_2(task,
                                             task_w_oracle_spans = task_w_oracle_spans, # contract nli only
                                             task_w_full_contract =  task_w_full_contract, # contract nli only
                                             task_w_2_labels = task_w_2_labels, # contract nli only
+                                            use_data_sorted_by_dq = use_data_sorted_by_dq,
                                             )
             
             if new_evo_prompt_format == True:

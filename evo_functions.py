@@ -78,6 +78,11 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
         data_expanded = extract_LEXSUM_data(use_data_sorted_by_dq = use_data_sorted_by_dq)
         trie = None
 
+    elif task_name == 'LegalSumTOSDR':
+        prompts_path = 'INITIAL_PROMPTS/LegalSumTOSDR'
+        data_expanded = extract_LegalSumTOSDR_data(use_data_sorted_by_dq = use_data_sorted_by_dq)
+        trie = None
+
     elif task_name == 'hyper_mutation':
         prompts_path = 'INITIAL_PROMPTS/evolutionary_prompts/mutation'
         # done with semeval data
@@ -218,6 +223,8 @@ def extract_lines_to_dict(folder_path, task,
             sys.exit()
     elif task == 'LEXSUM':
         ordered_filenames = ['task_description', 'example_description', 'doc_description', 'answer_description']
+    elif task == 'LegalSumTOSDR':
+        ordered_filenames = ['task_description', 'doc_description', 'answer_description']
     elif task == 'Evo_prompts':
         ordered_filenames = ['mutation_prompts', 'combination_prompts']
     elif task == 'new_mutation':
@@ -841,7 +848,7 @@ def prompt_preds_semeval(data_expanded,
             output = model.generate(encoded_inputs['input_ids'], 
                                     attention_mask=encoded_inputs['attention_mask'],
                                     pad_token_id=tokenizer.eos_token_id, 
-                                    max_new_tokens = 3,
+                                    max_new_tokens = 2,
                                     prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
 
         if flag ==0:
@@ -1670,6 +1677,114 @@ def prompt_preds_mediqasum(data_expanded,
 
     return labels, preds
 
+def extract_LegalSumTOSDR_data(folder_name='DATASETS/LegalSumTOSDR_data', 
+                               type = 'val', 
+                               used_retrieved_file = True,
+                               retrieve_similar_examples = True,
+                               save_retrieved = True,
+                               use_data_sorted_by_dq = False,
+                               ):
+    if use_data_sorted_by_dq == True:
+        file_path = "DATASETS/DATA_QUALITY/LegalSumTOSDR_data_quality.json"
+    else:
+        file_path = os.path.join(folder_name, f"{type}_w_retrieved.json")
+
+    if used_retrieved_file == True and os.path.exists(file_path):
+        # Load from a JSON file
+        with open(file_path, 'r') as file:
+            data_list = json.load(file)
+        print(f"Used data with already retrieved examples from {file_path}")
+        return data_list
+    
+    full_data_file_name = 'tosdr_annotated_v1.json'
+    file_path = os.path.join(folder_name, full_data_file_name)
+    with open(file_path, mode='r') as file:
+        full_data = json.load(file)
+
+    print(full_data)
+    print(type(full_data))
+
+    data_expanded = []
+    for uid in full_data:
+        data_point = {'original_text': full_data[uid]['original_text'], 'reference_summary': full_data[uid]['reference_summary'], 'uid': full_data[uid]['uid']}
+        data_expanded.append(data_point)
+
+    np.random.shuffle(data_expanded)
+    split_percentage = 0.8  
+    split_index = int(len(data_expanded) * split_percentage)
+
+    test_data = data_expanded[:split_index]
+    val_data = data_expanded[split_index:]
+
+    if save_retrieved == True:
+        save_path = os.path.join(folder_name, f"test_w_retrieved.json")
+        with open(save_path, 'w') as file:
+            json.dump(test_data, file)
+        print(f"Examples with retreival svaed to {save_path}")
+
+        save_path = os.path.join(folder_name, f"val_w_retrieved.json")
+        with open(save_path, 'w') as file:
+            json.dump(val_data, file)
+        print(f"Examples with retreival svaed to {save_path}")
+
+
+def prompt_preds_legalsumtosdr(data_expanded, 
+                               task_description, 
+                               doc_description, 
+                               answer_description,
+                               model, 
+                               tokenizer,
+                               ):
+    labels = []
+    preds = []
+
+    print_once_flag = 0
+
+    for sample in tqdm(data_expanded):
+
+        sentence = task_description + '\n\n'
+        doc = sample['original_text']
+        sentence = f"""[INST]{sentence}\n\n{doc_description}\n\n"{doc[:]}"\n\n{answer_description}[/INST]\n\nSummary:"""
+
+        #print(sentence)
+
+        # conversion necessary for phi3 model
+        if 'Phi3' in model_name_global:
+            sentence = convert_text_mistral_phi3(sentence)
+            #print(f"messages prompts-->{sentence}\n\n\n\n\n\n\n\n")
+            #print(f"len(sentence)-->{len(sentence)}")
+            #print(f"messages prompts-->{sentence[:200]}\n\n\n\n\n\n\n\n")
+        
+        labels.append(sample["reference_summary"])
+
+        encoded_inputs = tokenizer(sentence[:], return_tensors="pt", return_attention_mask=True).to('cuda')
+        #print(f"len(prompt)-->{len(prompt)}")
+            
+        prompt_length = encoded_inputs['input_ids'][0].shape[0]
+        #print(f"prompt_length in tokens-->{prompt_length}")
+        with torch.inference_mode():
+            output = model.generate(encoded_inputs['input_ids'], 
+                                    attention_mask=encoded_inputs['attention_mask'], 
+                                    pad_token_id=tokenizer.eos_token_id, 
+                                    max_new_tokens=50,
+                                    do_sample=True,
+                                    num_beams = 3
+                                    )
+            
+        # Decode only the newly generated tokens
+        # Skip the input tokens by starting the slice at input_length
+        new_tokens = output[0, prompt_length:]
+
+        if print_once_flag == 0:
+            print(f"INFERENCE LEGAL SUM TOSDR-->{tokenizer.decode(output[0])}")
+            print(f"sample['reference_summary/short']-->{sample['reference_summary']}")
+            print_once_flag = 1
+
+        pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
+        preds.append(pred)
+
+    return labels, preds 
+
 
 # function to extract yes or no from the generated string
 def extract_yes_no_after_answer(s):
@@ -2159,7 +2274,8 @@ def eval_pop(population,
              task_w_oracle_spans = False, # contract nli only
              task_w_full_contract = True, # contract nli only
              task_w_2_labels = True, # contract nli only
-             ): 
+             ):
+    
     prompts = population['prompts_dict']
     task = population['task']
 
@@ -2412,7 +2528,7 @@ def eval_pop(population,
             rouge_2 = rouge_scores['rouge2']
             rouge_L = rouge_scores['rougeL']
             print(f"\n\n LEXSUM SUM SCORE ROUGE_1-->{rouge_1}")
-            score = (rouge_1 + rouge_2 + rouge_L)/3
+            score = rouge_1
             population['eval'].append(score)
 
             if save_test_predictions == True:
@@ -2420,6 +2536,30 @@ def eval_pop(population,
                 bertscore = load("bertscore")
                 bert_scores = bertscore.compute(predictions=predictions, references=labels, lang="en")
                 rouge_scores.update(bert_scores)
+
+            population['full_eval'].append(rouge_scores)
+    
+    elif task == 'LegalSumTOSDR':
+        population['full_eval'] = []
+        tt = 0
+        for i in tqdm(range(n_pop), desc = f"Evaluating prompt population"):
+            tt+=1
+            #print(f"ttt 1--->{tt}")
+            labels, predictions = prompt_preds_legalsumtosdr(data_expanded[:n_samples], 
+                                                         task_description = prompts['task_description'][population['prompts'][i]['task_description']], 
+                                                         doc_description = prompts['doc_description'][population['prompts'][i]['doc_description']],
+                                                         answer_description =  prompts['answer_description'][population['prompts'][i]['answer_description']],
+                                                         model=model,
+                                                         tokenizer=tokenizer,
+                                                         )
+            
+            #print(f"antes da eval{tt}")
+            rouge_scores, rouge_1 = compute_rouge_scores(references=labels, predictions=predictions)
+            rouge_2 = rouge_scores['rouge2']
+            rouge_L = rouge_scores['rougeL']
+            print(f"\n\n LEXSUM SUM SCORE ROUGE_1-->{rouge_1}")
+            score = (rouge_1 + rouge_2 + rouge_L)/3
+            population['eval'].append(score)
 
             population['full_eval'].append(rouge_scores)
 
@@ -2549,7 +2689,7 @@ def create_root_folder(task,
             folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}_use_dq_data{use_data_sorted_by_dq}")
         elif task == 'ContractNLI':
             folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}")
-        elif task == 'MEDIQASUM' or task == 'LEXSUM':
+        elif task == 'MEDIQASUM' or task == 'LEXSUM' or task == 'LegalSumTOSDR':
             folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}")  
         elif task == 'hyper_crossover' or task == 'hyper_mutation':
             folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}")
@@ -2612,7 +2752,7 @@ def save_population(iteration, population, root_folder, keep_list):
                 file.write(f"{item}\n")
 
     # save more metrics for contractnli task to trakc possible problem
-    if population['task'] == 'MEDIQASUM':
+    if population['task'] == 'MEDIQASUM' or population['task'] == 'LEXSUM' or population['task'] == 'LegalSumTOSDR':
         # Save the additional list in a separate .txt file
         additional_file_path = os.path.join(iteration_folder, "full_eval.txt")
         with open(additional_file_path, 'w') as file:
@@ -2794,7 +2934,7 @@ def sort_pop(pop):
         population['f1_scores'] = sorted_f1_scores
         population['confusion_matrix'] = sorted_confusion_matrix
 
-    if population['task'] == 'MEDIQASUM':
+    if population['task'] == 'MEDIQASUM' or population['task'] == 'LEXSUM' or population['task'] == 'LegalSumTOSDR':
         full_scores = population['full_eval']
         sorted_full_scores = [full_scores[i] for i in sorted_indices if i < len(full_scores)]
         population['full_eval'] = sorted_full_scores
@@ -2840,7 +2980,7 @@ def pop_selection(population, # population (dictionary with keys: prompts and ev
         #print(f"pop['f1_scores']-->{pop['f1_scores']}")
         #print(f"pop['confusion_matrix']-->{pop['confusion_matrix']}")
     
-    if pop['task'] == 'MEDIQASUM':
+    if pop['task'] == 'MEDIQASUM' or pop['task'] == 'LEXSUM' or pop['task'] == 'LegalSumTOSDR':
         sorted_full_scores = sorted_pop['full_eval']
         keep_full_scores = [sorted_full_scores[i] for i in keep_list]
         pop['full_eval'] = keep_full_scores
@@ -2972,7 +3112,7 @@ def combine_populations(pop_1, pop_2):
         combined_pop['f1_scores'] += pop_2['f1_scores']
         combined_pop['confusion_matrix'] += pop_2['confusion_matrix']
     
-    if pop_1['task'] == 'MEDIQASUM':
+    if pop_1['task'] == 'MEDIQASUM' or pop_1['task'] == 'LEXSUM' or pop_1['task'] == 'LegalSumTOSDR':
         combined_pop['full_eval'] += pop_2['full_eval']
 
     # Calculate the size of prompts_dict for each key to correctly adjust indices
@@ -3104,6 +3244,8 @@ def test_eval(task,
     elif task == "LEXSUM":
         data_expanded = extract_LEXSUM_data(type = 'test')
         save_test_predictions = True
+    elif task == "LegalSumTOSDR":
+        data_expanded = extract_LegalSumTOSDR_data(type = 'test')
 
     # criar pop e avaliar
     best_pop = create_population(task, best_prompts, initial = True,
@@ -3143,7 +3285,7 @@ def test_eval(task,
             file.write(f"Acc score: {score}\n")
             file.write(f"F1 scores: {f1_scores}\n")
             file.write(f"Confusion matrix: {confusion_matrix}\n")
-        elif task == 'MEDIQASUM' or task == 'LEXSUM' :
+        elif task == 'MEDIQASUM' or task == 'LEXSUM' or task == 'LegalSumTOSDR' :
             full_scores = best_pop['full_eval']
             file.write(f"Full scores: {full_scores}\n")
 
@@ -3443,11 +3585,11 @@ def evo_alg_2(task,
         else:
             sys.exit('Task not Defined with DQ file!')
 
-    # check label dist
-    dq_labels = []
-    for data in data_expanded:
-        dq_labels.append(data['label'])
-    print(Counter(dq_labels))
+        # check label dist
+        dq_labels = []
+        for data in data_expanded:
+            dq_labels.append(data['label'])
+        print(Counter(dq_labels))
 
     # normal data size adjustment
     if data_size <= 0:
@@ -4512,6 +4654,10 @@ def create_plots_from_RUNS_folder(directory_path):
         ymin = 0.25
         ymax = 0.55
         score = 'Rouge-1 F1'
+    elif 'LegalSumTOSDR' in directory_path:
+        ymin = 0.25
+        ymax = 0.55
+        score = 'Agg Score'
     else:
         print(f"Incorrect task name")
         return None

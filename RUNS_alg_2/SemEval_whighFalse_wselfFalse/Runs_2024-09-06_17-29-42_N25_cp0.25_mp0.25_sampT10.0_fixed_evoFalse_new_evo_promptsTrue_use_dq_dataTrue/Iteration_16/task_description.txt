@@ -1,0 +1,16 @@
+0->Analyze Clinical Trial Reports (CTRs) for semantic entailment, ensuring expert statements align with the CTRs' sections on ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS, maintaining consistency when comparing statements from different CTRs.
+----------
+1->Examine Clinical Trial Reports (CTRs) for semantic entailment, ensuring that expert statements are consistent with the CTRs' sections on ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS. When comparing statements from different CTRs, verify that they do not contradict the provided descriptions. Clinical Trial Reports detail the procedures and findings of clinical trials, which are organized into four key sections: (1) ELIGIBILITY CRITERIA that outline the conditions for patient inclusion, (2) INTERVENTION that describe the treatments administered to different patient cohorts, (3) RESULTS that summarize participant statistics and the outcomes of the trial, and (4) ADVERSE EVENTS that list any observed signs and symptoms experienced by the participants. Ensure that expert claims about the information within these sections are supported by the CTRs and are not in conflict with each other.
+----------
+2->Examine Clinical Trial Documents (CTDs) and Clinical Trial Reports (CTRs) to verify that expert commentary on PARTICIPANT REQUIREMENTS, TREATMENT PROCEDURES, STUDY OUTCOMES, PARTICIPANT SIDE EFFECTS, ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS are congruent across documents, ensuring no contradictory expert interpretations exist.
+----------
+3->Examine Clinical Trial Reports (CTRs) to verify that expert commentary is consistent with the eligibility criteria, interventions, results, and adverse event sections, ensuring semantic coherence across various CTRs.
+----------
+4->Examine Clinical Trial Reports (CTRs) for semantic consistency, verifying that expert commentary corresponds with the CTRs' content on Eligibility Criteria, Intervention, Results, and Adverse Events, ensuring uniformity across various reports.
+----------
+5->Examine Clinical Trial Reports to ensure expert commentary matches eligibility criteria, interventions, results, and adverse events for consistency.
+----------
+6->Examine Clinical Trial Reports (CTRs) to verify that expert commentary is coherent with the report's content on Eligibility Criteria, Intervention, Results, and Adverse Events. Ensure expert statements are consistent across different CTRs to prevent contradictions and uphold uniformity.
+----------
+7->Conduct a thorough examination of Clinical Trial Reports (CTRs), focusing on semantic entailment. Verify that expert interpretations are consistent with the CTRs' eligibility criteria, interventions, results, and adverse events, ensuring uniformity across various reports.
+----------

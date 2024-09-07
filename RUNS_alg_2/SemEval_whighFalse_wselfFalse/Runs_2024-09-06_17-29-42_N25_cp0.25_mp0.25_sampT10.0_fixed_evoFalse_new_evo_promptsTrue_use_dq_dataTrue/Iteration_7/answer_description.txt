@@ -1,0 +1,16 @@
+0->Evaluate the accuracy of the given statement by comparing it with the content of the Clinical Trial (CTR) descriptions. Interpret the medical terminology and context within both the report and the statement, scrutinize any numerical data and qualifiers, and resolve any uncertainties or missing details. Conclude with a definitive YES or NO to affirm or negate the statement's validity.
+----------
+1->Assess the statement's validity by contrasting it with the Clinical Trial (CTR) descriptions, interpreting medical terms and context, examining numerical data and qualifiers, and resolving uncertainties or omissions. Provide a conclusive YES or NO verdict on the statement's accuracy.
+----------
+2->Carefully compare the provided Clinical Trial (CTR) descriptions with the accompanying statement. Ensure the medical terminology, context, numerical data, and qualifiers are consistent and complete. Resolve any ambiguities or information gaps. Confirm if the statement accurately represents the Clinical Trial descriptions. Respond with a definitive YES if the statement is accurate, or NO if it is not.
+----------
+3->Carefully assess the provided statement's correctness by juxtaposing it with the specifics outlined in the Clinical Trial (CTR) documentation. Decode the medical jargon and situational context present in both the document and the statement, meticulously examine all numerical figures and qualifiers, and address any ambiguities or absent information. Conclude with a definitive YES or NO to affirm the statement's accuracy.
+----------
+4->Evaluate the accuracy of the provided statement by comparing it with the specifics outlined in the Clinical Trial (CTR) documentation. Carefully interpret the medical terminology and context, scrutinize the numerical data and qualifiers, and address any ambiguities or missing information. Conclude with a definitive YES or NO to affirm the statement's correctness.
+----------
+5->"Carefully analyze the provided statement against the specifics outlined in the Clinical Trial (CTR) documentation. Decode the medical jargon and situational context present in both the CTR and the statement. Examine all numerical figures and descriptive qualifiers meticulously, and address any ambiguities or gaps in information. Deliver a conclusive verdict of 'YES' if the statement aligns with the CTR details, or 'NO' if there is a discrepancy."
+
+RESULT OF REPHRASED INSTRUCTION:
+
+The rephrased instruction is now clear, actionable, and devoid of ambiguities. It directs the evaluator to perform a detailed comparison between the statement and the Clinical Trial (CTR) documentation, focusing on medical terminology, context, numerical data, and qualifiers. The evaluator is instructed to resolve any uncertainties or missing details before providing a conclusive 'YES' or 'NO' to affirm or negate the statement's validity.
+----------

@@ -1,0 +1,10 @@
+0->Evaluate the accuracy of the given statement by comparing it with the content of the Clinical Trial (CTR) descriptions. Interpret the medical terminology and context within both the report and the statement, scrutinize any numerical data and qualifiers, and resolve any uncertainties or missing details. Conclude with a definitive YES or NO to affirm or negate the statement's validity.
+----------
+1->Assess the statement's validity by contrasting it with the Clinical Trial (CTR) descriptions, interpreting medical terms and context, examining numerical data and qualifiers, and resolving uncertainties or omissions. Provide a conclusive YES or NO verdict on the statement's accuracy.
+----------
+2->Evaluate the statement against Clinical Trial (CTR) descriptions, focusing on medical terminology and context, numerical data, and qualifiers. Resolve any ambiguities or gaps, and conclude with a clear YES or NO on the statement's validity.
+----------
+3->Evaluate the statement against Clinical Trial (CTR) descriptions, focusing on medical terminology, numerical data, and qualifiers. Resolve any ambiguities or missing information. Provide a conclusive YES or NO on the statement's correctness.
+----------
+4->Analyze the provided text against established Clinical Trial (CTR) protocols, scrutinizing medical jargon, situational context, quantitative figures, and modifiers. Resolve ambiguities or gaps to ascertain the text's precision. End with a conclusive affirmation or negation.
+----------

@@ -1,0 +1,14 @@
+0->Evaluate the accuracy of the given statement by comparing it with the content of the Clinical Trial (CTR) descriptions. Interpret the medical terminology and context within both the report and the statement, scrutinize any numerical data and qualifiers, and resolve any uncertainties or missing details. Conclude with a definitive YES or NO to affirm or negate the statement's validity.
+----------
+1->Assess the statement's validity by contrasting it with the Clinical Trial (CTR) descriptions, interpreting medical terms and context, examining numerical data and qualifiers, and resolving uncertainties or omissions. Provide a conclusive YES or NO verdict on the statement's accuracy.
+----------
+2->Carefully evaluate the provided statement's accuracy by cross-referencing it with the specifics detailed in the Clinical Trial (CTR) documentation. Interpret the medical terminology and context, meticulously analyze the numerical data and qualifiers, and resolve any ambiguities or omissions. Conclude with a definitive YES or NO to confirm the statement's correctness.
+----------
+3->Carefully assess the provided statement's correctness by juxtaposing it with the specifics outlined in the Clinical Trial (CTR) documentation. Decode the medical jargon and situational context present in both the document and the statement, meticulously examine all numerical figures and qualifiers, and address any ambiguities or absent information. Conclude with a definitive YES or NO to affirm the statement's accuracy.
+----------
+4->Examine the given Clinical Trial (CTR) descriptions and the corresponding summary statement. Verify that the medical terminology, context, numerical data, and qualifiers in the summary align precisely with those in the CTR descriptions. Rectify any inconsistencies or missing information. Determine whether the summary statement correctly encapsulates the essence of the CTR descriptions. Provide a clear "YES" if the summary is an accurate reflection, or "NO" if it fails to do so.
+
+RESULT OF REPHRASED INSTRUCTION:
+
+YES
+----------

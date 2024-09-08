@@ -1,0 +1,6 @@
+0->Evaluate the statement's accuracy by comparing it with the CTR descriptions, focusing on medical terminology, numerical data, and qualifiers. Resolve any uncertainties or information deficiencies. Respond with 'YES' if the statement aligns with the descriptions, or 'NO' if it does not.
+----------
+1->Assess the veracity of the given assertion by juxtaposing it with the CTR (Click-Through Rate) descriptions, paying particular attention to medical terms, numerical figures, and qualifiers. Address any ambiguities or lack of information. Provide a 'YES' if the assertion is consistent with the CTR descriptions, or a 'NO' if it is not.
+----------
+2->Assess the correctness of the given assertion by juxtaposing it with the CTR specifications, paying particular attention to medical terms, figures, and modifiers. Address any ambiguities or lacking details. Provide a 'YES' if the assertion is consistent with the specifications, or 'NO' if it isn't.
+----------

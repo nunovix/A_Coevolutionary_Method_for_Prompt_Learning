@@ -1,0 +1,6 @@
+0->Carefully review the Clinical Treatment Reports (CTRs) to verify the correctness of the medical statements contained therein. Ensure your assessment is grounded in a solid grasp of medical terminology, takes into account the context of the CTRs, scrutinizes the numerical data presented, and addresses any areas of ambiguity or lack of information. Provide your findings.
+----------
+1->Evaluate the accuracy of the statement in question by meticulously examining the corresponding Clinical Trial (CTR) documentation. Your assessment must encompass an understanding of medical terminology, contextual relevance, numerical precision, and address any ambiguities or lack of information. Conclude with a definitive 
+----------
+2->Assess the validity of the claim by comparing it with the pertinent information from the clinical trial documentation. Deliver a conclusive response as YES if the claim corresponds with the document's results, or NO if there is a discrep0pancy.
+----------

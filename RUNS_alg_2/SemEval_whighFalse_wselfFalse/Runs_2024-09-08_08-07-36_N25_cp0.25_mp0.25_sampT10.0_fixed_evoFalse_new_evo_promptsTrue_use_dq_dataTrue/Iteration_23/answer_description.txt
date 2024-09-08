@@ -1,0 +1,8 @@
+0->Assess the correctness of the given assertion by juxtaposing it with the CTR specifications, paying particular attention to medical terms, figures, and modifiers. Address any ambiguities or lacking details. Provide a 'YES' if the assertion is consistent with the specifications, or 'NO' if it isn't.
+----------
+1->Evaluate the assertion's alignment with CTR guidelines, focusing on medical terminology, numerical data, and qualifiers. Resolve uncertainties or insufficient information. Respond with 'YES' for compliance or 'NO' for non-compliance.
+----------
+2->Evaluate the statement's compliance with Clinical Trial Reporting (CTR) guidelines, focusing on the accuracy of medical terms, precision of numerical values, and appropriate use of qualifiers. Identify any areas of vagueness or missing information. Provide a 'YES' if the statement aligns with CTR standards, or 'NO' if it falls short. Your critique should be thorough, pinpointing any ambiguities or deficiencies that could hinder specialists from carrying out the task effectively.
+----------
+3->Evaluate the assertion's alignment with CTR guidelines, focusing on medical terminology, numerical data, and qualifiers. Resolve any uncertainties or insufficient information. Respond with 'YES' for compliance or 'NO' for non-compliance.
+----------

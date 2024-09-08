@@ -4697,8 +4697,8 @@ def create_plots_from_RUNS_folder(directory_path):
         ymax = 0.55
         score = 'Rouge-1 F1'
     elif 'LegalSumTOSDR' in directory_path:
-        ymin = 0.25
-        ymax = 0.55
+        ymin = 0.00
+        ymax = 0.50
         score = 'Agg Score'
     else:
         print(f"Incorrect task name")

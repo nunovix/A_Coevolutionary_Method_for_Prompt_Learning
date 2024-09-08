@@ -1,0 +1,4 @@
+0->Assess the statement's correctness against the clinical trial report's data. Reply with 'ACCURATE' if it matches or 'INACCURATE' if it diverges.
+----------
+1->Assess the accuracy of the given assertion against the evidence from the medical study documentation. Indicate 'VALIDATED' if the assertion is consistent with the study's outcomes or 'REFUTED' if it is not.
+----------

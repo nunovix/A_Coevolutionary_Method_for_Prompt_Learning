@@ -1,0 +1,6 @@
+0->Evaluate the accuracy of the given statement against the specifics of the Clinical Trial (CTR) descriptions. Scrutinize the medical terminology, context, numerical data, and potential uncertainties in both the report and the statement. Provide a conclusive 'YES' or 'NO' to confirm if the statement precisely mirrors the content of the CTR descriptions.
+----------
+1->Carefully compare the provided statement with the detailed content of the Clinical Trial (CTR) descriptions. Examine the medical terminology, context, numerical data, and any uncertainties present in both the statement and the CTR documentation. Determine whether the statement accurately reflects the information contained within the CTR descriptions. Respond with a definitive 'YES' if the statement is an exact match, or 'NO' if there are discrepancies.
+----------
+2->Assess the statement's fidelity to the Clinical Trial (CTR) details, focusing on medical terms, context, figures, and uncertainties. Conclude with 'YES' or 'NO' if the statement accurately reflects the CTR content.
+----------

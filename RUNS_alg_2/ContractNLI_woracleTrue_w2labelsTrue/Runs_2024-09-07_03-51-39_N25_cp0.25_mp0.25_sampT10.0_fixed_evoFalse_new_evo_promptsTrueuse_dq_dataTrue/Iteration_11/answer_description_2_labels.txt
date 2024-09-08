@@ -1,0 +1,14 @@
+0->Determine if the statement complies with the Non-Disclosure Agreement terms. Respond YES for compliance, NO for non-compliance.
+----------
+1->Assess whether the legal assertion complies with the confidentiality terms outlined in the Non-Disclosure Agreement and indicate compliance with a 'YES' or non-compliance with a 'NO'.
+----------
+2->Evaluate whether the statement adheres to the stipulations of the Non-Disclosure Agreement (NDA). Assess the statement's validity in the context of the NDA. Indicate compliance with a 'YES' and non-compliance with a 'NO'. If the statement is found to be in violation of the NDA, provide a brief justification for the non-compliance based on the specific terms of the NDA.
+----------
+3->Determine the compliance of the statement with the Non-Disclosure Agreement and assess its validity based on the NDA. Provide a YES or NO for both compliance and validity.
+----------
+4->Evaluate the provided statement for adherence to the Non-Disclosure Agreement's confidentiality and privacy clauses. Indicate compliance with a 'YES' or non-compliance with a 'NO'. 
+----------
+5->Evaluate the given statement or legal assertion to ascertain if it adheres to the confidentiality obligations stipulated in the Non-Disclosure Agreement. Provide a 'YES' if it is in compliance, or a 'NO' if it breaches the agreement.
+----------
+6->Evaluate the statement's alignment with the confidentiality obligations outlined in the Non-Disclosure Agreement. Ascertain whether the statement is in compliance ('YES') or violates ('NO') the agreement's terms regarding non-disclosure.
+----------

@@ -1241,7 +1241,7 @@ def prompt_preds_contractnli_span(data_expanded,
         #torch.cuda.empty_cache()
         labels.append(sample["label"])
 
-        # cache part of input that does not change from prompt to prompt
+        """# cache part of input that does not change from prompt to prompt
         if prompt_wo_statement_text == cached_text:
             #print(f"EQUAL EQUAL EQUAL")
             pass
@@ -1251,7 +1251,7 @@ def prompt_preds_contractnli_span(data_expanded,
             cached = tokenizer.encode(cached_text, return_tensors="pt")
             with torch.inference_mode():
                 cached_outputs = model(cached, return_dict=True,)
-            cached_outputs.past_key_values = [[y[:, :, :-1] for y in x] for x in cached_outputs.past_key_values]
+            cached_outputs.past_key_values = [[y[:, :, :-1] for y in x] for x in cached_outputs.past_key_values]"""
 
         encoded_inputs = tokenizer(prompt_text, return_tensors="pt", return_attention_mask=True).to('cuda')
 
@@ -1260,10 +1260,10 @@ def prompt_preds_contractnli_span(data_expanded,
         with torch.inference_mode():
             output = model.generate(encoded_inputs['input_ids'], 
                                     attention_mask=encoded_inputs['attention_mask'],
-                                    past_key_values=cached_outputs.past_key_values, 
-                                pad_token_id=tokenizer.eos_token_id, 
-                                max_new_tokens=6, use_cache=True,
-                                prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
+                                    #past_key_values=cached_outputs.past_key_values, 
+                                    pad_token_id=tokenizer.eos_token_id, 
+                                    max_new_tokens=2,
+                                    prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
 
         # Decode only the newly generated tokens
         # Skip the input tokens by starting the slice at input_length
@@ -1274,8 +1274,10 @@ def prompt_preds_contractnli_span(data_expanded,
             print(f"sample['label']-->{sample['label']}")
             print_once_flag = 1
         pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
-        #print(f"pred-->{pred}")
+        #print(f"INFERENCE CONTRACTNLI-->{tokenizer.decode(output[0])}")
         #print(f"sample['label']-->{sample['label']}")
+        print(f"pred-->{pred}")
+        print(f"sample['label']-->{sample['label']}")
 
         preds.append(pred)
 
@@ -1776,8 +1778,8 @@ def prompt_preds_legalsumtosdr(data_expanded,
         new_tokens = output[0, prompt_length:]
 
         if print_once_flag == 0:
-            print(f"INFERENCE LEGAL SUM TOSDR-->{tokenizer.decode(output[0])}")
-            print(f"sample['reference_summary/short']-->{sample['reference_summary']}")
+            #print(f"INFERENCE LEGAL SUM TOSDR-->{tokenizer.decode(output[0])}")
+            #print(f"sample['reference_summary/short']-->{sample['reference_summary']}")
             print_once_flag = 1
 
         pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
@@ -1967,6 +1969,21 @@ def new_mutate_prompt(prompt,
 
     mutated = mutated.lstrip()
 
+    # Look for pairs of double or single quotes
+    match = re.search(r'["\'](.*?)["\']', mutated)
+    if match:
+        # Get the content between the quotes
+        content_between_quotes = match.group(1)
+        
+        # Count the words in the content
+        word_count = len(content_between_quotes.split())
+
+        # If more than 5 words, return content between quotes, otherwise return original string
+        if word_count > 3:
+            mutated = content_between_quotes
+
+    #print(f"mutated-->{mutated}")
+
     if mutated.startswith('"') and mutated.endswith('"'):
         # Remove the quotes
         return mutated[1:-1]
@@ -2055,10 +2072,24 @@ def new_crossover_prompts(prompt_1, prompt_2, combination_prompt_dict, model, to
 
     combined = combined.lstrip()
 
+    # Look for pairs of double or single quotes
+    match = re.search(r'["\'](.*?)["\']', combined)
+    if match:
+        # Get the content between the quotes
+        content_between_quotes = match.group(1)
+        
+        # Count the words in the content
+        word_count = len(content_between_quotes.split())
+
+        # If more than 5 words, return content between quotes, otherwise return original string
+        if word_count > 3:
+            combined = content_between_quotes
+
     if combined.startswith('"') and combined.endswith('"'):
         # Remove the quotes
         return combined[1:-1]
 
+    #print(f"combined-->{combined}")
     return combined
 
 # used to limit decoding options
@@ -3576,11 +3607,22 @@ def evo_alg_2(task,
                 if data['label'] == 'Entailment' and ent_num < per_label_size:
                     balanced_data.append(data)
                     ent_num+=1
-
                 elif data['label'] == 'Contradiction' and cont_num < per_label_size:
                     balanced_data.append(data)
                     cont_num+=1
-
+            data_expanded = balanced_data
+        elif task == 'ContractNLI':
+            ent_label_size = 519
+            cont_label_size = 95
+            ent_num = 0
+            cont_num = 0
+            for data in data_expanded:
+                if data['label'] == 'Entailment' and ent_num < ent_label_size:
+                    balanced_data.append(data)
+                    ent_num+=1
+                elif data['label'] == 'Contradiction' and cont_num < cont_label_size:
+                    balanced_data.append(data)
+                    cont_num+=1
             data_expanded = balanced_data
         else:
             sys.exit('Task not Defined with DQ file!')

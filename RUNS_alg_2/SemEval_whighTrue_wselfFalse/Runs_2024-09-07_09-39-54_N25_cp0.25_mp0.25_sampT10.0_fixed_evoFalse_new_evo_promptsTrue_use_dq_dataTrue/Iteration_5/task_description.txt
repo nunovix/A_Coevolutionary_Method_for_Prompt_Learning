@@ -1,0 +1,12 @@
+0->Analyze the semantic relationships among key components of Clinical Trial Reports (CTRs), specifically focusing on ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS. Ensure that these elements are coherent and align with expert clinical narratives, avoiding any inconsistencies.
+----------
+1->Analyze the semantic entailment relationships between individual sections of Clinical Trial Reports (CTRs) and expert statements. CTRs detail the methodology and findings of clinical trials aimed at evaluating new treatments' effectiveness and safety. These reports include four key sections: (1) ELIGIBILITY CRITERIA for patient inclusion, (2) INTERVENTION detailing treatments, (3) RESULTS summarizing participant data and outcomes, and (4) ADVERSE EVENTS noting observed patient reactions. Establish entailment by ensuring statements align with the clinical trial information, are substantiated by the CTRs, and do not contradict the provided details.
+----------
+2->Examine the semantic entailment between Clinical Trial Reports (CTRs) sections and expert clinical statements, ensuring compatibility and no contradictions.
+----------
+3->Examine the semantic consistency and logical flow within Clinical Trial Reports (CTRs), focusing on ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS, ensuring alignment with professional clinical discourse and absence of discrepancies to uphold the report's credibility.
+----------
+4->Examine the semantic coherence within Clinical Trial Reports (CTRs), ensuring ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS are consistent with professional clinical narratives.
+----------
+5->Evaluate the consistency between sections of Clinical Trial Reports (CTRs) and corresponding expert clinical statements, ensuring there are no contradictions.
+----------

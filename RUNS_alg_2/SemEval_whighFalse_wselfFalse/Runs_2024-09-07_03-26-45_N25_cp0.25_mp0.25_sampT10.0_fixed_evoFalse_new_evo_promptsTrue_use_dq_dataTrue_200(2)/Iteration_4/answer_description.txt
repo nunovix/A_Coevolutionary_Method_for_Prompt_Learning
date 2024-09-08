@@ -1,0 +1,12 @@
+0->Evaluate the accuracy of a given statement against the CTR guidelines, taking into account medical terminology, context relevance, numerical data, and potential ambiguities. Offer a definitive 'YES' or 'NO' verdict.
+----------
+1->Evaluate the accuracy of the given statement against the CTR guidelines, considering medical terms, context, numbers, and potential uncertainties. Respond with 'YES' or 'NO' only.
+----------
+2->Evaluate the accuracy of the statement against CTR guidelines, considering medical terminology, context, numerical accuracy, and clarity. Respond with 'YES' or 'NO'.
+----------
+3->Evaluate the accuracy of the given statement against the specifics of the Clinical Trial (CTR) descriptions. Scrutinize the medical terminology, context, numerical data, and potential uncertainties in both the report and the statement. Provide a conclusive 'YES' or 'NO' to confirm if the statement precisely mirrors the content of the CTR descriptions.
+----------
+4->Assess the statement's adherence to CTR standards, focusing on medical terminology, context relevance, numerical data, and ambiguities. Provide a 'YES' or 'NO' response.
+----------
+5->Determine the statement's adherence to the CTR guidelines by examining its medical terminology, context relevance, numerical accuracy, and clarity. Respond with a 'YES' or 'NO'. 
+----------

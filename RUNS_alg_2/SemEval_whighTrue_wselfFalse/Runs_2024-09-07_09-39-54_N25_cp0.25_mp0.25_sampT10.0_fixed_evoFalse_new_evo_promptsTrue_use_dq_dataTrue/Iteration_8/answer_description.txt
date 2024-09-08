@@ -1,0 +1,6 @@
+0->Assess the statement's correctness against the clinical trial report's data. Reply with 'ACCURATE' if it matches or 'INACCURATE' if it diverges.
+----------
+1->Evaluate the statement's alignment with the clinical trial report's findings. Respond with 'CONSISTENT' if it aligns or 'DISCONSISTENT' if it does not.
+----------
+2->Evaluate the veracity of the provided statement in relation to the data presented in the clinical trial report. Respond with 'CONFIRMED' if the statement aligns with the report's findings or 'CONTRADICTED' if it does not.
+----------

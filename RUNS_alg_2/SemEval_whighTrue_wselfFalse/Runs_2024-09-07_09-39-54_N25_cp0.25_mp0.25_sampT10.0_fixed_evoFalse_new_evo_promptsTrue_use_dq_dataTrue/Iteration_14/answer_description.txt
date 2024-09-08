@@ -1,0 +1,6 @@
+0->Assess the statement's correctness against the clinical trial report's data. Reply with 'ACCURATE' if it matches or 'INACCURATE' if it diverges.
+----------
+1->Evaluate the veracity of the claim in relation to the findings presented in the clinical trial documentation. Respond with 'VALID' if the claim aligns or 'DISCREPANCY' if there is a discrepancy.
+----------
+2->Evaluate the veracity of the provided statement in relation to the data presented in the clinical trial report. Respond with 'ACCURATE' if the statement aligns with the report's findings or 'INACCURATE' if there is a discrep0pancy.
+----------

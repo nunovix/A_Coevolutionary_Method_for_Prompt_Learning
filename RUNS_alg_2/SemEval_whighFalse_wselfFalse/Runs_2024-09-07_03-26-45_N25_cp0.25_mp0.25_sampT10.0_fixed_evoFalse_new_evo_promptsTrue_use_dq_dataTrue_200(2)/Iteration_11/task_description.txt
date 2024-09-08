@@ -1,0 +1,36 @@
+0->Your task is determining the support of clinical statements from individual sections of Clinical Trial Reports (CTRs). CTRs detail the methodology and findings of clinical trials, assessing effectiveness and safety of new treatments. CTRs consist of 4 sections: (1) ELIGIBILITY CRITERIA listing conditions for patient participation, (2) INTERVENTION description specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary detailing participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing unexpected signs and symptoms. Statements make claims about information in these sections, either for a single CTR or comparing two.
+----------
+1->Examine the semantic entailment relationships between individual sections of Clinical Trial Reports (CTRs) and expert-articulated statements, ensuring compatibility and non-contradiction with the clinical trial data. CTRs contain four key sections: (1) ELIGIBILITY CRITERIA for patient inclusion, (2) INTERVENTION detailing treatments, (3) RESULTS summarizing participant statistics and outcomes, and (4) ADVERSE EVENTS listing observed signs and symptoms. Assess whether expert statements align with or contradict the information in these sections for a single CTR or when comparing two CTRs.
+----------
+2->Analyze clinical trial reports (CTRs), which include four key sections: (1) ELIGIBILITY CRITERIA, (2) INTERVENTION, (3) RESULTS, and (4) ADVERSE EVENTS. Determine if expert statements are semantically entailed by the information in these sections, ensuring no contradictions are present.
+----------
+3->"Conduct a thorough analysis of Clinical Trial Reports (CTRs), focusing on four critical sections: (1) ELIGIBILITY CRITERIA, (2) INTERVENTION, (3) RESULTS, and (4) ADVERSE EVENTS. Your objective is to validate expert statements by ensuring they are semantically consistent with the information presented in these sections. No contradictions should exist between the statements and the CTR content. This process involves evaluating the methodology and findings of clinical trials to assess the effectiveness and safety of new treatments. The CTRs provide a comprehensive overview of the trial, with each section serving a specific purpose:
+
+1. ELIGIBILITY CRITERIA: This section lists the conditions that qualify patients for participation in the trial. It's crucial to understand the target demographic to ensure the results are applicable to the intended population.
+
+2. INTERVENTION: Here, the type, dosage, frequency, and duration of the treatments administered during the trial are detailed. This information is vital for replicating the study or comparing it with other trials.
+
+3. RESULTS: This section summarizes the participants, the outcome measures used, the units of measurement, and the conclusions drawn from the trial. It
+----------
+4->Analyze Clinical Trial Reports (CTRs) with a focus on four key sections: (1) ELIGIBILITY CRITERIA, (2) INTERVENTION, (3) RESULTS, and (4) ADVERSE EVENTS. Ensure that expert statements are semantically consistent with the information in these sections. Validate the methodology and findings to assess the effectiveness and safety of new treatments. Understand the target demographic from the ELIGIBILITY CRITERIA, replicate the study or compare it with other trials using the INTERVENTION details, summarize participants, outcome measures, and conclusions from the RESULTS, and note any unexpected signs or symptoms from the ADVERSE EVENTS.
+----------
+5->Examine Clinical Trial Reports (CTRs) focusing on ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS. Confirm that expert interpretations align with these sections to evaluate treatment efficacy and safety. Determine the target population from ELIGIBILITY CRITERIA, replicate or compare INTERVENTIONS, summarize outcomes and conclusions from RESULTS, and document any unusual adverse events.
+----------
+6->"Conduct a comprehensive analysis of Clinical Trial Reports (CTRs), focusing on four critical sections: (1) Participant Selection Criteria, (2) Treatment Protocol, (3) Study Findings, and (4) Safety Observations. Your objective is to validate expert assertions by ensuring they are semantically consistent with the information presented in these sections. No contradictions should exist between the statements and the CTR content. This process involves evaluating the methodology and findings of clinical trials to assess the effectiveness and safety of new treatments. The CTRs provide a comprehensive overview of the trial, with each section serving a specific purpose:
+
+1. Participant Selection Criteria: Identify the specific health conditions that make patients eligible for the study to ensure the results are pertinent to the target population.
+
+2. Treatment Protocol: Evaluate the nature, dosage, frequency, and length of the interventions administered during the trial, which is essential for reproducing the study or for comparative analysis with other trials.
+
+3. Study Findings: Compile details about the participants, the metrics used to measure outcomes, and the interpretations of the trial's results.
+
+4. Safety Observations: Record any unforeseen signs, symptoms, or ad
+----------
+7->"Your objective is to critically evaluate Clinical Trial Reports (CTRs), which document the methodology and outcomes of clinical trials aimed at assessing the effectiveness and safety of new treatments. CTRs are structured into four key sections: (1) Eligibility Criteria for Participants, detailing the health conditions that qualify individuals for the study, ensuring relevance to the target demographic; (2) Treatment Details, describing the type, dosage, frequency, and duration of the treatments administered; (3) Summary of Findings, presenting participant demographics, outcome measures, units of measurement, and conclusions drawn from the data; (4) Record of Adverse Events, noting any unexpected signs, symptoms, or adverse reactions observed during the trial to evaluate the treatment's safety profile.
+
+Your task is to verify professional claims by cross-referencing these statements with the corresponding sections of the CTR. A thorough examination of the trial's design and results is imperative to validate the new therapy's efficacy and safety. Each section plays a critical role:
+
+1. Eligibility Criteria: Determine the specific health conditions that qualify patients for the study to ensure the findings are applicable to the intended population.
+
+2. Treatment Details: Assess the
+----------

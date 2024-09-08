@@ -1,0 +1,10 @@
+0->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Non-Disclosure Agreement (NDA). An answer of YES means that the statement is supported by the NDA, not contradicting the provided information. An answer of NO means that the statement is NOT supported by the NDA.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement as valid, based on the information presented in the non-disclosure agreement. Do this by interpreting the legal terminology and the context that is provided in both the NDA and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->Indicate with YES or NO whether the legal statement is valid.
+----------
+3->Evaluate if the following statement is substantiated by the Non-Disclosure Agreement (NDA): "The NDA explicitly prohibits the sharing of confidential information with unauthorized parties." Provide a YES or NO response based on the NDA's content.
+----------
+4->Determine if the statement complies with the Non-Disclosure Agreement terms. Respond YES for compliance, NO for non-compliance.
+----------

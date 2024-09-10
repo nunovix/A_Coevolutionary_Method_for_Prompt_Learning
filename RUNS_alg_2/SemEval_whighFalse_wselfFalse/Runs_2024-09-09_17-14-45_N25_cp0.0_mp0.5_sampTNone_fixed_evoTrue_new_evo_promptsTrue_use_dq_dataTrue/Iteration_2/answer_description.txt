@@ -1,0 +1,10 @@
+0->Confirm if the statement aligns with the findings in the Clinical Trial Report (CTR) by responding with YES or NO.
+----------
+1->Evaluate the accuracy of the given statement against the CTR descriptions, considering medical terms, context, numerical data, and resolving any uncertainties or missing details. Respond with 'YES' or 'NO' only.
+----------
+2->Verify the statement's consistency with the Clinical Trial Report findings; reply with YES or NO.
+----------
+3->Provide a YES or NO response indicating the statement's validity based on the information presented in the CTR descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully assessing numeric quantities and other qualifiers, and addressing any ambiguities or gaps in the provided information.
+----------
+4->s accuracy against the Clinical Trial Report (CTR) details, considering medical terms, context, numerical data, and potential uncertainties. Respond with 
+----------

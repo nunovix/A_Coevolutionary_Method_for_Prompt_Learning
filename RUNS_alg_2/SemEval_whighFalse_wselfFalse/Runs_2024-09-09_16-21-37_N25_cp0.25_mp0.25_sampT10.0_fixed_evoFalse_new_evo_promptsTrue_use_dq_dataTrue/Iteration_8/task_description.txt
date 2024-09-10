@@ -1,0 +1,14 @@
+0->Analyze Clinical Trial Reports (CTRs) to verify claims about eligibility criteria, interventions, results, and adverse events, ensuring accuracy for single or comparative evaluations.
+----------
+1->Examine Clinical Trial Reports (CTRs) to confirm the accuracy of eligibility criteria, interventions, outcomes, and reported adverse events for individual or comparative assessments.
+----------
+2-> effectiveness and safety. Expert statements make assertions about specific CTR sections or compare two CTRs. Validate entailment by ensuring statements are supported by CTR data and do not conflict with the report
+----------
+3->Validate expert claims about CTR sections or comparisons by cross-referencing with CTR data and ensuring no contradictions with the report.
+----------
+4->Evaluate expert commentary on CTR sections for accuracy and consistency with report findings, ensuring no contradictions exist.
+----------
+5->Examine Clinical Trial Reports (CTRs) to ensure eligibility criteria, interventions, outcomes, and adverse events are accurately reported for individual and comparative evaluations.
+----------
+6->Assess the validity of expert claims regarding particular CTR segments or juxtapose two CTR analyses. Confirm that these claims are substantiated by CTR findings and are in harmony with the content of the report.
+----------

@@ -1,0 +1,14 @@
+0->Your objective is to critically evaluate clinical statements derived from Clinical Trial Reports (CTRs), which document the methodology and outcomes of clinical trials aimed at assessing new treatments
+----------
+1->Analyze Clinical Trial Reports (CTRs) to verify claims about eligibility criteria, interventions, results, and adverse events, ensuring accuracy for single or comparative evaluations.
+----------
+2->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs detail the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or making a comparative analysis of two CTRs. For entailment validation, the statement's claim should align with clinical trial information, finding support in the CTR and not contradicting any of the provided descriptions.
+----------
+3->Conduct a thorough examination of Clinical Trial Reports (CTRs) to confirm the validity of stated eligibility criteria, interventions, outcomes, and reported adverse events, facilitating precise single or comparative assessments.
+----------
+4->Critically analyze Clinical Trial Reports (CTRs) to verify claims about eligibility criteria, interventions, results, and adverse events, ensuring accuracy for single or comparative evaluations.
+----------
+5->Critically analyze the methodology and outcomes documented in Clinical Trial Reports (CTRs) to assess the efficacy of new treatments.
+----------
+6->Critically analyze Clinical Trial Reports (CTRs) to ensure the accuracy of claims related to eligibility criteria, interventions, results, and adverse events for both single and comparative evaluations. These reports document the methodology and outcomes of clinical trials focused on assessing new treatments.
+----------

@@ -1,0 +1,8 @@
+0->Now, generate a very concise summary of the provided TOS section using straightforward language. No additional explanations or extra information should be included. Focus on key points like user obligations, service limitations, and important restrictions. Ensure the summary is brief and easy to understand.
+----------
+1->Produce a very brief and clear summary based on the TOS section, restricted to 1 or 2 sentences. Focus on key details such as user obligations, service terms, and restrictions. Do not include any extra content. Ensure the summary is minimal, easy to understand, and accurate.
+----------
+2->Now output only the short summary. Remember to make it very concise and straightforward. It should not be longer than 1-2 sentences.
+----------
+3->Create a very short summary of the TOS section, limited to 1 or 2 sentences. Use informal, straightforward language and include no extra explanations. Focus on what you’re required to do, service limits, and important rules. Keep it brief and easy to get. I you are to refer to the user you can use 'you'
+----------

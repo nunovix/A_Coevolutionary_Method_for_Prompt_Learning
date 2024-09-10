@@ -2590,7 +2590,7 @@ def eval_pop(population,
             rouge_L = rouge_scores['rougeL']
             print(f"\n\n LEXSUM SUM SCORE ROUGE_1-->{rouge_1}")
             score = (rouge_1 + rouge_2 + rouge_L)/3
-            population['eval'].append(score)
+            population['eval'].append(rouge_scores['rouge1'])
 
             population['full_eval'].append(rouge_scores)
 
@@ -3638,6 +3638,13 @@ def evo_alg_2(task,
         pass
     else:
         data_expanded = data_expanded[:data_size]
+    
+    # check label dist
+    if use_data_sorted_by_dq == True and task == 'SemEval':
+        dq_labels = []
+        for data in data_expanded:
+            dq_labels.append(data['label'])
+        print(Counter(dq_labels))
 
     if use_data_sorted_by_dq == True:
         if 'score' in data_expanded[0].keys():
@@ -4699,7 +4706,7 @@ def create_plots_from_RUNS_folder(directory_path):
     elif 'LegalSumTOSDR' in directory_path:
         ymin = 0.00
         ymax = 0.50
-        score = 'Agg Score'
+        score = 'R1'
     else:
         print(f"Incorrect task name")
         return None

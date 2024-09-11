@@ -224,7 +224,10 @@ def extract_lines_to_dict(folder_path, task,
     elif task == 'LEXSUM':
         ordered_filenames = ['task_description', 'example_description', 'doc_description', 'answer_description']
     elif task == 'LegalSumTOSDR':
-        ordered_filenames = ['task_description', 'doc_description', 'answer_description']
+        if task_w_one_shot == False:
+            ordered_filenames = ['task_description', 'doc_description', 'answer_description']
+        else:
+            ordered_filenames = ['task_description', 'doc_description', 'answer_description', 'example_description']
     elif task == 'Evo_prompts':
         ordered_filenames = ['mutation_prompts', 'combination_prompts']
     elif task == 'new_mutation':
@@ -1736,6 +1739,8 @@ def prompt_preds_legalsumtosdr(data_expanded,
                                answer_description,
                                model, 
                                tokenizer,
+                               example_description = '',
+                               task_w_one_shot = False,
                                ):
     labels = []
     preds = []
@@ -1746,7 +1751,13 @@ def prompt_preds_legalsumtosdr(data_expanded,
 
         sentence = task_description + '\n\n'
         doc = sample['original_text']
-        sentence = f"""[INST]{sentence}\n\n{doc_description}\n\n"{doc[:]}"\n\n{answer_description}[/INST]\n\nSummary:"""
+
+        if task_w_one_shot == True and example_description != '' and example_description != ' ':
+            general_example = """Good example: "The service may share your data with third parties for marketing purposes, but you can opt out by changing your settings." \nBad example: "Under this section, the service provider reserves the right to distribute personal data according to its discretion and the provisions of applicable law." """
+
+            sentence = f"""[INST]{sentence}\n\n{doc_description}\n\n"{doc}"\n\n{example_description}\n\n{general_example}\n\n{answer_description}[/INST]\n\nSummary:"""
+        else:
+            sentence = f"""[INST]{sentence}\n\n{doc_description}\n\n"{doc}"\n\n{answer_description}[/INST]\n\nSummary:"""
 
         #print(sentence)
 
@@ -2576,13 +2587,24 @@ def eval_pop(population,
         for i in tqdm(range(n_pop), desc = f"Evaluating prompt population"):
             tt+=1
             #print(f"ttt 1--->{tt}")
-            labels, predictions = prompt_preds_legalsumtosdr(data_expanded[:n_samples], 
-                                                         task_description = prompts['task_description'][population['prompts'][i]['task_description']], 
-                                                         doc_description = prompts['doc_description'][population['prompts'][i]['doc_description']],
-                                                         answer_description =  prompts['answer_description'][population['prompts'][i]['answer_description']],
-                                                         model=model,
-                                                         tokenizer=tokenizer,
-                                                         )
+            if task_w_one_shot == False:
+                labels, predictions = prompt_preds_legalsumtosdr(data_expanded[:n_samples], 
+                                                            task_description = prompts['task_description'][population['prompts'][i]['task_description']], 
+                                                            doc_description = prompts['doc_description'][population['prompts'][i]['doc_description']],
+                                                            answer_description =  prompts['answer_description'][population['prompts'][i]['answer_description']],
+                                                            model=model,
+                                                            tokenizer=tokenizer,
+                                                            )
+            else:
+                labels, predictions = prompt_preds_legalsumtosdr(data_expanded[:n_samples], 
+                                                            task_description = prompts['task_description'][population['prompts'][i]['task_description']], 
+                                                            doc_description = prompts['doc_description'][population['prompts'][i]['doc_description']],
+                                                            answer_description =  prompts['answer_description'][population['prompts'][i]['answer_description']],
+                                                            model=model,
+                                                            tokenizer=tokenizer,
+                                                            example_description = prompts['example_description'][population['prompts'][i]['example_description']],
+                                                            task_w_one_shot=task_w_one_shot,
+                                                            )
             
             #print(f"antes da eval{tt}")
             rouge_scores, rouge_1 = compute_rouge_scores(references=labels, predictions=predictions)
@@ -2713,6 +2735,7 @@ def create_root_folder(task,
                        task_w_full_contract =  'nd', # contract nli only
                        task_w_2_labels = 'nd', # contract nli only
                        use_data_sorted_by_dq = 'nd',
+                       task_w_one_shot = 'nd',
                        ):
     # Format: Runs_YYYY-MM-DD_HH-MM-SS
     if alg=='alg_2':
@@ -2720,8 +2743,13 @@ def create_root_folder(task,
             folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}_use_dq_data{use_data_sorted_by_dq}")
         elif task == 'ContractNLI':
             folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}")
-        elif task == 'MEDIQASUM' or task == 'LEXSUM' or task == 'LegalSumTOSDR':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}")  
+        elif task == 'MEDIQASUM' or task == 'LEXSUM':
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}") 
+        elif task == 'LegalSumTOSDR':
+            if task_w_one_shot == True:
+                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woneshot{task_w_one_shot}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}")  
+            else:
+                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}")  
         elif task == 'hyper_crossover' or task == 'hyper_mutation':
             folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}")
 
@@ -3687,6 +3715,7 @@ def evo_alg_2(task,
                                             task_w_full_contract =  task_w_full_contract, # contract nli only
                                             task_w_2_labels = task_w_2_labels, # contract nli only
                                             use_data_sorted_by_dq = use_data_sorted_by_dq,
+                                            task_w_one_shot = task_w_one_shot
                                             )
             
             if new_evo_prompt_format == True:

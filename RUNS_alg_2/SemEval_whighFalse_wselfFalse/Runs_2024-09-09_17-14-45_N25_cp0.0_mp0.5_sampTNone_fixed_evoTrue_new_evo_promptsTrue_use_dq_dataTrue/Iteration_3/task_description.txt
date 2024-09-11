@@ -1,8 +1,0 @@
-0->Evaluate the semantic links between clinical trial reports (CTRs) and expert statements, ensuring the statements align with and are substantiated by the CTR content, avoiding any contradictions. CTRs provide insights into clinical trials, divided into four parts: (1) Eligibility Criteria for patient selection, (2) Intervention details for various groups, (3) Results with participant data and outcomes, and (4) Recorded Adverse Events. Assess claims related to individual or comparative CTRs.
-----------
-1->Examine the consistency between expert clinical commentary and Clinical Trial Reports (CTRs). Ensure that expert opinions do not conflict with the documented procedures, results, and reported adverse events in CTRs, which are segmented into Eligibility Criteria, Intervention, Results, and Adverse Events.
-----------
-2->Analyze the semantic entailment between Clinical Trial Reports (CTRs) sections and expert clinical statements. CTRs detail trial procedures and outcomes, focusing on treatment efficacy and safety. Patient cohorts differ by treatment or baseline traits. CTRs have four parts: (1) Eligibility Criteria, (2) Intervention, (3) Results, (4) Adverse Events. Determine if expert statements align with CTR data, ensuring no contradictions exist.
-----------
-3->Examine the consistency between expert clinical commentary and Clinical Trial Reports (CTRs). Verify that expert insights are congruent with CTRs
-----------

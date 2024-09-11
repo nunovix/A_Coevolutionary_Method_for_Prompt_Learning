@@ -2735,23 +2735,24 @@ def create_root_folder(task,
                        task_w_full_contract =  'nd', # contract nli only
                        task_w_2_labels = 'nd', # contract nli only
                        use_data_sorted_by_dq = 'nd',
+                       reverse_dq = 'nd',
                        task_w_one_shot = 'nd',
                        ):
     # Format: Runs_YYYY-MM-DD_HH-MM-SS
     if alg=='alg_2':
         if task == 'SemEval':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}_use_dq_data{use_data_sorted_by_dq}")
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}_use_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}")
         elif task == 'ContractNLI':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}")
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}")
         elif task == 'MEDIQASUM' or task == 'LEXSUM':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}") 
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}") 
         elif task == 'LegalSumTOSDR':
             if task_w_one_shot == True:
-                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woneshot{task_w_one_shot}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}")  
+                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woneshot{task_w_one_shot}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}")  
             else:
-                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}")  
+                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}")  
         elif task == 'hyper_crossover' or task == 'hyper_mutation':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}")
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}")
 
     elif alg=='alg_3':
         folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_op{operation_prob}_mop{mutation_operation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
@@ -3606,6 +3607,7 @@ def evo_alg_2(task,
               resume_run = False,
               resume_run_folder = None,
               use_data_sorted_by_dq = False,
+              reverse_dq = False,
               ): 
     
     # load model and tokenizer
@@ -3622,10 +3624,13 @@ def evo_alg_2(task,
                                                                                                                                                         task_w_2_labels = task_w_2_labels,
                                                                                                                                                         use_optimized_evo_prompts = use_optimized_evo_prompts,
                                                                                                                                                         use_data_sorted_by_dq = use_data_sorted_by_dq,
+                                                                                                                
                                                                                                                                                         )
     
     # keep data balanced if dq
     if use_data_sorted_by_dq == True:
+        if reverse_dq == True:
+            data_expanded = data_expanded[::-1]
         balanced_data = []
         if task == 'SemEval':
             per_label_size = int(data_size/2)
@@ -3658,6 +3663,7 @@ def evo_alg_2(task,
         # check label dist
         dq_labels = []
         for data in data_expanded:
+            #print(data['score'])
             dq_labels.append(data['label'])
         print(Counter(dq_labels))
 
@@ -3715,6 +3721,7 @@ def evo_alg_2(task,
                                             task_w_full_contract =  task_w_full_contract, # contract nli only
                                             task_w_2_labels = task_w_2_labels, # contract nli only
                                             use_data_sorted_by_dq = use_data_sorted_by_dq,
+                                            reverse_dq = reverse_dq,
                                             task_w_one_shot = task_w_one_shot
                                             )
             
@@ -3961,8 +3968,6 @@ def evo_alg_2(task,
                   )        
 
     return best_pop, best_score_iterations
-
-
 
 # varies from alg_2 by instead of performing crossovers followed by mutations performing either only a crossover or a mutation to 
 # generate new individuals

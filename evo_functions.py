@@ -1273,14 +1273,14 @@ def prompt_preds_contractnli_span(data_expanded,
         new_tokens = output[0, prompt_length:]
 
         if print_once_flag == 0:
-            print(f"INFERENCE CONTRACTNLI-->{tokenizer.decode(output[0])}")
-            print(f"sample['label']-->{sample['label']}")
+            #print(f"INFERENCE CONTRACTNLI-->{tokenizer.decode(output[0])}")
+            #print(f"sample['label']-->{sample['label']}")
             print_once_flag = 1
         pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
         #print(f"INFERENCE CONTRACTNLI-->{tokenizer.decode(output[0])}")
         #print(f"sample['label']-->{sample['label']}")
-        print(f"pred-->{pred}")
-        print(f"sample['label']-->{sample['label']}")
+        #print(f"pred-->{pred}")
+        #print(f"sample['label']-->{sample['label']}")
 
         preds.append(pred)
 
@@ -2737,22 +2737,23 @@ def create_root_folder(task,
                        use_data_sorted_by_dq = 'nd',
                        reverse_dq = 'nd',
                        task_w_one_shot = 'nd',
+                       keep_dev_ratio = 'nd',
                        ):
     # Format: Runs_YYYY-MM-DD_HH-MM-SS
     if alg=='alg_2':
         if task == 'SemEval':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}_use_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}")
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}")
         elif task == 'ContractNLI':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}")
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}")
         elif task == 'MEDIQASUM' or task == 'LEXSUM':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}") 
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}") 
         elif task == 'LegalSumTOSDR':
             if task_w_one_shot == True:
-                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woneshot{task_w_one_shot}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}")  
+                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woneshot{task_w_one_shot}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}")  
             else:
-                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}")  
+                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}")  
         elif task == 'hyper_crossover' or task == 'hyper_mutation':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}use_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}")
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}")
 
     elif alg=='alg_3':
         folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_op{operation_prob}_mop{mutation_operation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
@@ -3671,6 +3672,7 @@ def evo_alg_2(task,
     if task == 'SemEval' or task == 'ContractNLI':
         dq_labels = []
         for data in data_expanded:
+            #print(f"data['score']-->{data['score']}")
             dq_labels.append(data['label'])
         data_dist = Counter(dq_labels)
         print(data_dist)

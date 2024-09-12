@@ -2848,7 +2848,8 @@ def save_details(root_folder, n_pop, n_keep,
                  data_size,
                  task,
                  model_name,
-                 quantize_model_4bits):
+                 quantize_model_4bits,
+                 data_dist = None):
     
     dif = end_time - start_time
     avg_per_iter = dif.total_seconds()/iter
@@ -2878,6 +2879,8 @@ def save_details(root_folder, n_pop, n_keep,
 
         file.write(f"Evaluation done on: {eval_data} set\n")
         file.write(f"With {data_size} examples\n\n")
+        if task == 'ContractNLI' or task == 'SemEval':
+            file.write(f"Dist: {data_dist}\n\n")
 
         file.write(f"Name of the model used: {model_name} \n")
         file.write(f"4 bit quantization: {quantize_model_4bits} \n")
@@ -2917,7 +2920,8 @@ def save_details_alg_2(root_folder, n_pop,
                  eval_mutation_prob = None,
                  best_iter=None,
                  evaluation_task = None,
-                 retrieve_examples=None):
+                 retrieve_examples=None,
+                 data_dist = None):
     
     dif = end_time - start_time
     avg_per_iter = dif.total_seconds()/iter
@@ -2942,6 +2946,8 @@ def save_details_alg_2(root_folder, n_pop,
 
         file.write(f"Evaluation done on: {eval_data} set\n")
         file.write(f"With {data_size} examples\n\n")
+        if data_dist != None:
+            file.write(f"Label distribution: {data_dist}\n\n")
 
         file.write(f"Name of the model used: {model_name} \n")
         file.write(f"4 bit quantization: {quantize_model_4bits} \n")
@@ -3607,7 +3613,9 @@ def evo_alg_2(task,
               resume_run = False,
               resume_run_folder = None,
               use_data_sorted_by_dq = False,
+              keep_dev_ratio = False,
               reverse_dq = False,
+              data_dist = None,
               ): 
     
     # load model and tokenizer
@@ -3631,22 +3639,15 @@ def evo_alg_2(task,
     if use_data_sorted_by_dq == True:
         if reverse_dq == True:
             data_expanded = data_expanded[::-1]
-        balanced_data = []
-        if task == 'SemEval':
-            per_label_size = int(data_size/2)
-            ent_num = 0
-            cont_num = 0
-            for data in data_expanded:
-                if data['label'] == 'Entailment' and ent_num < per_label_size:
-                    balanced_data.append(data)
-                    ent_num+=1
-                elif data['label'] == 'Contradiction' and cont_num < per_label_size:
-                    balanced_data.append(data)
-                    cont_num+=1
-            data_expanded = balanced_data
-        elif task == 'ContractNLI':
-            ent_label_size = 519
-            cont_label_size = 95
+        
+        if keep_dev_ratio == True:
+            if task == 'SemEval':
+                ent_label_size = cont_label_size = int(data_size/2)
+            elif task == 'ContractNLI':
+                ent_label_size = int(519/(519+95)*data_size)
+                cont_label_size = int(95/(519+95)*data_size)
+
+            balanced_data = []
             ent_num = 0
             cont_num = 0
             for data in data_expanded:
@@ -3658,14 +3659,7 @@ def evo_alg_2(task,
                     cont_num+=1
             data_expanded = balanced_data
         else:
-            sys.exit('Task not Defined with DQ file!')
-
-        # check label dist
-        dq_labels = []
-        for data in data_expanded:
-            #print(data['score'])
-            dq_labels.append(data['label'])
-        print(Counter(dq_labels))
+            data_expanded = data_expanded[:data_size]
 
     # normal data size adjustment
     if data_size <= 0:
@@ -3674,11 +3668,12 @@ def evo_alg_2(task,
         data_expanded = data_expanded[:data_size]
     
     # check label dist
-    if use_data_sorted_by_dq == True and task == 'SemEval':
+    if task == 'SemEval' or task == 'ContractNLI':
         dq_labels = []
         for data in data_expanded:
             dq_labels.append(data['label'])
-        print(Counter(dq_labels))
+        data_dist = Counter(dq_labels)
+        print(data_dist)
 
     if use_data_sorted_by_dq == True:
         if 'score' in data_expanded[0].keys():
@@ -3688,7 +3683,6 @@ def evo_alg_2(task,
     
     #print(f"new_mutation_prompts-->{new_mutation_prompts}")
     #print(f"new_cross_prompts-->{new_cross_prompts}")
-
 
     #print(f"initial_prompts.keys()-->{initial_prompts.keys()}")
     for key in initial_prompts:
@@ -3950,6 +3944,7 @@ def evo_alg_2(task,
                             crossover_prob,
                             retrieve_examples=retrieve_examples,
                             alg='alg_2',
+                            data_dist=data_dist
                             )
             
             create_plots_from_RUNS_folder(root_folder)

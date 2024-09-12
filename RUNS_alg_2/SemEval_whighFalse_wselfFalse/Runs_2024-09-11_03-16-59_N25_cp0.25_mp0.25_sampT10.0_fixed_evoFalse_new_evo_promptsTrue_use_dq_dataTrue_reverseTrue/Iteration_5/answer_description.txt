@@ -1,0 +1,12 @@
+0->s alignment with the Clinical Trial Report (CTR) content. Respond with 
+----------
+1->Answer YES or NO to the question of whether one can conclude the validity of the statement based on the Clinical Trial Report (CTR) information. Carefully assess the mentions in the statement that should be present or absent from the CTR descriptions, ensuring that the statement is supported by the CTR data and does not contradict the provided descriptions.
+----------
+2->Ensure that the text provided aligns accurately with the content outlined in the Clinical Trial Report (CTR).
+----------
+3->Examine the Clinical Trial Report (CTR) data meticulously to validate the accuracy and consistency of the provided text. The text must be substantiated by the CTR and should not contain any contradictions or discrepancies with the report
+----------
+4->Carefully review the content of the Clinical Trial Report (CTR) to verify that the information aligns with the provided text. Assess the validity of the statement by confirming the presence or absence of specific mentions in the CTR, ensuring consistency and support for the statement without contradiction.
+----------
+5->Determine the validity of the statement by cross-referencing it with the Clinical Trial Report (CTR) data. Confirm that the statement aligns with the report
+----------

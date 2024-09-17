@@ -1,0 +1,16 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->Review the provided Clinical Trial Report (CTR) and determine if the statement in question can be conclusively validated based on the information contained within the CTR. Ensure to evaluate the presence or absence of specific details mentioned in the statement relative to the CTR's descriptions.
+----------
+2->Evaluate the presence or absence of specific elements within the Clinical Trial Report (CTR) to determine the validity of a given statement. Ensure that your assessment is based solely on the information provided in the CTR, focusing on the accuracy and completeness of the data related to the statement in question.
+----------
+3->Answer YES or NO to the question of whether one can conclude the validity of the statement based on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions. In doing so, ensure that all relevant details from both original instructions are considered to provide a comprehensive evaluation.
+----------
+4->Evaluate the presence or absence of specific elements within the Clinical Trial Report (CTR) to determine if the statement in question can be deemed valid. This requires a meticulous examination of the CTR content, ensuring that all pertinent mentions are accounted for to affirm or refute the statement's accuracy.
+
+RESULT OF REPHRASED INSTRUCTION:
+
+After rephrasing, the instruction remains focused on assessing the validity of a statement based on the contents of the Clinical Trial Report. The rephrased version maintains the essence of the task, which is to scrutinize the CTR for relevant information that either supports or contradicts the statement being evaluated.
+----------
+5->Examine the Clinical Trial Report to ascertain if the given statement is substantiated by the report
+----------

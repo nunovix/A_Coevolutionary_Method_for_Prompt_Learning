@@ -1,0 +1,14 @@
+0->Examine Clinical Trial Reports (CTRs) meticulously to ascertain the veracity of clinical assertions, confirming their foundation in the provided documentation.
+----------
+1->Carefully review Clinical Trial Reports to verify the accuracy of clinical claims, ensuring they are supported by the documentation. Assess effectiveness and safety of new treatments by examining the ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS sections of each report.
+----------
+2->Examine Clinical Trial Reports meticulously to confirm the validity of all clinical assertions, making certain that each claim is substantiated by corresponding evidence within the documents.
+----------
+3->Review Clinical Trial Reports to verify the accuracy of clinical statements, ensuring each is backed by evidence in the documents. Evaluate new treatments
+----------
+4->Carefully review Clinical Trial Reports to verify the accuracy of all clinical statements, ensuring each assertion is backed by evidence in the documents.
+----------
+5->Carefully review Clinical Trial Reports to verify the accuracy of all clinical statements, ensuring that each assertion is backed by appropriate evidence from the documents.
+----------
+6->Consider the problem of assessing semantic entailment connections between distinct sections of Clinical Trial Reports (CTRs) and statements put forth by clinical domain experts. To establish entailment, statements should be supported by the CTR information, not contradicting any of the provided descriptions. In brief, CTRs elucidate the procedures and findings of clinical trials, encompassing four sections: (1) ELIGIBILITY CRITERIA specifying conditions for patient inclusion, (2) INTERVENTION detailing treatments from different patient cohorts, (3) RESULTS summarizing the participant statistics and the trial outcomes, and (4) ADVERSE EVENTS listing observed signs and symptoms. Statements make claims about the information within these sections, either for a single CTR or comparing two CTRs.
+----------

@@ -1,0 +1,8 @@
+0->Confirm the statement's validity against the Clinical Trial Report (CTR) data, ensuring it aligns with the report's content, avoids contradictions, and incorporates all required details.
+----------
+1->Confirm the validity of the given statement by responding with 
+----------
+2->Cross-reference the assertion with the Clinical Trial Report to confirm its accuracy, maintaining consistency with the report
+----------
+3->Cross-reference the claim with the Clinical Trial Report to verify its accuracy, ensuring consistency and inclusion of all necessary details.
+----------

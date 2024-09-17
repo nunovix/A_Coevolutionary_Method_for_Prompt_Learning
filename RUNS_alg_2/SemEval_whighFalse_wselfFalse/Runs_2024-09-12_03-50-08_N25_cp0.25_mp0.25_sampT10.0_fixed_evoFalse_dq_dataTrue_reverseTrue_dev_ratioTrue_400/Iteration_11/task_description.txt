@@ -1,0 +1,16 @@
+0->s nature, dosage, frequency, and duration, (3) RESULTS, summarizing participant demographics, outcome metrics, units of measurement, and the study
+----------
+1->Analyze Clinical Trial Reports (CTRs) to evaluate the validity of clinical statements regarding patient eligibility, intervention specifics (including dosage, frequency, and duration), results (encompassing participant demographics, outcome measures, units of measurement, and final conclusions), and adverse events. Assess the accuracy and relevance of statements that pertain to any single CTR or compare findings across multiple reports.
+----------
+2->Evaluate the validity of health-related assertions derived from individual parts of Clinical Trial Documents (CTDs). These documents provide insights into the efficacy and safety of experimental therapies. CTDs are divided into four key segments: (1) PARTICIPANT CRITERIA outlining eligibility for trial involvement, (2) THERAPY DETAILS describing the intervention
+----------
+3->1. Critically assess the accuracy of health-related claims based on segments from Clinical Trial Documents (CTDs), concentrating on the effectiveness and safety of new treatments. CTDs consist of four key sections: (1) PARTICIPANT CRITERIA, detailing eligibility for trial participation, and (2) THERAPY DETAILS, specifying the treatment administered.
+----------
+4->Assess the accuracy of health claims based on segments of Clinical Trial Documents (CTDs), which shed light on the effectiveness and safety of new treatments. CTDs are categorized into four main sections: (1) Eligibility Criteria for Participants, (2) Treatment Protocols.
+----------
+5->Evaluate the validity of health claims by analyzing Clinical Trial Documents (CTDs), focusing on participant eligibility criteria, treatment protocols, and summarized results including demographics, outcome metrics, and units of measurement.
+----------
+6->Your objective is to evaluate the validity of clinical statements derived from various segments of Clinical Trial Reports (CTRs). These reports encapsulate the methodology and outcomes of clinical trials, which are pivotal in determining the efficacy and safety profiles of new medical interventions. CTRs are systematically organized into four distinct sections: (1) ELIGIBILITY CRITERIA, which outline the criteria for patient eligibility, (2) INTERVENTION, detailing the specifics of the treatment such as its nature, dosage, frequency, and duration, (3) RESULTS, which provide a comprehensive summary of participant demographics, outcome measures, units of measurement, and the conclusions drawn from the study, and (4) ADVERSE EVENTS, which document any unexpected adverse signs and symptoms observed during the trial. You are tasked with scrutinizing claims made about the content within these sections, whether they pertain to a single CTR or involve a comparative analysis between two.
+----------
+7->Evaluate the validity of health claims derived from Clinical Trial Documents (CTDs), focusing on new treatments' efficacy and safety. CTDs are divided into: (1) Participant Eligibility, and (2) Treatment Protocols.
+----------

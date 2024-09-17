@@ -1578,6 +1578,7 @@ def random_example_retrieval(sample, data_expanded):
             return note
     return note
 
+# embeds list of strings 
 def embed_texts(texts, model_name='Alibaba-NLP/gte-large-en-v1.5'):
     model = SentenceTransformer(model_name, trust_remote_code=True)
     embeddings = model.encode(texts)
@@ -1753,7 +1754,7 @@ def prompt_preds_legalsumtosdr(data_expanded,
         doc = sample['original_text']
 
         if task_w_one_shot == True and example_description != '' and example_description != ' ':
-            general_example = """Good example: "The service may share your data with third parties for marketing purposes, but you can opt out by changing your settings." \nBad example: "Under this section, the service provider reserves the right to distribute personal data according to its discretion and the provisions of applicable law." """
+            general_example = """Example 1: "Your personal data is used for advertising" \nExample 2: "This service reserves the right to disclose your personal information without notifying you." " """
 
             sentence = f"""[INST]{sentence}\n\n{doc_description}\n\n"{doc}"\n\n{example_description}\n\n{general_example}\n\n{answer_description}[/INST]\n\nSummary:"""
         else:
@@ -2738,22 +2739,23 @@ def create_root_folder(task,
                        reverse_dq = 'nd',
                        task_w_one_shot = 'nd',
                        keep_dev_ratio = 'nd',
+                       data_size=0
                        ):
     # Format: Runs_YYYY-MM-DD_HH-MM-SS
     if alg=='alg_2':
         if task == 'SemEval':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}")
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}")
         elif task == 'ContractNLI':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}")
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}")
         elif task == 'MEDIQASUM' or task == 'LEXSUM':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}") 
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}") 
         elif task == 'LegalSumTOSDR':
             if task_w_one_shot == True:
-                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woneshot{task_w_one_shot}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}")  
+                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woneshot{task_w_one_shot}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}")  
             else:
-                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}")  
+                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}")  
         elif task == 'hyper_crossover' or task == 'hyper_mutation':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}")
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}")
 
     elif alg=='alg_3':
         folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_op{operation_prob}_mop{mutation_operation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_new_evo_prompts{new_evo_prompts}")
@@ -3230,13 +3232,17 @@ def update_population_and_prompts(population):
 
 # function to remove duplicate and remap
 def remove_duplicates_and_remap(population):
+    for key, value in population.items():
+        print(f"{key}-->{value}\n")
     prompt_dict = population['prompts_dict']
+    history = population['history']
     prompts = population['prompts']
     # Step 1: Create a mapping of valid indices and update prompt_dict
     remap_dict = {}
     for part, possibilities in prompt_dict.items():
         seen = {}
         new_possibilities = []
+        new_possibilities_history = []
         new_index = 0
         index_mapping = {}
         
@@ -3244,12 +3250,14 @@ def remove_duplicates_and_remap(population):
             if possibility not in seen:
                 seen[possibility] = new_index
                 new_possibilities.append(possibility)
+                new_possibilities_history.append(history[part][old_index])
                 index_mapping[old_index] = new_index
                 new_index += 1
             else:
                 index_mapping[old_index] = seen[possibility]
         
         prompt_dict[part] = new_possibilities
+        history[part] = new_possibilities_history
         remap_dict[part] = index_mapping
 
     # Step 2: Update prompts
@@ -3258,11 +3266,13 @@ def remove_duplicates_and_remap(population):
             if part in remap_dict:
                 prompt[part] = remap_dict[part][old_index]
 
-    #population['prompts_dict'] = prompt_dict
+    population['prompts_dict'] = prompt_dict
+    population['history'] = history
     population['prompts'] = prompts
 
+    for key, value in population.items():
+        print(f"{key}-->{value}\n")
     return population
-    
 
 # function to evaluate the best prompt obtained after the evolutionary algorithm
 # tipycally it'll be in the best iter folder for a given run
@@ -3715,10 +3725,12 @@ def evo_alg_2(task,
                                             new_evo_prompts=new_evo_prompt_format,
                                             task_w_oracle_spans = task_w_oracle_spans, # contract nli only
                                             task_w_full_contract =  task_w_full_contract, # contract nli only
+                                            task_w_one_shot = task_w_one_shot,
                                             task_w_2_labels = task_w_2_labels, # contract nli only
                                             use_data_sorted_by_dq = use_data_sorted_by_dq,
                                             reverse_dq = reverse_dq,
-                                            task_w_one_shot = task_w_one_shot
+                                            keep_dev_ratio = keep_dev_ratio,
+                                            data_size = data_size,
                                             )
             
             if new_evo_prompt_format == True:

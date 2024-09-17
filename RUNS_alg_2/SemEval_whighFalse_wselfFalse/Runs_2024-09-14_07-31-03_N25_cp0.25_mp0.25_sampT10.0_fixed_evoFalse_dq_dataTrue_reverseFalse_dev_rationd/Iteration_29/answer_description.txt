@@ -1,0 +1,16 @@
+0->s accuracy by comparing it with the CTR descriptions, focusing on medical terms, numerical data, and context. Address any uncertainties or missing details. Respond with 
+----------
+1->Examine the Clinical Treatment Reports (CTRs) to confirm the medical claim
+----------
+2->Evaluate the summary's precision by cross-referencing it with the original content, ensuring medical terminology, numerical accuracy, and scenario specifics are clear and unambiguous.
+----------
+3->Cross-examine the summary's precision against the original Clinical Trial Results document, ensuring medical terminology accuracy, numerical data representation, and contextual integrity. Rectify any ambiguities or omissions to refine the summary.
+----------
+4->Review the Clinical Treatment Reports (CTRs) to verify the accuracy of the medical claim, ensuring consistency with medical terminology, numerical data, and contextual information. Resolve any ambiguities or incomplete details.
+----------
+5->Cross-reference the provided summary with the original Clinical Trial Results and Clinical Treatment Reports documents. Ensure accuracy in medical terminology, precision in numerical data, and fidelity to the context. Rectify any ambiguities or omissions, and verify medical claims. Enhance the clarity and comprehensiveness of the summary by incorporating additional details where necessary, ensuring that the revised summary remains true to the original intent and is easily understandable for experts in the field.
+----------
+6->Examine the Clinical Treatment Reports (CTRs) and summaries to confirm medical claim accuracy, ensuring terminology, data, and context are precise and unambiguous.
+----------
+7->Cross-reference the provided summary with the original Clinical Trial Results and Clinical Treatment Reports documents. Ensure accuracy in medical terminology, precision in numerical data, and fidelity to the context. Rectify any ambiguities or omissions, and verify medical claims.
+----------

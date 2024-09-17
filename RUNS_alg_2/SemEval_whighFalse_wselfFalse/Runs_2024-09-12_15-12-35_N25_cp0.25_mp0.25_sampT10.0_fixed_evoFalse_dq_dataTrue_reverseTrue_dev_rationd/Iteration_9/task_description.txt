@@ -1,0 +1,8 @@
+0->Your task is to determine if medical claims are backed by the relevant sections of Clinical Trial Reports (CTRs). These documents record the methods and findings of trials assessing new medical treatments
+----------
+1->Analyze the semantic entailment between clinical statements and the corresponding sections of Clinical Trial Reports (CTRs). CTRs document the methodology and results of clinical trials to evaluate new treatments
+----------
+2->Your task is to critically assess the validity of clinical claims by examining the relevant sections of Clinical Trial Reports (CTRs). These documents provide a comprehensive account of clinical trials conducted to determine the effectiveness and safety of new medical treatments. The structure of CTRs includes: (1) ELIGIBILITY CRITERIA, which specifies who can participate, (2) INTERVENTION, which describes the treatment specifics such as type, dosage, frequency, and length, (3) RESULTS, which gives an overview of participant characteristics, outcome statistics, measurement units, and the study's findings, and (4) ADVERSE EVENTS, which records any unexpected negative reactions from participants. Analyze either individual CTRs or compare findings across multiple reports.
+----------
+3->Assess whether health-related assertions are substantiated by pertinent parts of Clinical Trial Reports (CTRs), which document the procedures and outcomes of studies evaluating novel therapeutic interventions.
+----------

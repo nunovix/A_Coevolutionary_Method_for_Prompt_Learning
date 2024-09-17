@@ -1,0 +1,18 @@
+0->initial
+----------
+1->initial
+----------
+2->initial
+----------
+3->copy of [4]  from iteration 1
+----------
+4->copy of [0]  from iteration 7
+----------
+5->copy of [0]  from iteration 7
+----------
+6->copy of [3]  from iteration 7
+----------
+7->copy of [3]  from iteration 7
+----------
+8->copy of [3]  from iteration 7
+----------

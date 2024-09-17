@@ -1,0 +1,24 @@
+0->Your task is determining the support of clinical statements from individual sections of Clinical Trial Reports (CTRs). CTRs detail the methodology and findings of clinical trials, assessing effectiveness and safety of new treatments. CTRs consist of 4 sections: (1) ELIGIBILITY CRITERIA listing conditions for patient participation, (2) INTERVENTION description specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary detailing participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing unexpected signs and symptoms. Statements make claims about information in these sections, either for a single CTR or comparing two.
+----------
+1->s nature, dosage, frequency, and duration, (3) RESULTS, summarizing participant demographics, outcome metrics, units of measurement, and the study
+----------
+2->Analyze Clinical Trial Reports (CTRs) to evaluate the validity of clinical statements regarding patient eligibility, intervention specifics (including dosage, frequency, and duration), results (encompassing participant demographics, outcome measures, units of measurement, and final conclusions), and adverse events. Assess the accuracy and relevance of statements that pertain to any single CTR or compare findings across multiple reports.
+----------
+3->Evaluate the validity of health-related assertions derived from individual parts of Clinical Trial Documents (CTDs). These documents provide insights into the efficacy and safety of experimental therapies. CTDs are divided into four key segments: (1) PARTICIPANT CRITERIA outlining eligibility for trial involvement, (2) THERAPY DETAILS describing the intervention
+----------
+4->Examine clinical trial reports (CTRs) to assess the accuracy of their content. CTRs offer insights into the effectiveness and safety of new medical treatments. Break down the reports into four main sections: (1) Patient inclusion criteria, (2) Treatment specifics such as type, dosage, frequency, and duration, (3) Results overview with participant demographics, outcome measures, units of measurement, and concluding remarks, and (4) Records of any unexpected side effects.
+----------
+5->Perform an in-depth analysis of Clinical Trial Documents (CTDs) to evaluate the accuracy of health claims. Focus on scrutinizing participant selection criteria, details of the treatment administered, and distill the principal results, encompassing participant demographics, effectiveness indicators, and measurement units.
+----------
+6->Assess the accuracy of health-related claims extracted from specific sections of Clinical Trial Documents (CTDs), which shed light on the effectiveness and safety of new treatments. CTDs are segmented into four critical components: (1) PARTICIPANT CRITERIA detailing the inclusion and exclusion criteria for trial participants, (2) THERAPY DETAILS explaining the nature of the treatment administered.
+----------
+7->Assess the accuracy of health claims based on specific sections of Clinical Trial Documents (CTDs), which shed light on the effectiveness and safety of new treatments. CTDs are organized into four main parts: (1) Eligibility Criteria for Participants, (2) Treatment Protocols.
+----------
+8->1. Detail the intervention's characteristics, including its nature, dosage, frequency, and duration.
+2. Summarize the study's participant demographics, outcome metrics, units of measurement, and results.
+
+REPHRASED INSTRUCTION:
+
+1. Provide a comprehensive description of the intervention, specifying its type, the amount to be administered, how often it should be given, and for how long the treatment should continue.
+2. Present a concise summary of the study's participants, including their age, gender, and any other relevant demographic information. Include the key outcomes measured during the study, the units in which these outcomes are reported, and a clear statement of the findings.
+----------

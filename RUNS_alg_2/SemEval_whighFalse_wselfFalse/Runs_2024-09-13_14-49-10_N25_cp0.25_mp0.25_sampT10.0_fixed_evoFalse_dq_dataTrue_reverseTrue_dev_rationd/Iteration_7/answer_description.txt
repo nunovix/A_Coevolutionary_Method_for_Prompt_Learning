@@ -1,0 +1,6 @@
+0->Answer YES or NO to determine the validity of the statement based on the Clinical Trial Report (CTR) information, ensuring that the statement is supported by the CTR data and does not contradict the provided descriptions.
+----------
+1->Assess the statement's accuracy by cross-referencing it with the Clinical Trial Report (CTR) data. Affirm the statement with a YES if it is substantiated by the CTR findings, or deny it with a NO if it is refuted by the CTR information. Your evaluation must be solely based on the factual content of the CTR.
+----------
+2->Evaluate the given statement's consistency with the data presented in the Clinical Trial Report (CTR). Provide a definitive YES if the statement is corroborated by the CTR findings, or a definitive NO if the statement is contradicted by the CTR information. Your assessment must strictly adhere to the factual content of the CTR.
+----------

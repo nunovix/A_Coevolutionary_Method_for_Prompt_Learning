@@ -1,0 +1,10 @@
+0->Analyze clinical trial reports (CTRs) to verify claims about eligibility criteria, intervention details, results, and adverse events. Ensure claims are specific to individual CTRs or comparisons between two.
+----------
+1->Examine clinical trial documentation (CTDs) to confirm statements regarding participant qualifications, treatment specifics, outcomes, and side effects. Verify that these statements pertain solely to a single CTD or contrast one with another.
+----------
+2->Carefully examine each clinical trial report (CTR) to confirm the accuracy of the stated eligibility criteria, intervention specifics, outcomes, and any reported adverse events. Verify that these details are explicitly tied to the respective CTR or the comparative analysis between two distinct trials.
+----------
+3->Examine clinical trial reports (CTRs) to verify that expert commentary aligns with the report
+----------
+4->Your task is determining the support of clinical statements from individual sections of Clinical Trial Reports (CTRs). CTRs detail the methodology and findings of clinical trials, assessing effectiveness and safety of new treatments. CTRs consist of 4 sections: (1) ELIGIBILITY CRITERIA listing conditions for patient participation, (2) INTERVENTION description specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary detailing participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing unexpected signs and symptoms. Statements make claims about information in these sections, either for a single CTR or comparing two.
+----------

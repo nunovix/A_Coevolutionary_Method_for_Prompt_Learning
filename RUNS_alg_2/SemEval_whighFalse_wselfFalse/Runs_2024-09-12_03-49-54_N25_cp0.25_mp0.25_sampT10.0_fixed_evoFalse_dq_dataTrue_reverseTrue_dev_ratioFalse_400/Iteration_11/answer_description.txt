@@ -1,0 +1,8 @@
+0->Evaluate the statement's alignment with the Clinical Trial Report (CTR) content, ensuring no contradictions exist. If substantiated, affirm the statement's validity; otherwise, deny it.
+----------
+1->Confirm the statement's validity based on the Clinical Trial Report (CTR) content, ensuring there are no contradictions. If the statement aligns with the CTR, affirm its validity; if not, deny it.
+----------
+2->Evaluate the accuracy of the given statement against the information provided in the Clinical Trial Report (CTR). Confirm the statement's validity if it aligns with the CTR data, or refute it if there are inconsistencies.
+----------
+3->Verify the accuracy of the given statement against the Clinical Trial Report (CTR) data. If the statement is consistent with the CTR findings, validate it; otherwise, refute it.
+----------

@@ -1,0 +1,30 @@
+0->Your task is to analyze the semantic entailment between specific segments of Clinical Trial Reports (CTRs) and expert statements within the clinical field. CTRs document the methodology and results of clinical trials aimed at evaluating the efficacy and safety of treatments. Patient cohorts in these trials receive different treatments or have varying baseline characteristics. A thorough CTR is divided into four key sections: (1) ELIGIBILITY CRITERIA, which specifies the criteria for patient inclusion, (2) INTERVENTION, which describes the treatments administered, (3) RESULTS, which provides a summary of participant data and trial outcomes, and (4) ADVERSE EVENTS, which records any significant adverse occurrences. Your objective is to determine whether expert statements about clinical data are logically consistent with the information presented in the CTRs, ensuring no contradictions are present.
+----------
+1->Your objective is to critically analyze Clinical Trial Reports (CTRs), which document the methodology and outcomes of clinical trials aimed at evaluating the effectiveness and safety of novel treatments. These reports are structured into four distinct sections:
+
+1. ELIGIBILITY CRITERIA: This section outlines the specific conditions that qualify patients for participation in the trial.
+
+2. INTERVENTION: Here, you will find a detailed description of the treatment being tested, including the type, dosage, frequency, and duration of the intervention.
+
+3. RESULTS: This segment provides a comprehensive summary of the trial's participants, the outcome measures used, the units of measurement, and the conclusions drawn from the data.
+
+4. ADVERSE EVENTS: Any unexpected signs, symptoms, or side effects experienced by participants during the trial are recorded in this section.
+
+Your task is to extract and support clinical statements that pertain to the information contained within these sections. This may involve analyzing a single Clinical Trial Report or making comparative assessments between two reports. Ensure that your analysis is thorough, capturing all pertinent details to facilitate an expert-level understanding of the trial's findings and implications.
+----------
+2->s nature, dosage, administration frequency, and treatment duration, (3) RESULTS, summarizing participant demographics, outcome metrics, measurement units, and the study
+----------
+3->Critically evaluate Clinical Trial Reports (CTRs) that detail the methodology and results of trials assessing new treatments' effectiveness and safety. Break down the report into four key areas:
+
+1. Eligibility Criteria: Identify the conditions required for patient participation.
+
+2. Intervention Details: Describe the treatment specifics, including type, dosage, frequency, and duration.
+
+3. Outcome Summary: Summarize participant demographics, outcome measures, units of measurement, and conclusions.
+
+4. Adverse Events: Note any unexpected side effects or symptoms reported during the trial.
+
+Extract and substantiate clinical statements from these sections to provide an expert-level interpretation of the trial's outcomes and significance.
+----------
+4->Evaluate the alignment of expert statements with Clinical Trial Reports (CTRs) by focusing on: (1) ELIGIBILITY CRITERIA for patient participation, (2) INTERVENTION specifics including type, dosage, frequency, and duration, (3) RESULTS with participant demographics, outcome metrics, units, and conclusions, and (4) ADVERSE EVENTS noting any unexpected signs and symptoms. Assess the effectiveness and safety of new treatments based on the consistency of these elements across different CTRs.
+----------

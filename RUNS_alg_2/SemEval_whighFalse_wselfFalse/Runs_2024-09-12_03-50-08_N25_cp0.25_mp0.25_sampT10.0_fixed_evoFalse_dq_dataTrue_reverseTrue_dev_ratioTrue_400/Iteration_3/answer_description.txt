@@ -1,0 +1,6 @@
+0->Confirm the validity of the given statement by responding with 
+----------
+1->Confirm the statement's validity against the Clinical Trial Report (CTR) data, ensuring it aligns with the report's content, avoids contradictions, and incorporates all required details.
+----------
+2->Answer YES or NO to the question of whether one can conclude the validity of the statement with the basis on the Clinical Trial Report (CTR) information. Carefully assess the mentions in the statement that should be present or absent from the CTR descriptions, interpret the medical terminology and the context in both the report and the statement, carefully assess numeric quantities and other qualifiers, and address any ambiguities or gaps in the provided information.
+----------

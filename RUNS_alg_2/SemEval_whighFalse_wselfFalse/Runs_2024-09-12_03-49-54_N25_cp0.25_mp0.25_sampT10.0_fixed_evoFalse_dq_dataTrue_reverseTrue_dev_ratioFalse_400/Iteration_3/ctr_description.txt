@@ -1,0 +1,16 @@
+0->The information provided next corresponds to the content found in one of the four standard clinical trial report sections.
+----------
+1->Attend to the following descriptions pertaining to the contents found within one of the sections of Clinical Trial Reports (CTRs).
+----------
+2->The descriptions that follow correspond to the information contained in one of the standard sections of clinical trial reports.
+----------
+3->Attend to the detailed descriptions provided, which align with the content in a specific section of Clinical Trial Reports (CTRs), encompassing all relevant information pertinent to the trial.
+----------
+4->Enhance the clarity and actionability of the given directive by rephrasing it to emphasize the importance of extracting detailed information from a specific segment of a clinical trial report. Ensure that the revised instruction remains focused on the task at hand without additional context.
+
+RESULT:
+
+Revised Instruction: Extract detailed information from the designated section of the clinical trial report to improve AI system performance in task execution.
+----------
+5->Review the subsequent descriptions, which encapsulate the critical data typically found in a standard section of a clinical trial report.
+----------

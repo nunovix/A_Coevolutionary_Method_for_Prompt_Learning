@@ -1,0 +1,6 @@
+0->Your task is to determine if medical claims are backed by the relevant sections of Clinical Trial Reports (CTRs). These documents record the methods and findings of trials assessing new medical treatments
+----------
+1->Analyze the semantic entailment between clinical statements and the corresponding sections of Clinical Trial Reports (CTRs). CTRs document the methodology and results of clinical trials to evaluate new treatments
+----------
+2->Your task is to verify the validity of medical claims by cross-referencing them with pertinent data from Clinical Trial Reports (CTRs), which document the methodologies and outcomes of trials evaluating novel medical interventions.
+----------

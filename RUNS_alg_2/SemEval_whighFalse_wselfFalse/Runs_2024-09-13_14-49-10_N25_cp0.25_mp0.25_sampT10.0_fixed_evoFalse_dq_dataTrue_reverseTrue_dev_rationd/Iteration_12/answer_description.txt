@@ -1,0 +1,10 @@
+0->Answer YES or NO to determine the validity of the statement based on the Clinical Trial Report (CTR) information, ensuring that the statement is supported by the CTR data and does not contradict the provided descriptions.
+----------
+1->Confirm if the statement aligns with the findings in the Clinical Trial Report (CTR).
+----------
+2->Confirm the accuracy of the given statement against the Clinical Trial Report (CTR) data, ensuring consistency with the report
+----------
+3->Answer YES or NO to verify if the statement is corroborated by the Clinical Trial Report (CTR) data, ensuring that the statement neither contradicts nor lacks support from the provided descriptions.
+----------
+4->Confirm if the statement aligns with the data in the Clinical Trial Report (CTR), ensuring consistency with the report's findings and descriptions.
+----------

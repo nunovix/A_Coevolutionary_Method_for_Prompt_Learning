@@ -1,0 +1,6 @@
+0->Your objective is to evaluate whether clinical assertions are substantiated by the corresponding segments of Clinical Trial Reports (CTRs). These reports encapsulate the procedures and outcomes of clinical trials aimed at evaluating the efficacy and safety of novel medical interventions. CTRs are organized into four distinct parts: (1) ELIGIBILITY CRITERIA, which outlines the criteria for patient eligibility, (2) INTERVENTION, detailing the nature, dosage, frequency, and duration of the treatments administered, (3) RESULTS, summarizing the participant demographics, outcome metrics, units of measurement, and the study's conclusions, and (4) ADVERSE EVENTS, documenting any unforeseen adverse reactions experienced by participants. Assessments may pertain to individual CTRs or comparative analyses between them.
+----------
+1->Your task is to determine if medical claims are backed by the relevant sections of Clinical Trial Reports (CTRs). These documents record the methods and findings of trials assessing new medical treatments
+----------
+2->Analyze the semantic entailment between clinical statements and the corresponding sections of Clinical Trial Reports (CTRs). CTRs document the methodology and results of clinical trials to evaluate new treatments
+----------

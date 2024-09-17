@@ -1,0 +1,6 @@
+0->s accuracy by comparing it with the CTR descriptions, focusing on medical terms, numerical data, and context. Address any uncertainties or missing details. Respond with 
+----------
+1->Evaluate the accuracy of the medical claim by meticulously examining the Clinical Treatment Reports (CTRs), emphasizing medical terminology, numerical data, and situational context. Resolve any ambiguities or information deficiencies. Render a definitive YES or NO judgment on the claim's veracity.
+----------
+2->Evaluate the statement's accuracy by comparing it with both CTR descriptions and clinical trial data, focusing on medical terms, numerical data, and context. Address any uncertainties or missing details. Provide a clear YES or NO as the response.
+----------

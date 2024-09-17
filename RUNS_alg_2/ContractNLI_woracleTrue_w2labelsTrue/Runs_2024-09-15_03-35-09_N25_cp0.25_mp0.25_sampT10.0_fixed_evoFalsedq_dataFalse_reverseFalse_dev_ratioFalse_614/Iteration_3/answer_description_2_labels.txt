@@ -1,0 +1,10 @@
+0->Determine the validity of the statement based on the Non-Disclosure Agreement (NDA) information.
+----------
+1->Evaluate the statement's alignment with the Non-Disclosure Agreement (NDA) content.
+----------
+2->Assess whether the statement complies with the Non-Disclosure Agreement (NDA) by indicating 
+----------
+3->Indicate with YES or NO whether the legal statement is valid.
+----------
+4->Assess if the Non-Disclosure Agreement (NDA) confirms or refutes the accuracy of the given statement. Provide a YES if the statement aligns with the NDA's content, or a NO if it does not.
+----------

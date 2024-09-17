@@ -1,6 +1,6 @@
 import os
 # set available gpu's
-os.environ["CUDA_VISIBLE_DEVICES"] = "4"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 import evo_functions as evo
 
@@ -15,7 +15,7 @@ best_prompt, best_score_iterations = evo.evo_alg_2(task = "SemEval",
                                                                 sampling_T = 10.0,
                                                                 patience = 10,
                                                                 max_iter = 200,
-                                                                data_size = 200, # number of examples where the prompts are evaluate 0 means all
+                                                                data_size = 10, # number of examples where the prompts are evaluate 0 means all
                                                                 task_w_one_shot = False,
                                                                 task_w_self_reasoning = False,
                                                                 task_w_highlight = False,

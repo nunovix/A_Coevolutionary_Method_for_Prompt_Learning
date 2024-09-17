@@ -1,0 +1,12 @@
+0->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs detail the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or making a comparative analysis of two CTRs. For entailment validation, the statement
+----------
+1->Analyze Clinical Trial Reports (CTRs) to evaluate the validity of clinical statements. CTRs contain four key sections: (1) ELIGIBILITY CRITERIA, (2) INTERVENTION, (3) RESULTS, and (4) ADVERSE EVENTS. Determine if statements accurately reflect the content of these sections or compare findings between two CTRs.
+----------
+2->Examine Clinical Trial Reports (CTRs) to verify the accuracy of clinical statements. CTRs are structured into four main sections: (1) Eligibility Criteria, (2) Treatment Protocol, (3) Outcomes, and (4) Adverse Events. Assess the truthfulness of clinical claims by carefully comparing them with the relevant parts of the CTRs, ensuring a thorough and scientifically rigorous evaluation.
+----------
+3->Examine Clinical Trial Reports (CTRs) to ascertain the accuracy of expert statements regarding eligibility criteria, interventions, results, and adverse events. Assess whether these statements are consistent with the information presented in the respective sections of a single CTR or when comparing two CTRs.
+----------
+4->Analyze Clinical Trial Reports (CTRs) to verify the accuracy of clinical statements. CTRs are structured into four main sections: (1) ELIGIBILITY CRITERIA, (2) INTERVENTION, (3) RESULTS, and (4) ADVERSE EVENTS. Assess whether statements correctly represent the information in these sections or compare results between two CTRs.
+----------
+5->Examine Clinical Trial Reports (CTRs) to ascertain the accuracy of clinical statements made by experts in the field. CTRs are structured into four critical components: (1) ELIGIBILITY CRITERIA, (2) INTERVENTION, (3) RESULTS, and (4) ADVERSE EVENTS. Assess whether the expert
+----------

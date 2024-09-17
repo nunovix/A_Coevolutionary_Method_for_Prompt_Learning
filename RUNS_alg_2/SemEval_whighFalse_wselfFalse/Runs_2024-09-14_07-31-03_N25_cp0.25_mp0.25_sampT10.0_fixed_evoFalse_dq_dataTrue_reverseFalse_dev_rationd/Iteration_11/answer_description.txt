@@ -1,0 +1,8 @@
+0->s accuracy by comparing it with the CTR descriptions, focusing on medical terms, numerical data, and context. Address any uncertainties or missing details. Respond with 
+----------
+1->Evaluate the accuracy of the medical claim by meticulously examining the Clinical Treatment Reports (CTRs), emphasizing medical terminology, numerical data, and situational context. Resolve any ambiguities or information deficiencies. Render a definitive YES or NO judgment on the claim's veracity.
+----------
+2->Carefully evaluate the provided Clinical Treatment Reports (CTRs) to verify the accuracy of the stated medical claim. Ensure a meticulous examination of medical terminology, the exactness of numerical data, and the context in which the treatment was administered. Address any uncertainties or gaps in the information to conclusively determine the veracity of the medical claim.
+----------
+3->Carefully scrutinize the provided Clinical Treatment Reports (CTRs) to ascertain the veracity of the stated medical claim. Pay particular attention to the use of medical terminology, the precision of numerical data, and the context within which the treatment was administered. Resolve any ambiguities or gaps in information, and conclusively determine whether the medical claim is accurate or inaccurate.
+----------

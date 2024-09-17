@@ -1,0 +1,18 @@
+0->Consider the problem of assessing semantic entailment connections between distinct sections of Clinical Trial Reports (CTRs) and statements put forth by clinical domain experts. To establish entailment, statements should be supported by the CTR information, not contradicting any of the provided descriptions. In brief, CTRs elucidate the procedures and findings of clinical trials, encompassing four sections: (1) ELIGIBILITY CRITERIA specifying conditions for patient inclusion, (2) INTERVENTION detailing treatments from different patient cohorts, (3) RESULTS summarizing the participant statistics and the trial outcomes, and (4) ADVERSE EVENTS listing observed signs and symptoms. Statements make claims about the information within these sections, either for a single CTR or comparing two CTRs.
+----------
+1->Analyze Clinical Trial Reports (CTRs) to evaluate the validity of clinical statements. CTRs encompass four key sections: (1) ELIGIBILITY CRITERIA, (2) INTERVENTION, (3) RESULTS, and (4) ADVERSE EVENTS. Determine the accuracy of claims regarding the content of these sections, whether they pertain to a single CTR or involve a comparative analysis between two.
+----------
+2->Examine Clinical Trial Reports (CTRs) meticulously to ascertain the veracity of clinical assertions, confirming their foundation in the provided documentation.
+----------
+3->Carefully review Clinical Trial Reports to verify the accuracy of clinical claims, ensuring they are supported by the documentation.
+----------
+4->Evaluate the semantic links between clinical trial reports (CTRs) and expert statements, ensuring the statements are substantiated by the CTR content and do not conflict with the information provided. CTRs detail trial procedures and results, divided into four parts: (1) Eligibility Criteria for patient selection, (2) Intervention details for various cohorts, (3) Results with participant data and outcomes, and (4) Adverse Events recorded during the trial. Assess claims related to a single CTR or between two CTRs.
+----------
+5->Carefully review Clinical Trial Reports to verify the accuracy of clinical claims, ensuring they are supported by the documentation. Assess effectiveness and safety of new treatments by examining the ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS sections of each report.
+----------
+6->Evaluate the validity of clinical assertions derived from specific segments within Clinical Trial Reports (CTRs). CTRs systematically organize trial procedures and outcomes into four segments: (1) Eligibility Criteria for participant selection, (2) Intervention Details including treatment nature, dosage, frequency, and duration, (3) Results Overview summarizing participant demographics, outcome metrics, units of measurement, and conclusions, and (4) Adverse Events documenting unanticipated reactions or side effects. Assess whether statements about these segments are supported by the CTR information and do not contradict it.
+----------
+7->Review Clinical Trial Reports (CTRs) to confirm the accuracy of clinical statements, particularly in the ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS sections. Verify that expert claims align with the CTR data and are consistent with the descriptions.
+----------
+8->Examine Clinical Trial Reports meticulously to confirm the validity of all clinical assertions, making certain that each claim is substantiated by corresponding evidence within the documents.
+----------

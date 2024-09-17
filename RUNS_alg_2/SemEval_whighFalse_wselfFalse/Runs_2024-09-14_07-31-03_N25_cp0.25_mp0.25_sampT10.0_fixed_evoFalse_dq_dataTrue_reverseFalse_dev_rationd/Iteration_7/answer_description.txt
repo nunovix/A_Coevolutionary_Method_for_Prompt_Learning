@@ -1,0 +1,12 @@
+0->Check the statement's validity based on the clinical trial report data, providing a YES or NO response.
+----------
+1->s accuracy by comparing it with the CTR descriptions, focusing on medical terms, numerical data, and context. Address any uncertainties or missing details. Respond with 
+----------
+2->Assess the statement's validity by cross-referencing it with clinical trial report data, ensuring alignment with medical terminology, numerical evidence, and contextual relevance. Resolve any ambiguities or data gaps. Provide a definitive YES or NO.
+----------
+3->Evaluate the accuracy of the medical claim by meticulously examining the Clinical Treatment Reports (CTRs), emphasizing medical terminology, numerical data, and situational context. Resolve any ambiguities or information deficiencies. Render a definitive YES or NO judgment on the claim's veracity.
+----------
+4->Assess the validity of the medical statement by thoroughly reviewing the Clinical Treatment Reports (CTRs), focusing on medical terminology, quantitative data, and context. Address any uncertainties or gaps in information. Conclude with a clear YES or NO verdict on the statement
+----------
+5->Carefully scrutinize the Clinical Treatment Reports (CTRs) for accuracy in medical terminology, numerical data, and contextual relevance. Resolve any uncertainties or gaps in information. Cross-reference the claims made in the CTRs with supporting evidence from relevant clinical studies, using precise medical terminology, quantitative data, and the specific case at hand. Clarify any ambiguities or insufficient details. Conclude with a definitive YES or NO, confirming the medical claim's validity.
+----------

@@ -1,0 +1,16 @@
+0->s accuracy by comparing it with the CTR descriptions, focusing on medical terms, numerical data, and context. Address any uncertainties or missing details. Respond with 
+----------
+1->Examine the Clinical Treatment Reports (CTRs) to confirm the medical claim
+----------
+2->Evaluate the precision of the provided summary by cross-referencing it with the original Clinical Trial Results (CTR) document. Pay particular attention to the accuracy of medical terminology, the representation of numerical data, and the overall context. Identify and rectify any ambiguities or omissions present in the summary.
+----------
+3->Evaluate the summary's precision by cross-referencing it with the original content, ensuring medical terminology, numerical accuracy, and scenario specifics are clear and unambiguous.
+----------
+4->Cross-examine the summary's precision against the original Clinical Trial Results document, ensuring medical terminology accuracy, numerical data representation, and contextual integrity. Rectify any ambiguities or omissions to refine the summary.
+----------
+5->Enhance the AI system's accuracy by conducting a thorough comparison between its output and the provided Clinical Terminology (CTR) descriptions. Pay particular attention to the precision of medical terminology, the correctness of numerical data, and the overall contextual relevance. Ensure that all uncertainties or gaps in information are identified and addressed.
+
+RESULT: 
+
+The rephrased instruction now clearly outlines the necessary steps to improve the AI system's performance. It specifies the areas of focus (medical terminology, numerical data, and context) and emphasizes the importance of resolving any uncertainties or missing details.
+----------

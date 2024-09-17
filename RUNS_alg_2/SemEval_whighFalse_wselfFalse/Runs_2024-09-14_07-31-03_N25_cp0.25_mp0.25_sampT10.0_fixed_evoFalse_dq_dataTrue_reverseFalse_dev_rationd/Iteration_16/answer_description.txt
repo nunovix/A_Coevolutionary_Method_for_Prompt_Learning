@@ -1,0 +1,8 @@
+0->s accuracy by comparing it with the CTR descriptions, focusing on medical terms, numerical data, and context. Address any uncertainties or missing details. Respond with 
+----------
+1->Examine the Clinical Treatment Reports (CTRs) to confirm the medical claim
+----------
+2->Evaluate the precision of the provided summary by cross-referencing it with the original Clinical Trial Results (CTR) document. Pay particular attention to the accuracy of medical terminology, the representation of numerical data, and the overall context. Identify and rectify any ambiguities or omissions present in the summary.
+----------
+3->Evaluate the precision of the summary by contrasting it with the original CTR content, paying special attention to medical terminology, quantitative information, and situational context. Clarify any ambiguities or absent specifics.
+----------

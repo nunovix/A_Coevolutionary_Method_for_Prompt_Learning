@@ -3232,8 +3232,7 @@ def update_population_and_prompts(population):
 
 # function to remove duplicate and remap
 def remove_duplicates_and_remap(population):
-    for key, value in population.items():
-        print(f"{key}-->{value}\n")
+
     prompt_dict = population['prompts_dict']
     history = population['history']
     prompts = population['prompts']
@@ -3270,8 +3269,6 @@ def remove_duplicates_and_remap(population):
     population['history'] = history
     population['prompts'] = prompts
 
-    for key, value in population.items():
-        print(f"{key}-->{value}\n")
     return population
 
 # function to evaluate the best prompt obtained after the evolutionary algorithm

@@ -1,0 +1,4 @@
+Macro F1 score: [0.617351239561245]
+F1 scores: [{'Contradiction': 0.7930218068535826, 'Entailment': 0.44168067226890756}]
+Confusion matrix: [array([[3182,  477],
+       [1184,  657]])]

@@ -1,0 +1,16 @@
+0->Provide a YES or NO response indicating the statement's validity based on the information presented in the CTR descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully assessing numeric quantities and other qualifiers, and addressing any ambiguities or gaps in the provided information.
+----------
+1->Determine whether the statement accurately reflects the content of the Clinical Trial Reports (CTRs) by evaluating the medical terms, context, numerical data, and resolving any uncertainties or missing details.
+----------
+2->Evaluate the accuracy of the given assertion by comparing it with the content of the CTR summaries. Interpret medical terms and context, examine numerical data and qualifiers, and resolve any uncertainties or missing details. Respond with 'Affirmative' or 'Negative'.
+----------
+3->Evaluate the accuracy of a given statement by cross-referencing it with the content of the Clinical Trial (CTR) descriptions. Carefully analyze the medical terminology, numerical data, and qualifiers within both the report and the statement. Ensure that any uncertainties or missing information are resolved before determining the statement's validity. Provide a definitive YES if the statement aligns with the information from the CTR descriptions, or a definitive NO if it does not.
+
+RESULT OF REPHRASED INSTRUCTION:
+
+The rephrased instruction now clearly outlines the process of validating a statement against the CTR descriptions. It emphasizes the need for a thorough examination of medical terms, numbers, and qualifiers, as well as the importance of resolving any ambiguities or information gaps. This ensures that the AI system has a precise and actionable directive for assessing the statement's validity.
+----------
+4->Assess the statement's validity by comparing it with the Clinical Trial Reports (CTRs), focusing on medical terminology, context, numerical data, and resolving uncertainties or missing details. Provide a concise 'Affirmative' or 'Negative' response.
+----------
+5->Assess the veracity of the given statement by cross-referencing with Clinical Trial Reports, scrutinizing medical terms, context relevance, numerical accuracy, and addressing any ambiguities or data gaps. Respond succinctly with YES or NO.
+----------

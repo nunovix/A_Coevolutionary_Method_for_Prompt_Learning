@@ -1,0 +1,14 @@
+0->Now, generate a very concise summary of the provided TOS section using straightforward language. No additional explanations or extra information should be included. Focus on key points like user obligations, service limitations, and important restrictions. Ensure the summary is brief and easy to understand.
+----------
+1->Make a minimal summary of the TOS section in just 1 or 2 sentences. Avoid adding any extra content. Use clear, informal language to explain the key points about the responsibilities, the service conditions, and any penalties. Ensure all the info is directly from the TOS.
+----------
+2->Now output only the short summary. Remember to make it very concise and straightforward. It should not be longer than 1-2 sentences.
+----------
+3->Refine the directive for improved AI task performance, prioritizing clarity and directness. The revised instruction must be brief, limited to 1-2 sentences, and unambiguous.
+----------
+4->Condense the task description into a clear, concise summary of 1-2 sentences, ensuring it
+----------
+5->Summarize the Terms of Service (TOS) by clearly stating user responsibilities, service coverage, and key limitations in one or two sentences, using straightforward language.
+----------
+6->Condense the User Agreement into a concise overview, highlighting obligations of the user, the scope of services provided, and critical restrictions, using plain language.
+----------

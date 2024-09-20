@@ -56,21 +56,24 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
                                                 task_w_2_labels = True, #for contract nli
                                                 use_optimized_evo_prompts = False,
                                                 use_data_sorted_by_dq = False,
+                                                use_data_clusters = False,
                                                 ):
 
     if task_name == 'SemEval':
         prompts_path = 'INITIAL_PROMPTS/SemEval'
-        data_expanded = extract_SemEval_data(extract_examples = w_one_shot, use_data_sorted_by_dq = use_data_sorted_by_dq)
+        data_expanded = extract_SemEval_data(extract_examples = w_one_shot, use_data_sorted_by_dq = use_data_sorted_by_dq, 
+                                             use_data_clusters=use_data_clusters)
         trie = get_Marisa_Trie(task_name, tokenizer)
 
     elif task_name == 'ContractNLI':
         prompts_path = 'INITIAL_PROMPTS/ContractNLI'
-        data_expanded = extract_ContractNLI_data(task_w_2_labels=task_w_2_labels, use_data_sorted_by_dq = use_data_sorted_by_dq)
+        data_expanded = extract_ContractNLI_data(task_w_2_labels=task_w_2_labels, use_data_sorted_by_dq = use_data_sorted_by_dq,
+                                                 use_data_clusters=use_data_clusters)
         trie = get_Marisa_Trie(task_name, tokenizer, task_w_2_labels=task_w_2_labels)
 
     elif task_name == 'MEDIQASUM':
         prompts_path = 'INITIAL_PROMPTS/MEDIQASUM'
-        data_expanded = extract_MEDIQASUM_data(retrieve_similar_examples = w_one_shot, use_data_sorted_by_dq = use_data_sorted_by_dq)
+        data_expanded = extract_MEDIQASUM_data(retrieve_similar_examples = w_one_shot, use_data_sorted_by_dq = use_data_sorted_by_dq, use_data_clusters=use_data_clusters)
         trie = None
 
     elif task_name == 'LEXSUM':
@@ -80,7 +83,7 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
 
     elif task_name == 'LegalSumTOSDR':
         prompts_path = 'INITIAL_PROMPTS/LegalSumTOSDR'
-        data_expanded = extract_LegalSumTOSDR_data(use_data_sorted_by_dq = use_data_sorted_by_dq)
+        data_expanded = extract_LegalSumTOSDR_data(use_data_sorted_by_dq = use_data_sorted_by_dq, use_data_clusters=use_data_clusters)
         trie = None
 
     elif task_name == 'hyper_mutation':
@@ -282,10 +285,14 @@ def extract_SemEval_data(folder = 'DATASETS/SemEval_data',
                          use_retrieves_sentences_files = True,
                          retrieve_sentences = True,
                          save_retrieved_sentences = True,
-                         use_data_sorted_by_dq = False):
+                         use_data_sorted_by_dq = False,
+                         use_data_clusters = False,
+                         ):
     
     if use_data_sorted_by_dq == True:
         file_path = "DATASETS/DATA_QUALITY/SemEval_data_quality.json"
+    elif use_data_clusters == True:
+        file_path = "DATASETS/DATA_QUALITY_w_CLUSTERS/SemEval.json"
     else:
         file_path = os.path.join(folder, f"{type}_w_retrieved.json")
 
@@ -473,10 +480,13 @@ def extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data',
                              save_retrieved_sentences = True,
                              task_w_2_labels = True, # for the experience with the oracle spans the results in the task's paper are only reported with 2 classes, excluding the NotMentioned one. that's why this flag is needed,
                              use_data_sorted_by_dq = False,
+                             use_data_clusters = False,
                              ):
 
     if use_data_sorted_by_dq == True:
         file_path = "DATASETS/DATA_QUALITY/ContractNLI_data_quality.json"
+    elif use_data_clusters == True:
+        file_path = "DATASETS/DATA_QUALITY_w_CLUSTERS/ContractNLI.json"
     else:
         file_path = os.path.join(folder, f"{type}_w_retrieved_task_w_2_labels_False.json")
 
@@ -1313,10 +1323,13 @@ def extract_MEDIQASUM_data(folder_name='DATASETS/MEDIQASUM_data',
                            retrieve_similar_examples = True,
                            save_retrieved = True,
                            use_data_sorted_by_dq = False,
+                           use_data_clusters = False,
                            ):
 
     if use_data_sorted_by_dq == True:
         file_path = "DATASETS/DATA_QUALITY/MEDIQASUM_data_quality.json"
+    elif use_data_clusters ==True:
+        file_path = "DATASETS/DATA_QUALITY_w_CLUSTERS/MEDIQASUM.json"
     else:
         file_path = os.path.join(folder_name, f"{type}_w_retrieved.json")
 
@@ -1689,9 +1702,12 @@ def extract_LegalSumTOSDR_data(folder_name='DATASETS/LegalSumTOSDR_data',
                                retrieve_similar_examples = True,
                                save_retrieved = True,
                                use_data_sorted_by_dq = False,
+                               use_data_clusters = False,
                                ):
     if use_data_sorted_by_dq == True:
         file_path = "DATASETS/DATA_QUALITY/LegalSumTOSDR_data_quality.json"
+    elif use_data_clusters == True:
+        file_path = "DATASETS/DATA_QUALITY_w_CLUSTERS/LegalSumTOSDR.json"
     else:
         file_path = os.path.join(folder_name, f"{type}_w_retrieved.json")
 
@@ -2739,21 +2755,22 @@ def create_root_folder(task,
                        reverse_dq = 'nd',
                        task_w_one_shot = 'nd',
                        keep_dev_ratio = 'nd',
-                       data_size=0
+                       data_size=0,
+                       use_data_clusters = 'nd',
                        ):
     # Format: Runs_YYYY-MM-DD_HH-MM-SS
     if alg=='alg_2':
         if task == 'SemEval':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}")
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}")
         elif task == 'ContractNLI':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}")
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}")
         elif task == 'MEDIQASUM' or task == 'LEXSUM':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}") 
+            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}") 
         elif task == 'LegalSumTOSDR':
             if task_w_one_shot == True:
-                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woneshot{task_w_one_shot}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}")  
+                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woneshot{task_w_one_shot}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}")  
             else:
-                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}")  
+                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}")  
         elif task == 'hyper_crossover' or task == 'hyper_mutation':
             folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}")
 
@@ -3624,6 +3641,7 @@ def evo_alg_2(task,
               keep_dev_ratio = False,
               reverse_dq = False,
               data_dist = None,
+              use_data_clusters = False,
               ): 
     
     # load model and tokenizer
@@ -3640,8 +3658,17 @@ def evo_alg_2(task,
                                                                                                                                                         task_w_2_labels = task_w_2_labels,
                                                                                                                                                         use_optimized_evo_prompts = use_optimized_evo_prompts,
                                                                                                                                                         use_data_sorted_by_dq = use_data_sorted_by_dq,
+                                                                                                                                                        use_data_clusters=use_data_clusters
                                                                                                                 
-                                                                                                                                                        )
+                                                                                                                                )
+    if use_data_clusters:
+        cluster_counter = [2] * 100
+        data_from_clusters = []
+        for ex in data_expanded:
+            if cluster_counter[ex['cluster']] > 0:
+                data_from_clusters.append(ex)
+                cluster_counter[ex['cluster']] -= 1
+        data_expanded = data_from_clusters
     
     # keep data balanced if dq
     if use_data_sorted_by_dq == True:
@@ -3728,6 +3755,7 @@ def evo_alg_2(task,
                                             reverse_dq = reverse_dq,
                                             keep_dev_ratio = keep_dev_ratio,
                                             data_size = data_size,
+                                            use_data_clusters = use_data_clusters,
                                             )
             
             if new_evo_prompt_format == True:

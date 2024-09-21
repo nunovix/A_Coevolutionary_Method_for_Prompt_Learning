@@ -1,0 +1,14 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->Indicate with either YES or NO whether the statement is valid based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->Review the provided Clinical Trial Report (CTR) descriptions. Determine if the statement in question aligns with the information within the CTRs. If the statement is corroborated by the CTR descriptions and does not oppose the given data, respond with "YES". If the statement is not supported or contradicts the CTR descriptions, respond with "NO".
+----------
+3->Assess the accuracy of the assertions made about Clinical Trial Report (CTR) summaries. Provide your conclusion.
+----------
+4->Examine the summaries of Clinical Trial Reports (CTRs). Assess whether the assertion in question is consistent with the content of the CTR summaries. If the assertion is confirmed by the CTR summaries and does not conflict with the provided information, reply with "CONFIRMED". If the assertion is not substantiated or contradicts the CTR summaries, reply with "UNCONFIRMED".
+----------
+5->Examine the summaries of Clinical Trial Reports (CTRs). Assess whether the claim under scrutiny is consistent with the content of the CTR summaries. If the claim is substantiated by the CTR summaries and does not conflict with the presented data, reply with "ACCEPTED". If the claim is unsubstantiated or contradicts the CTR summaries, reply with "REJECTED".
+----------
+6->Evaluate if the given assertion aligns with the content of the Clinical Trial Report (CTR). Affirm with 'YES' if the assertion is corroborated by the CTR details, ensuring it does not oppose the existing data.
+----------

@@ -1,4 +1,0 @@
-
-
-Evaluate the semantic consistency between clinical domain expert statements and corresponding sections of Clinical Trial Reports (CTRs). Expert statements must harmonize with trial data, be supported within the CTR, and avoid contradicting provided descriptions. CTRs encompass four parts: Eligibility Criteria, Intervention, Results, and Adverse Events. Eligibility Criteria delineate patient prerequisites for trial inclusion, Intervention outlines treatment specifics such as type, dosage, frequency, and duration, Results offer participant statistics, outcome measures, units, and conclusions, and Adverse Events enumerate observed signs and symptoms. Expert statements represent declarative sentences positing assertions regarding CTR data, applicable to an individual report or comparative study.
-----------

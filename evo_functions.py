@@ -1770,7 +1770,9 @@ def prompt_preds_legalsumtosdr(data_expanded,
         doc = sample['original_text']
 
         if task_w_one_shot == True and example_description != '' and example_description != ' ':
-            general_example = """Example 1: "Your personal data is used for advertising" \nExample 2: "This service reserves the right to disclose your personal information without notifying you." " """
+            #general_example = """Example 1: "Your personal data is used for advertising" \nExample 2: "This service reserves the right to disclose your personal information without notifying you." " """
+
+            general_example = """Text: "We collect browsing information – such as IP address and location, date and time stamp, user agent, Quora cookie ID (if applicable), URL, unique advertising or content identifiers (if applicable), and time zone, and other information about user activities on the Quora Platform, as well as on third-party sites and services that have embedded our Quora pixels (“Pixels”) widgets, plug-ins, buttons, or related services."\nSummary: "They store data on you even if you did not interact with the service" """
 
             sentence = f"""[INST]{sentence}\n\n{doc_description}\n\n"{doc}"\n\n{example_description}\n\n{general_example}\n\n{answer_description}[/INST]\n\nSummary:"""
         else:
@@ -2761,16 +2763,28 @@ def create_root_folder(task,
     # Format: Runs_YYYY-MM-DD_HH-MM-SS
     if alg=='alg_2':
         if task == 'SemEval':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}")
-        elif task == 'ContractNLI':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}")
-        elif task == 'MEDIQASUM' or task == 'LEXSUM':
-            folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}") 
-        elif task == 'LegalSumTOSDR':
-            if task_w_one_shot == True:
-                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woneshot{task_w_one_shot}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}")  
+            if use_data_sorted_by_dq == True or use_data_clusters==True:
+                folder_name = datetime.now().strftime(f"RUNS_{alg}_DQ/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}")
             else:
-                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}")  
+                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}")
+
+        elif task == 'ContractNLI':
+            if use_data_sorted_by_dq == True or use_data_clusters==True:
+                folder_name = datetime.now().strftime(f"RUNS_{alg}_DQ/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}")
+            else:
+                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}")
+
+        elif task == 'MEDIQASUM' or task == 'LEXSUM':
+            if use_data_sorted_by_dq == True or use_data_clusters==True:
+                folder_name = datetime.now().strftime(f"RUNS_{alg}_DQ/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}") 
+            else:
+                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}") 
+        elif task == 'LegalSumTOSDR':
+            if use_data_sorted_by_dq == True or use_data_clusters==True:
+                folder_name = datetime.now().strftime(f"RUNS_{alg}_DQ/{task}_woneshot{task_w_one_shot}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}")
+            else:
+                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woneshot{task_w_one_shot}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}")
+
         elif task == 'hyper_crossover' or task == 'hyper_mutation':
             folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}")
 

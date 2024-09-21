@@ -1,6 +1,6 @@
 import os
 # set available gpu's
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 import evo_functions as evo
 

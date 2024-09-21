@@ -1,0 +1,8 @@
+0->Review the provided Clinical Trial Report (CTR) descriptions. Determine if the statement in question aligns with the information within the CTRs. If the statement is corroborated by the CTR descriptions and does not oppose the given data, respond with "YES". If the statement is not supported or contradicts the CTR descriptions, respond with "NO".
+----------
+1->Evaluate the summaries of Clinical Trial Reports (CTRs) to determine if the statement in question aligns with the CTR content. Respond with 
+----------
+2->Assess whether the given statement corresponds with the information presented in the Clinical Trial Reports (CTRs) and reply with 
+----------
+3->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------

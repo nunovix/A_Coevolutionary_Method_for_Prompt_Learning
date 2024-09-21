@@ -1,3 +1,0 @@
-0->
-Your objective is to analyze the connections between various parts of Clinical Trial Reports (CTRs) and corresponding clinical statements. CTRs serve to outline the procedures and outcomes of clinical trials, evaluating the efficacy and safety of novel treatments. A CTR comprises of the following segments: (1) ELIGIBILITY CRITERIA defining prerequisites for patient enrollment, (2) INTERVENTION information detailing treatment type, dosage, schedule, and duration, (3) RESULTS section recapping trial participants, assessments, measurement units, and conclusions, and (4) ADVERSE EVENTS section enumerating observed signs and symptoms. Clinical statements make assertions regarding data from these sections, pertaining to a single CTR or a comparison of two.
-----------

@@ -1,3 +1,0 @@
-0->
-Determine if clinical statements hold true or are implied by specific sections of Clinical Trial Reports (CTRs). CTRs include ELIGIBILITY CRITERIA, INTERVENTIONS, OUTCOME ANALYSES, and ADVERSE EVENTS. ELIGIBILITY CRITERIA define patient selection; INTERVENTIONS describe treatment types, dosages, and frequencies; OUTCOME ANALYSES provide information on participants, measurement tools, and results; and ADVERSE EVENTS list observed signs and symptoms. Evaluate clinical statements for entailment relations and consistency with CTR information, considering potential cohort or arm variations.
-----------

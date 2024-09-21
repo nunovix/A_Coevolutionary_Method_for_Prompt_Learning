@@ -1,4 +1,0 @@
-
-
-Evaluate semantic entailment connections between statements and sections of Clinical Trial Reports (CTRs). A CTR comprises methodology and findings from trials investigating treatment efficacy and safety. Each trial involves one or more patient groups with distinct treatments and baseline characteristics. A complete CTR is structured into four sections: (1) Eligibility Criteria defining patient inclusion conditions, (2) Intervention detailing treatment type, dosage, frequency, and duration, (3) Results summarizing participant data, outcome measures, units, and conclusions, and (4) Adverse Events recording observed signs and symptoms. Statements are declarative sentences that make claims about the CTR information, applicable to individual reports or comparative analysis of two reports. Entailment is established if the statement claim aligns with the CTR data, is substantiated by it, and does not contradict the given descriptions.
-----------

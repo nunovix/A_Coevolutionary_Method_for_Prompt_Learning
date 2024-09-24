@@ -27,6 +27,7 @@ def text_semeval(example: dict) -> str:
 # saves data with cluster no. to DATASETS/DATA_QUALITY_w_CLUSTERS
 def clustering(task: str,
                clustering_method: str,
+               n_clusters: int = 100,
                save: bool = False):
     
     if task == 'SemEval':
@@ -51,7 +52,6 @@ def clustering(task: str,
     embeded_texts = embed_texts(texts)
 
     if clustering_method == 'kmeans':
-        n_clusters = 100  
 
         kmeans = KMeans(n_clusters=n_clusters, random_state=42)
         kmeans.fit(embeded_texts)
@@ -101,7 +101,7 @@ def clustering(task: str,
         example['cluster'] = int(cluster)
     
     if save == True:
-        file_name = 'DATASETS/DATA_QUALITY_w_CLUSTERS/' + f"{task}.json"
+        file_name = 'DATASETS/DATA_QUALITY_w_CLUSTERS/' + f"{task}_{n_clusters}clusters.json"
         with open(file_name, 'w') as json_file:
             json.dump(data, json_file, indent=4)
         

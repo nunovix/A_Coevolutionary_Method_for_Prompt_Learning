@@ -1,0 +1,18 @@
+0->You are tasked with identifying support relationships between sections of Non-Disclosure Agreements (NDAs) and statements concerning confidentiality obligations. NDAs detail the framework for the exchange and protection of sensitive information, including what is considered confidential, usage obligations, agreement duration, exclusions, etc. Statements make claims about these contents, and your task is to assess if these claims are supported or contradicted in the NDA.
+----------
+1->Evaluate semantic entailment between sections of Non-Disclosure Agreements (NDAs) and statements related to the confidentiality obligations they impose. NDAs govern the sharing and protection of sensitive data, outlining the scope of confidential information, obligations, agreement lifespan, and exclusions. Assess whether the claims made in a statement align with, or contradict, the information covered in a non-disclosure agreement.
+----------
+2->Consider the challenge of assessing semantic entailment between distinct sections of Non-Disclosure Agreements (NDAs) and related statements. NDAs outline procedures and obligations for protecting confidential information, including its scope, usage obligations, duration of protection, and exclusions. Evaluate whether the statements' assertions about the NDA are supported or contradicted by the agreement's descriptions.
+----------
+3->Evaluate whether the information disclosed aligns with or contradicts the confidentiality terms outlined in the Non-Disclosure Agreement (NDA). Concentrate on discerning the consistency or inconsistency of the statement with the NDA's stipulations.
+----------
+4->Evaluate the semantic entailment between confidentiality clauses in Non-Disclosure Agreements (NDAs) and corresponding statements, ensuring consistency with the NDAs
+----------
+5->Conduct a thorough analysis to determine the consistency or inconsistency of confidentiality statements with the stipulations of the Non-Disclosure Agreement (NDA).
+----------
+6->Assess the consistency between confidentiality clauses in Non-Disclosure Agreements (NDAs) and corresponding assertions about data privacy responsibilities. NDAs define the parameters for disclosing and safeguarding private information, detailing the extent of confidential data, duties, duration of the agreement, and exceptions. Determine if the assertions in a statement are in harmony with or at odds with the content of an NDA.
+----------
+7->Analyze whether the statement aligns with or contradicts the NDA, ensuring the essence of both the statement and the NDA is captured.
+----------
+8->Evaluate whether a specific statement adheres to or violates the confidentiality terms outlined in a Non-Disclosure Agreement (NDA). This assessment should concentrate on determining the consistency of the statement with the NDA's confidentiality clauses, including the definition of confidential information, the duration of the confidentiality obligation, and any exceptions or exclusions that may apply.
+----------

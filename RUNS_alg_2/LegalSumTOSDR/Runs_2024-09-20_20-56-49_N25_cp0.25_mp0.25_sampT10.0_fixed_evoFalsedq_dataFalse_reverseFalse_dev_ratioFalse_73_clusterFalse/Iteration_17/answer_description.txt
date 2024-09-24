@@ -1,0 +1,15 @@
+0->Now output only the short summary. Remember to make it very concise and straightforward. It should not be longer than 1-2 sentences.
+----------
+1->Provide a succinct summary of the given task, ensuring clarity and brevity within 1-2 sentences.
+----------
+2->Craft a succinct summary, no longer than two sentences, capturing the essence of the objectives and methods outlined in the provided text, tailored for expert comprehension.
+
+RESULT:
+
+The rephrased instruction calls for the creation of a brief yet informative summary that encapsulates the main goals and techniques described in the original text, aimed at an audience with specialized knowledge in the relevant field.
+----------
+3->Craft a brief, clear summary of no more than 1-2 sentences, focusing solely on the essence of the task without additional context.
+
+RESULT: 
+The rephrased instruction emphasizes brevity and clarity, asking for a succinct summary that captures the task's core without extra details.
+----------

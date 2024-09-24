@@ -1,0 +1,10 @@
+0->Determine if the assertion made is in compliance with the stipulations outlined in the Non-Disclosure Agreement (NDA). Provide a definitive YES if the assertion adheres to the NDA
+----------
+1->Assess whether the statement aligns with the Non-Disclosure Agreement (NDA) terms. Confirm compliance with a definitive YES if it meets the NDA criteria.
+----------
+2->Confirm adherence to the Non-Disclosure Agreement (NDA) and respond with 
+----------
+3->Evaluate the provided statement to determine its compliance with the Non-Disclosure Agreement (NDA) terms. If the statement adheres to the NDA criteria, affirm compliance with a definitive YES; otherwise, indicate non-compliance.
+----------
+4->Evaluate the compliance of a given statement with the confidentiality clauses of the Non-Disclosure Agreement (NDA). Provide a definitive 'YES' if the statement adheres to the NDA terms, or 'NO' if it does not.
+----------

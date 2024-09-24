@@ -1,0 +1,10 @@
+0->Answer with YES or NO to the question of whether one can conclude the validity of the statement with basis on the Non-Disclosure Agreement (NDA) information.
+----------
+1->Can the statement be verified as true according to the Non-Disclosure Agreement? YES/NO
+----------
+2->Can the statement's validity be ascertained from the Non-Disclosure Agreement (NDA)? Answer YES if the statement aligns with the NDA; NO if it does not.
+----------
+3->Assess whether the statement in question aligns with the stipulations of the Non-Disclosure Agreement (NDA). Provide a YES if the statement is in accordance with the NDA, or a NO if it contradicts the NDA
+----------
+4->Determine the statement's validity based on the Non-Disclosure Agreement (NDA) by responding with YES if the statement is in accordance with the NDA, or NO if it is not.
+----------

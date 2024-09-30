@@ -1,0 +1,12 @@
+0->copy of [1]  from iteration 1
+----------
+1->copy of [2]  from iteration 2
+----------
+2->copy of [3] followed by mutation using mut prompt {'task_description': 0, 'instruction_description': 0, 'answer_description': 0} from iteration 3
+----------
+3->copy of [2] followed by mutation using mut prompt {'task_description': 4, 'instruction_description': 4, 'answer_description': 4} from iteration 3
+----------
+4->copy of [0] followed by mutation using mut prompt {'task_description': 2, 'instruction_description': 2, 'answer_description': 2} from iteration 4
+----------
+5->copy of [0] followed by mutation using mut prompt {'task_description': 2, 'instruction_description': 2, 'answer_description': 2} from iteration 4
+----------

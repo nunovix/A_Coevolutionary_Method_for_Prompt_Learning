@@ -2000,7 +2000,7 @@ def new_mutate_prompt(prompt,
     mutated = mutated.lstrip()
 
     # Look for pairs of double or single quotes
-    match = re.search(r'["\'](.*?)["\']', mutated)
+    match = re.search(r'"(.*?)"', mutated)
     if match:
         # Get the content between the quotes
         content_between_quotes = match.group(1)
@@ -2103,7 +2103,7 @@ def new_crossover_prompts(prompt_1, prompt_2, combination_prompt_dict, model, to
     combined = combined.lstrip()
 
     # Look for pairs of double or single quotes
-    match = re.search(r'["\'](.*?)["\']', combined)
+    match = re.search(r'"(.*?)"', combined)
     if match:
         # Get the content between the quotes
         content_between_quotes = match.group(1)
@@ -3676,7 +3676,7 @@ def evo_alg_2(task,
                                                                                                                 
                                                                                                                                 )
     if use_data_clusters:
-        cluster_counter = [2] * 100
+        cluster_counter = [100] * 2
         data_from_clusters = []
         for ex in data_expanded:
             if cluster_counter[ex['cluster']] > 0:

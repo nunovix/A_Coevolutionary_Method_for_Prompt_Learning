@@ -1,0 +1,8 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement as valid, based on the information presented in the non-disclosure agreement. Do this by interpreting the legal terminology and the context that is provided in both the NDA and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->Evaluate the statement's validity in relation to the Non-Disclosure Agreement (NDA) by responding with YES if the statement aligns with the NDA's provisions, or NO if it does not. Ensure that your assessment is grounded in the specific terms and conditions outlined in the NDA.
+----------
+2->Evaluate the statement's alignment with the Non-Disclosure Agreement (NDA) by providing a YES if the statement is consistent and supported by the NDA, or a NO if it contradicts or lacks support from the NDA.
+----------
+3->Assess whether the following statement complies with the stipulations of the Non-Disclosure Agreement (NDA). Provide a YES if the statement adheres to the NDA's terms, or a NO if it contravenes them. Base your evaluation strictly on the explicit terms and conditions detailed within the NDA.
+----------

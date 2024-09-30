@@ -1,0 +1,12 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement as valid, based on the information presented in the non-disclosure agreement. Do this by interpreting the legal terminology and the context that is provided in both the NDA and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->Evaluate the statement's validity in relation to the Non-Disclosure Agreement (NDA) by responding with YES if the statement aligns with the NDA's provisions, or NO if it does not. Ensure that your assessment is grounded in the specific terms and conditions outlined in the NDA.
+----------
+2->Assess if the statement complies with the NDA terms. Answer YES or NO.
+----------
+3->Can the validity of the statement be determined from the information in the non-disclosure agreement? Answer YES or NO, by analyzing the legal language and context in both the NDA and the statement, and resolving any ambiguities or information gaps.
+----------
+4->Can you determine the validity of the claim using the details from the confidentiality agreement and the given assertion, by analyzing the legal jargon and context within both documents, and resolving any uncertainties or missing details?
+----------
+5->Assess the alignment of a given statement with the Non-Disclosure Agreement (NDA) by providing a YES if the statement is in compliance with the NDA
+----------

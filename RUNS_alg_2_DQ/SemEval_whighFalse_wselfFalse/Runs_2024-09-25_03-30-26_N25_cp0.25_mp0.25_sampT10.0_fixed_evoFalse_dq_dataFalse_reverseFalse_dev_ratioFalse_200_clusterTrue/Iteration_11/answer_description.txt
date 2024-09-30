@@ -1,0 +1,18 @@
+0->Evaluate the accuracy of the given statement by cross-referencing it with the relevant data extracted from the clinical trial report. Provide a definitive answer in the form of YES if the statement aligns with the report's findings, or NO if it does not.
+----------
+1->Assess the correctness of the given assertion by contrasting it with the CTR summaries, paying special attention to medical terminology, figures, and situational context. Clarify any ambiguities or lacking specifics. Provide a YES if the assertion is consistent with the CTR details, or a NO if it isn't.
+----------
+2->Evaluate the statement's alignment with the clinical trial report's findings. Respond with 'CONFIRMED' if the statement accurately reflects the documented evidence, or 'REFUTED' if there is a contradiction.
+----------
+3->Evaluate the accuracy of the provided statement in relation to the findings of the clinical trial report. Respond with 'YES' if the statement aligns with the report's conclusions, or 'NO' if there is a contradiction.
+----------
+4->Evaluate the accuracy of the given statement by comparing it with the Clinical Trial Report (CTR) summaries, focusing on medical terminology, numerical data, and the context of the situation. Resolve any uncertainties or missing details. Respond with 'YES' if the statement aligns with the CTR details, or 'NO' if it does not. 
+----------
+5->Evaluate the provided assertion against the Clinical Trial Report (CTR) summaries, focusing on medical terminology, numerical data, and the context of the situation. Resolve any uncertainties or insufficiencies. Respond with 'YES' if the assertion aligns with the CTR details, or 'NO' if it does not.
+----------
+6->Evaluate the assertion's accuracy by comparing it with the CTR summaries, focusing on medical terms, numerical data, and the scenario. Resolve any uncertainties or insufficient details. Respond with 'YES' if the assertion aligns with the CTR information, or 'NO' if it does not.
+----------
+7->Assess the statement's validity against the clinical trial report's data. Respond with 'YES' if the statement matches the report's conclusions, or 'NO' if there is a discrep0pancy.
+----------
+8->Carefully evaluate the provided statement against the conclusions of the clinical trial report, ensuring to consider medical terminology, figures, and situational context. If the statement aligns with the report's findings, respond with 'YES'; if it contradicts them, respond with 'NO'. Clarify any ambiguities or lacking specifics in your assessment.
+----------

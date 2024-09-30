@@ -1,0 +1,16 @@
+0->Review Clinical Trial Reports (CTRs) for consistency with expert statements, focusing on eligibility criteria, interventions, results, and adverse events.
+----------
+1->Evaluate the semantic entailment relationships between various segments of Clinical Trial Reports (CTRs) and assertions made by experts in the clinical field. Ensure that these assertions are substantiated by the data within the CTRs and do not conflict with the information provided. Clinical Trial Reports are structured into four key components: (1) ELIGIBILITY CRITERIA, which outline the criteria for patient inclusion, (2) INTERVENTION, detailing the treatments administered across different patient groups, (3) RESULTS, which provide a summary of participant demographics and the outcomes of the trial, and (4) ADVERSE EVENTS, which document any adverse signs or symptoms observed during the trial. Assertions may pertain to a single CTR or draw comparisons between two CTRs.
+----------
+2->Review Clinical Trial Reports (CTRs) for consistency with expert statements, concentrating on eligibility criteria, interventions, results, and adverse events.
+----------
+3->Assess Clinical Trial Reports (CTRs) to ensure they conform to professional agreement on criteria for choosing subjects, therapeutic procedures, results, and disclosed adverse effects.
+----------
+4->Carefully review Clinical Trial Reports (CTRs) to ensure they align with established expert clinical data statements. Pay particular attention to the sections detailing participant eligibility criteria, the specifics of the interventions administered, the outcomes observed, and any reported adverse events.
+----------
+5->Evaluate Clinical Trial Reports (CTRs) for adherence to established subject selection, treatment protocols, outcome reporting, and disclosure of side effects.
+----------
+6->Examine Clinical Trial Reports (CTRs) to ensure alignment with expert consensus, focusing on eligibility criteria, interventions, outcomes, and reported adverse events.
+----------
+7->Evaluate the semantic entailment relationships between various segments of Clinical Trial Reports (CTRs) and assertions made by experts in the clinical field. Ensure that these assertions are substantiated by the data within the CTRs and do not conflict with the information provided. When assessing CTRs, focus on four key components: (1) ELIGIBILITY CRITERIA, which outline the criteria for patient inclusion, (2) INTERVENTION, detailing the treatments administered across different patient groups, (3) RESULTS, which provide a summary of participant demographics and the outcomes of the trial, and (4) ADVERSE EVENTS, which document any adverse signs or symptoms observed during the trial. Assertions may pertain to a single CTR or draw comparisons between two CTRs. Your evaluation should align with professional consensus on criteria for subject selection, therapeutic procedures, reported results, and disclosed adverse effects.
+----------

@@ -1,0 +1,10 @@
+0->Provide a YES or NO response indicating the statement's validity based on the information presented in the CTR descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully assessing numeric quantities and other qualifiers, and addressing any ambiguities or gaps in the provided information.
+----------
+1->Verify the accuracy of the given statement by consulting the relevant clinical trial report.
+----------
+2->Assess the provided statement for its validity and consistency with the Clinical Trial Report (CTR) data. Carefully evaluate the medical terminology, numeric quantities, and qualifiers mentioned in both the statement and the CTR descriptions. Address any ambiguities or gaps in the information, ensuring that the statement accurately reflects the content and descriptions of the CTR. Provide a concise YES or NO response to indicate whether the statement is valid and consistent with the CTR data.
+----------
+3->Evaluate the accuracy of the given assertion by conducting a meticulous review of the information presented in the Clinical Trial Reports (CTRs). This entails a comprehensive analysis of the medical terminology, context, numerical data, and qualifiers found within the CTRs as well as the assertion itself. Resolve any ambiguities or lack of information that may arise during your assessment. Conclude with a clear YES or NO to affirm whether the assertion can be definitively confirmed or refuted based on the evidence from the CTRs.
+----------
+4->Examine the provided statement for correctness by reviewing the corresponding clinical trial documentation.
+----------

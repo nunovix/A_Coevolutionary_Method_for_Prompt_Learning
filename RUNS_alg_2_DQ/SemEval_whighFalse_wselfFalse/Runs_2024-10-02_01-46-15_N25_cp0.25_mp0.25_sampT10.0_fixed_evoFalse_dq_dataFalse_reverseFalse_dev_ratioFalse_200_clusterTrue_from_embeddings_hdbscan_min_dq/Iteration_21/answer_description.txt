@@ -1,0 +1,8 @@
+0->You MUST respond with either YES or NO to indicate if the statement is valid based on the Clinical Trial Report (CTR) information, having determined that the statement is supported by the CTR data, and that it doesn't contradict the provided descriptions.
+----------
+1->Verify whether the statement is consistent with the evidence presented in the Clinical Trial Report (CTR), making sure that the statement is supported by the CTR data and does not contradict the information provided in the report.
+----------
+2->Examine the statement in question to ascertain its alignment with the evidence detailed in the Clinical Trial Report (CTR). Ensure that the statement is corroborated by the CTR data and refrains from presenting any contradictions to the report's information. Provide a definitive YES or NO response to affirm the statement's validity based on the CTR data.
+----------
+3->Evaluate the accuracy of the given statement by cross-referencing it with the findings in the Clinical Trial Report (CTR), confirming that it aligns with the report's conclusions.
+----------

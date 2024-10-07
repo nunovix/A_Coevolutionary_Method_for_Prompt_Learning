@@ -1,0 +1,4 @@
+0->Provide a YES or NO response indicating the statement's validity based on the information presented in the CTR descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully assessing numeric quantities and other qualifiers, and addressing any ambiguities or gaps in the provided information.
+----------
+1->Determine whether the statement aligns with the details given in the Clinical Trial (CTR) summaries. Examine the medical jargon and context in both the summary and the statement, scrutinize numerical data and additional qualifiers, and resolve any uncertainties or missing details.
+----------

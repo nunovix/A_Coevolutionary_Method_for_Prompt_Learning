@@ -1,0 +1,16 @@
+0->You MUST respond with either YES or NO to indicate if the statement is valid based on the Clinical Trial Report (CTR) information, having determined that the statement is supported by the CTR data, and that it doesn't contradict the provided descriptions.
+----------
+1->Assess the clinical trial report's accuracy by examining medical terms and context, evaluating numerical data, and resolving any uncertainties or missing details. Respond with YES or NO.
+----------
+2->Evaluate the correctness of the stated assertion by comparing it with the information provided in the Clinical Trial Report, examining medical terminology, checking numerical figures, and ensuring alignment with the report's narrative. Answer with YES or NO.
+----------
+3->Thoroughly inspect the medical study's precision by examining health-related terms, confirming figures, and resolving any inconsistencies or vagueness. End with a clear affirmation or negation about the study's precision.
+----------
+4->Evaluate the clinical trial report's accuracy and specificity by scrutinizing the data, medical terminology, context, numerical correctness, and clarifying any uncertainties or gaps. Answer with YES or NO.
+----------
+5->Examine the clinical trial report meticulously, ensuring that medical terms are used correctly, numerical data is accurate, and all necessary information is included. Conclude with a clear 'YES' if the report meets all criteria or 'NO' if it does not.
+----------
+6->Carefully assess the accuracy of the provided assertion by thoroughly comparing it with the information presented in the Clinical Trial Report (CTR). Your evaluation should include a detailed examination of medical terminology, a verification of all numerical data, a check for consistency with the report's conclusions, and a confirmation that the assertion neither conflicts with nor strays from the report's narrative. Conclude your assessment with a clear YES or NO to indicate the assertion's validity.
+----------
+7->Carefully review the clinical trial report, focusing on the precision of medical terminology, the validity of numerical data, and the completeness of information. Provide a definitive YES or NO to indicate the report's overall accuracy.
+----------

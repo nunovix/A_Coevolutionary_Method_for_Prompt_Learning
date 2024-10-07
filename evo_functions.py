@@ -57,12 +57,13 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
                                                 use_optimized_evo_prompts = False,
                                                 use_data_sorted_by_dq = False,
                                                 use_data_clusters = False,
+                                                data_clusters_file = None,
                                                 ):
 
     if task_name == 'SemEval':
         prompts_path = 'INITIAL_PROMPTS/SemEval'
         data_expanded = extract_SemEval_data(extract_examples = w_one_shot, use_data_sorted_by_dq = use_data_sorted_by_dq, 
-                                             use_data_clusters=use_data_clusters)
+                                             use_data_clusters=use_data_clusters, data_clusters_file=data_clusters_file)
         trie = get_Marisa_Trie(task_name, tokenizer)
 
     elif task_name == 'ContractNLI':
@@ -287,12 +288,16 @@ def extract_SemEval_data(folder = 'DATASETS/SemEval_data',
                          save_retrieved_sentences = True,
                          use_data_sorted_by_dq = False,
                          use_data_clusters = False,
+                         data_clusters_file = None,
                          ):
     
     if use_data_sorted_by_dq == True:
         file_path = "DATASETS/DATA_QUALITY/SemEval_data_quality.json"
     elif use_data_clusters == True:
-        file_path = "DATASETS/DATA_QUALITY_w_CLUSTERS/SemEval.json"
+        if data_clusters_file == None:
+            file_path = "DATASETS/DATA_QUALITY_w_CLUSTERS/SemEval.json"
+        else:
+            file_path = f"DATASETS/DATA_QUALITY_w_CLUSTERS/SemEval/{data_clusters_file}.json"
     else:
         file_path = os.path.join(folder, f"{type}_w_retrieved.json")
 
@@ -2759,12 +2764,13 @@ def create_root_folder(task,
                        keep_dev_ratio = 'nd',
                        data_size=0,
                        use_data_clusters = 'nd',
+                       data_clusters_file = 'nd',
                        ):
     # Format: Runs_YYYY-MM-DD_HH-MM-SS
     if alg=='alg_2':
         if task == 'SemEval':
             if use_data_sorted_by_dq == True or use_data_clusters==True:
-                folder_name = datetime.now().strftime(f"RUNS_{alg}_DQ/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}")
+                folder_name = datetime.now().strftime(f"RUNS_{alg}_DQ/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}_from_{data_clusters_file}")
             else:
                 folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}")
 
@@ -3656,6 +3662,7 @@ def evo_alg_2(task,
               reverse_dq = False,
               data_dist = None,
               use_data_clusters = False,
+              data_clusters_file = None,
               ): 
     
     # load model and tokenizer
@@ -3672,10 +3679,11 @@ def evo_alg_2(task,
                                                                                                                                                         task_w_2_labels = task_w_2_labels,
                                                                                                                                                         use_optimized_evo_prompts = use_optimized_evo_prompts,
                                                                                                                                                         use_data_sorted_by_dq = use_data_sorted_by_dq,
-                                                                                                                                                        use_data_clusters=use_data_clusters
+                                                                                                                                                        use_data_clusters=use_data_clusters,
+                                                                                                                                                        data_clusters_file = data_clusters_file,
                                                                                                                 
                                                                                                                                 )
-    if use_data_clusters:
+    if use_data_clusters and data_clusters_file == None:
         cluster_counter = [100] * 2
         data_from_clusters = []
         for ex in data_expanded:
@@ -3770,6 +3778,7 @@ def evo_alg_2(task,
                                             keep_dev_ratio = keep_dev_ratio,
                                             data_size = data_size,
                                             use_data_clusters = use_data_clusters,
+                                            data_clusters_file = data_clusters_file,
                                             )
             
             if new_evo_prompt_format == True:
@@ -3945,7 +3954,7 @@ def evo_alg_2(task,
                                                  task_w_self_reasoning = task_w_self_reasoning,
                                                  task_w_oracle_spans=task_w_oracle_spans,
                                                  task_w_full_contract = task_w_full_contract,
-                                                 task_w_2_labels=task_w_2_labels,
+                                                 task_w_2_labels = task_w_2_labels,
                                                  )
 
         if n_top ==0:

@@ -1,0 +1,6 @@
+0->Check the statement's validity based on the clinical trial report data, providing a YES or NO response.
+----------
+1->Evaluate the statement's accuracy using the provided clinical trial report data, and respond with either 'YES' if the statement is accurate or 'NO' if it is not.
+----------
+2->Evaluate the statement's accuracy using the clinical trial report data; respond with YES or NO.
+----------

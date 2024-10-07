@@ -1,0 +1,14 @@
+0->Provide a YES or NO response indicating the statement's validity based on the information presented in the CTR descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully assessing numeric quantities and other qualifiers, and addressing any ambiguities or gaps in the provided information.
+----------
+1->Determine whether the statement accurately reflects the content of the Clinical Trial Reports (CTRs) by evaluating the medical terms, context, numerical data, and resolving any uncertainties or missing details.
+----------
+2->Evaluate the accuracy of a given statement by comparing it with the content of the Clinical Trial (CTR) descriptions. Carefully analyze the medical terminology, context, numerical data, and qualifiers within both the report and the statement. Ensure that you address any uncertainties or missing information to make a definitive YES or NO determination regarding the statement's validity.
+
+RESULT:
+
+The rephrased instruction now clearly outlines the task of validating a statement against the CTR descriptions. It emphasizes the need for a thorough examination of medical terms, context, numbers, and qualifiers, as well as the importance of resolving any uncertainties or information gaps to reach a conclusive YES or NO verdict on the statement's accuracy.
+----------
+3->Assess if the given statement aligns with the information presented in the Clinical Trial Reports (CTRs) by examining the medical terminology, contextual relevance, numerical accuracy, and addressing any ambiguities or absent information.
+----------
+4->Assess the statement's accuracy against the Clinical Trial Reports (CTRs) by examining medical terminology, context, numerical data, and resolving uncertainties or missing details. Respond with 'YES' or 'NO' to affirm the statement's validity, ensuring a thorough interpretation of both the report and the statement, and addressing any ambiguities or information gaps.
+----------

@@ -1,0 +1,14 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->Indicate with either YES or NO whether the statement is valid based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+2->You MUST respond with either YES or NO to indicate if the statement is valid based on the Clinical Trial Report (CTR) information, having determined that the statement is supported by the CTR data, and that it doesn't contradict the provided descriptions.
+----------
+3->Check the statement's validity based on the clinical trial report data, providing a YES or NO response.
+----------
+4->Evaluate the statement's validity against the Clinical Trial Report (CTR) data, ensuring it aligns with the report's findings and descriptions without contradiction. Respond with YES if the statement is substantiated by the CTR, or NO if it is not.
+----------
+5->Respond with either YES or NO to determine if the statement is valid based on the Clinical Trial Report (CTR) descriptions. A response of YES indicates that the statement aligns with the CTR data, does not contradict the provided information, and includes all relevant details from the original instructions.
+----------
+6->Evaluate the statement's validity using the Clinical Trial Report (CTR) data, and respond with a definitive YES or NO. Ensure your assessment considers the presence or absence of key elements mentioned in the statement within the CTR descriptions.
+----------

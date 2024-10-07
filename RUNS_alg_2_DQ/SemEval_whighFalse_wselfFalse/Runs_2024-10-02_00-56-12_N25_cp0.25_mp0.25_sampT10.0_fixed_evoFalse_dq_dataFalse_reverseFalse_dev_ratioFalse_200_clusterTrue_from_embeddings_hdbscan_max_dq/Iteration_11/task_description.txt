@@ -1,0 +1,10 @@
+0->Assess the logical consistency between segments of Clinical Trial Reports (CTRs) and expert clinical statements. CTRs outline trial procedures and results, evaluating new treatments' effectiveness and safety. Expert statements should corroborate or refute claims about specific CTR sections or compare two CTRs. Validate entailment by ensuring statements are substantiated by CTR data and do not conflict with the report's content.
+----------
+1->Evaluate the semantic entailment and logical consistency between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs document the methodology and outcomes of clinical trials, assessing the efficacy and safety of new treatments. Expert statements should either corroborate or refute claims about specific CTR sections or make comparative analyses of two CTRs. For entailment and consistency validation, ensure that the statement's claim is substantiated by the CTR data and does not contradict any information provided in the report.
+----------
+2->Examine the logical consistency and factual agreement among sections of Clinical Trial Reports (CTRs) and associated expert analyses. CTRs detail the methodology and outcomes of clinical trials, assessing the efficacy and safety of novel therapies. Expert analyses should either corroborate or dispute claims made in specific CTR sections or provide comparisons between different CTRs. Ensure that the expert analyses' claims are substantiated by the CTR data and are congruent with the report's narrative.
+----------
+3->Analyze the coherence between Clinical Trial Reports (CTRs) and expert opinions. Verify that expert commentary aligns with or disputes CTR findings on treatment effectiveness and safety, ensuring no contradictions with the reported data.
+----------
+4->Evaluate the consistency and factual agreement between segments of Clinical Trial Reports (CTRs) and expert analyses. Ensure expert commentary either corroborates or critiques specific CTR sections or compares two CTRs, with assertions substantiated by CTR data and aligned with the report's content.
+----------

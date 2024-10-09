@@ -1,9 +1,41 @@
 import os
 # set available gpu's
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "5"
 
 import evo_functions as evo
 
+root_folder = "RUNS_alg_2/ContractNLI_woracleTrue_w2labelsTrue/Runs_2024-07-17_02-33-36_N25_cp0.0_mp0.5_sampTNone_fixed_evoTrue_new_evo_promptsTrue"
+evo.test_eval(task='ContractNLI', 
+                  RUN_folder_path = root_folder, 
+                  model_name="microsoft/Phi-3-mini-128k-instruct",
+                  task_w_highlight = True,
+                  task_w_oracle_spans=True, # contract nli only
+                  task_w_full_contract = True, # contract nli only
+                  task_w_2_labels=True, # contract nli only
+                  )  
+
+root_folder = "RUNS_alg_2/ContractNLI_woracleTrue_w2labelsTrue/Runs_2024-09-18_00-36-00_N25_cp0.25_mp0.25_sampT10.0_fixed_evoFalsedq_dataFalse_reverseFalse_dev_ratioFalse_614"
+evo.test_eval(task='ContractNLI', 
+                  RUN_folder_path = root_folder, 
+                  model_name="microsoft/Phi-3-mini-128k-instruct",
+                  task_w_highlight = True,
+                  task_w_oracle_spans=True, # contract nli only
+                  task_w_full_contract = True, # contract nli only
+                  task_w_2_labels=True, # contract nli only
+                  )
+
+root_folder = "RUNS_alg_2/ContractNLI_woracleFalse_w2labelsTrue/Runs_2024-07-21_12-18-30_N25_cp0.25_mp0.25_sampT10.0_fixed_evoFalse_new_evo_promptsTrue"
+evo.test_eval(task='ContractNLI', 
+                  RUN_folder_path = root_folder, 
+                  model_name="microsoft/Phi-3-mini-128k-instruct",
+                  task_w_highlight = True,
+                  task_w_oracle_spans=False, # contract nli only
+                  task_w_full_contract = True, # contract nli only
+                  task_w_2_labels=True, # contract nli only
+                  )  
+
+
+"""
 # DQ 614
 best_prompt, best_score_iterations = evo.evo_alg_2(task = "ContractNLI", 
                                                             model_name = "microsoft/Phi-3-mini-128k-instruct",
@@ -95,7 +127,7 @@ best_prompt, best_score_iterations = evo.evo_alg_2(task = "ContractNLI",
                                                             use_data_sorted_by_dq=True,
                                                             reverse_dq=False,
                                                             keep_dev_ratio=True,
-                                                            )
+                                                            )"""
 
 """evo.test_eval('ContractNLI',
               'RUNS_alg_2/ContractNLI_woracleTrue_w2labelsTrue/Runs_2024-09-07_03-51-39_N25_cp0.25_mp0.25_sampT10.0_fixed_evoFalse_new_evo_promptsTrueuse_dq_dataTrue', # Run folder

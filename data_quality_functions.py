@@ -3,7 +3,7 @@
 
 import torch
 import torch.nn.functional as F
-from evo_functions import load_model, extract_SemEval_data, extract_ContractNLI_data, extract_MEDIQASUM_data, extract_LEXSUM_data
+from evo_functions import load_model, extract_SemEval_data, extract_ContractNLI_data, extract_MEDIQASUM_data, extract_LegalSumTOSDR_data
 import json
 from tqdm import tqdm
 
@@ -37,17 +37,17 @@ def generate_string_for_mediqasum_data_quality(datapoint: dict):
 
     return mediqasum_text
 
-def generate_string_for_lexsum_data_quality(datapoint: dict):
-    print(datapoint.keys())
+def generate_string_for_legalsumtosdr_data_quality(datapoint: dict):
+    #print(f"keys-->{datapoint.keys()}\n\n")
 
-    mediqasum_text = f"""Legal Act:\n{datapoint['reference']}\n\nSummary:\n{datapoint['summary']}"""
+    legalsumtosdr = f"""Terms of Services section: \n{datapoint['original_text']}\n\nSummary:\n{datapoint['reference_summary']}"""
 
-    return mediqasum_text
+    return legalsumtosdr
 
 
 def data_quality_inference(data_quality_prompt, model, tokenizer):
 
-    print(f"{data_quality_prompt}")
+    #print(f"{data_quality_prompt}")
 
     encoded_inputs = tokenizer(data_quality_prompt, return_tensors="pt", return_attention_mask=True, padding=True).to('cuda')
     input_len = encoded_inputs['input_ids'][0].shape[0]
@@ -62,7 +62,7 @@ def data_quality_inference(data_quality_prompt, model, tokenizer):
 
     generated_ids = output.sequences[0, :]  # Exclude the input part
     full_generated_text = tokenizer.decode(generated_ids, skip_special_tokens=True)
-    print(f"generated_text-->{full_generated_text}")
+    #print(f"generated_text-->{full_generated_text}")
 
 
     # Decode the generated sequence (excluding input)
@@ -92,8 +92,9 @@ def data_quality_inference(data_quality_prompt, model, tokenizer):
     # Convert token ids to actual tokens and print them with their probabilities
     top_k_tokens = tokenizer.convert_ids_to_tokens(top_k_ids.squeeze().tolist())
     for token, prob in zip(top_k_tokens, top_k_probs.squeeze().tolist()):
-        print(f"Token: {token}, Probability: {prob:.4f}")
-    print(f"\n\n")
+        #print(f"Token: {token}, Probability: {prob:.4f}")
+        pass
+    #print(f"\n\n")
         
     return yes_token_prob
 
@@ -118,9 +119,9 @@ def data_quality_assessment_and_save(task: str,
         train_data = extract_MEDIQASUM_data(type = 'train')
         validation_data = extract_MEDIQASUM_data(type = 'valid')
 
-    elif task == "LEXSUM":
-        train_data = extract_LEXSUM_data(type = 'train')
-        validation_data = extract_LEXSUM_data(type = 'validation')
+    elif task == "LegalSumTOSDR":
+        train_data = []
+        validation_data = extract_LegalSumTOSDR_data(type = 'val')
 
     else:
         raise ValueError("Invalid task provided.")
@@ -142,8 +143,8 @@ def data_quality_assessment_and_save(task: str,
             datapoint_string = generate_string_for_contractnli_data_quality(full_data[i])
         elif task == "MEDIQASUM":
             datapoint_string = generate_string_for_mediqasum_data_quality(full_data[i])
-        elif task == "LEXSUM":
-            datapoint_string = generate_string_for_lexsum_data_quality(full_data[i])
+        elif task == "LegalSumTOSDR":
+            datapoint_string = generate_string_for_legalsumtosdr_data_quality(full_data[i])
 
         # Combine with base_string
         # data_quality_prompt = f"<s><|user|>\n###\n{datapoint_string}\n###\n\n{base_data_quality_prompt}<|end|>\n<|assistant|>"

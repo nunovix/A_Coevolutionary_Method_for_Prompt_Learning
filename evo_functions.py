@@ -1204,6 +1204,7 @@ def prompt_preds_contractnli_span(data_expanded,
     preds = []
     per_doc_labels = []
     per_doc_preds = []
+    per_doc_dict = {}
 
     doc = data_expanded[0]['text']
     single_doc_preds = []
@@ -1299,28 +1300,32 @@ def prompt_preds_contractnli_span(data_expanded,
 
         preds.append(pred)
 
-        # to calculate f1 scores according to the paper (macro avg micro avgs per document)
-        if sample['text'] == doc:
-            single_doc_preds.append(pred)
-            single_doc_labels.append(sample["label"])
+        # f1's according to the dataset paper. F1-C and F1-E per document, then averaged
 
+        if sample['text'] not in per_doc_dict:
+            per_doc_dict[sample['text']] = {'label': [sample["label"]], 'pred': [pred]}
         else:
-            doc = sample['text']
-            single_doc_preds, _ = convert_preds_from_yesno(single_doc_preds)
-            per_doc_preds.append(single_doc_preds)
-            per_doc_labels.append(single_doc_labels)
-            single_doc_preds = []
-            single_doc_labels = []
-            single_doc_preds.append(pred)
-            single_doc_labels.append(sample["label"])
+            per_doc_dict[sample['text']]['label'].append(sample["label"])
+            per_doc_dict[sample['text']]['pred'].append(pred)
 
-    single_doc_preds, _ = convert_preds_from_yesno(single_doc_preds)
-    per_doc_preds.append(single_doc_preds)
-    per_doc_labels.append(single_doc_labels)
 
-    #predictions, _ = convert_preds_from_yesno(preds)
+    for doc in per_doc_dict:
+        converted_predictions, _ = convert_preds_from_yesno(per_doc_dict[doc]['pred'])
+        f1s = f1_score(y_true=per_doc_dict[doc]['label'], y_pred=converted_predictions, labels=['Entailment', 'Contradiction'],average=None)
+        per_doc_dict[doc]['f1_E'] = f1s[0]
+        per_doc_dict[doc]['f1_C'] = f1s[1]
     
-    return labels, preds, per_doc_labels, per_doc_preds #listas de dimensão (n_docs) 
+    # Calculate the sum of values for the key
+    total_f1e = sum(per_doc_dict[d]['f1_E'] for d in per_doc_dict)
+    total_f1c = sum(per_doc_dict[d]['f1_C'] for d in per_doc_dict)
+
+    f1e = total_f1e/len(per_doc_dict)
+    f1c = total_f1c/len(per_doc_dict)
+
+    paper_f1s = {'Paper F1-Entailment': f1e , 'Paper F1-Contradiction': f1c}
+
+    
+    return labels, preds, paper_f1s  #listas de dimensão (n_docs) 
 
 def extract_MEDIQASUM_data(folder_name='DATASETS/MEDIQASUM_data', 
                            type = 'valid', 
@@ -1728,8 +1733,8 @@ def extract_LegalSumTOSDR_data(folder_name='DATASETS/LegalSumTOSDR_data',
     with open(file_path, mode='r') as file:
         full_data = json.load(file)
 
-    print(full_data)
-    print(type(full_data))
+    #print(full_data)
+    #print(type(full_data))
 
     data_expanded = []
     for uid in full_data:
@@ -2499,7 +2504,7 @@ def eval_pop(population,
             print(f"CHAVES-->{population['prompts_dict'].keys()}")
             
             if task_w_2_labels == True:
-                labels, predictions, per_doc_labels, per_doc_predictions = prompt_preds_contractnli_span(data_expanded[:n_samples], 
+                labels, predictions, paper_f1s = prompt_preds_contractnli_span(data_expanded[:n_samples], 
                                                                                                         task_description = prompts['task_description'][population['prompts'][i]['task_description']], 
                                                                                                         highlight_description = prompts['highlight_description'][population['prompts'][i]['highlight_description']], 
                                                                                                         statement_description = prompts['statement_description'][population['prompts'][i]['statement_description']],
@@ -2513,7 +2518,7 @@ def eval_pop(population,
                                                                                                         task_w_full_contract = task_w_full_contract,
                                                                                                         )
             else:
-                labels, predictions, per_doc_labels, per_doc_predictions = prompt_preds_contractnli_span(data_expanded[:n_samples], 
+                labels, predictions, paper_f1s = prompt_preds_contractnli_span(data_expanded[:n_samples], 
                                                                                                         task_description = prompts['task_description_3_labels'][population['prompts'][i]['task_description_3_labels']], 
                                                                                                         highlight_description = prompts['highlight_description'][population['prompts'][i]['highlight_description']], 
                                                                                                         statement_description = prompts['statement_description'][population['prompts'][i]['statement_description']],
@@ -2530,24 +2535,28 @@ def eval_pop(population,
         
                                                                                                 
             #preds, n_not_founds = convert_preds_from_yesno_contractnli(predictions)
-            print(f"\n\n Counter(labels)-->{Counter(labels)}")
-            print(f"Counter(predictions)-->{Counter(predictions)}")
+            #print(f"\n\n Counter(labels)-->{Counter(labels)}")
+            #print(f"Counter(predictions)-->{Counter(predictions)}")
             preds, _ = convert_preds_from_yesno(predictions)
-            print(f"Counter(preds)-->{Counter(preds)}")
-            print(f"Counter(labels)-->{Counter(labels)}")
+            #print(f"Counter(preds)-->{Counter(preds)}")
+            #print(f"Counter(labels)-->{Counter(labels)}")
             score = accuracy_score(y_true=labels, y_pred=preds)
-            print(f"score-->{score}")
+            #print(f"score-->{score}")
             population['eval'].append(score)
 
             # f-1 score for more detailed analysis
             unique_labels = np.unique(np.concatenate((labels, preds)))
             f1_scores_per_class = f1_score(y_true=labels, y_pred=preds, average=None, labels=unique_labels)
+            print(f"normal f1-->{f1_scores_per_class}")
             # Pair each unique class label with its F1-score
-            label_to_f1 = dict(zip(unique_labels, f1_scores_per_class))
-            population['f1_scores'].append(label_to_f1)
+            #label_to_f1 = dict(zip(unique_labels, f1_scores_per_class))
+            print(f"paper_f1s-->{paper_f1s}")
+            population['f1_scores'].append(paper_f1s)
             # confusion matrix
             cm = confusion_matrix(y_true=labels, y_pred=preds, labels=unique_labels)
             population['confusion_matrix'].append(cm)
+
+
 
     elif task == "MEDIQASUM":
         population['full_eval'] = []
@@ -4863,8 +4872,6 @@ def create_plots_from_RUNS_folder(directory_path):
 
 # NOTAS FUTURAS
 # O CSQA está sem o phi 3 implementado porque ainda tem o prompt making separado do eval
-
-
 
 # function to load population from iteration's folder
 def load_population(iteration, root_folder, task):

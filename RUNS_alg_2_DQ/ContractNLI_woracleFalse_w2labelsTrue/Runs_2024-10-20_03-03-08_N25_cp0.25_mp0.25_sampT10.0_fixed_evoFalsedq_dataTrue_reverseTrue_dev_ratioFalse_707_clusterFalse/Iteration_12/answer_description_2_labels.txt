@@ -1,0 +1,14 @@
+0->Evaluate whether a given statement aligns with the confidentiality terms outlined in the Non-Disclosure Agreement (NDA). If the statement complies with and does not conflict with the NDA's stipulations, affirm its acceptability by replying "YES". Conversely, if the statement deviates from or contradicts the NDA's provisions, reject its acceptability by replying "NO".
+----------
+1->Assess whether a given statement adheres to the confidentiality terms outlined in the Non-Disclosure Agreement (NDA). Validate the statement's compliance by replying 'YES' if it aligns with and does not breach the NDA's provisions. Conversely, deny the statement's validity by replying 'NO' if it deviates from or opposes the NDA's stipulations.
+----------
+2->Assess the given statement for compliance with the Non-Disclosure Agreement (NDA). Reply 'YES' if the statement aligns with and does not contradict the NDA's confidentiality terms, and 'NO' if it deviates from or conflicts with the NDA's provisions.
+----------
+3->Determine if a statement complies with the confidentiality clauses of the Non-Disclosure Agreement (NDA). Confirm compliance with a 'YES' response if it meets and does not violate the NDA's terms. Reject non-compliance with a 'NO' if it contravenes or contradicts the NDA's requirements.
+----------
+4->Evaluate if the following statement aligns with the stipulations of the Non-Disclosure Agreement (NDA) by providing a YES or NO response. A YES signifies that the statement is consistent with the NDA's terms, while a NO indicates a discrepancy between the statement and the NDA's provisions.
+----------
+5->Evaluate the statement's adherence to the NDA's confidentiality terms and respond with 'YES' for compliance or 'NO' for non-compliance.
+----------
+6->Evaluate the provided statement for compliance with the confidentiality clauses specified in the Non-Disclosure Agreement (NDA). Affirm the statement's adherence by responding 'YES' if it conforms to and does not violate the NDA's terms. Alternatively, reject the statement's legitimacy by responding 'NO' if it contravenes or contradicts the NDA's requirements.
+----------

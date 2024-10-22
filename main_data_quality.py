@@ -1,6 +1,6 @@
 import os
 # set available gpu's
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "4"
 
 from data_quality_functions import data_quality_assessment_and_save
 

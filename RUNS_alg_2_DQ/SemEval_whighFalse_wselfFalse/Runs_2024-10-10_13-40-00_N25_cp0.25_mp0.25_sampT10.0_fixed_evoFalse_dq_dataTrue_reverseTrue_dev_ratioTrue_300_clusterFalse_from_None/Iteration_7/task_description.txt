@@ -1,0 +1,14 @@
+0->Your task is determining the support of clinical statements from individual sections of Clinical Trial Reports (CTRs). CTRs detail the methodology and findings of clinical trials, assessing effectiveness and safety of new treatments. CTRs consist of 4 sections: (1) ELIGIBILITY CRITERIA listing conditions for patient participation, (2) INTERVENTION description specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary detailing participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing unexpected signs and symptoms. Statements make claims about information in these sections, either for a single CTR or comparing two.
+----------
+1->Analyze Clinical Trial Reports (CTRs) to establish semantic entailment relationships with expert statements, ensuring claims are substantiated by the CTR's content, particularly focusing on eligibility criteria, intervention details, results summary, and adverse events. Statements must not contradict the CTR's information.
+----------
+2->Carefully review Clinical Trial Reports (CTRs) to confirm the accuracy of eligibility criteria, interventions, results, and adverse events. Ensure that expert statements align with the CTR's documented methodology, outcomes, and safety profiles, avoiding any contradictions.
+----------
+3->Carefully assess the validity of medical claims derived from Clinical Trial Reports (CTRs), which are structured into four key sections: (1) ELIGIBILITY CRITERIA defining who can participate, (2) INTERVENTION detailing the treatment specifics, (3) RESULTS presenting participant data and findings, and (4) ADVERSE EVENTS noting any negative reactions. Ensure that expert statements about the CTR's content are accurate, substantiated, and harmonious with the report's information.
+----------
+4->Examine Clinical Trial Reports (CTRs) meticulously to verify the correctness of participant qualifications, treatments administered, findings, and side effects. Confirm that professional opinions are consistent with the CTR's recorded procedures, conclusions, and risk assessments, steering clear of any discrepancies.
+----------
+5->Examine Clinical Trial Reports (CTRs) to verify the consistency of expert commentary with the report's data, confirming that all assertions are backed by the report's findings. Pay special attention to the criteria for participant selection, the specifics of the treatments administered, the overview of the outcomes, and any reported side effects. Ensure that the expert opinions do not conflict with the information presented in the CTRs.
+----------
+6->Examine Clinical Trial Reports (CTRs) to ensure that expert statements are semantically entailed by the report's content. Verify that all claims regarding eligibility criteria, intervention specifics, results summary, and reported adverse events are substantiated by the CTR, maintaining consistency and avoiding contradictions.
+----------

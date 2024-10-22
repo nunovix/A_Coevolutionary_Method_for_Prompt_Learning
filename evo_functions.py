@@ -58,23 +58,25 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
                                                 use_data_sorted_by_dq = False,
                                                 use_data_clusters = False,
                                                 data_clusters_file = None,
+                                                use_15percent_random = False,
+                                                use_15percent_revdq = False,
                                                 ):
 
     if task_name == 'SemEval':
         prompts_path = 'INITIAL_PROMPTS/SemEval'
         data_expanded = extract_SemEval_data(extract_examples = w_one_shot, use_data_sorted_by_dq = use_data_sorted_by_dq, 
-                                             use_data_clusters=use_data_clusters, data_clusters_file=data_clusters_file)
+                                             use_data_clusters=use_data_clusters, data_clusters_file=data_clusters_file, use_15percent_random = use_15percent_random, use_15percent_revdq = use_15percent_revdq)
         trie = get_Marisa_Trie(task_name, tokenizer)
 
     elif task_name == 'ContractNLI':
         prompts_path = 'INITIAL_PROMPTS/ContractNLI'
         data_expanded = extract_ContractNLI_data(task_w_2_labels=task_w_2_labels, use_data_sorted_by_dq = use_data_sorted_by_dq,
-                                                 use_data_clusters=use_data_clusters)
+                                                 use_data_clusters=use_data_clusters, use_15percent_random = use_15percent_random, use_15percent_revdq = use_15percent_revdq)
         trie = get_Marisa_Trie(task_name, tokenizer, task_w_2_labels=task_w_2_labels)
 
     elif task_name == 'MEDIQASUM':
         prompts_path = 'INITIAL_PROMPTS/MEDIQASUM'
-        data_expanded = extract_MEDIQASUM_data(retrieve_similar_examples = w_one_shot, use_data_sorted_by_dq = use_data_sorted_by_dq, use_data_clusters=use_data_clusters)
+        data_expanded = extract_MEDIQASUM_data(retrieve_similar_examples = w_one_shot, use_data_sorted_by_dq = use_data_sorted_by_dq, use_data_clusters=use_data_clusters, use_15percent_random = use_15percent_random, use_15percent_revdq = use_15percent_revdq)
         trie = None
 
     elif task_name == 'LEXSUM':
@@ -84,7 +86,7 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
 
     elif task_name == 'LegalSumTOSDR':
         prompts_path = 'INITIAL_PROMPTS/LegalSumTOSDR'
-        data_expanded = extract_LegalSumTOSDR_data(use_data_sorted_by_dq = use_data_sorted_by_dq, use_data_clusters=use_data_clusters)
+        data_expanded = extract_LegalSumTOSDR_data(use_data_sorted_by_dq = use_data_sorted_by_dq, use_data_clusters=use_data_clusters, use_15percent_random = use_15percent_random, use_15percent_revdq = use_15percent_revdq)
         trie = None
 
     elif task_name == 'hyper_mutation':
@@ -166,18 +168,34 @@ def convert_text_mistral_phi3(input_string):
     
     # Create the message dictionary
     phi_format = f"<s> <|system|>\n{content[:system_part_index]}<|end|>\n<|user|>\n{content[system_part_index+1:]}<|end|>\n<|assistant|>{input_string[end_index+7:]}"
-    #phi_format = f"<|system|>\n{content[:system_part_index]}<|end|>\n<|user|>\n{content[system_part_index+2:]}<|end|>\n<|assistant|>{input_string[end_index+7:]}"
     #phi_format = f"<s> <|user|>\n{content}<|end|>\n<|assistant|>{input_string[end_index+7:]}"
-    #phi_format = f"<|user|>\n{content}<|end|>\n<|assistant|>{input_string[end_index+7:]}"
-    message = [{"role": "user", "content": content},
-                {"role": "assistant", "content":  input_string[end_index+7:]},]
-    
-    #print(f"input_string-->{input_string}")
-    #print(f"message-->{message}")
-    #print(f"phi_format-->{phi_format}")
-    #print(f"type(message)-->{type(message)}")
-    
+
     return phi_format
+
+# function to convert string to be tokenized from the format expected by the mistral model to the 
+# format expected by the llama 3.2 model
+def convert_text_mistral_llama_3(input_string):
+    # Check if both start and end markers are present
+    start_index = input_string.find('[INST]')
+    end_index = input_string.find('[/INST]')
+    
+    if start_index == -1 and end_index == -1:
+        print(f"ERROR: Required markers '[INST]' and '[/INST]' are not found in the input.")
+        sys.exit()
+    
+    # Extract content between markers, adjusting for length of '[INST]'
+    if start_index != -1 and end_index != -1:
+        content = input_string[start_index + 6:end_index].strip()
+    if start_index != -1 and end_index == -1:
+        content = input_string[start_index + 6:].strip()
+
+    # finding the task description part to be moved to the system part of the input
+    system_part_index = content.find('\n')
+
+    llama_format = f"<|start_header_id|>system<|end_header_id|>\n\n{content[:system_part_index]}<|eot_id|><|start_header_id|>user<|end_header_id|>\n{content[system_part_index+1:]}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n{input_string[end_index+7:]}"
+    
+    return llama_format
+
 # extract txt files in folder_path to dict with all the subprompts for task, ctr, statement and answer description
 def extract_lines_to_dict(folder_path, task, 
                           task_w_self_reasoning=False,
@@ -289,9 +307,14 @@ def extract_SemEval_data(folder = 'DATASETS/SemEval_data',
                          use_data_sorted_by_dq = False,
                          use_data_clusters = False,
                          data_clusters_file = None,
+                         use_15percent_random = False, 
+                         use_15percent_revdq = False,
                          ):
-    
-    if use_data_sorted_by_dq == True:
+    if use_15percent_random == True:
+        file_path = "DATASETS/15percent_random/semeval.json"
+    elif use_15percent_revdq == True:
+        file_path = "DATASETS/15percent_rev_dq/semeval.json"
+    elif use_data_sorted_by_dq == True:
         file_path = "DATASETS/DATA_QUALITY/SemEval_data_quality.json"
     elif use_data_clusters == True:
         if data_clusters_file == None:
@@ -486,9 +509,15 @@ def extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data',
                              task_w_2_labels = True, # for the experience with the oracle spans the results in the task's paper are only reported with 2 classes, excluding the NotMentioned one. that's why this flag is needed,
                              use_data_sorted_by_dq = False,
                              use_data_clusters = False,
+                             use_15percent_random = False, 
+                             use_15percent_revdq = False,
                              ):
 
-    if use_data_sorted_by_dq == True:
+    if use_15percent_random == True:
+        file_path = "DATASETS/15percent_random/contractnli.json"
+    elif use_15percent_revdq == True:
+        file_path = "DATASETS/15percent_rev_dq/contractnli.json"
+    elif use_data_sorted_by_dq == True:
         file_path = "DATASETS/DATA_QUALITY/ContractNLI_data_quality.json"
     elif use_data_clusters == True:
         file_path = "DATASETS/DATA_QUALITY_w_CLUSTERS/ContractNLI.json"
@@ -681,6 +710,8 @@ def prompt_creation_semeval(data_expanded,
         # conversion necessary for phi3 model
         if 'Phi3' in model_name_global:
             sentence = convert_text_mistral_phi3(sentence)
+        elif 'llama_3' in model_name_global:
+            sentence = convert_text_mistral_llama_3(sentence)
 
         labels.append(sample["label"])
         samples.append(sentence)
@@ -837,6 +868,8 @@ def prompt_preds_semeval(data_expanded,
         # conversion necessary for phi3 model
         if 'Phi3' in model_name_global:
             sentence = convert_text_mistral_phi3(sentence)
+        elif 'llama_3' in model_name_global:
+            sentence = convert_text_mistral_llama_3(sentence)
 
         encoded_inputs = tokenizer(sentence, return_tensors="pt", return_attention_mask=True).to('cuda')
 
@@ -861,7 +894,8 @@ def prompt_preds_semeval(data_expanded,
         for token, prob in zip(top_k_tokens, top_k_probs.squeeze().tolist()):
             print(f"Token: {token}, Probability: {prob:.8f}")
         print(f"\n\n")"""
-        FastLanguageModel.for_inference(model)
+
+        #FastLanguageModel.for_inference(model)
         with torch.inference_mode():
             output = model.generate(encoded_inputs['input_ids'], 
                                     attention_mask=encoded_inputs['attention_mask'],
@@ -945,6 +979,8 @@ def prompt_creation_semeval_self_A(data_expanded,
         # conversion necessary for phi3 model
         if 'Phi3' in model_name_global:    
             text_self = convert_text_mistral_phi3(text_self)
+        elif 'llama_3' in model_name_global:
+            sentence = convert_text_mistral_llama_3(sentence)
 
         reflection_samples.append(text_self)
         #print(f"TEXT_SELF-->{text_self}")
@@ -989,6 +1025,8 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
         # conversion necessary for phi3 model
         if 'Phi3' in model_name_global:
             text_w_reflection = convert_text_mistral_phi3(text_w_reflection)
+        elif 'llama_3' in model_name_global:
+            sentence = convert_text_mistral_llama_3(sentence)
 
         prompt = tokenizer.encode(text_w_reflection, return_tensors="pt", return_attention_mask=True).to('cuda')
 
@@ -1041,6 +1079,8 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
         # conversion necessary for phi3 model
         if 'Phi3' in model_name_global:    
             text_self = convert_text_mistral_phi3(text_self)
+        elif 'llama_3' in model_name_global:
+            sentence = convert_text_mistral_llama_3(sentence)
 
         #FastLanguageModel.for_inference(model)
         encoded_inputs = tokenizer(text_self, return_tensors="pt", return_attention_mask=True).to('cuda')
@@ -1072,6 +1112,8 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
         # conversion necessary for phi3 model
         if 'Phi3' in model_name_global:
             text_w_reflection = convert_text_mistral_phi3(text_w_reflection)
+        elif 'llama_3' in model_name_global:
+            sentence = convert_text_mistral_llama_3(sentence)
 
         encoded_inputs = tokenizer(text_w_reflection, return_tensors="pt", return_attention_mask=True).to('cuda')
 
@@ -1255,6 +1297,8 @@ def prompt_preds_contractnli_span(data_expanded,
         # conversion necessary for phi3 model
         if 'Phi3' in model_name_global:
             prompt_text = convert_text_mistral_phi3(prompt_text)
+        elif 'llama_3' in model_name_global:
+            sentence = convert_text_mistral_llama_3(sentence)
 
         
         #torch.cuda.empty_cache()
@@ -1334,9 +1378,15 @@ def extract_MEDIQASUM_data(folder_name='DATASETS/MEDIQASUM_data',
                            save_retrieved = True,
                            use_data_sorted_by_dq = False,
                            use_data_clusters = False,
+                           use_15percent_random = False, 
+                           use_15percent_revdq = False,
                            ):
-
-    if use_data_sorted_by_dq == True:
+    
+    if use_15percent_random == True:
+        file_path = "DATASETS/15percent_random/mediqasum.json"
+    elif use_15percent_revdq == True:
+        file_path = "DATASETS/15percent_rev_dq/mediqasum.json"
+    elif use_data_sorted_by_dq == True:
         file_path = "DATASETS/DATA_QUALITY/MEDIQASUM_data_quality.json"
     elif use_data_clusters ==True:
         file_path = "DATASETS/DATA_QUALITY_w_CLUSTERS/MEDIQASUM.json"
@@ -1369,19 +1419,25 @@ def extract_MEDIQASUM_data(folder_name='DATASETS/MEDIQASUM_data',
         # train data path
         train_file_path = os.path.join(folder_name, f"train.csv")
         # Create an empty list to hold the dictionaries
-        train_data_list = []
+        data_to_retrieve_from = []
         # Open the CSV file and read data into a list of dictionaries
         with open(train_file_path, mode='r', encoding='utf-8') as file:
             reader = csv.DictReader(file)
             for row in reader:
-                train_data_list.append(row)
+                data_to_retrieve_from.append(row)
+
+        val_file_path = os.path.join(folder_name, f"valid.csv")  
+        with open(val_file_path, mode='r', encoding='utf-8') as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                data_to_retrieve_from.append(row)
 
         # extract train_data
         for i in tqdm(range(len(data_list)), desc= 'Retrieving examples'):
             print(f"ENCOUNTER ID-->{data_list[i]['encounter_id']}")
             #notes_list = []
             train_dialogue_list = []
-            for example in train_data_list:
+            for example in data_to_retrieve_from:
                 # embed dialogues to then select most similar examples based on this
                 if data_list[i]['dataset'] == example['dataset'] and data_list[i]['encounter_id'] != example['encounter_id']:
                     train_dialogue_list.append(example['dialogue'])
@@ -1395,7 +1451,7 @@ def extract_MEDIQASUM_data(folder_name='DATASETS/MEDIQASUM_data',
             similarity_score = similarities[0][closest_index]
             #print(f"RETRIEVAL->similarity_score-->{similarity_score}")
             # add most similar example
-            data_list[i]['retrieved_example_note'] = train_data_list[closest_index]['note']
+            data_list[i]['retrieved_example_note'] = data_to_retrieve_from[closest_index]['note']
             #print(f"data_list[i]['retrieved_example_note']-->{data_list[i]['retrieved_example_note']}")
 
 
@@ -1547,6 +1603,8 @@ def prompt_preds_lexsum(data_expanded,
             #print(f"messages prompts-->{sentence}\n\n\n\n\n\n\n\n")
             #print(f"len(sentence)-->{len(sentence)}")
             #print(f"messages prompts-->{sentence[:200]}\n\n\n\n\n\n\n\n")
+        elif 'llama_3' in model_name_global:
+            sentence = convert_text_mistral_llama_3(sentence)
 
         encoded_inputs = tokenizer(sentence[:], return_tensors="pt", return_attention_mask=True).to('cuda')
         #print(f"len(prompt)-->{len(prompt)}")
@@ -1644,14 +1702,15 @@ def prompt_preds_mediqasum(data_expanded,
     for sample in tqdm(data_expanded):
 
         prompt = task_description + '\n\n' + example_description + '\n\n'
-        ## VERIFICAR ISTO
+
         if 'retrieved_example_note' in sample.keys():
             example = sample['retrieved_example_note']
         else:
             example = random_example_retrieval(sample, data_expanded)
+
         sentence = f"""{prompt}Example Note:\n"{example}" """
         dialogue = "".join(sample['dialogue'])
-        sentence = f"""[INST]{sentence}\n\n{dialog_description}\n\n"{dialogue}"\n\n{answer_description}[/INST]\n\nClinical Note:"""
+        sentence = f"""[INST]{sentence}\n{dialog_description}\n\n"{dialogue}"\n\n{answer_description}[/INST]Clinical Note:"""
         
         labels.append(sample["note"])
 
@@ -1663,6 +1722,8 @@ def prompt_preds_mediqasum(data_expanded,
         if 'Phi3' in model_name_global:
             sentence = convert_text_mistral_phi3(sentence)
             #print(f"messages prompts-->{sentence}\n\n\n\n\n\n\n\n")
+        elif 'llama_3' in model_name_global:
+            sentence = convert_text_mistral_llama_3(sentence)
 
         encoded_inputs = tokenizer(sentence, return_tensors="pt", return_attention_mask=True).to('cuda')
             
@@ -1671,7 +1732,7 @@ def prompt_preds_mediqasum(data_expanded,
             output = model.generate(encoded_inputs['input_ids'], 
                                     attention_mask=encoded_inputs['attention_mask'],
                                     pad_token_id=tokenizer.eos_token_id, 
-                                    max_new_tokens=2000,
+                                    max_new_tokens=1500,
                                     do_sample=True,
                                     num_beams = 3
                                     )
@@ -1689,7 +1750,7 @@ def prompt_preds_mediqasum(data_expanded,
         preds.append(pred)
 
         #del encoded_inputs, output
-        torch.cuda.empty_cache()
+        #torch.cuda.empty_cache()
 
     if save_test_predictions == True:
         print(f"SAVING CSV folder for mediqa chat")
@@ -1707,14 +1768,20 @@ def prompt_preds_mediqasum(data_expanded,
     return labels, preds
 
 def extract_LegalSumTOSDR_data(folder_name='DATASETS/LegalSumTOSDR_data', 
-                               type = 'val', 
+                               type = 'train', 
                                used_retrieved_file = True,
                                retrieve_similar_examples = True,
                                save_retrieved = True,
                                use_data_sorted_by_dq = False,
                                use_data_clusters = False,
+                               use_15percent_random = False, 
+                               use_15percent_revdq = False,
                                ):
-    if use_data_sorted_by_dq == True:
+    if use_15percent_random == True:
+        file_path = "DATASETS/15percent_random/legalsum.json"
+    elif use_15percent_revdq == True:
+        file_path = "DATASETS/15percent_rev_dq/legalsum.json"
+    elif use_data_sorted_by_dq == True:
         file_path = "DATASETS/DATA_QUALITY/LegalSumTOSDR_data_quality.json"
     elif use_data_clusters == True:
         file_path = "DATASETS/DATA_QUALITY_w_CLUSTERS/LegalSumTOSDR.json"
@@ -1728,7 +1795,7 @@ def extract_LegalSumTOSDR_data(folder_name='DATASETS/LegalSumTOSDR_data',
         print(f"Used data with already retrieved examples from {file_path}")
         return data_list
     
-    full_data_file_name = 'tosdr_annotated_v1.json'
+    full_data_file_name = 'all_v1.json'
     file_path = os.path.join(folder_name, full_data_file_name)
     with open(file_path, mode='r') as file:
         full_data = json.load(file)
@@ -1745,19 +1812,49 @@ def extract_LegalSumTOSDR_data(folder_name='DATASETS/LegalSumTOSDR_data',
     split_percentage = 0.8  
     split_index = int(len(data_expanded) * split_percentage)
 
-    test_data = data_expanded[:split_index]
-    val_data = data_expanded[split_index:]
+    train_data = data_expanded[:split_index]
+    test_data = data_expanded[split_index:]
 
+    data_to_retrieve_from = train_data
+    original_texts_to_retrieve_from = []
+
+    # retrieve examples from train data 
+    for ex in data_to_retrieve_from:
+        original_texts_to_retrieve_from.append(ex['original_text'])
+
+    # for train data
+    for i in tqdm(range(len(train_data)), desc='Retrieving examples'):
+
+        embeddings = embed_texts([train_data[i]['original_text']] + original_texts_to_retrieve_from)
+        similarities = cos_sim(embeddings[:1], embeddings[1:])
+        similarities = list(similarities[0])
+        #print(f"len(similarities)-->{len(similarities)}")
+        sec_closest_index = similarities.index(sorted(similarities)[-2])
+
+        train_data[i]['retrieved_example_summary'] = data_to_retrieve_from[sec_closest_index]['reference_summary']
+    
+    # for test data
+    # heere we can actually select top rank since there is no repetition
+    for i in tqdm(range(len(test_data)), desc='Retrieving examples'):
+
+        embeddings = embed_texts([test_data[i]['original_text']] + original_texts_to_retrieve_from)
+        similarities = cos_sim(embeddings[:1], embeddings[1:])
+        similarities = list(similarities[0])
+        closest_index = similarities.index(sorted(similarities)[-1])
+
+        test_data[i]['retrieved_example_summary'] = data_to_retrieve_from[closest_index]['reference_summary']
+
+        
     if save_retrieved == True:
+        save_path = os.path.join(folder_name, f"train_w_retrieved.json")
+        with open(save_path, 'w') as file:
+            json.dump(train_data, file)
+        print(f"Examples with retrieval saved to {save_path}")
+
         save_path = os.path.join(folder_name, f"test_w_retrieved.json")
         with open(save_path, 'w') as file:
             json.dump(test_data, file)
-        print(f"Examples with retreival svaed to {save_path}")
-
-        save_path = os.path.join(folder_name, f"val_w_retrieved.json")
-        with open(save_path, 'w') as file:
-            json.dump(val_data, file)
-        print(f"Examples with retreival svaed to {save_path}")
+        print(f"Examples with retrieval saved to {save_path}")
 
 
 def prompt_preds_legalsumtosdr(data_expanded, 
@@ -1782,9 +1879,10 @@ def prompt_preds_legalsumtosdr(data_expanded,
         if task_w_one_shot == True and example_description != '' and example_description != ' ':
             #general_example = """Example 1: "Your personal data is used for advertising" \nExample 2: "This service reserves the right to disclose your personal information without notifying you." " """
 
-            general_example = """Text: "We collect browsing information – such as IP address and location, date and time stamp, user agent, Quora cookie ID (if applicable), URL, unique advertising or content identifiers (if applicable), and time zone, and other information about user activities on the Quora Platform, as well as on third-party sites and services that have embedded our Quora pixels (“Pixels”) widgets, plug-ins, buttons, or related services."\nSummary: "They store data on you even if you did not interact with the service" """
+            #example = """Text: "We collect browsing information – such as IP address and location, date and time stamp, user agent, Quora cookie ID (if applicable), URL, unique advertising or content identifiers (if applicable), and time zone, and other information about user activities on the Quora Platform, as well as on third-party sites and services that have embedded our Quora pixels (“Pixels”) widgets, plug-ins, buttons, or related services."\nSummary: "They store data on you even if you did not interact with the service" """
+            example = sample['retrieved_example_summary']
 
-            sentence = f"""[INST]{sentence}\n\n{doc_description}\n\n"{doc}"\n\n{example_description}\n\n{general_example}\n\n{answer_description}[/INST]\n\nSummary:"""
+            sentence = f"""[INST]{sentence}\n\n{doc_description}\n\n"{doc}"\n\n{example_description}\n\nExample summary: "{example}"\n\n{answer_description}[/INST]\n\nSummary:"""
         else:
             sentence = f"""[INST]{sentence}\n\n{doc_description}\n\n"{doc}"\n\n{answer_description}[/INST]\n\nSummary:"""
 
@@ -1796,6 +1894,8 @@ def prompt_preds_legalsumtosdr(data_expanded,
             #print(f"messages prompts-->{sentence}\n\n\n\n\n\n\n\n")
             #print(f"len(sentence)-->{len(sentence)}")
             #print(f"messages prompts-->{sentence[:200]}\n\n\n\n\n\n\n\n")
+        elif 'llama_3' in model_name_global:
+            sentence = convert_text_mistral_llama_3(sentence)
         
         labels.append(sample["reference_summary"])
 
@@ -1808,7 +1908,7 @@ def prompt_preds_legalsumtosdr(data_expanded,
             output = model.generate(encoded_inputs['input_ids'], 
                                     attention_mask=encoded_inputs['attention_mask'], 
                                     pad_token_id=tokenizer.eos_token_id, 
-                                    max_new_tokens=50,
+                                    max_new_tokens=100,
                                     do_sample=True,
                                     num_beams = 3
                                     )
@@ -1862,33 +1962,40 @@ def load_quantized_model(model_name: str):
 # load model and tokenizer from hugging face
 def load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct",
                quantized = True):
-    
 
     torch.cuda.empty_cache()
+
+    # golbal varriable due to differences in the prompt structure of the models used
     global model_name_global
 
-    if checkpoint == "unsloth/Phi-3-mini-4k-instruct":
+    if 'Phi-3' in checkpoint:
+        model_name_global = 'Phi3'
+    elif 'Llama' in checkpoint:
+        model_name_global = 'llama_3'
+
+    if 'unsloth' in checkpoint:
         print(f"UNSLOTH MODEL")
         print(f"CHECKPOINT-->{checkpoint}")
-        model_name_global = 'Phi3'
-        max_seq_length = 4096 # Choose any! We auto support RoPE Scaling internally!
+        max_seq_length = 8192 # Choose any! We auto support RoPE Scaling internally!
         dtype = None # None for auto detection. Float16 for Tesla T4, V100, Bfloat16 for Ampere+
         load_in_4bit = True # Use 4bit quantization to reduce memory usage. Can be False.
 
         model, tokenizer = FastLanguageModel.from_pretrained(
-            model_name = "unsloth/Phi-3-mini-4k-instruct", # Choose ANY! eg teknium/OpenHermes-2.5-Mistral-7B
-            #max_seq_length = max_seq_length,
+            model_name = checkpoint, # Choose ANY! eg teknium/OpenHermes-2.5-Mistral-7B
+            max_seq_length = max_seq_length,
             #dtype = dtype,
             load_in_4bit = load_in_4bit,
-            # token = "hf_...", # use one if using gated models like meta-llama/Llama-2-7b-hf
         )
+
         FastLanguageModel.for_inference(model) # Enable native 2x faster inference
         print("Model max position embeddings:", model.config.max_position_embeddings)
         print("Tokenizer model max length:", tokenizer.model_max_length)
-        return model, tokenizer
+        # Print model configuration
+        print(f"Model configuration: {model.config}")
+        print(f"Loaded model name: {model.config.model_type}")
 
-    if 'Phi-3' in checkpoint:
-        model_name_global = 'Phi3'
+
+    elif 'Phi-3' in checkpoint:
         
         config = BitsAndBytesConfig(
                 load_in_4bit=True,
@@ -1907,13 +2014,34 @@ def load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct",
             attn_implementation="flash_attention_2",
             #attn_implementation='eager',
         )
-        FastLanguageModel.for_inference(model)
+        #FastLanguageModel.for_inference(model)
         tokenizer = AutoTokenizer.from_pretrained(checkpoint)
         print(f"Phi-3 selecionado")
-        return model, tokenizer
+
+    elif 'Llama' in checkpoint:
+
+        print(f"LLAMA-->{checkpoint}")
+        tokenizer = AutoTokenizer.from_pretrained(checkpoint, device_map="cuda",)
+
+        if quantized == True:
+            print(f"QUANTIZED NORMAL LLAMA")
+            config = BitsAndBytesConfig(
+                load_in_4bit=True,
+                bnb_4bit_quant_type="nf4",
+                bnb_4bit_use_double_quant=True,
+                bnb_4bit_compute_dtype=torch.bfloat16
+                )
+            model = AutoModelForCausalLM.from_pretrained(checkpoint, 
+                                                     device_map = 'cuda',
+                                                     quantization_config = config,)
+        else:
+            print(f"NORMAL LLAMA")
+            model = AutoModelForCausalLM.from_pretrained(checkpoint, 
+                                                     device_map = 'cuda',)
 
     else:
         # loading
+        print(f"\n\n\nELSE\n\n\n")
         model_name_global = checkpoint
         tokenizer = AutoTokenizer.from_pretrained(checkpoint, device_map = 'cuda')
 
@@ -1928,7 +2056,7 @@ def load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct",
             tokenizer.pad_token = tokenizer.eos_token
             model.config.pad_token_id = tokenizer.convert_tokens_to_ids(tokenizer.pad_token)
 
-        return model, tokenizer
+    return model, tokenizer
 
 # function to mutate prompts with a given LLM
 # takes a mutation prompt (asking to paraphrase) and a subprompt (to be mutated), outputs the NEW mutated subprompt
@@ -1943,6 +2071,8 @@ def mutate_prompt(prompt, mutation_prompt, model, tokenizer):
     # conversion necessary for phi3 model
     if 'Phi3' in model_name_global:
         instruction = convert_text_mistral_phi3(instruction)
+    elif 'llama_3' in model_name_global:
+            sentence = convert_text_mistral_llama_3(sentence)
 
     encoded_inputs = tokenizer(instruction, return_tensors="pt", return_attention_mask=True).to('cuda')
 
@@ -1979,30 +2109,32 @@ def new_mutate_prompt(prompt,
     # case with empty string in self reflection prompts
     if prompt == '' or prompt == ' ':
         return ''
-    instruction = '[INST]' + mutation_prompt_dict['task_description'] + "\n" + mutation_prompt_dict['instruction_description'] + """\n\nINSTRUCTION:" """ + prompt + """ " \n\n""" + mutation_prompt_dict['answer_description'] + "[/INST]" + "\n\nNEW INSTRUCTION: "
+    instruction = '[INST]' + mutation_prompt_dict['task_description'] + "\n\n" + mutation_prompt_dict['instruction_description'] + """\n\nINSTRUCTION:" """ + prompt + """ " \n\n""" + mutation_prompt_dict['answer_description'] + "[/INST]" + "NEW INSTRUCTION: "
     #print(f"instruction-->{instruction}")
 
     # conversion necessary for phi3 model
     if 'Phi3' in model_name_global:
         instruction = convert_text_mistral_phi3(instruction)
+    elif 'llama_3' in model_name_global:
+        instruction = convert_text_mistral_llama_3(instruction)
 
     encoded_inputs = tokenizer(instruction, return_tensors="pt", return_attention_mask=True).to('cuda')
 
     prompt_length = encoded_inputs['input_ids'][0].shape[0]
 
-    try:
-        # to improve efficiency
-        with torch.inference_mode():
-            output = model.generate(encoded_inputs['input_ids'], 
-                                    attention_mask=encoded_inputs['attention_mask'],
-                                    pad_token_id=tokenizer.eos_token_id, 
-                                    max_new_tokens=300, 
-                                    do_sample=True, 
-                                    repetition_penalty=1.2,
-                                    num_beams = 3)
-    except:
-        output = ''
 
+    # to improve efficiency
+    with torch.inference_mode():
+        output = model.generate(encoded_inputs['input_ids'], 
+                                attention_mask=encoded_inputs['attention_mask'],
+                                pad_token_id=tokenizer.eos_token_id, 
+                                max_new_tokens=300, 
+                                do_sample=True, 
+                                repetition_penalty=1.2,
+                                num_beams = 3)
+
+    #print(f"NEW MUTATE PROMPT)-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+    #print(f"prompt_length-->{prompt_length}")
     new_tokens = output[0, prompt_length:]
     mutated = tokenizer.decode(new_tokens, skip_special_tokens=True)
     #print(f"NEW MUTATE PROMPT)-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
@@ -2047,6 +2179,8 @@ def crossover_prompts(prompt_1, prompt_2, combination_prompt, model, tokenizer):
     # conversion necessary for phi3 model
     if 'Phi3' in model_name_global:
         instruction = convert_text_mistral_phi3(instruction)
+    elif 'llama_3' in model_name_global:
+            sentence = convert_text_mistral_llama_3(sentence)
 
     encoded_inputs = tokenizer(instruction, return_tensors="pt", return_attention_mask=True).to('cuda')
 
@@ -2084,11 +2218,13 @@ def new_crossover_prompts(prompt_1, prompt_2, combination_prompt_dict, model, to
         else:
             return prompt_2
     
-    instruction = '[INST]' + combination_prompt_dict['task_description'] + "\n" + combination_prompt_dict['instruction_description'] + "\n\nINSTRUCTION 1: " + """ " """ + prompt_1 + """ " """ + "\n\nINSTRUCTION 2: " + """ " """ + prompt_2 + """ " \n\n""" + combination_prompt_dict['answer_description'] +  '[/INST]' + "\n\nNEW INSTRUCTION: "
+    instruction = '[INST]' + combination_prompt_dict['task_description'] + "\n\n" + combination_prompt_dict['instruction_description'] + "\n\nINSTRUCTION 1: " + """ " """ + prompt_1 + """ " """ + "\n\nINSTRUCTION 2: " + """ " """ + prompt_2 + """ " \n\n""" + combination_prompt_dict['answer_description'] +  '[/INST]' + "NEW INSTRUCTION: "
 
     # conversion necessary for phi3 model
     if 'Phi3' in model_name_global:
         instruction = convert_text_mistral_phi3(instruction)
+    elif 'llama_3' in model_name_global:
+        instruction = convert_text_mistral_llama_3(instruction)
 
     encoded_inputs = tokenizer(instruction, return_tensors="pt", return_attention_mask=True).to('cuda')
 
@@ -2774,6 +2910,8 @@ def create_root_folder(task,
                        data_size=0,
                        use_data_clusters = 'nd',
                        data_clusters_file = 'nd',
+                       use_15percent_random = 'nd',
+                       use_15percent_revdq='nd',
                        ):
     # Format: Runs_YYYY-MM-DD_HH-MM-SS
     if alg=='alg_2':
@@ -2781,24 +2919,23 @@ def create_root_folder(task,
             if use_data_sorted_by_dq == True or use_data_clusters==True:
                 folder_name = datetime.now().strftime(f"RUNS_{alg}_DQ/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}_from_{data_clusters_file}")
             else:
-                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}")
-
+                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_15per_random{use_15percent_random}_15per_revdq{use_15percent_revdq}")
         elif task == 'ContractNLI':
             if use_data_sorted_by_dq == True or use_data_clusters==True:
                 folder_name = datetime.now().strftime(f"RUNS_{alg}_DQ/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}")
             else:
-                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}")
+                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_15per_random{use_15percent_random}_15per_revdq{use_15percent_revdq}")
 
         elif task == 'MEDIQASUM' or task == 'LEXSUM':
             if use_data_sorted_by_dq == True or use_data_clusters==True:
                 folder_name = datetime.now().strftime(f"RUNS_{alg}_DQ/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}") 
             else:
-                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}") 
+                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_15per_random{use_15percent_random}_15per_revdq{use_15percent_revdq}") 
         elif task == 'LegalSumTOSDR':
             if use_data_sorted_by_dq == True or use_data_clusters==True:
                 folder_name = datetime.now().strftime(f"RUNS_{alg}_DQ/{task}_woneshot{task_w_one_shot}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}")
             else:
-                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woneshot{task_w_one_shot}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}")
+                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woneshot{task_w_one_shot}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_15per_random{use_15percent_random}_15per_revdq{use_15percent_revdq}")
 
         elif task == 'hyper_crossover' or task == 'hyper_mutation':
             folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}")
@@ -3636,8 +3773,13 @@ def evo_alg(task, initial_prompts, evolutionary_prompts,
 
     return best_pop, best_score_iterations
 
-
-
+# function to save data in the format 
+def save_data2file(data, folder, file_name):
+    file_name += '.json'
+    save_path = os.path.join(folder, file_name)
+    with open(save_path, 'w') as file:
+        json.dump(data, file)
+    print(f"Data saved to {save_path}")
 
 ##############################################################
 def evo_alg_2(task, 
@@ -3672,6 +3814,8 @@ def evo_alg_2(task,
               data_dist = None,
               use_data_clusters = False,
               data_clusters_file = None,
+              use_15percent_random = False,
+              use_15percent_revdq = False,
               ): 
     
     # load model and tokenizer
@@ -3690,8 +3834,9 @@ def evo_alg_2(task,
                                                                                                                                                         use_data_sorted_by_dq = use_data_sorted_by_dq,
                                                                                                                                                         use_data_clusters=use_data_clusters,
                                                                                                                                                         data_clusters_file = data_clusters_file,
-                                                                                                                
-                                                                                                                                )
+                                                                                                                                                        use_15percent_random = use_15percent_random,
+                                                                                                                                                        use_15percent_revdq = use_15percent_revdq,
+                                                                                                                                                        )
     if use_data_clusters and data_clusters_file == None:
         cluster_counter = [100] * 2
         data_from_clusters = []
@@ -3726,6 +3871,8 @@ def evo_alg_2(task,
             data_expanded = balanced_data
         else:
             data_expanded = data_expanded[:data_size]
+
+    #save_data2file(data_expanded, folder='DATASETS/15percent_rev_dq', file_name='contractnli')
 
     # normal data size adjustment
     if data_size <= 0:
@@ -3788,6 +3935,8 @@ def evo_alg_2(task,
                                             data_size = data_size,
                                             use_data_clusters = use_data_clusters,
                                             data_clusters_file = data_clusters_file,
+                                            use_15percent_random = use_15percent_random,
+                                            use_15percent_revdq=use_15percent_revdq,
                                             )
             
             if new_evo_prompt_format == True:
@@ -5029,13 +5178,20 @@ def extract_max_eval_and_patience(root_folder, task):
     
     # Load the population of the latest iteration
     print(f"current_iteration_num.: {current_iteration_num}")
+    if current_iteration_num == 0:
+        current_iteration_num = 'initial'
     population, _ = load_population(current_iteration_num, root_folder, task)
 
     print(f"best iter no.: {max_eval_iteration_num}")
+    if max_eval_iteration_num == 0:
+        max_eval_iteration_num = 'initial'
     best_population, _ = load_population(max_eval_iteration_num, root_folder, task)
     best_pop, _ = pop_selection(best_population, 1, 1)
 
     print(f"max_eval_values: {max_eval_values}")
     print(f"patience: {patience}")
+
+    if current_iteration_num == 'initial':
+        current_iteration_num = 0
     
     return max_eval_values, patience, population, current_iteration_num, best_pop

@@ -120,8 +120,8 @@ def data_quality_assessment_and_save(task: str,
         validation_data = extract_MEDIQASUM_data(type = 'valid')
 
     elif task == "LegalSumTOSDR":
-        train_data = []
-        validation_data = extract_LegalSumTOSDR_data(type = 'val')
+        train_data = extract_LegalSumTOSDR_data(type = 'train')
+        validation_data = []
 
     else:
         raise ValueError("Invalid task provided.")

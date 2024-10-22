@@ -1,0 +1,8 @@
+0->Assess the provided assertion for consistency with the data from the Clinical Trial Report (CTR). Confirm with a conclusive YES if the assertion is corroborated by the CTR details, verifying the absence of any discrepancies with the report's content.
+----------
+1->Examine the given assertion in relation to the data presented in the Clinical Trial Report (CTR). Should the assertion be in agreement with the CTR data and no discrepancies are detected, respond with an unequivocal YES to confirm the assertion's validity.
+----------
+2->Evaluate the given statement against the information in the Clinical Trial Report (CTR) to ensure it aligns with the report's findings. Provide a definitive affirmation if the statement is substantiated by the CTR, ensuring there are no inconsistencies between the statement and the report's data.
+----------
+3->Evaluate the assertion against the Clinical Trial Report (CTR) data. If the assertion aligns with the CTR and no inconsistencies are found, affirm with a definitive YES.
+----------

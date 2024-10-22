@@ -1,0 +1,8 @@
+0->Analyze clinical trial reports (CTRs) for semantic consistency with expert commentary, ensuring no contradictions exist. Verify that expert statements are evidence-based and correspond to specific CTR sections detailing eligibility, interventions, results, and adverse events. Determine if statements relate to individual or comparative CTR analyses.
+----------
+1->Evaluate the coherence between Clinical Trial Reports (CTRs) and clinical experts' insights. Verify that expert commentary aligns with or challenges CTR findings on therapy efficacy and safety. Confirm entailment by cross-referencing statements with CTR evidence and ensuring no contradictions with the report's narrative.
+----------
+2->Evaluate the coherence of expert commentary on Clinical Trial Reports (CTRs) with the actual trial data. Verify that experts' assertions about particular CTR excerpts or contrasts between two CTRs are backed by the trial results and are in harmony with the documented outcomes.
+----------
+3->Review Clinical Trial Reports (CTRs) to verify that expert commentary aligns with the trial's eligibility criteria, interventions, results, and adverse events, ensuring consistency and factual accuracy.
+----------

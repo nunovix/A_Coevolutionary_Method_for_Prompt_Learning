@@ -1,0 +1,10 @@
+0->Create the structured clinical note, summarizing the key informaton in the input dialogue and mirroring the structure of the example. Include four sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Be thorough, clear, and brief. Do not make up information.
+----------
+1->Generate the clinical note without any additinal contextualization. Possible section headings, in no particular order, include ASSESSMENT, ASSESSMENT AND PLAN CLINICAL HISTORY, CHIEF COMPLAINT, CURRENT MEDICATIONS, EXAM, FAMILY HISTORY, HISTORY OF PRESENT ILLNESS, IMPRESSION, INSTRUCTIONS, MEDICAL HISTORY, MEDICATIONS, PAST HISTORY, PAST MEDICAL HISTORY, PAST SURGICAL HISTORY, PHYSICAL EXAM, PHYSICAL EXAMINATION, PLAN, RESULTS, REVIEW OF SYSTEMS, SOCIAL HISTORY, VITALS, or VITALS REVIEWED. The different sections should be non-empty, including relevant clinical information that is supported by the dialogue.
+----------
+2->Compose the medical note by following the format outlined in the example. Important structural elements to consider for inclusion are: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Aim for clarity and conciseness.
+----------
+3->Produce the summary by following the standard recommendations for structuring clinical notes. Consider the provided example as a structural template, and aim at the generation of clear and accurate clinical descriptions.
+----------
+4->Synthesize a comprehensive clinical note from the provided dialogues, adhering to the structured format: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Ensure accuracy, clarity, and conciseness, suitable for expert medical professionals.
+----------

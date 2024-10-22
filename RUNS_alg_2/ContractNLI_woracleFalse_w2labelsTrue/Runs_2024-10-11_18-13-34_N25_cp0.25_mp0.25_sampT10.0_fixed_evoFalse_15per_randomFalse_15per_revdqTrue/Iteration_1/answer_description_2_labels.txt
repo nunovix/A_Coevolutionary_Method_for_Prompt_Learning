@@ -1,0 +1,14 @@
+0->Provide a YES or NO response indicating if it's possible to assess the statement as valid, based on the information presented in the non-disclosure agreement. Do this by interpreting the legal terminology and the context that is provided in both the NDA and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+1->Indicate with YES or NO whether the legal statement is valid.
+----------
+2->Determine the validity of a statement concerning the Non-Disclosure Agreement (NDA) by providing a definitive YES or NO answer, ensuring that the statement is fully substantiated by the NDA's content.
+----------
+3->Determine the validity of the legal statement in question by evaluating its compliance with the terms outlined in the non-disclosure agreement (NDA). This assessment should be based on a careful interpretation of the legal terminology and context provided within both the NDA and the statement. Ensure that all ambiguities or information gaps are addressed to arrive at a conclusive YES or NO determination regarding the statement's validity.
+----------
+4->Confirm the validity of the legal statement by responding with 'YES' if it adheres to legal standards, or 'NO' if it does not.
+----------
+5->Determine the validity of the legal statement by providing a YES or NO response.
+
+RESULT: The rephrased instruction is now more precise and actionable. It clearly instructs the AI system to assess the legal statement's validity and respond with either 'YES' or 'NO', which eliminates ambiguity and facilitates seamless execution of the task.
+----------

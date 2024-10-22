@@ -1,0 +1,12 @@
+0->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Non-Disclosure Agreement (NDA). An answer of YES means that the statement is supported by the NDA, not contradicting the provided information. An answer of NO means that the statement is NOT supported by the NDA.
+----------
+1->Evaluate the alignment of a specific statement with the contents of the Non-Disclosure Agreement (NDA). If the statement is consistent with and does not conflict with the information provided in the NDA, confirm its validity by responding with YES. If the statement diverges from or contradicts the NDA information, reject its validity by responding with NO.
+----------
+2->Assess a statement's consistency with the Non-Disclosure Agreement's confidentiality clauses. Respond 'YES' if the statement is consistent and non-contradictory, or 'NO' if it is inconsistent or contradictory.
+----------
+3->Determine the validity of a given statement in relation to the Non-Disclosure Agreement (NDA) contents. If the statement aligns with and does not contradict the information provided in the NDA, affirm its validity by responding with YES. Conversely, if the statement is not in accordance with or contradicts the NDA information, deny its validity by responding with NO.
+----------
+4->Determine if a particular statement adheres to the confidentiality terms specified in the Non-Disclosure Agreement (NDA). Provide a definitive YES if the statement is in compliance, or a definitive NO if it breaches the agreement. Support your decision with explicit references to the relevant clauses in the NDA and the context of the statement.
+----------
+5->Evaluate whether a given statement aligns with the confidentiality terms outlined in the Non-Disclosure Agreement (NDA). If the statement complies with and does not conflict with the NDA's stipulations, affirm its acceptability by replying "YES". Conversely, if the statement deviates from or contradicts the NDA's provisions, reject its acceptability by replying "NO".
+----------

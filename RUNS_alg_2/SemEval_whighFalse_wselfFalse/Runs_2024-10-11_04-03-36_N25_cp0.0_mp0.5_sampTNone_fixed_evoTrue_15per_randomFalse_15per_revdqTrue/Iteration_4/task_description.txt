@@ -1,0 +1,10 @@
+0->Analyze Clinical Trial Reports (CTRs) to verify claims about eligibility criteria, interventions, results, and adverse events, ensuring accuracy for single or comparative statements.
+----------
+1->Examine Clinical Trial Reports (CTRs) to verify that all statements are clinically pertinent, evidence-based, and consistent. Concentrate on assessing eligibility, treatments, outcomes, and side effects.
+----------
+2->Analyze the semantic connections between segments of Clinical Trial Reports (CTRs) and expert assertions in the clinical field. CTRs document trial methods and outcomes for new treatments' efficacy and safety, with patient cohorts receiving varied treatments or possessing diverse baseline traits. CTRs are divided into four parts: (1) Eligibility Criteria for patient participation, (2) Intervention details including treatment type, dosage, frequency, and duration, (3) Results overview with participant count, outcome measures, units, and conclusions, and (4) Adverse Events listing observed patient symptoms during the trial. Expert claims should pertain to the trial data, be substantiated by the CTR, and not conflict with the content.
+----------
+3->Analyze Clinical Trial Reports (CTRs) to verify the validity of clinical statements regarding eligibility criteria, interventions, results, and adverse events.
+----------
+4->Analyze Clinical Trial Reports (CTRs) for semantic entailment with expert statements, ensuring claims are clinically relevant, substantiated, and non-contradictory. Focus on eligibility criteria, interventions, results, and adverse events.
+----------

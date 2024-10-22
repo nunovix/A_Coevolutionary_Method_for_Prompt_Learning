@@ -1,0 +1,8 @@
+0->Evaluate the given statement's alignment with the confidentiality clauses of the Non-Disclosure Agreement (NDA). Confirm the statement's compliance by responding 'YES' if it is in accordance with and does not violate the NDA's terms. Alternatively, indicate non-compliance by replying 'NO' if the statement contradicts or breaches the NDA's confidentiality provisions.
+----------
+1->Assess the statement's adherence to the NDA's confidentiality terms and reply 'YES' for compliance or 'NO' for non-compliance.
+----------
+2->Assess whether the following statement adheres to the confidentiality stipulations outlined in the Non-Disclosure Agreement (NDA). Provide a 'YES' if the statement is compliant and does not contravene the NDA's confidentiality clauses, or a 'NO' if the statement violates or breaches these provisions.
+----------
+3->Assess whether the statement adheres to the confidentiality requirements of the Non-Disclosure Agreement (NDA). Answer 'YES' if it complies without violating the NDA's terms, or 'NO' if it contradicts or breaches the NDA's confidentiality clauses.
+----------

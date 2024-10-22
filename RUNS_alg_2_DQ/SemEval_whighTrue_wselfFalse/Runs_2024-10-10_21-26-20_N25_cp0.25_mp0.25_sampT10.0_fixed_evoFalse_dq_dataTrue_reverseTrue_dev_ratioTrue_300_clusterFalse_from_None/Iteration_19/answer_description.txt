@@ -1,0 +1,12 @@
+0->Verify the accuracy of the claim by comparing it with the information provided in the Clinical Trial Report, making sure there are no discrepancies between the two.
+----------
+1->Evaluate the given statement for its validity against the Clinical Trial Report (CTR) data. Provide a definitive YES if the statement aligns with and is substantiated by the CTR information, ensuring no contradictions with the report's descriptions exist.
+----------
+2->Evaluate the given statement for its validity against the Clinical Trial Report (CTR) data. Provide a definitive YES if the statement aligns with and is substantiated by the CTR information, ensuring no contradictions with the report's descriptions exist. 
+----------
+3->Evaluate the statement's validity against the Clinical Trial Report (CTR) data. Confirm that the statement aligns with and is substantiated by the CTR, ensuring there are no contradictions with the report's descriptions.
+----------
+4->Assess the provided assertion for consistency with the data from the Clinical Trial Report (CTR). Confirm with a conclusive YES if the assertion is corroborated by the CTR details, verifying the absence of any discrepancies with the report's content.
+----------
+5->Assess the provided assertion for consistency with the data from the Clinical Trial Report. Confirm a YES if the assertion is corroborated by the report's content, guaranteeing no discrepancies with the report's narrative are present.
+----------

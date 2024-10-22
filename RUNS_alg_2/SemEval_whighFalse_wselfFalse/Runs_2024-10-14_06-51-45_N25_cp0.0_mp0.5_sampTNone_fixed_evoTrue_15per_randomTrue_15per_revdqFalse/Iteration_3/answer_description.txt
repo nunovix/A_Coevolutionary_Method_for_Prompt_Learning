@@ -1,0 +1,6 @@
+0->Confirm the statement's accuracy using the clinical trial report.
+----------
+1->Evaluate the accuracy of the given statement against the CTR descriptions, considering medical terms, context, numbers, and potential uncertainties. Respond with 'YES' or 'NO' only.
+----------
+2->Verify the statement's validity based on the clinical trial documentation.
+----------

@@ -1,0 +1,8 @@
+0->Assess whether a given statement adheres to the confidentiality terms outlined in the Non-Disclosure Agreement (NDA). Validate the statement's compliance by replying 'YES' if it aligns with and does not breach the NDA's provisions. Conversely, deny the statement's validity by replying 'NO' if it deviates from or opposes the NDA's stipulations.
+----------
+1->Assess the statement's compliance with the Non-Disclosure Agreement (NDA) confidentiality clauses. Confirm adherence by replying 'YES' if it complies and does not violate the NDA's terms. Deny validity by replying 'NO' if it fails to comply or contradicts the NDA's requirements.
+----------
+2->Evaluate if a specific assertion complies with the privacy clauses detailed in the Confidentiality Agreement (CA). Confirm the assertion's adherence by responding 'YES' if it conforms to and respects the CA's conditions. Alternatively, reject the assertion's legitimacy by replying 'NO' if it contravenes or contradicts the CA's requirements.
+----------
+3->Evaluate the given statement's alignment with the confidentiality clauses of the Non-Disclosure Agreement (NDA). Confirm the statement's compliance by responding 'YES' if it is in accordance with and does not violate the NDA's terms. Alternatively, indicate non-compliance by replying 'NO' if the statement contradicts or breaches the NDA's confidentiality provisions.
+----------

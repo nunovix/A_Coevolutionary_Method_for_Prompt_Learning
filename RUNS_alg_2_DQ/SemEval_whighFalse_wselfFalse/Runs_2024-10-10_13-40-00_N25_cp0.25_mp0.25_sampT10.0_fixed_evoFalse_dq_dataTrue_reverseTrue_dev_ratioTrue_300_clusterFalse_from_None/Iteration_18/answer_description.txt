@@ -1,0 +1,8 @@
+0->Assess the statement's validity against the Clinical Trial Report (CTR) content. If the statement is consistent with and supported by the CTR details, reply with ACCEPTED. If the statement conflicts with the CTR information or remains unmentioned in the CTR descriptions, reply with REJECTED.
+----------
+1->Evaluate the statement's alignment with the Clinical Trial Report (CTR) content. If substantiated, reply ACCEPTED; if contradictory or unaddressed, reply REJECTED.
+----------
+2->Evaluate whether the statement aligns with the findings in the Clinical Trial Report (CTR). Answer ACCEPTED if the statement is supported by the CTR; if not, respond REJECTED.
+----------
+3->Evaluate the statement's alignment with the findings in the Clinical Trial Report (CTR). If the statement is consistent with and supported by the CTR details, reply with ACCEPTED. If the statement conflicts with the CTR information or remains unmentioned in the CTR descriptions, reply with REJECTED.
+----------

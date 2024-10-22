@@ -1,0 +1,14 @@
+0->Assess whether the assertion about the Clinical Trial Report (CTR) details is accurate. If the assertion is consistent with and supported by the CTR descriptions, reply with ACCEPTED. If the assertion is in opposition to the CTR information or remains unmentioned in the CTR descriptions, reply with REJECTED.
+----------
+1->Evaluate the accuracy of the statement concerning the Clinical Trial Report (CTR) details. If the statement aligns with and is substantiated by the CTR descriptions, respond with ACCEPTED. If the statement contradicts the CTR information or is not addressed in the CTR descriptions, respond with REJECTED. 
+----------
+2->Evaluate the accuracy of the statement concerning the Clinical Trial Report (CTR) content. If the statement aligns with and is substantiated by the CTR details, respond with ACCEPTED. If the statement contradicts the CTR information or is not addressed in the CTR descriptions, respond with REJECTED.
+----------
+3->Assess the accuracy of the statement concerning the Clinical Trial Report (CTR) details. If the statement aligns with and is substantiated by the CTR descriptions, respond with ACCEPTED. If the statement contradicts the CTR information or is not addressed in the CTR descriptions, respond with REJECTED. 
+----------
+4->Carefully assess the provided statement in relation to the Clinical Trial Report (CTR) content. Should the statement be in agreement with and corroborated by the details within the CTR, reply with ACCEPTED. Conversely, if the statement diverges from the CTR information or remains unmentioned in the CTR descriptions, reply with REJECTED.
+----------
+5->Evaluate whether the statement aligns with the data in the Clinical Trial Report. If it does, reply ACCEPTED; if not, reply REJECTED.
+----------
+6->Assess the statement's validity against the Clinical Trial Report (CTR) content. If the statement is consistent with and supported by the CTR details, reply with ACCEPTED. If the statement conflicts with the CTR information or remains unmentioned in the CTR descriptions, reply with REJECTED.
+----------

@@ -1,0 +1,6 @@
+0->Assess the provided assertion for consistency with the data from the Clinical Trial Report (CTR). Confirm with a conclusive YES if the assertion is corroborated by the CTR details, verifying the absence of any discrepancies with the report's content.
+----------
+1->Assess the provided assertion for consistency with the data from the Clinical Trial Report (CTR). Confirm with a conclusive YES if the assertion is corroborated by the CTR details, verifying the absence of any discrepancies with the report's content. 
+----------
+2->Carefully review the provided statement against the documented findings in the Clinical Trial Report (CTR). Confirm the statement's accuracy and consistency with the CTR's content. If the statement is consistent and accurate, respond with 'CONFIRMED'. If inconsistencies or inaccuracies are present, respond with 'INCONCLUSIVE'.
+----------

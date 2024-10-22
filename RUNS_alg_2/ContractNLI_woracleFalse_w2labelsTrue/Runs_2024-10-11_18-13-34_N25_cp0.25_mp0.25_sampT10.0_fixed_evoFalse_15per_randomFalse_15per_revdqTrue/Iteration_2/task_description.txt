@@ -1,0 +1,8 @@
+0->Evaluate semantic entailment between sections of Non-Disclosure Agreements (NDAs) and statements related to the confidentiality obligations they impose. NDAs govern the sharing and protection of sensitive data, outlining the scope of confidential information, obligations, agreement lifespan, and exclusions. Assess whether the claims made in a statement align with, or contradict, the information covered in a non-disclosure agreement.
+----------
+1->Consider the challenge of assessing semantic entailment between distinct sections of Non-Disclosure Agreements (NDAs) and related statements. NDAs outline procedures and obligations for protecting confidential information, including its scope, usage obligations, duration of protection, and exclusions. Evaluate whether the statements' assertions about the NDA are supported or contradicted by the agreement's descriptions.
+----------
+2->Analyze the semantic entailment between segments of Non-Disclosure Agreements (NDAs) and related confidentiality statements. Determine if the assertions made in the statements are consistent with the NDA's provisions regarding the scope, usage, duration, and exclusions of confidential information.
+----------
+3->Your task is to analyze the semantic entailment between Non-Disclosure Agreements (NDAs) and statements about confidentiality obligations. Examine the input statement to ascertain if it accurately reflects the conditions for handling sensitive information as defined in the NDA. This includes understanding the scope of confidential information, the responsibilities of the involved parties, the duration of the agreement, and any exclusions. Ensure that the statement is in harmony with the NDA or identify any contradictions.
+----------

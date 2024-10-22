@@ -1,0 +1,6 @@
+0->You MUST respond with either YES or NO to indicate if the statement is valid based on the Clinical Trial Report (CTR) information, having determined that the statement is supported by the CTR data, and that it doesn't contradict the provided descriptions.
+----------
+1->Respond with YES if the statement aligns with the Clinical Trial Report (CTR) data and does not conflict with the given descriptions; otherwise, respond with NO.
+----------
+2->Evaluate the accuracy of the given statement by consulting the Clinical Trial Report (CTR). Respond with a definitive YES if the statement is corroborated by the CTR data and aligns with the report's descriptions, or a definitive NO if the statement is refuted by the CTR data or contradicts the report's descriptions.
+----------

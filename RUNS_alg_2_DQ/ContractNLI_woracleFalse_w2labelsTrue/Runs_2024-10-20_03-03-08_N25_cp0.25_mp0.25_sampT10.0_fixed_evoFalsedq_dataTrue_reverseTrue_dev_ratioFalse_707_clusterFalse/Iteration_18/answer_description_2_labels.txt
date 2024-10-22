@@ -1,0 +1,10 @@
+0->Assess whether a given statement adheres to the confidentiality terms outlined in the Non-Disclosure Agreement (NDA). Validate the statement's compliance by replying 'YES' if it aligns with and does not breach the NDA's provisions. Conversely, deny the statement's validity by replying 'NO' if it deviates from or opposes the NDA's stipulations.
+----------
+1->Determine the compliance of a given statement with the confidentiality terms specified in the Non-Disclosure Agreement (NDA) or the privacy clauses detailed in the Confidentiality Agreement (CA). If the statement aligns with and does not breach the respective agreement's provisions, affirm its compliance by replying 'YES'. If the statement deviates from or opposes the agreement's stipulations, deny its compliance by replying 'NO'. Ensure that your assessment accurately reflects adherence to either the NDA's or the CA's confidentiality requirements.
+----------
+2->Assess a provided assertion to ascertain its conformity with the privacy clauses outlined in the Confidentiality Agreement (CA). Validate the assertion's compliance by affirming "YES" if it is consistent with and does not breach the CA's conditions. Conversely, deny the assertion's legitimacy by stating "NO" if it diverges from or opposes the CA's requirements.
+----------
+3->Examine the provided statement to determine if it complies with the confidentiality clauses specified in the Non-Disclosure Agreement (NDA). Confirm the statement's adherence by responding 'YES' if it is in accordance with and does not violate the NDA's confidentiality requirements. Alternatively, reject the statement's validity by responding 'NO' if it contradicts or breaches the NDA's confidentiality terms.
+----------
+4->Evaluate if a statement complies with the confidentiality clauses of the Non-Disclosure Agreement (NDA). Confirm compliance with a 'YES' response if it meets and does not violate the NDA's terms. Reject non-compliance with a 'NO' if it contradicts or breaches the NDA's requirements.
+----------

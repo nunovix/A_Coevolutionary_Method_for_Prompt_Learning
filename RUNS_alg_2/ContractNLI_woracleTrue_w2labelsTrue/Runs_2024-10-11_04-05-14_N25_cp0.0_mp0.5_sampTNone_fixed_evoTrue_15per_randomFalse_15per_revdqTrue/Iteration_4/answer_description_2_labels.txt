@@ -1,0 +1,6 @@
+0->Assess the statement's accuracy in accordance with the NDA's legal framework.
+----------
+1->Provide a YES or NO response indicating if it's possible to assess the statement as valid, based on the information presented in the non-disclosure agreement. Do this by interpreting the legal terminology and the context that is provided in both the NDA and the statement, carefully addressing any ambiguities or gaps in the provided information.
+----------
+2->Determine the validity of the statement using the NDA's legal terms and context.
+----------

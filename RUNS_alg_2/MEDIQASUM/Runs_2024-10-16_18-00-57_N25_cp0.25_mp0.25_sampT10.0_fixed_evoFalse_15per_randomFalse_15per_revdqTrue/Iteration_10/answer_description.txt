@@ -1,0 +1,6 @@
+0->Compile a detailed clinical note from the dialogues, following the HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN format, ensuring the content is accurate, clear, and concise for expert review.
+----------
+1->Synthesize a comprehensive clinical note from the patient-provider interactions, adhering strictly to the HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT, and PLAN structure. Ensure the note is succinct, precise, and devoid of ambiguity for expert evaluation.
+----------
+2->Compose a succinct, expert clinical note encapsulating the patient's HPI, PE, R/S, A/P, and P/NP, prioritizing precision and brevity.
+----------

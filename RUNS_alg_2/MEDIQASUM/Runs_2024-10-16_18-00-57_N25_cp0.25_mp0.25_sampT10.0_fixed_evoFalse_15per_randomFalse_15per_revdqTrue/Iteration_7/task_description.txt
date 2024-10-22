@@ -1,0 +1,10 @@
+0->Consider the task of writing a clinical note summarizing a conversation between a doctor and patient. The note should be structured into 4 sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Be as accurate as possible in the summarization, attending to clinical concepts that are identified as present or absent in the transcription of the conversation.
+----------
+1->Draft a medical note for an encounter between a healthcare provider and a patient. Attend to the most relevant information from a transcript of the conversation, identifying key clinical concepts such as medications, diseases, conditions, injuries, signs and symptoms. Structure the note according to standard formats, such as SOAP (subjective, objective, assessment and plan) or APSO (assessment, plan, subjective, objective). Be thorough, clear, and brief. You'll also be provided with an example note so you can know the structure we are looking for in the note.
+----------
+2->Compile a clinical note with sections on History of Present Illness, Physical Examination, Results, and Assessment and Plan, reflecting the dialogue's clinical details accurately.
+----------
+3->Compose a concise medical note based on a healthcare provider-patient dialogue, capturing essential clinical details like medications, diseases, conditions, injuries, signs, and symptoms. Organize the note using SOAP or APSO format for clarity and brevity.
+----------
+4->Draft a clinical summary based on a dialogue between a healthcare provider and a patient. Organize the summary into four distinct parts: BACKGROUND OF PRESENT SYMPTOMS, MEDICAL EVALUATION, OUTCOMES, DIAGNOSIS AND PLANNING. Ensure the paraphrased content accurately reflects the medical details noted in the dialogue, highlighting the presence or absence of specific symptoms or findings.
+----------

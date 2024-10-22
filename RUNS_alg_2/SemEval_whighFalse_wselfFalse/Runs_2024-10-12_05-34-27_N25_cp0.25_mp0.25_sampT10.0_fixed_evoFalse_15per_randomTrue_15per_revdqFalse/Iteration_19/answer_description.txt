@@ -1,0 +1,8 @@
+0->Respond with either YES or NO to determine the validity of the statement based on the Clinical Trial Report (CTR) descriptions. A response of YES signifies that the statement aligns with the information provided in the CTR descriptions without any contradictions. 
+----------
+1->Confirm the statement's accuracy against the Clinical Trial Report (CTR) details. Affirm with YES if it's consistent; deny with NO if there's a discrepancy.
+----------
+2->Confirm the statement's alignment with the Clinical Trial Report (CTR) content by responding with 'YES' for consistency or 'NO' for discrepancies.
+----------
+3->Evaluate the statement for consistency with the details from the Clinical Trial Report (CTR). Affirm the statement with a 'YES' if it matches the CTR content without any discrepancies; otherwise, respond with a 'NO'.
+----------

@@ -1,0 +1,12 @@
+0->Compose the medical note by following the format outlined in the example. Important structural elements to consider for inclusion are: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Aim for clarity and conciseness.
+----------
+1->Produce the summary by following the standard recommendations for structuring clinical notes. Consider the provided example as a structural template, and aim at the generation of clear and accurate clinical descriptions.
+----------
+2->Synthesize a comprehensive clinical note from the provided dialogues, adhering to the structured format: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Ensure accuracy, clarity, and conciseness, suitable for expert medical professionals.
+----------
+3->Construct a concise clinical note with four sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Summarize the essential details from the dialogue, ensuring clarity and brevity without adding extraneous information.
+----------
+4->Create the structured clinical note, summarizing the key informaton in the input dialogue and mirroring the structure of the example. Include four sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Be thorough, clear, and brief. Do not make up information.
+----------
+5->Craft a comprehensive and structured clinical note that encapsulates the essential details from the input dialogue. The note should adhere to the standard format, comprising four distinct sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, and ASSESSMENT AND PLAN. Ensure that the narrative is succinct, precise, and devoid of any extraneous information. The document should serve as an accurate reflection of the patient's condition and the healthcare provider's subsequent evaluation and proposed course of action.
+----------

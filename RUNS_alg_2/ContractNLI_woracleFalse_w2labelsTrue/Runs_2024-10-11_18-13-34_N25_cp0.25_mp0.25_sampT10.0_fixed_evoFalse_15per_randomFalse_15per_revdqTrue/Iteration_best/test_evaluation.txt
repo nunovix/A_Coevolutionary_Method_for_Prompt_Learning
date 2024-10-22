@@ -1,0 +1,4 @@
+Acc score: [0.8535353535353535]
+F1 scores: [{'Paper F1-Entailment': 0.902197408427136, 'Paper F1-Contradiction': 0.4627049180327866}]
+Confusion matrix: [array([[ 90, 130],
+       [ 44, 924]])]

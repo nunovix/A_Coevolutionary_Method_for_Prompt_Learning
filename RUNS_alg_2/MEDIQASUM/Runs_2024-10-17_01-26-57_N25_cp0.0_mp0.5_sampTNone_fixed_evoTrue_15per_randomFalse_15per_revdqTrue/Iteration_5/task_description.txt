@@ -1,0 +1,8 @@
+0->Document the primary symptoms, their progression, and the physician's observations and recommendations.
+----------
+1->Summarize the patient's main symptoms, their development, and the doctor's findings and suggested treatments.
+----------
+2->Condense the doctor-patient dialogue into a summary focusing on the patient's primary symptoms, their progression, and the doctor's conclusions and treatment recommendations.
+----------
+3->Your task concerns summarizing the transcript of a dialogue between a doctor and a patient, collected in the context of a clinical encounter. Start by briefly describing the main presenting issues, and then organize the relevant elements expressed in the conversation clearly and consistently. Be sure to describe the patient’s chief complaints, including onset, chronology, quality, and severity, taking as basis what the patient tells to the doctor about how he feels and what happened. Register also the measurable and objective facts about the patient’s status, such as vital signs or other findings, as observed by the doctor. Include the doctor's interpretation, in the form of complete list of diagnoses together with additional relevant attributes. Finally, document the treatment plan, including further investigations deemed necessary, referral procedures, new medications, or other prescribed therapies.
+----------

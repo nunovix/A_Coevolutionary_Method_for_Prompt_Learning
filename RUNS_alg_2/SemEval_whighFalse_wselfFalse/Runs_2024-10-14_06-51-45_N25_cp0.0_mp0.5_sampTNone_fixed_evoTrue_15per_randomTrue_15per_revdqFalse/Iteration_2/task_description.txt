@@ -1,0 +1,10 @@
+0->Assess the logical consistency between segments of Clinical Trial Reports (CTRs) and expert opinions in the clinical field. CTRs outline trial procedures and results, evaluating new therapies' effectiveness and safety. Expert statements should corroborate or refute claims about specific CTR sections or compare two CTRs. Validate entailment by ensuring statements are substantiated by CTR data and do not conflict with the report's content.
+----------
+1->Assess the logical consistency between expert statements and corresponding sections of Clinical Trial Reports (CTRs). Ensure that expert claims are substantiated by the CTR data and do not conflict with the trial's methodology or results.
+----------
+2->Evaluate the semantic relationships between various Clinical Trial Reports (CTRs) and expert statements in the clinical field. Ensure statements align with and are substantiated by CTR content, avoiding contradictions. CTRs provide insights into clinical trials, divided into four parts: (1) Eligibility Criteria for patient selection, (2) Interventions across different groups, (3) Results with participant data and outcomes, and (4) Adverse Events noted during the trial. Assess whether statements pertain to a single CTR or compare findings between two CTRs.
+----------
+3->Evaluate the coherence of expert commentary on Clinical Trial Reports (CTRs) with the actual trial data. Verify that experts' assertions about particular CTR excerpts or contrasts between two CTRs are backed by the trial results and are in harmony with the documented outcomes.
+----------
+4->Review Clinical Trial Reports (CTRs) to verify that expert commentary aligns with the trial's eligibility criteria, interventions, results, and adverse events, ensuring consistency and factual accuracy.
+----------

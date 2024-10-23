@@ -1,0 +1,3 @@
+task_description: ['Synthesize the objectives from both original instructions, extracting the key elements and refining the language for enhanced clarity. Incorporate additional details and definitions as needed, ensuring the final directive is precise, comprehensive, and easily actionable for field specialists.']
+instruction_description: ['Evaluate the problem statement for accuracy, conciseness, precision, and clarity, adhering to the provided guidelines.']
+answer_description: ['Generate the combined instruction without any additional explanation, keeping it short and simple.']

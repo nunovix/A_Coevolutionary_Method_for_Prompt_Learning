@@ -1135,8 +1135,8 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
             #print(f"TRUE LABEL-->{sample['label']}")
             flag=1
 
-        print(f"SEMEVAL SELF inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
-        print(f"TRUE LABEL-->{sample['label']}")
+        #print(f"SEMEVAL SELF inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+        #print(f"TRUE LABEL-->{sample['label']}")
         
         #print(f"SEMEVAL w SELF inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
 

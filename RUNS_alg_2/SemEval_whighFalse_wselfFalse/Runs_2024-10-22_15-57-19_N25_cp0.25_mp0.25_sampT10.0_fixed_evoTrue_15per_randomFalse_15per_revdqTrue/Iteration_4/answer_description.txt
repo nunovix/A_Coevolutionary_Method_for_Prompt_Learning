@@ -1,0 +1,10 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->Assess the accuracy, succinctness, specificity, and comprehensibility of the given statement in relation to the Clinical Trial Report (CTR) content, confirming that it neither conflicts with nor excludes essential details from the CTR narratives.
+----------
+2->Evaluate the statement's precision, brevity, and clarity, ensuring it aligns with the Clinical Trial Report (CTR) narratives without omitting crucial information.
+----------
+3->Evaluate the statement's validity using the Clinical Trial Report (CTR) data, focusing on the presence or absence of specific details within the report.
+----------
+4->Assess the accuracy, conciseness, precision, and clarity of the provided statement, ensuring it adheres to the standards of Clinical Trial Report narratives without excluding essential details.
+----------

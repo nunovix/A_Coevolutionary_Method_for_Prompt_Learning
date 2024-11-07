@@ -1,3 +1,7 @@
+# Experiments with clustering methods HDBSCAN and kmeans clustering, using data represented 
+# via embeddings and TF-IDF
+# Results not reported
+
 import os
 # set available gpu's
 os.environ["CUDA_VISIBLE_DEVICES"] = "3"

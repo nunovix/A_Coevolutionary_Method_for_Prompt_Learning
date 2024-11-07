@@ -1,0 +1,12 @@
+0->Provide a YES or NO response indicating the statement's validity based on the information presented in the CTR descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully assessing numeric quantities and other qualifiers, and addressing any ambiguities or gaps in the provided information.
+----------
+1->Check the statement's validity based on the clinical trial report data, providing a YES or NO response.
+----------
+2->Evaluate the given statement for its validity in relation to the Clinical Trial Report (CTR) descriptions. If the statement aligns with and is substantiated by the information in the CTR descriptions, respond with YES. If the statement contradicts or lacks support from the CTR descriptions, respond with NO.
+----------
+3->Evaluate the given statement for its validity in relation to the Clinical Trial Report (CTR) descriptions. If the statement aligns with the information provided in the CTR, affirm its accuracy with a YES. Conversely, if the statement contradicts or lacks support from the CTR descriptions, deny its validity with a NO. This assessment requires a meticulous examination of the medical terminology, context, numerical data, and qualifiers within both the CTR and the statement. Address any uncertainties or insufficiencies in the CTR information to ensure a comprehensive evaluation of the statement's validity.
+----------
+4->Analyze the provided Clinical Treatment Reports (CTRs) to determine the veracity of the given medical statements. Ensure your assessment considers medical terminology, context, numerical data, and any uncertainties or missing details. Respond with 'YES' if the statement aligns with the information in the CTRs, or 'NO' if it does not.
+----------
+5->Evaluate the statement's validity based on the Clinical Trial Report (CTR) descriptions. Provide a YES if the statement is supported by the CTR descriptions and does not contradict the provided information; otherwise, respond with NO.
+----------

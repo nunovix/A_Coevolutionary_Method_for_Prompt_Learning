@@ -1,0 +1,23 @@
+Task: ContractNLI
+Start time: 2024-10-11 04:05:14.792825
+End time: 2024-10-12 10:28:33.857945
+Total elapsed time: 1 day, 6:23:19.065120
+No. of iterations: 13
+Average time per iteration: 2:20:15.312702
+
+Initial population size (size of suprompts pop): 25
+How many of the top performers are being kept(elite): 0
+Max no. of iterations allowed: 200
+Patience: 10
+Evaluation done on: dev set
+With 707 examples
+
+Label distribution: Counter({'Entailment': 598, 'Contradiction': 109})
+
+Name of the model used: microsoft/Phi-3-mini-128k-instruct 
+4 bit quantization: True 
+Now the individuals are not bonded, meaning that new subprompts are created and randomly combined 
+Retrieving examples-->False 
+ORACLE SPANS 
+Alg 2 - Random sample 2 individuals weighted on scores, apply crossover and mutation to the offspring, top 0 performers are always kept as elite population
+With crossover probability 0.5 and mutation probability 0.5

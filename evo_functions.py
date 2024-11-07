@@ -1,3 +1,10 @@
+# main file that includes the function evo_alg_2 which is named CoEvo in the reported experiments
+# it includes all the functions that deal with populations
+# from compressing them, to updating the labling, to creating them
+# has functions to create plots
+# all the mutation, crossover functions
+# evaluations for all experimental settings
+
 import os
 import sys
 import json
@@ -4945,16 +4952,16 @@ def create_plots_from_RUNS_folder(directory_path):
         ymax = 0.80
         score = 'Accuracy'
     elif 'ContractNLI' in directory_path:
-        ymin = 0.70
-        ymax = 0.95
+        ymin = 0.40
+        ymax = 1.00
         score = 'Accuracy'
     elif 'MEDIQASUM' in directory_path:
         ymin = 0.25
         ymax = 0.55
         score = 'Rouge-1 F1'
     elif 'LegalSumTOSDR' in directory_path:
-        ymin = 0.00
-        ymax = 0.50
+        ymin = 0.1
+        ymax = 0.3
         score = 'R1'
     else:
         print(f"Incorrect task name")

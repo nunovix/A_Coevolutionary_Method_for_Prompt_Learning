@@ -1,0 +1,6 @@
+0->Attending to the prior reasoning process, decide if the statement's truthfulness can be determined using the CTR information, answering YES or NO.
+----------
+1->Evaluate the statement's veracity based on CTR data; respond with YES or NO.
+----------
+2->Evaluate the statement's veracity based on CTR data; respond with 'YES' or 'NO'.
+----------

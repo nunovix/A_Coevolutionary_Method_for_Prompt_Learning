@@ -1,0 +1,20 @@
+Task: LegalSumTOSDR
+Start time: 2024-10-18 22:24:56.152868
+End time: 2024-10-19 10:38:16.442403
+Total elapsed time: 12:13:20.289535
+No. of iterations: 53
+Average time per iteration: 0:13:50.194142
+
+Initial population size (size of suprompts pop): 25
+How many of the top performers are being kept(elite): 5
+Max no. of iterations allowed: 200
+Patience: 10
+Evaluation done on: dev set
+With 54 examples
+
+Name of the model used: microsoft/Phi-3-mini-4k-instruct 
+4 bit quantization: True 
+Now the individuals are not bonded, meaning that new subprompts are created and randomly combined 
+Retrieving examples-->False 
+Alg 2 - Random sample 2 individuals weighted on scores, apply crossover and mutation to the offspring, top 5 performers are always kept as elite population
+With crossover probability 0.5 and mutation probability 0.5

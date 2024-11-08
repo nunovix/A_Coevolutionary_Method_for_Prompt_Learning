@@ -1,7 +1,5 @@
 # A Coevolutionary Method for Prompt Learning
 
-## Abstract
-
 ## Content
 
 - [`README.md`](README.md): Project's README file.

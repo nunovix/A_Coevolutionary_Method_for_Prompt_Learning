@@ -3483,7 +3483,7 @@ def test_eval(task,
 
     trie = get_Marisa_Trie(task, tokenizer, task_w_2_labels=task_w_2_labels)
     
-    best_path = os.path.join(RUN_folder_path, 'Iteration_best/')    
+    best_path = os.path.join(RUN_folder_path, 'Iteration_best/')
     best_prompts = extract_lines_to_dict(best_path, 
                                          task=task,
                                          task_w_one_shot=task_w_one_shot,

@@ -305,6 +305,7 @@ def extract_lines_to_dict(folder_path, task,
 # function to extract SemEval data to a list of dictionaries with the 
 # id's, 'statement', 'primary_evidence', 'label' and  'secondary_evidence' if it existss
 # based on code from https://aclanthology.org/2023.semeval-1.137.pdf
+# type defines the val/train/all_available(train+val)
 def extract_SemEval_data(folder = 'DATASETS/SemEval_data', 
                          type = 'dev', 
                          extract_examples = False,

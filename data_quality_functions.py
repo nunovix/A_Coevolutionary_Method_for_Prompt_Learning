@@ -104,7 +104,8 @@ def data_quality_assessment_and_save(task: str,
                                      phi_model = '4k'):
 
     # base_data_quality_prompt = f"""The previous paragraph demarcated within ### and ### is a datapoint from a dataset. Your task is to determine whether this datapoint is a well-structured and informative example that would be valuable for evaluating the performance of a large-language model. An informative datapoint should be well-formatted, contain some usable knowledge of the task, and serve as a strong representation of the overall dataset.\n\nOPTIONS:\n- yes\n- no """
-    base_data_quality_prompt = f"""Considering that an informative datapoint should be well-formatted, contain usable knowledge, and serve as a strong representation of the overall dataset, assess whether this datapoint is a well-structured and informative example that would be valuable for assessing the performance of a large language model, when considering a task related to classifying instances from the dataset. Answer with either YES or NO."""
+    # base_data_quality_prompt = f"""Considering that an informative datapoint should be well-formatted, contain usable knowledge, and serve as a strong representation of the overall dataset, assess whether this datapoint is a well-structured and informative example that would be valuable for assessing the performance of a large language model, when considering a task related to classifying instances from the dataset. Answer with either YES or NO."""
+    base_data_quality_prompt = f"""Considering that an informative instance should be challenging to classify, illustrating the particular problems and corner cases that may exist in a given dataset, assess whether this instance corresponds to an informative example that would be valuable for assessing the performance of a large language model, when considering a task related to classifying instances from the dataset. Answer with either YES or NO."""
 
     # Step 1: Determine and execute the appropriate data extraction function based on `task`
     if task == "SemEval":
@@ -148,7 +149,7 @@ def data_quality_assessment_and_save(task: str,
 
         # Combine with base_string
         # data_quality_prompt = f"<s><|user|>\n###\n{datapoint_string}\n###\n\n{base_data_quality_prompt}<|end|>\n<|assistant|>"
-        data_quality_prompt = f"<s><|user|>\nThe following textual description corresponds to a datapoint from a dataset.\n\n{datapoint_string}\n\n{base_data_quality_prompt}<|end|>\n<|assistant|>"
+        data_quality_prompt = f"<s><|user|>\nThe following textual description corresponds to a particular instance from a dataset.\n\n{datapoint_string}\n\n{base_data_quality_prompt}<|end|>\n<|assistant|>"
         
         # Add to data_list
         full_data[i]['data_quality_prompt'] = data_quality_prompt

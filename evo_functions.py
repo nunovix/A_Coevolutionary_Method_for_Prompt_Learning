@@ -199,7 +199,7 @@ def convert_text_mistral_llama_3(input_string):
     # finding the task description part to be moved to the system part of the input
     system_part_index = content.find('\n')
 
-    llama_format = f"<|start_header_id|>system<|end_header_id|>\n\n{content[:system_part_index]}<|eot_id|><|start_header_id|>user<|end_header_id|>\n{content[system_part_index+1:]}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n{input_string[end_index+7:]}"
+    llama_format = f"<|start_header_id|>system<|end_header_id|>\n\n{content[:system_part_index]}<|eot_id|><|start_header_id|>user<|end_header_id|>\n{content[system_part_index+1:]}<|eot_id|><|start_header_id|>assistant<|end_header_id|>{input_string[end_index+7:]}"
     
     return llama_format
 
@@ -307,7 +307,7 @@ def extract_lines_to_dict(folder_path, task,
 # based on code from https://aclanthology.org/2023.semeval-1.137.pdf
 # type defines the val/train/all_available(train+val)
 def extract_SemEval_data(folder = 'DATASETS/SemEval_data', 
-                         type = 'dev', 
+                         type = 'all_available',  # dev/train/gold_test
                          extract_examples = False,
                          use_retrieves_sentences_files = True,
                          retrieve_sentences = True,
@@ -318,6 +318,10 @@ def extract_SemEval_data(folder = 'DATASETS/SemEval_data',
                          use_15percent_random = False, 
                          use_15percent_revdq = False,
                          ):
+    
+    
+
+    
     if use_15percent_random == True:
         file_path = "DATASETS/15percent_random/semeval.json"
     elif use_15percent_revdq == True:
@@ -329,6 +333,14 @@ def extract_SemEval_data(folder = 'DATASETS/SemEval_data',
             file_path = "DATASETS/DATA_QUALITY_w_CLUSTERS/SemEval.json"
         else:
             file_path = f"DATASETS/DATA_QUALITY_w_CLUSTERS/SemEval/{data_clusters_file}.json"
+    # case where we want all available data (val + train)
+    # exception
+    elif type == 'all_available':
+        dev_data = extract_SemEval_data(type='dev')
+        train_data = extract_SemEval_data(type='train')
+        all_available_data = dev_data + train_data
+        print(f"Using all available data")
+        return all_available_data
     else:
         file_path = os.path.join(folder, f"{type}_w_retrieved.json")
 
@@ -510,7 +522,7 @@ def extract_CSQA_data(file_path = 'DATASETS/CSQA_data', type='dev'):
 
 # function to extract ContractNLI data to a list of dictionaries with the 
 def extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data', 
-                             type = 'dev',
+                             type = 'all_available', #train/dev/test
                              use_retrieves_sentences_files = True,
                              retrieve_sentences = True,
                              save_retrieved_sentences = True,
@@ -529,6 +541,14 @@ def extract_ContractNLI_data(folder = 'DATASETS/ContractNLI_data',
         file_path = "DATASETS/DATA_QUALITY/ContractNLI_data_quality.json"
     elif use_data_clusters == True:
         file_path = "DATASETS/DATA_QUALITY_w_CLUSTERS/ContractNLI.json"
+    # case where we want all available data (val + train)
+    # exception
+    elif type == 'all_available':
+        dev_data = extract_ContractNLI_data(type='dev')
+        train_data = extract_ContractNLI_data(type='train')
+        all_available_data = dev_data + train_data
+        print(f"Using all available data")
+        return all_available_data
     else:
         file_path = os.path.join(folder, f"{type}_w_retrieved_task_w_2_labels_False.json")
 
@@ -2080,7 +2100,7 @@ def mutate_prompt(prompt, mutation_prompt, model, tokenizer):
     if 'Phi3' in model_name_global:
         instruction = convert_text_mistral_phi3(instruction)
     elif 'llama_3' in model_name_global:
-            sentence = convert_text_mistral_llama_3(sentence)
+        sentence = convert_text_mistral_llama_3(sentence)
 
     encoded_inputs = tokenizer(instruction, return_tensors="pt", return_attention_mask=True).to('cuda')
 
@@ -2296,6 +2316,7 @@ def get_Marisa_Trie(task, tokenizer, task_w_2_labels=True):
     encoded_possibilities = []
     for pos in possibilities:
         encoded_possibilities.append([tokenizer.bos_token_id] + tokenizer.encode(pos) + [tokenizer.eos_token_id])
+        #encoded_possibilities.append(tokenizer.encode(pos) + tokenizer.encode(pos))
         #encoded_possibilities.append([tokenizer.bos_token_id] + tokenizer.encode(pos))
 
     class MyMarisaTrie(MarisaTrie):
@@ -3622,7 +3643,7 @@ def evo_alg_2(task,
               resume_run = False,
               resume_run_folder = None,
               use_data_sorted_by_dq = False,
-              keep_dev_ratio = False,
+              keep_dev_ratio = True,
               reverse_dq = False,
               data_dist = None,
               use_data_clusters = False,
@@ -3630,6 +3651,9 @@ def evo_alg_2(task,
               use_15percent_random = False,
               use_15percent_revdq = False,
               ): 
+
+    # set random seed
+    random.seed(33)
     
     # load model and tokenizer
     # wether or not to quantize model
@@ -3650,6 +3674,11 @@ def evo_alg_2(task,
                                                                                                                                                         use_15percent_random = use_15percent_random,
                                                                                                                                                         use_15percent_revdq = use_15percent_revdq,
                                                                                                                                                         )
+    # adjust so that da_size is based of percentage instead
+    if data_size > 1:
+        sys.exit("data_sizze now HAS to be a percentage, value smaller than 1")
+    data_size = int(len(data_expanded) * data_size)
+    
     if use_data_clusters and data_clusters_file == None:
         cluster_counter = [100] * 2
         data_from_clusters = []
@@ -3660,32 +3689,30 @@ def evo_alg_2(task,
         data_expanded = data_from_clusters
     
     # keep data balanced if dq
-    if use_data_sorted_by_dq == True:
-        if reverse_dq == True:
-            data_expanded = data_expanded[::-1]
-        
-        if keep_dev_ratio == True:
-            if task == 'SemEval':
-                ent_label_size = cont_label_size = int(data_size/2)
-            elif task == 'ContractNLI':
-                ent_label_size = int(519/(519+95)*data_size)
-                cont_label_size = int(95/(519+95)*data_size)
+    #if use_data_sorted_by_dq == True:
+    if reverse_dq == True:
+        data_expanded = data_expanded[::-1]
+    
+    if keep_dev_ratio == True:
+        if task == 'SemEval':
+            ent_label_size = cont_label_size = int(data_size/2)
+        elif task == 'ContractNLI':
+            ent_label_size = int(519/(519+95)*data_size)
+            cont_label_size = int(95/(519+95)*data_size)
 
-            balanced_data = []
-            ent_num = 0
-            cont_num = 0
-            for data in data_expanded:
-                if data['label'] == 'Entailment' and ent_num < ent_label_size:
-                    balanced_data.append(data)
-                    ent_num+=1
-                elif data['label'] == 'Contradiction' and cont_num < cont_label_size:
-                    balanced_data.append(data)
-                    cont_num+=1
-            data_expanded = balanced_data
-        else:
-            data_expanded = data_expanded[:data_size]
-
-    #save_data2file(data_expanded, folder='DATASETS/15percent_rev_dq', file_name='contractnli')
+        balanced_data = []
+        ent_num = 0
+        cont_num = 0
+        for data in data_expanded:
+            if data['label'] == 'Entailment' and ent_num < ent_label_size:
+                balanced_data.append(data)
+                ent_num+=1
+            elif data['label'] == 'Contradiction' and cont_num < cont_label_size:
+                balanced_data.append(data)
+                cont_num+=1
+        data_expanded = balanced_data
+    else:
+        data_expanded = data_expanded[:data_size]
 
     # normal data size adjustment
     if data_size <= 0:
@@ -3789,7 +3816,7 @@ def evo_alg_2(task,
     
         patience_counter = 0
         iter = 0
-        #print(f"initial_population eval-->{population['eval']}")
+        print(f"initial_population eval-->{population['eval']}")
         best_score_iterations.append(max(population['eval']))
 
         # for the best individual baseline related change

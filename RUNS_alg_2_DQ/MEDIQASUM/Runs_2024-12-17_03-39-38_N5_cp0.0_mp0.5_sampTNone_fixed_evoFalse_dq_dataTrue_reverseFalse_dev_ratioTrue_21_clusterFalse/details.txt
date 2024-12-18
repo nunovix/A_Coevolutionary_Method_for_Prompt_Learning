@@ -1,0 +1,20 @@
+Task: MEDIQASUM
+Start time: 2024-12-17 03:39:38.735719
+End time: 2024-12-17 07:58:55.748248
+Total elapsed time: 4:19:17.012529
+No. of iterations: 2
+Average time per iteration: 2:09:38.506264
+
+Initial population size (size of suprompts pop): 5
+How many of the top performers are being kept(elite): 1
+Max no. of iterations allowed: 2
+Patience: 2
+Evaluation done on: dev set
+With 21 examples
+
+Name of the model used: meta-llama/Llama-3.2-3B-Instruct 
+4 bit quantization: True 
+Now the individuals are not bonded, meaning that new subprompts are created and randomly combined 
+Retrieving examples-->False 
+Alg 2 - Random sample 2 individuals weighted on scores, apply crossover and mutation to the offspring, top 1 performers are always kept as elite population
+With crossover probability 0.5 and mutation probability 0.5

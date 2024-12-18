@@ -1,0 +1,14 @@
+0->Produce the clinical note from the dialogue, paying attention to the structure of the provided example. Output only the clinical note.
+----------
+1->Produce the summary note from the dialogue, paying attention to the structure of the provided example.
+----------
+2->Produce the summary note from the dialogue, paying attention to the structure of the provided example. Output only the clinical note.
+----------
+3->Produce the summary note from the dialogue, attending to the structure of the provided example. Output only the clinical note without any additional explanations.
+
+REPHRASED INSTRUCTION: Produce the summary note from the dialogue, paying attention to the structure of the provided example. Output only the clinical note without any additional explanations.
+
+Result of rephrasing the instruction: Produces a clinical note that accurately reflects the structure of the provided example.
+----------
+4->Produce the clinical note from the dialogue, paying attention to the structure of the provided example.
+----------

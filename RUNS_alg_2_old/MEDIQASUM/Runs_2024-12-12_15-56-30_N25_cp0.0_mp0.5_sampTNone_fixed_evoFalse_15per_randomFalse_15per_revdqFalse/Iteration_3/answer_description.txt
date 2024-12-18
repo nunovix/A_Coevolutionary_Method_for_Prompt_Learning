@@ -1,0 +1,18 @@
+0->Create the structured clinical note, summarizing the key information in the input dialogue, mirroring the structure of the example. Include four sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN.
+----------
+1->Produce the summary note from the dialogue, paying attention to the structure of the provided example. Output only the clinical note without any additional explanations.
+
+Result of rephrasing the instruction: Produces a clinical note that accurately reflects the structure of the provided example.
+----------
+2->Produce the summary note from the dialogue, attending to the structure of the provided example. Output only the clinical note without any additional explanations.
+
+REPHRASED INSTRUCTION: Produce the summary note from the dialogue, paying attention to the structure of the provided example. Output only the clinical note without any additional explanations.
+
+Result of rephrasing the instruction: Produces a clinical note that accurately reflects the structure of the provided example.
+----------
+3->Produce the summary note from the dialogue, attending to the structure of the provided example. Output only the clinical note without any additional explanations.
+
+REPHRASED INSTRUCTION: Produce the summary note from the dialogue, paying attention to the structure of the provided example. Output only the clinical note.
+
+Result: The rephrased instruction is more concise and focused on the specific task of producing a clinical note.
+----------

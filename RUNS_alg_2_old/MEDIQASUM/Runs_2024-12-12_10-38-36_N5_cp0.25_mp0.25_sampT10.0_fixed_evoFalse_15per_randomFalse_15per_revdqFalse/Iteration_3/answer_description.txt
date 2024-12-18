@@ -1,0 +1,12 @@
+0->Produce the summary note from the dialogue, attending to the structure of the provided example. Output only the clinical note without any additional explanations. You will be penalized for the inclusion of inaccurate information that is not supported by the dialogue.
+----------
+1->Produce the summary note from the dialogue, attending to the structure of the provided example. Output only the clinical note without any additional explanations.
+
+REPHRASED INSTRUCTION: Produce the summary note from the dialogue, paying attention to the structure of the provided example. Output only the clinical note without any additional explanations.
+
+Result of rephrasing the instruction: Produces a clinical note that accurately reflects the structure of the provided example.
+----------
+2->Produce the clinical note from the dialogue, attending to the structure of the provided example. Output only the clinical note without any additional explanations.
+----------
+3->Produce the clinical summary note from the dialogue, attending to the structure of the provided example. Output only the clinical note.
+----------

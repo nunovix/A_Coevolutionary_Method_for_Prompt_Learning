@@ -7,10 +7,10 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "4"
 from data_quality_functions import data_quality_assessment_and_save
 
 # DQ assessment for NLI4CT dataset
-data_quality_assessment_and_save(task = 'SemEval', save=False)
+data_quality_assessment_and_save(task = 'SemEval', save=True)
 
 # DQ assessment for ContractNLI dataset
-data_quality_assessment_and_save(task = 'ContractNLI', save=True, phi_model='128k')
+data_quality_assessment_and_save(task = 'ContractNLI', save=True)
 
 # DQ assessment for MEDIQA-CHAT dataset
 data_quality_assessment_and_save(task = 'MEDIQASUM', save=True)

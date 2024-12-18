@@ -1,0 +1,10 @@
+0->Create the structured clinical note, summarizing the key informaton in the input dialogue and mirroring the structure of the example. Include four sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Be thorough, clear, and brief. Do not make up information.
+----------
+1->To generate a summary of clinical notes, adhere to the established guidelines for structuring clinical documentation. Utilize the given example as a template to craft clear, concise, and precise clinical descriptions, aligning with industry standards for clinical note-taking.
+----------
+2->Produce the summary note from the dialogue, attending to the structure of the provided example. Output only the clinical note without any additional explanations. You will be penalized for the inclusion of inaccurate information that is not supported by the dialogue.
+----------
+3->Produce the clinical note from the dialogue, following the example's structure.
+----------
+4->Create a structured clinical note that summarizes key information from the input dialogue, mirroring the example's structure. The note should include four sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Ensure thoroughness, clarity, and brevity, and strictly adhere to factual accuracy.
+----------

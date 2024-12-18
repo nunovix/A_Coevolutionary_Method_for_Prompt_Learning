@@ -1,0 +1,22 @@
+0->Draft a medical note for an encounter between a healthcare provider and a patient. Attend to the most relevant information from a transcript of the conversation, identifying key clinical concepts such as medications, diseases, conditions, injuries, signs and symptoms. Structure the note according to standard formats, such as SOAP (subjective, objective, assessment and plan) or APSO (assessment, plan, subjective, objective). Be thorough, clear, and brief. You'll also be provided with an example note so you can know the structure we are looking for in the note.
+----------
+1->Draft a medical note for an encounter between a healthcare provider and a patient. Identify key clinical concepts from a transcript of the conversation. Structure the note according to one of the following formats: SOAP (subjective, objective, assessment and plan) or APSO (assessment, plan, subjective, objective).
+----------
+2->To summarize the transcript of a dialogue between a doctor and a patient, start by describing the main presenting issues. Organize the relevant elements clearly and consistently. Describe the patient's chief complaints, including onset, chronology, quality, and severity. Register the measurable and objective facts about the patient's status. Include the doctor's interpretation of the patient's condition, in the form of a complete list of diagnoses and relevant attributes. Document the treatment plan, including further investigations deemed necessary, referral procedures, and prescribed therapies.
+----------
+3->To summarize the transcript of a dialogue between a doctor and a patient, start by describing the main presenting issues. Organize the relevant elements clearly and consistently. Describe the patient's chief complaints, including onset, chronology, quality, and severity. Register the measurable and objective facts about the patient's status. Include the doctor's interpretation of the patient's condition, in the form of a complete list of diagnoses and relevant attributes. Document the treatment plan, including further investigations deemed necessary, referral procedures, new medications, or other prescribed therapies.
+----------
+4->Summarize the transcript of a clinical encounter between a doctor and a patient, focusing on the main presenting issues, patient's chief complaints, measurable and objective facts, doctor's interpretation, and treatment plan.
+
+REPHRASED INSTRUCTION:
+
+1. **Main presenting issues**: Identify the key problems or concerns raised by the patient during the clinical encounter.
+2. **Patient's chief complaints**: Clearly state the patient's primary concerns or symptoms that led to the clinical encounter.
+3. **Measurable and objective facts**: Provide specific, quantifiable data to support the doctor's interpretation and treatment plan.
+4. **Doctor's interpretation**: Clearly articulate the doctor's understanding of the patient's condition, including their diagnosis, prognosis, and recommended course of action.
+5. **Treatment plan**: Outline the specific actions the doctor will take to address the patient's condition, including any necessary tests, medications, or follow-up appointments.
+
+REPHRASED INSTRUCTION RESULT:
+
+The rephrased instruction provides a clear and concise framework for summarizing a clinical encounter. By identifying the main presenting issues, patient's chief complaints, measurable and objective facts, doctor's interpretation, and treatment plan, the rephrased instruction enables healthcare professionals to effectively communicate the patient's condition and develop an effective treatment plan.
+----------

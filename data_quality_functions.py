@@ -7,6 +7,8 @@ from evo_functions import load_model, extract_SemEval_data, extract_ContractNLI_
 import json
 from tqdm import tqdm
 
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
 def generate_string_for_semeval_data_quality(datapoint: dict):
 
     #task_description = "Natural Language Inference task between Clinical Trial Reports' (CTRs) Sections and a Statement made by a specialist. The Statement can be made about a single CTR or two CTRs. There are two possible relations between the statement and the CTRs: Entailment or Contradiction"
@@ -49,7 +51,7 @@ def data_quality_inference(data_quality_prompt, model, tokenizer):
 
     #print(f"{data_quality_prompt}")
 
-    encoded_inputs = tokenizer(data_quality_prompt, return_tensors="pt", return_attention_mask=True, padding=True).to('cuda')
+    encoded_inputs = tokenizer(data_quality_prompt, return_tensors="pt", return_attention_mask=True).to('cuda')
     input_len = encoded_inputs['input_ids'][0].shape[0]
 
     with torch.inference_mode():
@@ -76,13 +78,23 @@ def data_quality_inference(data_quality_prompt, model, tokenizer):
     probabilities = F.softmax(logits, dim=-1)
 
     # \u2581 used before words to mark that it is a new word and not an attachable subword ie
-    yes_token_id = tokenizer.convert_tokens_to_ids("\u2581YES")
+    #yes_token_id = tokenizer.convert_tokens_to_ids("\u2581YES") # phi 3 mini
+    yess = ['ĠYES', 'ĠYes', 'Ġyes']
+    yes_token_ids = [tokenizer.convert_tokens_to_ids(y) for y in yess]
+    yes_token_probs = [probabilities[0, yes_token].item() for yes_token in yes_token_ids]
+    #print(f"yes_token_probs-->{yes_token_probs}\n\n")
+    total_yes_prob = sum(yes_token_probs)
+    """
+    # \u2581 used before words to mark that it is a new word and not an attachable subword ie
+    #yes_token_id = tokenizer.convert_tokens_to_ids("\u2581YES") # phi 3 mini
+    yes_token_id = tokenizer.convert_tokens_to_ids("ĠYES") # llama
 
     # Check if the token id is valid and present
     if yes_token_id != tokenizer.pad_token_id and yes_token_id < len(probabilities[0]):
         yes_token_prob = probabilities[0, yes_token_id].item()
     else:
         yes_token_prob = 0.0
+    """
 
     #print(f"YES_token_prob-->{yes_token_prob}")
 
@@ -96,12 +108,12 @@ def data_quality_inference(data_quality_prompt, model, tokenizer):
         pass
     #print(f"\n\n")
         
-    return yes_token_prob
+    return total_yes_prob
 
 # function to assess data quality on the dataset folders from 
 def data_quality_assessment_and_save(task: str,
                                      save = True,
-                                     phi_model = '4k'):
+                                     model = 'llama_3.2'):
 
     # base_data_quality_prompt = f"""The previous paragraph demarcated within ### and ### is a datapoint from a dataset. Your task is to determine whether this datapoint is a well-structured and informative example that would be valuable for evaluating the performance of a large-language model. An informative datapoint should be well-formatted, contain some usable knowledge of the task, and serve as a strong representation of the overall dataset.\n\nOPTIONS:\n- yes\n- no """
     # base_data_quality_prompt = f"""Considering that an informative datapoint should be well-formatted, contain usable knowledge, and serve as a strong representation of the overall dataset, assess whether this datapoint is a well-structured and informative example that would be valuable for assessing the performance of a large language model, when considering a task related to classifying instances from the dataset. Answer with either YES or NO."""
@@ -149,17 +161,20 @@ def data_quality_assessment_and_save(task: str,
 
         # Combine with base_string
         # data_quality_prompt = f"<s><|user|>\n###\n{datapoint_string}\n###\n\n{base_data_quality_prompt}<|end|>\n<|assistant|>"
-        data_quality_prompt = f"<s><|user|>\nThe following textual description corresponds to a particular instance from a dataset.\n\n{datapoint_string}\n\n{base_data_quality_prompt}<|end|>\n<|assistant|>"
-        
+        #data_quality_prompt = f"<s><|user|>\nThe following textual description corresponds to a particular instance from a dataset.\n\n{datapoint_string}\n\n{base_data_quality_prompt}<|end|>\n<|assistant|>"
+        data_quality_prompt = f"<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nThe following textual description corresponds to a particular instance from a dataset.\n\n{datapoint_string}\n\n{base_data_quality_prompt}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\nAnswer: "
+
         # Add to data_list
         full_data[i]['data_quality_prompt'] = data_quality_prompt
         #processed_data.append({"original_data": item, "combined_string": combined_string, "score": None})
     
-    if phi_model == '4k':
+    if model == 'phi_4k':
         model, tokenizer = load_model(checkpoint = "microsoft/Phi-3-mini-4k-instruct", quantized = True)
-    elif phi_model == '128k':
+    elif model == 'phi_128k':
         model, tokenizer = load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct", quantized = True)
-
+    elif model == 'llama_3.2':
+        model, tokenizer = load_model(checkpoint = "meta-llama/Llama-3.2-3B-Instruct", quantized = True)
+    
     for i in tqdm(range(len(full_data)), desc = 'Performing Data Quality Inference'):
         data_quality_score = data_quality_inference(data_quality_prompt = full_data[i]["data_quality_prompt"], 
                                                     model = model, 

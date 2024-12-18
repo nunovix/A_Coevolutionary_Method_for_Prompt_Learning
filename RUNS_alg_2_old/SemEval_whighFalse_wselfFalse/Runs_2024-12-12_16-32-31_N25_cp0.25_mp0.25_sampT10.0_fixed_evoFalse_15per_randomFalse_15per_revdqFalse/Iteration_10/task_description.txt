@@ -1,0 +1,19 @@
+0->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs detail the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements assert claims about the information within specific sections of CTRs, for a single CTR or making a comparative analysis of two CTRs. For entailment validation, the statement's claim should align with clinical trial information, finding support in the CTR and not contradicting any of the provided descriptions.
+----------
+1-> Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs detail the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements assert claims about the information within specific sections of CTRs, for a single CTR or making a comparative analysis of two CTRs. For entailment validation, the statement's claim should align with clinical trial information, finding support in the CTR and not contradicting any of the provided descriptions.
+----------
+2->Analyze the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts to evaluate the efficacy and safety of new treatments.
+
+REPHRASED INSTRUCTION: Analyze the semantic entailment between each individual section of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts to evaluate the efficacy and safety of new treatments.
+
+CORRECTED REPHRASED INSTRUCTION:  Analyze the semantic entailment between each individual section of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts to evaluate the efficacy and safety of new treatments, considering the nuances of each section and ensuring that the statements are relevant and actionable.
+
+KEY ADDITIONS:
+
+* Considering the nuances of each section and ensuring that the statements are relevant and actionable.
+* Ensuring that the statements are relevant and actionable.
+
+COMPLETED REPHRASED INSTRUCTION:  Analyze the semantic entailment between each individual section of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts to evaluate the efficacy and safety of new treatments, considering the nuances of each section and ensuring that the statements are relevant and actionable.
+
+The resulting description is more comprehensive, as it includes additional details such as considering the nuances of each section and ensuring that the statements are relevant and actionable.
+----------

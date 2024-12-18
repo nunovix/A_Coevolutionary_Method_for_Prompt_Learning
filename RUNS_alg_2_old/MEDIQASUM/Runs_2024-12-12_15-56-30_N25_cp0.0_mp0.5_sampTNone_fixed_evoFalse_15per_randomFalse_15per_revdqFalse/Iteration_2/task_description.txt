@@ -1,0 +1,17 @@
+0->Summarize the transcript of a clinical encounter between a doctor and a patient, focusing on the main presenting issues, patient's chief complaints, measurable and objective facts, doctor's interpretation, and treatment plan.
+----------
+1->Your task concerns summarizing the transcript of a dialogue between a doctor and a patient, collected in the context of a clinical encounter. Start by briefly describing the main presenting issues, and then organize the relevant elements expressed in the conversation clearly and consistently. Be sure to describe the patient’s chief complaints, including onset, chronology, quality, and severity, taking as basis what the patient tells to the doctor about how he feels and what happened. Register also the measurable and objective facts about the patient’s status, such as vital signs or other findings, as observed by the doctor. Include the doctor's interpretation, in the form of complete list of diagnoses together with additional relevant attributes. Finally, document the treatment plan, including further investigations deemed necessary, referral procedures, new medications, or other prescribed therapies.
+
+REPHRASED INSTRUCTION: 
+
+1. Briefly describe the patient's chief complaints, including the onset, chronology, quality, and severity of their symptoms.
+2. Organize the relevant elements of the conversation in a clear and consistent manner.
+3. Describe the patient's chief complaints, including the onset, chronology, quality, and severity of their symptoms.
+4. Register the measurable and objective facts about the patient's status, such as vital signs or other findings, as observed by the doctor.
+5. Include the doctor's interpretation, in the form of a complete list of diagnoses together with additional relevant attributes.
+6. Document the treatment plan, including further investigations deemed necessary, referral
+----------
+2->Draft a medical note for an encounter between a healthcare provider and a patient. Attend to the most relevant information from a transcript of the conversation, identifying key clinical concepts such as medications, diseases, conditions, injuries, signs and symptoms. Structure the note according to standard formats, such as SOAP (subjective, objective, assessment and plan) or APSO (assessment, plan, subjective, objective). Be thorough, clear, and brief. You'll also be provided with an example note so you can know the structure we are looking for in the note.
+----------
+3->To summarize the transcript of a dialogue between a doctor and a patient, start by describing the main presenting issues. Organize the relevant elements clearly and consistently. Describe the patient's chief complaints, including onset, chronology, quality, and severity. Register the measurable and objective facts about the patient's status. Include the doctor's interpretation of the patient's condition, in the form of a complete list of diagnoses and relevant attributes. Document the treatment plan, including further investigations deemed necessary, referral procedures, new medications, or other prescribed therapies.
+----------

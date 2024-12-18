@@ -1,0 +1,10 @@
+0->Consider the task of establishing semantic entailment relations between parts of a Non-Disclosure Agreement (NDA) and assertions about the agreement's confidentiality obligations. Note that NDAs outline the terms for sharing and protecting sensitive information, detailing aspects such as the definition of confidential information, obligations of the parties, duration of the agreement, exclusions, and other pertinent terms. The goal is to determine whether a statement is supported or contradicted by the NDA content.
+----------
+1->Assess support relationships between NDA sections and statements about confidentiality obligations, identifying claims that are either supported or contradicted by the agreement's framework.
+----------
+2->Analyze the NDA's provisions to identify statements that align with or contradict the agreement's confidentiality requirements. Specifically, examine the definitions of confidential information, the obligations of the parties, and the duration of the agreement to assess the validity of assertions about the NDA's terms.
+----------
+3->Identify support relationships between NDA sections and statements about confidentiality obligations, determining if claims are supported or contradicted.
+----------
+4->Establish semantic entailment relations between specific provisions of a Non-Disclosure Agreement (NDA) and relevant assertions about the agreement's confidentiality obligations. Focus on the key aspects of the NDA, including the definition of confidential information, obligations of the parties, duration of the agreement, exclusions, and other critical terms. Determine whether each statement is supported or contradicted by the NDA content, taking into account the nuances of the agreement's language and context.
+----------

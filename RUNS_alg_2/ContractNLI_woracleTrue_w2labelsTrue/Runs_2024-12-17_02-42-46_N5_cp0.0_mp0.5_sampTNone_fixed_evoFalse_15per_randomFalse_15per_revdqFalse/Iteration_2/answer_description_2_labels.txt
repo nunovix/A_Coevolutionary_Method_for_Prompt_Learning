@@ -1,0 +1,10 @@
+0->Respond with YES if the statement is fully supported by the Non-Disclosure Agreement (NDA), and NO otherwise.
+----------
+1->Respond 'YES' if the statement complies with the NDA, 'NO' otherwise.
+----------
+2->Answer with YES or NO to the question of whether one can conclude the validity of the statement with basis on the Non-Disclosure Agreement (NDA) information.
+----------
+3->Determine if the statement is supported by the Non-Disclosure Agreement (NDA). If yes, it is valid; if no, it is invalid.
+----------
+4->Respond with 'YES' if the statement is compliant with the NDA, and 'NO' otherwise.
+----------

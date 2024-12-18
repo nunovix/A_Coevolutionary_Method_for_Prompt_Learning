@@ -1,0 +1,22 @@
+0->Produce the summary note from the dialogue, attending to the structure of the provided example. Output only the clinical note without any additional explanations.
+
+REPHRASED INSTRUCTION: Produce the summary note from the dialogue, paying attention to the structure of the provided example. Output only the clinical note.
+
+Result: The rephrased instruction is more concise and focused on the specific task of producing a clinical note.
+----------
+1->Create the structured clinical note, summarizing the key information in the input dialogue, mirroring the structure of the example. Include four sections: 
+1. HISTORY OF PRESENT ILLNESS
+2. PHYSICAL EXAM
+3. RESULTS
+4. ASSESSMENT AND PLAN
+
+The result of rephrasing the instruction according to the task description is a clear, concise, and structured clinical note that effectively summarizes the key information in the input dialogue, mirroring the structure of the example.
+----------
+2->Produce the clinical note from the dialogue, paying attention to the structure of the provided example. Output only the clinical note.
+----------
+3->Produce the summary note from the dialogue, attending to the structure of the provided example. Output only the clinical note without any additional explanations.
+
+REPHRASED INSTRUCTION: Produce the summary note from the dialogue, paying attention to the structure of the provided example. Output only the clinical note without any additional explanations.
+
+Result of rephrasing the instruction: Produces a clinical note that accurately reflects the structure of the provided example.
+----------

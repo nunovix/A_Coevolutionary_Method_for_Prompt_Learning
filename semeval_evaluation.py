@@ -196,6 +196,8 @@ def main(pred_filename, gold_filename, output_dir): # input dir with gold labels
         print('Definitions_Precision: ', definitions_Prec, file=f)
     print(f"test evaluation report saved to {output_filename}")
 
+    return {'Control_F1': Control_F1, 'Consistency': Consistency, 'Faithfulness': Faithfulness}
+
 # Example usage
 if __name__ == "__main__":
     import sys

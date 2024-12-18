@@ -40,7 +40,7 @@ from semeval_evaluation import main as semeval_test_evaluation
 from torch.utils.data import DataLoader, TensorDataset
 
 # backend to improve inference speed
-from unsloth import FastLanguageModel
+#from unsloth import FastLanguageModel
 
 # for rouge metric in mediqa chat task
 import evaluate
@@ -223,8 +223,7 @@ def extract_lines_to_dict(folder_path, task,
         if task_w_highlight == True:
             ordered_filenames = ['task_description', 'ctr_description', 'statement_description', 'highlight_description', 'answer_description']
         if task_w_self_reasoning==True and task_w_highlight==True:
-            print(f"NOT VALID SELECTION of task_w_self_reasoning and task_w_highlight. EXITING")
-            sys.exit()
+            ordered_filenames = ['task_description', 'ctr_description', 'statement_description', 'highlight_description', 'self_A', 'self_B', 'self_C', 'answer_description']
 
     elif task == 'ContractNLI':
         if task_w_2_labels == True:
@@ -318,9 +317,6 @@ def extract_SemEval_data(folder = 'DATASETS/SemEval_data',
                          use_15percent_random = False, 
                          use_15percent_revdq = False,
                          ):
-    
-    
-
     
     if use_15percent_random == True:
         file_path = "DATASETS/15percent_random/semeval.json"
@@ -928,23 +924,67 @@ def prompt_preds_semeval(data_expanded,
             output = model.generate(encoded_inputs['input_ids'], 
                                     attention_mask=encoded_inputs['attention_mask'],
                                     pad_token_id=tokenizer.eos_token_id, 
+                                    max_new_tokens = 1,
+                                    return_dict_in_generate=True,
+                                    output_scores=True,)
+            
+            """output = model.generate(encoded_inputs['input_ids'], 
+                                    attention_mask=encoded_inputs['attention_mask'],
+                                    pad_token_id=tokenizer.eos_token_id, 
                                     max_new_tokens = 2,
                                     prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
-
+            """
+        
         if flag ==0:
-            print(f"SEMEVAL inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+            #print(f"SEMEVAL inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
             print(f"TRUE LABEL-->{sample['label']}")
             flag = 1
+        
+        pred = yes_no_assess(output, tokenizer, encoded_inputs)
 
-        new_tokens = output[0, prompt_length:]
+        #new_tokens = output[0, prompt_length:]
 
-        pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
+        #pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
         #print(f"pred-->{pred}")
         preds.append(pred)
 
     predictions, _ = convert_preds_from_yesno(preds)
     return labels, predictions
 
+def yes_no_assess(output, tokenizer, encoded_inputs):
+    generated_ids = output.sequences[0, :]  # Exclude the input part
+    full_generated_text = tokenizer.decode(generated_ids, skip_special_tokens=True)
+    #print(f"generated_text-->{full_generated_text}\n\n")
+
+
+    # Decode the generated sequence (excluding input)
+    generated_ids = output.sequences[0, encoded_inputs['input_ids'].shape[-1]:]  # Exclude the input part
+    generated_text = tokenizer.decode(generated_ids, skip_special_tokens=True)
+    #print(f"generated_text-->{generated_text}")
+
+    logits = output.scores[-1]  # logits of the last token
+
+    # Calculate probabilities
+    probabilities = F.softmax(logits, dim=-1)
+
+    # \u2581 used before words to mark that it is a new word and not an attachable subword ie
+    #yes_token_id = tokenizer.convert_tokens_to_ids("\u2581YES") # phi 3 mini
+    yess = ['ĠYES', 'ĠYes', 'Ġyes']
+    yes_token_ids = [tokenizer.convert_tokens_to_ids(y) for y in yess]
+    yes_token_probs = [probabilities[0, yes_token].item() for yes_token in yes_token_ids]
+    #print(f"yes_token_probs-->{yes_token_probs}\n\n")
+    total_yes_prob = sum(yes_token_probs)
+
+    nos = ['ĠNO', 'ĠNo', 'Ġno']
+    nos_token_ids = [tokenizer.convert_tokens_to_ids(n) for n in nos]
+    no_token_probs = [probabilities[0, no_token].item() for no_token in nos_token_ids]
+    #print(f"no_token_probs-->{no_token_probs}\n\n")
+    total_no_prob = sum(no_token_probs)
+
+    if total_yes_prob >= total_no_prob:
+        return "YES"
+    else:
+        return "NO"
 
 def prompt_creation_semeval_self(data_expanded, task_description, ctr_description, statement_description,
                                  self_A, self_B, self_C, model, tokenizer):
@@ -1150,6 +1190,22 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
         #print(f"PROMPT_LEN-->{prompt_length}")
         token_len.append(prompt_length)
 
+        #FastLanguageModel.for_inference(model)
+        with torch.inference_mode():
+            output = model.generate(encoded_inputs['input_ids'], 
+                                    attention_mask=encoded_inputs['attention_mask'],
+                                    pad_token_id=tokenizer.eos_token_id, 
+                                    max_new_tokens = 1,
+                                    return_dict_in_generate=True,
+                                    output_scores=True,)
+            
+        if flag ==0:
+            #print(f"SEMEVAL inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+            print(f"TRUE LABEL-->{sample['label']}")
+            flag = 1
+        
+        pred = yes_no_assess(output, tokenizer, encoded_inputs)
+        """
         with torch.inference_mode():
             output = model.generate(encoded_inputs['input_ids'], 
                                     attention_mask=encoded_inputs['attention_mask'],
@@ -1171,6 +1227,7 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
         new_tokens = output[0, prompt_length:]
 
         pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
+        """
         preds.append(pred)
         labels.append(sample["label"])
 
@@ -1326,7 +1383,7 @@ def prompt_preds_contractnli_span(data_expanded,
         if 'Phi3' in model_name_global:
             prompt_text = convert_text_mistral_phi3(prompt_text)
         elif 'llama_3' in model_name_global:
-            sentence = convert_text_mistral_llama_3(sentence)
+            prompt_text = convert_text_mistral_llama_3(prompt_text)
 
         
         #torch.cuda.empty_cache()
@@ -1348,6 +1405,7 @@ def prompt_preds_contractnli_span(data_expanded,
 
         prompt_length = encoded_inputs['input_ids'][0].shape[0]
         #print(f"prompt_length-->{prompt_length}")
+        """
         with torch.inference_mode():
             output = model.generate(encoded_inputs['input_ids'], 
                                     attention_mask=encoded_inputs['attention_mask'],
@@ -1365,11 +1423,24 @@ def prompt_preds_contractnli_span(data_expanded,
             #print(f"sample['label']-->{sample['label']}")
             print_once_flag = 1
         pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
-        #print(f"INFERENCE CONTRACTNLI-->{tokenizer.decode(output[0])}")
-        #print(f"sample['label']-->{sample['label']}")
-        #print(f"pred-->{pred}")
-        #print(f"sample['label']-->{sample['label']}")
+        """
 
+        #FastLanguageModel.for_inference(model)
+        with torch.inference_mode():
+            output = model.generate(encoded_inputs['input_ids'], 
+                                    attention_mask=encoded_inputs['attention_mask'],
+                                    pad_token_id=tokenizer.eos_token_id, 
+                                    max_new_tokens = 1,
+                                    return_dict_in_generate=True,
+                                    output_scores=True,)
+            
+        if print_once_flag ==0:
+            #print(f"SEMEVAL inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+            print(f"TRUE LABEL-->{sample['label']}")
+            print_once_flag = 1
+        
+        pred = yes_no_assess(output, tokenizer, encoded_inputs)
+        
         preds.append(pred)
 
         # f1's according to the dataset paper. F1-C and F1-E per document, then averaged
@@ -1400,7 +1471,7 @@ def prompt_preds_contractnli_span(data_expanded,
     return labels, preds, paper_f1s  #listas de dimensão (n_docs) 
 
 def extract_MEDIQASUM_data(folder_name='DATASETS/MEDIQASUM_data', 
-                           type = 'valid', 
+                           type = 'all_available',  # train/valid
                            used_retrieved_file = True,
                            retrieve_similar_examples = True,
                            save_retrieved = True,
@@ -1418,6 +1489,12 @@ def extract_MEDIQASUM_data(folder_name='DATASETS/MEDIQASUM_data',
         file_path = "DATASETS/DATA_QUALITY/MEDIQASUM_data_quality.json"
     elif use_data_clusters ==True:
         file_path = "DATASETS/DATA_QUALITY_w_CLUSTERS/MEDIQASUM.json"
+    elif type == 'all_available':
+        dev_data = extract_MEDIQASUM_data(type='valid')
+        train_data = extract_MEDIQASUM_data(type='train')
+        all_available_data = dev_data + train_data
+        print(f"Using all available data")
+        return all_available_data
     else:
         file_path = os.path.join(folder_name, f"{type}_w_retrieved.json")
 
@@ -1995,13 +2072,8 @@ def load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct",
 
     # golbal varriable due to differences in the prompt structure of the models used
     global model_name_global
-
-    if 'Phi-3' in checkpoint:
-        model_name_global = 'Phi3'
-    elif 'Llama' in checkpoint:
-        model_name_global = 'llama_3'
-
-    if 'unsloth' in checkpoint:
+    
+    """if 'unsloth' in checkpoint:
         print(f"UNSLOTH MODEL")
         print(f"CHECKPOINT-->{checkpoint}")
         max_seq_length = 8192 # Choose any! We auto support RoPE Scaling internally!
@@ -2020,10 +2092,11 @@ def load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct",
         print("Tokenizer model max length:", tokenizer.model_max_length)
         # Print model configuration
         print(f"Model configuration: {model.config}")
-        print(f"Loaded model name: {model.config.model_type}")
+        print(f"Loaded model name: {model.config.model_type}")"""
 
 
-    elif 'Phi-3' in checkpoint:
+    if 'Phi-3' in checkpoint:
+        model_name_global = 'Phi3'
         
         config = BitsAndBytesConfig(
                 load_in_4bit=True,
@@ -2047,9 +2120,12 @@ def load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct",
         print(f"Phi-3 selecionado")
 
     elif 'Llama' in checkpoint:
+        model_name_global = 'llama_3'
 
         print(f"LLAMA-->{checkpoint}")
         tokenizer = AutoTokenizer.from_pretrained(checkpoint, device_map="cuda",)
+        # Check if the tokenizer has a pad token
+        
 
         if quantized == True:
             print(f"QUANTIZED NORMAL LLAMA")
@@ -2946,25 +3022,25 @@ def create_root_folder(task,
     if alg=='alg_2':
         if task == 'SemEval':
             if use_data_sorted_by_dq == True or use_data_clusters==True:
-                folder_name = datetime.now().strftime(f"RUNS_{alg}_DQ/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}_from_{data_clusters_file}")
+                folder_name = datetime.now().strftime(f"RUNS_{alg}_DQ/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}")
             else:
-                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_15per_random{use_15percent_random}_15per_revdq{use_15percent_revdq}")
+                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_whigh{task_w_highlight}_wself{task_w_self_reasoning}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}")
         elif task == 'ContractNLI':
             if use_data_sorted_by_dq == True or use_data_clusters==True:
-                folder_name = datetime.now().strftime(f"RUNS_{alg}_DQ/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}")
+                folder_name = datetime.now().strftime(f"RUNS_{alg}_DQ/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}")
             else:
-                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_15per_random{use_15percent_random}_15per_revdq{use_15percent_revdq}")
+                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}")
 
         elif task == 'MEDIQASUM' or task == 'LEXSUM':
             if use_data_sorted_by_dq == True or use_data_clusters==True:
-                folder_name = datetime.now().strftime(f"RUNS_{alg}_DQ/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}") 
+                folder_name = datetime.now().strftime(f"RUNS_{alg}_DQ/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}") 
             else:
-                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_15per_random{use_15percent_random}_15per_revdq{use_15percent_revdq}") 
+                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}") 
         elif task == 'LegalSumTOSDR':
             if use_data_sorted_by_dq == True or use_data_clusters==True:
-                folder_name = datetime.now().strftime(f"RUNS_{alg}_DQ/{task}_woneshot{task_w_one_shot}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}_cluster{use_data_clusters}")
+                folder_name = datetime.now().strftime(f"RUNS_{alg}_DQ/{task}_woneshot{task_w_one_shot}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}")
             else:
-                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woneshot{task_w_one_shot}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_15per_random{use_15percent_random}_15per_revdq{use_15percent_revdq}")
+                folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woneshot{task_w_one_shot}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}")
 
         elif task == 'hyper_crossover' or task == 'hyper_mutation':
             folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}")
@@ -3555,7 +3631,8 @@ def test_eval(task,
                                 )
     
     # write to new txt in folder
-    file_name = RUN_folder_path+'/Iteration_best/test_evaluation.txt'
+    model_name = model_name.split("/")[1]
+    file_name = RUN_folder_path+'/Iteration_best/test_evaluation_' + model_name + '.txt'
     with open(file_name, 'w') as file:
         if 'SemEval' in task:
             f1_scores = best_pop['f1_scores']
@@ -3693,7 +3770,7 @@ def evo_alg_2(task,
     if reverse_dq == True:
         data_expanded = data_expanded[::-1]
     
-    if keep_dev_ratio == True:
+    if keep_dev_ratio == True and task != 'MEDIQASUM' and task != 'LegalSumTOSDR':
         if task == 'SemEval':
             ent_label_size = cont_label_size = int(data_size/2)
         elif task == 'ContractNLI':

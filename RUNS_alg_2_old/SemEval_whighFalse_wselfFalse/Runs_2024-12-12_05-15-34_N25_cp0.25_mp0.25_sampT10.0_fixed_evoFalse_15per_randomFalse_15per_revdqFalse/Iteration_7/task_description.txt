@@ -1,0 +1,81 @@
+0->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs detail the methodology and outcomes of clinical trials, appraising the efficacy and safety of new treatments. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or making a comparative analysis of two CTRs. For entailment validation, the statement's claim should align with clinical trial information, finding support in the CTR and not contradicting any of the provided descriptions.
+----------
+1->Consider the problem of assessing semantic entailment connections between distinct sections of Clinical Trial Reports (CTRs) and statements put forth by clinical domain experts. To establish entailment, statements should be supported by the CTR information, not contradicting any of the provided descriptions. In brief, CTRs elucidate the procedures and findings of clinical trials, encompassing four sections: (1) ELIGIBILITY CRITERIA specifying conditions for patient inclusion, (2) INTERVENTION detailing treatments from different patient cohorts, (3) RESULTS summarizing the participant statistics and the trial outcomes, and (4) ADVERSE EVENTS listing observed signs and symptoms. Statements make claims about the information within these sections, either for a single CTR or comparing two CTRs.
+----------
+2->Examine semantic entailment relationships between individual sections of Clinical Trial Reports (CTRs) and statements articulated by clinical domain experts, ensuring statements are supported by CTR information and do not contradict any provided descriptions.
+
+CORE INFORMATION:
+
+* Examine semantic entailment relationships
+* Between individual sections of Clinical Trial Reports (CTRs)
+* And statements articulated by clinical domain experts
+* Ensuring statements are supported by CTR information
+* And do not contradict any provided descriptions
+
+REPHRASED INSTRUCTION:
+
+  1. Review the semantic entailment relationships between individual sections of Clinical Trial Reports (CTRs) and statements articulated by clinical domain experts.
+  2. Ensure that the statements are supported by CTR information.
+  3. Verify that the statements do not contradict any provided descriptions.
+
+ADDITIONAL DETAILS:
+
+* Reviewing the semantic entailment relationships involves analyzing the connections between individual sections of CTRs and the statements made by clinical domain experts.
+* To ensure that the statements are supported by CTR information, the rephrased instruction will check that each statement is linked to specific sections of CTRs.
+* To verify that the statements do not contradict any provided descriptions, the rephrased instruction will examine the consistency of the statements with the existing descriptions.
+
+FINAL REPHRASED INSTRUCTION:
+
+  1. Review the semantic entailment relationships between individual sections of Clinical Trial Reports (CTRs) and statements articulated by clinical domain experts.
+  2.
+----------
+3->  Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements articulated by clinical domain experts, ensuring compatibility with clinical trial data and avoiding contradictions with CTRs. Analyze semantic entailment relationships between individual sections of CTRs and statements articulated by clinical domain experts, ensuring compatibility with clinical trial data and avoiding contradictions with CTRs. For entailment validation, the statement's claim should align with clinical trial information, finding support in the CTR and not contradicting any of the provided descriptions. 
+----------
+4->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. Statements should support the CTR information, not contradict any of the provided descriptions, for a single CTR or a comparative analysis of two CTRs.
+
+REPHRASED INSTRUCTION:
+
+1. **Clarify the purpose**: Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts, with a focus on improving the performance of AI systems when executing the task.
+
+2. **Define the scope**: Ensure that the new version enhances the clarity and effectiveness of the descriptions by considering the nuances of the original instruction.
+
+3. **Address ambiguities**: Attend to the nuances of the original instruction and make sure that the rewritten version is precise, actionable, and free of ambiguities.
+
+4. **Facilitate seamless execution**: Make sure that the rewritten version facilitates a seamless execution of the task, including a single CTR or a comparative analysis of two CTRs.
+
+REPHRASED INSTRUCTION RESULT:
+
+The rephrased instruction aims to improve the performance of AI systems by evaluating the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. To achieve this, the rephrased instruction will:
+
+* Clarify the purpose by specifying the focus on improving the performance of AI systems
+* Define the scope by specifying the individual sections of CTRs
+----------
+5->Analyze semantic entailment relationships between individual sections of Clinical Trial Reports (CTRs) and statements articulated by clinical domain experts, ensuring compatibility with clinical trial data and avoiding contradictions with CTRs.
+----------
+6->" Examine semantic entailment relationships between individual sections of Clinical Trial Reports (CTRs) and statements articulated by clinical domain experts, ensuring statements are supported by CTR information and do not contradict any provided descriptions.
+
+CORE INFORMATION:
+
+* Examine semantic entailment relationships
+* Between individual sections of Clinical Trial Reports (CTRs)
+* And statements articulated by clinical domain experts
+* Ensuring statements are supported by CTR information
+* And do not contradict any provided descriptions
+
+ADDITIONAL DETAILS:
+
+* Reviewing the semantic entailment relationships involves analyzing the connections between individual sections of CTRs and the statements made by clinical domain experts.
+* To ensure that the statements are supported by CTR information, the rephrased instruction will check that each statement is linked to specific sections of CTRs.
+* To verify that the statements do not contradict any provided descriptions, the rephrased instruction will examine the consistency of the statements with the existing descriptions.
+
+FINAL REPHRASED INSTRUCTION:
+
+  1. Review the semantic entailment relationships between individual sections of Clinical Trial Reports (CTRs) and statements articulated by clinical domain experts.
+  2. Ensure that the statements are supported by CTR information.
+  3. Verify that the statements do not contradict any provided descriptions.
+
+COMBINED INSTRUCTION:
+
+  1. Review the semantic entailment relationships between individual sections of Clinical Trial Reports (CTRs) and statements articulated by clinical domain experts.
+  2. Review
+----------

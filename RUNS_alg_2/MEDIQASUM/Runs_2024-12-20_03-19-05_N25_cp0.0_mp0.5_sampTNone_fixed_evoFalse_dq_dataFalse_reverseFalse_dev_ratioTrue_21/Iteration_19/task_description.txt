@@ -1,0 +1,15 @@
+0->Consider the task of writing a clinical note summarizing a conversation between a doctor and patient. The note should be structured into 4 sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Be as accurate as possible in the summarization, attending to clinical concepts that are identified as present or absent in the transcription of the conversation.
+----------
+1->Write a clinical note summarizing a conversation between a doctor and patient, structured into 4 sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Accurately summarize the conversation, focusing on clinical concepts identified as present or absent in the transcription.
+----------
+2->Write a clinical note summarizing a conversation between a doctor and patient, structured into 4 sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Accurately capture clinical concepts identified in the transcription.
+----------
+3->Write a clinical note summarizing a conversation between a doctor and patient. The note should be structured into 4 sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Accurately summarize the conversation, paying close attention to clinical concepts identified as present or absent in the transcription.
+----------
+4->Write a clinical note that summarizes a conversation between a healthcare provider and a patient, divided into four key components: 
+
+1. History of Present Illness: Document the patient's symptoms, complaints, and concerns.
+2. Physical Examination: Record the findings from the physical assessment, including vital signs and any notable abnormalities.
+3. Results: Summarize laboratory or diagnostic test results that are relevant to the patient's condition.
+4. Assessment and Plan: Outline the healthcare provider's diagnosis, treatment recommendations, and any necessary follow-up actions.
+----------

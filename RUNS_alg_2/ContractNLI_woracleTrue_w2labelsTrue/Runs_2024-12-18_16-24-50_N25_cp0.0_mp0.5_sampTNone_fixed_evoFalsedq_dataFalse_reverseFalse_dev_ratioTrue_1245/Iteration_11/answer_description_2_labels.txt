@@ -1,0 +1,10 @@
+0->Respond 'yes' if the statement aligns with the NDA, or 'no' if it does not.
+----------
+1->Confirm whether the statement complies with the Non-Disclosure Agreement by responding with 'yes' or 'no'. 
+----------
+2->Verify compliance with the Non-Disclosure Agreement by responding 'yes' or 'no'.
+----------
+3->Please confirm whether the provided statement complies with the terms of the Non-Disclosure Agreement (NDA). If the statement aligns with the NDA, respond with 'yes'. If the statement does not align with the NDA, respond with 'no'. Please provide your response.
+----------
+4->Respond with 'yes' or 'no' to confirm compliance with the Non-Disclosure Agreement.
+----------

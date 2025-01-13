@@ -1,0 +1,18 @@
+0->Evaluate the semantic entailment between CTR sections and expert statements, ensuring claims align with trial data and do not contradict provided descriptions.
+----------
+1->Analyze the relationship between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts, focusing on whether the statements support or contradict the information presented in the CTRs. Specifically, verify that the statements align with the methodology and outcomes described in the CTRs, and that they do not contradict any of the provided descriptions. Evaluate the semantic entailment between individual sections of CTRs and statements, ensuring that the statement's claim finds support in the CTR and does not contradict any of the provided descriptions.
+----------
+2->Analyze the relationship between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts, focusing on whether the statements support or contradict the information presented in the CTRs. Specifically, verify that the statements align with the methodology and outcomes described in the CTRs, and that they do not contradict any of the provided descriptions. Evaluate the semantic entailment between individual sections of CTRs and statements, ensuring that the statement's claim finds support in the CTR and does not contradict any of the provided descriptions.
+
+To achieve this, follow these steps:
+
+1. Identify the methodology and outcomes described in the CTRs.
+2. Locate the relevant statements issued by clinical domain experts.
+3. Determine whether the statements support or contradict the information presented in the CTRs.
+4. Verify that the statements align with the methodology and outcomes described in the CTRs.
+5. Confirm that the statements do not contradict any of the provided descriptions.
+6. Evaluate the semantic entailment between individual sections of CTRs and statements.
+7. Document the results of your analysis, including any discrepancies or inconsistencies found.
+
+By following these steps, you will be able to comprehensively evaluate the relationship between CTRs and statements, ensuring that the statements support the information presented in the CTRs and do not contradict any of the provided descriptions.
+----------

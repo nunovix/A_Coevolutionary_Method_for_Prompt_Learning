@@ -787,6 +787,15 @@ def batch_inference(all_prompts, model, tokenizer, trie, batch_size=3):
 
     return preds
 
+# function that prepares the text for a llama 3 instruct model
+# allowing to fix the start of the assistant text with the "assistant_text" variable
+# using the structure shown in https://www.llama.com/docs/model-cards-and-prompt-formats/meta-llama-3/
+def prepare_text4llama3_instruct(user_text: str,
+                                 system_text: str = "Assume the role of an automated system for the processing of domain-specific documentation, such as clinical or legal documents. The accuracy, robustness, consistency, and faithfulness of the reasoning performed by the system is critical in this context, and it is important to carefully consider the domain-specific terminology, to handle linguistic constructs such as temporal associations or negations, and to have robustness to different writing styles and vocabularies.",
+                                 assistant_text: str = "ANSWER:",
+                                 ):
+    prompt_text = f"""<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\n{system_text}<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n{user_text}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n{assistant_text}"""
+    return prompt_text
 
 def prompt_preds_semeval(data_expanded, 
                          task_description, 
@@ -817,7 +826,10 @@ def prompt_preds_semeval(data_expanded,
                                                         self_C=self_C, 
                                                         model=model, 
                                                         tokenizer=tokenizer, 
-                                                        trie=trie)
+                                                        trie=trie,
+                                                        highlight_description=highlight_description,
+                                                        task_w_highlight=task_w_highlight,
+                                                        )
         
         return labels, predictions
     
@@ -880,24 +892,28 @@ def prompt_preds_semeval(data_expanded,
         # if using retrieved highlight, just adds them before the answer
         if task_w_highlight == True and highlight_description != '' and highlight_description != ' ':
             retrieved_primary = "\n".join(sample['retrieved_primary_sentence'])
-            sentence = sentence = f"""{sentence}{highlight_description}\n\nPimary CTR: "{retrieved_primary}"\n\n"""
+            sentence = f"""{sentence}{highlight_description}\n\nPimary CTR: "{retrieved_primary}"\n\n"""
             if secondary_evidence:
                 retrieved_secondary = "\n".join(sample['retrieved_secondary_sentence'])
-                sentence = sentence = f"""{sentence}Secondary CTR: "{retrieved_secondary}"\n\n"""
+                sentence = f"""{sentence}Secondary CTR: "{retrieved_secondary}"\n\n"""
 
-        sentence = f"""[INST]{sentence}{answer_description}[/INST]\n\nANSWER:"""
+        user_text_prompt = f"{sentence}{answer_description}"
+        #sentence = f"""[INST]{sentence}{answer_description}[/INST]\n\nANSWER:"""
 
         labels.append(sample["label"])
 
-        # conversion necessary for phi3 model
+        """# conversion necessary for phi3 model
         if 'Phi3' in model_name_global:
             sentence = convert_text_mistral_phi3(sentence)
         elif 'llama_3' in model_name_global:
-            sentence = convert_text_mistral_llama_3(sentence)
+            sentence = convert_text_mistral_llama_3(sentence)"""
 
-        encoded_inputs = tokenizer(sentence, return_tensors="pt", return_attention_mask=True).to('cuda')
+        if 'llama_3' in model_name_global:
+            prompt = prepare_text4llama3_instruct(user_text = user_text_prompt)
 
-        prompt_length = encoded_inputs['input_ids'][0].shape[0]
+        encoded_inputs = tokenizer(prompt, return_tensors="pt", return_attention_mask=True).to('cuda')
+
+        # prompt_length = encoded_inputs['input_ids'][0].shape[0]
         
         """with torch.inference_mode():
             output = model.generate(encoded_inputs['input_ids'], 
@@ -936,7 +952,7 @@ def prompt_preds_semeval(data_expanded,
             """
         
         if flag ==0:
-            #print(f"SEMEVAL inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+            print(f"SEMEVAL inference-->{tokenizer.decode(output.sequences[0, :], skip_special_tokens=False)}")
             print(f"TRUE LABEL-->{sample['label']}")
             flag = 1
         
@@ -952,7 +968,7 @@ def prompt_preds_semeval(data_expanded,
     return labels, predictions
 
 def yes_no_assess(output, tokenizer, encoded_inputs):
-    generated_ids = output.sequences[0, :]  # Exclude the input part
+    generated_ids = output.sequences[0, :]
     full_generated_text = tokenizer.decode(generated_ids, skip_special_tokens=True)
     #print(f"generated_text-->{full_generated_text}\n\n")
 
@@ -1057,7 +1073,7 @@ def prompt_creation_semeval_self_A(data_expanded,
 
 
 def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, statement_description,
-                                 self_A, self_B, self_C, model, tokenizer, trie):
+                                 self_A, self_B, self_C, model, tokenizer, trie, highlight_description = '', task_w_highlight=False):
     
     """
     
@@ -1140,18 +1156,32 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
         if secondary_evidence:
             secondary = "\n".join(sample['secondary_evidence'])
             text = f'''{text} Secondary Trial: "{secondary}"\n\n '''
+        
+        # if using retrieved highlight, just adds them before the answer
+        if task_w_highlight == True and highlight_description != '' and highlight_description != ' ':
+            retrieved_primary = "\n".join(sample['retrieved_primary_sentence'])
+            text = f"""{text}{highlight_description}\n\nPimary CTR: "{retrieved_primary}"\n\n"""
+            if secondary_evidence:
+                retrieved_secondary = "\n".join(sample['retrieved_secondary_sentence'])
+                text = f"""{text}Secondary CTR: "{retrieved_secondary}"\n\n"""
 
-        common_text = f'''[INST]{text}{statement_description}\n\n"{sample['statement']}"\n\n'''
-        text_self = f'''{common_text}{self_A}[/INST]\nANSWER: '''
+        # common_text = f'''[INST]{text}{statement_description}\n\n"{sample['statement']}"\n\n'''
+        common_text = f'''{text}{statement_description}\n\n"{sample['statement']}"\n\n'''
+
+        #text_self = f'''{common_text}{self_A}[/INST]\nANSWER: '''
+        user_text_prompt_self = f'''{common_text}{self_A}'''
 
         # conversion necessary for phi3 model
-        if 'Phi3' in model_name_global:    
+        """if 'Phi3' in model_name_global:    
             text_self = convert_text_mistral_phi3(text_self)
         elif 'llama_3' in model_name_global:
-            sentence = convert_text_mistral_llama_3(sentence)
+            sentence = convert_text_mistral_llama_3(sentence)"""
+
+        if 'llama_3' in model_name_global:
+            prompt = prepare_text4llama3_instruct(user_text = user_text_prompt_self)
 
         #FastLanguageModel.for_inference(model)
-        encoded_inputs = tokenizer(text_self, return_tensors="pt", return_attention_mask=True).to('cuda')
+        encoded_inputs = tokenizer(prompt, return_tensors="pt", return_attention_mask=True).to('cuda')
 
         prompt_length = encoded_inputs['input_ids'][0].shape[0]
         
@@ -1169,7 +1199,8 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
         reflection = tokenizer.decode(new_tokens, skip_special_tokens=True)
         #print(f"REFLECTION-->\n{tokenizer.decode(output[0], skip_special_tokens=False)}")
 
-        text_w_reflection = f'''{common_text}{self_B}\n\n"{reflection}"\n\n{self_C}[/INST]\nANSWER: '''
+        #text_w_reflection = f'''{common_text}{self_B}\n\n"{reflection}"\n\n{self_C}[/INST]\nANSWER: '''
+        user_text_prompt_reflection = f'''{common_text}{self_B}\n\n"{reflection}"\n\n{self_C}'''
         #print(f"text_w_reflection-->{text_w_reflection}\n\n\n")
 
         # to improve memory usage of gpu
@@ -1178,12 +1209,15 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
         torch.cuda.empty_cache()
 
         # conversion necessary for phi3 model
-        if 'Phi3' in model_name_global:
+        """if 'Phi3' in model_name_global:
             text_w_reflection = convert_text_mistral_phi3(text_w_reflection)
         elif 'llama_3' in model_name_global:
-            sentence = convert_text_mistral_llama_3(sentence)
+            sentence = convert_text_mistral_llama_3(sentence)"""
 
-        encoded_inputs = tokenizer(text_w_reflection, return_tensors="pt", return_attention_mask=True).to('cuda')
+        if 'llama_3' in model_name_global:
+            prompt = prepare_text4llama3_instruct(user_text = user_text_prompt_reflection)
+
+        encoded_inputs = tokenizer(prompt, return_tensors="pt", return_attention_mask=True).to('cuda')
 
         #prompt = tokenizer.encode(text_w_reflection, return_tensors="pt").to('cuda')
         prompt_length = encoded_inputs['input_ids'][0].shape[0]
@@ -1200,7 +1234,7 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
                                     output_scores=True,)
             
         if flag ==0:
-            #print(f"SEMEVAL inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+            print(f"SEMEVAL inference-->{tokenizer.decode(output.sequences[0, :] , skip_special_tokens=False)}")
             print(f"TRUE LABEL-->{sample['label']}")
             flag = 1
         
@@ -1341,6 +1375,7 @@ def prompt_preds_contractnli_span(data_expanded,
     print_once_flag = 0
     for sample in tqdm(data_expanded, desc='Evaluating prompts for individual'):
         before_nda = f"""[INST]{task_description}"""
+        before_nda = f"""{task_description}"""
 
         if task_w_full_contract == True:
             before_nda += f""" \n\n{doc_description}\n  "{sample['text']}" \n """ 
@@ -1376,15 +1411,19 @@ def prompt_preds_contractnli_span(data_expanded,
 
 
         before_nda = f"{before_nda}{statement_description}\n\n"
-        prompt_text = f"""{before_nda}"{sample['statement']}"\n\n{answer_description}[/INST]\n\nANSWER: """
+        #prompt_text = f"""{before_nda}"{sample['statement']}"\n\n{answer_description}[/INST]\n\nANSWER: """
+        prompt_user_text = f"""{before_nda}"{sample['statement']}"\n\n{answer_description}"""
+
         #print(f"prompt-->{prompt}")
 
         # conversion necessary for phi3 model
-        if 'Phi3' in model_name_global:
+        """if 'Phi3' in model_name_global:
             prompt_text = convert_text_mistral_phi3(prompt_text)
         elif 'llama_3' in model_name_global:
-            prompt_text = convert_text_mistral_llama_3(prompt_text)
+            prompt_text = convert_text_mistral_llama_3(prompt_text)"""
 
+        if 'llama_3' in model_name_global:
+            prompt = prepare_text4llama3_instruct(user_text = prompt_user_text)
         
         #torch.cuda.empty_cache()
         labels.append(sample["label"])
@@ -1401,7 +1440,7 @@ def prompt_preds_contractnli_span(data_expanded,
                 cached_outputs = model(cached, return_dict=True,)
             cached_outputs.past_key_values = [[y[:, :, :-1] for y in x] for x in cached_outputs.past_key_values]"""
 
-        encoded_inputs = tokenizer(prompt_text, return_tensors="pt", return_attention_mask=True).to('cuda')
+        encoded_inputs = tokenizer(prompt, return_tensors="pt", return_attention_mask=True).to('cuda')
 
         prompt_length = encoded_inputs['input_ids'][0].shape[0]
         #print(f"prompt_length-->{prompt_length}")
@@ -1435,7 +1474,7 @@ def prompt_preds_contractnli_span(data_expanded,
                                     output_scores=True,)
             
         if print_once_flag ==0:
-            #print(f"SEMEVAL inference-->{tokenizer.decode(output[0], skip_special_tokens=False)}")
+            print(f"SEMEVAL inference-->{tokenizer.decode(output.sequences[0, :], skip_special_tokens=False)}")
             print(f"TRUE LABEL-->{sample['label']}")
             print_once_flag = 1
         
@@ -1815,7 +1854,11 @@ def prompt_preds_mediqasum(data_expanded,
 
         sentence = f"""{prompt}Example Note:\n"{example}" """
         dialogue = "".join(sample['dialogue'])
-        sentence = f"""[INST]{sentence}\n{dialog_description}\n\n"{dialogue}"\n\n{answer_description}[/INST]Clinical Note:"""
+        
+        # sentence = f"""[INST]{sentence}\n{dialog_description}\n\n"{dialogue}"\n\n{answer_description}[/INST]Clinical Note:"""
+
+        prompt_user_text = f"""{sentence}\n{dialog_description}\n\n"{dialogue}"\n\n{answer_description}"""
+        prompt_assistant_text = f"""Clinical Note:"""
         
         labels.append(sample["note"])
 
@@ -1824,13 +1867,16 @@ def prompt_preds_mediqasum(data_expanded,
             dialogues.append(sample["dialogue"])
 
         # conversion necessary for phi3 model
-        if 'Phi3' in model_name_global:
+        """if 'Phi3' in model_name_global:
             sentence = convert_text_mistral_phi3(sentence)
             #print(f"messages prompts-->{sentence}\n\n\n\n\n\n\n\n")
         elif 'llama_3' in model_name_global:
-            sentence = convert_text_mistral_llama_3(sentence)
+            sentence = convert_text_mistral_llama_3(sentence)"""
 
-        encoded_inputs = tokenizer(sentence, return_tensors="pt", return_attention_mask=True).to('cuda')
+        if 'llama_3' in model_name_global:
+            prompt = prepare_text4llama3_instruct(user_text = prompt_user_text, assistant_text = prompt_assistant_text)
+
+        encoded_inputs = tokenizer(prompt, return_tensors="pt", return_attention_mask=True).to('cuda')
             
         prompt_length = encoded_inputs['input_ids'][0].shape[0]
         with torch.inference_mode():
@@ -1987,24 +2033,33 @@ def prompt_preds_legalsumtosdr(data_expanded,
             #example = """Text: "We collect browsing information – such as IP address and location, date and time stamp, user agent, Quora cookie ID (if applicable), URL, unique advertising or content identifiers (if applicable), and time zone, and other information about user activities on the Quora Platform, as well as on third-party sites and services that have embedded our Quora pixels (“Pixels”) widgets, plug-ins, buttons, or related services."\nSummary: "They store data on you even if you did not interact with the service" """
             example = sample['retrieved_example_summary']
 
-            sentence = f"""[INST]{sentence}\n\n{doc_description}\n\n"{doc}"\n\n{example_description}\n\nExample summary: "{example}"\n\n{answer_description}[/INST]\n\nSummary:"""
+            # sentence = f"""[INST]{sentence}\n\n{doc_description}\n\n"{doc}"\n\n{example_description}\n\nExample summary: "{example}"\n\n{answer_description}[/INST]\n\nSummary:"""
+            prompt_user_text = f"""{sentence}\n\n{doc_description}\n\n"{doc}"\n\n{example_description}\n\nExample summary: "{example}"\n\n{answer_description}"""
+            prompt_assistant_text = f"""Summary:"""
+
         else:
-            sentence = f"""[INST]{sentence}\n\n{doc_description}\n\n"{doc}"\n\n{answer_description}[/INST]\n\nSummary:"""
+            #sentence = f"""[INST]{sentence}\n\n{doc_description}\n\n"{doc}"\n\n{answer_description}[/INST]\n\nSummary:"""
+            prompt_user_text = f"""{sentence}\n\n{doc_description}\n\n"{doc}"\n\n{answer_description}"""
+            prompt_assistant_text = f"""Summary:"""
+
 
         #print(sentence)
 
         # conversion necessary for phi3 model
-        if 'Phi3' in model_name_global:
+        """if 'Phi3' in model_name_global:
             sentence = convert_text_mistral_phi3(sentence)
             #print(f"messages prompts-->{sentence}\n\n\n\n\n\n\n\n")
             #print(f"len(sentence)-->{len(sentence)}")
             #print(f"messages prompts-->{sentence[:200]}\n\n\n\n\n\n\n\n")
         elif 'llama_3' in model_name_global:
-            sentence = convert_text_mistral_llama_3(sentence)
+            sentence = convert_text_mistral_llama_3(sentence)"""
+
+        if 'llama_3' in model_name_global:
+            prompt = prepare_text4llama3_instruct(user_text = prompt_user_text, assistant_text = prompt_assistant_text)
         
         labels.append(sample["reference_summary"])
 
-        encoded_inputs = tokenizer(sentence[:], return_tensors="pt", return_attention_mask=True).to('cuda')
+        encoded_inputs = tokenizer(prompt, return_tensors="pt", return_attention_mask=True).to('cuda')
         #print(f"len(prompt)-->{len(prompt)}")
             
         prompt_length = encoded_inputs['input_ids'][0].shape[0]
@@ -2213,19 +2268,25 @@ def new_mutate_prompt(prompt,
     # case with empty string in self reflection prompts
     if prompt == '' or prompt == ' ':
         return ''
-    instruction = '[INST]' + mutation_prompt_dict['task_description'] + "\n\n" + mutation_prompt_dict['instruction_description'] + """\n\nINSTRUCTION:" """ + prompt + """ " \n\n""" + mutation_prompt_dict['answer_description'] + "[/INST]" + "NEW INSTRUCTION: "
+
+    # instruction = '[INST]' + mutation_prompt_dict['task_description'] + "\n\n" + mutation_prompt_dict['instruction_description'] + """\n\nINSTRUCTION:" """ + prompt + """ " \n\n""" + mutation_prompt_dict['answer_description'] + "[/INST]" + "NEW INSTRUCTION: "
+    prompt_user_text = mutation_prompt_dict['task_description'] + "\n\n" + mutation_prompt_dict['instruction_description'] + """\n\nINSTRUCTION:" """ + prompt + """ " \n\n""" + mutation_prompt_dict['answer_description']
+    prompt_assistant_text = "NEW INSTRUCTION:"
+
     #print(f"instruction-->{instruction}")
 
     # conversion necessary for phi3 model
-    if 'Phi3' in model_name_global:
+    """if 'Phi3' in model_name_global:
         instruction = convert_text_mistral_phi3(instruction)
     elif 'llama_3' in model_name_global:
-        instruction = convert_text_mistral_llama_3(instruction)
+        instruction = convert_text_mistral_llama_3(instruction)"""
 
-    encoded_inputs = tokenizer(instruction, return_tensors="pt", return_attention_mask=True).to('cuda')
+    if 'llama_3' in model_name_global:
+        prompt = prepare_text4llama3_instruct(user_text = prompt_user_text, assistant_text = prompt_assistant_text)
+
+    encoded_inputs = tokenizer(prompt, return_tensors="pt", return_attention_mask=True).to('cuda')
 
     prompt_length = encoded_inputs['input_ids'][0].shape[0]
-
 
     # to improve efficiency
     with torch.inference_mode():
@@ -2322,15 +2383,21 @@ def new_crossover_prompts(prompt_1, prompt_2, combination_prompt_dict, model, to
         else:
             return prompt_2
     
-    instruction = '[INST]' + combination_prompt_dict['task_description'] + "\n\n" + combination_prompt_dict['instruction_description'] + "\n\nINSTRUCTION 1: " + """ " """ + prompt_1 + """ " """ + "\n\nINSTRUCTION 2: " + """ " """ + prompt_2 + """ " \n\n""" + combination_prompt_dict['answer_description'] +  '[/INST]' + "NEW INSTRUCTION: "
+    #instruction = '[INST]' + combination_prompt_dict['task_description'] + "\n\n" + combination_prompt_dict['instruction_description'] + "\n\nINSTRUCTION 1: " + """ " """ + prompt_1 + """ " """ + "\n\nINSTRUCTION 2: " + """ " """ + prompt_2 + """ " \n\n""" + combination_prompt_dict['answer_description'] +  '[/INST]' + "NEW INSTRUCTION: "
+
+    prompt_user_text = combination_prompt_dict['task_description'] + "\n\n" + combination_prompt_dict['instruction_description'] + "\n\nINSTRUCTION 1: " + """ " """ + prompt_1 + """ " """ + "\n\nINSTRUCTION 2: " + """ " """ + prompt_2 + """ " \n\n""" + combination_prompt_dict['answer_description']
+    prompt_assistant_text = "NEW INSTRUCTION:"
 
     # conversion necessary for phi3 model
-    if 'Phi3' in model_name_global:
+    """if 'Phi3' in model_name_global:
         instruction = convert_text_mistral_phi3(instruction)
     elif 'llama_3' in model_name_global:
-        instruction = convert_text_mistral_llama_3(instruction)
+        instruction = convert_text_mistral_llama_3(instruction)"""
 
-    encoded_inputs = tokenizer(instruction, return_tensors="pt", return_attention_mask=True).to('cuda')
+    if 'llama_3' in model_name_global:
+        prompt = prepare_text4llama3_instruct(user_text = prompt_user_text, assistant_text = prompt_assistant_text)
+
+    encoded_inputs = tokenizer(prompt, return_tensors="pt", return_attention_mask=True).to('cuda')
 
     prompt_length = encoded_inputs['input_ids'][0].shape[0]
     # Tokenize input and generate attention mask
@@ -2613,7 +2680,7 @@ def eval_pop(population,
                                                        task_w_highlight = task_w_highlight,
                                                        task_w_self_reasoning = task_w_self_reasoning
                                                        )
-            if task_w_highlight == True and task_w_self_reasoning == False:
+            elif task_w_highlight == True and task_w_self_reasoning == False:
                 labels, predictions = prompt_preds_semeval(data_expanded[:n_samples], 
                                                        task_description = prompts['task_description'][population['prompts'][i]['task_description']],
                                                        ctr_description = prompts['ctr_description'][population['prompts'][i]['ctr_description']],
@@ -2628,7 +2695,7 @@ def eval_pop(population,
                                                        highlight_description = prompts['highlight_description'][population['prompts'][i]['highlight_description']],
                                                        )
 
-            if task_w_highlight == False and task_w_self_reasoning == True:
+            elif task_w_highlight == False and task_w_self_reasoning == True:
                 labels, predictions = prompt_preds_semeval(data_expanded[:n_samples], 
                                                        task_description = prompts['task_description'][population['prompts'][i]['task_description']],
                                                        ctr_description = prompts['ctr_description'][population['prompts'][i]['ctr_description']],
@@ -2643,6 +2710,24 @@ def eval_pop(population,
                                                        self_A = prompts['self_A'][population['prompts'][i]['self_A']],
                                                        self_B = prompts['self_B'][population['prompts'][i]['self_B']],
                                                        self_C = prompts['self_C'][population['prompts'][i]['self_C']],
+                                                       )
+            
+            elif task_w_highlight == True and task_w_self_reasoning == True:
+                labels, predictions = prompt_preds_semeval(data_expanded[:n_samples], 
+                                                       task_description = prompts['task_description'][population['prompts'][i]['task_description']],
+                                                       ctr_description = prompts['ctr_description'][population['prompts'][i]['ctr_description']],
+                                                       statement_description = prompts['statement_description'][population['prompts'][i]['statement_description']],
+                                                       answer_description = prompts['answer_description'][population['prompts'][i]['answer_description']],
+                                                       model=model,
+                                                       tokenizer=tokenizer,
+                                                       trie=trie,
+                                                       task_w_one_shot = task_w_one_shot,
+                                                       task_w_highlight = task_w_highlight,
+                                                       task_w_self_reasoning = task_w_self_reasoning,
+                                                       self_A = prompts['self_A'][population['prompts'][i]['self_A']],
+                                                       self_B = prompts['self_B'][population['prompts'][i]['self_B']],
+                                                       self_C = prompts['self_C'][population['prompts'][i]['self_C']],
+                                                       highlight_description = prompts['highlight_description'][population['prompts'][i]['highlight_description']],
                                                        )
 
             score = f1_score(y_true=labels, y_pred=predictions, average='macro')

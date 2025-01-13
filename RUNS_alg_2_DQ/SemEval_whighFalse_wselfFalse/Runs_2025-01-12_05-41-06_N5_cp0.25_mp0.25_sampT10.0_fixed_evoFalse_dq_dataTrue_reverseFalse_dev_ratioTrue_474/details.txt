@@ -1,0 +1,22 @@
+Task: SemEval
+Start time: 2025-01-12 05:41:06.050446
+End time: 2025-01-12 06:46:58.815579
+Total elapsed time: 1:05:52.765133
+No. of iterations: 17
+Average time per iteration: 0:03:52.515596
+
+Initial population size (size of suprompts pop): 5
+How many of the top performers are being kept(elite): 1
+Max no. of iterations allowed: 200
+Patience: 10
+Evaluation done on: dev set
+With 474 examples
+
+Label distribution: Counter({'Contradiction': 237, 'Entailment': 237})
+
+Name of the model used: meta-llama/Llama-3.2-3B-Instruct 
+4 bit quantization: True 
+Now the individuals are not bonded, meaning that new subprompts are created and randomly combined 
+Retrieving examples-->False 
+Alg 2 - Random sample 2 individuals weighted on scores, apply crossover and mutation to the offspring, top 1 performers are always kept as elite population
+With crossover probability 0.5 and mutation probability 0.5

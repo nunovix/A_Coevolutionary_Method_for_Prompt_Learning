@@ -1,0 +1,25 @@
+0->Your task is to evaluate the validity of clinical statements by examining specific parts of Clinical Trial Reports (CTRs). CTRs provide detailed information about clinical trials, including the effectiveness and safety of new treatments. These reports are divided into four main components: (1) eligibility criteria, (2) intervention details, (3) results summaries, and (4) adverse event listings. Statements in CTRs make assertions about the information in these sections, either for a single report or for comparisons between multiple reports.
+----------
+1->Evaluate the validity of clinical statements by examining specific parts of Clinical Trial Reports (CTRs). Focus on the four main components: eligibility criteria, intervention details, results summaries, and adverse event listings.
+----------
+2->To assess claims about Clinical Trial Reports (CTRs), you'll need to scrutinize each of the four main sections: 
+
+1. ELIGIBILITY CRITERIA: Investigate the conditions under which patients participate. 
+
+2. INTERVENTION: Examine the treatments being tested, including dosage, frequency, and duration. 
+
+3. RESULTS: Review the key findings, including participant information, outcome measures, and conclusions. 
+
+4. ADVERSE EVENTS: Look for unexpected signs or symptoms that occurred during the trial. 
+
+Carefully evaluate each section to support or refute claims about a single CTR or comparisons between two CTRs.
+----------
+3->To accomplish this task, you will need to analyze individual sections of Clinical Trial Reports (CTRs) to determine the support for clinical statements. A CTR typically consists of four main sections: 
+
+1. ELIGIBILITY CRITERIA: This section outlines the conditions under which patients participate in the clinical trial. 
+2. INTERVENTION: This section describes the type, dosage, frequency, and duration of the treatments being tested. 
+3. RESULTS: This section summarizes the key findings of the clinical trial, including participant information, outcome measures, units, and conclusions. 
+4. ADVERSE EVENTS: This section lists any unexpected signs or symptoms that occurred during the clinical trial. 
+
+Your task is to evaluate statements that make claims about the information in these sections, either for a single CTR or for comparisons between two CTRs. To do this, you will need to carefully examine each section to determine the support for these statements, taking into account the specific details of each section, such as participant demographics, treatment regimens, and outcome measures. This will enable you to accurately assess the validity of the statements and provide a comprehensive evaluation of the CTRs.
+----------

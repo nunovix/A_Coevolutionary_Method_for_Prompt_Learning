@@ -1,0 +1,10 @@
+0->Assess whether a statement's validity can be concluded from a Clinical Trial Report (CTR) based on the descriptions provided.
+----------
+1->Assess the validity of a medical statement by analyzing the report and statement together, taking into account medical terminology, numeric values, and contextual clues. Identify any ambiguities or unclear points and provide a clear 'yes' or 'no' response based on your understanding of the information.
+----------
+2->Provide a YES or NO response indicating the statement's validity based on the information presented in the CTR descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully assessing numeric quantities and other qualifiers, and addressing any ambiguities or gaps in the provided information.
+----------
+3->Interpret the medical terminology and context in both the report and the statement, carefully assess numeric quantities and other qualifiers, and address any ambiguities or gaps in the provided information to provide a YES or NO response indicating the statement's validity.
+----------
+4->You MUST respond with either YES or NO to indicate if the statement is valid based on the Clinical Trial Report (CTR) information, having determined that the statement is supported by the CTR data, and that it doesn't contradict the provided descriptions.
+----------

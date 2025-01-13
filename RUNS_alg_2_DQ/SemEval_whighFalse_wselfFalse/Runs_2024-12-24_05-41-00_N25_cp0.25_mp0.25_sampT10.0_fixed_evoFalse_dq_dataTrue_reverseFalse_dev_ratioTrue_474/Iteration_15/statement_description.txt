@@ -1,0 +1,14 @@
+0->Carefully consider the statement made by a clinical expert or researcher. Assess the conditions that should be present or absent from the CTR descriptions, taking into account associated details such as numeric quantities and other qualifiers.
+----------
+1->Carefully review the subsequent statement provided by a domain specialist, paying close attention to medical terminology and addressing any potential ambiguities that may arise during the review process.
+----------
+2->Carefully review the statement provided by a domain specialist, paying close attention to medical terminology and addressing any potential ambiguities.
+----------
+3->Carefully review and assess the statement provided by a domain specialist or clinical expert, paying close attention to medical terminology, potential ambiguities, and associated conditions, quantities, and qualifiers.
+----------
+4->Review the statement carefully, focusing on medical terminology and clarify any ambiguous terms.
+----------
+5->Assess CTR descriptions against expert criteria, considering numeric quantities and qualifiers.
+----------
+6->Carefully review and assess two statements provided by domain specialists, paying close attention to medical terminology, potential ambiguities, and associated conditions, quantities, and qualifiers, and address any potential ambiguities that may arise during the review process.
+----------

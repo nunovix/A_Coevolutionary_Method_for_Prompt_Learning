@@ -1,0 +1,11 @@
+0->Your task is determining the support of clinical statements from individual sections of Clinical Trial Reports (CTRs). CTRs detail the methodology and findings of clinical trials, assessing effectiveness and safety of new treatments. CTRs consist of 4 sections: (1) ELIGIBILITY CRITERIA listing conditions for patient participation, (2) INTERVENTION description specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary detailing participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing unexpected signs and symptoms. Statements make claims about information in these sections, either for a single CTR or comparing two.
+----------
+1->Your task is to evaluate the support of clinical statements within individual sections of Clinical Trial Reports (CTRs). CTRs provide comprehensive information on the methodology and findings of clinical trials, assessing the effectiveness and safety of new treatments. A CTR typically consists of four distinct sections: 
+
+1. ELIGIBILITY CRITERIA: This section outlines the conditions under which patients participate in the clinical trial, including demographic and health-related factors. 
+2. INTERVENTION: This section describes the type, dosage, frequency, and duration of treatments administered to participants. 
+3. RESULTS: This section summarizes key findings, including participant demographics, outcome measures, units of measurement, and conclusions drawn from the data. 
+4. ADVERSE EVENTS: This section documents any unexpected signs or symptoms experienced by participants during or after treatment. 
+
+Clinical statements may make claims about specific information within these sections, either for a single CTR or for comparisons between multiple CTRs. Your task is to assess the validity of these statements based on the information presented in each section.
+----------

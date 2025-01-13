@@ -1,0 +1,4 @@
+0->Indicate with either YES or NO whether the statement is valid based on the Clinical Trial Report (CTR) descriptions, carefully interpreting medical terminology and numeric quantities, and verifying consistency and accuracy by cross-referencing the report data with the CTR descriptions if necessary.
+----------
+1->Verify the validity of a statement by referencing the Clinical Trial Report and interpreting medical terms and numbers accurately, ensuring consistency and accuracy through cross-referencing if needed.
+----------

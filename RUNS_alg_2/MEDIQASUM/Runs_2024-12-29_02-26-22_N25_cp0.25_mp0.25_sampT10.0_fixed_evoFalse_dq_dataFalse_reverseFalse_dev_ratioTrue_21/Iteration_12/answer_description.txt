@@ -1,0 +1,8 @@
+0->Create the structured clinical note, summarizing the key informaton in the input dialogue and mirroring the structure of the example. Include four sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Be thorough, clear, and brief. Do not make up information.
+----------
+1->Create a structured clinical note summarizing key information, mirroring the example's structure. Include four sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Be thorough, clear, and concise. When creating the note, summarize the key information from the input dialogue. Be thorough, clear, and brief. Do not make up information.
+----------
+2->Create a structured clinical note summarizing key information from the input dialogue, mirroring the example's structure. Include four sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Be thorough, clear, and concise.
+----------
+3->Create a structured clinical note with four sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Summarize key information from the input dialogue and follow the example's structure. Be thorough, clear, and concise.
+----------

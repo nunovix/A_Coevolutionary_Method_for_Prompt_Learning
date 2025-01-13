@@ -1,0 +1,8 @@
+0->Write a clinical note summarizing a conversation between a doctor and patient, divided into 4 sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Accurately capture clinical concepts from the transcription.
+----------
+1->Write a clinical note summarizing a conversation between a doctor and patient. The note should be structured into 4 sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Summarize the conversation accurately, focusing on clinical concepts present or absent in the transcription.
+----------
+2->Create a concise summary of a doctor-patient conversation, organized into four key areas: the patient's symptoms, physical assessment, test results, and treatment plan. Carefully extract relevant clinical information from the transcription and convey it in a clear and concise manner.
+----------
+3->Write a clinical note summarizing a conversation between a doctor and patient. The note should be structured into 4 sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. The note should accurately summarize the conversation, focusing on key clinical concepts present or absent in the transcription.
+----------

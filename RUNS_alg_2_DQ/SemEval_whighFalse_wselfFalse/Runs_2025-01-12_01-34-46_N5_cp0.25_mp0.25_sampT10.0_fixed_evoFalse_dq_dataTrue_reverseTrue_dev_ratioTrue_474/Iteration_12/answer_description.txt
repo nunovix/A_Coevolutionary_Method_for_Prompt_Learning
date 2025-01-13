@@ -1,0 +1,6 @@
+0->Check the statement's validity based on the clinical trial report data, providing a YES or NO response.
+----------
+1->Verify the factual accuracy of clinical trial report data and respond with 'YES' or 'NO' to indicate its validity. Ensure that the data is free from errors, inconsistencies, and inaccuracies. If the data is found to be invalid, provide a clear and concise explanation of the discrepancies, using 'YES' or 'NO' to confirm or deny the accuracy of specific data points.
+----------
+2->Verify the statement's validity using clinical trial report data and respond with YES or NO.
+----------

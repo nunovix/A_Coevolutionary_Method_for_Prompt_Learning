@@ -1,0 +1,6 @@
+0->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts, focusing on the alignment of claim statements with clinical trial information. This entails verifying that the statement's claim is supported by the CTR descriptions and does not contradict any provided information.
+----------
+1->Assess the consistency of claim statements with CTR descriptions, ensuring they are supported and do not contradict provided information.
+----------
+2->Verify that claim statements issued by clinical domain experts align with the descriptions in Clinical Trial Reports (CTRs), ensuring the claim is supported by CTR information and does not contradict it.
+----------

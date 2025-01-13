@@ -66,12 +66,12 @@ def faithfulness(predictions, gold):
     return Faithfulness
 
 
-def consistency(predictions, gold):
-    uuid_list = list(predictions.keys())
+def consistency(predictions_preserving, predictions, gold):
+    uuid_list = list(predictions_preserving.keys())
     N = len(uuid_list)
     results = []
     for key in uuid_list:
-        if predictions[key]["Prediction"] == gold[key]["Label"]:
+        if predictions_preserving[key]["Prediction"] == predictions[gold[key]["Causal_type"][1]]["Prediction"]:
             results.append(1)
         else:
             results.append(0)
@@ -105,7 +105,7 @@ def F1_Recall_Precision(predictions, gold):
     return F1, Recall, Precision
 
 
-def main(pred_filename, gold_filename, output_dir): # input dir with gold labels and predicitons, output to print evaluation
+def main(pred_filename, gold_filename, output_dir, save_report): # input dir with gold labels and predicitons, output to print evaluation
 
     #pred_dir = os.path.join(input_dir, 'res')
     #gold_dir = os.path.join(input_dir, 'ref')
@@ -135,8 +135,9 @@ def main(pred_filename, gold_filename, output_dir): # input dir with gold labels
     contrast_predictions = extract_contrast_set(predictions, gold)
     predictions_preserving, predictions_altering = extract_by_causal_type(contrast_predictions, gold)
     Faithfulness = faithfulness(predictions_altering, gold)
-    Consistency = consistency(predictions_preserving, gold)
+    Consistency = consistency(predictions_preserving, predictions, gold)
 
+    """
     # Intervention-wise Consistency & Faithfullness HIDDEN
     para_predictions, cont_predictions, numerical_para_predictions, numerical_cont_predictions, definitions_predictions = \
         extract_by_intervention(predictions, gold)
@@ -145,13 +146,13 @@ def main(pred_filename, gold_filename, output_dir): # input dir with gold labels
     numerical_para_preserving = extract_by_causal_type(numerical_para_predictions, gold)[0]
     numerical_cont_preserving, numerical_cont_altering = extract_by_causal_type(numerical_cont_predictions, gold)
     definitions_preserving = extract_by_causal_type(definitions_predictions, gold)[0]
-    para_Consistency = consistency(para_preserving, gold)
+    para_Consistency = consistency(para_preserving, para_predictions, gold)
     cont_Faithfulness = faithfulness(cont_altering, gold)
-    cont_Consistency = consistency(cont_preserving, gold)
-    numerical_para_Consistency = consistency(numerical_para_preserving, gold)
+    cont_Consistency = consistency(cont_preserving, cont_predictions, gold)
+    numerical_para_Consistency = consistency(numerical_para_preserving, numerical_para_predictions, gold)
     numerical_cont_Faithfulness = faithfulness(numerical_cont_altering, gold)
-    numerical_cont_Consistency = consistency(numerical_cont_preserving, gold)
-    definitions_Consistency = consistency(definitions_preserving, gold)
+    numerical_cont_Consistency = consistency(numerical_cont_preserving, numerical_cont_predictions, gold)
+    definitions_Consistency = consistency(definitions_preserving, definitions_predictions, gold)
 
     # Intervention-wise F1, Recall, Precision HIDDEN
     Contrast_F1, Contrast_Rec, Contrast_Prec = F1_Recall_Precision(contrast_predictions, gold)
@@ -160,18 +161,21 @@ def main(pred_filename, gold_filename, output_dir): # input dir with gold labels
     numerical_para_F1, numerical_para_Rec, numerical_para_Prec = F1_Recall_Precision(numerical_para_predictions, gold)
     numerical_cont_F1, numerical_cont_Rec, numerical_cont_Prec = F1_Recall_Precision(numerical_cont_predictions, gold)
     definitions_F1, definitions_Rec, definitions_Prec = F1_Recall_Precision(definitions_predictions, gold)
-
+    """
     # Output results
     output_filename = os.path.join(output_dir, 'test_report.txt')
     with open(output_filename, 'w') as f:
         print('Control_F1: ', Control_F1, file=f)
         print('Control_Recall: ', Control_Rec, file=f)
         print('Control_Precision: ', Control_Prec, file=f)
+        """
         print('Contrast_F1: ', Contrast_F1, file=f)
         print('Contrast_Recall: ', Contrast_Rec, file=f)
         print('Contrast_Precision: ', Contrast_Prec, file=f)
+        """
         print('Faithfulness: ', Faithfulness, file=f)
-        print('Consistency: ', Consistency, file=f)
+        print('Consistency: ', Consistency, file=f)  
+        """
         print('Para_Consistency: ', para_Consistency, file=f)
         print('Cont_Faithfulness: ', cont_Faithfulness, file=f)
         print('Cont_Consistency: ', cont_Consistency, file=f)
@@ -194,6 +198,7 @@ def main(pred_filename, gold_filename, output_dir): # input dir with gold labels
         print('Definitions_F1: ', definitions_F1, file=f)
         print('Definitions_Recall: ', definitions_Rec, file=f)
         print('Definitions_Precision: ', definitions_Prec, file=f)
+        """
     print(f"test evaluation report saved to {output_filename}")
 
     return {'Control_F1': Control_F1, 'Consistency': Consistency, 'Faithfulness': Faithfulness}

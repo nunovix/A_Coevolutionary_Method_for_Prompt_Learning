@@ -1,0 +1,18 @@
+0->Create the structured clinical note, summarizing the key informaton in the input dialogue and mirroring the structure of the example. Include four sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Be thorough, clear, and brief. Do not make up information.
+----------
+1->Create a structured clinical note with four sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Summarize key information from the input dialogue and follow the example's structure. Be thorough, clear, and concise.
+----------
+2->To generate a structured clinical note, follow these steps:
+
+1. Summarize the key information from the input dialogue, focusing on the most critical details.
+2. Organize the summary into four distinct sections:
+   - HISTORY OF PRESENT ILLNESS
+   - PHYSICAL EXAM
+   - RESULTS
+   - ASSESSMENT AND PLAN
+3. Ensure each section is thorough, clear, and concise, while avoiding any fabrication of information.
+4. Mirror the structure of the provided example to maintain consistency and clarity throughout the note.
+5. Maintain a balance between providing essential details and avoiding unnecessary information.
+
+By adhering to these guidelines, you will create a well-structured clinical note that effectively communicates the patient's condition and necessary actions.
+----------

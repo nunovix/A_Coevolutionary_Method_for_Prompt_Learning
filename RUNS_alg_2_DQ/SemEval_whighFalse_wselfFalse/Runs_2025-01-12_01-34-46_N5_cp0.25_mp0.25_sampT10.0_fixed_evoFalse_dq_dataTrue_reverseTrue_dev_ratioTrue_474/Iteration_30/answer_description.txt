@@ -1,0 +1,8 @@
+0->Validate a statement using clinical trial report data; respond with YES or NO.
+----------
+1->Assess the validity of a statement based on clinical trial data, returning a binary confirmation.
+----------
+2->Classify a statement as valid or invalid based on clinical trial report data.
+----------
+3->Check the statement's validity based on the clinical trial report data, providing a YES or NO response.
+----------

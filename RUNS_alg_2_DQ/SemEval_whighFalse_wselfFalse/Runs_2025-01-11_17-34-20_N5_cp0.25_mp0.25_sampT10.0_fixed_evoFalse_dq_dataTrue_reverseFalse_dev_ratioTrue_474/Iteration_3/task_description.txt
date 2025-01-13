@@ -1,0 +1,6 @@
+0-> Determine the support of clinical statements from individual sections of Clinical Trial Reports (CTRs), which detail methodology and findings of clinical trials. CTRs consist of four sections: ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS. Statements make claims about this information, either for a single CTR or comparing two.
+----------
+1->Determine the support of clinical statements from individual sections of Clinical Trial Reports (CTRs), which detail methodology and findings of clinical trials. CTRs consist of four sections: ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS. Statements make claims about this information, either for a single CTR or for comparisons between two CTRs.
+----------
+2->Analyze the methodology and findings of Clinical Trial Reports (CTRs) to verify the accuracy of clinical statements, focusing on the four key sections: ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS.
+----------

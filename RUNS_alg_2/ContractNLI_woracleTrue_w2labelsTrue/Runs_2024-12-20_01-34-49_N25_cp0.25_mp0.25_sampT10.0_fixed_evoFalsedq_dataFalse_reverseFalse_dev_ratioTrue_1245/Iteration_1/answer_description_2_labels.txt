@@ -1,0 +1,8 @@
+0->Answer with YES or NO to the question of whether one can conclude the validity of the statement with basis on the Non-Disclosure Agreement (NDA) information.
+----------
+1->Indicate with either YES or NO whether it is possible to determine the validity of the statement based on the Non-Disclosure Agreement (NDA). An answer of YES means that the statement is supported by the NDA, not contradicting the provided information. An answer of NO means that the statement is NOT supported by the NDA.
+----------
+2->Answer with YES or NO to the question of whether the statement is supported by the Non-Disclosure Agreement (NDA).
+----------
+3->Determine the validity of a statement by referencing the Non-Disclosure Agreement (NDA). If the NDA supports the statement without contradicting the provided information, respond with YES. If the NDA does not support the statement, respond with NO.
+----------

@@ -1,0 +1,8 @@
+0->Check the statement's validity based on the clinical trial report data, providing a YES or NO response.
+----------
+1->Check if clinical trial data supports CTR statements. Respond with either affirmation or negation.
+----------
+2->Verify the statement's validity using clinical trial report data and respond with YES or NO.
+----------
+3-> Validate CTR statements by referencing clinical trial data and respond with either 'yes' or 'no'. 
+----------

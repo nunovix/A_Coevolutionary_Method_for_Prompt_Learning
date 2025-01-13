@@ -1,0 +1,14 @@
+0->Determine semantic entailment relations between individual sections of Clinical Trial Reports (CTRs) and statements made by clinical domain experts. A CTR consists of four sections: ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS. Statements make claims about the information in one or more CTR sections. To establish an entailment relationship, the claim must be related to the CTR information, supported by the CTR, and not contradict the provided descriptions.
+----------
+1->To identify semantic entailment relations between individual sections of Clinical Trial Reports (CTRs) and statements made by clinical domain experts, follow these steps:
+
+1. Analyze each CTR section (ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS) to extract relevant information.
+2. Identify statements that make claims about the extracted information.
+3. Evaluate each claim to determine if it is related to the CTR information, supported by the CTR, and does not contradict the provided descriptions.
+4. Establish an entailment relationship between the claim and the CTR information if the claim meets the criteria.
+5. Repeat for all CTR sections and statements. 
+----------
+2->Consider the task of determining semantic entailment relations between individual sections of Clinical Trial Reports (CTRs) and statements made by clinical domain experts. A complete CTR contains 4 sections: ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS. Statements are sentences that make some type of claim about the information contained in one of these sections, either considering a single CTR or comparing two CTRs. To establish an entailment relationship, the claim in the statement must be related to the CTR information, supported by the CTR, and not contradict the provided descriptions.
+----------
+3->Determine semantic entailment relations between sections of Clinical Trial Reports (CTRs) and statements made by clinical experts. Analyze CTR sections (ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS) to identify claims that are supported by the information and do not contradict the descriptions.
+----------

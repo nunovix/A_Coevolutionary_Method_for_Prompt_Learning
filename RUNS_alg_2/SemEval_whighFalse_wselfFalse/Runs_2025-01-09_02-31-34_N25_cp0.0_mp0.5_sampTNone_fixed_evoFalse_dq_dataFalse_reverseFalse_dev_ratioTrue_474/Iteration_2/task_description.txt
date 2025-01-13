@@ -1,0 +1,20 @@
+0->Evaluate the validity of clinical statements by examining specific parts of Clinical Trial Reports (CTRs). CTRs contain detailed information about clinical trials, including effectiveness and safety data. They are divided into four main components: eligibility criteria, intervention details, results summaries, and adverse event listings. Statements in CTRs assert information from these sections, either for a single report or for comparisons between multiple reports.
+----------
+1->To accomplish this task, you will need to analyze individual sections of Clinical Trial Reports (CTRs) to determine the support for clinical statements. A CTR typically consists of four main sections: 
+
+1. ELIGIBILITY CRITERIA: This section outlines the conditions under which patients participate in the clinical trial. 
+
+2. INTERVENTION: This section describes the type, dosage, frequency, and duration of the treatments being tested. 
+
+3. RESULTS: This section summarizes the key findings of the clinical trial, including participant information, outcome measures, units, and conclusions. 
+
+4. ADVERSE EVENTS: This section lists any unexpected signs or symptoms that occurred during the clinical trial. 
+
+Your task is to evaluate statements that make claims about the information in these sections, either for a single CTR or for comparisons between two CTRs. You will need to carefully examine each section to determine the support for these statements.
+----------
+2->Your task is to evaluate the validity of clinical statements by examining specific parts of Clinical Trial Reports (CTRs). CTRs provide detailed information about clinical trials, including the effectiveness and safety of new treatments. These reports are divided into four main components: (1) eligibility criteria, (2) intervention details, (3) results summaries, and (4) adverse event listings. Statements in CTRs make assertions about the information in these sections, either for a single report or for comparisons between multiple reports.
+----------
+3->Consider the task of determining semantic entailment relations between individual sections of Clinical Trial Reports (CTRs) and statements made by clinical domain experts. Note that CTRs outline the methodology and findings of a clinical trial, which are conducted to assess the effectiveness and safety of new treatments. Trials involve patient groups, called cohorts or arms, which may receive different treatments, or have different baseline characteristics. A complete CTR contains 4 sections, corresponding to (1) a list of the ELIGIBILITY CRITERIA corresponding to the conditions for patients to be allowed to take part in the clinical trial, (2) a description for the INTERVENTION that specifies the type, dosage, frequency, and duration of treatments being studied, (3) a summary of the RESULTS, detailing aspects such as the number of participants in the trial, the outcome measures, the units, and the conclusions, and (4) a list of ADVERSE EVENTS corresponding to signs and symptoms observed in patients during the clinical trial. In turn, the statements are sentences that make some type of claim about the information contained in one of the aforementioned sections, either considering a single CTR or comparing two CTRs. In order for the entailment relationship to be established, the claim in the statement should be related to the clinical trial information, it should be supported by the CTR, and it must not contradict the provided descriptions.
+----------
+4->Evaluate the validity of clinical statements by examining specific parts of Clinical Trial Reports (CTRs). Focus on the four main components: eligibility criteria, intervention details, results summaries, and adverse event listings.
+----------

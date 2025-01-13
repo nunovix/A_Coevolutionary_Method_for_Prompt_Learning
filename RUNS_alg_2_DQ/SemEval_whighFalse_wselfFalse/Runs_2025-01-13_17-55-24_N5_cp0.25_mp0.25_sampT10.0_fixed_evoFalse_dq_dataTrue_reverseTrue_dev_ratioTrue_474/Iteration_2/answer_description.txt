@@ -1,0 +1,6 @@
+0->Check the statement's validity based on the clinical trial report data, providing a YES or NO response.
+----------
+1->Respond with either YES or NO to indicate if the statement is valid based on the Clinical Trial Report (CTR) information, carefully interpreting medical terminology, numeric quantities, and context.
+----------
+2->Verify the statement's accuracy by referencing the clinical trial data and respond with either 'yes' or 'no'. 
+----------

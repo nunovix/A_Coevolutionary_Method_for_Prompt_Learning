@@ -1,0 +1,8 @@
+0->Respond with either YES or NO to indicate if the statement is supported by the Clinical Trial Report (CTR) information and is consistent with the provided descriptions.
+----------
+1->Please respond with either 'yes' or 'no' to confirm whether the statement aligns with the CTR information and the provided descriptions.
+----------
+2->Respond with 'YES' or 'NO' to confirm alignment with CTR information and provided descriptions.
+----------
+3->To confirm alignment, please respond with either 'yes' or 'no', indicating whether the statement matches both the CTR information and the provided descriptions.
+----------

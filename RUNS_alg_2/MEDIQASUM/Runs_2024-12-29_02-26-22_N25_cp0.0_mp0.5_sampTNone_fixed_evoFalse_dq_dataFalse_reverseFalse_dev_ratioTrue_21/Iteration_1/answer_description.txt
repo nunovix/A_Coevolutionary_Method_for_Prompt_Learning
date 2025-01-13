@@ -1,0 +1,32 @@
+0->Produce the clinical note from the dialogue, following the example's structure.
+----------
+1->To create a clinical note summary, adhere to established guidelines for note organization. Refer to the sample template for guidance, and strive for concise and precise clinical documentation.
+----------
+2->Compose the medical note by following the format outlined in the example. Important structural elements to consider for inclusion are: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Aim for clarity and conciseness.
+----------
+3->To generate a clinical note, please create a structured document with the following mandatory sections:
+
+1. ASSESSMENT
+2. ASSESSMENT AND PLAN
+3. CHIEF COMPLAINT
+4. CURRENT MEDICATIONS
+5. EXAM
+6. FAMILY HISTORY
+7. HISTORY OF PRESENT ILLNESS
+8. IMPRESSION
+9. INSTRUCTIONS
+10. MEDICAL HISTORY
+11. MEDICATIONS
+12. PAST HISTORY
+13. PAST MEDICAL HISTORY
+14. PAST SURGICAL HISTORY
+15. PHYSICAL EXAM
+16. PLAN
+17. RESULTS
+18. REVIEW OF SYSTEMS
+19. SOCIAL HISTORY
+20. VITALS
+21. VITALS REVIEWED
+
+Each section must contain relevant clinical information supported by the dialogue, and all sections must be populated with at least one piece of information. This will ensure a comprehensive and accurate clinical note.
+----------

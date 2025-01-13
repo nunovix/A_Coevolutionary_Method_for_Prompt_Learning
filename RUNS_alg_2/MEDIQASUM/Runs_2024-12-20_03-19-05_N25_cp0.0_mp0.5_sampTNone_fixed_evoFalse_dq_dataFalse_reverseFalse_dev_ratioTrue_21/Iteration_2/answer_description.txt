@@ -1,0 +1,14 @@
+0->Create the structured clinical note, summarizing the key informaton in the input dialogue and mirroring the structure of the example. Include four sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Be thorough, clear, and brief. Do not make up information.
+----------
+1->Compose the medical note by following the format outlined in the example. Important structural elements to consider for inclusion are: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Aim for clarity and conciseness.
+----------
+2->Produce the clinical note from the dialogue, adhering to the example's structure. Ensure accuracy by only including information directly supported by the conversation. Failure to do so will incur penalties.
+----------
+3->Create a structured clinical note summarizing key information, mirroring the example's structure. Include four sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Be thorough, clear, and concise.
+----------
+4->Compose the medical note by following the example format. Include HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Prioritize clarity and conciseness.
+----------
+5->Produce the summary by following the standard recommendations for structuring clinical notes. Consider the provided example as a structural template, and aim at the generation of clear and accurate clinical descriptions.
+----------
+6->Produce the clinical note from the dialogue, following the example's structure and only including information directly supported by the conversation.
+----------

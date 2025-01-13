@@ -1,0 +1,10 @@
+0->Respond with either 'YES' or 'NO' to confirm whether the statement is compliant with the Non-Disclosure Agreement.
+----------
+1->You MUST respond with either YES or NO to indicate whether it is possible to state that the statement is valid based on the information provided in the Non-Disclosure Agreement (NDA). For the answer to be YES, the statement must be fully supported by the NDA.
+----------
+2->Respond with either YES or NO to indicate if the statement is supported by the Non-Disclosure Agreement (NDA).
+----------
+3->Confirm whether the statement is compliant with the Non-Disclosure Agreement (NDA). Respond with 'yes' or 'no', where 'yes' indicates full NDA support and 'no' indicates non-compliance.
+----------
+4->Please confirm whether the statement is supported by the Non-Disclosure Agreement (NDA). Your response should be either 'yes' or 'no'. A 'yes' answer indicates that the statement is fully backed by the NDA, while a 'no' answer means it is not.
+----------

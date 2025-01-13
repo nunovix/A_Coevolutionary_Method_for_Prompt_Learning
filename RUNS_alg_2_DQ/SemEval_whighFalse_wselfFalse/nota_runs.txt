@@ -1,0 +1,200 @@
+O melhor foi com 70B positive rev
+
+entre esta run RUNS_alg_2_DQ/SemEval_whighFalse_wselfFalse/Runs_2025-01-11_17-34-20_N5_cp0.25_mp0.25_sampT10.0_fixed_evoFalse_dq_dataTrue_reverseFalse_dev_ratioTrue_474 
+e esta RUNS_alg_2_DQ/SemEval_whighFalse_wselfFalse/Runs_2025-01-12_06-56-51_N5_cp0.25_mp0.25_sampT10.0_fixed_evoFalse_dq_dataTrue_reverseTrue_dev_ratioTrue_474
+foi usado o código seguinte
+
+portanto temos
+
+3B-positive
+top 
+bottom
+
+3B-negative
+top
+bottom
+
+70B-positive
+top 
+bottom
+
+70B-negative
+top
+bottom
+
+
+data_quality_assessment_and_save(task = 'SemEval', focus_ans='positive', save=True, model = 'meta-llama/Llama-3.2-3B-Instruct')
+
+best_prompt, best_score_iterations = evo.evo_alg_2(task = "SemEval", 
+                                                    model_name = "meta-llama/Llama-3.2-3B-Instruct",
+                                                    quantize_model_4bits = True,
+                                                    n_pop = 5,
+                                                    n_top = 1,
+                                                    mutation_prob = 0.25,
+                                                    crossover_prob = 0.25,
+                                                    sampling_T = 10.0,
+                                                    patience = 10,
+                                                    max_iter = 200,
+                                                    data_size = 0.25, 
+                                                    use_data_sorted_by_dq=True,
+                                                    reverse_dq=False,
+                                                    task_w_one_shot = False,  
+                                                    task_w_self_reasoning = False,
+                                                    task_w_highlight = False,
+                                                    fixed_evo_prompts = False,
+                                                    do_test_eval = True,
+                                                    save = True,
+                                                    )
+
+best_prompt, best_score_iterations = evo.evo_alg_2(task = "SemEval", 
+                                                    model_name = "meta-llama/Llama-3.2-3B-Instruct",
+                                                    quantize_model_4bits = True,
+                                                    n_pop = 5,
+                                                    n_top = 1,
+                                                    mutation_prob = 0.25,
+                                                    crossover_prob = 0.25,
+                                                    sampling_T = 10.0,
+                                                    patience = 10,
+                                                    max_iter = 200,
+                                                    data_size = 0.25, 
+                                                    use_data_sorted_by_dq=True,
+                                                    reverse_dq=True,
+                                                    task_w_one_shot = False,  
+                                                    task_w_self_reasoning = False,
+                                                    task_w_highlight = False,
+                                                    fixed_evo_prompts = False,
+                                                    do_test_eval = True,
+                                                    save = True,
+                                                    )
+
+data_quality_assessment_and_save(task = 'SemEval', focus_ans='negative', save=True, model = 'meta-llama/Llama-3.2-3B-Instruct')
+
+best_prompt, best_score_iterations = evo.evo_alg_2(task = "SemEval", 
+                                                    model_name = "meta-llama/Llama-3.2-3B-Instruct",
+                                                    quantize_model_4bits = True,
+                                                    n_pop = 5,
+                                                    n_top = 1,
+                                                    mutation_prob = 0.25,
+                                                    crossover_prob = 0.25,
+                                                    sampling_T = 10.0,
+                                                    patience = 10,
+                                                    max_iter = 200,
+                                                    data_size = 0.25, 
+                                                    use_data_sorted_by_dq=True,
+                                                    reverse_dq=False,
+                                                    task_w_one_shot = False,  
+                                                    task_w_self_reasoning = False,
+                                                    task_w_highlight = False,
+                                                    fixed_evo_prompts = False,
+                                                    do_test_eval = True,
+                                                    save = True,
+                                                    )
+
+best_prompt, best_score_iterations = evo.evo_alg_2(task = "SemEval", 
+                                                    model_name = "meta-llama/Llama-3.2-3B-Instruct",
+                                                    quantize_model_4bits = True,
+                                                    n_pop = 5,
+                                                    n_top = 1,
+                                                    mutation_prob = 0.25,
+                                                    crossover_prob = 0.25,
+                                                    sampling_T = 10.0,
+                                                    patience = 10,
+                                                    max_iter = 200,
+                                                    data_size = 0.25, 
+                                                    use_data_sorted_by_dq=True,
+                                                    reverse_dq=True,
+                                                    task_w_one_shot = False,  
+                                                    task_w_self_reasoning = False,
+                                                    task_w_highlight = False,
+                                                    fixed_evo_prompts = False,
+                                                    do_test_eval = True,
+                                                    save = True,
+                                                    )
+
+data_quality_assessment_and_save(task = 'SemEval', focus_ans='positive', save=True, model = 'meta-llama/Llama-3.3-70B-Instruct')
+
+best_prompt, best_score_iterations = evo.evo_alg_2(task = "SemEval", 
+                                                    model_name = "meta-llama/Llama-3.2-3B-Instruct",
+                                                    quantize_model_4bits = True,
+                                                    n_pop = 5,
+                                                    n_top = 1,
+                                                    mutation_prob = 0.25,
+                                                    crossover_prob = 0.25,
+                                                    sampling_T = 10.0,
+                                                    patience = 10,
+                                                    max_iter = 200,
+                                                    data_size = 0.25, 
+                                                    use_data_sorted_by_dq=True,
+                                                    reverse_dq=False,
+                                                    task_w_one_shot = False,  
+                                                    task_w_self_reasoning = False,
+                                                    task_w_highlight = False,
+                                                    fixed_evo_prompts = False,
+                                                    do_test_eval = True,
+                                                    save = True,
+                                                    )
+
+best_prompt, best_score_iterations = evo.evo_alg_2(task = "SemEval", 
+                                                    model_name = "meta-llama/Llama-3.2-3B-Instruct",
+                                                    quantize_model_4bits = True,
+                                                    n_pop = 5,
+                                                    n_top = 1,
+                                                    mutation_prob = 0.25,
+                                                    crossover_prob = 0.25,
+                                                    sampling_T = 10.0,
+                                                    patience = 10,
+                                                    max_iter = 200,
+                                                    data_size = 0.25, 
+                                                    use_data_sorted_by_dq=True,
+                                                    reverse_dq=True,
+                                                    task_w_one_shot = False,  
+                                                    task_w_self_reasoning = False,
+                                                    task_w_highlight = False,
+                                                    fixed_evo_prompts = False,
+                                                    do_test_eval = True,
+                                                    save = True,
+                                                    )
+
+data_quality_assessment_and_save(task = 'SemEval', focus_ans='negative', save=True, model = 'meta-llama/Llama-3.3-70B-Instruct')
+
+best_prompt, best_score_iterations = evo.evo_alg_2(task = "SemEval", 
+                                                    model_name = "meta-llama/Llama-3.2-3B-Instruct",
+                                                    quantize_model_4bits = True,
+                                                    n_pop = 5,
+                                                    n_top = 1,
+                                                    mutation_prob = 0.25,
+                                                    crossover_prob = 0.25,
+                                                    sampling_T = 10.0,
+                                                    patience = 10,
+                                                    max_iter = 200,
+                                                    data_size = 0.25, 
+                                                    use_data_sorted_by_dq=True,
+                                                    reverse_dq=False,
+                                                    task_w_one_shot = False,  
+                                                    task_w_self_reasoning = False,
+                                                    task_w_highlight = False,
+                                                    fixed_evo_prompts = False,
+                                                    do_test_eval = True,
+                                                    save = True,
+                                                    )
+
+best_prompt, best_score_iterations = evo.evo_alg_2(task = "SemEval", 
+                                                    model_name = "meta-llama/Llama-3.2-3B-Instruct",
+                                                    quantize_model_4bits = True,
+                                                    n_pop = 5,
+                                                    n_top = 1,
+                                                    mutation_prob = 0.25,
+                                                    crossover_prob = 0.25,
+                                                    sampling_T = 10.0,
+                                                    patience = 10,
+                                                    max_iter = 200,
+                                                    data_size = 0.25, 
+                                                    use_data_sorted_by_dq=True,
+                                                    reverse_dq=True,
+                                                    task_w_one_shot = False,  
+                                                    task_w_self_reasoning = False,
+                                                    task_w_highlight = False,
+                                                    fixed_evo_prompts = False,
+                                                    do_test_eval = True,
+                                                    save = True,
+                                                    )

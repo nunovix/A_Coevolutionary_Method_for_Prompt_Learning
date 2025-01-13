@@ -1,0 +1,19 @@
+0->Your task is determining the support of clinical statements from individual sections of Clinical Trial Reports (CTRs). CTRs detail the methodology and findings of clinical trials, assessing effectiveness and safety of new treatments. CTRs consist of 4 sections: (1) ELIGIBILITY CRITERIA listing conditions for patient participation, (2) INTERVENTION description specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary detailing participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing unexpected signs and symptoms. Statements make claims about information in these sections, either for a single CTR or comparing two.
+----------
+1->Your task is determining the support of clinical statements from individual sections of Clinical Trial Reports (CTRs). CTRs detail the methodology and findings of clinical trials, assessing effectiveness and safety of new treatments. CTRs consist of 4 sections: (1) ELIGIBILITY CRITERIA listing conditions for patient participation, (2) INTERVENTION description specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary detailing participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing unexpected signs and symptoms. Statements make claims about information in these sections, either for a single CTR or comparing two CTRs. Assessing semantic entailment connections between distinct sections of CTRs and statements made by clinical domain experts involves verifying that these statements align with the provided CTR information, without contradicting any descriptions. This process requires verifying that statements align with the information within the four key sections: (1) Eligibility Criteria, (2) Intervention, (3) Results, and (4) Adverse Events, either for a single CTR or for comparisons between two CTRs.
+----------
+2->Determine the semantic entailment connections between clinical statements and individual sections of Clinical Trial Reports (CTRs), verifying that statements align with the information within the four key sections: Eligibility Criteria, Intervention, Results, and Adverse Events, either for a single CTR or for comparisons between two CTRs.
+----------
+3->Determine the support of clinical statements from individual sections of Clinical Trial Reports (CTRs) by assessing semantic entailment connections between distinct sections of CTRs and statements made by clinical domain experts. This involves verifying that statements align with the information within the four key sections: 
+
+1. Eligibility Criteria: listing conditions for patient participation.
+2. Intervention: describing type, dosage, frequency, and duration of treatments.
+3. Results: summarizing participants, outcome measures, units, and conclusions.
+4. Adverse Events: listing unexpected signs and symptoms.
+
+Verify that statements align with the information within these sections, either for a single CTR or for comparisons between two CTRs, without contradicting any descriptions.
+----------
+4->Verify that clinical statements align with the information within the four sections of Clinical Trial Reports (CTRs): ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS, without contradicting any descriptions.
+----------
+5->Determine the support for clinical statements by analyzing individual sections of Clinical Trial Reports (CTRs), which include eligibility criteria, intervention details, results summaries, and adverse event listings.
+----------

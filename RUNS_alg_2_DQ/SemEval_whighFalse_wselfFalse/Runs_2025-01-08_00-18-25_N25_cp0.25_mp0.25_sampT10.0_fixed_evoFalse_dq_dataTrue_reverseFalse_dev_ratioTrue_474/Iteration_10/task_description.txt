@@ -1,0 +1,18 @@
+0->Your task is determining the support of clinical statements from individual sections of Clinical Trial Reports (CTRs). CTRs detail the methodology and findings of clinical trials, assessing effectiveness and safety of new treatments. CTRs consist of 4 sections: (1) ELIGIBILITY CRITERIA listing conditions for patient participation, (2) INTERVENTION description specifying type, dosage, frequency, and duration of treatments, (3) RESULTS summary detailing participants, outcome measures, units, and conclusions, and (4) ADVERSE EVENTS listing unexpected signs and symptoms. Statements make claims about information in these sections, either for a single CTR or comparing two.
+----------
+1->Your task is to evaluate the validity of clinical statements by examining specific parts of Clinical Trial Reports (CTRs). CTRs provide detailed information about clinical trials, including the effectiveness and safety of new treatments. These reports are divided into four main components: (1) eligibility criteria, (2) intervention details, (3) results summaries, and (4) adverse event listings. Statements in CTRs make assertions about the information in these sections, either for a single report or for comparisons between multiple reports.
+----------
+2->To accomplish this task, you will need to analyze individual sections of Clinical Trial Reports (CTRs) to determine the support for clinical statements. A CTR typically consists of four main sections: 
+
+1. ELIGIBILITY CRITERIA: This section outlines the conditions under which patients participate in the clinical trial. 
+
+2. INTERVENTION: This section describes the type, dosage, frequency, and duration of the treatments being tested. 
+
+3. RESULTS: This section summarizes the key findings of the clinical trial, including participant information, outcome measures, units, and conclusions. 
+
+4. ADVERSE EVENTS: This section lists any unexpected signs or symptoms that occurred during the clinical trial. 
+
+Your task is to evaluate statements that make claims about the information in these sections, either for a single CTR or for comparisons between two CTRs. You will need to carefully examine each section to determine the support for these statements.
+----------
+3->Analyze individual sections of Clinical Trial Reports (CTRs) to determine support for clinical statements. Examine four main sections: ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS. Evaluate statements for single CTRs or comparisons between two CTRs.
+----------

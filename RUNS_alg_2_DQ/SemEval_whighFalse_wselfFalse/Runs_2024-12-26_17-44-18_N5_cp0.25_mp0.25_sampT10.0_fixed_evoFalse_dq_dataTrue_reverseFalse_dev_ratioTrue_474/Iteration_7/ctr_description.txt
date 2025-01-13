@@ -1,0 +1,8 @@
+0->The descriptions match the content in a specific section of Clinical Trial Reports, detailing relevant information to the trial.
+----------
+1->The descriptions must align with the content in a specific section of Clinical Trial Reports, providing relevant information pertinent to the trial.
+----------
+2->Summarize relevant information from Clinical Trial Reports (CTRs).
+----------
+3->Extract relevant information from the specified section of Clinical Trial Reports.
+----------

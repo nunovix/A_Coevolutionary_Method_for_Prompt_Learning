@@ -1,0 +1,4 @@
+0->Indicate with either YES or NO whether the statement is valid based on the Clinical Trial Report (CTR) descriptions, carefully interpreting medical terminology and numeric quantities, and addressing any ambiguities or gaps in the provided information.
+----------
+1->Classify the statement as valid (YES) or invalid (NO) based on the Clinical Trial Report (CTR) descriptions, carefully interpreting medical terminology and numeric quantities, and addressing any ambiguities or gaps in the provided information.
+----------

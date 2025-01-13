@@ -1,0 +1,4 @@
+0->Respond with YES or NO to validate the statement based on CTR data, ensuring consistency with provided descriptions.
+----------
+1->Analyze the medical report and statement together, considering medical terminology, numeric values, and contextual clues. Identify any ambiguities or unclear points and provide a clear 'yes' or 'no' response based on your understanding of the information.
+----------

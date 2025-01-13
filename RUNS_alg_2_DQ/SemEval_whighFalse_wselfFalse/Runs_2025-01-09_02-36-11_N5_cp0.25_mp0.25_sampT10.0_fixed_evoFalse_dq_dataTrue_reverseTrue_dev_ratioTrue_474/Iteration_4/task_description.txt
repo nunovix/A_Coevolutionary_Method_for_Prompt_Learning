@@ -1,0 +1,13 @@
+0->Assess semantic entailment connections between distinct sections of Clinical Trial Reports (CTRs) and statements put forth by clinical domain experts.
+
+To establish entailment, statements should be supported by the CTR information, without contradicting any of the provided descriptions. The CTRs contain four key sections:
+
+1. ELIGIBILITY CRITERIA: specifies conditions for patient inclusion.
+2. INTERVENTION: details treatments from different patient cohorts.
+3. RESULTS: summarizes participant statistics and trial outcomes.
+4. ADVERSE EVENTS: lists observed signs and symptoms.
+
+Statements make claims about the information within these sections, either for a single CTR or comparing two CTRs.
+----------
+1->Assess semantic entailment connections between distinct sections of Clinical Trial Reports (CTRs) and statements made by clinical domain experts. To establish entailment, statements should be supported by the CTR information without contradicting any descriptions. The CTRs consist of four key sections: ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS. Statements make claims about the information within these sections, either for a single CTR or comparing two CTRs.
+----------

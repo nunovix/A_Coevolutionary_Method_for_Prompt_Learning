@@ -1,0 +1,6 @@
+0->Indicate with either YES or NO whether the statement is valid based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions and does not contradict the provided information.
+----------
+1->Classify the statement as valid (YES) or invalid (NO) based on the Clinical Trial Report (CTR) descriptions, indicating support or contradiction to the provided information.
+----------
+2->Determine the validity of a statement by referencing the Clinical Trial Report (CTR) descriptions. If the statement is supported by the CTR descriptions and does not contradict the provided information, respond with 'YES'. Otherwise, respond with 'NO'.
+----------

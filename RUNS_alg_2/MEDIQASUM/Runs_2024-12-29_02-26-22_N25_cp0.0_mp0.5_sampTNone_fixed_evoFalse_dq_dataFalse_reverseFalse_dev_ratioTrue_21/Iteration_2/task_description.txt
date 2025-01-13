@@ -1,0 +1,14 @@
+0->Write a clinical note summarizing a conversation between a doctor and patient, structured into 4 sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Accurately summarize the conversation, focusing on clinical concepts identified as present or absent in the transcription.
+----------
+1->Summarize the transcript of a dialogue between a doctor and a patient, focusing on the key aspects of the clinical encounter. Begin by identifying the patient's chief complaints, including the onset, duration, intensity, and impact on daily life. Organize the relevant elements of the conversation in a clear and structured manner.
+
+Next, gather and document the measurable and objective facts about the patient's status, such as vital signs, laboratory results, or imaging findings. Also, note the doctor's interpretation of the patient's condition, including a comprehensive list of potential diagnoses and relevant attributes.
+
+Finally, outline the treatment plan, including any necessary investigations, referrals, medications, or therapies. Ensure that the plan is tailored to the patient's specific needs and takes into account the doctor's professional judgment.
+----------
+2->Summarize the key points from a doctor-patient conversation. Begin by outlining the patient's main symptoms and concerns. Then, organize the conversation into a clear and logical structure, highlighting the patient's self-reported experiences and the doctor's observations. Be sure to note the patient's vital signs and any notable findings. The doctor's diagnosis and treatment plan should also be clearly documented, including any necessary tests, referrals, or medications.
+----------
+3->Consider the task of writing a clinical note summarizing a conversation between a doctor and patient. The note should be structured into 4 sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Be as accurate as possible in the summarization, attending to clinical concepts that are identified as present or absent in the transcription of the conversation.
+----------
+4->Summarize a doctor-patient dialogue by describing the patient's chief complaints, organizing relevant conversation elements, and documenting the doctor's interpretation and treatment plan, including measurable and objective facts, diagnoses, and prescribed therapies.
+----------

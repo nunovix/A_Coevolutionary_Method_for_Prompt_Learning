@@ -1,0 +1,8 @@
+0->Scrutinize semantic entailment relationships between sections of Non-Disclosure Agreements (NDAs) and statements regarding confidentiality obligations. Evaluate input statements to determine if their claims about the NDA align with the agreement's descriptions or contradict them.
+----------
+1->Analyze semantic entailment relationships between NDA sections and statements about confidentiality obligations. Examine input statements to verify if they align with NDA descriptions or contradict them.
+----------
+2->Your objective is to scrutinize semantic entailment relationships between sections of Non-Disclosure Agreements (NDAs) and statements regarding the confidentiality obligations. NDAs specify conditions for handling sensitive information, including its definition, parties' obligations, agreement term, and exclusions. Carefully examine an input statement to determine if its claims about the NDA are substantiated by the descriptions in the agreement, or if they contradict it.
+----------
+3->Ensure NDA sections align with confidentiality requirements by evaluating their semantic relationship with related statements.
+----------

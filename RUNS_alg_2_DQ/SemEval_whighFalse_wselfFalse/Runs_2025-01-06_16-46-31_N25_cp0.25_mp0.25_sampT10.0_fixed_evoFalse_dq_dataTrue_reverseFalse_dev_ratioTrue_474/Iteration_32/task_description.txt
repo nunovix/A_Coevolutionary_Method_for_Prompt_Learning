@@ -1,0 +1,4 @@
+0->Determine semantic entailment relations between individual sections of Clinical Trial Reports (CTRs) and statements made by clinical domain experts. A CTR consists of four sections: ELIGIBILITY CRITERIA, INTERVENTION, RESULTS, and ADVERSE EVENTS. Statements make claims about the information in one or more CTR sections. To establish an entailment relationship, the claim must be related to the CTR information, supported by the CTR, and not contradict the provided descriptions.
+----------
+1->Analyze the semantic relationships between expert statements and specific sections of Clinical Trial Reports (CTRs), ensuring the statements align with the CTR information and do not contradict the provided descriptions.
+----------

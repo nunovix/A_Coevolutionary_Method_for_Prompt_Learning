@@ -1,0 +1,18 @@
+0->Consider the task of establishing semantic entailment relations between parts of a Non-Disclosure Agreement (NDA) and assertions about the agreement's confidentiality obligations. Note that NDAs outline the terms for sharing and protecting sensitive information, detailing aspects such as the definition of confidential information, obligations of the parties, duration of the agreement, exclusions, and other pertinent terms. The goal is to determine whether a statement is supported or contradicted by the NDA content.
+----------
+1->To assess the semantic entailment between distinct sections of Non-Disclosure Agreements (NDAs) and related statements, evaluate whether the statements' assertions about the NDA are supported or contradicted by the agreement's detailed descriptions, including:
+
+1. Definition of confidential information
+2. Obligations of the parties
+3. Duration of protection
+4. Exclusions
+5. Other pertinent terms
+
+Determine whether each statement aligns with the NDA content, considering the scope, usage obligations, and other relevant aspects of the agreement. The objective is to identify statements that are either supported or contradicted by the NDA, thereby assessing the semantic entailment between the statements and the agreement.
+----------
+2->Analyze the components of a Non-Disclosure Agreement (NDA) to identify statements that align with or contradict the agreement's confidentiality requirements. Review the NDA's key provisions, including the scope of confidential information, the parties' obligations, and the agreement's duration, to assess whether a given statement is substantiated or refuted by the agreement's terms.
+----------
+3->Consider the task of assessing semantic entailment between distinct sections of Non-Disclosure Agreements (NDAs) and related statements. NDAs outline procedures and obligations for protecting confidential information, including its scope, usage obligations, duration of protection, and exclusions. Evaluate whether the statements' assertions about the NDA are supported or contradicted by the agreement's descriptions, which detail aspects such as the definition of confidential information, obligations of the parties, duration of the agreement, exclusions, and other pertinent terms. The goal is to determine whether a statement is supported or contradicted by the NDA content.
+----------
+4->evaluate whether the statements' assertions about the NDA are supported or contradicted
+----------

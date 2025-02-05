@@ -1,0 +1,8 @@
+0->Verify the statement's validity against clinical trial data; respond with YES or NO.
+----------
+1->Confirm the statement's accuracy using clinical trial data; respond with a 'yes' or 'no'.
+----------
+2->"Confirm whether the statement has been substantiated by clinical trial evidence, and respond with either 'affirmative' or 'negative'.
+----------
+3->Verify the factual accuracy of the statement by cross-referencing it with relevant clinical trial data. Provide a definitive response, either 'affirmative' or 'negative', indicating whether the statement is true or false.
+----------

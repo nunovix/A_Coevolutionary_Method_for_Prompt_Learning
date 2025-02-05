@@ -1,0 +1,14 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->Verify CTR descriptions by confirming alignment (YES) or contradiction (NO) based on provided information.
+----------
+2->Assess the Clinical Trial Report (CTR) for relevant information, and answer YES or NO based on the presence or absence of key descriptors in the CTR that support or refute the statement, ensuring alignment with established guidelines and terminology.
+----------
+3->Indicate with a "YES" or "NO" whether the statement is supported by the Clinical Trial Report (CTR) descriptions, ensuring consistency with the provided information.
+----------
+4->Verify the validity of a given statement against the Clinical Trial Report (CTR) descriptions. Determine if the statement aligns with the information provided in the CTR, ensuring that it neither contradicts nor omits crucial details. Indicate 'YES' if the statement is supported by the CTR, and 'NO' otherwise.
+----------
+5->Verify the validity of a given statement against the Clinical Trial Report (CTR) descriptions, ensuring alignment with established guidelines and terminology. Indicate 'YES' if the statement is supported by the CTR, and 'NO' otherwise, based on the presence or absence of key descriptors that support or refute the statement.
+----------
+6->Evaluate the Clinical Trial Report (CTR) against established guidelines and terminology, verifying the presence or absence of key descriptors that support or refute a given statement, and respond with a definitive 'YES' or 'NO' based on the findings.
+----------

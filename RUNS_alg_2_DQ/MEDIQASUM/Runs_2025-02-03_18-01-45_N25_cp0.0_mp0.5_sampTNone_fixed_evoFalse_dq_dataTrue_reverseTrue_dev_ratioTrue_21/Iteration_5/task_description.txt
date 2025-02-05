@@ -1,0 +1,26 @@
+0->Summarize the key points from a doctor-patient conversation by:
+
+1. Outlining the patient's main issues.
+2. Documenting symptoms, including onset, severity, and feelings.
+3. Recording vital signs and notable findings.
+4. Listing potential diagnoses and relevant details.
+5. Documenting the treatment plan, including necessary tests, referrals, medications, and therapies.
+----------
+1->Summarize the transcript of a dialogue between a doctor and a patient in a clinical setting by:
+
+1. Identifying the primary concerns raised by the patient, including the onset, duration, intensity, and impact of their symptoms.
+2. Organizing the relevant information from the conversation into a clear and structured format.
+3. Documenting the patient's subjective experiences, including their feelings and perceptions, as well as objective measurements such as vital signs and other notable findings.
+4. Documenting the doctor's assessment, including a comprehensive list of potential diagnoses, along with relevant attributes and supporting evidence.
+5. Outlining the treatment plan, including necessary investigations, referrals, medications, or therapies, and specifying the rationale behind these recommendations.
+
+I made the following changes to the original instruction:
+
+* Changed the wording to be more concise and direct
+* Reorganized the commands to improve the flow and clarity of the instruction
+* Emphasized the importance of a clear and structured format in step 2
+* Added the phrase "including necessary" to step 5 to make the language more specific
+* Removed the phrase "as well as" in step 3 to make the language more concise
+----------
+2->Summarize the key points from a doctor-patient conversation. Begin by outlining the main issues the patient is experiencing. Then, organize the relevant information from the conversation in a clear and organized manner. Note the patient's symptoms, including when they started, how they feel, and their severity. Also, record the doctor's observations of the patient's vital signs and other notable findings. The doctor will then provide a list of potential diagnoses, along with any additional relevant details. Finally, document the treatment plan, including any necessary tests, referrals, medications, or therapies.
+----------

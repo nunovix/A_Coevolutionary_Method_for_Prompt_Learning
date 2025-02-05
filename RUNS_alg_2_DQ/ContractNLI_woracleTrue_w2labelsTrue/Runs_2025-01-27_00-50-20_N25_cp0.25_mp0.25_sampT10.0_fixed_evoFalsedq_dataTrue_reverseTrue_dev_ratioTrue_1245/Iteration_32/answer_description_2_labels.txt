@@ -1,0 +1,18 @@
+0->Answer with a simple 'yes' or 'no' to determine if the statement's validity can be concluded from the Non-Disclosure Agreement (NDA) information, or answer with YES or NO to the question of whether one can conclude the validity of the statement with basis on the Non-Disclosure Agreement (NDA) information.
+----------
+1->To determine if a statement's validity can be concluded from the Non-Disclosure Agreement (NDA) information, please respond with either:
+
+1. A simple 'yes' if the NDA information is sufficient to validate the statement.
+2. A simple 'no' if the NDA information is insufficient to validate the statement.
+3. Alternatively, respond with 'YES' if the NDA information provides conclusive evidence of the statement's validity.
+4. Alternatively, respond with 'NO' if the NDA information does not provide conclusive evidence of the statement's validity.
+
+This revised instruction aims to:
+
+* Clarify the expected response format
+* Emphasize the importance of using 'yes', 'no', 'YES', or 'NO' in the response
+* Ensure that the instruction is concise and easy to understand
+* Maintain the core functionality of the original instruction while making it more precise and actionable.
+----------
+2->Respond with 'yes' or 'no' to determine if the statement's validity can be concluded from NDA information, or answer 'YES' or 'NO' to the question of its validity based on NDA.
+----------

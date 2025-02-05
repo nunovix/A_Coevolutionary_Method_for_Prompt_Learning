@@ -1,0 +1,8 @@
+0->Provide a YES or NO response indicating the statement's validity based on the clinical trial report data, carefully interpreting the medical terminology and context, assessing numeric quantities and other qualifiers, and addressing any ambiguities or gaps in the provided information.
+----------
+1->Check the statement's validity based on the clinical trial report data, providing a YES or NO response.
+----------
+2->Analyze the clinical trial report data to determine the validity of a given statement, taking into account the nuances of medical terminology, numerical values, and contextual qualifiers, and provide a definitive 'YES' or 'NO' response, addressing any ambiguities or gaps in the provided information to ensure accurate interpretation and decision-making.
+----------
+3->Verify the statement's validity against clinical trial data; respond with YES or NO.
+----------

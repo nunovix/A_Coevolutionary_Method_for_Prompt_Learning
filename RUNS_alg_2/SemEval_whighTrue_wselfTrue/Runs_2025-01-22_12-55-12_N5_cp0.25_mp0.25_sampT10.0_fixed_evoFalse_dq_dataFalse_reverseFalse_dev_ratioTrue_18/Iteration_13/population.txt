@@ -1,0 +1,5 @@
+{'task_description': 1, 'ctr_description': 0, 'statement_description': 0, 'highlight_description': 0, 'self_A': 0, 'self_B': 0, 'self_C': 0, 'answer_description': 1}, 0.7777777777777778
+{'task_description': 0, 'ctr_description': 0, 'statement_description': 0, 'highlight_description': 0, 'self_A': 0, 'self_B': 1, 'self_C': 1, 'answer_description': 0}, 0.775
+{'task_description': 0, 'ctr_description': 0, 'statement_description': 0, 'highlight_description': 0, 'self_A': 0, 'self_B': 0, 'self_C': 0, 'answer_description': 0}, 0.775
+{'task_description': 0, 'ctr_description': 0, 'statement_description': 1, 'highlight_description': 0, 'self_A': 0, 'self_B': 1, 'self_C': 0, 'answer_description': 0}, 0.7213622291021672
+{'task_description': 0, 'ctr_description': 1, 'statement_description': 0, 'highlight_description': 0, 'self_A': 0, 'self_B': 0, 'self_C': 0, 'answer_description': 0}, 0.7213622291021672

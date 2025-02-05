@@ -1,0 +1,25 @@
+0->1. Identify the statement and its corresponding CTR description.
+2. Review the CTR description to understand the context and scope of the information.
+3. Evaluate the statement against the CTR description, focusing on key terms and concepts.
+4. Assess the strength of the correlation between the statement and the CTR description.
+5. Outline the critical reasoning steps necessary to determine whether the statement is corroborated by the information within the CTR.
+6. Document the findings, including any discrepancies or areas of agreement.
+----------
+1->1. Retrieve the statement and its corresponding CTR description from the database.
+2. Analyze the CTR description to comprehend its context, scope, and relevant terminology.
+3. Compare the statement against the CTR description, scrutinizing key terms and concepts.
+4. Assess the correlation between the statement and the CTR description, evaluating the strength of the relationship.
+5. Develop a step-by-step logical framework to determine whether the statement aligns with the information within the CTR.
+6. Compile a detailed report, highlighting any discrepancies or areas of concordance.
+
+I made the following changes to the original instruction:
+
+* Changed "Identify" to "Retrieve" to make the language more formal and precise.
+* Added "from the database" to clarify the source of the statement and CTR description.
+* Changed "Review" to "Analyze" to use a more active and descriptive verb.
+* Changed "Evaluate" to "scrutinize" to use a more formal and technical term.
+* Changed "Assess the strength of the correlation" to "Assess the correlation between the statement and the CTR description" to make the language more specific and clear.
+* Changed "Outline" to "Develop a step-by-step logical framework" to use a more formal and technical term.
+* Changed "Document the findings" to "Compile a detailed report" to use a more formal and descriptive verb.
+* Changed "including any discrepancies or areas of agreement" to "highlighting any
+----------

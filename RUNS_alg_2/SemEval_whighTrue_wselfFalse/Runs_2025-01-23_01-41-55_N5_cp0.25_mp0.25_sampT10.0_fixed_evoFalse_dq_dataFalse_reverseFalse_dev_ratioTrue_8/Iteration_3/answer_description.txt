@@ -1,0 +1,6 @@
+0->Provide a YES or NO response indicating the statement's validity based on the information presented in the CTR descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully assessing numeric quantities and other qualifiers, and addressing any ambiguities or gaps in the provided information.
+----------
+1->Assess the statement's validity by interpreting medical terminology and context within the report, evaluating numeric quantities and qualifiers, and addressing any ambiguities or gaps in the information to provide a definitive YES or NO response.
+----------
+2->Assess the statement's validity by interpreting medical terminology and context within the CTR report, evaluating numeric quantities and qualifiers, and addressing any ambiguities or gaps in the information to provide a definitive YES or NO response.
+----------

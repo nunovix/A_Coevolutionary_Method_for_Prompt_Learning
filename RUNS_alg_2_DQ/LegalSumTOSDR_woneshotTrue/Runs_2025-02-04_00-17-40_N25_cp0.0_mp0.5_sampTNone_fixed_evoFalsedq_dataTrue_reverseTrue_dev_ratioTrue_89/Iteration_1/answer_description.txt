@@ -1,0 +1,10 @@
+0->Generate a concise summary of the provided Terms of Service (TOS) section, focusing on key points such as user obligations, service limitations, and important restrictions. Use straightforward language and avoid additional explanations or extra information. The summary should be brief and easy to understand.
+----------
+1->Summarize the TOS section in simple terms, focusing on user responsibilities, service limitations, and key restrictions. Keep it concise and easy to understand.
+----------
+2->Now output only the short summary. Remember to make it very concise and straightforward. It should not be longer than 1-2 sentences.
+----------
+3->Provide a concise summary of the original instruction, focusing on the essential steps and maintaining consistency with the original intent, within a 1-2 sentence limit.
+----------
+4->Make a minimal summary of the TOS section in just 1 or 2 sentences. Avoid adding any extra content. Use clear, informal language to explain the key points about the responsibilities, the service conditions, and any penalties. Ensure all the info is directly from the TOS.
+----------

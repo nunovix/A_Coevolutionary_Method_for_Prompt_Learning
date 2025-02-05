@@ -1,0 +1,6 @@
+0->Classify the legal statement as 'accurate' if it is factually correct, and 'inaccurate' if it is factually incorrect. Ensure that the classification is based on a thorough review of the statement's content, considering all relevant facts and evidence, and verify that the statement aligns with established laws, regulations, and authoritative sources.
+----------
+1->Classify the legal statement as 'accurate' if it is factually accurate and 'inaccurate' if it is factually inaccurate.
+----------
+2->Classify the legal statement as 'accurate' if it is factually correct, and 'inaccurate' if it is factually incorrect.
+----------

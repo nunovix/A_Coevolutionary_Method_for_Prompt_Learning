@@ -1,0 +1,8 @@
+0->Verify the Clinical Trial Report (CTR) descriptions against the provided step-by-step reasoning to confirm that the statement is supported by the CTR.
+----------
+1->Review the step-by-step analysis in the Clinical Trial Report (CTR) to verify its alignment with the provided descriptions.
+----------
+2->Review the step-by-step reasoning to verify if the statement aligns with the Clinical Trial Report (CTR) descriptions.
+----------
+3->Reflect on the step-by-step reasoning provided next to determine whether the statement is supported by the Clinical Trial Report (CTR) descriptions.
+----------

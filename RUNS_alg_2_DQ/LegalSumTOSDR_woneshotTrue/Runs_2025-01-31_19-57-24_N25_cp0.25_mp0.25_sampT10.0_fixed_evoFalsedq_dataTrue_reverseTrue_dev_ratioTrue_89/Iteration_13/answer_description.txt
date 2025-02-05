@@ -1,0 +1,10 @@
+0->Now output only the short summary. Remember to make it very concise and straightforward. It should not be longer than 1-2 sentences.
+----------
+1->Provide a brief summary of the main point. Keep it brief and to the point.
+----------
+2->Output a concise summary of the original instruction, focusing on the essential steps and maintaining consistency with the original intent, within a 1-2 sentence limit.
+----------
+3->Output a concise summary of no more than 2 sentences.
+----------
+4->Output a concise summary of the main point, no longer than 1-2 sentences.
+----------

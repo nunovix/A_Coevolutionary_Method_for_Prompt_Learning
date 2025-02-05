@@ -1,0 +1,10 @@
+0->Confirm whether the statement's truth can be deduced from the Non-Disclosure Agreement (NDA) details with a simple 'yes' or 'no'.
+----------
+1->Indicate with YES or NO whether the legal statement is valid.
+----------
+2->Classify the legal statement as either valid or invalid based on its adherence to established laws and regulations.
+----------
+3->Respond with a simple 'YES' or 'NO' to confirm the validity of the statement based on the NDA information.
+----------
+4->Respond with a simple 'YES' or 'NO' to indicate whether the validity of the statement can be concluded based on the information provided in the Non-Disclosure Agreement (NDA).
+----------

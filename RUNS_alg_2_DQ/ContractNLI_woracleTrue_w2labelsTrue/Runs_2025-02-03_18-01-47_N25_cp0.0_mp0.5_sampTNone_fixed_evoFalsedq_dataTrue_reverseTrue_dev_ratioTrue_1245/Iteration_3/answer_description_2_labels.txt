@@ -1,0 +1,6 @@
+0->Respond with a simple 'YES' or 'NO' to indicate whether the validity of the statement can be concluded based on the information provided in the Non-Disclosure Agreement (NDA).
+----------
+1->Indicate with YES or NO whether the legal statement is valid.
+----------
+2->Determine the validity of the legal statement by providing a binary response (YES or NO) indicating whether the statement adheres to the relevant laws and regulations.
+----------

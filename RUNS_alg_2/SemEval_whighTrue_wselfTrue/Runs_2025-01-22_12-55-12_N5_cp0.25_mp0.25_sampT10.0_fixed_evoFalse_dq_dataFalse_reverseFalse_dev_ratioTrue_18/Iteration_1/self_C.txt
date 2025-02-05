@@ -1,0 +1,6 @@
+0->Based on the previous reasoning steps, indicate YES or NO depending on the statement's validity.
+----------
+1->Evaluate the validity of the statement based on the evidence presented in the clinical trial report, and respond with a simple 'yes' or 'no'.
+----------
+2->Evaluate the validity of the statement based on the previous step-by-step reasoning in the clinical trial report. Indicate 'YES' if the information supports the conclusion, and 'NO' if it contradicts or refutes the conclusion.
+----------

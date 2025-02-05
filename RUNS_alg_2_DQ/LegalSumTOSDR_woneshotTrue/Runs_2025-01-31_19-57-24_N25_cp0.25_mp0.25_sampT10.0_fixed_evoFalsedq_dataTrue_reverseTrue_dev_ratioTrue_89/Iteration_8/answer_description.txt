@@ -1,0 +1,8 @@
+0->Now output only the short summary. Remember to make it very concise and straightforward. It should not be longer than 1-2 sentences.
+----------
+1->Provide a concise summary of the original instruction, focusing on the essential steps and maintaining consistency with the original intent, within a 1-2 sentence limit.
+----------
+2->Summarize the document in 2 concise sentences, capturing its main points. Output only the short summary, making it very concise and straightforward, not longer than 1-2 sentences.
+----------
+3->Output a concise summary of no more than 2 sentences, ensuring it is very concise and straightforward, and not longer than 1-2 sentences.
+----------

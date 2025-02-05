@@ -1,0 +1,14 @@
+0->Answer YES or NO to whether the statement's validity can be concluded from the information in the clinical trial report.
+----------
+1->Verify the statement's validity based on the information provided in the clinical trial report; respond with YES or NO.
+----------
+2->Given the step-by-step reasoning presented earlier, respond with YES or NO as to whether the statement's validity can be concluded from the information in the clinical trial report.
+----------
+3->Verify the statement's validity based on the information in the clinical trial report; respond with YES or NO.
+----------
+4->Evaluate the clinical trial report to confirm the statement's accuracy; respond with YES or NO.
+----------
+5->Confirm the accuracy of the statement by referencing the relevant data from the clinical trial report and provide a definitive response, either 'YES' or 'NO', based on the findings.
+----------
+6->Verify the statement's validity based on the information in the clinical trial report. Respond with a 'YES' if the statement is true, and 'NO' if it is false.
+----------

@@ -1,0 +1,12 @@
+0->Mirror the structural layout of the provided clinical note when creating the new clinical note.
+----------
+1-> Mirror the structural layout of the provided clinical note when creating the new clinical note, and review the structural layout of an example clinical note related to a different dialogue to ensure consistency and accuracy.
+----------
+2->Copy the format and organization of the existing clinical note when creating the new clinical note.
+----------
+3->When creating a new clinical note, replicate the structure and layout of the existing clinical note, ensuring that all relevant information is preserved and presented in a consistent and organized manner.
+----------
+4->Review the structural layout of an example clinical note related to a different dialogue to ensure consistency and accuracy, then mirror the structural layout of the provided clinical note to create a new clinical note.
+----------
+5->Review the structural layout of an example clinical note related to a different dialogue to ensure consistency and accuracy, then mirror the structural layout of the provided clinical note to create a new clinical note, mirroring the structural layout of the provided clinical note.
+----------

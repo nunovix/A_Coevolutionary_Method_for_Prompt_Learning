@@ -1,0 +1,10 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->Check the statement's validity based on the clinical trial report data, providing a YES or NO response.
+----------
+2->Verify the clinical trial report data to confirm the statement's accuracy, returning a definitive 'YES' or 'NO' response.
+----------
+3->Verify the clinical trial report data to confirm the accuracy of the statement, carefully assessing the mentions in the statement that should be present or absent from the Clinical Trial Report (CTR) descriptions, and return a definitive 'YES' or 'NO' response to indicate whether one can conclude the validity of the statement based on the CTR information.
+----------
+4->Verify the Clinical Trial Report (CTR) data to confirm the statement's accuracy, returning a definitive 'YES' or 'NO' response.
+----------

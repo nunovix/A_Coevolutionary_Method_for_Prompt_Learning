@@ -1,0 +1,10 @@
+0->Now output only the short summary. Remember to make it very concise and straightforward. It should not be longer than 1-2 sentences.
+----------
+1->Output a concise summary of no more than 2 sentences, ensuring it is very concise and straightforward, and not longer than 1-2 sentences.
+----------
+2->Output a concise summary of no more than 2 sentences that is very concise and straightforward, and should not be longer than 1-2 sentences.
+----------
+3->Output a concise summary of the document, no longer than 2 sentences, clearly and concisely summarizing the main points.
+----------
+4->Summarize the document in 2 concise sentences, capturing its main points.
+----------

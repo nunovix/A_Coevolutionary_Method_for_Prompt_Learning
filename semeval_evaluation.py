@@ -105,8 +105,7 @@ def F1_Recall_Precision(predictions, gold):
     return F1, Recall, Precision
 
 
-def main(pred_filename, gold_filename, output_dir, save_report): # input dir with gold labels and predicitons, output to print evaluation
-
+def main(pred_filename, gold_filename, output_dir, save_report: bool = True, model_name: str = ''): # input dir with gold labels and predicitons, output to print evaluation
     #pred_dir = os.path.join(input_dir, 'res')
     #gold_dir = os.path.join(input_dir, 'ref')
 
@@ -115,9 +114,9 @@ def main(pred_filename, gold_filename, output_dir, save_report): # input dir wit
 
     if not os.path.isdir(gold_dir):
         raise RuntimeError('{} does not exist'.format(gold_dir))"""
-
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
+    if save_report==True:
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
 
     #gold_filename = os.path.join(gold_dir, 'gold_test.json')
     #pred_filename = os.path.join(pred_dir, 'results.json')
@@ -162,44 +161,45 @@ def main(pred_filename, gold_filename, output_dir, save_report): # input dir wit
     numerical_cont_F1, numerical_cont_Rec, numerical_cont_Prec = F1_Recall_Precision(numerical_cont_predictions, gold)
     definitions_F1, definitions_Rec, definitions_Prec = F1_Recall_Precision(definitions_predictions, gold)
     """
-    # Output results
-    output_filename = os.path.join(output_dir, 'test_report.txt')
-    with open(output_filename, 'w') as f:
-        print('Control_F1: ', Control_F1, file=f)
-        print('Control_Recall: ', Control_Rec, file=f)
-        print('Control_Precision: ', Control_Prec, file=f)
-        """
-        print('Contrast_F1: ', Contrast_F1, file=f)
-        print('Contrast_Recall: ', Contrast_Rec, file=f)
-        print('Contrast_Precision: ', Contrast_Prec, file=f)
-        """
-        print('Faithfulness: ', Faithfulness, file=f)
-        print('Consistency: ', Consistency, file=f)  
-        """
-        print('Para_Consistency: ', para_Consistency, file=f)
-        print('Cont_Faithfulness: ', cont_Faithfulness, file=f)
-        print('Cont_Consistency: ', cont_Consistency, file=f)
-        print('Numerical_Para_Consistency: ', numerical_para_Consistency, file=f)
-        print('Numerical_Cont_Faithfulness: ', numerical_cont_Faithfulness, file=f)
-        print('Numerical_Cont_Consistency: ', numerical_cont_Consistency, file=f)
-        print('Definitions_Consistency: ', definitions_Consistency, file=f)
-        print('Para_F1: ', para_F1, file=f)
-        print('Para_Recall: ', para_Rec, file=f)
-        print('Para_Precision: ', para_Prec, file=f)
-        print('Cont_F1: ', cont_F1, file=f)
-        print('Cont_Recall: ', cont_Rec, file=f)
-        print('Cont_Precision: ', cont_Prec, file=f)
-        print('Numerical_Para_F1: ', numerical_para_F1, file=f)
-        print('Numerical_Para_Recall: ', numerical_para_Rec, file=f)
-        print('Numerical_Para_Precision: ', numerical_para_Prec, file=f)
-        print('Numerical_Cont_F1: ', numerical_cont_F1, file=f)
-        print('Numerical_Cont_Recall: ', numerical_cont_Rec, file=f)
-        print('Numerical_Cont_Precision: ', numerical_cont_Prec, file=f)
-        print('Definitions_F1: ', definitions_F1, file=f)
-        print('Definitions_Recall: ', definitions_Rec, file=f)
-        print('Definitions_Precision: ', definitions_Prec, file=f)
-        """
-    print(f"test evaluation report saved to {output_filename}")
+    if save_report == True:
+        # Output results
+        output_filename = os.path.join(output_dir, 'test_report_' + model_name + '.txt')
+        with open(output_filename, 'w') as f:
+            print('Control_F1: ', Control_F1, file=f)
+            print('Control_Recall: ', Control_Rec, file=f)
+            print('Control_Precision: ', Control_Prec, file=f)
+            """
+            print('Contrast_F1: ', Contrast_F1, file=f)
+            print('Contrast_Recall: ', Contrast_Rec, file=f)
+            print('Contrast_Precision: ', Contrast_Prec, file=f)
+            """
+            print('Faithfulness: ', Faithfulness, file=f)
+            print('Consistency: ', Consistency, file=f)  
+            """
+            print('Para_Consistency: ', para_Consistency, file=f)
+            print('Cont_Faithfulness: ', cont_Faithfulness, file=f)
+            print('Cont_Consistency: ', cont_Consistency, file=f)
+            print('Numerical_Para_Consistency: ', numerical_para_Consistency, file=f)
+            print('Numerical_Cont_Faithfulness: ', numerical_cont_Faithfulness, file=f)
+            print('Numerical_Cont_Consistency: ', numerical_cont_Consistency, file=f)
+            print('Definitions_Consistency: ', definitions_Consistency, file=f)
+            print('Para_F1: ', para_F1, file=f)
+            print('Para_Recall: ', para_Rec, file=f)
+            print('Para_Precision: ', para_Prec, file=f)
+            print('Cont_F1: ', cont_F1, file=f)
+            print('Cont_Recall: ', cont_Rec, file=f)
+            print('Cont_Precision: ', cont_Prec, file=f)
+            print('Numerical_Para_F1: ', numerical_para_F1, file=f)
+            print('Numerical_Para_Recall: ', numerical_para_Rec, file=f)
+            print('Numerical_Para_Precision: ', numerical_para_Prec, file=f)
+            print('Numerical_Cont_F1: ', numerical_cont_F1, file=f)
+            print('Numerical_Cont_Recall: ', numerical_cont_Rec, file=f)
+            print('Numerical_Cont_Precision: ', numerical_cont_Prec, file=f)
+            print('Definitions_F1: ', definitions_F1, file=f)
+            print('Definitions_Recall: ', definitions_Rec, file=f)
+            print('Definitions_Precision: ', definitions_Prec, file=f)
+            """
+        print(f"test evaluation report saved to {output_filename}")
 
     return {'Control_F1': Control_F1, 'Consistency': Consistency, 'Faithfulness': Faithfulness}
 

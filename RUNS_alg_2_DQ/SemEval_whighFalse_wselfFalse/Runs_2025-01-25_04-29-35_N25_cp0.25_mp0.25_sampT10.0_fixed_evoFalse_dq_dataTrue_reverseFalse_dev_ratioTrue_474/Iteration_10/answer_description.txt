@@ -1,0 +1,10 @@
+0->Answer YES or NO to the question of whether one can conclude the validity of the statement with basis on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+1->Answer YES or NO to the statement's validity based on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions.
+----------
+2->Answer YES or NO to the statement's validity based on the Clinical Trial Report (CTR) information, carefully assessing the mentions in the statement that should be present or absent from the CTR descriptions, interpreting medical terminology and context, addressing numeric quantities and other qualifiers, and addressing any ambiguities or gaps in the provided information.
+----------
+3->Verify the statement's validity by referencing the Clinical Trial Report (CTR) and confirm whether the required information is present or absent, ensuring alignment with the CTR descriptions.
+----------
+4->Answer YES or NO to the statement's validity based on the Clinical Trial Report (CTR) information. Assess the presence or absence of key terms, medical terminology, numeric quantities, and qualifiers in the statement, and address any ambiguities or gaps in the provided information.
+----------

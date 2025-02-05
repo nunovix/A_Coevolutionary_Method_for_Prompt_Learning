@@ -1,0 +1,6 @@
+0->Verify the statement's validity against clinical trial data; respond with YES or NO.
+----------
+1->Respond with YES or NO after verifying the statement's validity against clinical trial data.
+----------
+2->Confirm the statement's accuracy against clinical trial evidence; respond with 'YES' or 'NO'.
+----------

@@ -1,0 +1,8 @@
+0->Classify the legal statement as 'accurate' if it is factually correct, and 'inaccurate' if it is factually incorrect.
+----------
+1->Classify the legal statement as 'accurate' if it is factually accurate, and 'inaccurate' if it is factually inaccurate.
+----------
+2->Label the legal statement as 'correct' if it aligns with factual information, and 'incorrect' if it deviates from factual information.
+----------
+3->Classify the legal statement as 'accurate' if it is factually accurate and 'inaccurate' if it is factually inaccurate.
+----------

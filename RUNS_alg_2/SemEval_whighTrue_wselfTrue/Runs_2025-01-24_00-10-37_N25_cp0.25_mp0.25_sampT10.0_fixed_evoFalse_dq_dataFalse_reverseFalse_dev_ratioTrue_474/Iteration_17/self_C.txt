@@ -1,0 +1,30 @@
+0->Answer YES or NO to whether the statement's validity can be concluded from the information in the clinical trial report.
+----------
+1->Verify the statement's validity based on the information provided in the clinical trial report; respond with YES or NO.
+----------
+2->Verify the statement's validity based on the information provided in the clinical trial report, using the step-by-step reasoning presented earlier, and respond with YES or NO as to whether the statement's validity can be concluded from the information in the clinical trial report.
+----------
+3->Given the step-by-step reasoning presented earlier, respond with YES or NO as to whether the statement's validity can be concluded from the information in the clinical trial report.
+----------
+4->Confirm the accuracy of the statement by referencing the relevant data from the clinical trial report and provide a definitive response, either 'YES' or 'NO', based on the findings.
+----------
+5->To assess the validity of a statement regarding the clinical trial report, follow these steps:
+
+1. Review the clinical trial report for relevant information.
+2. Identify the specific statement in question.
+3. Use the step-by-step reasoning provided earlier to analyze the information.
+4. Determine whether the statement can be conclusively supported or refuted by the information in the report.
+5. Based on the analysis, respond with 'YES' if the statement is true, or 'NO' if it is false.
+
+This revised instruction aims to enhance clarity and effectiveness by:
+
+* Breaking down the task into clear, actionable steps
+* Emphasizing the importance of reviewing the relevant information
+* Clarifying the purpose of the step-by-step reasoning
+* Providing a clear and concise response format (YES/NO)
+* Ensuring that the instruction is precise, actionable, and free of ambiguities.
+----------
+6->Evaluate the assertion made in the clinical trial report against the available data, and provide a definitive confirmation (YES) or denial (NO) of its validity.
+----------
+7->Verify the statement's validity based on the information in the clinical trial report; respond with YES or NO.
+----------

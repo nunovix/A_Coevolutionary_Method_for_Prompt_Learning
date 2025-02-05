@@ -1,0 +1,23 @@
+Task: ContractNLI
+Start time: 2025-01-24 21:50:20.540083
+End time: 2025-01-28 07:33:03.014815
+Total elapsed time: 3 days, 9:42:42.474732
+No. of iterations: 20
+Average time per iteration: 4:05:08.123737
+
+Initial population size (size of suprompts pop): 25
+How many of the top performers are being kept(elite): 0
+Max no. of iterations allowed: 200
+Patience: 10
+Evaluation done on: dev set
+With 1245 examples
+
+Label distribution: Counter({'Entailment': 1053, 'Contradiction': 192})
+
+Name of the model used: meta-llama/Llama-3.2-3B-Instruct 
+4 bit quantization: True 
+Now the individuals are not bonded, meaning that new subprompts are created and randomly combined 
+Retrieving examples-->False 
+ORACLE SPANS 
+Alg 2 - Random sample 2 individuals weighted on scores, apply crossover and mutation to the offspring, top 0 performers are always kept as elite population
+With crossover probability 0.5 and mutation probability 0.5

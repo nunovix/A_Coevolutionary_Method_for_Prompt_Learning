@@ -1,0 +1,13 @@
+0->Consider the problem of assessing semantic entailment connections between distinct sections of Clinical Trial Reports (CTRs) and statements put forth by clinical domain experts. To establish entailment, statements should be supported by the CTR information, not contradicting any of the provided descriptions. In brief, CTRs elucidate the procedures and findings of clinical trials, encompassing four sections: (1) ELIGIBILITY CRITERIA specifying conditions for patient inclusion, (2) INTERVENTION detailing treatments from different patient cohorts, (3) RESULTS summarizing the participant statistics and the trial outcomes, and (4) ADVERSE EVENTS listing observed signs and symptoms. Statements make claims about the information within these sections, either for a single CTR or comparing two CTRs.
+----------
+1->Your task is to analyze and extract relevant information from individual sections of Clinical Trial Reports (CTRs) to determine the support for clinical statements. CTRs are divided into four main sections:
+
+1. **Eligibility Criteria**: This section outlines the conditions under which patients participate in the clinical trial.
+2. **Intervention**: This section describes the type, dosage, frequency, and duration of treatments administered to participants.
+3. **Results**: This section summarizes key findings, including participant demographics, outcome measures, units of measurement, and conclusions drawn from the data.
+4. **Adverse Events**: This section lists any unexpected signs and symptoms observed during the trial.
+
+Your goal is to identify statements that make claims about specific information within these sections, either for a single CTR or for comparisons between multiple CTRs.
+----------
+2->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. Determine the support of clinical statements from sections of CTRs, which detail methodology and outcomes of clinical trials, appraising efficacy and safety of new treatments. Assess statements for alignment with CTR information, finding support in specific sections and avoiding contradictions.
+----------

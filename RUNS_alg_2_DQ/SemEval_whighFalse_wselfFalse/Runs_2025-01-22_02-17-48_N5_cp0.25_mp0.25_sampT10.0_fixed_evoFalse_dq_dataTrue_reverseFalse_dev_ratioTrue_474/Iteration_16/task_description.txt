@@ -1,0 +1,9 @@
+0->Your task is to analyze and extract relevant information from individual sections of Clinical Trial Reports (CTRs) to determine the support for clinical statements. CTRs are divided into four main sections:
+
+1. **Eligibility Criteria**: This section outlines the conditions under which patients participate in the clinical trial.
+2. **Intervention**: This section describes the type, dosage, frequency, and duration of treatments administered to participants.
+3. **Results**: This section summarizes key findings, including participant demographics, outcome measures, units of measurement, and conclusions drawn from the data.
+4. **Adverse Events**: This section lists any unexpected signs and symptoms observed during the trial.
+
+Your goal is to identify statements that make claims about specific information within these sections, either for a single CTR or for comparisons between multiple CTRs.
+----------

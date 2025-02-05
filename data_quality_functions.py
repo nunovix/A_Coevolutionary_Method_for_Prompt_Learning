@@ -113,10 +113,11 @@ def data_quality_inference(data_quality_prompt, model, tokenizer, focus_ans = "p
     # convert to text
     top_k_tokens = tokenizer.convert_ids_to_tokens(top_k_ids.squeeze().tolist())
     for token, prob in zip(top_k_tokens, top_k_probs.squeeze().tolist()):
+        
         print(f"Token: {token}, Probability: {prob:.4f}")
-    print(f"\n\n")
+    #print(f"\n\n")
 
-    top_k_logits, top_k_ids = torch.topk(logits, 10, dim=-1)
+    #top_k_logits, top_k_ids = torch.topk(logits, 10, dim=-1)
 
     #for token, logit in zip(top_k_tokens, top_k_logits.squeeze().tolist()):
         #print(f"Token: {token}, Logit: {logit:.4f}")
@@ -135,11 +136,11 @@ def yes_no_comp_score_calculator(logits,
 
     # \u2581 used before words to mark that it is a new word and not an attachable subword ie
     #yes_token_id = tokenizer.convert_tokens_to_ids("\u2581YES") # phi 3 mini
-    yess = ['ĠYES', 'ĠYes', 'Ġyes']
+    yess = ['ĠYES', 'ĠYes', 'Ġyes', 'ĠAff', 'Ġaffirmative']
     yes_token_ids = [tokenizer.convert_tokens_to_ids(y) for y in yess]
     yes_tokens_logits = [logits[0, yes_token].item() for yes_token in yes_token_ids]
 
-    noss = ['ĠNO', 'ĠNo', 'Ġno']
+    noss = ['ĠNO', 'ĠNo', 'Ġno', 'ĠNeg', 'ĠNEG', 'ĠNegative', 'Ġnegative']
     nos_token_ids = [tokenizer.convert_tokens_to_ids(n) for n in noss]
     nos_tokens_logits = [logits[0, no_token].item() for no_token in nos_token_ids]
 
@@ -219,25 +220,28 @@ def data_quality_assessment_and_save(task: str,
         #system_part = f"Assume the role of an automated system for the processing of domain-specific documentation, such as clinical or legal documents. The accuracy, robustness, consistency, and faithfulness of the reasoning performed by the system is critical in this context, and it is important to carefully consider the domain-specific terminology, to handle linguistic constructs such as temporal associations or negations, and to have robustness to different writing styles and vocabularies."
         #data_quality_prompt = f"<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\n{system_part}<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nThe following textual description corresponds to a particular instance from a dataset.\n\n{datapoint_string}\n\nConsider the task of determining whether or not the instance is uninformative, in what regards exemplifying the contents of the dataset. An uninformative instance should be very easy to analyze and classify, failing to illustrate the particular challenges and the corner cases that may exist in the complete dataset. Its contents provides little or no useful information, likely failing to elicit a meaningful response from its analysis. Your goal is to assess whether the instance corresponds to an uninformative example that should be ignored, e.g. when assessing the performance of a large language model over the complete dataset. Taking into account the aforementioned goal, attend carefully to the contents of the instance.\n\n{datapoint_string}\n\nAnswer affirmatively if you deem the instance to be uninformative, or negatively otherwise.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\nAnswer:"
         
-        user_text_prompt = f"The following textual description corresponds to a particular instance from a dataset.\n\n{datapoint_string}\n\nConsider the task of determining whether or not the instance is uninformative, in what regards exemplifying the contents of the dataset. An uninformative instance should be very easy to analyze and classify, failing to illustrate the particular challenges and the corner cases that may exist in the complete dataset. Its contents provides little or no useful information, likely failing to elicit a meaningful response from its analysis. Your goal is to assess whether the instance corresponds to an uninformative example that should be ignored, e.g. when assessing the performance of a large language model over the complete dataset. Taking into account the aforementioned goal, attend carefully to the contents of the instance.\n\n{datapoint_string}\n\nAnswer affirmatively if you deem the instance to be uninformative, or negatively otherwise."
+        user_text_prompt = f"The following textual description corresponds to a particular instance from a dataset.\n\n{datapoint_string}\n\nConsider the task of determining whether or not the instance is uninformative, in what regards exemplifying the contents of the dataset. Notice that an uninformative instance should be very easy to analyze and classify, failing to illustrate the particular challenges and the corner cases that may exist in the complete dataset to which it belongs. Its contents may also provide little or no useful information, likely failing to elicit a meaningful response from its analysis. Your goal is to assess whether the instance corresponds to an uninformative example that should be ignored, e.g. when assessing the performance of a large language model over the complete dataset. Taking into account the aforementioned goal, attend carefully to the contents of the instance.\n\n{datapoint_string}\n\nAnswer affirmatively if you deem the instance to be uninformative, or negatively otherwise."
         
         #processed_data.append({"original_data": item, "combined_string": combined_string, "score": None})
     
-    """if model == 'phi_4k':
-        model, tokenizer = load_model(checkpoint = "microsoft/Phi-3-mini-4k-instruct", quantized = True)
-    elif model == 'phi_128k':
-        model, tokenizer = load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct", quantized = True)"""
+        """if model == 'phi_4k':
+            model, tokenizer = load_model(checkpoint = "microsoft/Phi-3-mini-4k-instruct", quantized = True)
+        elif model == 'phi_128k':
+            model, tokenizer = load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct", quantized = True)"""
 
-    if 'llama' in model:
-        prompt = prepare_text4llama3_instruct(user_text = user_text_prompt)
-        model, tokenizer = load_model(checkpoint = model, quantized = True)
-    else:
-        sys.exit("not an implemented model")
-    
-    # Add to data_list
+        if 'llama' in model:
+            prompt = prepare_text4llama3_instruct(user_text = user_text_prompt)
+        else:
+            sys.exit("not an implemented model")
+        
+        # Add to data_list
         full_data[i]['data_quality_prompt'] = prompt
     
+    if 'llama' in model:
+        model, tokenizer = load_model(checkpoint = model, quantized = True)
+    
     for i in tqdm(range(len(full_data)), desc = 'Performing Data Quality Inference'):
+        #print(full_data[i].keys())
         data_quality_score = data_quality_inference(data_quality_prompt = full_data[i]["data_quality_prompt"], 
                                                     model = model, 
                                                     tokenizer = tokenizer,

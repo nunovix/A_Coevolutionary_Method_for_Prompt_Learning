@@ -1,0 +1,4 @@
+0->Assess the semantic entailment between distinct sections of Clinical Trial Reports (CTRs) and statements made by clinical domain experts. To establish entailment, statements must be grounded in the CTR information and not contradict any provided descriptions. Evaluate CTRs across four key sections: Intervention, Eligibility Criteria, Results, and Adverse Events. Statements make claims about the information within these sections, either within a single CTR or between two CTRs.
+----------
+1->Evaluate the semantic entailment between statements in Clinical Trial Reports (CTRs) across four key sections: Intervention, Eligibility Criteria, Results, and Adverse Events. Assess claims made within a single CTR or between two CTRs, ensuring statements are grounded in CTR information and do not contradict provided descriptions.
+----------

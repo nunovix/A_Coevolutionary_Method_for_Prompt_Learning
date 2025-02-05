@@ -1,0 +1,20 @@
+0->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. CTRs detail the methodology and outcomes of clinical trials, encompassing four sections: (1) ELIGIBILITY CRITERIA specifying conditions for patient inclusion, (2) INTERVENTION detailing treatments from different patient cohorts, (3) RESULTS summarizing the participant statistics and the trial outcomes, and (4) ADVERSE EVENTS listing observed signs and symptoms. Statements make claims about the information within these sections, either for a single CTR or comparing two CTRs. For entailment validation, the statement's claim should align with clinical trial information, finding support in the CTR and not contradicting any of the provided descriptions. The statements, on the other hand, assert claims about the information within specific sections of CTRs, for a single CTR or making a comparative analysis of two CTRs.
+----------
+1->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts to assess the alignment of claims with the corresponding CTR information. This involves examining four key sections of CTRs: 
+
+1. ELIGIBILITY CRITERIA: Analyze the conditions under which patients are included in the trial. 
+2. INTERVENTION: Examine the treatments administered to different patient cohorts. 
+3. RESULTS: Summarize the participant statistics and trial outcomes. 
+4. ADVERSE EVENTS: Identify observed signs and symptoms. 
+
+For entailment validation, verify that the statement's claim is supported by the CTR information and does not contradict any provided descriptions. When comparing two CTRs, assess whether the statement's claim is consistent with the information in both CTRs.
+----------
+2->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. This involves assessing the alignment of a statement's claim with the corresponding CTR section, ensuring that the claim is supported by the provided descriptions and does not contradict any information within the section. The evaluation focuses on four key sections of CTRs: 
+
+1. ELIGIBILITY CRITERIA 
+2. INTERVENTION 
+3. RESULTS 
+4. ADVERSE EVENTS 
+
+For a single CTR, statements assert claims about the information within specific sections, while comparative statements analyze the differences between two CTRs. The goal is to validate entailment, verifying that the statement's claim is consistent with the CTR information and does not contradict any descriptions.
+----------

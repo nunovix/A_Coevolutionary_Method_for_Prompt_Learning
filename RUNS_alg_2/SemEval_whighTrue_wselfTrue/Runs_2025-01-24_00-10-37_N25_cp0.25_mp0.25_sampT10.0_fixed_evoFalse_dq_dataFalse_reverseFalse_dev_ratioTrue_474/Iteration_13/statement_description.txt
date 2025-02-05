@@ -1,0 +1,18 @@
+0->Reflect upon the ensuing statement crafted by a clinical expert.
+----------
+1->Review the statement provided by a clinical expert.
+----------
+2->Consider the statement made by a medical specialist.
+----------
+3->Review the statement provided by a clinical expert and consider the statement crafted by a medical specialist.
+----------
+4->Review a statement provided by a clinical expert.
+----------
+5->Consider the statement made by a medical specialist, then reflect upon the ensuing statement crafted by a clinical expert.
+----------
+6->1. Compare the statements made by a medical specialist and a clinical expert.
+2. Identify key similarities and differences.
+3. Extract essential information from the comparison.
+4. Refine the extracted information for clarity and accuracy.
+5. Create a new instruction based on the refined information.
+----------

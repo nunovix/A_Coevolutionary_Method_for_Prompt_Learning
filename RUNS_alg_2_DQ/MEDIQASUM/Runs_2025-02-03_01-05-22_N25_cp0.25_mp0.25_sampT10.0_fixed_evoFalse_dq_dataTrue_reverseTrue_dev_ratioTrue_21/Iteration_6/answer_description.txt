@@ -1,0 +1,11 @@
+0->Create the structured clinical note, summarizing the key informaton in the input dialogue and mirroring the structure of the example. Include four sections: HISTORY OF PRESENT ILLNESS, PHYSICAL EXAM, RESULTS, ASSESSMENT AND PLAN. Be thorough, clear, and brief. Do not make up information.
+----------
+1->Create a structured clinical note summarizing key information from the input dialogue, mirroring the example's structure. The note should include four sections:
+
+1. HISTORY OF PRESENT ILLNESS: Summarize the patient's chief complaint, symptoms, and relevant medical history.
+2. PHYSICAL EXAM: Outline the key findings from the physical examination, including vital signs and any notable abnormalities.
+3. RESULTS: Report the results of any diagnostic tests or procedures performed, along with their interpretations.
+4. ASSESSMENT AND PLAN: Provide a concise summary of the patient's condition, diagnosis, and recommended treatment plan.
+
+Ensure thoroughness, clarity, and brevity while adhering to the accuracy of the input dialogue.
+----------

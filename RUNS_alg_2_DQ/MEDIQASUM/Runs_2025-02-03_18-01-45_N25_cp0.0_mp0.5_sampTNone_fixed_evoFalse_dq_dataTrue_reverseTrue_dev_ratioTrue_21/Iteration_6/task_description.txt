@@ -1,0 +1,25 @@
+0->Summarize the key points from a doctor-patient conversation by:
+
+1. Outlining the patient's main issues.
+2. Documenting symptoms, including onset, severity, and feelings.
+3. Recording vital signs and notable findings.
+4. Listing potential diagnoses and relevant details.
+5. Documenting the treatment plan, including necessary tests, referrals, medications, and therapies.
+----------
+1->Summarize the transcript of a dialogue between a doctor and a patient in a clinical setting by:
+
+1. Identify the primary concerns raised by the patient, including onset, duration, intensity, and impact of symptoms.
+2. Organize relevant information from the conversation into a clear and structured format.
+3. Document the patient's subjective experiences, including feelings and perceptions, and objective measurements such as vital signs and notable findings.
+4. Document the doctor's assessment, including potential diagnoses, attributes, and supporting evidence.
+5. Outline the treatment plan, including necessary investigations, referrals, medications, or therapies, specifying the rationale behind these recommendations.
+----------
+2->Summarize the key points from a doctor-patient conversation by outlining the main issues the patient is experiencing. Record the patient's symptoms, including when they started, how they feel, and their severity. Document the doctor's observations of the patient's vital signs and other notable findings. The doctor will then provide a list of potential diagnoses and a treatment plan, including any necessary tests, referrals, medications, or therapies.
+----------
+3->Summarize the key points from a doctor-patient conversation by:
+
+1. Documenting the patient's main issues and symptoms.
+2. Recording vital signs and notable findings.
+3. Outlining potential diagnoses and relevant details.
+4. Summarizing the treatment plan, including necessary tests, referrals, medications, and therapies.
+----------

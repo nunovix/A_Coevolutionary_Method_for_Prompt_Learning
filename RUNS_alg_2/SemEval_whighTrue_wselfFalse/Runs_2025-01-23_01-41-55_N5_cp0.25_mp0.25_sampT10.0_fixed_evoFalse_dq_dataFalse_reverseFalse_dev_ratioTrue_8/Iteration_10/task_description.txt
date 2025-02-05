@@ -1,0 +1,20 @@
+0->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. This involves assessing the alignment of a statement's claim with the corresponding CTR section, ensuring that the claim is supported by the provided descriptions and does not contradict any information within the section. The evaluation focuses on four key sections of CTRs: 
+
+1. ELIGIBILITY CRITERIA 
+2. INTERVENTION 
+3. RESULTS 
+4. ADVERSE EVENTS 
+
+For a single CTR, statements assert claims about the information within specific sections, while comparative statements analyze the differences between two CTRs. The goal is to validate entailment, verifying that the statement's claim is consistent with the CTR information and does not contradict any descriptions.
+----------
+1->Evaluate the semantic entailment between individual sections of Clinical Trial Reports (CTRs) and statements issued by clinical domain experts. This involves assessing the alignment of a statement's claim with the corresponding CTR section, ensuring that the claim is supported by the provided descriptions and does not contradict any information within the section.
+
+The evaluation focuses on four key sections of CTRs: 
+
+1. ELIGIBILITY CRITERIA 
+2. INTERVENTION 
+3. RESULTS 
+4. ADVERSE EVENTS 
+
+For a single CTR, statements assert claims about the information within specific sections, while comparative statements analyze the differences between two CTRs. The objective is to validate entailment, verifying that the statement's claim is consistent with the CTR information and does not contradict any descriptions.
+----------

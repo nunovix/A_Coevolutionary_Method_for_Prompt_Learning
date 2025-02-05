@@ -1,0 +1,14 @@
+0->Mirror the structural layout of the provided clinical note when creating the new clinical note.
+----------
+1-> Mirror the structural layout of the provided clinical note when creating the new clinical note, and review the structural layout of an example clinical note related to a different dialogue to ensure consistency and accuracy.
+----------
+2->Mirroring the structural layout of the provided clinical note involves replicating its organization and formatting. This includes adhering to the same headings, subheadings, bullet points, and other structural elements to ensure consistency and clarity.
+----------
+3->Analyze the structural layout of a clinical note, focusing on key elements such as date, patient information, and relevant medical history.
+----------
+4->Replicate the structural layout of a representative clinical note, incorporating key elements such as date, patient information, and relevant medical history, mirroring the organization and formatting of the original note, including headers, sections, and subsections, to ensure a faithful representation of the original document's structure and content. Review the resulting note for accuracy and completeness, paying close attention to the layout and formatting to maintain consistency with the original.
+----------
+5->Review the following example of a clinical note related to a different dialogue, attending to its structural layout.
+----------
+6->Review the structural layout of an example clinical note related to a different dialogue to ensure consistency and accuracy, then mirror the structural layout of the provided clinical note to create a new clinical note.
+----------

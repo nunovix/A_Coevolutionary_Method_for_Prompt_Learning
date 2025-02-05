@@ -1,0 +1,12 @@
+0->Check the statement's validity based on the clinical trial report data, providing a YES or NO response.
+----------
+1->Verify the factual accuracy of the statement by consulting the relevant clinical trial report data and respond with a definitive 'YES' or 'NO' based on the findings.
+----------
+2->Provide a YES or NO response indicating the statement's validity based on the information presented in the clinical trial report data, carefully interpreting medical terminology, assessing numeric quantities and other qualifiers, and addressing any ambiguities or gaps in the provided information.
+----------
+3->Indicate with either YES or NO whether the statement is valid based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions, not contradicting the provided information.
+----------
+4->Indicate with either YES or NO whether the statement is valid based on the Clinical Trial Report (CTR) descriptions. An answer of YES means that the statement is supported by the CTR descriptions and does not contradict the provided information.
+----------
+5->Provide a YES or NO response indicating the statement's validity based on the information presented in the CTR descriptions. Do this by interpreting the medical terminology and the context in both the report and the statement, carefully assessing numeric quantities and other qualifiers, and addressing any ambiguities or gaps in the provided information.
+----------

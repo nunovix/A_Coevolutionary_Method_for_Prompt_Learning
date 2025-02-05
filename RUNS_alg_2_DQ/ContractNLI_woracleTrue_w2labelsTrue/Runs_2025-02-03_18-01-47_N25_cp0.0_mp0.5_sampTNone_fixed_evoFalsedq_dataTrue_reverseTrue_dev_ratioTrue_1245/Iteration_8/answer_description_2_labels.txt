@@ -1,0 +1,10 @@
+0->Confirm the statement's validity with a 'YES' or 'NO' based on NDA information.
+----------
+1->Affirm or deny the statement based on the NDA information.
+----------
+2->Determine if the statement's validity can be inferred from the NDA information, using a straightforward 'yes' or 'no' response.
+----------
+3->Verify whether the statement's validity can be inferred from the Non-Disclosure Agreement (NDA) information, and respond with either 'affirmative' or 'negative' to indicate confirmation or denial, respectively.
+----------
+4->Verify the statement's accuracy with a 'YES' or 'NO' based on Non-Disclosure Agreement (NDA) information.
+----------

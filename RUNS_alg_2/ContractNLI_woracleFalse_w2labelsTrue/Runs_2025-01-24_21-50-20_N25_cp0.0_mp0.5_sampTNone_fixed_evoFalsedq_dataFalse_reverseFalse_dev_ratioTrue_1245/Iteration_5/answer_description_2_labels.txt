@@ -1,0 +1,8 @@
+0->Assess the legal statement for factual correctness and respond with a clear 'affirmative' or 'negative' verdict, guaranteeing transparency and exactness in the evaluation.
+----------
+1->Indicate with YES or NO whether the legal statement is valid.
+----------
+2->Classify the legal statement as either valid or invalid.
+----------
+3->Evaluate the truthfulness of a legal statement with a binary 'YES' or 'NO' outcome.
+----------

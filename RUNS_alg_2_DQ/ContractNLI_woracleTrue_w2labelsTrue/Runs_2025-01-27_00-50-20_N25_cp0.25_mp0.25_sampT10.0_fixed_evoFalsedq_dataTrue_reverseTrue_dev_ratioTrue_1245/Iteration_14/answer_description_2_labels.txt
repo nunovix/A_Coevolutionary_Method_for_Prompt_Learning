@@ -1,0 +1,10 @@
+0->Answer with YES or NO to the question of whether one can conclude the validity of the statement with basis on the Non-Disclosure Agreement (NDA) information.
+----------
+1->Respond with a simple 'yes' or 'no' to determine if the statement's validity can be inferred from the NDA details provided.
+----------
+2->Respond with 'YES' or 'NO' to determine if the statement's validity can be inferred from the NDA details provided.
+----------
+3->Verify the statement's validity based on NDA information; respond with 'yes' if conclusive, 'no' if inconclusive, or 'undetermined' if insufficient information exists.
+----------
+4->Answer with a simple 'yes' or 'no' to determine if the statement's validity can be concluded from the Non-Disclosure Agreement (NDA) information, or answer with YES or NO to the question of whether one can conclude the validity of the statement with basis on the Non-Disclosure Agreement (NDA) information.
+----------

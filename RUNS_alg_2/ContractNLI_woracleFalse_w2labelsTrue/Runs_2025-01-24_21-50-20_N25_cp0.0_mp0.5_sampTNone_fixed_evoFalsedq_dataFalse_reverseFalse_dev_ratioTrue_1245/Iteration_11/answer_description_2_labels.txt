@@ -1,0 +1,6 @@
+0->Classify the legal statement as 'affirmative' if it is factually accurate, and 'negative' if it is factually inaccurate.
+----------
+1->Classify the legal statement as 'affirmative' or 'negative' based on its factual accuracy.
+----------
+2->Evaluate the factual accuracy of the legal statement and categorize it as 'affirmative' if it is true, or 'negative' if it is false.
+----------

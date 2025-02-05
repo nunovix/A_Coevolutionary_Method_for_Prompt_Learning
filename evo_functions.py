@@ -734,7 +734,7 @@ def prompt_creation_semeval(data_expanded,
         # conversion necessary for phi3 model
         if 'Phi3' in model_name_global:
             sentence = convert_text_mistral_phi3(sentence)
-        elif 'llama_3' in model_name_global:
+        elif 'Llama' in model_name_global:
             sentence = convert_text_mistral_llama_3(sentence)
 
         labels.append(sample["label"])
@@ -905,11 +905,14 @@ def prompt_preds_semeval(data_expanded,
         """# conversion necessary for phi3 model
         if 'Phi3' in model_name_global:
             sentence = convert_text_mistral_phi3(sentence)
-        elif 'llama_3' in model_name_global:
+        elif 'Llama' in model_name_global:
             sentence = convert_text_mistral_llama_3(sentence)"""
 
-        if 'llama_3' in model_name_global:
+        if 'Llama' in model_name_global:
+            #print(f"model_name_global-->{model_name_global}")
             prompt = prepare_text4llama3_instruct(user_text = user_text_prompt)
+        else:
+            sys.exit(f"Model {model_name_global} not supported")
 
         encoded_inputs = tokenizer(prompt, return_tensors="pt", return_attention_mask=True).to('cuda')
 
@@ -1063,7 +1066,7 @@ def prompt_creation_semeval_self_A(data_expanded,
         # conversion necessary for phi3 model
         if 'Phi3' in model_name_global:    
             text_self = convert_text_mistral_phi3(text_self)
-        elif 'llama_3' in model_name_global:
+        elif 'Llama' in model_name_global:
             sentence = convert_text_mistral_llama_3(sentence)
 
         reflection_samples.append(text_self)
@@ -1109,7 +1112,7 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
         # conversion necessary for phi3 model
         if 'Phi3' in model_name_global:
             text_w_reflection = convert_text_mistral_phi3(text_w_reflection)
-        elif 'llama_3' in model_name_global:
+        elif 'Llama' in model_name_global:
             sentence = convert_text_mistral_llama_3(sentence)
 
         prompt = tokenizer.encode(text_w_reflection, return_tensors="pt", return_attention_mask=True).to('cuda')
@@ -1174,11 +1177,13 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
         # conversion necessary for phi3 model
         """if 'Phi3' in model_name_global:    
             text_self = convert_text_mistral_phi3(text_self)
-        elif 'llama_3' in model_name_global:
+        elif 'Llama' in model_name_global:
             sentence = convert_text_mistral_llama_3(sentence)"""
 
-        if 'llama_3' in model_name_global:
+        if 'Llama' in model_name_global:
             prompt = prepare_text4llama3_instruct(user_text = user_text_prompt_self)
+        else:
+            sys.exit(f"{model_name_global} invalid")
 
         #FastLanguageModel.for_inference(model)
         encoded_inputs = tokenizer(prompt, return_tensors="pt", return_attention_mask=True).to('cuda')
@@ -1211,10 +1216,10 @@ def prompt_preds_semeval_self(data_expanded, task_description, ctr_description, 
         # conversion necessary for phi3 model
         """if 'Phi3' in model_name_global:
             text_w_reflection = convert_text_mistral_phi3(text_w_reflection)
-        elif 'llama_3' in model_name_global:
+        elif 'Llama' in model_name_global:
             sentence = convert_text_mistral_llama_3(sentence)"""
 
-        if 'llama_3' in model_name_global:
+        if 'Llama' in model_name_global:
             prompt = prepare_text4llama3_instruct(user_text = user_text_prompt_reflection)
 
         encoded_inputs = tokenizer(prompt, return_tensors="pt", return_attention_mask=True).to('cuda')
@@ -1419,10 +1424,10 @@ def prompt_preds_contractnli_span(data_expanded,
         # conversion necessary for phi3 model
         """if 'Phi3' in model_name_global:
             prompt_text = convert_text_mistral_phi3(prompt_text)
-        elif 'llama_3' in model_name_global:
+        elif 'Llama' in model_name_global:
             prompt_text = convert_text_mistral_llama_3(prompt_text)"""
 
-        if 'llama_3' in model_name_global:
+        if 'Llama' in model_name_global:
             prompt = prepare_text4llama3_instruct(user_text = prompt_user_text)
         
         #torch.cuda.empty_cache()
@@ -1747,7 +1752,7 @@ def prompt_preds_lexsum(data_expanded,
             #print(f"messages prompts-->{sentence}\n\n\n\n\n\n\n\n")
             #print(f"len(sentence)-->{len(sentence)}")
             #print(f"messages prompts-->{sentence[:200]}\n\n\n\n\n\n\n\n")
-        elif 'llama_3' in model_name_global:
+        elif 'Llama' in model_name_global:
             sentence = convert_text_mistral_llama_3(sentence)
 
         encoded_inputs = tokenizer(sentence[:], return_tensors="pt", return_attention_mask=True).to('cuda')
@@ -1870,10 +1875,10 @@ def prompt_preds_mediqasum(data_expanded,
         """if 'Phi3' in model_name_global:
             sentence = convert_text_mistral_phi3(sentence)
             #print(f"messages prompts-->{sentence}\n\n\n\n\n\n\n\n")
-        elif 'llama_3' in model_name_global:
+        elif 'Llama' in model_name_global:
             sentence = convert_text_mistral_llama_3(sentence)"""
 
-        if 'llama_3' in model_name_global:
+        if 'Llama' in model_name_global:
             prompt = prepare_text4llama3_instruct(user_text = prompt_user_text, assistant_text = prompt_assistant_text)
 
         encoded_inputs = tokenizer(prompt, return_tensors="pt", return_attention_mask=True).to('cuda')
@@ -2051,10 +2056,10 @@ def prompt_preds_legalsumtosdr(data_expanded,
             #print(f"messages prompts-->{sentence}\n\n\n\n\n\n\n\n")
             #print(f"len(sentence)-->{len(sentence)}")
             #print(f"messages prompts-->{sentence[:200]}\n\n\n\n\n\n\n\n")
-        elif 'llama_3' in model_name_global:
+        elif 'Llama' in model_name_global:
             sentence = convert_text_mistral_llama_3(sentence)"""
 
-        if 'llama_3' in model_name_global:
+        if 'Llama' in model_name_global:
             prompt = prepare_text4llama3_instruct(user_text = prompt_user_text, assistant_text = prompt_assistant_text)
         
         labels.append(sample["reference_summary"])
@@ -2175,7 +2180,7 @@ def load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct",
         print(f"Phi-3 selecionado")
 
     elif 'Llama' in checkpoint:
-        model_name_global = 'llama_3'
+        model_name_global = str(checkpoint).split("/")[-1]
 
         print(f"LLAMA-->{checkpoint}")
         tokenizer = AutoTokenizer.from_pretrained(checkpoint, device_map="cuda",)
@@ -2201,7 +2206,7 @@ def load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct",
     else:
         # loading
         print(f"\n\n\nELSE\n\n\n")
-        model_name_global = checkpoint
+        model_name_global = str(checkpoint).split("/")[-1]
         tokenizer = AutoTokenizer.from_pretrained(checkpoint, device_map = 'cuda')
 
         if quantized == False:
@@ -2230,7 +2235,7 @@ def mutate_prompt(prompt, mutation_prompt, model, tokenizer):
     # conversion necessary for phi3 model
     if 'Phi3' in model_name_global:
         instruction = convert_text_mistral_phi3(instruction)
-    elif 'llama_3' in model_name_global:
+    elif 'Llama' in model_name_global:
         sentence = convert_text_mistral_llama_3(sentence)
 
     encoded_inputs = tokenizer(instruction, return_tensors="pt", return_attention_mask=True).to('cuda')
@@ -2278,11 +2283,13 @@ def new_mutate_prompt(prompt,
     # conversion necessary for phi3 model
     """if 'Phi3' in model_name_global:
         instruction = convert_text_mistral_phi3(instruction)
-    elif 'llama_3' in model_name_global:
+    elif 'Llama' in model_name_global:
         instruction = convert_text_mistral_llama_3(instruction)"""
 
-    if 'llama_3' in model_name_global:
+    if 'Llama' in model_name_global:
         prompt = prepare_text4llama3_instruct(user_text = prompt_user_text, assistant_text = prompt_assistant_text)
+    else:
+        sys.exit("Model not supported")
 
     encoded_inputs = tokenizer(prompt, return_tensors="pt", return_attention_mask=True).to('cuda')
 
@@ -2344,7 +2351,7 @@ def crossover_prompts(prompt_1, prompt_2, combination_prompt, model, tokenizer):
     # conversion necessary for phi3 model
     if 'Phi3' in model_name_global:
         instruction = convert_text_mistral_phi3(instruction)
-    elif 'llama_3' in model_name_global:
+    elif 'Llama' in model_name_global:
             sentence = convert_text_mistral_llama_3(sentence)
 
     encoded_inputs = tokenizer(instruction, return_tensors="pt", return_attention_mask=True).to('cuda')
@@ -2391,11 +2398,13 @@ def new_crossover_prompts(prompt_1, prompt_2, combination_prompt_dict, model, to
     # conversion necessary for phi3 model
     """if 'Phi3' in model_name_global:
         instruction = convert_text_mistral_phi3(instruction)
-    elif 'llama_3' in model_name_global:
+    elif 'Llama' in model_name_global:
         instruction = convert_text_mistral_llama_3(instruction)"""
 
-    if 'llama_3' in model_name_global:
+    if 'Llama' in model_name_global:
         prompt = prepare_text4llama3_instruct(user_text = prompt_user_text, assistant_text = prompt_assistant_text)
+    else:
+        sys.exit("Model not supported")
 
     encoded_inputs = tokenizer(prompt, return_tensors="pt", return_attention_mask=True).to('cuda')
 
@@ -2653,10 +2662,13 @@ def eval_pop(population,
              task_w_oracle_spans = False, # contract nli only
              task_w_full_contract = True, # contract nli only
              task_w_2_labels = True, # contract nli only
+             initial_test_evaluation = False,
              ):
     
     prompts = population['prompts_dict']
     task = population['task']
+
+    population['test_script_eval'] = []
 
     if n_samples == 0 or n_samples > len(data_expanded):
         n_samples = len(data_expanded)
@@ -2758,11 +2770,20 @@ def eval_pop(population,
                 data = {uuid: {"Prediction": prediction} for uuid, prediction in zip(uuid_list, predictions)}
 
                 # Save the data to a JSON file
-                file_name = folder + "test_predictions.json"
+                file_name = folder + "test_predictions_" + str(model_name_global) + ".json"
                 with open(file_name, 'w') as json_file:
                     json.dump(data, json_file, indent=4)
                     
                 print(f"Data successfully saved to {file_name}")
+
+                if initial_test_evaluation == True:
+                    test_script_eval = semeval_test_evaluation(pred_filename = file_name,
+                                            gold_filename = 'DATASETS/SemEval_data/gold_test.json',
+                                            output_dir = None,
+                                            save_report=False,
+                                            model_name=str(model_name_global),
+                                            )
+                    population['test_script_eval'].append(test_script_eval)
 
     elif task == "SemEval_self":
         for i in tqdm(range(n_pop), desc = f"Evaluating prompt population"):
@@ -2812,6 +2833,15 @@ def eval_pop(population,
                     
                 print(f"Data successfully saved to {file_name}")
 
+                if initial_test_evaluation == True:
+                    test_script_eval = semeval_test_evaluation(pred_filename = file_name,
+                                            gold_filename = 'DATASETS/SemEval_data/gold_test.json',
+                                            output_dir = None,
+                                            save_report=False,
+                                            model_name=str(model_name_global),
+                                            )
+                    population['test_script_eval'].append(test_script_eval)
+
     elif task == "CSQA":
         for i in tqdm(range(n_pop), desc = f"Evaluating prompt population"):
             samples = prompt_creation_csqa(data_expanded, 
@@ -2857,8 +2887,6 @@ def eval_pop(population,
                                                                                                         task_w_oracle_spans = task_w_oracle_spans,
                                                                                                         task_w_full_contract = task_w_full_contract,
                                                                                                         )
-
-        
                                                                                                 
             #preds, n_not_founds = convert_preds_from_yesno_contractnli(predictions)
             #print(f"\n\n Counter(labels)-->{Counter(labels)}")
@@ -3194,6 +3222,14 @@ def save_population(iteration, population, root_folder, keep_list):
         with open(additional_file_path, 'w') as file:
             for item in population['full_eval']:
                 file.write(f"{item}\n")
+
+    # save more metrics for contractnli task to trakc possible problem
+    if "test_script_eval" in population.keys():
+        # Save the additional list in a separate .txt file
+        additional_file_path = os.path.join(iteration_folder, "test_script_eval.txt")
+        with open(additional_file_path, 'w') as file:
+            for item in population['test_script_eval']:
+                file.write(f"{item}\n")
     
     # Save population in new format
     additional_file_path = os.path.join(iteration_folder, "population.txt")
@@ -3450,6 +3486,7 @@ def create_population(task, prompts_dict, initial,
                       task_w_oracle_spans = False,
                       task_w_full_contract = True,
                       task_w_2_labels = True,
+                      evaluate_in_test = False,
                       ):
 
     prompts = []
@@ -3536,8 +3573,41 @@ def create_population(task, prompts_dict, initial,
                             task_w_highlight = task_w_highlight,
                             task_w_oracle_spans = task_w_oracle_spans,
                             task_w_full_contract = task_w_full_contract,
-                            task_w_2_labels = task_w_2_labels
+                            task_w_2_labels = task_w_2_labels,
                             )
+    
+    if evaluate_in_test == True:
+        if task == 'SemEval' or task == 'SemEval_self':
+            # extract SemEval data
+            test_data = extract_SemEval_data(type = 'gold_test')
+        #elif task == "CSQA":
+            #data_expanded = extract_CSQA_data(type = eval_data)
+        elif task == "ContractNLI":
+            test_data = extract_ContractNLI_data(type = 'test', task_w_2_labels=task_w_2_labels)
+        elif task == "MEDIQASUM":
+            test_data = extract_MEDIQASUM_data(type = 'clinicalnlp_taskB_test1')
+            save_test_predictions = True
+        elif task == "LEXSUM":
+            test_data = extract_LEXSUM_data(type = 'test')
+            save_test_predictions = True
+        elif task == "LegalSumTOSDR":
+            test_data = extract_LegalSumTOSDR_data(type = 'test')
+
+        population_in_test = eval_pop(population, data_expanded = test_data, 
+                                        model=model, tokenizer=tokenizer, trie=trie, n_samples = 0, N=N, mutation_prob=mutation_prob,
+                                        only_rouge=only_rouge,
+                                        save_test_predictions = True, 
+                                        folder = folder, #+ f'/Iteration_initial/',
+                                        task_w_one_shot = task_w_one_shot,
+                                        task_w_self_reasoning = task_w_self_reasoning,
+                                        task_w_highlight = task_w_highlight,
+                                        task_w_oracle_spans = task_w_oracle_spans,
+                                        task_w_full_contract = task_w_full_contract,
+                                        task_w_2_labels = task_w_2_labels,
+                                        initial_test_evaluation=True
+                                        )
+
+        save_population('ini_on_test_set', population_in_test, root_folder=folder, keep_list=list(range(n_pop)))
 
     #print(f"POP-->{population}")
     #print(f"POP KEYS-->{population.keys()}")
@@ -3659,6 +3729,7 @@ def test_eval(task,
               task_w_oracle_spans= False, # contract nli only
               task_w_full_contract = True, # contract nli only
               task_w_2_labels = True, # contract nli only
+              file = "best", # define if we are testing iteration best of best_INI
               ):
 
     print(f"TEST")
@@ -3666,14 +3737,14 @@ def test_eval(task,
 
     trie = get_Marisa_Trie(task, tokenizer, task_w_2_labels=task_w_2_labels)
     
-    best_path = os.path.join(RUN_folder_path, 'Iteration_best/')
+    best_path = os.path.join(RUN_folder_path, f'Iteration_{file}/')
     best_prompts = extract_lines_to_dict(best_path, 
                                          task=task,
                                          task_w_one_shot=task_w_one_shot,
                                          task_w_self_reasoning=task_w_self_reasoning,
                                          task_w_highlight=task_w_highlight,
                                          task_w_full_contract=task_w_full_contract,
-                                         task_w_2_labels=task_w_2_labels
+                                         task_w_2_labels=task_w_2_labels,
                                          )
     #print(f"best_prompts-->{best_prompts}")
 
@@ -3699,7 +3770,7 @@ def test_eval(task,
                                            data_expanded = data_expanded, 
                                            model=model, tokenizer=tokenizer, trie=trie, n_samples=0, only_rouge=True, 
                                            save_test_predictions =  save_test_predictions,
-                                           folder = RUN_folder_path+'/Iteration_best/',
+                                           folder = RUN_folder_path + f'/Iteration_{file}/',
                                            task_w_one_shot = task_w_one_shot,
                                            task_w_highlight = task_w_highlight,
                                            task_w_self_reasoning = task_w_self_reasoning,
@@ -3707,17 +3778,18 @@ def test_eval(task,
                                            task_w_full_contract = task_w_full_contract,
                                            task_w_2_labels=task_w_2_labels,)
     
-
     score = best_pop['eval']
     if 'SemEval' in task:
-        semeval_test_evaluation(pred_filename=RUN_folder_path + '/Iteration_best/test_predictions.json',
+        semeval_test_evaluation(pred_filename=RUN_folder_path + f'/Iteration_{file}/test_predictions_' + str(model_name_global) + '.json',
                                 gold_filename='DATASETS/SemEval_data/gold_test.json',
-                                output_dir=RUN_folder_path + '/Iteration_best'
+                                output_dir=RUN_folder_path + f'/Iteration_{file}',
+                                save_report=True,
+                                model_name=str(model_name_global),
                                 )
     
     # write to new txt in folder
     model_name = model_name.split("/")[1]
-    file_name = RUN_folder_path+'/Iteration_best/test_evaluation_' + model_name + '.txt'
+    file_name = RUN_folder_path + f'/Iteration_{file}/test_evaluation_' + model_name + '.txt'
     with open(file_name, 'w') as file:
         if 'SemEval' in task:
             f1_scores = best_pop['f1_scores']
@@ -3812,6 +3884,7 @@ def evo_alg_2(task,
               data_clusters_file = None,
               use_15percent_random = False,
               use_15percent_revdq = False,
+              do_test_eval_initial = False,
               ): 
 
     # set random seed
@@ -3915,7 +3988,6 @@ def evo_alg_2(task,
     start_time = datetime.now()
     
     # Call the function to create the folder and print its name
-     
     if resume_run == False:
         if save == True:
             root_folder = create_root_folder(task,
@@ -3974,6 +4046,8 @@ def evo_alg_2(task,
                                     task_w_oracle_spans=task_w_oracle_spans,
                                     task_w_full_contract = task_w_full_contract,
                                     task_w_2_labels=task_w_2_labels,
+                                    folder=root_folder,
+                                    evaluate_in_test = do_test_eval_initial,
                                     )
     
         patience_counter = 0
@@ -3987,6 +4061,24 @@ def evo_alg_2(task,
         if save == True:
             save_population('initial', population, root_folder, keep_list=list(range(n_pop)))
             print(f"Data saved for iteration {iter}.")
+
+            # save best INITIAL individual at start
+            save_population('best_INI', best_pop, root_folder, [0])
+            print(f"Data saved for iteration best at initial population.")
+
+            if do_test_eval_initial == True:
+                print(f"IN TEST SET EVAL for initial population")
+                test_eval(task=task, 
+                        RUN_folder_path = root_folder, 
+                        model_name=model_name,
+                        task_w_one_shot = task_w_one_shot,
+                        task_w_highlight = task_w_highlight,
+                        task_w_self_reasoning = task_w_self_reasoning,
+                        task_w_oracle_spans=task_w_oracle_spans, # contract nli only
+                        task_w_full_contract = task_w_full_contract, # contract nli only
+                        task_w_2_labels=task_w_2_labels, # contract nli only
+                        file = "best_INI",
+                        ) 
     else:
         root_folder = resume_run_folder
         # load population thing

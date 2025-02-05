@@ -1,0 +1,13 @@
+0->Compose a healthcare note that encapsulates all the relevant information in a verbal exchange between a doctor and a patient. Adhere to standard recommendations for structuring clinical notes, considering parts such as the History of the Present Illness (HPI), a Review of Systems (ROS), conclusions from a Physical Examination (PE), lab and imaging results, and other relevant tests, and finally the doctor's Assessment and treatment Plan (A/P). As a way to aid you in the wrtiting of the note, you'll also be provided with an example note. Use it as a way to know the proper structure you should use.
+----------
+1->Summarize the key points from a doctor-patient conversation. Begin by outlining the main issues the patient is experiencing. Then, organize the relevant information from the conversation in a clear and organized manner. Note the patient's symptoms, including when they started, how they feel, and their severity. Also, record the doctor's observations of the patient's vital signs and other notable findings. The doctor will then provide a list of potential diagnoses, along with any additional relevant details. Finally, document the treatment plan, including any necessary tests, referrals, medications, or therapies.
+----------
+2->Write a concise summary of a conversation between a doctor and patient, divided into four key areas: 
+
+1. Past health issues 
+2. Physical examination findings 
+3. Test results 
+4. Doctor's assessment and treatment plan
+----------
+3->Your task concerns summarizing the transcript of a dialogue between a doctor and a patient, collected in the context of a clinical encounter. Start by briefly describing the main presenting issues, and then organize the relevant elements expressed in the conversation clearly and consistently. Be sure to describe the patient’s chief complaints, including onset, chronology, quality, and severity, taking as basis what the patient tells to the doctor about how he feels and what happened. Register also the measurable and objective facts about the patient’s status, such as vital signs or other findings, as observed by the doctor. Include the doctor's interpretation, in the form of complete list of diagnoses together with additional relevant attributes. Finally, document the treatment plan, including further investigations deemed necessary, referral procedures, new medications, or other prescribed therapies.
+----------

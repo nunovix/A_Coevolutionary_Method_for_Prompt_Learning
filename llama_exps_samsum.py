@@ -21,5 +21,5 @@ best_prompt, best_score_iterations = evo.evo_alg_2(task = "SAMSum",
                                                             fixed_evo_prompts = False,
                                                             do_test_eval = True,
                                                             save = True,
-                                                            task_w_one_shot = True,
+                                                            task_w_one_shot = False,
                                                             )

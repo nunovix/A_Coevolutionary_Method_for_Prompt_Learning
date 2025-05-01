@@ -86,6 +86,11 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
         data_expanded = extract_MEDIQASUM_data(retrieve_similar_examples = w_one_shot, use_data_sorted_by_dq = use_data_sorted_by_dq, use_data_clusters=use_data_clusters, use_15percent_random = use_15percent_random, use_15percent_revdq = use_15percent_revdq)
         trie = None
 
+    elif task_name == 'SAMSum':
+        prompts_path = 'INITIAL_PROMPTS/SAMSum'
+        data_expanded = extract_SAMSum_data(retrieve_similar_examples = w_one_shot, use_data_sorted_by_dq = use_data_sorted_by_dq, use_data_clusters=use_data_clusters, use_15percent_random = use_15percent_random, use_15percent_revdq = use_15percent_revdq)
+        trie = None                                                  
+
     elif task_name == 'LEXSUM':
         prompts_path = 'INITIAL_PROMPTS/LEXSUM'
         data_expanded = extract_LEXSUM_data(use_data_sorted_by_dq = use_data_sorted_by_dq)
@@ -249,6 +254,11 @@ def extract_lines_to_dict(folder_path, task,
         else:
             print(f"MEDIQASUM only with one_shot flag true")
             sys.exit()
+    elif task == 'SAMSum':
+        if task_w_one_shot == True:
+            ordered_filenames = ['task_description', 'example_description', 'dialog_description', 'answer_description']
+        else:
+            ordered_filenames = ['task_description', 'dialog_description', 'answer_description']          
     elif task == 'LEXSUM':
         ordered_filenames = ['task_description', 'example_description', 'doc_description', 'answer_description']
     elif task == 'LegalSumTOSDR':
@@ -1514,6 +1524,19 @@ def prompt_preds_contractnli_span(data_expanded,
     
     return labels, preds, paper_f1s  #listas de dimensão (n_docs) 
 
+def extract_SAMSum_data(folder_name='DATASETS/SAMSum_data', 
+                           type = 'all_available',  # train/valid
+                           used_retrieved_file = True,
+                           retrieve_similar_examples = False,
+                           save_retrieved = False,
+                           use_data_sorted_by_dq = False,
+                           use_data_clusters = False,
+                           use_15percent_random = False, 
+                           use_15percent_revdq = False,
+                           ):
+    data_list = [] # TODO
+    return data_list
+    
 def extract_MEDIQASUM_data(folder_name='DATASETS/MEDIQASUM_data', 
                            type = 'all_available',  # train/valid
                            used_retrieved_file = True,
@@ -1524,7 +1547,6 @@ def extract_MEDIQASUM_data(folder_name='DATASETS/MEDIQASUM_data',
                            use_15percent_random = False, 
                            use_15percent_revdq = False,
                            ):
-    
     if use_15percent_random == True:
         file_path = "DATASETS/15percent_random/mediqasum.json"
     elif use_15percent_revdq == True:
@@ -1828,6 +1850,91 @@ def similar_example_retrieval(sample, data_expanded, filter_by_dataset=True):
     similarity_score = similarities[closest_index]
     print(f"RETRIEVAL - similar_example_retrieval function - ->similarity_score-->{similarity_score}")
     return notes_list[closest_index]
+
+def prompt_preds_samsum(data_expanded, 
+                           task_description, 
+                           dialog_description, 
+                           answer_description,
+                           model, 
+                           tokenizer,
+                           save_test_predictions = False,
+                           folder = None):
+
+    labels = []
+    preds = []
+
+    if save_test_predictions == True:
+        encounter_ids = []
+        dialogues = []
+
+    print_once_flag = 0
+
+    for sample in tqdm(data_expanded):
+
+        prompt = task_description + '\n\n'
+        sentence = f"""{prompt} """
+        dialogue = "".join(sample['dialogue'])
+        
+        prompt_user_text = f"""{sentence}\n{dialog_description}\n\n"{dialogue}"\n\n{answer_description}"""
+        prompt_assistant_text = f"""Summary:"""
+        
+        labels.append(sample["summary"])
+
+        if save_test_predictions == True:
+            encounter_ids.append(sample["encounter_id"])
+            dialogues.append(sample["dialogue"])
+
+        # conversion necessary for phi3 model
+        """if 'Phi3' in model_name_global:
+            sentence = convert_text_mistral_phi3(sentence)
+            #print(f"messages prompts-->{sentence}\n\n\n\n\n\n\n\n")
+        elif 'Llama' in model_name_global:
+            sentence = convert_text_mistral_llama_3(sentence)"""
+
+        if 'Llama' in model_name_global:
+            prompt = prepare_text4llama3_instruct(user_text = prompt_user_text, assistant_text = prompt_assistant_text)
+
+        encoded_inputs = tokenizer(prompt, return_tensors="pt", return_attention_mask=True).to('cuda')
+            
+        prompt_length = encoded_inputs['input_ids'][0].shape[0]
+        with torch.inference_mode():
+            output = model.generate(encoded_inputs['input_ids'], 
+                                    attention_mask=encoded_inputs['attention_mask'],
+                                    pad_token_id=tokenizer.eos_token_id, 
+                                    max_new_tokens=1500,
+                                    do_sample=True,
+                                    num_beams = 3
+                                    )
+
+        # Decode only the newly generated tokens
+        # Skip the input tokens by starting the slice at input_length
+        new_tokens = output[0, prompt_length:]
+
+        if print_once_flag == 0:
+            #print(f"INFERENCE SAMSum-->{tokenizer.decode(output[0])}")
+            #print(f"sample['note']-->{sample['note']}")
+            print_once_flag = 0
+
+        pred = tokenizer.decode(new_tokens, skip_special_tokens=True)
+        preds.append(pred)
+
+        #del encoded_inputs, output
+        #torch.cuda.empty_cache()
+
+    if save_test_predictions == True:
+        print(f"SAVING CSV folder for SAMSum")
+        # Column names
+        column_names = ["encounter_id", "dialogue", "summary"]
+        # Combine the lists into rows
+        rows = zip(encounter_ids, dialogues, preds)
+        # Write to CSV file
+        file_name = folder + "test_predictions.csv"
+        with open(file_name, 'w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(column_names)  # Write the column names
+            writer.writerows(rows)  # Write the data rows
+
+    return labels, preds
 
 def prompt_preds_mediqasum(data_expanded, 
                            task_description, 
@@ -2653,7 +2760,7 @@ def eval_pop(population,
              n_samples, 
              N=10, # FOR HYPERMUTATION ONLY (number of individuals generated using the evo prompt for evaluation)
              mutation_prob=0.8, # FOR HYPERMUTATION ONLY (probability of mutation/ crossover for each subprompt of each individual)
-             only_rouge = True, # for mediqasum 
+             only_rouge = True, # for mediqasum or SAMSum
              save_test_predictions = False,
              folder = None,
              task_w_one_shot = False,
@@ -2934,7 +3041,29 @@ def eval_pop(population,
             #print(f"\n\n MEDIQA SUM SCORE ROUGE_1-->{rouge_1}")
             population['eval'].append(rouge_1)
             population['full_eval'].append(rouge_scores)
-    
+
+    elif task == "SAMSum":
+        population['full_eval'] = []
+        tt = 0
+        for i in tqdm(range(n_pop), desc = f"Evaluating prompt population"):
+            tt+=1
+            #print(f"ttt 1--->{tt}")
+            labels, predictions = prompt_preds_samsum(data_expanded[:n_samples], 
+                                                         task_description = prompts['task_description'][population['prompts'][i]['task_description']], 
+                                                         dialog_description = prompts['dialog_description'][population['prompts'][i]['dialog_description']],
+                                                         answer_description =  prompts['answer_description'][population['prompts'][i]['answer_description']],
+                                                         model=model,
+                                                         tokenizer=tokenizer,
+                                                         save_test_predictions = save_test_predictions,
+                                                         folder = folder
+                                                         )
+            
+            #print(f"antes da eval{tt}")
+            rouge_scores, rouge_1 = compute_rouge_scores(references=labels, predictions=predictions)
+            #print(f"\n\n SAMSum SCORE ROUGE_1-->{rouge_1}")
+            population['eval'].append(rouge_1)
+            population['full_eval'].append(rouge_scores)
+            
     elif task == 'LEXSUM':
         population['full_eval'] = []
         tt = 0
@@ -3144,7 +3273,7 @@ def create_root_folder(task,
             else:
                 folder_name = datetime.now().strftime(f"RUNS_{alg}/{task}_woracle{task_w_oracle_spans}_w2labels{task_w_2_labels}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}")
 
-        elif task == 'MEDIQASUM' or task == 'LEXSUM':
+        elif task == 'MEDIQASUM' or task == 'LEXSUM' or task == 'SAMSum':
             if use_data_sorted_by_dq == True or use_data_clusters==True:
                 folder_name = datetime.now().strftime(f"RUNS_{alg}_DQ/{task}/Runs_%Y-%m-%d_%H-%M-%S_N{N}_cp{crossover_prob}_mp{mutation_prob}_sampT{sampling_T}_fixed_evo{fixed_evo_prompts}_dq_data{use_data_sorted_by_dq}_reverse{reverse_dq}_dev_ratio{keep_dev_ratio}_{data_size}") 
             else:
@@ -3216,7 +3345,7 @@ def save_population(iteration, population, root_folder, keep_list):
                 file.write(f"{item}\n")
 
     # save more metrics for contractnli task to trakc possible problem
-    if population['task'] == 'MEDIQASUM' or population['task'] == 'LEXSUM' or population['task'] == 'LegalSumTOSDR':
+    if population['task'] == 'MEDIQASUM' or population['task'] == 'SAMSum' or population['task'] == 'LEXSUM' or population['task'] == 'LegalSumTOSDR':
         # Save the additional list in a separate .txt file
         additional_file_path = os.path.join(iteration_folder, "full_eval.txt")
         with open(additional_file_path, 'w') as file:
@@ -3412,7 +3541,7 @@ def sort_pop(pop):
         population['f1_scores'] = sorted_f1_scores
         population['confusion_matrix'] = sorted_confusion_matrix
 
-    if population['task'] == 'MEDIQASUM' or population['task'] == 'LEXSUM' or population['task'] == 'LegalSumTOSDR':
+    if population['task'] == 'MEDIQASUM' or population['task'] == 'SAMSum' or population['task'] == 'LEXSUM' or population['task'] == 'LegalSumTOSDR':
         full_scores = population['full_eval']
         sorted_full_scores = [full_scores[i] for i in sorted_indices if i < len(full_scores)]
         population['full_eval'] = sorted_full_scores
@@ -3458,7 +3587,7 @@ def pop_selection(population, # population (dictionary with keys: prompts and ev
         #print(f"pop['f1_scores']-->{pop['f1_scores']}")
         #print(f"pop['confusion_matrix']-->{pop['confusion_matrix']}")
     
-    if pop['task'] == 'MEDIQASUM' or pop['task'] == 'LEXSUM' or pop['task'] == 'LegalSumTOSDR':
+    if pop['task'] == 'MEDIQASUM' or pop['task'] == 'SAMSum' or pop['task'] == 'LEXSUM' or pop['task'] == 'LegalSumTOSDR':
         sorted_full_scores = sorted_pop['full_eval']
         keep_full_scores = [sorted_full_scores[i] for i in keep_list]
         pop['full_eval'] = keep_full_scores
@@ -3587,6 +3716,9 @@ def create_population(task, prompts_dict, initial,
         elif task == "MEDIQASUM":
             test_data = extract_MEDIQASUM_data(type = 'clinicalnlp_taskB_test1')
             save_test_predictions = True
+        elif task == "SAMSum":
+            test_data = extract_SAMSum_data(type = '???')
+            save_test_predictions = True            
         elif task == "LEXSUM":
             test_data = extract_LEXSUM_data(type = 'test')
             save_test_predictions = True
@@ -3624,7 +3756,7 @@ def combine_populations(pop_1, pop_2):
         combined_pop['f1_scores'] += pop_2['f1_scores']
         combined_pop['confusion_matrix'] += pop_2['confusion_matrix']
     
-    if pop_1['task'] == 'MEDIQASUM' or pop_1['task'] == 'LEXSUM' or pop_1['task'] == 'LegalSumTOSDR':
+    if pop_1['task'] == 'MEDIQASUM' or pop_1['task'] == 'SAMSum' or pop_1['task'] == 'LEXSUM' or pop_1['task'] == 'LegalSumTOSDR':
         combined_pop['full_eval'] += pop_2['full_eval']
 
     # Calculate the size of prompts_dict for each key to correctly adjust indices
@@ -3759,6 +3891,9 @@ def test_eval(task,
     elif task == "MEDIQASUM":
         data_expanded = extract_MEDIQASUM_data(type = 'clinicalnlp_taskB_test1')
         save_test_predictions = True
+    elif task == "SAMSum":
+        data_expanded = extract_SAMSum_data(type = '??')
+        save_test_predictions = True        
     elif task == "LEXSUM":
         data_expanded = extract_LEXSUM_data(type = 'test')
         save_test_predictions = True
@@ -3805,7 +3940,7 @@ def test_eval(task,
             file.write(f"Acc score: {score}\n")
             file.write(f"F1 scores: {f1_scores}\n")
             file.write(f"Confusion matrix: {confusion_matrix}\n")
-        elif task == 'MEDIQASUM' or task == 'LEXSUM' or task == 'LegalSumTOSDR' :
+        elif task == 'MEDIQASUM' or task == 'SAMSum' or task == 'LEXSUM' or task == 'LegalSumTOSDR' :
             full_scores = best_pop['full_eval']
             file.write(f"Full scores: {full_scores}\n")
 
@@ -3928,7 +4063,7 @@ def evo_alg_2(task,
     if reverse_dq == True:
         data_expanded = data_expanded[::-1]
     
-    if keep_dev_ratio == True and task != 'MEDIQASUM' and task != 'LegalSumTOSDR':
+    if keep_dev_ratio == True and task != 'MEDIQASUM' and task != 'SAMSum' and task != 'LegalSumTOSDR':
         if task == 'SemEval':
             ent_label_size = cont_label_size = int(data_size/2)
         elif task == 'ContractNLI':
@@ -4353,6 +4488,10 @@ def create_plots_from_RUNS_folder(directory_path):
         ymin = 0.40
         ymax = 1.00
         score = 'Accuracy'
+    elif 'SAMSum' in directory_path:
+        ymin = 0.25
+        ymax = 0.55
+        score = 'Rouge-1 F1'        
     elif 'MEDIQASUM' in directory_path:
         ymin = 0.25
         ymax = 0.55

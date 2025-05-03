@@ -88,7 +88,14 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
 
     elif task_name == 'SAMSum':
         prompts_path = 'INITIAL_PROMPTS/SAMSum'
-        data_expanded = extract_SAMSum_data(retrieve_similar_examples = w_one_shot, use_data_sorted_by_dq = use_data_sorted_by_dq, use_data_clusters=use_data_clusters, use_15percent_random = use_15percent_random, use_15percent_revdq = use_15percent_revdq)
+        data_expanded = extract_SAMSum_data(
+            type="valid",  #TODO: default should be "all_available"
+            retrieve_similar_examples = w_one_shot, 
+            use_data_sorted_by_dq = use_data_sorted_by_dq, 
+            use_data_clusters=use_data_clusters, 
+            use_15percent_random = use_15percent_random, 
+            use_15percent_revdq = use_15percent_revdq
+            )
         trie = None                                                  
 
     elif task_name == 'LEXSUM':
@@ -117,6 +124,8 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
         print(f"'{task_name}' is not a valid task name!")
         sys.exit()
     
+    print("\nlen data_expanded: {}\n\n".format(len(data_expanded)))
+    
     # take initial prompts from appropriate folder
     initial_population_prompts = extract_lines_to_dict(prompts_path, 
                                                        task = task_name, 
@@ -126,7 +135,8 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
                                                        task_w_full_contract = task_w_full_contract,
                                                        task_w_2_labels = task_w_2_labels
                                                        )
-    #print(f"initial_population_prompts NEW-->{initial_population_prompts}")
+    
+    ### print(f"initial_population_prompts NEW-->{initial_population_prompts}")
     
     # check if number of examples in each subpromtp is the same
     tam = []
@@ -138,6 +148,8 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
         sys.exit()
 
     # prompts to perform mutation and crossover
+    #TODO: these files do not exist. Seems deprecated? It can be used if "new_evo_prompt_format" is set to False, but the files does not exist --> so it will not work
+    #TODO: for now assuming that "new_evo_prompt_format" is set to True
     evolutionary_prompts = extract_lines_to_dict("INITIAL_PROMPTS/evolutionary_prompts", task = "Evo_prompts")
 
     if use_optimized_evo_prompts == False:
@@ -146,8 +158,9 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
     else:
         new_mutation_prompts = extract_lines_to_dict("INITIAL_PROMPTS/hyper_optimized_evolutionary_prompts/mutation", task = "new_mutation")
         new_cross_prompts = extract_lines_to_dict("INITIAL_PROMPTS/hyper_optimized_evolutionary_prompts/combination", task = "new_mutation")
-    #print(f"NEW NEW-->{new_mutation_prompts}")
-    #print(f"NEW NEW-->{new_cross_prompts}")
+    
+    ### print(f"Mutation prompts --> {new_mutation_prompts}")
+    ### print(f"Cross prompts --> {new_cross_prompts}")
 
     #print(f"NEW NEW-->{new_cross_prompts}")
     
@@ -1534,8 +1547,46 @@ def extract_SAMSum_data(folder_name='DATASETS/SAMSum_data',
                            use_15percent_random = False, 
                            use_15percent_revdq = False,
                            ):
-    data_list = [] # TODO
-    return data_list
+
+    if type == "all_available":
+
+        dev_data = []
+        train_data = []
+
+        with open(os.path.join(folder_name, "val.json"), 'r') as file:
+            dev_data = json.load(file)
+        
+        with open(os.path.join(folder_name, "train.json"), 'r') as file:
+            train_data = json.load(file)
+        
+        all_available_data = dev_data + train_data
+        print(f"Using all available data")
+        return all_available_data
+
+    elif type in ["train", "test"]:
+        current_data = []
+
+        with open(os.path.join(folder_name, type + ".json"), 'r') as file:
+            current_data = json.load(file)
+        
+        print("Using {} data".format(type))
+
+        return current_data
+    
+    elif type == "valid":
+        current_data = []
+
+        with open(os.path.join(folder_name, "val.json"), 'r') as file:
+            current_data = json.load(file)
+        
+        print("Using {} data".format(type))
+
+        return current_data
+
+    else:
+        raise Exception("Unexpected type == {}!".format(type))
+    
+
     
 def extract_MEDIQASUM_data(folder_name='DATASETS/MEDIQASUM_data', 
                            type = 'all_available',  # train/valid
@@ -1873,7 +1924,7 @@ def prompt_preds_samsum(data_expanded,
 
         prompt = task_description + '\n\n'
         sentence = f"""{prompt} """
-        dialogue = "".join(sample['dialogue'])
+        dialogue = sample['dialogue']  ### "".join(sample['dialogue'])
         
         prompt_user_text = f"""{sentence}\n{dialog_description}\n\n"{dialogue}"\n\n{answer_description}"""
         prompt_assistant_text = f"""Summary:"""
@@ -1881,7 +1932,7 @@ def prompt_preds_samsum(data_expanded,
         labels.append(sample["summary"])
 
         if save_test_predictions == True:
-            encounter_ids.append(sample["encounter_id"])
+            encounter_ids.append(sample["id"])
             dialogues.append(sample["dialogue"])
 
         # conversion necessary for phi3 model
@@ -1891,6 +1942,7 @@ def prompt_preds_samsum(data_expanded,
         elif 'Llama' in model_name_global:
             sentence = convert_text_mistral_llama_3(sentence)"""
 
+        #TODO: If not "Llama", then we only have the task_description ???
         if 'Llama' in model_name_global:
             prompt = prepare_text4llama3_instruct(user_text = prompt_user_text, assistant_text = prompt_assistant_text)
 
@@ -1910,6 +1962,10 @@ def prompt_preds_samsum(data_expanded,
         # Skip the input tokens by starting the slice at input_length
         new_tokens = output[0, prompt_length:]
 
+        ### print(f"INFERENCE SAMSum-->{tokenizer.decode(output[0])}\n\n")
+        
+        ### print(f"sample['summary']-->{sample['summary']}\n\n")
+
         if print_once_flag == 0:
             #print(f"INFERENCE SAMSum-->{tokenizer.decode(output[0])}")
             #print(f"sample['note']-->{sample['note']}")
@@ -1924,7 +1980,7 @@ def prompt_preds_samsum(data_expanded,
     if save_test_predictions == True:
         print(f"SAVING CSV folder for SAMSum")
         # Column names
-        column_names = ["encounter_id", "dialogue", "summary"]
+        column_names = ["id", "dialogue", "summary"]
         # Combine the lists into rows
         rows = zip(encounter_ids, dialogues, preds)
         # Write to CSV file
@@ -2264,6 +2320,8 @@ def load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct",
 
     if 'Phi-3' in checkpoint:
         model_name_global = 'Phi3'
+
+        print(f"Phi3-->{checkpoint}")
         
         config = BitsAndBytesConfig(
                 load_in_4bit=True,
@@ -2287,9 +2345,17 @@ def load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct",
         print(f"Phi-3 selecionado")
 
     elif 'Llama' in checkpoint:
+        from huggingface_hub import login, logout
+
+        # Add your HF authentication, and be sure to confirm the access to the model at HF
+        with open(os.path.join("../", "api_tokens.json"), 'r') as api_tokens_file:
+            api_tokens = json.load(api_tokens_file)
+            login(token=api_tokens["huggingface"])
+
         model_name_global = str(checkpoint).split("/")[-1]
 
         print(f"LLAMA-->{checkpoint}")
+
         tokenizer = AutoTokenizer.from_pretrained(checkpoint, device_map="cuda",)
         # Check if the tokenizer has a pad token
         
@@ -2309,6 +2375,9 @@ def load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct",
             print(f"NORMAL LLAMA")
             model = AutoModelForCausalLM.from_pretrained(checkpoint, 
                                                      device_map = 'cuda',)
+        
+        # HF authentification logout
+        logout()
 
     else:
         # loading
@@ -3717,7 +3786,7 @@ def create_population(task, prompts_dict, initial,
             test_data = extract_MEDIQASUM_data(type = 'clinicalnlp_taskB_test1')
             save_test_predictions = True
         elif task == "SAMSum":
-            test_data = extract_SAMSum_data(type = '???')
+            test_data = extract_SAMSum_data(type = 'test')
             save_test_predictions = True            
         elif task == "LEXSUM":
             test_data = extract_LEXSUM_data(type = 'test')
@@ -3892,7 +3961,7 @@ def test_eval(task,
         data_expanded = extract_MEDIQASUM_data(type = 'clinicalnlp_taskB_test1')
         save_test_predictions = True
     elif task == "SAMSum":
-        data_expanded = extract_SAMSum_data(type = '??')
+        data_expanded = extract_SAMSum_data(type = 'test')
         save_test_predictions = True        
     elif task == "LEXSUM":
         data_expanded = extract_LEXSUM_data(type = 'test')
@@ -4089,6 +4158,8 @@ def evo_alg_2(task,
         pass
     else:
         data_expanded = data_expanded[:data_size]
+
+    print("\nFINAL len data_expanded: {}\n\n".format(str(len(data_expanded))))
     
     # check label dist
     if task == 'SemEval' or task == 'ContractNLI':
@@ -4108,11 +4179,13 @@ def evo_alg_2(task,
     #print(f"new_mutation_prompts-->{new_mutation_prompts}")
     #print(f"new_cross_prompts-->{new_cross_prompts}")
 
-    #print(f"initial_prompts.keys()-->{initial_prompts.keys()}")
+    print(f"initial_prompts.keys()-->{initial_prompts.keys()}")
+    
     for key in initial_prompts:
-        #print(f"key-->{key}")
+        print(f"key-->{key}")
         #print(f"initial_prompts[key][0]-->{initial_prompts[key][0]}") 
-        #print(f"len(initial_prompts[key])-->{len(initial_prompts[key])}")   
+        print(f"len(initial_prompts[key])-->{len(initial_prompts[key])}")   
+        
         n_sub = len(initial_prompts[key])
 
     if data_size == 0 or data_size > len(data_expanded):
@@ -4206,6 +4279,7 @@ def evo_alg_2(task,
                 test_eval(task=task, 
                         RUN_folder_path = root_folder, 
                         model_name=model_name,
+                        quantize_model_4bits=quantize_model_4bits,
                         task_w_one_shot = task_w_one_shot,
                         task_w_highlight = task_w_highlight,
                         task_w_self_reasoning = task_w_self_reasoning,
@@ -4218,6 +4292,10 @@ def evo_alg_2(task,
         root_folder = resume_run_folder
         # load population thing
         best_score_iterations, patience_counter, population, iter, best_pop = extract_max_eval_and_patience(root_folder=root_folder, task=task)
+    
+    print("\nInitial Population done!\n")
+
+    print("\nSTARTING Co-Evo loop ...\n\n")
     
     while patience_counter < patience and iter < max_iter:
 
@@ -4403,6 +4481,7 @@ def evo_alg_2(task,
         test_eval(task=task, 
                   RUN_folder_path = root_folder, 
                   model_name=model_name,
+                  quantize_model_4bits=quantize_model_4bits,
                   task_w_one_shot = task_w_one_shot,
                   task_w_highlight = task_w_highlight,
                   task_w_self_reasoning = task_w_self_reasoning,

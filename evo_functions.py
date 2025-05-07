@@ -810,6 +810,91 @@ def batch_inference(all_prompts, model, tokenizer, trie, batch_size=3):
 
     return preds
 
+
+def batch_inference_custom_dataset(all_prompts, model, tokenizer, trie, batch_size=3):
+
+    # Tokenize all prompts
+    #print(f"all_prompts-->{all_prompts}")
+    
+    ##### tokenizer.pad_token = tokenizer.eos_token
+
+    from torch_datasets import CustomDataset
+
+    custom_dataset = CustomDataset(all_prompts)
+
+    dataloader = DataLoader(custom_dataset, batch_size=batch_size, shuffle=False)
+
+    preds = []
+
+    # Process in batches
+    for batch in tqdm(dataloader, desc='Evaluating prompts in batches'):
+
+        encodings = tokenizer(
+            batch, 
+            return_tensors="pt", 
+            padding=True, 
+            truncation=False   ### True
+        ).to('cuda')
+
+        input_ids = encodings['input_ids']
+        attention_mask = encodings['attention_mask']
+
+        prompt_length = input_ids.shape[1]
+
+        """
+        print("input_ids shape:")
+        print(input_ids.shape)
+        print("")
+
+        print("attention_mask shape:")
+        print(attention_mask.shape)
+        print("")
+
+        print("prompt_length:")
+        print(prompt_length)
+        print("")
+        """
+
+        if trie != None:
+            with torch.inference_mode():
+                outputs = model.generate(input_ids=input_ids, 
+                                        attention_mask=attention_mask, 
+                                        pad_token_id=tokenizer.eos_token_id, 
+                                        max_new_tokens=3,
+                                        prefix_allowed_tokens_fn=lambda batch_id, sent: trie.get(sent.tolist(), prompt_length))
+        else:
+            with torch.inference_mode():
+                outputs = model.generate(input_ids=input_ids.to('cuda'), #TODO:
+                                        attention_mask=attention_mask.to('cuda'), #TODO: 
+                                        pad_token_id=tokenizer.eos_token_id, 
+                                        max_new_tokens=250,
+                                        do_sample=True, num_beams = 3)
+
+        """
+        for output in outputs:
+            print(f"INFERENCE-->{tokenizer.decode(output, skip_special_tokens=False)}")
+            print("")
+        """
+
+        new_tokens = outputs[:, prompt_length:]
+
+        batch_preds = tokenizer.batch_decode(new_tokens, skip_special_tokens=True)
+
+        """
+        print("batch_preds:")
+        print(batch_preds)
+        print("")
+        """
+
+        preds += batch_preds
+    
+
+    if trie != None:
+        preds, _ = convert_preds_from_yesno(preds)
+
+    return preds
+
+
 # function that prepares the text for a llama 3 instruct model
 # allowing to fix the start of the assistant text with the "assistant_text" variable
 # using the structure shown in https://www.llama.com/docs/model-cards-and-prompt-formats/meta-llama-3/
@@ -1548,7 +1633,10 @@ def extract_SAMSum_data(folder_name='DATASETS/SAMSum_data',
                            use_15percent_revdq = False,
                            ):
 
-    if type == "all_available":
+    if use_15percent_random == True:
+        # file_path = "DATASETS/25percent_random/samsum.json"
+        file_path = "DATASETS/5percent_random/samsum.json"
+    elif type == "all_available":
 
         dev_data = []
         train_data = []
@@ -1585,6 +1673,14 @@ def extract_SAMSum_data(folder_name='DATASETS/SAMSum_data',
 
     else:
         raise Exception("Unexpected type == {}!".format(type))
+    
+
+    if os.path.exists(file_path):
+        # Load from a JSON file
+        with open(file_path, 'r') as file:
+            data_list = json.load(file)
+        print(f"Used data from {file_path}")
+        return data_list
     
 
     
@@ -1992,6 +2088,79 @@ def prompt_preds_samsum(data_expanded,
 
     return labels, preds
 
+
+def prompt_preds_samsum_batch_inference(data_expanded, 
+                           task_description, 
+                           dialog_description, 
+                           answer_description,
+                           model, 
+                           tokenizer,
+                           save_test_predictions = False,
+                           folder = None):
+
+    labels = []
+    preds = []
+
+    if save_test_predictions == True:
+        encounter_ids = []
+        dialogues = []
+
+    print_once_flag = 0
+
+    data_prompts = []
+
+    for sample in data_expanded:
+
+        prompt = task_description + '\n\n'
+        sentence = f"""{prompt} """
+        dialogue = sample['dialogue']  ### "".join(sample['dialogue'])
+        
+        prompt_user_text = f"""{sentence}\n{dialog_description}\n\n"{dialogue}"\n\n{answer_description}"""
+        prompt_assistant_text = f"""Summary:"""
+        
+        labels.append(sample["summary"])
+
+        if save_test_predictions == True:
+            encounter_ids.append(sample["id"])
+            dialogues.append(sample["dialogue"])
+
+        # conversion necessary for phi3 model
+        """if 'Phi3' in model_name_global:
+            sentence = convert_text_mistral_phi3(sentence)
+            #print(f"messages prompts-->{sentence}\n\n\n\n\n\n\n\n")
+        elif 'Llama' in model_name_global:
+            sentence = convert_text_mistral_llama_3(sentence)"""
+
+        #TODO: If not "Llama", then we only have the task_description ???
+        if 'Llama' in model_name_global:
+            prompt = prepare_text4llama3_instruct(user_text = prompt_user_text, assistant_text = prompt_assistant_text)
+        
+        data_prompts.append(prompt)
+
+    preds = batch_inference_custom_dataset(
+        data_prompts, 
+        model, 
+        tokenizer, 
+        trie=None, 
+        batch_size=4
+    )
+
+    if save_test_predictions == True:
+        print(f"SAVING CSV folder for SAMSum")
+        # Column names
+        column_names = ["id", "dialogue", "summary"]
+        # Combine the lists into rows
+        rows = zip(encounter_ids, dialogues, preds)
+        # Write to CSV file
+        file_name = folder + "test_predictions.csv"
+        with open(file_name, 'w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(column_names)  # Write the column names
+            writer.writerows(rows)  # Write the data rows
+
+    return labels, preds
+
+
 def prompt_preds_mediqasum(data_expanded, 
                            task_description, 
                            example_description, 
@@ -2356,8 +2525,10 @@ def load_model(checkpoint = "microsoft/Phi-3-mini-128k-instruct",
 
         print(f"LLAMA-->{checkpoint}")
 
-        tokenizer = AutoTokenizer.from_pretrained(checkpoint, device_map="cuda",)
+        tokenizer = AutoTokenizer.from_pretrained(checkpoint, device_map="cuda", padding_side='left')
         # Check if the tokenizer has a pad token
+        #TODO:
+        tokenizer.pad_token = tokenizer.eos_token
         
 
         if quantized == True:
@@ -3117,7 +3288,19 @@ def eval_pop(population,
         for i in tqdm(range(n_pop), desc = f"Evaluating prompt population"):
             tt+=1
             #print(f"ttt 1--->{tt}")
+            """
             labels, predictions = prompt_preds_samsum(data_expanded[:n_samples], 
+                                                         task_description = prompts['task_description'][population['prompts'][i]['task_description']], 
+                                                         dialog_description = prompts['dialog_description'][population['prompts'][i]['dialog_description']],
+                                                         answer_description =  prompts['answer_description'][population['prompts'][i]['answer_description']],
+                                                         model=model,
+                                                         tokenizer=tokenizer,
+                                                         save_test_predictions = save_test_predictions,
+                                                         folder = folder
+                                                         )
+            """
+
+            labels, predictions = prompt_preds_samsum_batch_inference(data_expanded[:n_samples], 
                                                          task_description = prompts['task_description'][population['prompts'][i]['task_description']], 
                                                          dialog_description = prompts['dialog_description'][population['prompts'][i]['dialog_description']],
                                                          answer_description =  prompts['answer_description'][population['prompts'][i]['answer_description']],
@@ -4066,7 +4249,7 @@ def evo_alg_2(task,
               max_iter = 200,
               save = True,
               eval_data = 'dev', # dev or train
-              data_size = 0, # no. of samples where the prompts are evaluated, if =0 all are used
+              data_size = 0, # no. of samples where the prompts are evaluated, if = 1 all are used
               retrieve_examples = False, # use retrieval with embedding model instead of random for 1-shot learning
               task_w_self_reasoning = False,
               task_w_one_shot = False,
@@ -4190,6 +4373,8 @@ def evo_alg_2(task,
 
     if data_size == 0 or data_size > len(data_expanded):
         data_size = len(data_expanded) 
+    
+    print("\nFINAL data_size = {}\n\n".format(str(data_size)))
 
     # list to save best score at each iteration
     best_score_iterations = []

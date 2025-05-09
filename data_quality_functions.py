@@ -3,7 +3,7 @@
 
 import torch
 import torch.nn.functional as F
-from evo_functions import load_model, extract_SemEval_data, extract_ContractNLI_data, extract_MEDIQASUM_data, extract_LegalSumTOSDR_data, prepare_text4llama3_instruct
+from evo_functions import load_model, extract_SemEval_data, extract_ContractNLI_data, extract_MEDIQASUM_data, extract_LegalSumTOSDR_data, extract_SAMSum_data, prepare_text4llama3_instruct
 import json
 from tqdm import tqdm
 import numpy as np
@@ -48,6 +48,13 @@ def generate_string_for_legalsumtosdr_data_quality(datapoint: dict):
 
     return legalsumtosdr
 
+def generate_string_for_samsum_data_quality(datapoint: dict):
+    #print(f"keys-->{datapoint.keys()}\n\n")
+
+    samsum_text = f"""Messenger-like conversation:\n{datapoint['dialogue']}\n\nSummary:\n{datapoint['summary']}"""
+
+    return samsum_text
+
 
 def data_quality_inference(data_quality_prompt, model, tokenizer, focus_ans = "positive"):
 
@@ -69,7 +76,7 @@ def data_quality_inference(data_quality_prompt, model, tokenizer, focus_ans = "p
 
     generated_ids = output.sequences[0, :]  # Exclude the input part
     full_generated_text = tokenizer.decode(generated_ids, skip_special_tokens=False)
-    print(f"generated_text-->{full_generated_text}\n\n")
+    ### print(f"generated_text-->{full_generated_text}\n\n")
     #full_generated_text_skip = tokenizer.decode(generated_ids, skip_special_tokens=True)
     #print(f"generated_text_skip-->{full_generated_text_skip}")
 
@@ -112,9 +119,12 @@ def data_quality_inference(data_quality_prompt, model, tokenizer, focus_ans = "p
 
     # convert to text
     top_k_tokens = tokenizer.convert_ids_to_tokens(top_k_ids.squeeze().tolist())
+
+    """
     for token, prob in zip(top_k_tokens, top_k_probs.squeeze().tolist()):
         
         print(f"Token: {token}, Probability: {prob:.4f}")
+    """
     #print(f"\n\n")
 
     #top_k_logits, top_k_ids = torch.topk(logits, 10, dim=-1)
@@ -129,7 +139,7 @@ def yes_no_comp_score_calculator(logits,
                                  tokenizer, 
                                  focus_ans = "positive", # focus labels ("positive" or "negative")
                                  ):
-    print(f"focusing on {focus_ans} answers")
+    ### print(f"focusing on {focus_ans} answers")
 
     # Calculate probabilities
     probabilities = F.softmax(logits, dim=-1)
@@ -149,7 +159,8 @@ def yes_no_comp_score_calculator(logits,
     elif focus_ans == 'negative':
         dq_score = np.sum(np.exp(nos_tokens_logits)) / (np.sum(np.exp(yes_tokens_logits)) + np.sum(np.exp(nos_tokens_logits)))
     
-    print(dq_score)
+    ### print(dq_score)
+    
     return dq_score
 
 
@@ -157,7 +168,8 @@ def yes_no_comp_score_calculator(logits,
 def data_quality_assessment_and_save(task: str,
                                      focus_ans = "positive",
                                      save = True,
-                                     model = 'meta-llama/Llama-3.2-3B-Instruct'):
+                                     model = 'meta-llama/Llama-3.2-3B-Instruct',
+                                     quantize_model_4bits=True):
     
     if focus_ans != "positive" and focus_ans != "negative":
         sys.exit("Invalid focus_ans provided. Please provide either 'positive' or 'negative'.")
@@ -188,6 +200,10 @@ def data_quality_assessment_and_save(task: str,
         train_data = extract_LegalSumTOSDR_data(type = 'train')
         validation_data = []
 
+    elif task == "SAMSum":
+        train_data = extract_SAMSum_data(type = 'train')
+        validation_data = extract_SAMSum_data(type = 'valid')
+
     else:
         raise ValueError("Invalid task provided.")
     
@@ -210,6 +226,10 @@ def data_quality_assessment_and_save(task: str,
             datapoint_string = generate_string_for_mediqasum_data_quality(full_data[i])
         elif task == "LegalSumTOSDR":
             datapoint_string = generate_string_for_legalsumtosdr_data_quality(full_data[i])
+        elif task == "SAMSum":
+            datapoint_string = generate_string_for_samsum_data_quality(full_data[i])
+        else:
+            raise ValueError("Invalid task provided.")
 
         # Combine with base_string
         # data_quality_prompt = f"<s><|user|>\n###\n{datapoint_string}\n###\n\n{base_data_quality_prompt}<|end|>\n<|assistant|>"
@@ -238,7 +258,7 @@ def data_quality_assessment_and_save(task: str,
         full_data[i]['data_quality_prompt'] = prompt
     
     if 'llama' in model:
-        model, tokenizer = load_model(checkpoint = model, quantized = True)
+        model, tokenizer = load_model(checkpoint = model, quantized = quantize_model_4bits)
     
     for i in tqdm(range(len(full_data)), desc = 'Performing Data Quality Inference'):
         #print(full_data[i].keys())

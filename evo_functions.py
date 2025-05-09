@@ -89,12 +89,8 @@ def sel_task_dataset_initial_prompts_evo_prompts(task_name,
     elif task_name == 'SAMSum':
         prompts_path = 'INITIAL_PROMPTS/SAMSum'
         data_expanded = extract_SAMSum_data(
-            type="valid",  #TODO: default should be "all_available"
-            retrieve_similar_examples = w_one_shot, 
-            use_data_sorted_by_dq = use_data_sorted_by_dq, 
-            use_data_clusters=use_data_clusters, 
+            use_data_sorted_by_dq = use_data_sorted_by_dq,  
             use_15percent_random = use_15percent_random, 
-            use_15percent_revdq = use_15percent_revdq
             )
         trie = None                                                  
 
@@ -867,7 +863,7 @@ def batch_inference_custom_dataset(all_prompts, model, tokenizer, trie, batch_si
                 outputs = model.generate(input_ids=input_ids.to('cuda'), #TODO:
                                         attention_mask=attention_mask.to('cuda'), #TODO: 
                                         pad_token_id=tokenizer.eos_token_id, 
-                                        max_new_tokens=250,
+                                        max_new_tokens=90,
                                         do_sample=True, num_beams = 3)
 
         """
@@ -1624,18 +1620,16 @@ def prompt_preds_contractnli_span(data_expanded,
 
 def extract_SAMSum_data(folder_name='DATASETS/SAMSum_data', 
                            type = 'all_available',  # train/valid
-                           used_retrieved_file = True,
-                           retrieve_similar_examples = False,
-                           save_retrieved = False,
                            use_data_sorted_by_dq = False,
-                           use_data_clusters = False,
                            use_15percent_random = False, 
-                           use_15percent_revdq = False,
                            ):
 
     if use_15percent_random == True:
         # file_path = "DATASETS/25percent_random/samsum.json"
-        file_path = "DATASETS/5percent_random/samsum.json"
+        # file_path = "DATASETS/5percent_random/samsum.json"
+        file_path = "DATASETS/1percent_random/samsum.json"
+    elif use_data_sorted_by_dq == True:
+        file_path = "DATASETS/DATA_QUALITY/SAMSum_data_quality.json"
     elif type == "all_available":
 
         dev_data = []
@@ -1681,6 +1675,8 @@ def extract_SAMSum_data(folder_name='DATASETS/SAMSum_data',
             data_list = json.load(file)
         print(f"Used data from {file_path}")
         return data_list
+    else:
+        raise Exception("Expected json file not found in the following location: {}\n".format(file_path))
     
 
     

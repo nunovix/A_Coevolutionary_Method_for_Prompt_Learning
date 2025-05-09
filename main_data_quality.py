@@ -2,7 +2,7 @@
 
 import os
 # set available gpu's
-os.environ["CUDA_VISIBLE_DEVICES"] = "4"
+os.environ["CUDA_VISIBLE_DEVICES"] = "6"
 
 from data_quality_functions import data_quality_assessment_and_save
 
@@ -53,6 +53,7 @@ best_prompt, best_score_iterations = evo.evo_alg_2(task = "SemEval",
                                                     save = True,
                                                     )"""
 
+"""
 data_quality_assessment_and_save(task = 'MEDIQASUM', focus_ans='positive', save=True, model = 'meta-llama/Llama-3.2-3B-Instruct')
 data_quality_assessment_and_save(task = 'LegalSumTOSDR', focus_ans='positive', save=True, model = 'meta-llama/Llama-3.2-3B-Instruct')
 data_quality_assessment_and_save(task = 'ContractNLI', focus_ans='positive', save=True, model = 'meta-llama/Llama-3.2-3B-Instruct')
@@ -79,3 +80,6 @@ best_prompt, best_score_iterations = evo.evo_alg_2(task = "ContractNLI",
                                                             do_test_eval = True,
                                                             save = True,
                                                             )
+"""
+
+data_quality_assessment_and_save(task = 'SAMSum', focus_ans='positive', save=True, model = 'meta-llama/Llama-3.2-3B-Instruct', quantize_model_4bits=False)

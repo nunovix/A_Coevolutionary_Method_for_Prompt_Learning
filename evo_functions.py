@@ -2132,9 +2132,20 @@ def prompt_preds_samsum_batch_inference(data_expanded,
             prompt = prepare_text4llama3_instruct(user_text = prompt_user_text, assistant_text = prompt_assistant_text)
         
         data_prompts.append(prompt)
+    
+    # sort data by prompt length (descending order) for faster inference with batch processing
+    indices = [i[0] for i in sorted(enumerate(data_prompts), key=lambda item: len(item[1]), reverse=True)]
 
+    data_prompts_sorted = [data_prompts[i] for i in indices]
+    labels_sorted = [labels[i] for i in indices]
+    
+    if save_test_predictions == True:
+        encounter_ids_sorted = [encounter_ids[i] for i in indices]
+        dialogues_sorted = [dialogues[i] for i in indices]
+
+    # get predictions
     preds = batch_inference_custom_dataset(
-        data_prompts, 
+        data_prompts_sorted, 
         model, 
         tokenizer, 
         trie=None, 
@@ -2146,7 +2157,7 @@ def prompt_preds_samsum_batch_inference(data_expanded,
         # Column names
         column_names = ["id", "dialogue", "summary"]
         # Combine the lists into rows
-        rows = zip(encounter_ids, dialogues, preds)
+        rows = zip(encounter_ids_sorted, dialogues_sorted, preds)
         # Write to CSV file
         file_name = folder + "test_predictions.csv"
         with open(file_name, 'w', newline='') as file:
@@ -2154,7 +2165,7 @@ def prompt_preds_samsum_batch_inference(data_expanded,
             writer.writerow(column_names)  # Write the column names
             writer.writerows(rows)  # Write the data rows
 
-    return labels, preds
+    return labels_sorted, preds
 
 
 def prompt_preds_mediqasum(data_expanded, 

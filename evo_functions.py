@@ -1627,7 +1627,8 @@ def extract_SAMSum_data(folder_name='DATASETS/SAMSum_data',
     if use_15percent_random == True:
         # file_path = "DATASETS/25percent_random/samsum.json"
         # file_path = "DATASETS/5percent_random/samsum.json"
-        file_path = "DATASETS/1percent_random/samsum.json"
+        # file_path = "DATASETS/1percent_random/samsum.json"
+        file_path = "DATASETS/2_5_percent_random/samsum.json"
     elif use_data_sorted_by_dq == True:
         file_path = "DATASETS/DATA_QUALITY/SAMSum_data_quality.json"
     elif type == "all_available":
@@ -4941,7 +4942,7 @@ def load_population(iteration, root_folder, task):
 def extract_max_eval_and_patience(root_folder, task):
     # Get all iteration folders including the initial one
     iteration_folders = [f for f in os.listdir(root_folder) if f.startswith("Iteration_")]
-    iteration_folders.sort(key=lambda x: (int(x.split('_')[1]) if x != "Iteration_initial" else -1))
+    iteration_folders.sort(key=lambda x: (int(x.split('_')[1]) if (x != "Iteration_initial") and (x != "Iteration_best_INI") else -1))
     
     max_eval_values = []
     max_eval_iteration = None
@@ -4961,20 +4962,20 @@ def extract_max_eval_and_patience(root_folder, task):
             max_eval = max(eval_values)
             max_eval_values.append(max_eval)
             
-            if max_eval >= max_eval_value:
+            if max_eval > max_eval_value:
                 max_eval_value = max_eval
                 max_eval_iteration = iteration_folder
     
     # Determine the current iteration number and folder
     current_iteration_folder = iteration_folders[-1] if iteration_folders else "None"
-    current_iteration_num = (int(current_iteration_folder.split('_')[1]) if current_iteration_folder != "Iteration_initial" else 0)
+    current_iteration_num = (int(current_iteration_folder.split('_')[1]) if (current_iteration_folder != "Iteration_initial") and (current_iteration_folder != "Iteration_best_INI") else 0)
     
     # Calculate patience
     if max_eval_iteration:
-        max_eval_iteration_num = int(max_eval_iteration.split('_')[1]) if max_eval_iteration != "Iteration_initial" else 0
+        max_eval_iteration_num = int(max_eval_iteration.split('_')[1]) if (max_eval_iteration != "Iteration_initial") and (max_eval_iteration != "Iteration_best_INI") else 0
         patience = 0
         for iteration_folder in iteration_folders:
-            iteration_num = int(iteration_folder.split('_')[1]) if iteration_folder != "Iteration_initial" else 0
+            iteration_num = int(iteration_folder.split('_')[1]) if (iteration_folder != "Iteration_initial") and (iteration_folder != "Iteration_best_INI") else 0
             if iteration_num > max_eval_iteration_num:
                 evaluations_file_path = os.path.join(root_folder, iteration_folder, "evaluations.txt")
                 

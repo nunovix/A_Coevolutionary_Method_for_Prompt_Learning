@@ -5,7 +5,8 @@ from evo_functions import extract_SAMSum_data
 
 # percent_data = 0.25
 # percent_data = 0.05
-percent_data = 0.01
+# percent_data = 0.01
+percent_data = 0.025
 
 # function to save data in the format 
 def save_data2file(data, folder, file_name):

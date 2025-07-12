@@ -1,13 +1,13 @@
 import os
 # set available gpu's
-os.environ["CUDA_VISIBLE_DEVICES"] = "3"
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 #os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 import evo_functions as evo
 
 
 # MC - 2.5% Random - Llama 3B
-
+"""
 best_prompt, best_score_iterations = evo.evo_alg_2(task = "SAMSum", 
                                                             model_name = "meta-llama/Llama-3.2-3B-Instruct",
                                                             quantize_model_4bits = False,
@@ -29,10 +29,10 @@ best_prompt, best_score_iterations = evo.evo_alg_2(task = "SAMSum",
                                                             resume_run = True,
                                                             resume_run_folder = "RUNS_alg_2/SAMSum/Runs_2025-05-15_02-07-42_N25_cp0.0_mp0.5_sampTNone_fixed_evoFalse_dq_dataFalse_reverseFalse_dev_ratioTrue_388/"
                                                             )
-
+"""
 
 # CoEvo - 2.5% Random - Llama 3B
-
+"""
 best_prompt, best_score_iterations = evo.evo_alg_2(task = "SAMSum", 
                                                             model_name = "meta-llama/Llama-3.2-3B-Instruct",
                                                             quantize_model_4bits = False, 
@@ -54,18 +54,18 @@ best_prompt, best_score_iterations = evo.evo_alg_2(task = "SAMSum",
                                                             resume_run = True,
                                                             resume_run_folder = "RUNS_alg_2/SAMSum/Runs_2025-05-12_15-42-20_N25_cp0.25_mp0.25_sampT10.0_fixed_evoFalse_dq_dataFalse_reverseFalse_dev_ratioTrue_388/"
                                                             )
-
+"""
 
 # CoEvo - 2.5% Random - Llama 70B
-"""
+
 evo.test_eval(task = "SAMSum",
-              RUN_folder_path = "RUNS_alg_2/SAMSum/copy_of_Runs_2025-05-08_16-20-29_N25_cp0.25_mp0.25_sampT10.0_fixed_evoTrue_dq_dataFalse_reverseFalse_dev_ratioTrue_155/",
+              RUN_folder_path = "RUNS_alg_2/SAMSum/copy_of_Runs_2025-05-12_15-42-20_N25_cp0.25_mp0.25_sampT10.0_fixed_evoFalse_dq_dataFalse_reverseFalse_dev_ratioTrue_388/",
               model_name = "meta-llama/Llama-3.3-70B-Instruct",
               quantize_model_4bits = True,
               task_w_one_shot = False,
               file = "best"
               )
-"""
+
 
 # MC - 2.5% DQ - Llama 3B
 """
@@ -116,10 +116,32 @@ best_prompt, best_score_iterations = evo.evo_alg_2(task = "SAMSum",
 # CoEvo - 2.5% DQ - Llama 70B
 """
 evo.test_eval(task = "SAMSum",
-              RUN_folder_path = "RUNS_alg_2_DQ/SAMSum/copy_of_Runs_2025-05-09_17-53-33_N25_cp0.25_mp0.25_sampT10.0_fixed_evoTrue_dq_dataTrue_reverseTrue_dev_ratioTrue_155/",
+              RUN_folder_path = "RUNS_alg_2_DQ/SAMSum/copy_of_Runs_2025-05-12_16-36-36_N25_cp0.25_mp0.25_sampT10.0_fixed_evoFalse_dq_dataTrue_reverseTrue_dev_ratioTrue_388/",
               model_name = "meta-llama/Llama-3.3-70B-Instruct",
               quantize_model_4bits = True,
               task_w_one_shot = False,
               file = "best"
+              )
+"""
+
+# CoEvo - Best Ini. - Llama 3B
+"""
+evo.test_eval(task = "SAMSum",
+              RUN_folder_path = "RUNS_alg_2_DQ/SAMSum/copy_2_of_Runs_2025-05-16_10-21-59_N25_cp0.25_mp0.25_sampT10.0_fixed_evoFalse_dq_dataTrue_reverseTrue_dev_ratioTrue_388/", 
+              model_name = "meta-llama/Llama-3.2-3B-Instruct",
+              quantize_model_4bits = False,
+              task_w_one_shot = False,
+              file = "best_INI"
+              )
+"""
+
+# CoEvo - Best Ini. - Llama 70B
+"""
+evo.test_eval(task = "SAMSum",
+              RUN_folder_path = "RUNS_alg_2_DQ/SAMSum/copy_of_Runs_2025-05-16_10-21-59_N25_cp0.25_mp0.25_sampT10.0_fixed_evoFalse_dq_dataTrue_reverseTrue_dev_ratioTrue_388/", 
+              model_name = "meta-llama/Llama-3.3-70B-Instruct",
+              quantize_model_4bits = True,
+              task_w_one_shot = False,
+              file = "best_INI"
               )
 """

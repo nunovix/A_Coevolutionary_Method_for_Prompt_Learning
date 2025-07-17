@@ -823,7 +823,7 @@ def batch_inference_custom_dataset(all_prompts, model, tokenizer, trie, batch_si
     preds = []
 
     # Process in batches
-    for batch in tqdm(dataloader, desc='Evaluating prompts in batches'):
+    for batch in tqdm(dataloader, desc='Evaluating prompts in batches', position=0, leave=True):
 
         encodings = tokenizer(
             batch, 
@@ -863,7 +863,7 @@ def batch_inference_custom_dataset(all_prompts, model, tokenizer, trie, batch_si
                 outputs = model.generate(input_ids=input_ids.to('cuda'), #TODO:
                                         attention_mask=attention_mask.to('cuda'), #TODO: 
                                         pad_token_id=tokenizer.eos_token_id, 
-                                        max_new_tokens=90,
+                                        max_new_tokens=180,  ### 90,
                                         do_sample=True, num_beams = 3)
 
         """
@@ -2106,6 +2106,26 @@ def prompt_preds_samsum_batch_inference(data_expanded,
 
     data_prompts = []
 
+    # get system prompt from txt file
+    # full file path
+    system_description_file_path = os.path.join('INITIAL_PROMPTS/SAMSum', "system_description.txt")
+
+    # Read lines from the file if it exists
+    if os.path.exists(system_description_file_path):
+        with open(system_description_file_path, 'r') as file:
+            content = file.read()
+        
+        lines = content.splitlines()
+
+        if not (len(lines) == 1):
+            raise Exception("Unexpected number of lines for 'system_descrition.txt file. Expected 1 but found {}.'".format(str(len(lines))))
+        else:
+            system_description_prompt = lines[0].strip()
+    else:
+        print(f"Warning: {system_description_file_path} does not exist.")
+    
+    print("\n\nUsing system prompt from file: {}\n".format(str(system_description_file_path)))
+
     for sample in data_expanded:
 
         prompt = task_description + '\n\n'
@@ -2130,8 +2150,12 @@ def prompt_preds_samsum_batch_inference(data_expanded,
 
         #TODO: If not "Llama", then we only have the task_description ???
         if 'Llama' in model_name_global:
-            prompt = prepare_text4llama3_instruct(user_text = prompt_user_text, assistant_text = prompt_assistant_text)
-        
+            prompt = prepare_text4llama3_instruct(
+                user_text = prompt_user_text, 
+                system_text = system_description_prompt,
+                assistant_text = prompt_assistant_text
+                )
+
         data_prompts.append(prompt)
     
     # sort data by prompt length (descending order) for faster inference with batch processing
@@ -2150,7 +2174,7 @@ def prompt_preds_samsum_batch_inference(data_expanded,
         model, 
         tokenizer, 
         trie=None, 
-        batch_size=4
+        batch_size=8   ### 4
     )
 
     if save_test_predictions == True:

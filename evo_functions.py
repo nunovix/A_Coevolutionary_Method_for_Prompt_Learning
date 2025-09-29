@@ -2017,7 +2017,7 @@ def prompt_preds_samsum(data_expanded,
 
         prompt = task_description + '\n\n'
         sentence = f"""{prompt} """
-        dialogue = sample['dialogue']  ### "".join(sample['dialogue'])
+        dialogue = sample['dialogue'].replace("\r\n", "\n").replace("\n", "\n\n")  ### "".join(sample['dialogue'])
         
         prompt_user_text = f"""{sentence}\n{dialog_description}\n\n"{dialogue}"\n\n{answer_description}"""
         prompt_assistant_text = f"""Summary:"""
@@ -2026,7 +2026,7 @@ def prompt_preds_samsum(data_expanded,
 
         if save_test_predictions == True:
             encounter_ids.append(sample["id"])
-            dialogues.append(sample["dialogue"])
+            dialogues.append(sample["dialogue"].replace("\r\n", "\n").replace("\n", "\n\n"))
 
         # conversion necessary for phi3 model
         """if 'Phi3' in model_name_global:
@@ -2132,7 +2132,7 @@ def prompt_preds_samsum_batch_inference(data_expanded,
 
         prompt = task_description + '\n\n'
         sentence = f"""{prompt} """
-        dialogue = sample['dialogue']  ### "".join(sample['dialogue'])
+        dialogue = sample['dialogue'].replace("\r\n", "\n").replace("\n", "\n\n")  ### "".join(sample['dialogue'])
         
         prompt_user_text = f"""{sentence}\n{dialog_description}\n\n"{dialogue}"\n\n{answer_description}"""
         prompt_assistant_text = f"""Summary:"""
@@ -2141,7 +2141,7 @@ def prompt_preds_samsum_batch_inference(data_expanded,
 
         if save_test_predictions == True:
             encounter_ids.append(sample["id"])
-            dialogues.append(sample["dialogue"])
+            dialogues.append(sample["dialogue"].replace("\r\n", "\n").replace("\n", "\n\n"))
 
         # conversion necessary for phi3 model
         """if 'Phi3' in model_name_global:

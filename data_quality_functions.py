@@ -51,7 +51,7 @@ def generate_string_for_legalsumtosdr_data_quality(datapoint: dict):
 def generate_string_for_samsum_data_quality(datapoint: dict):
     #print(f"keys-->{datapoint.keys()}\n\n")
 
-    samsum_text = f"""Messenger-like dialogue:\n{datapoint['dialogue']}\n\nSummary:\n{datapoint['summary']}"""
+    samsum_text = f"""Messenger-like dialogue:\n{datapoint['dialogue'].replace("\r\n", "\n").replace("\n", "\n\n")}\n\nSummary:\n{datapoint['summary']}"""
 
     return samsum_text
 

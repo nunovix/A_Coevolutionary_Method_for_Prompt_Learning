@@ -66,6 +66,7 @@ def data_quality_inference(data_quality_prompt, model, tokenizer, focus_ans = "p
     with torch.inference_mode():
         output = model.generate(encoded_inputs['input_ids'],
                                 attention_mask=encoded_inputs['attention_mask'], 
+                                pad_token_id=tokenizer.eos_token_id,
                                 max_new_tokens=1,
                                 return_dict_in_generate=True,
                                 output_scores=True,

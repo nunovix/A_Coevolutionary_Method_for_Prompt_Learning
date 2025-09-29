@@ -895,7 +895,7 @@ def batch_inference_custom_dataset(all_prompts, model, tokenizer, trie, batch_si
 # allowing to fix the start of the assistant text with the "assistant_text" variable
 # using the structure shown in https://www.llama.com/docs/model-cards-and-prompt-formats/meta-llama-3/
 def prepare_text4llama3_instruct(user_text: str,
-                                 system_text: str = "Assume the role of an automated system for the processing of domain-specific documentation, such as clinical or legal documents. The accuracy, robustness, consistency, and faithfulness of the reasoning performed by the system is critical in this context, and it is important to carefully consider the domain-specific terminology, to handle linguistic constructs such as temporal associations or negations, and to have robustness to different writing styles and vocabularies.",
+                                 system_text: str = "Assume the role of an automated system for text summarization. The accuracy, faithfulness, and conciseness of the summaries is critical in this context.",
                                  assistant_text: str = "ANSWER:",
                                  ):
     prompt_text = f"""<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\n{system_text}<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n{user_text}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n{assistant_text}"""
@@ -2108,6 +2108,7 @@ def prompt_preds_samsum_batch_inference(data_expanded,
 
     # get system prompt from txt file
     # full file path
+    """
     system_description_file_path = os.path.join('INITIAL_PROMPTS/SAMSum', "system_description.txt")
 
     # Read lines from the file if it exists
@@ -2125,7 +2126,8 @@ def prompt_preds_samsum_batch_inference(data_expanded,
         print(f"Warning: {system_description_file_path} does not exist.")
     
     print("\n\nUsing system prompt from file: {}\n".format(str(system_description_file_path)))
-
+    """
+    
     for sample in data_expanded:
 
         prompt = task_description + '\n\n'
@@ -2152,7 +2154,7 @@ def prompt_preds_samsum_batch_inference(data_expanded,
         if 'Llama' in model_name_global:
             prompt = prepare_text4llama3_instruct(
                 user_text = prompt_user_text, 
-                system_text = system_description_prompt,
+                ### system_text = system_description_prompt,
                 assistant_text = prompt_assistant_text
                 )
 
